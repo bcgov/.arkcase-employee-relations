@@ -7,3 +7,5 @@ acm/solrLastBatchUpdate.properties
 acm/subscriptionEventLastBatchInsert.properties
 acm/dataAccessPolicyLastBatchUpdate.properties
 acm/datasource.properties.oracle
+acm/caseFileSolrLastMod.properties
+acm/complaintSolrLastMod.properties
