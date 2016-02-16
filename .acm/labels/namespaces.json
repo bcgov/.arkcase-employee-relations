@@ -1,0 +1,78 @@
+[
+    {
+        "id": "common",
+        "name": "Common"
+    },
+    {
+        "id": "login",
+        "name": "Login"
+    },
+    {
+        "id": "complaint",
+        "name": "Complaints"
+    },
+    {
+        "id": "casefile",
+        "name": "Case Files"
+    },
+    {
+        "id": "dashboard",
+        "name": "Dashboard"
+    },
+    {
+        "id": "task",
+        "name": "Tasks"
+    },
+    {
+        "id": "search",
+        "name": "Search"
+    },
+    {
+        "id": "report",
+        "name": "Reports"
+    },
+    {
+        "id": "notification",
+        "name": "Notifications"
+    },
+    {
+        "id": "subscription",
+        "name": "Subscriptions"
+    },
+    {
+        "id": "audit",
+        "name": "Audit"
+    },
+    {
+        "id": "admin",
+        "name": "Administration"
+    },
+    {
+        "id": "tag",
+        "name": "Tags"
+    },
+    {
+        "id": "timesheet",
+        "name": "Time Tracking"
+    },
+    {
+        "id": "costsheet",
+        "name": "Cost Tracking"
+    },
+    {
+        "id": "doctree",
+        "name": "Document Management"
+    },
+    {
+        "id": "ebrief",
+        "name": "eBrief"
+    },
+    {
+        "id": "casefilesplit",
+        "name": "Split Case"
+    },
+    {
+        "id": "outlookcalendar",
+        "name": "Outlook Calendar"
+    }
+]

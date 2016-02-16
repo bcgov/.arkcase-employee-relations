@@ -1,0 +1,41 @@
+{
+    "date": {
+        "frevvo": "YYYY-MM-DD",
+        "short": "DD/MM/YYYY",
+        "pentaho": "DD/MM/YYYY",
+        "datepicker": "dd/mm/yy",
+        "full": "DD/MM/YYYY h:mm:ss a"
+    },
+    "navigation": {"label": {
+        "cost-tracking": "Cost Tracking",
+        "reports": "Reports",
+        "subscriptions": "Subscriptions",
+        "time-tracing": "Time Tracking",
+        "administration": "Administration",
+        "complaints": "Complaints",
+        "my-profile": "My Profile",
+        "tags": "Tags",
+        "case-files": "Briefs",
+        "help": "Help",
+        "navigation": "Navigation",
+        "logout": "Logout",
+        "search": "Search",
+        "audit": "Audit",
+        "tasks": "Tasks",
+        "dashboard": "Dashboard",
+        "notifications": "Notifications"
+    }},
+    "top-bar": {
+        "button": {
+            "case-file": "Brief",
+            "timesheet": "Timesheet",
+            "task": "Task",
+            "complaint": "Complaint",
+            "costsheet": "Costsheet"
+        },
+        "label": {
+            "search": "Search briefs...",
+            "see-all-notifications": "See all notifications"
+        }
+    }
+}

@@ -1,0 +1,974 @@
+{
+    "security-tags": {"table": {"field": {
+        "added-by": {
+            "defaultValue": "Added By",
+            "description": "",
+            "value": "Added By"
+        },
+        "date-added": {
+            "defaultValue": "Date Added",
+            "description": "",
+            "value": "Date Added"
+        },
+        "type": {
+            "defaultValue": "Type",
+            "description": "",
+            "value": "Type"
+        },
+        "value": {
+            "defaultValue": "Value",
+            "description": "",
+            "value": "Value"
+        }
+    }}},
+    "msg": {
+        "error-retrieving-complaint-data": {
+            "defaultValue": "Error occurred for retrieving complaint data",
+            "description": "",
+            "value": "Error occurred for retrieving complaint data"
+        },
+        "no-complaint-selected": {
+            "defaultValue": "(No complaint is selected)",
+            "description": "",
+            "value": "(No complaint is selected)"
+        }
+    },
+    "addresses": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Location",
+            "description": "",
+            "value": "Add Location"
+        }},
+        "table": {"field": {
+            "zip": {
+                "defaultValue": "Zip",
+                "description": "",
+                "value": "Zip"
+            },
+            "country": {
+                "defaultValue": "Country",
+                "description": "",
+                "value": "Country"
+            },
+            "address": {
+                "defaultValue": "Address",
+                "description": "",
+                "value": "Address"
+            },
+            "city": {
+                "defaultValue": "City",
+                "description": "",
+                "value": "City"
+            },
+            "added-by": {
+                "defaultValue": "Added By",
+                "description": "",
+                "value": "Added By"
+            },
+            "date-added": {
+                "defaultValue": "Date Added",
+                "description": "",
+                "value": "Date Added"
+            },
+            "state": {
+                "defaultValue": "State",
+                "description": "",
+                "value": "State"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            }
+        }}
+    },
+    "aliases": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Alias",
+            "description": "",
+            "value": "Add Alias"
+        }},
+        "table": {"field": {
+            "added-by": {
+                "defaultValue": "Added By",
+                "description": "",
+                "value": "Added By"
+            },
+            "date-added": {
+                "defaultValue": "Date Added",
+                "description": "",
+                "value": "Date Added"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            },
+            "value": {
+                "defaultValue": "Value",
+                "description": "",
+                "value": "Value"
+            }
+        }}
+    },
+    "notes": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Note",
+            "description": "",
+            "value": "Add Note"
+        }},
+        "title": {
+            "defaultValue": "Notes",
+            "description": "",
+            "value": "Notes"
+        },
+        "table": {"field": {
+            "note": {
+                "defaultValue": "Note",
+                "description": "",
+                "value": "Note"
+            },
+            "created": {
+                "defaultValue": "Created",
+                "description": "",
+                "value": "Created"
+            },
+            "author": {
+                "defaultValue": "Author",
+                "description": "",
+                "value": "Author"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            }
+        }}
+    },
+    "references": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Reference",
+            "description": "",
+            "value": "Add Reference"
+        }},
+        "title": {
+            "defaultValue": "References",
+            "description": "",
+            "value": "References"
+        },
+        "table": {"field": {
+            "modified": {
+                "defaultValue": "Modified",
+                "description": "",
+                "value": "Modified"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "title": {
+                "defaultValue": "Title",
+                "description": "",
+                "value": "Title"
+            },
+            "reference-type": {
+                "defaultValue": "Reference Type",
+                "description": "",
+                "value": "Reference Type"
+            },
+            "status": {
+                "defaultValue": "Status",
+                "description": "",
+                "value": "Status"
+            }
+        }}
+    },
+    "page-title": {
+        "defaultValue": "Complaints | ACM | Ark Case Management",
+        "description": "",
+        "value": "Complaints | ACM | Ark Case Management"
+    },
+    "outlook-calendar": {"msg": {"error-occurred": {
+        "defaultValue": "Error occurred while retrieving calendar items.",
+        "description": "",
+        "value": "Error occurred while retrieving calendar items."
+    }}},
+    "title": {
+        "defaultValue": "Complaints",
+        "description": "",
+        "value": "Complaints"
+    },
+    "navigation": {"leaf-title": {
+        "calendar": {
+            "defaultValue": "Calendar",
+            "description": "",
+            "value": "Calendar"
+        },
+        "notes": {
+            "defaultValue": "Notes",
+            "description": "",
+            "value": "Notes"
+        },
+        "cost": {
+            "defaultValue": "Cost",
+            "description": "",
+            "value": "Cost"
+        },
+        "references": {
+            "defaultValue": "References",
+            "description": "",
+            "value": "References"
+        },
+        "documents": {
+            "defaultValue": "Documents",
+            "description": "",
+            "value": "Documents"
+        },
+        "details": {
+            "defaultValue": "Details",
+            "description": "",
+            "value": "Details"
+        },
+        "location": {
+            "defaultValue": "Location",
+            "description": "",
+            "value": "Location"
+        },
+        "history": {
+            "defaultValue": "History",
+            "description": "",
+            "value": "History"
+        },
+        "time": {
+            "defaultValue": "Time",
+            "description": "",
+            "value": "Time"
+        },
+        "people": {
+            "defaultValue": "People",
+            "description": "",
+            "value": "People"
+        },
+        "tasks": {
+            "defaultValue": "Tasks",
+            "description": "",
+            "value": "Tasks"
+        },
+        "participants": {
+            "defaultValue": "Participants",
+            "description": "",
+            "value": "Participants"
+        }
+    }},
+    "tasks": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Task",
+            "description": "",
+            "value": "Add Task"
+        }},
+        "title": {
+            "defaultValue": "Tasks",
+            "description": "",
+            "value": "Tasks"
+        },
+        "table": {"field": {
+            "due": {
+                "defaultValue": "Due",
+                "description": "",
+                "value": "Due"
+            },
+            "created": {
+                "defaultValue": "Created",
+                "description": "",
+                "value": "Created"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "assignee": {
+                "defaultValue": "Assignee",
+                "description": "",
+                "value": "Assignee"
+            },
+            "title": {
+                "defaultValue": "Title",
+                "description": "",
+                "value": "Title"
+            },
+            "priority": {
+                "defaultValue": "Priority",
+                "description": "",
+                "value": "Priority"
+            },
+            "status": {
+                "defaultValue": "Status",
+                "description": "",
+                "value": "Status"
+            }
+        }}
+    },
+    "participants": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Participant",
+            "description": "",
+            "value": "Add Participant"
+        }},
+        "title": {
+            "defaultValue": "Participants",
+            "description": "",
+            "value": "Participants"
+        },
+        "table": {"field": {
+            "name": {
+                "defaultValue": "Name",
+                "description": "",
+                "value": "Name"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            }
+        }}
+    },
+    "document-dialog": {
+        "btn-cancel": {
+            "defaultValue": "Away",
+            "description": "",
+            "value": "Away"
+        },
+        "title": {
+            "defaultValue": "My Dialog Title",
+            "description": "",
+            "value": "My Dialog Title"
+        },
+        "btn-ok": {
+            "defaultValue": "Select",
+            "description": "",
+            "value": "Select"
+        }
+    },
+    "cost": {
+        "title": {
+            "defaultValue": "Cost Tracking",
+            "description": "",
+            "value": "Cost Tracking"
+        },
+        "table": {"field": {
+            "total-cost": {
+                "defaultValue": "Total Cost",
+                "description": "",
+                "value": "Total Cost"
+            },
+            "modified-date": {
+                "defaultValue": "Modified Date",
+                "description": "",
+                "value": "Modified Date"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "form-name": {
+                "defaultValue": "Form Name",
+                "description": "",
+                "value": "Form Name"
+            },
+            "username": {
+                "defaultValue": "Username",
+                "description": "",
+                "value": "Username"
+            },
+            "status": {
+                "defaultValue": "Status",
+                "description": "",
+                "value": "Status"
+            }
+        }}
+    },
+    "documents-to-retire": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Document",
+            "description": "",
+            "value": "Add Document"
+        }},
+        "create-folder-dialog": {
+            "buttons": {
+                "cancel": {
+                    "defaultValue": "Cancel",
+                    "description": "",
+                    "value": "Cancel"
+                },
+                "create-folder": {
+                    "defaultValue": "Create Folder",
+                    "description": "",
+                    "value": "Create Folder"
+                },
+                "close": {
+                    "defaultValue": "Close",
+                    "description": "",
+                    "value": "Close"
+                }
+            },
+            "title": {
+                "defaultValue": "Create Folder",
+                "description": "",
+                "value": "Create Folder"
+            },
+            "labels": {
+                "prompt": {
+                    "defaultValue": "Enter a name for the folder you would like to create:",
+                    "description": "",
+                    "value": "Enter a name for the folder you would like to create:"
+                },
+                "folder-name": {
+                    "defaultValue": "Folder Name",
+                    "description": "",
+                    "value": "Folder Name"
+                }
+            }
+        },
+        "buttons": {
+            "print": {
+                "defaultValue": "Print",
+                "description": "",
+                "value": "Print"
+            },
+            "email": {
+                "defaultValue": "Email",
+                "description": "",
+                "value": "Email"
+            }
+        },
+        "email-dialog": {
+            "buttons": {
+                "cancel": {
+                    "defaultValue": "Cancel",
+                    "description": "",
+                    "value": "Cancel"
+                },
+                "close": {
+                    "defaultValue": "Close",
+                    "description": "",
+                    "value": "Close"
+                },
+                "send-email": {
+                    "defaultValue": "Send Email",
+                    "description": "",
+                    "value": "Send Email"
+                }
+            },
+            "title": {
+                "defaultValue": "Send Email",
+                "description": "",
+                "value": "Send Email"
+            },
+            "labels": {
+                "email-address": {
+                    "defaultValue": "Email Address",
+                    "description": "",
+                    "value": "Email Address"
+                },
+                "prompt": {
+                    "defaultValue": "Where would you like to email this file?",
+                    "description": "",
+                    "value": "Where would you like to email this file?"
+                }
+            }
+        },
+        "form-document": {
+            "witness-interview-request": {
+                "defaultValue": "Witness Interview Request",
+                "description": "",
+                "value": "Witness Interview Request"
+            },
+            "other": {
+                "defaultValue": "Other",
+                "description": "",
+                "value": "Other"
+            },
+            "medical-release": {
+                "defaultValue": "Medical Release",
+                "description": "",
+                "value": "Medical Release"
+            },
+            "general-release": {
+                "defaultValue": "General Release",
+                "description": "",
+                "value": "General Release"
+            },
+            "e-delivery": {
+                "defaultValue": "eDelivery",
+                "description": "",
+                "value": "eDelivery"
+            },
+            "sf86-signature": {
+                "defaultValue": "SF86 Signature",
+                "description": "",
+                "value": "SF86 Signature"
+            },
+            "notice-of-investigation": {
+                "defaultValue": "Notice of Investigation",
+                "description": "",
+                "value": "Notice of Investigation"
+            },
+            "document-type": {
+                "defaultValue": "Document Type",
+                "description": "",
+                "value": "Document Type"
+            }
+        },
+        "tree": {"field": {
+            "created": {
+                "defaultValue": "Created",
+                "description": "",
+                "value": "Created"
+            },
+            "author": {
+                "defaultValue": "Author",
+                "description": "",
+                "value": "Author"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "title": {
+                "defaultValue": "Title",
+                "description": "",
+                "value": "Title"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            },
+            "version": {
+                "defaultValue": "Version",
+                "description": "",
+                "value": "Version"
+            },
+            "status": {
+                "defaultValue": "Status",
+                "description": "",
+                "value": "Status"
+            }
+        }},
+        "title": {
+            "defaultValue": "Documents",
+            "description": "",
+            "value": "Documents"
+        },
+        "table": {"field": {
+            "creator": {
+                "defaultValue": "Creator",
+                "description": "",
+                "value": "Creator"
+            },
+            "created": {
+                "defaultValue": "Created",
+                "description": "",
+                "value": "Created"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "title": {
+                "defaultValue": "Title",
+                "description": "",
+                "value": "Title"
+            }
+        }}
+    },
+    "history": {
+        "title": {
+            "defaultValue": "History",
+            "description": "",
+            "value": "History"
+        },
+        "table": {"field": {
+            "date": {
+                "defaultValue": "Date",
+                "description": "",
+                "value": "Date"
+            },
+            "event-name": {
+                "defaultValue": "Event Name",
+                "description": "",
+                "value": "Event Name"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "user": {
+                "defaultValue": "User",
+                "description": "",
+                "value": "User"
+            }
+        }}
+    },
+    "people": {"table": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Person",
+            "description": "",
+            "value": "Add Person"
+        }},
+        "field": {
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "title": {
+                "defaultValue": "Title",
+                "description": "",
+                "value": "Title"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            },
+            "first-name": {
+                "defaultValue": "First Name",
+                "description": "",
+                "value": "First Name"
+            },
+            "last-name": {
+                "defaultValue": "Last Name",
+                "description": "",
+                "value": "Last Name"
+            }
+        },
+        "title": {
+            "defaultValue": "People ",
+            "description": "",
+            "value": "People "
+        }
+    }},
+    "context-menu": {"menu-title": {
+        "sub2": {
+            "defaultValue": "Sub 2",
+            "description": "",
+            "value": "Sub 2"
+        },
+        "edit": {
+            "defaultValue": "Edit",
+            "description": "",
+            "value": "Edit"
+        },
+        "more": {
+            "defaultValue": "More",
+            "description": "",
+            "value": "More"
+        },
+        "sub1": {
+            "defaultValue": "Sub 1",
+            "description": "",
+            "value": "Sub 1"
+        },
+        "copy": {
+            "defaultValue": "Copy",
+            "description": "",
+            "value": "Copy"
+        },
+        "paste": {
+            "defaultValue": "Paste",
+            "description": "",
+            "value": "Paste"
+        },
+        "menu": {
+            "defaultValue": "Menu:",
+            "description": "",
+            "value": "Menu:"
+        },
+        "delete": {
+            "defaultValue": "Delete",
+            "description": "",
+            "value": "Delete"
+        }
+    }},
+    "contact-method": {"table": {"field": {
+        "added-by": {
+            "defaultValue": "Added By",
+            "description": "",
+            "value": "Added By"
+        },
+        "date-added": {
+            "defaultValue": "Date Added",
+            "description": "",
+            "value": "Date Added"
+        },
+        "type": {
+            "defaultValue": "Type",
+            "description": "",
+            "value": "Type"
+        },
+        "value": {
+            "defaultValue": "Value",
+            "description": "",
+            "value": "Value"
+        }
+    }}},
+    "organizations": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Organization",
+            "description": "",
+            "value": "Add Organization"
+        }},
+        "table": {"field": {
+            "added-by": {
+                "defaultValue": "Added By",
+                "description": "",
+                "value": "Added By"
+            },
+            "date-added": {
+                "defaultValue": "Date Added",
+                "description": "",
+                "value": "Date Added"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            },
+            "value": {
+                "defaultValue": "Value",
+                "description": "",
+                "value": "Value"
+            }
+        }}
+    },
+    "header": {
+        "buttons": {
+            "subscribe": {
+                "defaultValue": "Subscribe",
+                "description": "",
+                "value": "Subscribe"
+            },
+            "close-complaint": {
+                "defaultValue": "Close Complaint",
+                "description": "",
+                "value": "Close Complaint"
+            },
+            "restrict": {
+                "defaultValue": "Restrict ?",
+                "description": "",
+                "value": "Restrict ?"
+            }
+        },
+        "labels": {
+            "enter-owning-group": {
+                "defaultValue": "Enter Owning Group",
+                "description": "",
+                "value": "Enter Owning Group"
+            },
+            "enter-incident-date": {
+                "defaultValue": "Enter Incident Date",
+                "description": "",
+                "value": "Enter Incident Date"
+            },
+            "enter-complaint-title": {
+                "defaultValue": "Enter Complaint Title",
+                "description": "",
+                "value": "Enter Complaint Title"
+            },
+            "assigned-to": {
+                "defaultValue": "Assigned To",
+                "description": "",
+                "value": "Assigned To"
+            },
+            "owning-group": {
+                "defaultValue": "Owning Group",
+                "description": "",
+                "value": "Owning Group"
+            },
+            "priority": {
+                "defaultValue": "Priority",
+                "description": "",
+                "value": "Priority"
+            },
+            "enter-due-date": {
+                "defaultValue": "Enter Due Date",
+                "description": "",
+                "value": "Enter Due Date"
+            },
+            "enter-priority": {
+                "defaultValue": "Enter Priority",
+                "description": "",
+                "value": "Enter Priority"
+            },
+            "enter-assignee": {
+                "defaultValue": "Enter Assignee",
+                "description": "",
+                "value": "Enter Assignee"
+            },
+            "incident-date": {
+                "defaultValue": "Incident Date",
+                "description": "",
+                "value": "Incident Date"
+            },
+            "due-date": {
+                "defaultValue": "Due Date",
+                "description": "",
+                "value": "Due Date"
+            },
+            "state": {
+                "defaultValue": "State",
+                "description": "",
+                "value": "State"
+            },
+            "incident-category": {
+                "defaultValue": "Incident Category",
+                "description": "",
+                "value": "Incident Category"
+            },
+            "enter-incident-category": {
+                "defaultValue": "Enter Incident Category",
+                "description": "",
+                "value": "Enter Incident Category"
+            }
+        }
+    },
+    "location": {
+        "msg": {"add-new-record": {
+            "defaultValue": "Add Location",
+            "description": "",
+            "value": "Add Location"
+        }},
+        "title": {
+            "defaultValue": "Location",
+            "description": "",
+            "value": "Location"
+        },
+        "table": {"field": {
+            "zip": {
+                "defaultValue": "Zip",
+                "description": "",
+                "value": "Zip"
+            },
+            "address": {
+                "defaultValue": "Address",
+                "description": "",
+                "value": "Address"
+            },
+            "city": {
+                "defaultValue": "City",
+                "description": "",
+                "value": "City"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "state": {
+                "defaultValue": "State",
+                "description": "",
+                "value": "State"
+            },
+            "type": {
+                "defaultValue": "Type",
+                "description": "",
+                "value": "Type"
+            }
+        }}
+    },
+    "wizard": {"title": {
+        "defaultValue": "New Complaint",
+        "description": "",
+        "value": "New Complaint"
+    }},
+    "detail": {
+        "buttons": {
+            "other": {
+                "defaultValue": "Other menu items",
+                "description": "",
+                "value": "Other menu items"
+            },
+            "edit": {
+                "defaultValue": "Edit",
+                "description": "",
+                "value": "Edit"
+            },
+            "save": {
+                "defaultValue": "Save",
+                "description": "",
+                "value": "Save"
+            },
+            "details": {
+                "defaultValue": "Details",
+                "description": "",
+                "value": "Details"
+            }
+        },
+        "title": {
+            "defaultValue": "Details",
+            "description": "",
+            "value": "Details"
+        },
+        "dirty-editing-detail": {
+            "defaultValue": "Editing complaint detail",
+            "description": "",
+            "value": "Editing complaint detail"
+        }
+    },
+    "time": {
+        "label": {"timesheet": {
+            "defaultValue": "Timesheet",
+            "description": "",
+            "value": "Timesheet"
+        }},
+        "title": {
+            "defaultValue": "Time Tracking",
+            "description": "",
+            "value": "Time Tracking"
+        },
+        "table": {"field": {
+            "total-hours": {
+                "defaultValue": "Total Hours",
+                "description": "",
+                "value": "Total Hours"
+            },
+            "modified-date": {
+                "defaultValue": "Modified Date",
+                "description": "",
+                "value": "Modified Date"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "form-name": {
+                "defaultValue": "Form Name",
+                "description": "",
+                "value": "Form Name"
+            },
+            "username": {
+                "defaultValue": "Username",
+                "description": "",
+                "value": "Username"
+            },
+            "status": {
+                "defaultValue": "Status",
+                "description": "",
+                "value": "Status"
+            }
+        }}
+    }
+}

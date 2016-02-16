@@ -1,0 +1,78 @@
+{
+    "button": {
+        "na": {
+            "defaultValue": "N/A",
+            "description": "",
+            "value": "N/A"
+        },
+        "subscribe": {
+            "defaultValue": "Subscribe",
+            "description": "",
+            "value": "Subscribe"
+        },
+        "unsubscribe": {
+            "defaultValue": "Unsubscribe",
+            "description": "",
+            "value": "Unsubscribe"
+        }
+    },
+    "msg": {
+        "subscribe-success": {
+            "defaultValue": "Object subscribed",
+            "description": "",
+            "value": "Object subscribed"
+        },
+        "unsubscribe-success": {
+            "defaultValue": "Object unsubscribed",
+            "description": "",
+            "value": "Object unsubscribed"
+        }
+    },
+    "table": {"field": {
+        "owner": {
+            "defaultValue": "Owner",
+            "description": "",
+            "value": "Owner"
+        },
+        "parent-name": {
+            "defaultValue": "Parent",
+            "description": "",
+            "value": "Parent"
+        },
+        "name": {
+            "defaultValue": "Name",
+            "description": "",
+            "value": "Name"
+        },
+        "modified": {
+            "defaultValue": "Modified",
+            "description": "",
+            "value": "Modified"
+        },
+        "id": {
+            "defaultValue": "ID",
+            "description": "",
+            "value": "ID"
+        },
+        "parent-id": {
+            "defaultValue": "Parent ID",
+            "description": "",
+            "value": "Parent ID"
+        },
+        "type": {
+            "defaultValue": "Type",
+            "description": "",
+            "value": "Type"
+        },
+        "event": {
+            "defaultValue": "Event",
+            "description": "",
+            "value": "Event"
+        },
+        "parent-type": {
+            "defaultValue": "Parent Type",
+            "description": "",
+            "value": "Parent Type"
+        }
+    }}
+}

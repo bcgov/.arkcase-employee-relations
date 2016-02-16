@@ -1,0 +1,193 @@
+{
+    "button": {
+        "edit-timesheet": {
+            "defaultValue": "Edit Timesheet",
+            "description": "",
+            "value": "Edit Timesheet"
+        },
+        "go": {
+            "defaultValue": "Go!",
+            "description": "",
+            "value": "Go!"
+        },
+        "new-timesheet": {
+            "defaultValue": "New Timesheet",
+            "description": "",
+            "value": "New Timesheet"
+        }
+    },
+    "msg": {"no-timesheet-selected": {
+        "defaultValue": "(No timesheet is selected)",
+        "description": "",
+        "value": "(No timesheet is selected)"
+    }},
+    "context-menu": {"menu-title": {
+        "sub2": {
+            "defaultValue": "Sub 2",
+            "description": "",
+            "value": "Sub 2"
+        },
+        "edit": {
+            "defaultValue": "Edit",
+            "description": "",
+            "value": "Edit"
+        },
+        "more": {
+            "defaultValue": "More",
+            "description": "",
+            "value": "More"
+        },
+        "sub1": {
+            "defaultValue": "Sub 1",
+            "description": "",
+            "value": "Sub 1"
+        },
+        "copy": {
+            "defaultValue": "Copy",
+            "description": "",
+            "value": "Copy"
+        },
+        "paste": {
+            "defaultValue": "Paste",
+            "description": "",
+            "value": "Paste"
+        },
+        "menu": {
+            "defaultValue": "Menu:",
+            "description": "",
+            "value": "Menu:"
+        },
+        "delete": {
+            "defaultValue": "Delete",
+            "description": "",
+            "value": "Delete"
+        }
+    }},
+    "person": {"table": {
+        "field": {
+            "role": {
+                "defaultValue": "Role",
+                "description": "",
+                "value": "Role"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "full-name": {
+                "defaultValue": "Full Name",
+                "description": "",
+                "value": "Full Name"
+            },
+            "username": {
+                "defaultValue": "Username",
+                "description": "",
+                "value": "Username"
+            }
+        },
+        "title": {
+            "defaultValue": "Person",
+            "description": "",
+            "value": "Person"
+        }
+    }},
+    "time-summary": {"table": {
+        "field": {
+            "total-hours": {
+                "defaultValue": "Total Hours",
+                "description": "",
+                "value": "Total Hours"
+            },
+            "code": {
+                "defaultValue": "Code",
+                "description": "",
+                "value": "Code"
+            },
+            "modified-date": {
+                "defaultValue": "Modified Date",
+                "description": "",
+                "value": "Modified Date"
+            },
+            "id": {
+                "defaultValue": "ID",
+                "description": "",
+                "value": "ID"
+            },
+            "parent-id": {
+                "defaultValue": "Parent ID",
+                "description": "",
+                "value": "Parent ID"
+            },
+            "parent-type": {
+                "defaultValue": "Parent Type",
+                "description": "",
+                "value": "Parent Type"
+            },
+            "charged-date": {
+                "defaultValue": "Date Charged",
+                "description": "",
+                "value": "Date Charged"
+            }
+        },
+        "title": {
+            "defaultValue": "Hours Summary",
+            "description": "",
+            "value": "Hours Summary"
+        }
+    }},
+    "wizard": {"title": {
+        "defaultValue": "New Timesheet",
+        "description": "",
+        "value": "New Timesheet"
+    }},
+    "label": {
+        "search": {
+            "defaultValue": "Search",
+            "description": "",
+            "value": "Search"
+        },
+        "other-menu-items": {
+            "defaultValue": "Other menu items",
+            "description": "",
+            "value": "Other menu items"
+        },
+        "edit": {
+            "defaultValue": "Edit",
+            "description": "",
+            "value": "Edit"
+        },
+        "timesheet-name": {
+            "defaultValue": "Timesheet Name",
+            "description": "",
+            "value": "Timesheet Name"
+        },
+        "save": {
+            "defaultValue": "Save",
+            "description": "",
+            "value": "Save"
+        },
+        "details": {
+            "defaultValue": "Details",
+            "description": "",
+            "value": "Details"
+        }
+    },
+    "detail": {"label": {
+        "last-modified": {
+            "defaultValue": "Last Modified",
+            "description": "",
+            "value": "Last Modified"
+        },
+        "editing-timesheet-detail": {
+            "defaultValue": "Editing Timesheet detail",
+            "description": "",
+            "value": "Editing Timesheet detail"
+        }
+    }},
+    "title": {
+        "defaultValue": "Time Tracking",
+        "description": "",
+        "value": "Time Tracking"
+    }
+}

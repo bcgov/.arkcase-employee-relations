@@ -1,0 +1,13 @@
+{
+    "fail-reason": "Reason",
+    "login-button": "Log In",
+    "fail-message": "Your login attempt was not successful, try again.",
+    "footer": "eBrief",
+    "page-title": "eBrief",
+    "instruction": "Enter your username and password.",
+    "placeholder-password": "Password",
+    "placeholder-username": "Username",
+    "title": "Login",
+    "forgot-password": "Forgot password?",
+    "copy-right": "2014, 2015"
+}
