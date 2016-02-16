@@ -1,0 +1,9 @@
+acm/rules/*.xlsx
+acm/default-config/*
+acm/activemq/*
+acm/activiti/*.xml
+acm/activiti/versions/*.xml
+acm/solrLastBatchUpdate.properties
+acm/subscriptionEventLastBatchInsert.properties
+acm/dataAccessPolicyLastBatchUpdate.properties
+acm/datasource.properties.oracle
