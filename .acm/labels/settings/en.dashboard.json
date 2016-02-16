@@ -1,0 +1,390 @@
+{
+    "plugins": {
+        "news": {
+            "label": {
+                "enter-feed-url": {
+                    "defaultValue": "Enter Feed url",
+                    "description": "",
+                    "value": "Enter Feed url"
+                },
+                "description": {
+                    "defaultValue": "Displays a RSS/Atom feed",
+                    "description": "",
+                    "value": "Displays a RSS/Atom feed"
+                },
+                "feed-url": {
+                    "defaultValue": "Feed Url",
+                    "description": "",
+                    "value": "Feed Url"
+                },
+                "insert-url": {
+                    "defaultValue": "Please insert a feed url in the widget configuration",
+                    "description": "",
+                    "value": "Please insert a feed url in the widget configuration"
+                }
+            },
+            "title": {
+                "defaultValue": "News",
+                "description": "",
+                "value": "News"
+            }
+        },
+        "my-tasks": {
+            "label": {
+                "due": {
+                    "defaultValue": "Due",
+                    "description": "",
+                    "value": "Due"
+                },
+                "description": {
+                    "defaultValue": "Displays a user tasks",
+                    "description": "",
+                    "value": "Displays a user tasks"
+                },
+                "no-tasks-assigned": {
+                    "defaultValue": "No active tasks assigned",
+                    "description": "",
+                    "value": "No active tasks assigned"
+                },
+                "enter-row-numbers": {
+                    "defaultValue": "Enter Default Row Numbers",
+                    "description": "",
+                    "value": "Enter Default Row Numbers"
+                },
+                "case-id": {
+                    "defaultValue": "Case ID",
+                    "description": "",
+                    "value": "Case ID"
+                },
+                "title": {
+                    "defaultValue": "Title",
+                    "description": "",
+                    "value": "Title"
+                },
+                "priority": {
+                    "defaultValue": "Priority",
+                    "description": "",
+                    "value": "Priority"
+                },
+                "task-id": {
+                    "defaultValue": "Task ID",
+                    "description": "",
+                    "value": "Task ID"
+                },
+                "status": {
+                    "defaultValue": "Status",
+                    "description": "",
+                    "value": "Status"
+                }
+            },
+            "title": {
+                "defaultValue": "My Tasks",
+                "description": "",
+                "value": "My Tasks"
+            }
+        },
+        "links-list": {
+            "label": {
+                "add": {
+                    "defaultValue": "Add",
+                    "description": "",
+                    "value": "Add"
+                },
+                "description": {
+                    "defaultValue": "Displays a list of links",
+                    "description": "",
+                    "value": "Displays a list of links"
+                },
+                "links": {
+                    "defaultValue": "Links",
+                    "description": "",
+                    "value": "Links"
+                },
+                "title": {
+                    "defaultValue": "Title",
+                    "description": "",
+                    "value": "Title"
+                },
+                "url": {
+                    "defaultValue": "URL",
+                    "description": "",
+                    "value": "URL"
+                },
+                "remove": {
+                    "defaultValue": "Remove",
+                    "description": "",
+                    "value": "Remove"
+                }
+            },
+            "title": {
+                "defaultValue": "Links",
+                "description": "",
+                "value": "Links"
+            }
+        },
+        "new-complaints": {
+            "label": {
+                "no-new-complaints": {
+                    "defaultValue": "Currently, there are no new complaints for any user",
+                    "description": "",
+                    "value": "Currently, there are no new complaints for any user"
+                },
+                "chart-complaints": {
+                    "defaultValue": "Complaints",
+                    "description": "",
+                    "value": "Complaints"
+                },
+                "description": {
+                    "defaultValue": "Displays new complaints in the last 30 days as chart",
+                    "description": "",
+                    "value": "Displays new complaints in the last 30 days as chart"
+                },
+                "chart-date": {
+                    "defaultValue": "Date",
+                    "description": "",
+                    "value": "Date"
+                },
+                "complaint-number": {
+                    "defaultValue": "Complaint Number",
+                    "description": "",
+                    "value": "Complaint Number"
+                },
+                "title": {
+                    "defaultValue": "Title",
+                    "description": "",
+                    "value": "Title"
+                },
+                "priority": {
+                    "defaultValue": "Priority",
+                    "description": "",
+                    "value": "Priority"
+                },
+                "no-new-complaints-to-you": {
+                    "defaultValue": "No complaints are assigned to you.",
+                    "description": "",
+                    "value": "No complaints are assigned to you."
+                }
+            },
+            "title": {
+                "defaultValue": "New Complaints",
+                "description": "",
+                "value": "New Complaints"
+            }
+        },
+        "weather": {
+            "label": {
+                "current": {
+                    "defaultValue": "Current:",
+                    "description": "",
+                    "value": "Current:"
+                },
+                "enter-location": {
+                    "defaultValue": "Enter Location",
+                    "description": "",
+                    "value": "Enter Location"
+                },
+                "description": {
+                    "defaultValue": "Display the current temperature of a city",
+                    "description": "",
+                    "value": "Display the current temperature of a city"
+                },
+                "location": {
+                    "defaultValue": "Location",
+                    "description": "",
+                    "value": "Location"
+                },
+                "insert-location-in-configuration": {
+                    "defaultValue": "Please insert a location in the widget configuration",
+                    "description": "",
+                    "value": "Please insert a location in the widget configuration"
+                }
+            },
+            "title": {
+                "defaultValue": "Weather",
+                "description": "",
+                "value": "Weather"
+            }
+        },
+        "casessum": {
+            "label": {
+                "all": {
+                    "defaultValue": "All",
+                    "description": "",
+                    "value": "All"
+                },
+                "no-outstanding-cases": {
+                    "defaultValue": "Currently, there are no outstanding cases",
+                    "description": "",
+                    "value": "Currently, there are no outstanding cases"
+                },
+                "last-year": {
+                    "defaultValue": "Last Year",
+                    "description": "",
+                    "value": "Last Year"
+                },
+                "description": {
+                    "defaultValue": "Displays Cases by Status Summary as a pie chart",
+                    "description": "",
+                    "value": "Displays Cases by Status Summary as a pie chart"
+                },
+                "last-week": {
+                    "defaultValue": "Last Week",
+                    "description": "",
+                    "value": "Last Week"
+                },
+                "select-time-period": {
+                    "defaultValue": "Select Time Period",
+                    "description": "",
+                    "value": "Select Time Period"
+                },
+                "last-month": {
+                    "defaultValue": "Last Month",
+                    "description": "",
+                    "value": "Last Month"
+                }
+            },
+            "title": {
+                "defaultValue": "Cases by Status",
+                "description": "",
+                "value": "Cases by Status"
+            }
+        },
+        "my-complaints": {
+            "label": {"description": {
+                "defaultValue": "Displays complaints created by user",
+                "description": "",
+                "value": "Displays complaints created by user"
+            }},
+            "title": {
+                "defaultValue": "My Complaints",
+                "description": "",
+                "value": "My Complaints"
+            }
+        },
+        "team-task-workload": {
+            "label": {
+                "all": {
+                    "defaultValue": "All",
+                    "description": "",
+                    "value": "All"
+                },
+                "due-30-days": {
+                    "defaultValue": "Due in 30 Days",
+                    "description": "",
+                    "value": "Due in 30 Days"
+                },
+                "due-tomorrow": {
+                    "defaultValue": "Due Tomorrow",
+                    "description": "",
+                    "value": "Due Tomorrow"
+                },
+                "select-due-date": {
+                    "defaultValue": "Select Due Date Period",
+                    "description": "",
+                    "value": "Select Due Date Period"
+                },
+                "description": {
+                    "defaultValue": "Displays tasks per user as pie chart",
+                    "description": "",
+                    "value": "Displays tasks per user as pie chart"
+                },
+                "no-outstanding-tasks": {
+                    "defaultValue": "Currently, there are no outstanding tasks for any user",
+                    "description": "",
+                    "value": "Currently, there are no outstanding tasks for any user"
+                },
+                "past-due": {
+                    "defaultValue": "Past Due",
+                    "description": "",
+                    "value": "Past Due"
+                },
+                "due-7-days": {
+                    "defaultValue": "Due in 7 Days",
+                    "description": "",
+                    "value": "Due in 7 Days"
+                }
+            },
+            "title": {
+                "defaultValue": "Team Task Workload",
+                "description": "",
+                "value": "Team Task Workload"
+            }
+        },
+        "my-cases": {
+            "label": {
+                "number": {
+                    "defaultValue": "Number",
+                    "description": "",
+                    "value": "Number"
+                },
+                "description": {
+                    "defaultValue": "Displays a user cases",
+                    "description": "",
+                    "value": "Displays a user cases"
+                },
+                "no-tasks-assigned": {
+                    "defaultValue": "No active tasks assigned",
+                    "description": "",
+                    "value": "No active tasks assigned"
+                },
+                "title": {
+                    "defaultValue": "Title",
+                    "description": "",
+                    "value": "Title"
+                },
+                "priority": {
+                    "defaultValue": "Priority",
+                    "description": "",
+                    "value": "Priority"
+                },
+                "status": {
+                    "defaultValue": "Status",
+                    "description": "",
+                    "value": "Status"
+                }
+            },
+            "title": {
+                "defaultValue": "My Cases",
+                "description": "",
+                "value": "My Cases"
+            }
+        }
+    },
+    "label": {
+        "edit-dashboard": {
+            "defaultValue": "Edit Dashboard",
+            "description": "",
+            "value": "Edit Dashboard"
+        },
+        "add-new-widget": {
+            "defaultValue": "Add New Widget",
+            "description": "",
+            "value": "Add New Widget"
+        },
+        "enter-title": {
+            "defaultValue": "Enter Title",
+            "description": "",
+            "value": "Enter Title"
+        },
+        "powered-by-arkcase": {
+            "defaultValue": "Powered by ArkCase",
+            "description": "",
+            "value": "Powered by ArkCase"
+        },
+        "title": {
+            "defaultValue": "Title",
+            "description": "",
+            "value": "Title"
+        },
+        "close": {
+            "defaultValue": "Close",
+            "description": "",
+            "value": "Close"
+        },
+        "structure": {
+            "defaultValue": "Structure",
+            "description": "",
+            "value": "Structure"
+        }
+    }
+}

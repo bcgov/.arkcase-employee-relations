@@ -1,0 +1,12 @@
+{
+    "msg": {"error-occurred": "(Entries unavailable)"},
+    "label": {
+        "calendar": "Calendar",
+        "week": "Week",
+        "month": "Month",
+        "start": "Start:",
+        "refresh": "Refresh",
+        "end": "End:",
+        "day": "Day"
+    }
+}
