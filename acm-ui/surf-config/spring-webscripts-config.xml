@@ -1,4 +1,5 @@
 <app-config>
+    <!-- copy this file to ${user.home}/.acm-ui/surf-config, and update the endpoint-url element -->
 
     <plug-ins>
         <element-readers>
@@ -66,18 +67,25 @@
                 <name>ArkCase - System access</name>
                 <description>System account access to ArkCase</description>
                 <connector-id>arkcase-connector</connector-id>
-                <!--<endpoint-url>${acm.services.url}</endpoint-url>-->
                 <endpoint-url>http://localhost:8080/acm</endpoint-url>
             </endpoint>
 
-			<endpoint>
+            <endpoint>
                 <id>resources</id>
                 <name>ArkCase - Unsecure access</name>
                 <description>Request to resources not needed to be authenticated</description>
                 <connector-id>http</connector-id>
                 <endpoint-url>http://localhost:8080/acm</endpoint-url>
             </endpoint>
-			
+
+            <endpoint>
+                <id>noauth</id>
+                <name>ArkCase - External access</name>
+                <description>Request to resources not needed to be authenticated</description>
+                <connector-id>http</connector-id>
+                <endpoint-url>http://localhost:8888/acm</endpoint-url>
+            </endpoint>
+
             <!-- The default endpoint -->
             <default-endpoint-id>arkcase</default-endpoint-id>
 
