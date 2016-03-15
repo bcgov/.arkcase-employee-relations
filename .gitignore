@@ -6,6 +6,10 @@ acm/activiti/versions/*.xml
 acm/solrLastBatchUpdate.properties
 acm/subscriptionEventLastBatchInsert.properties
 acm/dataAccessPolicyLastBatchUpdate.properties
+acm/notificationLastBatchUpdate.properties
 acm/datasource.properties.oracle
 acm/caseFileSolrLastMod.properties
 acm/complaintSolrLastMod.properties
+acm/custom
+acm/tmp
+acm/resources
