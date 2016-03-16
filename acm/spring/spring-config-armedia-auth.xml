@@ -7,13 +7,13 @@
                         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
     <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <beans:property name="location" value="file:${user.home}/.acm/spring/spring-config-armedia-ldap.properties"/>
+        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-armedia-ldap.properties"/>
     </beans:bean>
 
     <beans:bean id="armedia_userSearch"
                 class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
         <beans:constructor-arg index="0" value="CN=Users" />
-        <beans:constructor-arg index="1" value="sAMAccountName={0}" />
+        <beans:constructor-arg index="1" value='${ldapConfig.userIdAttributeName}={0}' />
         <beans:constructor-arg index="2" ref="armedia_contextSource" />
     </beans:bean>
 
