@@ -1,4 +1,5 @@
 acm/rules/*.xlsx
+acm/custom-config/*
 acm/default-config/*
 acm/activemq/*
 acm/activiti/*.xml
