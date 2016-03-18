@@ -63,5 +63,6 @@
              servers use "uid". -->
         <property name="userIdAttributeName" value='${ldapConfig.userIdAttributeName}'/>
         <property name="roleToGroupMap" ref="armedia_RoleToGroupProperties"/>
+        <property name="userDomain" value='${ldapConfig.userDomain}'/>
     </bean>
 </beans>
