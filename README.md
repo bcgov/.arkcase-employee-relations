@@ -11,11 +11,6 @@ Run the following commands to switch to the desired ArkCase configuration branch
 **NOTE**: Windows users should exectute the following commands in `Git Bash`  
 
 ```
-cd <your .arkcase directory>
+cd <your $HOME/.arkcase directory>
 git checkout <branch>
 git pull
-rm -rf ~/.acm
-rm -rf ~/.acm-ui
-mv acm ~/.acm
-mv acm-ui ~/.acm-ui
-```
