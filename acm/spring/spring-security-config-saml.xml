@@ -40,7 +40,7 @@
         <custom-filter
             ref="corsFilter"
             after="PRE_AUTH_FILTER" />        
-        <session-management invalid-session-url="/loggedout">
+        <session-management invalid-session-url="/sso/loggedout">
             <!--this will throw error to 3rd login attempt -->
             <!--<concurrency-control max-sessions="3" error-if-maximum-exceeded="true" /> -->
         </session-management>
