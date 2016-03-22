@@ -21,7 +21,13 @@
     "type": "TASK",
     "description": "Task",
     "iconName": "i i-checkmark",
-    "url": "#!/tasks/:id/main"
+    "url": "#!/tasks/:type/:id/main"
+  },
+  {
+    "type": "ADHOC",
+    "description": "ADHOC Task",
+    "iconName": "i i-checkmark",
+    "url": "#!/tasks/:type/:id/main"
   },
   {
     "type": "DOCUMENT",
@@ -33,7 +39,7 @@
     "type": "FILE",
     "description": "File",
     "iconName": "",
-    "url": "proxy/arkcase/api/latest/plugin/ecm/download?ecmFileId=:id"
+    "url": "api/latest/plugin/ecm/download?ecmFileId=:id"
   },
   {
     "type": "PERSON",
