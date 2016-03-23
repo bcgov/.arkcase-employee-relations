@@ -13,7 +13,7 @@
     <!-- Scan for auto-wiring classes in spring saml packages -->
     <context:component-scan base-package="org.springframework.security.saml" />
 
-    <!-- acmAuthenticationManager, acmLoginSuccessHandler, acmSamlLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmSamlAthenticationCheckFilter, 
+    <!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmSamlAthenticationCheckFilter, 
         acmBasicAndTokenAuthenticationFilter are defined in spring-library-user-login.xml -->
 	
 	<!-- Saml Entry Point authenticates users against LDP server -->
@@ -168,7 +168,7 @@
         class="org.springframework.security.saml.SAMLLogoutFilter">
         <beans:constructor-arg
             index="0"
-            ref="acmSamlLogoutSuccessHandler" />
+            ref="acmLogoutSuccessHandler" />
         <beans:constructor-arg
             index="1"
             ref="logoutHandler" />
@@ -258,7 +258,7 @@
         class="org.springframework.security.saml.SAMLLogoutProcessingFilter">
         <beans:constructor-arg
             index="0"
-            ref="acmSamlLogoutSuccessHandler" />
+            ref="acmLogoutSuccessHandler" />
         <beans:constructor-arg
             index="1"
             ref="logoutHandler" />
