@@ -21,7 +21,7 @@
                 login-page="/login"
                 default-target-url="/home.html#!/welcome"
                 authentication-details-source-ref="acmAuthenticationDetailsFactory"
-                authentication-failure-url="/login?login_error=1"
+                authentication-failure-url="/login?login_error"
                 authentication-success-handler-ref="acmLoginSuccessHandler"/>
 		<logout
                 logout-url="/logout"
