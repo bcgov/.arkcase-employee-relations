@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ATTENTION -->
+<!-- DON'T EDIT THIS FILE. THIS IS GENERATED FILE -->
+<!-- Use 'applicationRolesPrivileges.properties' to manage roles and privileges -->
+<!-- and 'spring-acm-global-privileges.xml.ftl' to add new privilege -->
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
@@ -8,11 +13,11 @@
         <property name="privilegeName" value="acm-global-allow"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ANALYST</value>
+                                <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -22,11 +27,11 @@
         <property name="privilegeName" value="acm-audit-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -35,11 +40,11 @@
         <property name="privilegeName" value="acm-audit"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -47,11 +52,11 @@
         <property name="privilegeName" value="acm-audit-read-events-for-object"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -61,11 +66,11 @@
         <property name="privilegeName" value="acm-generate-correspondence"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -75,11 +80,11 @@
         <property name="privilegeName" value="acm-dashboard-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -88,11 +93,11 @@
         <property name="privilegeName" value="acm-dashboard"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -103,11 +108,11 @@
         <property name="privilegeName" value="acm-file-download"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -117,11 +122,11 @@
         <property name="privilegeName" value="acm-participant"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -131,11 +136,11 @@
         <property name="privilegeName" value="acm-blog"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -145,11 +150,11 @@
         <property name="privilegeName" value="acm-hello-world"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -159,11 +164,11 @@
         <property name="privilegeName" value="acm-profile"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -173,11 +178,11 @@
         <property name="privilegeName" value="acm-report-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -186,11 +191,11 @@
         <property name="privilegeName" value="acm-report"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -200,11 +205,11 @@
         <property name="privilegeName" value="acm-cost-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -213,11 +218,11 @@
         <property name="privilegeName" value="acm-costsheet-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -225,8 +230,8 @@
         <property name="privilegeName" value="acm-costsheet-approve"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -234,11 +239,11 @@
         <property name="privilegeName" value="acm-costsheet"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -248,11 +253,11 @@
         <property name="privilegeName" value="acm-time-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -261,11 +266,11 @@
         <property name="privilegeName" value="acm-timesheet-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -273,8 +278,8 @@
         <property name="privilegeName" value="acm-timesheet-approve"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -282,11 +287,11 @@
         <property name="privilegeName" value="acm-timesheet"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -296,11 +301,11 @@
         <property name="privilegeName" value="acm-tag-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -309,11 +314,11 @@
         <property name="privilegeName" value="acm-tag"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -323,11 +328,11 @@
         <property name="privilegeName" value="acm-task-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -336,11 +341,11 @@
         <property name="privilegeName" value="acm-task-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -348,11 +353,11 @@
         <property name="privilegeName" value="acm-task-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -360,11 +365,11 @@
         <property name="privilegeName" value="acm-task-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -372,11 +377,11 @@
         <property name="privilegeName" value="acm-task-complete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -384,11 +389,11 @@
         <property name="privilegeName" value="acm-task-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -396,24 +401,26 @@
         <property name="privilegeName" value="acm-task-claim"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
+
+
     <!--Save Notification Service Plugin-->
     <bean id="acmNotificationModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-notification-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -422,11 +429,11 @@
         <property name="privilegeName" value="acm-notification"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -436,11 +443,11 @@
         <property name="privilegeName" value="acm-subscription-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -449,11 +456,11 @@
         <property name="privilegeName" value="acm-subscription"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -463,11 +470,11 @@
         <property name="privilegeName" value="acm-complaint-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -476,10 +483,10 @@
         <property name="privilegeName" value="acm-complaint-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -487,10 +494,10 @@
         <property name="privilegeName" value="acm-complaint-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -498,9 +505,9 @@
         <property name="privilegeName" value="acm-complaint-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -508,8 +515,8 @@
         <property name="privilegeName" value="acm-complaint-approve"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -517,10 +524,10 @@
         <property name="privilegeName" value="acm-search"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -530,11 +537,11 @@
         <property name="privilegeName" value="acm-search-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -543,11 +550,11 @@
         <property name="privilegeName" value="acm-search"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -557,21 +564,22 @@
         <property name="privilegeName" value="acm-case-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ANALYST</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
+
 
     <bean id="acmCaseApprovePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-case-approve"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -579,9 +587,9 @@
         <property name="privilegeName" value="fis-save-case"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -589,10 +597,10 @@
         <property name="privilegeName" value="case-file-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -600,9 +608,9 @@
         <property name="privilegeName" value="case-file-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -612,11 +620,11 @@
         <property name="privilegeName" value="acm-milestone-service"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -626,11 +634,11 @@
         <property name="privilegeName" value="acm-signature-confirm"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -638,11 +646,11 @@
         <property name="privilegeName" value="acm-signature-find"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -652,10 +660,10 @@
         <property name="privilegeName" value="acm-person-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -663,11 +671,11 @@
         <property name="privilegeName" value="acm-person-find"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -675,10 +683,10 @@
         <property name="privilegeName" value="acm-person-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -686,10 +694,10 @@
         <property name="privilegeName" value="acm-person-association-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -697,11 +705,11 @@
         <property name="privilegeName" value="acm-person-List"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -709,11 +717,11 @@
         <property name="privilegeName" value="acm-person-values"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -721,10 +729,10 @@
         <property name="privilegeName" value="acm-personAssociation-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -734,7 +742,7 @@
         <property name="privilegeName" value="acm-admin-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
             </list>
         </property>
     </bean>
@@ -743,7 +751,7 @@
         <property name="privilegeName" value="acm-admin"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
             </list>
         </property>
     </bean>
@@ -753,11 +761,11 @@
         <property name="privilegeName" value="acm-save-note"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -765,10 +773,10 @@
         <property name="privilegeName" value="acm-note-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -776,10 +784,10 @@
         <property name="privilegeName" value="acm-note-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -789,11 +797,11 @@
         <property name="privilegeName" value="acm-outlook-list-items"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
@@ -803,13 +811,12 @@
         <property name="privilegeName" value="split-case-privilege"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-                <value>ROLE_CALLCENTER</value>
-                <value>ROLE_INVESTIGATOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
             </list>
         </property>
     </bean>
-
 </beans>
