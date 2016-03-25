@@ -1,7 +1,7 @@
 acm/rules/*.xlsx
-acm/custom-config/*
-acm/default-config/*
-acm/activemq/*
+custom-config/*
+default-config/*
+activemq/*
 acm/activiti/*.xml
 acm/activiti/versions/*.xml
 acm/solrLastBatchUpdate.properties
@@ -11,6 +11,6 @@ acm/notificationLastBatchUpdate.properties
 acm/datasource.properties.oracle
 acm/caseFileSolrLastMod.properties
 acm/complaintSolrLastMod.properties
-acm/custom
-acm/tmp
+custom
+tmp
 acm/resources
