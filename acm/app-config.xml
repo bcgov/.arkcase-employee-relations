@@ -6,6 +6,9 @@
     <bean id="acmApplication" class="com.armedia.acm.core.AcmApplication">
         <property name="applicationName" value="Law Enforcement Application"/>
 
+		<!-- The logoutUrl bean must be defined in spring-security-config-armedia-XXX.xml -->
+		<property name="logoutUrl" ref="logoutUrl" />
+		
         <!--
             Set "issueCollectorFlag" flag as "true" only if ArkCase instance is inside Armedia network or on the Armedia VPN or
             ArkCase instance can connect to Armedia's internal JIRA server (***REMOVED***).
