@@ -125,6 +125,36 @@
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
+    },
+	{
+      "actionName": "lock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "unlock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
     }
   ]
 }
