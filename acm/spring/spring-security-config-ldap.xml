@@ -6,14 +6,31 @@
                         http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
 	<!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmAthenticationCheckFilter, 
-        acmBasicAndTokenAuthenticationFilter are defined in spring-library-user-login.xml -->
-		
-	<!-- Ldap Entry Point authenticates users against LDP server -->
+        acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, acmRestAuthenticationEntryPoint
+        are defined in spring-library-user-login.xml -->
+
+    <!-- Ldap Entry Point authenticates users against LDP server for Ajax calls -->
+    <http 
+        entry-point-ref="acmRestAuthenticationEntryPoint"
+        use-expressions="true"
+        request-matcher="regex"
+        pattern="^/api/.*$|^/plugin/.*$|^/assets/.*$|^/custom_assets/.*$|^/directives/.*$|^/custom_directives/.*$|^/filters/.*$|^/modules/.*$|^/custom_modules/.*$|^/modules_config/.*$|^/services/.*$"
+        authentication-manager-ref="acmAuthenticationManager">
+        <intercept-url pattern="^/.*$" access="isAuthenticated()" requires-channel="https"/>
+        <http-basic/>
+        <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+        <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+        <form-login
+            authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+            authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />      
+    </http>
+    
+	<!-- Ldap Entry Point authenticates users against LDP server for regular calls -->
     <http
         auto-config="true"
         use-expressions="true"
         authentication-manager-ref="acmAuthenticationManager">
-        <intercept-url pattern="/**" access="isAuthenticated()"/>
+        <intercept-url pattern="/**" access="isAuthenticated()" requires-channel="https"/>
         <http-basic/>
         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
@@ -79,8 +96,8 @@
         <beans:property name="referral" value="follow" />
     </beans:bean>
 
-	<beans:bean id="logoutUrl" class="java.lang.String">
-		<beans:constructor-arg value="logout" />
-	</beans:bean>
+    <beans:bean id="logoutUrl" class="java.lang.String">
+        <beans:constructor-arg value="logout" />
+    </beans:bean>
 	
 </beans:beans>
