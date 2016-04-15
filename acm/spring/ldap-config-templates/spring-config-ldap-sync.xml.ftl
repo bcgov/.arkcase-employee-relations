@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:task="http://www.springframework.org/schema/task"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:task="http://www.springframework.org/schema/task"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="file:${propertiesFileName}"/>
+        <property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-${id}-ldap.properties"/>
     </bean>
 
     <bean id="${id}_RoleToGroupProperties"
-                class="org.springframework.beans.factory.config.PropertiesFactoryBean" >
+            class="org.springframework.beans.factory.config.PropertiesFactoryBean" >
         <!-- note: must leave "file:" at the start of the file name for spring
              to be able to read the file; otherwise it will try to read from the
              classpath -->
-        <property name="location" value="file:${r'${user.home}'}/.acm/applicationRoleToUserGroup.properties"/>
+        <property name="location" value="file:${r'${user.home}'}/.arkcase/acm/applicationRoleToUserGroup.properties"/>
         <property name="ignoreResourceNotFound" value="true"/>
     </bean>
 
@@ -37,6 +37,7 @@
         <property name="ldapDao" ref="springLdapDao"/>
         <property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
+        <property name="syncEnabled" value="true"/>
     </bean>
 
     <bean id="${id}_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig">
@@ -55,12 +56,13 @@
         <property name="ldapUrl" value='${r"${ldapConfig.ldapUrl}"}'/>
         <!-- referral: "follow" if you want to follow LDAP referrals, "ignore" otherwise (search "ldap referral" for more info). -->
         <property name="referral" value="follow"/>
-	    <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
-    	<property name="mailAttributeName" value="mail"/>
-		        
+        <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
+        <property name="mailAttributeName" value="mail"/>
+
         <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
              servers use "uid". -->
         <property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
         <property name="roleToGroupMap" ref="${id}_RoleToGroupProperties"/>
+        <property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
     </bean>
 </beans>
