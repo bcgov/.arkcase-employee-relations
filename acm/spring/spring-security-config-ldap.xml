@@ -9,14 +9,14 @@
         acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, acmRestAuthenticationEntryPoint
         are defined in spring-library-user-login.xml -->
 
-    <!-- Ldap Entry Point authenticates users against LDP server for Ajax calls -->
+    <!-- Ldap Entry Point authenticates users against LDAP server for static application resources -->
     <http 
-        entry-point-ref="acmRestAuthenticationEntryPoint"
+        entry-point-ref="acmStaticResourcesAuthenticationEntryPoint"
         use-expressions="true"
         request-matcher="regex"
-        pattern="^/api/.*$|^/plugin/.*$|^/assets/.*$|^/custom_assets/.*$|^/directives/.*$|^/custom_directives/.*$|^/filters/.*$|^/modules/.*$|^/custom_modules/.*$|^/modules_config/.*$|^/services/.*$"
+        pattern="^/assets/.*$|^/custom_assets/.*$|^/directives/.*$|^/custom_directives/.*$|^/filters/.*$|^/modules/.*$|^/custom_modules/.*$|^/modules_config/.*$|^/services/.*$"
         authentication-manager-ref="acmAuthenticationManager">
-        <intercept-url pattern="^/.*$" access="isAuthenticated()" requires-channel="https"/>
+        <intercept-url pattern="^/.*$" access="isAuthenticated()" />
         <http-basic/>
         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
@@ -24,13 +24,29 @@
             authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
             authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />      
     </http>
-    
-	<!-- Ldap Entry Point authenticates users against LDP server for regular calls -->
+
+    <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
+    <http 
+        entry-point-ref="acmRestAuthenticationEntryPoint"
+        use-expressions="true"
+        request-matcher="regex"
+        pattern="^/api/.*$|^/plugin/.*$"
+        authentication-manager-ref="acmAuthenticationManager">
+        <intercept-url pattern="^/.*$" access="isAuthenticated()" />
+        <http-basic/>
+        <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+        <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+        <form-login
+            authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+            authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />      
+    </http>
+   
+	<!-- Ldap Entry Point authenticates users against LDAP server for regular calls -->
     <http
         auto-config="true"
         use-expressions="true"
         authentication-manager-ref="acmAuthenticationManager">
-        <intercept-url pattern="/**" access="isAuthenticated()" requires-channel="https"/>
+        <intercept-url pattern="/**" access="isAuthenticated()" />
         <http-basic/>
         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
