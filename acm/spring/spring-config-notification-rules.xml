@@ -16,17 +16,17 @@
 			<value>
 				<![CDATA[
 					SELECT 
-					  a.newAssignee AS user,
-					  CONCAT('${objectTypeLabel} ', a.objectName, ' assigned to ', u.fullName, ' on ', a.created) AS title,
-					  CONCAT('${objectTypeLabel} ', a.objectName, ' was assigned to ', u.fullName, ' on ', a.created, '.  Click here to view: ${urlanchor}') AS note,
-					  'user' AS notificationType,
-					  a.objectId AS objectId,
-					  a.objectType AS objectType,
-					  a.objectName AS objectName,
-					  a.objectTitle AS objectTitle,
-					  NULL AS relatedObjectId,
-					  NULL AS relatedObjectType,
-					  u.mail as mail
+					  	a.newAssignee AS user,
+					  	CONCAT('${objectTypeLabel} ', a.objectName, ' assigned to ', u.fullName, ' on ', a.created) AS title,
+					  	CONCAT('${objectTypeLabel} ', a.objectName, ' was assigned to ', u.fullName, ' on ', a.created, '.  Click here to view: ${urlanchor}') AS note,
+					  	'user' AS notificationType,
+					  	a.objectId AS objectId,
+					  	a.objectType AS objectType,
+					  	a.objectName AS objectName,
+					  	a.objectTitle AS objectTitle,
+					  	NULL AS relatedObjectId,
+					 	NULL AS relatedObjectType,
+					  	u.mail as mail
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -51,17 +51,17 @@
 			<value>
 				<![CDATA[
 					SELECT 	
-					  a.oldAssignee AS user,
-					  CONCAT('${objectTypeLabel} ', a.objectName, ' unassigned from ', u.fullName, ' on ', a.created) AS title,
-					  CONCAT('${objectTypeLabel} ', a.objectName, ' was unassigned from ', u.fullName, ' on ', a.created, '.  Click here to view: ${urlanchor}') AS note,
-					  'user' AS notificationType,
-					  a.objectId AS objectId,
-					  a.objectType AS objectType,
-					  a.objectName AS objectName,
-					  a.objectTitle AS objectTitle,
-					  NULL AS relatedObjectId,
-					  NULL AS relatedObjectType,
-					  u.mail as mail
+					  	a.oldAssignee AS user,
+						CONCAT('${objectTypeLabel} ', a.objectName, ' unassigned from ', u.fullName, ' on ', a.created) AS title,
+					 	CONCAT('${objectTypeLabel} ', a.objectName, ' was unassigned from ', u.fullName, ' on ', a.created, '.  Click here to view: ${urlanchor}') AS note,
+					 	'user' AS notificationType,
+					  	a.objectId AS objectId,
+					  	a.objectType AS objectType,
+					  	a.objectName AS objectName,
+					  	a.objectTitle AS objectTitle,
+					  	NULL AS relatedObjectId,
+					  	NULL AS relatedObjectType,
+					  	u.mail as mail
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -106,17 +106,17 @@
 			<value>
 				<![CDATA[
 					SELECT
-					  u.userId AS user,
-					  CONCAT('Document(s) ', ecmf.fileName, ' created in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-					  CONCAT('Document(s) ', ecmf.fileName, ' created in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-					  'user' AS notificationType,
-					  a.objectId AS objectId,
-					  a.objectType AS objectType,
-					  ecmf.fileName AS objectName,
-					  ecmf.fileName AS objectTitle,
-					  a.parentObjectId AS relatedObjectId,
-					  a.parentObjectType AS relatedObjectType,
-					  u.mail as mail
+					  	u.userId AS user,
+					  	CONCAT('Document ', ecmf.fileName, ' uploaded on ', a.eventDate) AS title,
+					  	CONCAT('Document ', ecmf.fileName, ' uploaded on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+					  	'user' AS notificationType,
+					  	a.objectId AS objectId,
+					  	a.objectType AS objectType,
+					  	ecmf.fileName AS objectName,
+					  	ecmf.fileName AS objectTitle,
+					  	a.parentObjectId AS relatedObjectId,
+					  	a.parentObjectType AS relatedObjectType,
+					  	u.mail as mail
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -148,27 +148,27 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                  SELECT
-                      u.userId AS user,
-                      CONCAT('Document(s) deleted in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-                      CONCAT('Document(s) deleted in ', a.parentObjectType, ' on ', a.eventDate, '.') AS note,
-                      'user' AS notificationType,
-                      a.objectId AS objectId,
-                      a.objectType AS objectType,
-                      '' AS objectName,
-                      '' AS objectTitle,
-                      a.parentObjectId AS relatedObjectId,
-					  a.parentObjectType AS relatedObjectType,
-                      u.mail as mail
+                  	SELECT
+                     	u.userId AS user,
+                    	CONCAT('Document deleted on ', a.eventDate) AS title,
+                     	CONCAT('Document deleted on ', a.eventDate) AS note,
+                      	'user' AS notificationType,
+                      	a.objectId AS objectId,
+                      	a.objectType AS objectType,
+                      	'' AS objectName,
+                      	'' AS objectTitle,
+                      	a.parentObjectId AS relatedObjectId,
+					  	a.parentObjectType AS relatedObjectType,
+                      	u.mail as mail
                     FROM
-                        AuditEvent a
+                    	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId    
                     WHERE
-                        a.eventDate >= :lastRunDate
+                    	a.eventDate >= :lastRunDate
                     AND
-                        a.fullEventType = 'com.armedia.acm.file.deleted'
+                    	a.fullEventType = 'com.armedia.acm.file.deleted'
                     AND
-                        a.objectType = 'FILE'
+                    	a.objectType = 'FILE'
                     AND
                     	a.eventResult = 'success'	
                     ORDER BY
@@ -187,19 +187,19 @@
 			<value>
 				<![CDATA[
                     SELECT
-                      u.userId AS user,
-                      CONCAT('Document(s) ', ecmf.fileName, ' replaced in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-                      CONCAT('Document(s) ', ecmf.fileName, ' replaced in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                      'user' AS notificationType,
-                      a.objectId AS objectId,
-                      a.objectType AS objectType,
-                      ecmf.fileName AS objectName,
-                      ecmf.fileName AS objectTitle,
-                      a.parentObjectId AS relatedObjectId,
-					  a.parentObjectType AS relatedObjectType,
-                      u.mail as mail
+                      	u.userId AS user,
+                      	CONCAT('Document ', ecmf.fileName, ' replaced on ', a.eventDate) AS title,
+                      	CONCAT('Document ', ecmf.fileName, ' replaced on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+                      	'user' AS notificationType,
+                      	a.objectId AS objectId,
+                      	a.objectType AS objectType,
+                      	ecmf.fileName AS objectName,
+                      	ecmf.fileName AS objectTitle,
+                      	a.parentObjectId AS relatedObjectId,
+					  	a.parentObjectType AS relatedObjectType,
+                      	u.mail as mail
                     FROM
-                         AuditEvent a
+                        AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
                     JOIN EcmFile ecmf ON a.objectId = ecmf.fileId     
                     WHERE
@@ -226,17 +226,18 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-                    CONCAT('Document(s) ', ecmf.fileName, ' versioned in ', a.parentObjectType,  ' on ', a.eventDate) AS title,
-                    CONCAT('Document(s) ', ecmf.fileName, ' versioned in ', a.parentObjectType,  ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                    'user' AS notificationType,
-                    a.objectId AS objectId,
-                    a.objectType AS objectType,
-                    ecmf.fileName AS objectName,
-                    ecmf.fileName AS objectTitle,
-                    a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-                    u.mail as mail
+                    SELECT 
+                    	u.userId AS user,
+                    	CONCAT('Document ', ecmf.fileName, ' versioned on ', a.eventDate) AS title,
+                    	CONCAT('Document ', ecmf.fileName, ' versioned on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+                    	'user' AS notificationType,
+                    	a.objectId AS objectId,
+                    	a.objectType AS objectType,
+                    	ecmf.fileName AS objectName,
+                    	ecmf.fileName AS objectTitle,
+                    	a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+                    	u.mail as mail
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -264,27 +265,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                SELECT u.userId AS user,
-  				CONCAT('Complaint ', c.complaintNumber, ' status changed on ', a.eventDate) AS title,
-  				CONCAT('Complaint ', c.complaintNumber, ' status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-  				'user' AS notificationType,
-  				a.objectId AS objectId,
-  				a.objectType AS objectType,
-  				c.complaintNumber AS objectName,
-  				c.complaintTitle AS objectTitle,
-  				a.parentObjectId AS relatedObjectId,
-			    a.parentObjectType AS relatedObjectType,
-  				u.mail AS mail
-				FROM
-  					AuditEvent a
-  				JOIN AcmUser u ON a.userId = u.userId
-  				JOIN Complaint c ON a.objectId = c.complaintId
-				WHERE
-  					a.eventDate >= :lastRunDate
-  				AND
-  					a.fullEventType = 'com.armedia.acm.complaint.status.changed'
-				ORDER BY
-  					a.eventDate
+                	SELECT 
+                		u.userId AS user,
+  						CONCAT('Complaint ', c.complaintNumber, ' status changed on ', a.eventDate) AS title,
+  						CONCAT('Complaint ', c.complaintNumber, ' status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+  						'user' AS notificationType,
+  						a.objectId AS objectId,
+  						a.objectType AS objectType,
+  						c.complaintNumber AS objectName,
+  						c.complaintTitle AS objectTitle,
+  						a.parentObjectId AS relatedObjectId,
+			    		a.parentObjectType AS relatedObjectType,
+  						u.mail AS mail
+					FROM
+  						AuditEvent a
+  					JOIN AcmUser u ON a.userId = u.userId
+  					JOIN Complaint c ON a.objectId = c.complaintId
+					WHERE
+  						a.eventDate >= :lastRunDate
+  					AND
+  						a.fullEventType = 'com.armedia.acm.complaint.status.changed'
+					ORDER BY
+  						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -298,27 +300,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                SELECT u.userId AS user,
-       			CONCAT('Case ', c.caseNumber, ' status changed on ', a.eventDate) AS title,
-       			CONCAT('Case ', c.caseNumber, ' status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-       			'user' AS notificationType,
-       			a.objectId AS objectId,
-       			a.objectType AS objectType,
-       			c.caseNumber AS objectName,
-       			c.title AS objectTitle,
-       			a.parentObjectId AS relatedObjectId,
-				a.parentObjectType AS relatedObjectType,
-       			u.mail as mail
-				FROM
-					AuditEvent a
-				JOIN AcmUser u ON a.userId = u.userId
-				JOIN CaseFile c ON a.objectId = c.id
-				WHERE
-					a.eventDate >= :lastRunDate
-				AND
-					a.fullEventType = 'com.armedia.acm.casefile.status.changed'
-				ORDER BY
-					a.eventDate
+                	SELECT
+                		u.userId AS user,
+       					CONCAT('Case ', c.caseNumber, ' status changed on ', a.eventDate) AS title,
+       					CONCAT('Case ', c.caseNumber, ' status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+       					'user' AS notificationType,
+       					a.objectId AS objectId,
+       					a.objectType AS objectType,
+       					c.caseNumber AS objectName,
+       					c.title AS objectTitle,
+       					a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+       					u.mail as mail
+					FROM
+						AuditEvent a
+					JOIN AcmUser u ON a.userId = u.userId
+					JOIN CaseFile c ON a.objectId = c.id
+					WHERE
+						a.eventDate >= :lastRunDate
+					AND
+						a.fullEventType = 'com.armedia.acm.casefile.status.changed'
+					ORDER BY
+						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -332,17 +335,18 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-       				CONCAT('Note added in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-				    CONCAT('Note added in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-				    'user' AS notificationType,
-				    a.objectId AS objectId,
-       			    a.objectType AS objectType,
-				    CONCAT(a.objectType, "_", a.objectId) AS objectName,
-				    CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
-				    a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-				    u.mail as mail
+                   	SELECT 
+                   		u.userId AS user,
+       					CONCAT('Note added on ', a.eventDate) AS title,
+				    	CONCAT('Note added on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+				    	'user' AS notificationType,
+				    	a.objectId AS objectId,
+       			    	a.objectType AS objectType,
+				    	CONCAT(a.objectType, "_", a.objectId) AS objectName,
+				    	CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
+				    	a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+				    	u.mail as mail
 					FROM
 				  		AuditEvent a
 				 	JOIN AcmUser u ON a.userId = u.userId
@@ -365,27 +369,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-  				CONCAT('Complaint ', c.complaintNumber, ' priority changed on ', a.eventDate) AS title,
-  				CONCAT('Complaint ', c.complaintNumber, ' priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-  				'user' AS notificationType,
-  				a.objectId AS objectId,
-  				a.objectType AS objectType,
-  				c.complaintNumber AS objectName,
-  				c.complaintTitle AS objectTitle,
-  				a.parentObjectId AS parentId,
-			    a.parentObjectType AS parentType,
-  				u.mail AS mail
-				FROM
-  					AuditEvent a
-  				JOIN AcmUser u ON a.userId = u.userId
-  				JOIN Complaint c ON a.objectId = c.complaintId
-				WHERE
-  					a.eventDate >= :lastRunDate
-  				AND
-  					a.fullEventType = 'com.armedia.acm.complaint.priority.changed'
-				ORDER BY
-  					a.eventDate
+                    SELECT 
+                    	u.userId AS user,
+  						CONCAT('Complaint ', c.complaintNumber, ' priority changed on ', a.eventDate) AS title,
+  						CONCAT('Complaint ', c.complaintNumber, ' priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+  						'user' AS notificationType,
+  						a.objectId AS objectId,
+  						a.objectType AS objectType,
+  						c.complaintNumber AS objectName,
+  						c.complaintTitle AS objectTitle,
+  						a.parentObjectId AS parentId,
+			    		a.parentObjectType AS parentType,
+  						u.mail AS mail
+					FROM
+  						AuditEvent a
+  					JOIN AcmUser u ON a.userId = u.userId
+  					JOIN Complaint c ON a.objectId = c.complaintId
+					WHERE
+  						a.eventDate >= :lastRunDate
+  					AND
+  						a.fullEventType = 'com.armedia.acm.complaint.priority.changed'
+					ORDER BY
+  						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -399,27 +404,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-  				CONCAT('Complaint ', c.complaintNumber, ' details updated on ', a.eventDate) AS title,
-  				CONCAT('Complaint ', c.complaintNumber, ' details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-  				'user' AS notificationType,
-  				a.objectId AS objectId,
-  				a.objectType AS objectType,
-  				c.complaintNumber AS objectName,
-  				c.complaintTitle AS objectTitle,
-  				a.parentObjectId AS parentId,
-				a.parentObjectType AS parentType,
-  				u.mail AS mail
-				FROM
-  					AuditEvent a
-  				JOIN AcmUser u ON a.userId = u.userId
-  				JOIN Complaint c ON a.objectId = c.complaintId
-				WHERE
-  					a.eventDate >= :lastRunDate
-  				AND
-  					a.fullEventType = 'com.armedia.acm.complaint.details.changed'
-				ORDER BY
-  					a.eventDate
+                    SELECT 
+                    	u.userId AS user,
+  						CONCAT('Complaint ', c.complaintNumber, ' details updated on ', a.eventDate) AS title,
+  						CONCAT('Complaint ', c.complaintNumber, ' details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+  						'user' AS notificationType,
+  						a.objectId AS objectId,
+  						a.objectType AS objectType,
+  						c.complaintNumber AS objectName,
+  						c.complaintTitle AS objectTitle,
+  						a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+  						u.mail AS mail
+					FROM
+  						AuditEvent a
+  					JOIN AcmUser u ON a.userId = u.userId
+  					JOIN Complaint c ON a.objectId = c.complaintId
+					WHERE
+  						a.eventDate >= :lastRunDate
+  					AND
+  						a.fullEventType = 'com.armedia.acm.complaint.details.changed'
+					ORDER BY
+  						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -433,27 +439,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                     SELECT u.userId AS user,
-       			CONCAT('Case ', c.caseNumber, ' priority changed on ', a.eventDate) AS title,
-       			CONCAT('Case ', c.caseNumber, ' priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-       			'user' AS notificationType,
-       			a.objectId AS objectId,
-       			a.objectType AS objectType,
-       			c.caseNumber AS objectName,
-       			c.title AS objectTitle,
-       			a.parentObjectId AS parentId,
-				a.parentObjectType AS parentType,
-       			u.mail as mail
-				FROM
-					AuditEvent a
-				JOIN AcmUser u ON a.userId = u.userId
-				JOIN CaseFile c ON a.objectId = c.id
-				WHERE
-					a.eventDate >= :lastRunDate
-				AND
-					a.fullEventType = 'com.armedia.acm.casefile.priority.changed'
-				ORDER BY
-					a.eventDate
+                    SELECT 
+                     	u.userId AS user,
+       					CONCAT('Case ', c.caseNumber, ' priority changed on ', a.eventDate) AS title,
+       					CONCAT('Case ', c.caseNumber, ' priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+       					'user' AS notificationType,
+       					a.objectId AS objectId,
+       					a.objectType AS objectType,
+       					c.caseNumber AS objectName,
+       					c.title AS objectTitle,
+       					a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+       					u.mail as mail
+					FROM
+						AuditEvent a
+					JOIN AcmUser u ON a.userId = u.userId
+					JOIN CaseFile c ON a.objectId = c.id
+					WHERE
+						a.eventDate >= :lastRunDate
+					AND
+						a.fullEventType = 'com.armedia.acm.casefile.priority.changed'
+					ORDER BY
+						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -467,27 +474,28 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                        SELECT u.userId AS user,
-       			CONCAT('Case ', c.caseNumber, ' details updated on ', a.eventDate) AS title,
-       			CONCAT('Case ', c.caseNumber, ' details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-       			'user' AS notificationType,
-       			a.objectId AS objectId,
-       			a.objectType AS objectType,
-       			c.caseNumber AS objectName,
-       			c.title AS objectTitle,
-       			a.parentObjectId AS parentId,
-				a.parentObjectType AS parentType,
-       			u.mail as mail
-				FROM
-					AuditEvent a
-				JOIN AcmUser u ON a.userId = u.userId
-				JOIN CaseFile c ON a.objectId = c.id
-				WHERE
-					a.eventDate >= :lastRunDate
-				AND
-					a.fullEventType = 'com.armedia.acm.casefile.details.changed'
-				ORDER BY
-					a.eventDate
+                    SELECT 
+                    	u.userId AS user,
+       					CONCAT('Case ', c.caseNumber, ' details updated on ', a.eventDate) AS title,
+       					CONCAT('Case ', c.caseNumber, ' details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+       					'user' AS notificationType,
+       					a.objectId AS objectId,
+       					a.objectType AS objectType,
+       					c.caseNumber AS objectName,
+       					c.title AS objectTitle,
+       					a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+       					u.mail as mail
+					FROM
+						AuditEvent a
+					JOIN AcmUser u ON a.userId = u.userId
+					JOIN CaseFile c ON a.objectId = c.id
+					WHERE
+						a.eventDate >= :lastRunDate
+					AND
+						a.fullEventType = 'com.armedia.acm.casefile.details.changed'
+					ORDER BY
+						a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -501,18 +509,19 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-                    CONCAT('Task details updated on ', a.eventDate) AS title,
-                    CONCAT('Task details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                    'user' AS notificationType,
-                    a.objectId AS objectId,
-                    a.objectType AS objectType,
-                    CONCAT('TASK_', a.objectId) AS objectName,
-                    'TASK' AS objectTitle,
-                    a.parentObjectId AS parentId,
-					a.parentObjectType AS parentType,
-                    u.mail as mail
-                    FROM
+                    SELECT 
+                    	u.userId AS user,
+                    	CONCAT('Task details updated on ', a.eventDate) AS title,
+                    	CONCAT('Task details updated on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+                    	'user' AS notificationType,
+                    	a.objectId AS objectId,
+                    	a.objectType AS objectType,
+                    	CONCAT('TASK_', a.objectId) AS objectName,
+                    	'TASK' AS objectTitle,
+                    	a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+                    	u.mail as mail
+                    FROM 
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
                     WHERE
@@ -534,17 +543,18 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-                    CONCAT('Task priority changed on ', a.eventDate) AS title,
-                    CONCAT('Task priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                    'user' AS notificationType,
-                    a.objectId AS objectId,
-                    a.objectType AS objectType,
-                    CONCAT('TASK_', a.objectId) AS objectName,
-                    'TASK' AS objectTitle,
-                    a.parentObjectId AS parentId,
-					a.parentObjectType AS parentType,
-                    u.mail as mail
+                    SELECT 
+                    	u.userId AS user,
+                    	CONCAT('Task priority changed on ', a.eventDate) AS title,
+                    	CONCAT('Task priority changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+                    	'user' AS notificationType,
+                    	a.objectId AS objectId,
+                    	a.objectType AS objectType,
+                    	CONCAT('TASK_', a.objectId) AS objectName,
+                    	'TASK' AS objectTitle,
+                    	a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+                    	u.mail as mail
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -568,16 +578,16 @@
 			<value>
 				<![CDATA[
                     SELECT u.userId AS user,
-                    CONCAT('Task status changed on ', a.eventDate) AS title,
-                    CONCAT('Task status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                    'user' AS notificationType,
-                    a.objectId AS objectId,
-                    a.objectType AS objectType,
-                    CONCAT('TASK_', a.objectId) AS objectName,
-                    'TASK' AS objectTitle,
-                    a.parentObjectId AS parentId,
-					a.parentObjectType AS parentType,
-                    u.mail as mail
+                    	CONCAT('Task status changed on ', a.eventDate) AS title,
+                    	CONCAT('Task status changed on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+                    	'user' AS notificationType,
+                    	a.objectId AS objectId,
+                    	a.objectType AS objectType,
+                    	CONCAT('TASK_', a.objectId) AS objectName,
+                    	'TASK' AS objectTitle,
+                    	a.parentObjectId AS parentId,
+						a.parentObjectType AS parentType,
+                    	u.mail as mail
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -600,17 +610,18 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-			    	CONCAT('Person added in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-			    	CONCAT('Person added in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-			    	'user' AS notificationType,
-			    	a.objectId AS objectId,
-			    	a.objectType AS objectType,
-			    	CONCAT(a.objectType, "_", a.objectId) AS objectName,
-			    	CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
-			    	a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-			    	u.mail as mail
+                    SELECT 
+                    	u.userId AS user,
+			    		CONCAT('Person added on ', a.eventDate) AS title,
+			    		CONCAT('Person added on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+			    		'user' AS notificationType,
+			    		a.objectId AS objectId,
+			    		a.objectType AS objectType,
+			    		CONCAT(a.objectType, "_", a.objectId) AS objectName,
+			    		CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
+			    		a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+			    		u.mail as mail
 					FROM
 			  			AuditEvent a
 			  		JOIN AcmUser u ON a.userId = u.userId
@@ -633,17 +644,18 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                  	SELECT u.userId AS user,
-				    CONCAT('Person deleted in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-				    CONCAT('Person deleted in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-				    'user' AS notificationType,
-				    a.objectId AS objectId,
-				    a.objectType AS objectType,
-				    CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
-				    'person' AS objectTitle,
-				    a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-				    u.mail as mail
+                  	SELECT
+                  		u.userId AS user,
+				    	CONCAT('Person deleted on ', a.eventDate) AS title,
+				    	CONCAT('Person deleted on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+				    	'user' AS notificationType,
+				    	a.objectId AS objectId,
+				    	a.objectType AS objectType,
+				    	CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
+				    	'person' AS objectTitle,
+				    	a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+				    	u.mail as mail
 					FROM
 				  		AuditEvent a
 				  	JOIN AcmUser u ON a.userId = u.userId
@@ -658,7 +670,7 @@
 		</property>
 	</bean>
 
-	<bean id="participantAddedRule"
+	<bean id="participantAddedInComplaintRule"
 		  class="com.armedia.acm.services.notification.model.BasicNotificationRule">
 		<property name="globalRule" value="true" />
 		<property name="queryType" value="CREATE" />
@@ -666,26 +678,27 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-	              	SELECT u.userId AS user,
-					CONCAT('Participant added in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-					CONCAT('Participant added in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-					'user' AS notificationType,
-					a.objectId AS objectId,
-				    a.objectType AS objectType,
-					CONCAT(a.objectType, "_", a.objectId) AS objectName,
-					CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
-					a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-					u.mail as mail
+	                SELECT 
+	                	u.userId AS user,
+				    	CONCAT('Participant added on ', a.eventDate) AS title,
+						CONCAT('Participant added on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
+						'user' AS notificationType,
+						a.objectId AS objectId,
+				    	a.objectType AS objectType,
+						CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
+						CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectTitle,
+						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+						u.mail as mail
 					FROM
-					  AuditEvent a
+					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
 					WHERE
-					  a.eventDate >= :lastRunDate
+					  	a.eventDate >= :lastRunDate
 					AND
-					  a.fullEventType = 'com.armedia.acm.participant.created'
+					  	a.fullEventType = 'com.armedia.acm.complaint.participant.added'
 					ORDER BY
-					  a.eventDate
+					  	a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -699,26 +712,61 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-	                SELECT u.userId AS user,
-				    CONCAT('Participants deleted in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-					CONCAT('Participants deleted in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-					'user' AS notificationType,
-					a.objectId AS objectId,
-				    a.objectType AS objectType,
-					CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
-					CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectTitle,
-					a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-					u.mail as mail
+	                SELECT 
+	                	u.userId AS user,
+				    	CONCAT('Participant deleted on ', a.eventDate) AS title,
+						CONCAT('Participant deleted on ', a.eventDate, '. Link: ${urlanchor}') AS note,
+						'user' AS notificationType,
+						a.objectId AS objectId,
+				    	a.objectType AS objectType,
+						CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
+						CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectTitle,
+						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+						u.mail as mail
 					FROM
-					  AuditEvent a
+					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
 					WHERE
-					  a.eventDate >= :lastRunDate
+					  	a.eventDate >= :lastRunDate
 					AND
-					  a.fullEventType = 'com.armedia.acm.complaint.participant.deleted'
+					  	a.fullEventType = 'com.armedia.acm.complaint.participant.deleted'
 					ORDER BY
-					  a.eventDate
+					  	a.eventDate
+                ]]>
+			</value>
+		</property>
+	</bean>
+
+	<bean id="participantAddedInCaseFileRule"
+		  class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+		<property name="globalRule" value="true" />
+		<property name="queryType" value="CREATE" />
+		<property name="executor" ref="noopExecutor" />
+		<property name="jpaQuery">
+			<value>
+				<![CDATA[
+	                SELECT 
+	                	u.userId AS user,
+						CONCAT('Participant added on ', a.eventDate) AS title,
+						CONCAT('Participant added on ', a.eventDate, '. Link: ${urlanchor}') AS note,
+						'user' AS notificationType,
+						a.objectId AS objectId,
+				    	a.objectType AS objectType,
+						CONCAT(a.objectType, "_", a.objectId) AS objectName,
+						CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
+						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+						u.mail as mail
+					FROM
+					  	AuditEvent a
+					JOIN AcmUser u ON a.userId = u.userId
+					WHERE
+					  	a.eventDate >= :lastRunDate
+					AND
+					  	a.fullEventType = 'com.armedia.acm.casefile.participant.added'
+					ORDER BY
+					  	a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -732,26 +780,27 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-	                SELECT u.userId AS user,
-					CONCAT('Participants deleted in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-					CONCAT('Participants deleted in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-					'user' AS notificationType,
-					a.objectId AS objectId,
-				    a.objectType AS objectType,
-					CONCAT(a.objectType, "_", a.objectId) AS objectName,
-					CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
-					a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-					u.mail as mail
+	                SELECT
+	                	u.userId AS user,
+						CONCAT('Participant deleted on ', a.eventDate) AS title,
+						CONCAT('Participant deleted on ', a.eventDate, '. Link: ${urlanchor}') AS note,
+						'user' AS notificationType,
+						a.objectId AS objectId,
+				    	a.objectType AS objectType,
+						CONCAT(a.objectType, "_", a.objectId) AS objectName,
+						CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
+						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+						u.mail as mail
 					FROM
-					  AuditEvent a
+					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
 					WHERE
-					  a.eventDate >= :lastRunDate
+					 	a.eventDate >= :lastRunDate
 					AND
-					  a.fullEventType = 'com.armedia.acm.casefile.participant.deleted'
+					 	a.fullEventType = 'com.armedia.acm.casefile.participant.deleted'
 					ORDER BY
-					  a.eventDate
+					  	a.eventDate
                 ]]>
 			</value>
 		</property>
@@ -765,19 +814,20 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-                    CONCAT('Calendar event added in ', a.objectType, ' on ', a.eventDate) AS title,
-                    CONCAT('Calendar event added in ', a.objectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-                    'user' AS notificationType,
-                    a.objectId AS objectId,
-                    a.objectType AS objectType,
-                    CONCAT('CALENDAR_EVENT_', a.objectId) AS objectName,
-                    CONCAT('CALENDAR_EVENT_', a.objectId) AS objectTitle,
-                    a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-                    u.mail as mail
+                    SELECT
+                    	u.userId AS user,
+                    	CONCAT('Calendar event added on ', a.eventDate) AS title,
+                    	CONCAT('Calendar event added on ', a.eventDate, '. Link: ${urlanchor}') AS note,
+                    	'user' AS notificationType,
+                    	a.objectId AS objectId,
+                    	a.objectType AS objectType,
+                    	CONCAT('CALENDAR_EVENT_', a.objectId) AS objectName,
+                    	CONCAT('CALENDAR_EVENT_', a.objectId) AS objectTitle,
+                    	a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+                    	u.mail as mail
                     FROM
-				 	 AuditEvent a
+				 	 	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
                     WHERE
                     	a.eventDate >= :lastRunDate
@@ -798,19 +848,20 @@
 		<property name="jpaQuery">
 			<value>
 				<![CDATA[
-                    SELECT u.userId AS user,
-  					CONCAT('Correspondence ', ecmf.fileName, ' added in ', a.parentObjectType, ' on ', a.eventDate) AS title,
-  					CONCAT('Correspondence ', ecmf.fileName, ' added in ', a.parentObjectType, ' on ', a.eventDate, '.  Link: ${urlanchor}') AS note,
-  					'user' AS notificationType,
-  					a.objectId AS objectId,
-                    a.objectType AS objectType,
-  					ecmf.fileName AS objectName,
-  					ecmf.fileName AS objectTitle,
-  					a.parentObjectId AS relatedObjectId,
-					a.parentObjectType AS relatedObjectType,
-  					u.mail AS mail
+                    SELECT
+                    	u.userId AS user,
+  						CONCAT('Correspondence ', ecmf.fileName, ' added on ', a.eventDate) AS title,
+  						CONCAT('Correspondence ', ecmf.fileName, ' added on ', a.eventDate, '. Link: ${urlanchor}') AS note,
+  						'user' AS notificationType,
+  						a.objectId AS objectId,
+                    	a.objectType AS objectType,
+  						ecmf.fileName AS objectName,
+  						ecmf.fileName AS objectTitle,
+  						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+  						u.mail AS mail
 					FROM
-				 	 AuditEvent a
+				 	 	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
 					JOIN EcmFile ecmf ON a.objectId = ecmf.fileId
 					WHERE
