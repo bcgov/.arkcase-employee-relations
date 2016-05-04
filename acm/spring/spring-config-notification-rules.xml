@@ -518,8 +518,8 @@
                     	a.objectType AS objectType,
                     	CONCAT('TASK_', a.objectId) AS objectName,
                     	'TASK' AS objectTitle,
-                    	a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType,
+                    	NULL AS parentId,
+						NULL AS parentType,
                     	u.mail as mail
                     FROM 
                     	AuditEvent a
@@ -552,8 +552,8 @@
                     	a.objectType AS objectType,
                     	CONCAT('TASK_', a.objectId) AS objectName,
                     	'TASK' AS objectTitle,
-                    	a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType,
+                    	NULL AS parentId,
+						NULL AS parentType,
                     	u.mail as mail
                     FROM
                     	AuditEvent a
@@ -585,8 +585,8 @@
                     	a.objectType AS objectType,
                     	CONCAT('TASK_', a.objectId) AS objectName,
                     	'TASK' AS objectTitle,
-                    	a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType,
+                    	NULL AS parentId,
+						NULL AS parentType,
                     	u.mail as mail
                     FROM
                     	AuditEvent a
