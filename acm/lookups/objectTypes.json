@@ -105,12 +105,12 @@
     "type": "TIMESHEET",
     "description": "Timesheet",
     "iconName": "i i-alarm",
-    "url": "#!/timesheets/:id/main"
+    "url": "#!/time-tracking/:id/main"
   },
   {
     "type": "COSTSHEET",
     "description": "Costsheet",
     "iconName": "fa fa-money",
-    "url": "#!/costsheets/:id/main"
+    "url": "#!/cost-tracking/:id/main"
   }
 ]
