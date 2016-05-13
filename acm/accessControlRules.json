@@ -156,6 +156,15 @@
       ],
       "userRolesAll": []
     },
+	{
+      "actionName": "cancelLock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_ADMINISTRATOR"
+      ],
+      "userRolesAll": []
+    },
     {
       "actionName": "editTask",
       "objectType": "TASK",
