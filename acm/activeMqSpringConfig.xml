@@ -70,7 +70,7 @@
     </amq:broker>
 
     <!-- NOTE WHEN YOU SEE "This class is not trusted to be serialized as ObjectMessage payload" MESSAGES IN YOUR LOG FILE,
-                  ADD THE RELEVANT PACKAGES TO THE trustedPackages ELEMENT BELOW. -->
+         UPDATE arkcase-activemq.properties TO INCLUDE THE RELEVANT PACKAGES IN THE ark.activemq.trustedPackages PROPERTY. -->
     <bean id="activeMqTrustedPackages" class="java.lang.String">
         <constructor-arg value="${ark.activemq.trustedPackages}"/>
     </bean>
