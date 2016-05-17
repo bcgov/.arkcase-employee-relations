@@ -71,18 +71,43 @@
 
     <!-- NOTE WHEN YOU SEE "This class is not trusted to be serialized as ObjectMessage payload" MESSAGES IN YOUR LOG FILE,
          UPDATE arkcase-activemq.properties TO INCLUDE THE RELEVANT PACKAGES IN THE ark.activemq.trustedPackages PROPERTY. -->
-    <bean id="activeMqTrustedPackages" class="java.lang.String">
+
+    <!-- this bean is just the string property from arkcase-activemq.properties -->
+    <bean id="activeMqExtraTrustedPackages" class="java.lang.String">
         <constructor-arg value="${ark.activemq.trustedPackages}"/>
     </bean>
-
-    <bean id="activeMqTrustedPackageList" factory-bean="activeMqTrustedPackages" factory-method="split">
+    <!-- Get a String array from that String -->
+    <bean id="activeMqExtraTrustedPackageArray" factory-bean="activeMqExtraTrustedPackages" factory-method="split">
         <constructor-arg value=","/>
+    </bean>
+    <!-- get a List from that String array -->
+    <bean id="activeMqExtraTrustedPackageList" class="java.util.Arrays" factory-method="asList">
+        <constructor-arg ref="activeMqExtraTrustedPackageArray"/>
+    </bean>
+    <!-- this bean is the default list of trusted packages.  ActiveMQ will not work right without these packages. -->
+    <bean id="activeMqTrustedPackages" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <value type="java.lang.String">org.mule</value>
+                <value type="java.lang.String">java.lang</value>
+                <value type="java.lang.String">javax.security</value>
+                <value type="java.lang.String">java.util</value>
+                <value type="java.lang.String">org.apache.activemq</value>
+                <value type="java.lang.String">org.fusesource.hawtbuf</value>
+                <value type="java.lang.String">com.thoughtworks.xstream.mapper</value>
+            </list>
+        </constructor-arg>
+    </bean>
+    <!-- add the List from the properties file to the default list.  NOTE: addAll returns a Boolean, and it modifies
+         the callee in place.  So activeMqTrustedPackagesAddAllResult is actually a boolean... NOT a list. -->
+    <bean id="activeMqTrustedPackagesAddAllResult" factory-bean="activeMqTrustedPackages" factory-method="addAll">
+        <constructor-arg ref="activeMqExtraTrustedPackageList"/>
     </bean>
 
     <bean id="amqConnectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">
         <property name="brokerURL" value="${ark.activemq.transportConnectorURI}"/>
         <property name="watchTopicAdvisories" value="true"/>
-        <property name="trustedPackages" ref="activeMqTrustedPackageList"/>
+        <property name="trustedPackages" ref="activeMqTrustedPackages"/>
     </bean>
 
     <bean id="jmsConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
