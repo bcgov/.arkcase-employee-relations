@@ -507,8 +507,8 @@
                     	'user' AS notificationType,
                     	a.objectId AS objectId,
                     	a.objectType AS objectType,
-                    	CONCAT('TASK_', a.objectId) AS objectName,
-                    	'TASK' AS objectTitle,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectName,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectTitle,
                     	NULL AS parentId,
 						NULL AS parentType
                     FROM 
@@ -541,8 +541,8 @@
                     	'user' AS notificationType,
                     	a.objectId AS objectId,
                     	a.objectType AS objectType,
-                    	CONCAT('TASK_', a.objectId) AS objectName,
-                    	'TASK' AS objectTitle,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectName,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectTitle,
                     	NULL AS parentId,
 						NULL AS parentType
                     FROM
@@ -575,8 +575,8 @@
                     	'user' AS notificationType,
                     	a.objectId AS objectId,
                     	a.objectType AS objectType,
-                    	CONCAT('TASK_', a.objectId) AS objectName,
-                    	'TASK' AS objectTitle,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectName,
+                    	CONCAT(a.objectType, '_', a.objectId) AS objectTitle,
                     	NULL AS parentId,
 						NULL AS parentType
                     FROM
@@ -643,8 +643,8 @@
 				    	'user' AS notificationType,
 				    	a.objectId AS objectId,
 				    	a.objectType AS objectType,
-				    	CONCAT(a.parentObjectType, "_", a.parentObjectId) AS objectName,
-				    	'person' AS objectTitle,
+				    	'' AS objectName,
+				    	'' AS objectTitle,
 				    	a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType
 					FROM
@@ -676,8 +676,8 @@
 						'user' AS notificationType,
 						a.objectId AS objectId,
 				    	a.objectType AS objectType,
-						c.complaintNumber AS objectName,
-						c.complaintNumber AS objectTitle,
+						CONCAT(a.objectType, '_', a.objectId) AS objectName,
+						CONCAT(a.objectType, '_', a.objectId) AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType
 					FROM
@@ -710,8 +710,8 @@
 						'user' AS notificationType,
 						a.objectId AS objectId,
 				    	a.objectType AS objectType,
-						c.complaintNumber AS objectName,
-						c.complaintNumber AS objectTitle,
+						'' AS objectName,
+						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType
 					FROM
@@ -744,8 +744,8 @@
 						'user' AS notificationType,
 						a.objectId AS objectId,
 				    	a.objectType AS objectType,
-						CONCAT(a.objectType, "_", a.objectId) AS objectName,
-						CONCAT(a.objectType, "_", a.objectId) AS objectTitle,
+						CONCAT(a.objectType, '_', a.objectId) AS objectName,
+						CONCAT(a.objectType, '_', a.objectId) AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType
 					FROM
@@ -778,8 +778,8 @@
 						'user' AS notificationType,
 						a.objectId AS objectId,
 				    	a.objectType AS objectType,
-						c.caseNumber AS objectName,
-						c.caseNumber AS objectTitle,
+						'' AS objectName,
+						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType
 					FROM
