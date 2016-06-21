@@ -60,7 +60,7 @@
         </amq:systemUsage>
 
         <amq:plugins>
-            <amq:timeStampingBrokerPlugin zeroExpirationOverride="1000" ttlCeiling="1000" futureOnly="false"/>
+            <amq:timeStampingBrokerPlugin zeroExpirationOverride="60000" ttlCeiling="60000" futureOnly="false"/>
         </amq:plugins>
 
         <amq:transportConnectors>
