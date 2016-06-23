@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+         xmlns:beans="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    <beans:beans profile="kerberos">
+     <!-- This file contains common beans and filters for Kerberos  authentication -->
+    
+     <!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, 
+         acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, acmRestAuthenticationEntryPoint
+         are defined in spring-library-user-login.xml -->
+
+     <!-- Static Entry Point authenticates users against LDAP server for static application resources -->
+     <http 
+         entry-point-ref="acmStaticResourcesAuthenticationEntryPoint"
+         use-expressions="true"
+         request-matcher="regex"
+         pattern="^/assets/.*$|^/custom_assets/.*$|^/directives/.*$|^/custom_directives/.*$|^/filters/.*$|^/modules/.*$|^/custom_modules/.*$|^/modules_config/.*$|^/services/.*$"
+         authentication-manager-ref="acmAuthenticationManager">
+         <intercept-url pattern="^/.*$" access="isAuthenticated()" />
+         <http-basic/>
+         <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+         <form-login
+          authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+          authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />      
+     </http>
+
+     <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
+     <http 
+         entry-point-ref="acmRestAuthenticationEntryPoint"
+         use-expressions="true"
+         request-matcher="regex"
+         pattern="^/api/.*$|^/plugin/.*$"
+         authentication-manager-ref="acmAuthenticationManager">
+         <intercept-url pattern="^/.*$" access="isAuthenticated()" />
+         <http-basic/>
+         <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+         <form-login
+          authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+          authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />      
+     </http>
+     
+     <!-- Kerberos entry point authenticates users against some Kerberos service -->
+     <http
+         auto-config="true"
+         entry-point-ref="spnegoEntryPoint"
+         use-expressions="true"
+         authentication-manager-ref="acmAuthenticationManager">
+         <intercept-url pattern="/**" access="isAuthenticated()"/>
+         <http-basic/>
+         <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+         <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+         <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+         <form-login
+          login-page="/login"
+          default-target-url="/home.html#!/welcome"
+          authentication-details-source-ref="acmAuthenticationDetailsFactory"
+          authentication-failure-url="/login?login_error"
+          authentication-success-handler-ref="acmLoginSuccessHandler"/>
+         <logout
+          logout-url="/logout"
+          delete-cookies="JSESSIONID"
+          success-handler-ref="acmLogoutSuccessHandler"
+          invalidate-session="true"/>
+         <session-management invalid-session-url="/login?login_error=1">
+          <!--this will throw error to 3rd login attempt 
+             <concurrency-control max-sessions="1" error-if-maximum-exceeded="false" /> -->
+         </session-management>
+     </http>
+
+     <beans:bean id="logoutUrl" class="java.lang.String">
+         <beans:constructor-arg value="logout" />
+     </beans:bean>
+    </beans:beans>
+</beans:beans>
