@@ -23,7 +23,7 @@
     <beans:bean id="spnegoAuthenticationProcessingFilter"
                 class="org.springframework.security.kerberos.web.authentication.SpnegoAuthenticationProcessingFilter">
         <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
-        <beans:property name="successHandler" ref="acmLoginSuccessHandler"/>
+        <beans:property name="successHandler" ref="acmKerberosLoginSuccessHandler"/>
         <beans:property name="failureHandler" ref="acmRestAuthenticationFailureHandler"/>
     </beans:bean>
 
