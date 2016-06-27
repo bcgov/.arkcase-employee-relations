@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <beans:beans profile="kerberos,ldap">
+        <!--Entry point for Kerberos / SPNEGO authentication  -->
+        <beans:bean id="spnegoEntryPoint"
+                    class="org.springframework.security.kerberos.web.authentication.SpnegoEntryPoint">
+            <beans:constructor-arg value="/login"/>
+        </beans:bean>
+
+        <!-- SPNEGO filter.  After successful authentication, it calls the ArkCase login handler, to setup the user session.
+             After unsuccessful authentication, it calls the ArkCase failure handler, to audit the login failure. -->
+        <beans:bean id="spnegoAuthenticationProcessingFilter"
+                    class="org.springframework.security.kerberos.web.authentication.SpnegoAuthenticationProcessingFilter">
+            <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
+            <beans:property name="successHandler" ref="acmKerberosLoginSuccessHandler"/>
+            <beans:property name="failureHandler" ref="acmRestAuthenticationFailureHandler"/>
+        </beans:bean>
+    </beans:beans>
+
+    <beans:beans profile="kerberos">
+
+        <!-- the Kerberos configuration settings -->
+        <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <beans:property name="location"
+                            value="file:${user.home}/.arkcase/acm/spring/spring-config-kerberos.properties"/>
+        </beans:bean>
+
+        <!-- File handle to the Kerberos key tab -->
+        <beans:bean id="keyTabResource" class="org.springframework.core.io.FileSystemResource">
+            <beans:constructor-arg value="${kerberos.keyTabLocation}"/>
+        </beans:bean>
+
+        <!-- The ticket validator uses the key tab and the service principal, both of whom are configured in the
+             properties file. -->
+        <beans:bean id="sunJaasKerberosTicketValidator"
+                    class="org.springframework.security.kerberos.authentication.sun.SunJaasKerberosTicketValidator">
+            <beans:property name="keyTabLocation" ref="keyTabResource"/>
+            <beans:property name="servicePrincipal" value="${kerberos.servicePrincipal}"/>
+
+        </beans:bean>
+
+        <!-- Standard LDAP user details mapper; this is how Kerberos gets user info from LDAP, after
+             authenticating the user. -->
+        <beans:bean id="ldapUserDetailsMapper"
+                    class="org.springframework.security.ldap.userdetails.LdapUserDetailsMapper">
+        </beans:bean>
+
+        <!-- Kerberos 5 login config.  Like the ticket validator, this also uses the key tab and the service
+             principal. -->
+        <beans:bean id="sunJaasKrb5LoginConfig"
+                    class="org.springframework.security.kerberos.client.config.SunJaasKrb5LoginConfig">
+            <beans:property name="keyTabLocation" ref="keyTabResource"/>
+            <beans:property name="servicePrincipal" value="${kerberos.servicePrincipal}"/>
+            <beans:property name="debug" value="${kerberos.debug}"/>
+            <beans:property name="isInitiator" value="${kerberos.isInitiator}"/>
+            <beans:property name="useTicketCache" value="${kerberos.useTicketCache}"/>
+        </beans:bean>
+
+        <!-- The context source configures how we talk to LDAP. -->
+        <beans:bean id="kerberosLdapContextSource"
+                    class="org.springframework.security.kerberos.client.ldap.KerberosLdapContextSource">
+            <beans:constructor-arg value="${kerberos.ldapUrl}"/>
+            <beans:property name="loginConfig" ref="sunJaasKrb5LoginConfig"/>
+            <beans:property name="base" value="${kerberos.base}"/>
+            <beans:property name="password" value="${kerberos.password}"/>
+        </beans:bean>
+
+        <!-- The user search controls how we find users. -->
+        <beans:bean id="filterBasedLdapUserSearch"
+                    class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+            <beans:constructor-arg index="0" value="${kerberos.userSearchBase}"/>
+            <beans:constructor-arg index="1" value="${kerberos.userIdAttributeName}={0}"/>
+            <beans:constructor-arg index="2" ref="kerberosLdapContextSource"/>
+        </beans:bean>
+
+        <!-- The authorities populator receives the LDAP groups, and returns the ArkCase authorities. These
+             are the same settings used by the LDAP configuration.  -->
+        <beans:bean id="defaultLdapAuthoritiesPopulator"
+                    class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+            <beans:constructor-arg ref="kerberosLdapContextSource"/>
+            <beans:constructor-arg value='${kerberos.groupSearchBaseOU}'/>
+            <beans:property name="groupSearchFilter" value="member={0}"/>
+            <beans:property name="rolePrefix" value=""/>
+            <beans:property name="searchSubtree" value="true"/>
+            <beans:property name="convertToUpperCase" value="true"/>
+            <beans:property name="ignorePartialResultException" value="true"/>
+        </beans:bean>
+
+        <!-- The user details service combines the context source, the user search, and the user details mapper. -->
+        <beans:bean id="ldapUserDetailsService"
+                    class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+            <beans:constructor-arg index="0" ref="filterBasedLdapUserSearch"/>
+            <beans:constructor-arg index="1" ref="defaultLdapAuthoritiesPopulator"/>
+            <beans:property name="userDetailsMapper" ref="ldapUserDetailsMapper"/>
+        </beans:bean>
+
+
+        <!-- The authentication provider is the overall Kerberos configuration, wrapping the ticket validator
+             (which ensures the user is valid via Kerberos) and the user details service (that gets info about the
+             authenticated user from LDAP. -->
+        <beans:bean id="kerberosServiceAuthenticationProvider"
+                    class="org.springframework.security.kerberos.authentication.KerberosServiceAuthenticationProvider">
+            <beans:property name="ticketValidator" ref="sunJaasKerberosTicketValidator"/>
+            <beans:property name="userDetailsService" ref="ldapUserDetailsService"/>
+        </beans:bean>
+
+    </beans:beans>
+
+</beans:beans>
