@@ -21,6 +21,7 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
@@ -37,6 +38,7 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
@@ -47,10 +49,12 @@
         <!-- Kerberos entry point authenticates users against some Kerberos service -->
         <http
                 auto-config="true"
+                entry-point-ref="spnegoEntryPoint"
                 use-expressions="true"
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="/**" access="isAuthenticated()"/>
             <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
