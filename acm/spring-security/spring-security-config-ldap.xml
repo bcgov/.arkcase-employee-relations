@@ -4,7 +4,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
                http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
-    <beans:beans profile="ldap,kerberos">
+    <beans:beans profile="ldap">
      <!-- This file contains common beans and filters for LDAP authentication -->
 
 
@@ -21,7 +21,6 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
-            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
@@ -38,7 +37,6 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
-            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
@@ -49,12 +47,10 @@
         <!-- Kerberos entry point authenticates users against some Kerberos service -->
         <http
                 auto-config="true"
-                entry-point-ref="spnegoEntryPoint"
                 use-expressions="true"
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="/**" access="isAuthenticated()"/>
             <http-basic/>
-            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <form-login
