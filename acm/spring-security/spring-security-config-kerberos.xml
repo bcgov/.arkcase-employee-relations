@@ -6,6 +6,12 @@
                http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
     <beans:beans profile="kerberos">
+        <!-- the Kerberos configuration settings -->
+        <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+            <beans:property name="location"
+                            value="file:${user.home}/.arkcase/acm/spring/spring-config-kerberos.properties"/>
+        </beans:bean>
+
         <!--Entry point for Kerberos / SPNEGO authentication  -->
         <beans:bean id="spnegoEntryPoint"
                     class="org.springframework.security.kerberos.web.authentication.SpnegoEntryPoint">
@@ -19,15 +25,6 @@
             <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
             <beans:property name="successHandler" ref="acmKerberosLoginSuccessHandler"/>
             <beans:property name="failureHandler" ref="acmRestAuthenticationFailureHandler"/>
-        </beans:bean>
-    </beans:beans>
-
-    <beans:beans profile="kerberos">
-
-        <!-- the Kerberos configuration settings -->
-        <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-            <beans:property name="location"
-                            value="file:${user.home}/.arkcase/acm/spring/spring-config-kerberos.properties"/>
         </beans:bean>
 
         <!-- File handle to the Kerberos key tab -->
@@ -107,6 +104,71 @@
                     class="org.springframework.security.kerberos.authentication.KerberosServiceAuthenticationProvider">
             <beans:property name="ticketValidator" ref="sunJaasKerberosTicketValidator"/>
             <beans:property name="userDetailsService" ref="ldapUserDetailsService"/>
+        </beans:bean>
+
+        <http
+                entry-point-ref="acmStaticResourcesAuthenticationEntryPoint"
+                use-expressions="true"
+                request-matcher="regex"
+                pattern="^/assets/.*$|^/custom_assets/.*$|^/directives/.*$|^/custom_directives/.*$|^/filters/.*$|^/modules/.*$|^/custom_modules/.*$|^/modules_config/.*$|^/services/.*$"
+                authentication-manager-ref="acmAuthenticationManager">
+            <intercept-url pattern="^/.*$" access="isAuthenticated()" />
+            <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <form-login
+                    authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+                    authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+        </http>
+
+        <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
+        <http
+                entry-point-ref="acmRestAuthenticationEntryPoint"
+                use-expressions="true"
+                request-matcher="regex"
+                pattern="^/api/.*$|^/plugin/.*$"
+                authentication-manager-ref="acmAuthenticationManager">
+            <intercept-url pattern="^/.*$" access="isAuthenticated()" />
+            <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <form-login
+                    authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
+                    authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+        </http>
+
+        <!-- Kerberos entry point authenticates users against some Kerberos service -->
+        <http
+                auto-config="true"
+                entry-point-ref="spnegoEntryPoint"
+                use-expressions="true"
+                authentication-manager-ref="acmAuthenticationManager">
+            <intercept-url pattern="/**" access="isAuthenticated()"/>
+            <http-basic/>
+            <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
+            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
+            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <form-login
+                    login-page="/login"
+                    default-target-url="/home.html#!/welcome"
+                    authentication-details-source-ref="acmAuthenticationDetailsFactory"
+                    authentication-failure-url="/login?login_error"
+                    authentication-success-handler-ref="acmLoginSuccessHandler"/>
+            <logout
+                    logout-url="/logout"
+                    delete-cookies="JSESSIONID"
+                    success-handler-ref="acmLogoutSuccessHandler"
+                    invalidate-session="true"/>
+            <session-management invalid-session-url="/login?login_error=1">
+                <!--this will throw error to 3rd login attempt
+                                        <concurrency-control max-sessions="1" error-if-maximum-exceeded="false" /> -->
+            </session-management>
+        </http>
+
+        <beans:bean id="logoutUrl" class="java.lang.String">
+            <beans:constructor-arg value="logout" />
         </beans:bean>
 
     </beans:beans>

@@ -69,8 +69,11 @@
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
     </beans:bean>
-                            
-    <beans:beans profile="ldap">
+
+    <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
+         is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
+         is why these beans are active both for Kerberos and LDAP. -->
+    <beans:beans profile="ldap,kerberos">                            
         <beans:bean id="${id}_userSearch"
                 class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
