@@ -222,7 +222,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url"
                               value="/api/{version}/plugin/admin/rolesprivileges/privileges/{privilegeName}/roles"/>
-                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
 
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -301,7 +301,7 @@
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/admin/moduleconfiguration/modules"/>
-                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
             </list>
         </property>
