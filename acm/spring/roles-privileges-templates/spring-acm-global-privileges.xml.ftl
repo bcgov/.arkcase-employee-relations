@@ -855,4 +855,54 @@
             </list>
         </property>
     </bean>
+	
+	<!--Lock Plugin-->
+	<bean id="objectLockPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="object-lock-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <#if objectLockPrivilege??>
+                    <#list objectLockPrivilege as role>
+                        <value>${role}</value>
+                    </#list>
+                </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="objectUnLockPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="object-unlock-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <#if objectUnLockPrivilege??>
+                    <#list objectUnLockPrivilege as role>
+                        <value>${role}</value>
+                    </#list>
+                </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="listLocksDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="list-locks-details-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <#if listLocksDetailsPrivilege??>
+                    <#list listLocksDetailsPrivilege as role>
+                        <value>${role}</value>
+                    </#list>
+                </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="listLockedObjectsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="list-locked-objects-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <#if listLockedObjectsPrivilege??>
+                    <#list listLockedObjectsPrivilege as role>
+                        <value>${role}</value>
+                    </#list>
+                </#if>
+            </list>
+        </property>
+    </bean>
 </beans>
