@@ -68,7 +68,7 @@
                     delete-cookies="JSESSIONID"
                     success-handler-ref="acmLogoutSuccessHandler"
                     invalidate-session="true"/>
-            <session-management session-authentication-strategy-ref="sas"/>
+            <session-management invalid-session-url="/login?login_error=1" session-authentication-strategy-ref="sas"/>
         </http>
 
         <beans:bean id="logoutUrl" class="java.lang.String">
