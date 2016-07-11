@@ -20,7 +20,7 @@
 			                value="file:${user.home}/.arkcase/acm/spring/spring-config-saml.properties"/>
 		</beans:bean>
 
-		<!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmSamlAthenticationCheckFilter,
+		<!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmSamlAuthenticationCheckFilter,
 		     acmSamlRestAuthenticationCheckFilter, acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, 
 		     acmRestAuthenticationEntryPoint are defined in spring-library-user-login.xml -->
 		
@@ -37,7 +37,7 @@
                         <http-basic/>
 			<custom-filter
 				after="SECURITY_CONTEXT_FILTER"
-				ref="acmSamlRestAthenticationCheckFilter" />
+				ref="acmSamlRestAuthenticationCheckFilter" />
 			<custom-filter
 				after="BASIC_AUTH_FILTER"
 				ref="samlFilter" />
