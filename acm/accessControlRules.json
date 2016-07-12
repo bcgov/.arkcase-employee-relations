@@ -366,6 +366,13 @@
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
-    }
+    },
+    {
+      "actionName": "time-tracking.main",
+      "objectType": "MENU",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
+   }
   ]
 }
