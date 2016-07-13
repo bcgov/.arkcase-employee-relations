@@ -5,7 +5,8 @@
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
                             http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
-    <beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
+        <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
         <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-${id}-ldap.properties"/>
     </beans:bean>
                             
@@ -68,8 +69,11 @@
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
     </beans:bean>
-                            
-    <beans:beans profile="ldap">
+
+    <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
+         is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
+         is why these beans are active both for Kerberos and LDAP. -->
+    <beans:beans profile="ldap,kerberos">                            
         <beans:bean id="${id}_userSearch"
                 class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
