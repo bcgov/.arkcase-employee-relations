@@ -1,30 +1,30 @@
 [
   {
-    "value": "ComplaintApprovalLetter.docx",
-    "name": "Approval Letter"
+    "template": "ComplaintApprovalLetter.docx",
+    "label": "Approval Letter"
   },
   {
-    "value": "ComplaintClearanceDenied.docx",
-    "name": "Clearance Denied"
+    "template": "ComplaintClearanceDenied.docx",
+    "label": "Clearance Denied"
   },
   {
-    "value": "ComplaintClearanceGranted.docx",
-    "name": "Clearance Granted"
+    "template": "ComplaintClearanceGranted.docx",
+    "label": "Clearance Granted"
   },
   {
-    "value": "ComplaintGeneralRelease.docx",
-    "name": "General Release"
+    "template": "ComplaintGeneralRelease.docx",
+    "label": "General Release"
   },
   {
-    "value": "ComplaintInterviewRequest.docx",
-    "name": "Interview Request"
+    "template": "ComplaintInterviewRequest.docx",
+    "label": "Witness Interview Request"
   },
   {
-    "value": "ComplaintMedicalRelease.docx",
-    "name": "Medical Release"
+    "template": "ComplaintMedicalRelease.docx",
+    "label": "Medical Release"
   },
   {
-    "value": "ComplaintNoticeofInvestigation.docx",
-    "name": "Notice of Investigation"
+    "template": "ComplaintNoticeofInvestigation.docx",
+    "label": "Notice of Investigation"
   }
 ]

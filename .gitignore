@@ -14,3 +14,5 @@ acm/complaintSolrLastMod.properties
 custom
 tmp
 acm/resources
+seleniumTests/SeleniumReports
+seleniumTests/SeleniumDownload
