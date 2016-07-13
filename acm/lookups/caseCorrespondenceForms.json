@@ -1,26 +1,26 @@
 [
   {
-    "value": "GeneralRelease.docx",
-    "name": "General Release"
+    "template": "GeneralRelease.docx",
+    "label": "General Release"
   },
   {
-    "value": "MedicalRelease.docx",
-    "name": "Medical Release"
+    "template": "MedicalRelease.docx",
+    "label": "Medical Release"
   },
   {
-    "value": "ClearanceGranted.docx",
-    "name": "Clearance Granted"
+    "template": "ClearanceGranted.docx",
+    "label": "Clearance Granted"
   },
   {
-    "value": "ClearanceDenied.docx",
-    "name": "Clearance Denied"
+    "template": "ClearanceDenied.docx",
+    "label": "Clearance Denied"
   },
   {
-    "value": "NoticeofInvestigation.docx",
-    "name": "Notice of Investigation"
+    "template": "NoticeofInvestigation.docx",
+    "label": "Notice of Investigation"
   },
   {
-    "value": "InterviewRequest.docx",
-    "name": "Interview Request"
+    "template": "InterviewRequest.docx",
+    "label": "Witness Interview Request"
   }
 ]
