@@ -61,6 +61,9 @@
         <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
         <beans:property name="mailAttributeName" value="mail"/>
 
+        <beans:property name="allUsersFilter" value="${ldapConfig.allUsersFilter}"/>
+        <beans:property name="allUsersSearchBase" value="${ldapConfig.allUsersSearchBase}"/>
+
         <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
              servers use "uid". -->
         <beans:property name="userIdAttributeName" value='${ldapConfig.userIdAttributeName}'/>
