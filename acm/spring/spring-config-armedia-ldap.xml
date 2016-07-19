@@ -64,8 +64,6 @@
         <beans:property name="mailAttributeName" value="mail"/>
 
         <beans:property name="allUsersFilter" value="${ldapConfig.allUsersFilter}"/>
-        <beans:property name="usersSearchFilter" value="${ldapConfig.usersSearchFilter}"/>
-        
         <beans:property name="allUsersPageFilter" value="${ldapConfig.allUsersPageFilter}"/>
         <beans:property name="allUsersSearchBase" value="${ldapConfig.allUsersSearchBase}"/>
 
