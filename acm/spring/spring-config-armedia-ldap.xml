@@ -58,6 +58,7 @@
         <beans:property name="ignorePartialResultException" value="true"/>
         <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
         <beans:property name="ldapUrl" value='${ldapConfig.ldapUrl}'/>
+        <beans:property name="baseDC" value='${ldapConfig.base}'/>
         <!-- referral: "follow" if you want to follow LDAP referrals, "ignore" otherwise (search "ldap referral" for more info). -->
         <beans:property name="referral" value="follow"/>
         <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
