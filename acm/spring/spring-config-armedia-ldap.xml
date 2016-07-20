@@ -103,7 +103,7 @@
                 <beans:bean
                         class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
                     <beans:constructor-arg ref="armedia_contextSource" />
-                    <beans:constructor-arg value='${ldapConfig.groupSearchBaseOU}'/>
+                    <beans:constructor-arg value='${ldapConfig.groupSearchBase}'/>
                     <beans:property name="groupSearchFilter" value="member={0}"/>
                     <beans:property name="rolePrefix" value=""/>
                     <beans:property name="searchSubtree" value="true"/>
