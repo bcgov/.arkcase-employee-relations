@@ -117,9 +117,11 @@
             <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                     authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
         </http>
 
         <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
@@ -134,9 +136,11 @@
             <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                     authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
         </http>
 
         <!-- Kerberos entry point authenticates users against some Kerberos service -->
@@ -150,6 +154,7 @@
             <custom-filter ref="spnegoAuthenticationProcessingFilter" after="DIGEST_AUTH_FILTER"/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
+            <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
                     login-page="/login"
                     default-target-url="/home.html#!/welcome"
@@ -161,9 +166,7 @@
                     delete-cookies="JSESSIONID"
                     success-handler-ref="acmLogoutSuccessHandler"
                     invalidate-session="true"/>
-            <session-management invalid-session-url="/login?login_error=1">
-                <!--this will throw error to 3rd login attempt
-                                        <concurrency-control max-sessions="1" error-if-maximum-exceeded="false" /> -->
+           <session-management invalid-session-url="/login?login_error=1" session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
             </session-management>
         </http>
 

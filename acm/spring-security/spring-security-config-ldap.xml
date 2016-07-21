@@ -25,7 +25,7 @@
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                     authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
-            <session-management session-authentication-strategy-ref="sas"/>        
+            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>        
         </http>
 
         <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
@@ -43,7 +43,7 @@
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                     authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
-            <session-management session-authentication-strategy-ref="sas"/>
+            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
         </http>
 
         <!-- LDAP entry point authenticates users against some LDAP service -->
@@ -68,7 +68,7 @@
                     delete-cookies="JSESSIONID"
                     success-handler-ref="acmLogoutSuccessHandler"
                     invalidate-session="true"/>
-            <session-management invalid-session-url="/login?login_error=1" session-authentication-strategy-ref="sas"/>
+            <session-management invalid-session-url="/login?login_error=1" session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
         </http>
 
         <beans:bean id="logoutUrl" class="java.lang.String">
