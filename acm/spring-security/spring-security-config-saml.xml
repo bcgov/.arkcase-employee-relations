@@ -46,10 +46,15 @@
 				before="BASIC_AUTH_FILTER" />
 			<custom-filter
 				ref="corsFilter"
-				after="PRE_AUTH_FILTER" />        
+				after="PRE_AUTH_FILTER" />
+			<custom-filter 
+				position="CONCURRENT_SESSION_FILTER" 
+				ref="concurrencyFilter"/>        
                         <form-login
                                 authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
-                                authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" /> 
+                                authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+            <session-management 
+            	session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/> 
 		</http>
 
                 <!-- Saml Entry Point authenticates users against IDP server for Ajax calls -->
@@ -75,9 +80,14 @@
                     <custom-filter
                         ref="corsFilter"
                         after="PRE_AUTH_FILTER" />
+                    <custom-filter 
+                    	position="CONCURRENT_SESSION_FILTER" 
+                    	ref="concurrencyFilter"/>
                     <form-login
                         authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                         authentication-failure-handler-ref="acmRestAuthenticationFailureHandler" />
+                    <session-management 
+                        session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
                 </http>
 
                 <!-- Saml Entry Point authenticates users against IDP server -->
@@ -104,10 +114,12 @@
                      <custom-filter
                          ref="corsFilter"
                          after="PRE_AUTH_FILTER" />
-                     <session-management invalid-session-url="/sso/loggedout">
-                         <!--this will throw error to 3rd login attempt -->
-                         <!--<concurrency-control max-sessions="3" error-if-maximum-exceeded="true" /> -->
-                     </session-management>
+                    <custom-filter 
+                        position="CONCURRENT_SESSION_FILTER" 
+                        ref="concurrencyFilter" />
+                      <session-management 
+                      	invalid-session-url="/sso/loggedout" 
+                      	session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
                  </http>
 		
 		<!-- Entry point to initialize SAML authentication, default values taken from properties file -->
@@ -476,5 +488,10 @@
 		<beans:bean id="logoutUrl" class="java.lang.String">
 			<beans:constructor-arg value="saml/logout" />
 		</beans:bean>
+
+		<beans:bean id="expiredUrl" class="java.lang.String">
+            <beans:constructor-arg value="sso/loggedout?login_error=2"/>
+        </beans:bean>
+
 	</beans:beans>
 </beans:beans>
