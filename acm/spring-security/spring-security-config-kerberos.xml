@@ -167,11 +167,14 @@
                     success-handler-ref="acmLogoutSuccessHandler"
                     invalidate-session="true"/>
            <session-management invalid-session-url="/login?login_error=1" session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
-            </session-management>
         </http>
 
         <beans:bean id="logoutUrl" class="java.lang.String">
             <beans:constructor-arg value="logout" />
+        </beans:bean>
+
+        <beans:bean id="expiredUrl" class="java.lang.String">
+            <beans:constructor-arg value="/login?login_error=2" />
         </beans:bean>
 
     </beans:beans>

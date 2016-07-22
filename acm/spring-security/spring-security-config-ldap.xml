@@ -74,6 +74,10 @@
         <beans:bean id="logoutUrl" class="java.lang.String">
             <beans:constructor-arg value="logout" />
         </beans:bean>
+
+        <beans:bean id="expiredUrl" class="java.lang.String">
+            <beans:constructor-arg value="/login?login_error=2" />
+        </beans:bean>
     
     </beans:beans>
 </beans:beans>

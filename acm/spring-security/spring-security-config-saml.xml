@@ -488,5 +488,10 @@
 		<beans:bean id="logoutUrl" class="java.lang.String">
 			<beans:constructor-arg value="saml/logout" />
 		</beans:bean>
+
+		<beans:bean id="expiredUrl" class="java.lang.String">
+            <beans:constructor-arg value="sso/loggedout?login_error=2"/>
+        </beans:bean>
+
 	</beans:beans>
 </beans:beans>
