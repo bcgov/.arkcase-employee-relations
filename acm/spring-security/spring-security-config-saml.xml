@@ -22,7 +22,7 @@
 
 		<!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory, acmSamlAuthenticationCheckFilter,
 		     acmSamlRestAuthenticationCheckFilter, acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, 
-		     acmRestAuthenticationEntryPoint are defined in spring-library-user-login.xml -->
+		     acmRestAuthenticationEntryPoint, acmSamlWebSSOProcessingFilter are defined in spring-library-user-login.xml -->
 		
 		<!-- Static Entry Point authenticates users against IDP server for static application resources -->
 		<http
@@ -154,7 +154,7 @@
 					filters="samlWebSSOHoKProcessingFilter" />
 				<filter-chain
 					pattern="/saml/SSO/**"
-					filters="samlWebSSOProcessingFilter" />
+					filters="acmSamlWebSSOProcessingFilter" />
 				<filter-chain
 					pattern="/saml/SingleLogout/**"
 					filters="samlLogoutProcessingFilter" />
@@ -294,24 +294,6 @@
 			<beans:property
 				name="contextPath"
 				value="${saml.contextProvider.contextPath}" />
-		</beans:bean>
-
-		<!-- Processing filter for WebSSO profile messages -->
-		<beans:bean
-			id="samlWebSSOProcessingFilter"
-			class="org.springframework.security.saml.SAMLProcessingFilter">
-			<beans:property
-				name="authenticationManager"
-				ref="acmAuthenticationManager" />
-			<beans:property
-				name="authenticationSuccessHandler"
-				ref="acmLoginSuccessHandler" />
-			<beans:property
-				name="authenticationFailureHandler"
-				ref="failureRedirectHandler" />
-			<beans:property
-				name="authenticationDetailsSource"
-				ref="acmAuthenticationDetailsFactory" />
 		</beans:bean>
 
 		<!-- Processing filter for WebSSO Holder-of-Key profile -->
