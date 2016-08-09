@@ -15,10 +15,10 @@
         <property name="propertiesEncryptionPassPhraseIterations" value="1" />
         <property name="propertiesEncryptionPassPhraseHashAlgorithm" value="MD5" />
         <property name="encryptedSymmetricKeyEncryptionAlgorithm" value="RSA/ECB/PKCS1Padding" />
-        <!-- The file path should be relative to 'user.home' -->
-        <property name="encryptedSymmetricKeyFilePath" value=".arkcase/acm/encryption/symmetricKey.encrypted" />
-        <property name="privateKeyEncryptionAlgorithm" value="RSA" />
-        <!-- The file path should be relative to 'user.home' -->
-        <property name="privateKeyFilePath" value=".arkcase/acm/encryption/arkcase-priv.der" />
+        <property name="encryptedSymmetricKeyFilePath" value="#{systemProperties['user.home']}/.arkcase/acm/encryption/symmetricKey.encrypted" />
+        <property name="keystoreType" value="JKS" />
+        <property name="keystorePath" value="#{systemProperties['user.home']}/.arkcase/acm/private/keystore" />
+        <property name="keystorePassword" value="password" />
+        <property name="privateKeyAlias" value="armedia" />
     </bean>
 </beans>
