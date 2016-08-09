@@ -402,20 +402,20 @@
 		<beans:bean
 			id="keyManager"
 			class="org.springframework.security.saml.key.JKSKeyManager">
-			<beans:constructor-arg value="file:${user.home}/.arkcase/acm/sso/keystore.jks" />
+			<beans:constructor-arg value="file:${user.home}/.arkcase/private/keystore" />
 			<beans:constructor-arg
 				type="java.lang.String"
-				value="AcMd3v$" />
+				value="password" />
 			<beans:constructor-arg>
 				<beans:map>
 					<beans:entry
-						key="arkcase.armedia.com"
+						key="armedia"
 						value="AcMd3v$" />
 				</beans:map>
 			</beans:constructor-arg>
 			<beans:constructor-arg
 				type="java.lang.String"
-				value="arkcase.armedia.com" />
+				value="armedia" />
 		</beans:bean>
 
 		<!-- Bindings, encoders and decoders used for creating and parsing messages -->
