@@ -68,7 +68,7 @@ openssl rsautl -encrypt -pubin -inkey arkcase-pub.pem -in symmetricKeyFile -out 
 - alfrescoRmaPlugin.properties
 - cmis.properties
 - msOutlookIntegration.properties
-- msOutlookPlugin.properties
 - notification.properties
-- websockets.properties
+- websockets.properties (no need to encrypt passwords as these are keystore passwords)
 - spring-config-XXX-ldap.properties (should be generated through admin automatically)
+- spring-config-kerberos.properties
