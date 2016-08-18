@@ -45,67 +45,78 @@
     "type": "FILE",
     "description": "File",
     "iconName": "",
-    "url": "api/latest/plugin/ecm/download?ecmFileId=:id"
+    "url": "api/latest/plugin/ecm/download?ecmFileId=:id",
+	"state": ""
   },
   {
     "type": "PERSON",
     "description": "Person",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "PERSON-ASSOCIATION",
     "description": "Person Association",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "CONTACT-METHOD",
     "description": "Contact Method",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "LOCATION",
     "description": "Location",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "ORGANIZATION",
     "description": "Organization",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "SECURITY-TAGS",
     "description": "Security Tags",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "GROUP",
     "description": "Group",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "USER",
     "description": "User",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "NOTIFICATION",
     "description": "Notification",
     "iconName": "i i-chat3",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "SUBSCRIPTION_EVENT",
     "description": "Subscription Event",
     "iconName": "i i-alarm",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "TIMESHEET",
