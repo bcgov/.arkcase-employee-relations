@@ -373,6 +373,36 @@
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
-   }
+   },
+   {
+      "actionName": "lock",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "unlock",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    }
   ]
 }
