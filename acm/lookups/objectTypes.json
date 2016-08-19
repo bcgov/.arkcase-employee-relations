@@ -3,114 +3,133 @@
     "type": "COMPLAINT",
     "description": "Complaint",
     "iconName": "i i-notice",
-    "url": "#!/complaints/:id/main"
+    "url": "#!/complaints/:id/main",
+	"state": "complaints.main"
   },
   {
     "type": "CASE_FILE",
     "description": "Case File",
     "iconName": "i i-folder",
-    "url": "#!/cases/:id/main"
+    "url": "#!/cases/:id/main",
+	"state": "cases.main"
   },
   {
     "type": "ORDER",
     "description": "Case File Sub-type : Order",
     "iconName": "i i-folder",
-    "url": "#!/order-info/:id"
+    "url": "#!/order-info/:id",
+	"state": "order-info"
   },
   {
     "type": "TASK",
     "description": "Task",
     "iconName": "i i-checkmark",
-    "url": "#!/tasks/:type/:id/main"
+    "url": "#!/tasks/:type/:id/main",
+	"state": "tasks.main"
   },
   {
     "type": "ADHOC",
     "description": "ADHOC Task",
     "iconName": "i i-checkmark",
-    "url": "#!/tasks/:type/:id/main"
+    "url": "#!/tasks/:type/:id/main",
+	"state": "tasks.main"
   },
   {
     "type": "DOCUMENT",
     "description": "Document",
     "iconName": "",
-    "url": "#!/documents/:id/main"
+    "url": "#!/documents/:id/main",
+	"state": "documents.main"
   },
   {
     "type": "FILE",
     "description": "File",
     "iconName": "",
-    "url": "api/latest/plugin/ecm/download?ecmFileId=:id"
+    "url": "api/latest/plugin/ecm/download?ecmFileId=:id",
+	"state": ""
   },
   {
     "type": "PERSON",
     "description": "Person",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "PERSON-ASSOCIATION",
     "description": "Person Association",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "CONTACT-METHOD",
     "description": "Contact Method",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "LOCATION",
     "description": "Location",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "ORGANIZATION",
     "description": "Organization",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "SECURITY-TAGS",
     "description": "Security Tags",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "GROUP",
     "description": "Group",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "USER",
     "description": "User",
     "iconName": "",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "NOTIFICATION",
     "description": "Notification",
     "iconName": "i i-chat3",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "SUBSCRIPTION_EVENT",
     "description": "Subscription Event",
     "iconName": "i i-alarm",
-    "url": ""
+    "url": "",
+	"state": ""
   },
   {
     "type": "TIMESHEET",
     "description": "Timesheet",
     "iconName": "i i-alarm",
-    "url": "#!/time-tracking/:id/main"
+    "url": "#!/time-tracking/:id/main",
+	"state": "time-tracking.main"
   },
   {
     "type": "COSTSHEET",
     "description": "Costsheet",
     "iconName": "fa fa-money",
-    "url": "#!/cost-tracking/:id/main"
+    "url": "#!/cost-tracking/:id/main",
+	"state": "cost-tracking.main"
   }
 ]
