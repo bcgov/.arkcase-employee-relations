@@ -58,40 +58,6 @@
       ],
       "userRolesAll": []
     },
-    {
-      "actionName": "saveCase",
-      "objectType": "CASE_FILE",
-      "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "uploadOrReplaceFile",
-      "objectType": "CASE_FILE",
-      "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
     { 
       "actionName": "addComment", 
       "objectType": "FILE", 
