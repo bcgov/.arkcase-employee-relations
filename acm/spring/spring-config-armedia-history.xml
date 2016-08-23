@@ -8,14 +8,14 @@
                             http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 							
 	<!-- How often to purge older history events. -->
-    <task:scheduled-tasks scheduler="historyClearScheduler">
-        <task:scheduled ref="armedia_historyClearJob" method="clearHistory" cron="0 0/4 * * * *"/>
+    <task:scheduled-tasks scheduler="historyCleanScheduler">
+        <task:scheduled ref="armedia_historyCleanJob" method="cleanHistory" cron="0 0/5 * * * *"/>
     </task:scheduled-tasks>
 	
 	<!-- Definition of class. -->
-    <beans:bean id="armedia_historyClearJob" class="com.armedia.acm.audit.service.HistoryClearService" init-method="clearHistory">
-        <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
+    <beans:bean id="armedia_historyCleanJob" class="com.armedia.acm.services.notification.service.HistoryCleanService" init-method="cleanHistory">
         <beans:property name="auditDao" ref="auditDao"/>
+		<beans:property name="notificationDao" ref="notificationDao"/>
         <beans:property name="historyDays" value="30"/>
     </beans:bean>
 </beans:beans>
