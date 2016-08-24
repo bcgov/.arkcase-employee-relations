@@ -9,13 +9,13 @@
 							
 	<!-- How often to purge older history events. -->
     <task:scheduled-tasks scheduler="historyCleanScheduler">
-        <task:scheduled ref="armedia_historyCleanJob" method="cleanHistory" cron="0 0/5 * * * *"/>
+        <task:scheduled ref="armedia_historyCleanJob" method="cleanHistory" cron="0 0 0/6 * * *"/>
     </task:scheduled-tasks>
 	
 	<!-- Definition of class. -->
     <beans:bean id="armedia_historyCleanJob" class="com.armedia.acm.services.notification.service.HistoryCleanService" init-method="cleanHistory">
+	    <beans:property name="jsonPropertiesManagementService" ref="angularPropertiesManagementService"/>
         <beans:property name="auditDao" ref="auditDao"/>
 		<beans:property name="notificationDao" ref="notificationDao"/>
-        <beans:property name="historyDays" value="30"/>
     </beans:bean>
 </beans:beans>
