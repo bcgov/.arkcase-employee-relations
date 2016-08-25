@@ -13,7 +13,7 @@
     </task:scheduled-tasks>
 	
 	<!-- Definition of class. -->
-    <beans:bean id="armedia_historyCleanJob" class="com.armedia.acm.services.notification.service.HistoryCleanService" init-method="cleanHistory">
+    <beans:bean id="armedia_historyCleanJob" class="com.armedia.acm.plugins.admin.service.HistoryCleanService" init-method="cleanHistory">
 	    <beans:property name="jsonPropertiesManagementService" ref="angularPropertiesManagementService"/>
         <beans:property name="auditDao" ref="auditDao"/>
 		<beans:property name="notificationDao" ref="notificationDao"/>
