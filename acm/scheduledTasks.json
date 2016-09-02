@@ -1,0 +1,9 @@
+{
+	"scheduleEnabled": "true",
+	"scheduleIntervalInMinutes": "60",
+	"tasks": [{
+		"howOftenInMinutes": "0",
+		"name": "test",
+		"beanName": "scheduledBillingQueuePurger"
+	}]
+}
