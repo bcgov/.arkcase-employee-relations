@@ -1,0 +1,14 @@
+{
+	"scheduleEnabled": "true",
+	"scheduleIntervalInMinutes": "30",
+	"tasks": [{
+		"howOftenInMinutes": "1440",
+		"name": "billingPurger",
+		"beanName": "scheduledBillingQueuePurger"
+	},
+	{
+		"howOftenInMinutes": "1440",
+		"name": "holdPurger",
+		"beanName": "scheduledHoldQueuePurger"
+	}]
+}
