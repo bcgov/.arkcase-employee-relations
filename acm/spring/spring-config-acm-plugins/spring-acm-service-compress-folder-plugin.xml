@@ -16,10 +16,11 @@
                 <bean id="compressFolderPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/service/compressor"/>
+                    <property name="url" value="/api/{version}/service/compressor/{folderId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>
         </property>
     </bean>
 </beans>
+
