@@ -576,7 +576,7 @@
                     	a.objectId AS objectId,
                     	a.objectType AS objectType,
                     	CONCAT(a.objectType, '-', a.objectId) AS objectName,
-                    	CONCAT(a.objectType, '-', a.objectId) AS objectTitle,,
+                    	CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                     	NULL AS parentId,
 						NULL AS parentType
                     FROM
