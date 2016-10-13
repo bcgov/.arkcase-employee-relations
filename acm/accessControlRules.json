@@ -86,9 +86,7 @@
       "actionName": "reinvestigateCase",
       "objectType": "CASE_FILE",
       "objectProperties": {
-        "status":[
-          "CLOSED"
-        ]
+        "status": "CLOSED"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -103,8 +101,6 @@
       ],
       "userRolesAll": []
     },
-
-
 
     { 
       "actionName": "addComment", 
@@ -183,9 +179,7 @@
       "actionName": "editTask",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-          ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -202,9 +196,7 @@
       "actionName": "editNote",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -221,9 +213,7 @@
       "actionName": "editAttachments",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-          ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -240,9 +230,7 @@
       "actionName": "saveDetail",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-          ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -261,9 +249,7 @@
       "actionName": "addTag",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-          ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
