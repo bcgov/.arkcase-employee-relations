@@ -58,100 +58,22 @@
       ],
       "userRolesAll": []
     },
-    {
-      "actionName": "saveCase",
-      "objectType": "CASE_FILE",
-      "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "uploadOrReplaceFile",
-      "objectType": "CASE_FILE",
-      "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "addComment",
-      "objectType": "FILE",
-      "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "reinvestigateCase",
-      "objectType": "CASE_FILE",
-      "objectProperties": {
-        "status": [
-          "CLOSED"
-        ]
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "editCase",
-      "objectType": "CASE_FILE",
-      "objectProperties": {
-        "status": [
-          "DRAFT",
-          "ACTIVE",
-          "INACTIVE"
-        ]
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
+    { 
+      "actionName": "addComment", 
+      "objectType": "FILE", 
+      "objectProperties": {}, 
+      "userRolesAny": [ 
+        "ROLE_INVESTIGATOR", 
+        "ROLE_INVESTIGATOR_SUPERVISOR", 
+        "ROLE_ANALYST", 
+        "ROLE_CALLCENTER", 
+        "ROLE_ADMINISTRATOR", 
+        "ROLE_PROSECUTOR", 
+        "Role_Ronda", 
+        "Evidence Tech", 
+        "ROLE_TECHNICIAN" 
+      ], 
+      "userRolesAll": [] 
     },
     {
       "actionName": "subscribe",
@@ -171,12 +93,49 @@
       "userRolesAll": []
     },
     {
+      "actionName": "lock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "unlock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "cancelLock",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_ADMINISTRATOR"
+      ],
+      "userRolesAll": []
+    },
+    {
       "actionName": "editTask",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -185,8 +144,6 @@
         "ROLE_CALLCENTER",
         "ROLE_ADMINISTRATOR",
         "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
@@ -195,9 +152,7 @@
       "actionName": "editNote",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -206,8 +161,6 @@
         "ROLE_CALLCENTER",
         "ROLE_ADMINISTRATOR",
         "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
@@ -216,9 +169,7 @@
       "actionName": "editAttachments",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -227,19 +178,15 @@
         "ROLE_CALLCENTER",
         "ROLE_ADMINISTRATOR",
         "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
     },
-    {
+	{
       "actionName": "saveDetail",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -258,9 +205,7 @@
       "actionName": "addTag",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": [
-          false
-        ]
+        "completed": false
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
