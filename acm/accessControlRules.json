@@ -58,6 +58,50 @@
       ],
       "userRolesAll": []
     },
+
+    {
+      "actionName": "editCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {
+      "status": [
+        "DRAFT",
+        "ACTIVE",
+        "INACTIVE"
+      ]
+      },
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "reinvestigateCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {
+        "status": "CLOSED"
+      },
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+
     { 
       "actionName": "addComment", 
       "objectType": "FILE", 
