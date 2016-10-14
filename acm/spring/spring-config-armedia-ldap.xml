@@ -39,7 +39,7 @@
         <beans:property name="ldapDao" ref="springLdapDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="syncEnabled" value="false"/>
     </beans:bean>
 
     <beans:bean id="armedia_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig">
