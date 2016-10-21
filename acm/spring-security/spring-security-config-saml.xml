@@ -402,7 +402,7 @@
 		<beans:bean
 			id="keyManager"
 			class="org.springframework.security.saml.key.JKSKeyManager">
-			<beans:constructor-arg value="file:${user.home}/.arkcase/private/keystore" />
+			<beans:constructor-arg value="file:${user.home}/.arkcase/acm/private/keystore" />
 			<beans:constructor-arg
 				type="java.lang.String"
 				value="password" />
