@@ -18,7 +18,7 @@
   "state": "tasks.main"
 }, {
   "type": "TASK",
-  "key": "ADHOC_TASK",
+  "key": "ADHOC",
   "description": "ADHOC Task",
   "iconName": "i i-checkmark",
   "state": "tasks.main"
