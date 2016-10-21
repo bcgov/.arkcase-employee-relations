@@ -414,4 +414,16 @@
     </bean>
     <!-- end of objectTypes -->
 
+    <!-- Config for client Kerberos authentication -->
+    <bean id="setClientKerberosLoginConf" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass"><value>java.lang.System</value></property>
+        <property name="targetMethod"><value>setProperty</value></property>
+        <property name="arguments">
+            <list>
+                <value>java.security.auth.login.config</value>
+                <value>~/.arkcase/acm/sso/kerberos-login.conf</value>
+            </list>
+        </property>
+    </bean>
+    <!-- end of Config for client Kerberos authentication -->
 </beans>

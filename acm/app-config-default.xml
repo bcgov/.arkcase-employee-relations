@@ -321,4 +321,17 @@
         <property name="url" value="/plugin/costsheet/"/>
     </bean>
     <!-- end of objectTypes -->
+    
+    <!-- Config for client Kerberos authentication -->
+    <bean>
+        <property name="targetClass" value="java.lang.System"/>
+        <property name="targetMethod" value="setProperty"/>
+        <property name="arguments">
+            <list>
+                <value>java.security.auth.login.config</value>
+                <value>~/.arkcase/acm/sso/kerberos-login.conf</value>
+            </list>
+        </property>
+    </bean>
+    <!-- end of Config for client Kerberos authentication -->
 </beans>
