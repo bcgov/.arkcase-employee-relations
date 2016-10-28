@@ -145,7 +145,8 @@
             <!-- only specify authUserPassword if you also specify authUserDn -->
             <beans:property name="authUserPassword" value='${ldapConfig.authUserPassword}'/>
             <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
-            <beans:property name="searchBase" value='${ldapConfig.groupSearchBase}'/>
+			<beans:property name="baseDC" value='${ldapConfig.base}'/>
+            <beans:property name="searchBase" value='${ldapConfig.userSearchBase}'/>
             <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
             <beans:property name="ignorePartialResultException" value="true"/>
             <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
