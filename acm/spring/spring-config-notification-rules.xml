@@ -25,7 +25,8 @@
 					  	a.objectName AS objectName,
 					  	a.objectTitle AS objectTitle,
 					  	NULL AS relatedObjectId,
-					 	NULL AS relatedObjectType
+					 	NULL AS relatedObjectType,
+						a.created AS actionDate
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -59,7 +60,8 @@
 					  	a.objectName AS objectName,
 					  	a.objectTitle AS objectTitle,
 					  	NULL AS relatedObjectId,
-					  	NULL AS relatedObjectType
+					  	NULL AS relatedObjectType,
+					  	a.created AS actionDate
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -114,7 +116,8 @@
 					  	ecmf.fileName AS objectName,
 					  	ecmf.fileName AS objectTitle,
 					  	a.parentObjectId AS relatedObjectId,
-					  	a.parentObjectType AS relatedObjectType
+					  	a.parentObjectType AS relatedObjectType,
+					  	a.eventDate AS actionDate
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -157,7 +160,8 @@
                       	'' AS objectName,
                       	'' AS objectTitle,
                       	a.parentObjectId AS relatedObjectId,
-					  	a.parentObjectType AS relatedObjectType
+					  	a.parentObjectType AS relatedObjectType,
+					  	a.eventDate AS actionDate
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId    
@@ -194,7 +198,8 @@
                       	ecmf.fileName AS objectName,
                       	ecmf.fileName AS objectTitle,
                       	a.parentObjectId AS relatedObjectId,
-					  	a.parentObjectType AS relatedObjectType
+					  	a.parentObjectType AS relatedObjectType,
+					  	a.eventDate AS actionDate
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -233,7 +238,8 @@
                     	ecmf.fileName AS objectName,
                     	ecmf.fileName AS objectTitle,
                     	a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -271,7 +277,8 @@
   						c.complaintNumber AS objectName,
   						c.complaintTitle AS objectTitle,
   						a.parentObjectId AS relatedObjectId,
-			    		a.parentObjectType AS relatedObjectType
+			    		a.parentObjectType AS relatedObjectType,
+			    		a.eventDate AS actionDate
 					FROM
   						AuditEvent a
   					JOIN AcmUser u ON a.userId = u.userId
@@ -305,7 +312,8 @@
        					c.caseNumber AS objectName,
        					c.title AS objectTitle,
        					a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -340,7 +348,8 @@
 				    	'' AS objectName,
 				    	'' AS objectTitle,
 				    	a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 				  		AuditEvent a
 				 	JOIN AcmUser u ON a.userId = u.userId
@@ -373,7 +382,8 @@
   						c.complaintNumber AS objectName,
   						c.complaintTitle AS objectTitle,
   						a.parentObjectId AS parentId,
-			    		a.parentObjectType AS parentType
+			    		a.parentObjectType AS parentType,
+			    		a.eventDate AS actionDate
 					FROM
   						AuditEvent a
   					JOIN AcmUser u ON a.userId = u.userId
@@ -407,7 +417,8 @@
   						c.complaintNumber AS objectName,
   						c.complaintTitle AS objectTitle,
   						a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType
+						a.parentObjectType AS parentType,
+						a.eventDate AS actionDate
 					FROM
   						AuditEvent a
   					JOIN AcmUser u ON a.userId = u.userId
@@ -441,7 +452,8 @@
        					c.caseNumber AS objectName,
        					c.title AS objectTitle,
        					a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType
+						a.parentObjectType AS parentType,
+						a.eventDate AS actionDate
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -475,7 +487,8 @@
        					c.caseNumber AS objectName,
        					c.title AS objectTitle,
        					a.parentObjectId AS parentId,
-						a.parentObjectType AS parentType
+						a.parentObjectType AS parentType,
+						a.eventDate AS actionDate
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -510,7 +523,8 @@
                     	CONCAT(a.objectType, '-', a.objectId) AS objectName,
                     	CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                     	NULL AS parentId,
-						NULL AS parentType
+						NULL AS parentType,
+						a.eventDate AS actionDate
                     FROM 
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -544,7 +558,8 @@
                     	CONCAT(a.objectType, '-', a.objectId) AS objectName,
                     	CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                     	NULL AS parentId,
-						NULL AS parentType
+						NULL AS parentType,
+						a.eventDate AS actionDate
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -578,7 +593,8 @@
                     	CONCAT(a.objectType, '-', a.objectId) AS objectName,
                     	CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                     	NULL AS parentId,
-						NULL AS parentType
+						NULL AS parentType,
+						a.eventDate AS actionDate
                     FROM
                     	AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -612,7 +628,8 @@
 			    		'' AS objectName,
 			    		'' AS objectTitle,
 			    		a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 			  			AuditEvent a
 			  		JOIN AcmUser u ON a.userId = u.userId
@@ -646,7 +663,8 @@
 				    	'' AS objectName,
 				    	'' AS objectTitle,
 				    	a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 				  		AuditEvent a
 				  	JOIN AcmUser u ON a.userId = u.userId
@@ -679,7 +697,8 @@
 						'' AS objectName,
 						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -713,7 +732,8 @@
 						'' AS objectName,
 						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -747,7 +767,8 @@
 						'' AS objectName,
 						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -781,7 +802,8 @@
 						'' AS objectName,
 						'' AS objectTitle,
 						a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 					  	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -815,7 +837,8 @@
                     	'' AS objectName,
                     	'' AS objectTitle,
                     	a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
                     FROM
 				 	 	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -849,7 +872,8 @@
   						ecmf.fileName AS objectName,
   						ecmf.fileName AS objectTitle,
   						a.parentObjectId AS relatedObjectId,
-						a.parentObjectType AS relatedObjectType
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate
 					FROM
 				 	 	AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
