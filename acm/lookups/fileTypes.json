@@ -1,22 +1,31 @@
 [
   {
-    "type": "Chairman Public Correspondence",
-    "label": "Chairman Public Correspondence"
+    "type": "mr",
+    "label": "Medical Release"
   },
   {
-    "type": "ma_Attachment",
-    "label": "Attachment"
+    "type": "gr",
+    "label": "General Release"
   },
   {
-    "type": "Memo",
-    "label": "Memo"
+    "type": "ev",
+    "label": "eDelivery"
   },
   {
-    "type": "Letter",
-    "label": "Letter"
+    "type": "sig",
+    "label": "SF86 Signature"
+  },
+  {
+    "type": "noi",
+    "label": "Notice of Investigation"
+  },
+  {
+    "type": "wir",
+    "label": "Witness Interview Request"
   },
   {
     "type": "Other",
     "label": "Other"
   }
 ]
+
