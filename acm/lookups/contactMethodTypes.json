@@ -1,22 +1,14 @@
 [
   {
-    "type": "Home phone",
-    "name": "Home phone"
-  },
-  {
-    "type": "Work phone",
-    "name": "Work phone"
-  },
-  {
-    "type": "Mobile",
-    "name": "Mobile"
+    "type": "Phone",
+    "name": "Phone"
   },
   {
     "type": "Email",
     "name": "Email"
   },
   {
-    "type": "Facebook",
-    "name": "Facebook"
+    "type": "Fax",
+    "name": "Fax"
   }
 ]

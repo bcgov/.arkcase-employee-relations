@@ -5,62 +5,6 @@
   "iconName": "i i-notice",
   "state": "complaints.main"
 }, {
-  "type": "COMPLAINT",
-  "subType": "DSA",
-  "key": "COMPLAINT.DSA",
-  "description": "Draft Staff Action",
-  "iconName": "i i-notice",
-  "state":"complaints.dsaDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "CPC",
-  "key": "CASE_FILE.CPC",
-  "description": "Chairman Public Correspondence",
-  "iconName": "i i-folder",
-  "state":"cases.cpcDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "FOIA",
-  "key": "CASE_FILE.FOIA",
-  "description": "Freedom of Information",
-  "iconName": "i i-folder",
-  "state":"cases.foiaDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "MA",
-  "key": "CASE_FILE.MA",
-  "description": "Military Awards",
-  "iconName": "i i-folder",
-  "state":"cases.maDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "MDR",
-  "key": "CASE_FILE.MDR",
-  "description": "Mandatory Declassification Review",
-  "iconName": "i i-folder",
-  "state":"cases.mdrDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "SR",
-  "key": "CASE_FILE.SR",
-  "description": "Security Review",
-  "iconName": "i i-folder",
-  "state":"cases.srDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "SJS",
-  "key": "CASE_FILE.SJS",
-  "description": "Secretary Joint Staff",
-  "iconName": "i i-folder",
-  "state":"cases.sjsDetails"
-}, {
-  "type": "CASE_FILE",
-  "subType": "SA",
-  "key": "CASE_FILE.SA",
-  "description": "Staff Action",
-  "iconName": "i i-folder",
-  "state":"cases.saDetails"
-}, {
   "type": "CASE_FILE",
   "key": "CASE_FILE",
   "description": "Case File",
@@ -176,10 +120,4 @@
   "description": "Costsheet",
   "iconName": "fa fa-money",
   "state": "cost-tracking.main"
-}, {
-  "type": "BUCKSLIP",
-  "key": "BUCKSLIP",
-  "description": "Buckslip",
-  "iconName": "i i-folder",
-  "state":"cases.approvalrouting"
 }]
