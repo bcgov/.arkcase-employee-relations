@@ -11,6 +11,7 @@
       "actionName": "viewCaseDetailsPage",
       "objectType": "CASE_FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -28,6 +29,7 @@
       "actionName": "subscribe",
       "objectType": "CASE_FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -45,6 +47,7 @@
       "actionName": "addComment",
       "objectType": "CASE_FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -69,6 +72,7 @@
         "INACTIVE"
       ]
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -88,6 +92,7 @@
       "objectProperties": {
         "status": "CLOSED"
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -106,6 +111,7 @@
       "actionName": "addComment", 
       "objectType": "FILE", 
       "objectProperties": {}, 
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [ 
         "ROLE_INVESTIGATOR", 
         "ROLE_INVESTIGATOR_SUPERVISOR", 
@@ -123,6 +129,7 @@
       "actionName": "subscribe",
       "objectType": "TASK",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -140,6 +147,7 @@
       "actionName": "lock",
       "objectType": "FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -155,6 +163,7 @@
       "actionName": "unlock",
       "objectType": "FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -170,6 +179,7 @@
       "actionName": "cancelLock",
       "objectType": "FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_ADMINISTRATOR"
       ],
@@ -181,6 +191,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -198,6 +209,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -215,6 +227,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -232,6 +245,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -251,6 +265,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -268,6 +283,7 @@
       "actionName": "addTag",
       "objectType": "FILE",
       "objectProperties": {},
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -287,6 +303,7 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
@@ -306,6 +323,43 @@
       "objectProperties": {
         "completed": false
       },
+      "userIsParticipantTypeAny":[],
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+     {
+      "actionName": "restrictCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "restrictComplaint",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
