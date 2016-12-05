@@ -170,7 +170,6 @@
       "actionName": "cancelLock",
       "objectType": "FILE",
       "objectProperties": {},
-      "userIsParticipantTypeAny":[],
       "userRolesAny": [
         "ROLE_ADMINISTRATOR"
       ],
