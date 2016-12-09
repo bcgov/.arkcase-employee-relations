@@ -318,6 +318,22 @@
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
+    },
+     {
+      "actionName": "restrictCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "restrictComplaint",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
+      "userRolesAll": []
     }
   ]
 }
