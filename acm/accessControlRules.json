@@ -263,6 +263,77 @@
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
+    },
+    {
+      "actionName": "addTag",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "editRejComment",
+      "objectType": "TASK",
+      "objectProperties": {
+        "completed": false
+      },
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "addReference",
+      "objectType": "TASK",
+      "objectProperties": {
+        "completed": false
+      },
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+     {
+      "actionName": "restrictCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "restrictComplaint",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
+      "userRolesAll": []
     }
   ]
 }

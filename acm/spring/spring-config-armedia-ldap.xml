@@ -34,9 +34,9 @@
         <beans:property name="directoryName" value='${ldapConfig.directoryName}'/>
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
-
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
-        <beans:property name="ldapDao" ref="springLdapDao"/>
+        <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+        <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
         <beans:property name="syncEnabled" value="true"/>
@@ -126,6 +126,33 @@
             <beans:property name="referral" value="follow" />
         </beans:bean>
 
+        <beans:bean id="armedia_contextSourceProxy" 
+            class="org.springframework.ldap.transaction.compensating.manager.TransactionAwareContextSourceProxy">
+             <beans:constructor-arg ref="armedia_contextSource" />
+        </beans:bean>
+
+        <beans:bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+            <beans:constructor-arg ref="armedia_contextSourceProxy" />
+        </beans:bean>
+
+        <beans:bean id="transactionManager" 
+            class="org.springframework.ldap.transaction.compensating.manager.ContextSourceTransactionManager">
+            <beans:property name="contextSource" ref="armedia_contextSourceProxy" />
+        </beans:bean>
+
+   
+        <beans:bean id="armedia_ldapSync" 
+            class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+            <beans:property name="transactionManager" ref="transactionManager" />
+            <beans:property name="target" ref="armedia_ldapSyncJob" />
+            <beans:property name="transactionAttributes">
+                <beans:props>
+                    <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
+                </beans:props>
+            </beans:property>
+        </beans:bean>
+   
+
         <!--
         Authenticates a user id and password against LDAP directory.  To support multiple LDAP configurations, create multiple Spring 
         beans, each with its own LdapAuthenticateService.
@@ -135,7 +162,7 @@
             <beans:property name="ldapAuthenticateConfig" ref="armedia_authenticate"/>
 
             <!-- do not change ldapDao properties. -->
-            <beans:property name="ldapDao" ref="springLdapDao"/>
+            <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         </beans:bean>
 
         <beans:bean id="armedia_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
@@ -144,8 +171,10 @@
             <beans:property name="authUserDn" value='${ldapConfig.authUserDn}'/>
             <!-- only specify authUserPassword if you also specify authUserDn -->
             <beans:property name="authUserPassword" value='${ldapConfig.authUserPassword}'/>
-            <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
-            <beans:property name="searchBase" value='${ldapConfig.groupSearchBase}'/>
+            <!-- base is the domain component (e.g. dc=armedia,dc=com).  -->
+			<beans:property name="baseDC" value='${ldapConfig.base}'/>
+            <!-- userSearchBase is the tree under which users are found (e.g. cn=users).  -->
+            <beans:property name="searchBase" value='${ldapConfig.userSearchBase}'/>
             <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
             <beans:property name="ignorePartialResultException" value="true"/>
             <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
