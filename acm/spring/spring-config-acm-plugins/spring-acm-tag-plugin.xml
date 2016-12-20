@@ -54,6 +54,11 @@
                     <property name="url" value="/api/{version}/service/tag"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
                 </bean>
+                <bean id="tagViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/tags/views/"/>
+                    <property name="requiredPrivilege" ref="acmTagModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
