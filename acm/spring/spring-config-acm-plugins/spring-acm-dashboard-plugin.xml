@@ -63,6 +63,11 @@
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
                 </bean>
 
+                <bean id="dashboardViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/dashboard/views/"/>
+                    <property name="requiredPrivilege" ref="acmDashboardModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
