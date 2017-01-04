@@ -12,17 +12,22 @@
         </property>
         <property name="urlPrivileges">
             <list>
-            <bean id="postTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                <property name="httpMethod" value="POST"/>
-                <property name="url" value="/api/v1/service/ecm/file/{fileId}/tags"/>
-                <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
-            </bean>
-            <bean id="getTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                <property name="httpMethod" value="GET"/>
-                <property name="url" value="/api/v1/service/ecm/file/{caseId}/tags"/>
-                <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
-            </bean>
-        </list>
+                <bean id="postTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/v1/service/ecm/file/{fileId}/tags"/>
+                    <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
+                </bean>
+                <bean id="getTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/v1/service/ecm/file/{caseId}/tags"/>
+                    <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
+                </bean>
+                <bean id="foiaViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/queues/views/"/>
+                    <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
+                </bean>
+            </list>
         </property>
     </bean>
 </beans>
