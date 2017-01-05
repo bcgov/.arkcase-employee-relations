@@ -73,6 +73,11 @@
                     <property name="url" value="/api/{version}/plugin/searchNotifications/advanced"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
                 </bean>
+                <bean id="searchViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/search/views/"/>
+                    <property name="requiredPrivilege" ref="acmSearchModulePrivilege"/>
+                </bean>
             </list>
         </property>
 
