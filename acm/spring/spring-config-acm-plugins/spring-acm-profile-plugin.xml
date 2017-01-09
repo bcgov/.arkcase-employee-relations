@@ -34,6 +34,11 @@
                     <property name="url" value="/api/{version}/plugin/profile/savepassword"/>
                     <property name="requiredPrivilege" ref="profilePrivilege"/>
                 </bean>
+                <bean id="profileViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/profile/views/"/>
+                    <property name="requiredPrivilege" ref="profilePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
