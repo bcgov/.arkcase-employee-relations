@@ -46,6 +46,12 @@
             <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
         </http>
 
+        <beans:bean id="siteminderFilter"
+                    class="org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter">
+            <beans:property name="principalRequestHeader" value="SM_USER"/>
+            <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
+        </beans:bean>
+
         <!-- LDAP entry point authenticates users against some LDAP service -->
         <http
                 auto-config="true"
@@ -57,6 +63,7 @@
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
+            <custom-filter position="PRE_AUTH_FILTER" ref="siteminderFilter"/>
             <form-login
                     login-page="/login"
                     default-target-url="/home.html#!/welcome"
