@@ -115,6 +115,11 @@
                     <property name="url" value="/api/{version}/plugin/task/sendDueTaskEmailNotification"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
                 </bean>
+                <bean id="taskViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/tasks/views/"/>
+                    <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
