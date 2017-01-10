@@ -27,6 +27,11 @@
                     <property name="url" value="/modules/queues/views/"/>
                     <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
                 </bean>
+		<bean id="foiaRequestInfoViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+		    <property name="httpMethod" value="GET"/>
+		    <property name="url" value="/modules/request-info/views/"/>
+		    <property name="requiredPrivilege" ref="foiaFilePrivilege"/>
+		</bean>
             </list>
         </property>
     </bean>
