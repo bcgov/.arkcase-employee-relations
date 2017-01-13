@@ -73,7 +73,7 @@
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
          is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
          is why these beans are active both for Kerberos and LDAP. -->
-    <beans:beans profile="ldap,kerberos">                            
+    <beans:beans profile="ldap,kerberos,externalAuth">
         <beans:bean id="${id}_userSearch"
                 class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
@@ -148,6 +148,29 @@
             <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
+        </beans:bean>
+    </beans:beans>
+
+    <beans:beans profile="externalAuth">
+        <beans:bean id="${id}_userDetailsService"
+                    class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+            <beans:constructor-arg index="0" ref="${id}_userSearch"/>
+            <beans:constructor-arg index="1">
+                <beans:bean id="${id}_authoritiesPopulator"
+                            class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+                    <beans:constructor-arg index="0" ref="${id}_contextSource"/>
+                    <beans:constructor-arg index="1" value='${r"${ldapConfig.groupSearchBase}"}'/>
+                </beans:bean>
+            </beans:constructor-arg>
+        </beans:bean>
+        <beans:bean id="${id}_externalAuthProvider"
+                    class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
+            <beans:property name="preAuthenticatedUserDetailsService">
+                <beans:bean id="${id}_userDetailsServiceWrapper"
+                            class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
+                    <beans:property name="userDetailsService" ref="${id}_userDetailsService"/>
+                </beans:bean>
+            </beans:property>
         </beans:bean>
     </beans:beans>
 </beans:beans>
