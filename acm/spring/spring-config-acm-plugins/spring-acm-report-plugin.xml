@@ -40,6 +40,16 @@
                     <property name="url" value="/api/{version}/plugin/report/reporttogroupsmap"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
+                <bean id="getAuthorizedReportsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/report/authorized"/>
+                    <property name="requiredPrivilege" ref="reportPrivilege"/>
+                </bean>
+                <bean id="reportViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/reports/views/"/>
+                    <property name="requiredPrivilege" ref="acmReportModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
