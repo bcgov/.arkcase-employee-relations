@@ -280,7 +280,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Hold"
+        "name": "In-Progress"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -299,7 +299,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Suspend"
+        "name": "Review"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -318,7 +318,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Fulfill"
+        "name": "Supervisor Approval"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -337,7 +337,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Approve"
+        "name": "Legal Approval"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -356,45 +356,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "General Counsel"
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "viewQueueInQueueMenu",
-      "objectType": "QUEUE",
-      "objectProperties": {
-        "name": "Billing"
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "viewQueueInQueueMenu",
-      "objectType": "QUEUE",
-      "objectProperties": {
-        "name": "Release"
+        "name": "Distribution"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
