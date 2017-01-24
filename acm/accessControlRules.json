@@ -281,26 +281,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "In-Progress"
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
-      ],
-      "userRolesAll": []
-    },
-    {
-      "actionName": "viewQueueInQueueMenu",
-      "objectType": "QUEUE",
-      "objectProperties": {
-        "name": "Review"
+        "name": "Fulfill"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -338,7 +319,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Legal Approval"
+        "name": "Executive Approval"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -357,7 +338,7 @@
       "actionName": "viewQueueInQueueMenu",
       "objectType": "QUEUE",
       "objectProperties": {
-        "name": "Distribution"
+        "name": "Release"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
