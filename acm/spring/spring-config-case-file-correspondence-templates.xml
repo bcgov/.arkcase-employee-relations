@@ -8,25 +8,13 @@
         <property name="documentType" value="Clearance Denied"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-        cf.caseNumber,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameNumberAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Employee ID</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="caseNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -35,25 +23,13 @@ AND     cf.creator = au.userId
         <property name="documentType" value="Clearance Granted"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-        cf.caseNumber,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameNumberAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Employee ID</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="caseNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -62,25 +38,13 @@ AND     cf.creator = au.userId
         <property name="documentType" value="General Release"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-        cf.caseNumber,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameNumberAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Employee ID</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="caseNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -89,25 +53,13 @@ AND     cf.creator = au.userId
         <property name="documentType" value="Medical Release"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-        cf.caseNumber,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameNumberAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Employee ID</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="caseNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -116,23 +68,12 @@ AND     cf.creator = au.userId
         <property name="documentType" value="Notice of Investigation"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -141,23 +82,12 @@ AND     cf.creator = au.userId
         <property name="documentType" value="Approval Letter"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-       	CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameAndCurrentDateQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Date</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
         </property>
     </bean>
 
@@ -166,27 +96,14 @@ AND     cf.creator = au.userId
         <property name="documentType" value="Witness Interview Request"/>
         <property name="dateFormatString" value="MM/dd/yyyy"/>
         <property name="numberFormatString" value="###,###,###"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-       	CURRENT_DATE,
-	    cf.caseNumber,
-	    cf.title
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-       	   		   ]]>
-            </value>
-        </property>
+        <property name="query" ref="caseCreatorFullNameCurrentDateNumberAndTitleQuery"/>
         <property name="templateSubstitutionVariables">
-            <list>
-                <value>Employee Name</value>
-                <value>Date</value>
-                <value>Case Number</value>
-                <value>Case Title</value>
-            </list>
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+                <entry key="caseNumber" value="Case Number"/>
+                <entry key="caseTitle" value="Case Title"/>
+            </map>
         </property>
     </bean>
 </beans>
