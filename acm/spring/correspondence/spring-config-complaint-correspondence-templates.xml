@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+    <bean id="complaintClearanceDenied" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintClearanceDenied.docx"/>
+        <property name="documentType" value="Clearance Denied"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameNumberAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="complaintNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintClearanceGranted" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintClearanceGranted.docx"/>
+        <property name="documentType" value="Clearance Granted"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameNumberAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="complaintNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintGeneralRelease" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintGeneralRelease.docx"/>
+        <property name="documentType" value="General Release"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameNumberAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="complaintNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintMedicalRelease" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintMedicalRelease.docx"/>
+        <property name="documentType" value="Medical Release"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameNumberAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="complaintNumber" value="Employee ID"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintNoticeofInvestigation" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintNoticeofInvestigation.docx"/>
+        <property name="documentType" value="Notice of Investigation"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintApprovalLetter" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintApprovalLetter.docx"/>
+        <property name="documentType" value="Approval Letter"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameAndCurrentDateQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="complaintWitnessInterviewRequest" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="templateFilename" value="ComplaintInterviewRequest.docx"/>
+        <property name="documentType" value="Witness Interview Request"/>
+        <property name="dateFormatString" value="MM/dd/yyyy"/>
+        <property name="numberFormatString" value="###,###,###"/>
+        <property name="query" ref="complaintCreatorFullNameCurrentDateNumberAndTitleQuery"/>
+        <property name="templateSubstitutionVariables">
+            <map>
+                <entry key="creatorFullName" value="Employee Name"/>
+                <entry key="currentDate" value="Date"/>
+                <entry key="complaintNumber" value="Case Number"/>
+                <entry key="complaintTitle" value="Case Title"/>
+            </map>
+        </property>
+    </bean>
+</beans>

@@ -47,7 +47,7 @@ AND     cm.creator = au.userId
         </property>
     </bean>
 
-    <bean id="complaintCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+    <bean id="complaintCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="jpaQuery">
             <value>
                 <![CDATA[
