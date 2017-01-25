@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="complaintCreatorFullNameNumberAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+        cm.complaintNumber,
+       	CURRENT_DATE
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>complaintNumber</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="complaintCreatorFullNameAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="complaintCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceTemplate">
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE,
+        cm.complaintNumber,
+        cm.complaintTitle
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+       	   		   ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+                <value>complaintNumber</value>
+                <value>complaintTitle</value>
+            </list>
+        </property>
+    </bean>
+</beans>
