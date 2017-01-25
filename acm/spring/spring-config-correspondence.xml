@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="file:${user.home}/.arkcase/acm/spring/correspondence/spring-config-case-file-correspondence-queries.xml"/>
-    <import resource="file:${user.home}/.arkcase/acm/spring/correspondence/spring-config-case-file-correspondence-templates.xml"/>
+    <import resource="file:${user.home}/.arkcase/acm/spring/correspondence/spring-config-correspondence-queries.xml"/>
+    <import resource="file:${user.home}/.arkcase/acm/spring/correspondence/spring-config-correspondence-templates.xml"/>
     
 </beans>
