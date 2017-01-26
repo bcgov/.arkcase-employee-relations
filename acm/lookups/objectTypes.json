@@ -3,25 +3,29 @@
   "key": "COMPLAINT",
   "description": "Complaint",
   "iconName": "i i-notice",
-  "state": "complaints.main"
+  "state": "complaints.main",
+  "url": "#!/complaints/:id/main"
 }, {
   "type": "CASE_FILE",
   "key": "CASE_FILE",
   "description": "Case File",
   "iconName": "i i-folder",
-  "state": "cases.main"
+  "state": "cases.main",
+  "url": "#!/cases/:id/main"
 }, {
   "type": "TASK",
   "key": "TASK",
   "description": "Task",
   "iconName": "i i-checkmark",
-  "state": "tasks.main"
+  "state": "tasks.main",
+  "url": "#!/tasks/TASK/:id/main"
 }, {
   "type": "TASK",
   "key": "ADHOC",
   "description": "ADHOC Task",
   "iconName": "i i-checkmark",
-  "state": "tasks.main"
+  "state": "tasks.main",
+  "url": "#!/tasks/ADHOC/:id/main"
 }, {
   "type": "DOCUMENT",
   "key": "DOCUMENT",
@@ -113,11 +117,13 @@
   "key": "TIMESHEET",
   "description": "Timesheet",
   "iconName": "i i-alarm",
-  "state": "time-tracking.main"
+  "state": "time-tracking.main",
+  "url": "#!/time-tracking/:id/main"
 }, {
   "type": "COSTSHEET",
   "key": "COSTSHEET",
   "description": "Costsheet",
   "iconName": "fa fa-money",
-  "state": "cost-tracking.main"
+  "state": "cost-tracking.main",
+  "url": "#!/cost-tracking/:id/main"
 }]
