@@ -60,6 +60,23 @@
       "userRolesAll": []
     },
     {
+      "actionName": "saveCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny": [
+        "assignee",
+        "supervisor",
+        "owning group",
+        "co-owner",
+        "approver",
+        "collaborator",
+        "follower",
+        "reader"
+      ],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+    {
       "actionName": "editCase",
       "objectType": "CASE_FILE",
       "objectProperties": {},
