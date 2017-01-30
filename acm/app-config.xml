@@ -23,8 +23,8 @@
            <!-- <ref bean="createComplaintAction"/> -->
                 <ref bean="createCaseFileAction"/>
                 <ref bean="createTaskAction"/>
-         <!--   <ref bean="createTimesheetAction"/> 
-                <ref bean="createCostsheetAction"/> -->
+				<ref bean="createTimesheetAction"/> 
+                <ref bean="createCostsheetAction"/>
             </list>
         </property>
         <property name="navigatorTabs">
@@ -40,8 +40,8 @@
                 <ref bean="auditNavigatorAction"/>
                 <ref bean="adminNavigatorAction"/>
                 <ref bean="tagNavigatorAction"/>
-         <!--   <ref bean="timeTrackingNavigatorAction"/>
-                <ref bean="costTrackingNavigatorAction"/> -->
+				<ref bean="timeTrackingNavigatorAction"/>
+                <ref bean="costTrackingNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -61,8 +61,8 @@
                 <ref bean="userType"/>
                 <ref bean="notificationType"/>
                 <ref bean="subscriptionType"/>
-               <!-- <ref bean="timesheetType"/>
-                <ref bean="costsheetType"/> -->
+                <ref bean="timesheetType"/>
+                <ref bean="costsheetType"/>
                 <ref bean="noteType"/>
             </list>
         </property>
@@ -101,7 +101,6 @@
         <property name="url" value="/plugin/casefile/wizard"/>
         <property name="requiredPrivilege" value="case-file-create"/>
     </bean>
-<!--
     <bean id="createTimesheetAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Timesheet"/>
         <property name="actionResourceName" value="common:top-bar.button.timesheet" />
@@ -118,7 +117,7 @@
         <property name="requiredPrivilege" value="acm-costsheet-create"/>
     </bean>
 
--->
+
     <!-- end of top bar actions -->
 
     <!-- navigator tabs -->
@@ -201,7 +200,7 @@
         <property name="url" value="/plugin/notification"/>
         <property name="requiredPrivilege" value="acm-notification-module"/>
     </bean>
-<!--
+
     <bean id="timeTrackingNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Time Tracking"/>
         <property name="actionResourceName" value="common:navigation.label.time-tracking" />
@@ -217,7 +216,7 @@
         <property name="url" value="/plugin/costsheet"/>
         <property name="requiredPrivilege" value="acm-cost-module"/>
     </bean>
--->
+
     <bean id="tagNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Tags"/>
         <property name="actionResourceName" value="common:navigation.label.tags" />
@@ -386,7 +385,7 @@
             </map>
         </property>
     </bean>
-<!--
+
     <bean id="timesheetType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="TIMESHEET"/>
         <property name="description" value="Timesheet"/>
@@ -407,7 +406,7 @@
             </map>
         </property>
     </bean>
- -->
+
     <bean id="noteType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="NOTE"/>
         <property name="description" value="Note"/>
