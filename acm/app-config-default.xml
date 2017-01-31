@@ -21,8 +21,8 @@
               <!--  <ref bean="createComplaintAction"/> -->
                 <ref bean="createCaseFileAction"/>
                 <ref bean="createTaskAction"/>
-               <!--<ref bean="createTimesheetAction"/>
-                <ref bean="createCostsheetAction"/>-->
+                <ref bean="createTimesheetAction"/>
+                <ref bean="createCostsheetAction"/>
             </list>
         </property>
         <property name="navigatorTabs">
@@ -38,8 +38,8 @@
                 <ref bean="auditNavigatorAction"/>
                 <ref bean="adminNavigatorAction"/>
                 <ref bean="tagNavigatorAction"/>
-            <!--    <ref bean="timeTrackingNavigatorAction"/>
-                <ref bean="costTrackingNavigatorAction"/> -->
+				<ref bean="timeTrackingNavigatorAction"/>
+                <ref bean="costTrackingNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
