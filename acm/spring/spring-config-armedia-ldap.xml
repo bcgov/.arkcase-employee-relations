@@ -71,7 +71,6 @@
         <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
              servers use "uid". -->
         <beans:property name="userIdAttributeName" value='${ldapConfig.userIdAttributeName}'/>
-        <beans:property name="uidNumberAttribute" value='${ldapConfig.uidNumberAttribute}'/>
         <beans:property name="roleToGroupMap" ref="armedia_RoleToGroupProperties"/>
         <beans:property name="userDomain" value='${ldapConfig.userDomain}'/>
         <beans:property name="userSearchBase" value='${ldapConfig.userSearchBase}'/>
