@@ -4,7 +4,8 @@
     "object_type_s": "objectType",
     "object_sub_type_s": "objectSubType",
     "queue_name_s": "queue.name",
-    "name": "name"
+    "name": "name",
+	"status_lcs": "status"
   },
   "accessControlRuleList": [
     {
@@ -213,7 +214,7 @@
       "actionName": "editAttachments",
       "objectType": "TASK",
       "objectProperties": {
-        "completed": false
+        "status": "ACTIVE"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",
@@ -281,6 +282,40 @@
       ],
       "userRolesAll": []
     },
+{
+      "actionName": "addTag",
+      "objectType": "TIMESHEET",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+{
+      "actionName": "addTag",
+      "objectType": "COSTSHEET",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
     {
       "actionName": "editRejComment",
       "objectType": "TASK",
@@ -305,6 +340,25 @@
       "objectType": "TASK",
       "objectProperties": {
         "completed": false
+      },
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "editComplaint",
+      "objectType": "COMPLAINT",
+      "objectProperties": {
+        "status": "DRAFT"
       },
       "userRolesAny": [
         "ROLE_INVESTIGATOR",

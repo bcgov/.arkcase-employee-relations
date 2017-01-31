@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Case File queries -->
+    <bean id="caseCreatorFullNameNumberAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="CASE_FILE" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+        cf.caseNumber,
+       	CURRENT_DATE
+FROM    CaseFile cf,
+        AcmUser au
+WHERE   cf.id = ?1
+AND     cf.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>caseNumber</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="caseCreatorFullNameAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="CASE_FILE" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE
+FROM    CaseFile cf,
+        AcmUser au
+WHERE   cf.id = ?1
+AND     cf.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <bean id="caseCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="CASE_FILE" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE,
+	    cf.caseNumber,
+	    cf.title
+FROM    CaseFile cf,
+        AcmUser au
+WHERE   cf.id = ?1
+AND     cf.creator = au.userId
+       	   		   ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+                <value>caseNumber</value>
+                <value>caseTitle</value>
+            </list>
+        </property>
+    </bean>
+    
+    
+    <!-- Complaint queries -->
+    <bean id="complaintCreatorFullNameNumberAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="COMPLAINT" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+        cm.complaintNumber,
+       	CURRENT_DATE
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>complaintNumber</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="complaintCreatorFullNameAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="COMPLAINT" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+                ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="complaintCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+        <property name="type" value="COMPLAINT" />
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+SELECT  au.fullName,
+       	CURRENT_DATE,
+        cm.complaintNumber,
+        cm.complaintTitle
+FROM    Complaint cm,
+        AcmUser au
+WHERE   cm.complaintId = ?1
+AND     cm.creator = au.userId
+       	   		   ]]>
+            </value>
+        </property>
+        <property name="fieldNames">
+            <list>
+                <value>creatorFullName</value>
+                <value>currentDate</value>
+                <value>complaintNumber</value>
+                <value>complaintTitle</value>
+            </list>
+        </property>
+    </bean>
+</beans>

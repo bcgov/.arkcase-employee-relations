@@ -39,6 +39,11 @@
                     <property name="url" value="/plugin/subscription"/>
                     <property name="requiredPrivilege" ref="subscribePrivilege"/>
                 </bean>
+                <bean id="subscriptionViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/subscriptions/views/"/>
+                    <property name="requiredPrivilege" ref="acmSubscriptionModulePrivilege"/>
+                </bean>
             </list>
 
         </property>
