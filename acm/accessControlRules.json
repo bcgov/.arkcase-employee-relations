@@ -282,15 +282,7 @@
         "name": "Intake"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_EXEC_SEC"
       ],
       "userRolesAll": []
     },
@@ -301,15 +293,7 @@
         "name": "Fulfill"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_ANALYST"
       ],
       "userRolesAll": []
     },
@@ -320,15 +304,7 @@
         "name": "Supervisor Approval"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_SUPERVISOR"
       ],
       "userRolesAll": []
     },
@@ -339,15 +315,7 @@
         "name": "Executive Approval"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_APPROVER"
       ],
       "userRolesAll": []
     },
@@ -358,15 +326,7 @@
         "name": "Release"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_EXEC_SEC"
       ],
       "userRolesAll": []
     },
@@ -377,15 +337,10 @@
         "name": "Suspend"
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+        "ROLE_CORR_EXEC_SEC",
+        "ROLE_CORR_ANALYST",
+        "ROLE_CORR_SUPERVISOR",
+        "ROLE_CORR_APPROVER"
       ],
       "userRolesAll": []
     },
