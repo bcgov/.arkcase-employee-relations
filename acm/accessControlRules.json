@@ -355,15 +355,11 @@
       "actionName": "lock",
       "objectType": "CASE_FILE",
       "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "ROLE_TECHNICIAN"
+      "userIsParticipantTypeAny": [
+        "assignee",
+        "owning group"
       ],
+      "userRolesAny": [],
       "userRolesAll": []
     },
 	{
