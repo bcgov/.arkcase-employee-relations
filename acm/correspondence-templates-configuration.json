@@ -1,15 +1,5 @@
 [ {
-  "documentType" : "Clearance Denied",
-  "templateFilename" : "ClearanceDenied.docx",
-  "correspondenceQueryBeanId" : "caseCreatorFullNameNumberAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "caseNumber" : "Employee ID",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
+  "displayName" : "Clearance Granted",
   "documentType" : "Clearance Granted",
   "templateFilename" : "ClearanceGranted.docx",
   "correspondenceQueryBeanId" : "caseCreatorFullNameNumberAndCurrentDateQuery",
@@ -19,8 +9,37 @@
     "currentDate" : "Date"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 }, {
+  "displayName" : "Complaint Approval Letter",
+  "documentType" : "Complaint Approval Letter",
+  "templateFilename" : "ComplaintApprovalLetter.docx",
+  "correspondenceQueryBeanId" : "complaintCreatorFullNameAndCurrentDateQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "currentDate" : "Date"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Approval Letter",
+  "documentType" : "Approval Letter",
+  "templateFilename" : "ApprovalLetter.docx",
+  "correspondenceQueryBeanId" : "caseCreatorFullNameCurrentDateNumberAndTitleQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "aaa",
+    "currentDate" : "bbb",
+    "caseNumber" : "zzz",
+    "caseTitle" : "xyz",
+    "activated" : "false"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Medical Release",
   "documentType" : "Medical Release",
   "templateFilename" : "MedicalRelease.docx",
   "correspondenceQueryBeanId" : "caseCreatorFullNameNumberAndCurrentDateQuery",
@@ -30,62 +49,23 @@
     "currentDate" : "Date"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 }, {
-  "documentType" : "Notice of Investigation",
-  "templateFilename" : "NoticeofInvestigation.docx",
-  "correspondenceQueryBeanId" : "caseCreatorFullNameAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
-  "documentType" : "Approval Letter",
-  "templateFilename" : "ApprovalLetter.docx",
-  "correspondenceQueryBeanId" : "caseCreatorFullNameAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
-  "documentType" : "Witness Interview Request",
-  "templateFilename" : "InterviewRequest.docx",
-  "correspondenceQueryBeanId" : "caseCreatorFullNameCurrentDateNumberAndTitleQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "currentDate" : "Date",
-    "caseNumber" : "Case Number",
-    "caseTitle" : "Case Title"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
+  "displayName" : "Clearance Denied",
   "documentType" : "Clearance Denied",
-  "templateFilename" : "ComplaintClearanceDenied.docx",
-  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
+  "templateFilename" : "ClearanceDenied.docx",
+  "correspondenceQueryBeanId" : "caseCreatorFullNameNumberAndCurrentDateQuery",
   "templateSubstitutionVariables" : {
     "creatorFullName" : "Employee Name",
-    "complaintNumber" : "Employee ID",
+    "caseNumber" : "Employee ID",
     "currentDate" : "Date"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 }, {
-  "documentType" : "Clearance Granted",
-  "templateFilename" : "ComplaintClearanceGranted.docx",
-  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "complaintNumber" : "Employee ID",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
+  "displayName" : "General Release",
   "documentType" : "General Release",
   "templateFilename" : "ComplaintGeneralRelease.docx",
   "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
@@ -95,39 +75,22 @@
     "currentDate" : "Date"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 }, {
-  "documentType" : "Medical Release",
-  "templateFilename" : "ComplaintMedicalRelease.docx",
-  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "complaintNumber" : "Employee ID",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
+  "displayName" : "Notice of Investigation",
   "documentType" : "Notice of Investigation",
-  "templateFilename" : "ComplaintNoticeofInvestigation.docx",
-  "correspondenceQueryBeanId" : "complaintCreatorFullNameAndCurrentDateQuery",
+  "templateFilename" : "NoticeofInvestigation.docx",
+  "correspondenceQueryBeanId" : "caseCreatorFullNameAndCurrentDateQuery",
   "templateSubstitutionVariables" : {
     "creatorFullName" : "Employee Name",
     "currentDate" : "Date"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 }, {
-  "documentType" : "Approval Letter",
-  "templateFilename" : "ComplaintApprovalLetter.docx",
-  "correspondenceQueryBeanId" : "complaintCreatorFullNameAndCurrentDateQuery",
-  "templateSubstitutionVariables" : {
-    "creatorFullName" : "Employee Name",
-    "currentDate" : "Date"
-  },
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
-}, {
+  "displayName" : "Witness Interview Request",
   "documentType" : "Witness Interview Request",
   "templateFilename" : "ComplaintInterviewRequest.docx",
   "correspondenceQueryBeanId" : "complaintCreatorFullNameCurrentDateNumberAndTitleQuery",
@@ -138,5 +101,71 @@
     "complaintTitle" : "Case Title"
   },
   "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###"
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Witness Interview Request",
+  "documentType" : "Witness Interview Request",
+  "templateFilename" : "InterviewRequest.docx",
+  "correspondenceQueryBeanId" : "caseCreatorFullNameCurrentDateNumberAndTitleQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "currentDate" : "Date",
+    "caseNumber" : "Case Number",
+    "caseTitle" : "Case Title"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Notice of Investigation",
+  "documentType" : "Notice of Investigation",
+  "templateFilename" : "ComplaintNoticeofInvestigation.docx",
+  "correspondenceQueryBeanId" : "complaintCreatorFullNameAndCurrentDateQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "currentDate" : "Date"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Clearance Denied",
+  "documentType" : "Clearance Denied",
+  "templateFilename" : "ComplaintClearanceDenied.docx",
+  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "complaintNumber" : "Employee ID",
+    "currentDate" : "Date"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Clearance Granted",
+  "documentType" : "Clearance Granted",
+  "templateFilename" : "ComplaintClearanceGranted.docx",
+  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "complaintNumber" : "Employee ID",
+    "currentDate" : "Date"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
+}, {
+  "displayName" : "Medical Release",
+  "documentType" : "Medical Release",
+  "templateFilename" : "ComplaintMedicalRelease.docx",
+  "correspondenceQueryBeanId" : "complaintCreatorFullNameNumberAndCurrentDateQuery",
+  "templateSubstitutionVariables" : {
+    "creatorFullName" : "Employee Name",
+    "complaintNumber" : "Employee ID",
+    "currentDate" : "Date"
+  },
+  "dateFormatString" : "MM/dd/yyyy",
+  "numberFormatString" : "###,###,###",
+  "activated" : false
 } ]
