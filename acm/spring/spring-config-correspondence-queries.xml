@@ -151,17 +151,13 @@ AND     cm.creator = au.userId
         </property>
     </bean>
 
-    <bean id="simpleResponse" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+    <bean id="correspondenceDOJDemoQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
             <property name="type" value="CASE_FILE" />
             <property name="jpaQuery">
                 <value>
                     <![CDATA[
-     SELECT  cf.id,
+     SELECT cf.caseNumber,
             cf.title,
-            cf.receivedDate,
-            cf.requestType,
-            cf.requestSubType,
-            cf.details,
             CURRENT_DATE,
             TRIM(CONCAT(
               COALESCE(p.givenName, ''),
@@ -177,8 +173,9 @@ AND     cm.creator = au.userId
               CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
               CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
             )),
-            (SELECT contact.value FROM pa.person.contactMethods contact WHERE contact.type ="Email")
-     FROM    CorrespondenceRequest cf,
+            'Ian Investigator'
+     FROM   FOIARequest cf,
+            AcmUser au,
             cf.personAssociations pa,
             pa.person p,
             pa.person.addresses addr
@@ -191,14 +188,10 @@ AND     cm.creator = au.userId
                  <list>
                      <value>REQUEST ID</value>
                      <value>TOPIC</value>
-                     <value>RECEIVED DATE</value>
-                     <value>REQUEST TYPE</value>
-                     <value>REQUEST SUBTYPE</value>
-                     <value>DESCRIPTION</value>
-                     <value>Date</value>
+                     <value>DATE</value>
                      <value>REQUESTER NAME</value>
                      <value>REQUESTER ADDRESS</value>
-                     <value>REQUESTER EMAIL ADDRESS</value>
+                     <value>USER</value>
                  </list>
              </property>
  </bean>
