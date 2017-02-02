@@ -1,5 +1,5 @@
 [ {
-  "documentType" : "Correspondence - Invitatio",
+  "documentType" : "Correspondence - Invitation",
   "templateFilename" : "Correspondence - Invitation.docx",
   "correspondenceQueryBeanId" : "correspondenceDOJDemoQuery",
   "templateSubstitutionVariables" : {
