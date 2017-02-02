@@ -35,7 +35,7 @@
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
-        <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+        <beans:property name="ldapDao" ref="springLdapPagedDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
@@ -162,9 +162,10 @@
         <beans:bean id="armedia_ldapAuthenticateService" class="com.armedia.acm.services.users.service.ldap.LdapAuthenticateService">
             <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean, which should be defined below. -->
             <beans:property name="ldapAuthenticateConfig" ref="armedia_authenticate"/>
-
             <!-- do not change ldapDao properties. -->
-            <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+            <beans:property name="ldapDao" ref="springLdapPagedDao"/>
+            <beans:property name="userDao" ref="userJpaDao"/>
+            <beans:property name="ldapUserDao" ref="springLdapUserDao"/>
         </beans:bean>
 
         <beans:bean id="armedia_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
@@ -186,6 +187,7 @@
             <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${ldapConfig.userIdAttributeName}'/>
+            <beans:property name="enableEditingLdapUsers" value='${ldapConfig.enableEditingLdapUsers}'/>
         </beans:bean>
     </beans:beans>
 
