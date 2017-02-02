@@ -340,7 +340,7 @@
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
-                    <property name="url" value="/api/latest/plugin/admin/template/update"/>
+                    <property name="url" value="/api/latest/plugin/admin/template"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
             </list>
