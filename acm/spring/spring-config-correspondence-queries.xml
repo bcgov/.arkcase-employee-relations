@@ -149,58 +149,5 @@ AND     cm.creator = au.userId
                 <value>complaintTitle</value>
             </list>
         </property>
-    </bean>
-
-    <bean id="simpleResponse" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-            <property name="type" value="CASE_FILE" />
-            <property name="jpaQuery">
-                <value>
-                    <![CDATA[
-     SELECT  cf.id,
-            cf.title,
-            cf.receivedDate,
-            cf.requestType,
-            cf.requestSubType,
-            cf.details,
-            CURRENT_DATE,
-            TRIM(CONCAT(
-              COALESCE(p.givenName, ''),
-              ' ',
-              CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
-              COALESCE(p.familyName, '')
-            )),
-            TRIM(',' FROM CONCAT(
-              COALESCE(addr.streetAddress, ''),
-              CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
-              CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
-              CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
-              CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
-              CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
-            )),
-            (SELECT contact.value FROM pa.person.contactMethods contact WHERE contact.type ="Email")
-     FROM    CorrespondenceRequest cf,
-            cf.personAssociations pa,
-            pa.person p,
-            pa.person.addresses addr
-     WHERE   cf.id = ?1
-     AND     pa.personType = "Requester"
-                     ]]>
-                 </value>
-             </property>
-             <property name="fieldNames">
-                 <list>
-                     <value>REQUEST ID</value>
-                     <value>TOPIC</value>
-                     <value>RECEIVED DATE</value>
-                     <value>REQUEST TYPE</value>
-                     <value>REQUEST SUBTYPE</value>
-                     <value>DESCRIPTION</value>
-                     <value>Date</value>
-                     <value>REQUESTER NAME</value>
-                     <value>REQUESTER ADDRESS</value>
-                     <value>REQUESTER EMAIL ADDRESS</value>
-                 </list>
-             </property>
- </bean>
- 
+    </bean> 
 </beans>
