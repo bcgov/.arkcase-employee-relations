@@ -1,26 +1,19 @@
-[
-  {
-    "template": "GeneralRelease.docx",
-    "label": "General Release"
-  },
-  {
-    "template": "MedicalRelease.docx",
-    "label": "Medical Release"
-  },
-  {
-    "template": "ClearanceGranted.docx",
-    "label": "Clearance Granted"
-  },
-  {
-    "template": "ClearanceDenied.docx",
-    "label": "Clearance Denied"
-  },
-  {
-    "template": "NoticeofInvestigation.docx",
-    "label": "Notice of Investigation"
-  },
-  {
-    "template": "InterviewRequest.docx",
-    "label": "Witness Interview Request"
-  }
-]
+[ {
+  "template" : "GeneralRelease.docx",
+  "label" : "General Release"
+}, {
+  "template" : "MedicalRelease.docx",
+  "label" : "Medical Release"
+}, {
+  "template" : "ClearanceGranted.docx",
+  "label" : "Clearance Granted"
+}, {
+  "template" : "ClearanceDenied.docx",
+  "label" : "Clearance Denied"
+}, {
+  "template" : "NoticeofInvestigation.docx",
+  "label" : "Notice of Investigation"
+}, {
+  "template" : "InterviewRequest.docx",
+  "label" : "Witness Interview Request"
+} ]
