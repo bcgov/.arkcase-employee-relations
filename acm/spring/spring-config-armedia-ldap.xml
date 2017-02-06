@@ -77,6 +77,7 @@
         <beans:property name="userSearchFilter" value='${ldapConfig.userSearchFilter}'/>
         <beans:property name="groupSearchFilterForUser" value='${ldapConfig.groupSearchFilterForUser}'/>
         <beans:property name="syncPageSize" value='${ldapConfig.syncPageSize}'/>
+        <beans:property name="directoryName" value='${ldapConfig.directoryName}'/>
     </beans:bean>
     
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
