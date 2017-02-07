@@ -6,6 +6,16 @@
     <bean id="acmApplication" class="com.armedia.acm.core.AcmApplication">
         <property name="applicationName" value="Law Enforcement Application"/>
 
+        <!-- alfrescoUserIdLdapAttribute controls the user id that is sent to Alfresco in the 
+             X-Alfresco-Remote-User header, so that Alfresco knows who the real user is.  In 
+             Kerberos and CAC (smart card) environments, sometimes the ArkCase user id is not the 
+             same as the Alfresco user id... The ArkCase user id could be "david.miller@armedia.com" 
+             and the Alfresco user id would be some number from the smart card, e.g. "9283923892".
+             So with this attribute we can control what is sent to Alfresco.
+             Valid values: uid, samAccountName, userPrincipalName, distinguishedName
+        -->
+        <property name="alfrescoUserIdLdapAttribute" value="uid"/>
+
         <!-- The logoutUrl bean is defined in spring-security-config-*.xml -->
         <property name="logoutUrl" ref="logoutUrl" />
 	<property name="helpUrl" value="http://www.arkcase.com/docs/" />
