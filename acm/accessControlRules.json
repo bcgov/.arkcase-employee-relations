@@ -102,6 +102,21 @@
       ],
       "userRolesAll": []
     },
+	{
+      "actionName": "editAttachments",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
 
     { 
       "actionName": "addComment", 
@@ -369,6 +384,21 @@
         "ROLE_PROSECUTOR",
         "Role_Ronda",
         "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "editAttachments",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
