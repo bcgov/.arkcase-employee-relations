@@ -1,4 +1,5 @@
 [ {
   "template" : "Correspondence - Invitation.docx",
-  "label" : "Correspondence - Invitation"
+  "label" : "Correspondence - Invitation",
+  "activated" : true
 } ]
