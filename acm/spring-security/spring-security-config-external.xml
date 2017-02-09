@@ -85,9 +85,10 @@
 
 
         <beans:bean id="externalAuthFilter"
-                    class="org.springframework.security.web.authentication.preauth.RequestHeaderAuthenticationFilter">
+                    class="com.armedia.acm.auth.AcmPreAuthenticatedLoginHandler">
             <beans:property name="principalRequestHeader" value="X-ARKCASE-EXTERNAL-USER"/>
             <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
+            <beans:property name="loginSuccessOperations" ref="acmLoginSuccessOperations"/>
         </beans:bean>
 
 
