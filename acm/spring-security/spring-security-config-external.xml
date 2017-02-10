@@ -89,6 +89,7 @@
             <beans:property name="principalRequestHeader" value="X-ARKCASE-EXTERNAL-USER"/>
             <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
             <beans:property name="loginSuccessOperations" ref="acmLoginSuccessOperations"/>
+            <beans:property name="exceptionIfHeaderMissing" value="false"/>
         </beans:bean>
 
 
