@@ -106,15 +106,8 @@
       "actionName": "editAttachments",
       "objectType": "CASE_FILE",
       "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "ROLE_TECHNICIAN"
-      ],
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
+      "userRolesAny": [],
       "userRolesAll": []
     },
 
@@ -392,15 +385,8 @@
       "actionName": "editAttachments",
       "objectType": "COMPLAINT",
       "objectProperties": {},
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "ROLE_TECHNICIAN"
-      ],
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
+      "userRolesAny": [],
       "userRolesAll": []
     },
      {
