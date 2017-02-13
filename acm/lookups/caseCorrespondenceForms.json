@@ -1,19 +1,33 @@
 [ {
   "template" : "GeneralRelease.docx",
-  "label" : "General Release"
+  "label" : "General Release",
+  "activated" : false
 }, {
   "template" : "MedicalRelease.docx",
-  "label" : "Medical Release"
+  "label" : "Medical Release",
+  "activated" : false
 }, {
   "template" : "ClearanceGranted.docx",
-  "label" : "Clearance Granted"
+  "label" : "Clearance Granted",
+  "activated" : false
 }, {
   "template" : "ClearanceDenied.docx",
-  "label" : "Clearance Denied"
+  "label" : "Clearance Denied",
+  "activated" : false
 }, {
   "template" : "NoticeofInvestigation.docx",
-  "label" : "Notice of Investigation"
+  "label" : "Notice of Investigation",
+  "activated" : false
 }, {
   "template" : "InterviewRequest.docx",
-  "label" : "Witness Interview Request"
+  "label" : "Witness Interview Request",
+  "activated" : false
+}, {
+  "template" : "ApprovalLetterTwo.docx",
+  "label" : "Approval Letter Two",
+  "activated" : false
+}, {
+  "template" : "ApprovalLetter.docx",
+  "label" : "Leeter for Approval",
+  "activated" : false
 } ]
