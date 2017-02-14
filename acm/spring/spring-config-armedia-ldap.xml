@@ -31,7 +31,7 @@
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
     <beans:bean id="armedia_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
         <!-- directoryName: must be unique across all LDAP sync beans -->
-        <beans:property name="directoryName" value='${ldapConfig.directoryName}'/>
+        <beans:property name="directoryName" value='${ldapConfig.id}'/>
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
