@@ -32,7 +32,7 @@
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
     <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
         <!-- directoryName: must be unique across all LDAP sync beans -->
-        <beans:property name="directoryName" value='${ldapConfig.id}'/>
+        <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
@@ -53,7 +53,7 @@
         <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
         <beans:property name="groupSearchBase" value='${r"${ldapConfig.groupSearchBase}"}'/>
         <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
-        <beans:property name="groupSearchFilter" value="'${r"${ldapConfig.groupSearchFilter}"}'/>
+        <beans:property name="groupSearchFilter" value='${r"${ldapConfig.groupSearchFilter}"}'/>
         <!-- filter to retrieve all groups with a name greater than some group name - used to page group search results -->
         <beans:property name="groupSearchPageFilter" value='${r"${ldapConfig.groupSearchPageFilter}"}'/>
         <!-- ignorePartialResultException: true if your LDAP server is Active Directory, false for other LDAP servers -->
@@ -68,7 +68,6 @@
 
         <beans:property name="allUsersFilter" value='${r"${ldapConfig.allUsersFilter}"}'/>
         <beans:property name="allUsersPageFilter" value='${r"${ldapConfig.allUsersPageFilter}"}'/>
-        <beans:property name="allUsersSearchBase" value='${r"${ldapConfig.allUsersSearchBase}"}'/>
         <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
              servers use "uid". -->
         <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>

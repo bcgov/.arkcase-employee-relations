@@ -3,8 +3,8 @@ ldapConfig.id=${id}
 ldapConfig.base=${base}
 ldapConfig.authUserDn=${authUserDn}
 ldapConfig.authUserPassword=${authUserPassword}
+
 ldapConfig.userSearchBase=${userSearchBase}
-ldapConfig.allUsersSearchBase=${allUsersSearchBase}
 ldapConfig.groupSearchBase=${groupSearchBase}
 
 ldapConfig.ldapUrl=${ldapUrl}
