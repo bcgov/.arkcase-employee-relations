@@ -905,16 +905,4 @@
             </list>
         </property>
     </bean>
-    <bean id="foiaFilePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
-        <property name="privilegeName" value="foia-file-privilege"/>
-        <property name="applicationRolesWithPrivilege">
-            <list>
-                <#if foiaFilePrivilege??>
-                    <#list foiaFilePrivilege as role>
-                        <value>${role}</value>
-                    </#list>
-                </#if>
-            </list>
-        </property>
-    </bean>
 </beans>
