@@ -30,17 +30,17 @@
         <property name="issueCollectorFlag" value="false"/>
         <property name="topbarActions">
             <list>
-           <!-- <ref bean="createComplaintAction"/> -->
+                <ref bean="createComplaintAction"/>
                 <ref bean="createCaseFileAction"/>
                 <ref bean="createTaskAction"/>
-				<ref bean="createTimesheetAction"/> 
+                <ref bean="createTimesheetAction"/>
                 <ref bean="createCostsheetAction"/>
             </list>
         </property>
         <property name="navigatorTabs">
             <list>
                 <ref bean="dashboardNavigatorAction"/>
-         <!--   <ref bean="complaintNavigatorAction"/> -->
+                <ref bean="complaintNavigatorAction"/>
                 <ref bean="caseFileNavigatorAction"/>
                 <ref bean="taskNavigatorAction"/>
                 <ref bean="searchNavigatorAction"/>
@@ -50,13 +50,13 @@
                 <ref bean="auditNavigatorAction"/>
                 <ref bean="adminNavigatorAction"/>
                 <ref bean="tagNavigatorAction"/>
-				<ref bean="timeTrackingNavigatorAction"/>
+                <ref bean="timeTrackingNavigatorAction"/>
                 <ref bean="costTrackingNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
             <list>
-               <!-- <ref bean="complaintType"/>-->
+                <ref bean="complaintType"/>
                 <ref bean="caseFileType"/>
                 <ref bean="taskType"/>
                 <ref bean="documentType"/>
@@ -65,7 +65,7 @@
                 <ref bean="personAssociationType"/>
                 <ref bean="participantType"/>
                 <ref bean="contactMethodType"/>
-              <!--  <ref bean="locationType"/> -->
+                <ref bean="locationType"/>
                 <ref bean="organizationType"/>
                 <ref bean="groupType"/>
                 <ref bean="userType"/>
@@ -95,14 +95,13 @@
         <property name="requiredPrivilege" value="acm-complaint-create"/>
     </bean>
 
-  <!--  
     <bean id="createComplaintAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Complaint"/>
         <property name="actionResourceName" value="common:top-bar.button.complaint" />
         <property name="iconName" value="i i-notice"/>
         <property name="url" value="/plugin/complaint/wizard"/>
         <property name="requiredPrivilege" value="acm-complaint-create"/>
-    </bean> -->
+    </bean>
 
     <bean id="createCaseFileAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Case File"/>
@@ -111,6 +110,7 @@
         <property name="url" value="/plugin/casefile/wizard"/>
         <property name="requiredPrivilege" value="case-file-create"/>
     </bean>
+
     <bean id="createTimesheetAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Timesheet"/>
         <property name="actionResourceName" value="common:top-bar.button.timesheet" />
@@ -138,7 +138,7 @@
         <property name="url" value="/plugin/task"/>
         <property name="requiredPrivilege" value="acm-task-module"/>
     </bean>
-<!--
+
     <bean id="complaintNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Complaints"/>
         <property name="actionResourceName" value="common:navigation.label.complaints" />
@@ -146,7 +146,7 @@
         <property name="url" value="/plugin/complaint"/>
         <property name="requiredPrivilege" value="acm-complaint-module"/>
     </bean>
--->
+
     <bean id="searchNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Search"/>
         <property name="actionResourceName" value="common:navigation.label.search" />
@@ -237,8 +237,7 @@
     <!-- end of navigator tabs -->
 
     <!-- begin of objectTypes -->
-<!--    
-   <bean id="complaintType" class="com.armedia.acm.core.AcmObjectType">
+    <bean id="complaintType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="COMPLAINT"/>
         <property name="description" value="Complaint"/>
         <property name="iconName" value="i i-notice"/>
@@ -248,7 +247,6 @@
             </map>
         </property>
     </bean>
--->
     <bean id="caseFileType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="CASE_FILE"/>
         <property name="description" value="Case File"/>
@@ -286,7 +284,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/documents"/>
-        <!--        <entry key="COMPLAINT" value="/home.html#!/complaints/%d/documents"/> -->
+                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/documents"/>
                 <entry key="TASK" value="/home.html#!/tasks/TASK/%d/attachments"/>
             </map>
         </property>
@@ -308,7 +306,7 @@
         <property name="url">
              <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/people"/>
-<!--                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/people"/> -->
+                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/people"/>
             </map>
         </property>
     </bean>
@@ -319,7 +317,7 @@
         <property name="url">
              <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/participants"/>
-    <!--            <entry key="COMPLAINT" value="/home.html#!/complaints/%d/participants"/> -->
+                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/participants"/>
             </map>
         </property>
     </bean>
@@ -333,8 +331,7 @@
             </map>
         </property>
     </bean>
-<!--   
- <bean id="locationType" class="com.armedia.acm.core.AcmObjectType">
+    <bean id="locationType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="LOCATION"/>
         <property name="description" value="Location"/>
         <property name="iconName" value=""/>
@@ -344,7 +341,6 @@
             </map>
         </property>
     </bean>
--->
     <bean id="organizationType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="ORGANIZATION"/>
         <property name="description" value="Organization"/>
@@ -395,7 +391,6 @@
             </map>
         </property>
     </bean>
-
     <bean id="timesheetType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="TIMESHEET"/>
         <property name="description" value="Timesheet"/>
@@ -416,7 +411,6 @@
             </map>
         </property>
     </bean>
-
     <bean id="noteType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="NOTE"/>
         <property name="description" value="Note"/>
@@ -424,7 +418,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/notes"/>
-<!--                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/notes"/> -->
+                <entry key="COMPLAINT" value="/home.html#!/complaints/%d/notes"/>
             </map>
         </property>
     </bean>
