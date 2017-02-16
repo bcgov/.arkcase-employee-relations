@@ -59,28 +59,38 @@
       ],
       "userRolesAll": []
     },
-
+    {
+      "actionName": "saveCase",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny": [
+        "assignee",
+        "supervisor",
+        "owning group",
+        "co-owner",
+        "approver",
+        "collaborator",
+        "follower",
+        "reader"
+      ],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
     {
       "actionName": "editCase",
       "objectType": "CASE_FILE",
-      "objectProperties": {
-      "status": [
-        "DRAFT",
-        "ACTIVE",
-        "INACTIVE"
-      ]
-      },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+      "objectProperties": {},
+      "userIsParticipantTypeAny": [
+        "assignee",
+        "supervisor",
+        "owning group",
+        "co-owner",
+        "approver",
+        "collaborator",
+        "follower",
+        "reader"
       ],
+      "userRolesAny": [],
       "userRolesAll": []
     },
     {
@@ -234,22 +244,22 @@
       "userRolesAny": [],
       "userRolesAll": []
     },
-	{
+    {
       "actionName": "saveDetail",
       "objectType": "TASK",
       "objectProperties": {
         "completed": false
       },
       "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
-        "ROLE_TECHNICIAN"
+      "ROLE_INVESTIGATOR",
+      "ROLE_INVESTIGATOR_SUPERVISOR",
+      "ROLE_ANALYST",
+      "ROLE_CALLCENTER",
+      "ROLE_ADMINISTRATOR",
+      "ROLE_PROSECUTOR",
+      "Role_Ronda",
+      "Evidence Tech",
+      "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
     },
@@ -260,14 +270,116 @@
         "completed": false
       },
       "userRolesAny": [
+      "ROLE_INVESTIGATOR",
+      "ROLE_INVESTIGATOR_SUPERVISOR",
+      "ROLE_ANALYST",
+      "ROLE_CALLCENTER",
+      "ROLE_ADMINISTRATOR",
+      "ROLE_PROSECUTOR",
+      "Role_Ronda",
+      "Evidence Tech",
+      "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Intake"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_EXEC_SEC"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Fulfill"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_ANALYST"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Supervisor Approval"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_SUPERVISOR"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Executive Approval"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_APPROVER"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Release"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_EXEC_SEC"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "viewQueueInQueueMenu",
+      "objectType": "QUEUE",
+      "objectProperties": {
+        "name": "Suspend"
+      },
+      "userRolesAny": [
+        "ROLE_CORR_EXEC_SEC",
+        "ROLE_CORR_ANALYST",
+        "ROLE_CORR_SUPERVISOR",
+        "ROLE_CORR_APPROVER"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "time-tracking.main",
+      "objectType": "MENU",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
+   },
+   {
+      "actionName": "lock",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userIsParticipantTypeAny": [
+        "assignee",
+        "owning group"
+      ],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "unlock",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
         "ROLE_INVESTIGATOR",
         "ROLE_INVESTIGATOR_SUPERVISOR",
         "ROLE_ANALYST",
         "ROLE_CALLCENTER",
         "ROLE_ADMINISTRATOR",
         "ROLE_PROSECUTOR",
-        "Role_Ronda",
-        "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
       "userRolesAll": []
