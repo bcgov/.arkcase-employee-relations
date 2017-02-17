@@ -184,6 +184,7 @@
             <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
+            <beans:property name="enableEditingLdapUsers" value='${r"${ldapConfig.enableEditingLdapUsers}"}'/>
         </beans:bean>
     </beans:beans>
 

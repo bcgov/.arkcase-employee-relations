@@ -35,7 +35,7 @@
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
-        <beans:property name="ldapDao" ref="springLdapPagedDao"/>
+        <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
@@ -74,7 +74,6 @@
         <beans:property name="userSearchFilter" value='${ldapConfig.userSearchFilter}'/>
         <beans:property name="groupSearchFilterForUser" value='${ldapConfig.groupSearchFilterForUser}'/>
         <beans:property name="syncPageSize" value='${ldapConfig.syncPageSize}'/>
-        <beans:property name="directoryName" value='${ldapConfig.directoryName}'/>
         <beans:property name="allUsersSortingAttribute" value='${ldapConfig.allUsersSortingAttribute}'/>
         <beans:property name="groupsSortingAttribute" value='${ldapConfig.groupsSortingAttribute}'/>
     </beans:bean>
@@ -163,7 +162,7 @@
             <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean, which should be defined below. -->
             <beans:property name="ldapAuthenticateConfig" ref="armedia_authenticate"/>
             <!-- do not change ldapDao properties. -->
-            <beans:property name="ldapDao" ref="springLdapPagedDao"/>
+            <beans:property name="ldapDao" ref="customPagedLdapDao"/>
             <beans:property name="userDao" ref="userJpaDao"/>
             <beans:property name="ldapUserDao" ref="springLdapUserDao"/>
         </beans:bean>
