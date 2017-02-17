@@ -16,7 +16,6 @@ ldapConfig.syncPageSize=${syncPageSize}
 
 ldapConfig.enableEditingLdapUsers=${enableEditingLdapUsers?c}
 
-
 ldapConfig.userSearchFilter=${userSearchFilter}
 ldapConfig.allUsersFilter=${allUsersFilter}
 ldapConfig.allUsersPageFilter=${allUsersPageFilter}
