@@ -102,6 +102,20 @@
       ],
       "userRolesAll": []
     },
+	{
+      "actionName": "editAttachments",
+      "objectType": "CASE_FILE",
+      "objectProperties": {
+		"status": [
+		  "DRAFT",
+		  "ACTIVE",
+		  "INACTIVE"
+		] 
+	  },
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
 
     { 
       "actionName": "addComment", 
@@ -216,15 +230,8 @@
       "objectProperties": {
         "status": "ACTIVE"
       },
-      "userRolesAny": [
-        "ROLE_INVESTIGATOR",
-        "ROLE_INVESTIGATOR_SUPERVISOR",
-        "ROLE_ANALYST",
-        "ROLE_CALLCENTER",
-        "ROLE_ADMINISTRATOR",
-        "ROLE_PROSECUTOR",
-        "ROLE_TECHNICIAN"
-      ],
+	  "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
+      "userRolesAny": [],
       "userRolesAll": []
     },
 	{
@@ -371,6 +378,20 @@
         "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "editAttachments",
+      "objectType": "COMPLAINT",
+      "objectProperties": {
+		"status": [
+		  "DRAFT",
+		  "ACTIVE",
+		  "INACTIVE"
+		]
+	  },
+      "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
+      "userRolesAny": [],
       "userRolesAll": []
     },
      {
