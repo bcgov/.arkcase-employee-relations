@@ -1,0 +1,16 @@
+openLdapAddUserConfig.id=${id}
+openLdapAddUserConfig.cn=${cn}
+openLdapAddUserConfig.givenName=${givenName}
+openLdapAddUserConfig.sn=${sn}
+openLdapAddUserConfig.uid=${uid}
+openLdapAddUserConfig.mail=${mail}
+openLdapAddUserConfig.memberOf=${memberOf}
+openLdapAddUserConfig.userAccountControl=1
+openLdapAddUserConfig.userPassword=${userPassword}
+openLdapAddUserConfig.uidNumber=${uidNumber}
+openLdapAddUserConfig.gidNumber=${gidNumber}
+openLdapAddUserConfig.homeDirectory=${homeDirectory}
+openLdapAddUserConfig.objectClass=top,person,inetOrgPerson,organizationalPerson,posixAccount,uacPerson,shadowAccount
+openLdapAddUserConfig.shadowWarning=7
+openLdapAddUserConfig.shadowLastChange=12994
+openLdapAddUserConfig.shadowMax=99999

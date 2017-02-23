@@ -348,6 +348,16 @@
                     <property name="url" value="/api/latest/plugin/admin/template"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/latest/plugin/admin/ldapconfiguration/openLdapUserTemplate/{templateId}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/latest/plugin/admin/ldapconfiguration/adUserTemplate/{templateId}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
