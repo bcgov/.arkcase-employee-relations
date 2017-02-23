@@ -74,6 +74,7 @@
         <beans:property name="userSearchFilter" value='${ldapConfig.userSearchFilter}'/>
         <beans:property name="groupSearchFilterForUser" value='${ldapConfig.groupSearchFilterForUser}'/>
         <beans:property name="syncPageSize" value='${ldapConfig.syncPageSize}'/>
+        <beans:property name="directoryName" value='${ldapConfig.id}'/>
         <beans:property name="allUsersSortingAttribute" value='${ldapConfig.allUsersSortingAttribute}'/>
         <beans:property name="groupsSortingAttribute" value='${ldapConfig.groupsSortingAttribute}'/>
     </beans:bean>
