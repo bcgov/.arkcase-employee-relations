@@ -350,6 +350,11 @@
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/latest/plugin/admin/template/versions/{templateId}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/latest/plugin/admin/template/{templateId}/{templateFilename}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
@@ -360,7 +365,7 @@
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
-                    <property name="url" value="/api/latest/plugin/admin/template/{templateId}/{templateFilename}"/>
+                    <property name="url" value="/api/latest/plugin/admin/template/{templateId}/{templateVersion}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
