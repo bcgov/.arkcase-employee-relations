@@ -5,29 +5,33 @@
 }, {
   "template" : "MedicalRelease.docx",
   "label" : "Medical Release",
-  "activated" : false
+  "activated" : true
 }, {
   "template" : "ClearanceGranted.docx",
   "label" : "Clearance Granted",
-  "activated" : false
+  "activated" : true
 }, {
   "template" : "ClearanceDenied.docx",
   "label" : "Clearance Denied",
-  "activated" : false
+  "activated" : true
 }, {
   "template" : "NoticeofInvestigation.docx",
   "label" : "Notice of Investigation",
-  "activated" : false
+  "activated" : true
 }, {
   "template" : "InterviewRequest.docx",
   "label" : "Witness Interview Request",
-  "activated" : false
+  "activated" : true
 }, {
   "template" : "ApprovalLetterTwo.docx",
   "label" : "Approval Letter Two",
   "activated" : false
 }, {
   "template" : "ApprovalLetter.docx",
-  "label" : "Leeter for Approval",
-  "activated" : false
+  "label" : "Approval Letter",
+  "activated" : true
+}, {
+  "template" : "ComplaintNoticeofInvestigation.docx",
+  "label" : "Notice of Investigation",
+  "activated" : true
 } ]
