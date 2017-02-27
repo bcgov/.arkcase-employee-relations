@@ -2,7 +2,7 @@
   "templateId" : "11",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Clearance Denied",
+  "label" : "Clearance Denied",
   "documentType" : "Clearance Denied",
   "templateFilename" : "ComplaintClearanceDenied.docx",
   "objectType" : "COMPLAINT",
@@ -15,7 +15,7 @@
   "templateId" : "12",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Clearance Granted",
+  "label" : "Clearance Granted",
   "documentType" : "Clearance Granted",
   "templateFilename" : "ComplaintClearanceGranted.docx",
   "objectType" : "COMPLAINT",
@@ -28,7 +28,7 @@
   "templateId" : "13",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Medical Release",
+  "label" : "Medical Release",
   "documentType" : "Medical Release",
   "templateFilename" : "ComplaintMedicalRelease.docx",
   "objectType" : "COMPLAINT",
@@ -41,7 +41,7 @@
   "templateId" : "1",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Clearance Granted",
+  "label" : "Clearance Granted",
   "documentType" : "Clearance Granted",
   "templateFilename" : "ClearanceGranted.docx",
   "objectType" : "CASE_FILE",
@@ -49,12 +49,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929263055
+  "modified" : 1488189435855
 }, {
   "templateId" : "2",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Complaint Approval Letter",
+  "label" : "Complaint Approval Letter",
   "documentType" : "Complaint Approval Letter",
   "templateFilename" : "ComplaintApprovalLetter.docx",
   "objectType" : "COMPLAINT",
@@ -67,7 +67,7 @@
   "templateId" : "3",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Approval Letter",
+  "label" : "Approval Letter",
   "documentType" : "Approval Letter",
   "templateFilename" : "ApprovalLetter.docx",
   "objectType" : "CASE_FILE",
@@ -75,12 +75,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929261609
+  "modified" : 1488189433177
 }, {
   "templateId" : "4",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Medical Release",
+  "label" : "Medical Release",
   "documentType" : "Medical Release",
   "templateFilename" : "MedicalRelease.docx",
   "objectType" : "CASE_FILE",
@@ -88,12 +88,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929261128
+  "modified" : 1488189432484
 }, {
   "templateId" : "5",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Clearance Denied",
+  "label" : "Clearance Denied",
   "documentType" : "Clearance Denied",
   "templateFilename" : "ClearanceDenied.docx",
   "objectType" : "CASE_FILE",
@@ -101,12 +101,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929260479
+  "modified" : 1488189431785
 }, {
   "templateId" : "6",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "General Release",
+  "label" : "General Release",
   "documentType" : "General Release",
   "templateFilename" : "ComplaintGeneralRelease.docx",
   "objectType" : "COMPLAINT",
@@ -119,7 +119,7 @@
   "templateId" : "7",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Notice of Investigation",
+  "label" : "Notice of Investigation",
   "documentType" : "Notice of Investigation",
   "templateFilename" : "NoticeofInvestigation.docx",
   "objectType" : "CASE_FILE",
@@ -127,12 +127,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929258656
+  "modified" : 1488189431042
 }, {
   "templateId" : "8",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Witness Interview Request",
+  "label" : "Witness Interview Request",
   "documentType" : "Witness Interview Request",
   "templateFilename" : "ComplaintInterviewRequest.docx",
   "objectType" : "COMPLAINT",
@@ -145,7 +145,7 @@
   "templateId" : "9",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Witness Interview Request",
+  "label" : "Witness Interview Request",
   "documentType" : "Witness Interview Request",
   "templateFilename" : "InterviewRequest.docx",
   "objectType" : "CASE_FILE",
@@ -153,12 +153,12 @@
   "numberFormatString" : "###,###,###",
   "activated" : true,
   "modifier" : "ann-acm",
-  "modified" : 1487929257051
+  "modified" : 1488189428668
 }, {
   "templateId" : "10",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
-  "displayName" : "Notice of Investigation",
+  "label" : "Notice of Investigation",
   "documentType" : "Notice of Investigation",
   "templateFilename" : "ComplaintNoticeofInvestigation.docx",
   "objectType" : "CASE_FILE",
