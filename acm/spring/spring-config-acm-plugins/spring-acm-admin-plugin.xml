@@ -378,6 +378,11 @@
                     <property name="url" value="/api/latest/plugin/admin/template"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/latest/plugin/admin/mergefields"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
