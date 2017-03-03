@@ -92,6 +92,9 @@
             <beans:property name="exceptionIfHeaderMissing" value="false"/>
         </beans:bean>
 
+        <beans:bean id="sessionDestroyedListener" class="com.armedia.acm.auth.SessionDestroyedListener">
+            <beans:property name="authenticationTokenService" ref="authenticationTokenService"/>
+        </beans:bean>
 
     </beans:beans>
 </beans:beans>
