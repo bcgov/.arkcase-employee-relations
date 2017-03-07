@@ -8,24 +8,45 @@
         <property name="type" value="CASE_FILE" />
         <property name="jpaQuery">
             <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE,
-        cf.caseNumber,
-        cf.title
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                         ]]>
+
+                    <![CDATA[
+     SELECT cf.caseNumber,
+            cf.title,
+            CURRENT_DATE,
+            TRIM(CONCAT(
+              COALESCE(p.givenName, ''),
+              ' ',
+              CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
+              COALESCE(p.familyName, '')
+            )),
+            TRIM(',' FROM CONCAT(
+              COALESCE(addr.streetAddress, ''),
+              CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
+              CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
+              CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
+              CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
+              CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
+            )),
+            au.fullName
+     FROM   CaseFile cf,
+            AcmUser au,
+            cf.personAssociations pa,
+            pa.person p left join
+            pa.person.addresses addr
+     WHERE   cf.id = ?1
+     AND     cf.creator = au.userId
+     AND     pa.personType = "Initiator"
+                     ]]>
             </value>
         </property>
         <property name="fieldNames">
             <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
                 <value>caseNumber</value>
                 <value>caseTitle</value>
+                <value>currentDate</value>
+                <value>initiatorName</value>
+                <value>initiatorAddress</value>
+                <value>userFullName</value>
             </list>
         </property>
     </bean>
@@ -36,24 +57,45 @@ AND     cf.creator = au.userId
         <property name="type" value="COMPLAINT" />
         <property name="jpaQuery">
             <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE,
-        cm.complaintNumber,
-        cm.complaintTitle
-FROM    Complaint cm,
-        AcmUser au
-WHERE   cm.complaintId = ?1
-AND     cm.creator = au.userId
-                         ]]>
+                         
+                    <![CDATA[
+     SELECT cm.complaintNumber,
+            cm.complaintTitle,
+            CURRENT_DATE,
+            TRIM(CONCAT(
+              COALESCE(p.givenName, ''),
+              ' ',
+              CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
+              COALESCE(p.familyName, '')
+            )),
+            TRIM(',' FROM CONCAT(
+              COALESCE(addr.streetAddress, ''),
+              CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
+              CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
+              CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
+              CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
+              CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
+            )),
+            au.fullName
+     FROM   Complaint cm,
+            AcmUser au,
+            cm.personAssociations pa,
+            pa.person p left join
+            pa.person.addresses addr
+     WHERE   cm.complaintId = ?1
+     AND     cm.creator = au.userId
+     AND     pa.personType = "Initiator"
+                     ]]>
             </value>
         </property>
         <property name="fieldNames">
             <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
                 <value>complaintNumber</value>
                 <value>complaintTitle</value>
+                <value>currentDate</value>
+                <value>initiatorName</value>
+                <value>initiatorAddress</value>
+                <value>userFullName</value>
             </list>
         </property>
     </bean> 
