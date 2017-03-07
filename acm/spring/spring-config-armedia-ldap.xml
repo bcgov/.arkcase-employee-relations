@@ -74,6 +74,7 @@
         <beans:property name="userSearchFilter" value='${ldapConfig.userSearchFilter}'/>
         <beans:property name="groupSearchFilterForUser" value='${ldapConfig.groupSearchFilterForUser}'/>
         <beans:property name="syncPageSize" value='${ldapConfig.syncPageSize}'/>
+        <beans:property name="directoryName" value='${ldapConfig.id}'/>
         <beans:property name="allUsersSortingAttribute" value='${ldapConfig.allUsersSortingAttribute}'/>
         <beans:property name="groupsSortingAttribute" value='${ldapConfig.groupsSortingAttribute}'/>
     </beans:bean>
@@ -161,9 +162,10 @@
         <beans:bean id="armedia_ldapAuthenticateService" class="com.armedia.acm.services.users.service.ldap.LdapAuthenticateService">
             <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean, which should be defined below. -->
             <beans:property name="ldapAuthenticateConfig" ref="armedia_authenticate"/>
-
             <!-- do not change ldapDao properties. -->
             <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+            <beans:property name="userDao" ref="userJpaDao"/>
+            <beans:property name="ldapUserDao" ref="springLdapUserDao"/>
         </beans:bean>
 
         <beans:bean id="armedia_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
@@ -185,6 +187,7 @@
             <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${ldapConfig.userIdAttributeName}'/>
+            <beans:property name="enableEditingLdapUsers" value='${ldapConfig.enableEditingLdapUsers}'/>
         </beans:bean>
     </beans:beans>
 
