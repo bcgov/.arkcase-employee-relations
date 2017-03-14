@@ -3,150 +3,129 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Case File queries -->
-    <bean id="caseCreatorFullNameNumberAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+    <!-- Case File query -->
+    <bean id="caseCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="type" value="CASE_FILE" />
         <property name="jpaQuery">
             <value>
                 <![CDATA[
-SELECT  au.fullName,
-        cf.caseNumber,
-           CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
+                    SELECT
+                        cf.caseNumber,
+                        cf.title,
+                        CURRENT_DATE,
+                        TRIM(CONCAT(
+                            COALESCE(p.givenName, ''),
+                            ' ',
+                            CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
+                            COALESCE(p.familyName, '')
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(addr.streetAddress, ''),
+                            CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
+                            CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
+                            CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
+                            CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
+                            CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(orgs.organizationType, ''),
+                            CASE COALESCE(orgs.organizationValue, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', orgs.organizationValue) END
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(contacts.type, ''),
+                            CASE COALESCE(contacts.value, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', contacts.value) END
+                        )),
+                        au.fullName
+                    FROM
+                        CaseFile cf     
+                    JOIN AcmUser au
+                    JOIN PersonAssociation pa
+                    JOIN pa.person p
+                    LEFT JOIN p.addresses addr
+                    LEFT JOIN p.organizations orgs
+                    LEFT JOIN p.contactMethods contacts
+                    WHERE cf.id = ?1
+                    AND cf.creator = au.userId
+                    AND cf.id = pa.parentId
+                    AND pa.parentType='CASE_FILE'
+                    AND pa.personType = "Initiator"
                 ]]>
             </value>
         </property>
         <property name="fieldNames">
             <list>
-                <value>creatorFullName</value>
-                <value>caseNumber</value>
-                <value>currentDate</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="caseCreatorFullNameAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="CASE_FILE" />
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                ]]>
-            </value>
-        </property>
-        <property name="fieldNames">
-            <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
-            </list>
-        </property>
-    </bean>
-
-
-    <bean id="caseCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="CASE_FILE" />
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE,
-        cf.caseNumber,
-        cf.title
-FROM    CaseFile cf,
-        AcmUser au
-WHERE   cf.id = ?1
-AND     cf.creator = au.userId
-                         ]]>
-            </value>
-        </property>
-        <property name="fieldNames">
-            <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
                 <value>caseNumber</value>
                 <value>caseTitle</value>
+                <value>currentDate</value>
+                <value>initiatorName</value>
+                <value>initiatorAddress</value>
+                <value>initiatorOrganization</value>
+                <value>initiatorContact</value>
+                <value>userFullName</value>
             </list>
         </property>
     </bean>
     
     
-    <!-- Complaint queries -->
-    <bean id="complaintCreatorFullNameNumberAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
+    <!-- Complaint query -->
+    <bean id="complaintCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="type" value="COMPLAINT" />
         <property name="jpaQuery">
             <value>
                 <![CDATA[
-SELECT  au.fullName,
-        cm.complaintNumber,
-           CURRENT_DATE
-FROM    Complaint cm,
-        AcmUser au
-WHERE   cm.complaintId = ?1
-AND     cm.creator = au.userId
+                    SELECT
+                        cm.complaintNumber,
+                        cm.complaintTitle,
+                        CURRENT_DATE,
+                        TRIM(CONCAT(
+                            COALESCE(p.givenName, ''),
+                            ' ',
+                            CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
+                            COALESCE(p.familyName, '')
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(addr.streetAddress, ''),
+                            CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
+                            CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
+                            CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
+                            CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
+                            CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(orgs.organizationType, ''),
+                            CASE COALESCE(orgs.organizationValue, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', orgs.organizationValue) END
+                        )),
+                        TRIM(',' FROM CONCAT(
+                            COALESCE(contacts.type, ''),
+                            CASE COALESCE(contacts.value, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', contacts.value) END
+                        )),
+                        au.fullName
+                    FROM
+                        Complaint cm     
+                    JOIN AcmUser au
+                    JOIN PersonAssociation pa
+                    JOIN pa.person p
+                    LEFT JOIN p.addresses addr
+                    LEFT JOIN p.organizations orgs
+                    LEFT JOIN p.contactMethods contacts
+                    WHERE cm.complaintId = ?1
+                    AND cm.creator = au.userId
+                    AND cm.complaintId = pa.parentId
+                    AND pa.parentType='COMPLAINT'
+                    AND pa.personType = "Initiator"
                 ]]>
             </value>
         </property>
         <property name="fieldNames">
             <list>
-                <value>creatorFullName</value>
-                <value>complaintNumber</value>
-                <value>currentDate</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="complaintCreatorFullNameAndCurrentDateQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="COMPLAINT" />
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE
-FROM    Complaint cm,
-        AcmUser au
-WHERE   cm.complaintId = ?1
-AND     cm.creator = au.userId
-                ]]>
-            </value>
-        </property>
-        <property name="fieldNames">
-            <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="complaintCreatorFullNameCurrentDateNumberAndTitleQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="COMPLAINT" />
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-SELECT  au.fullName,
-           CURRENT_DATE,
-        cm.complaintNumber,
-        cm.complaintTitle
-FROM    Complaint cm,
-        AcmUser au
-WHERE   cm.complaintId = ?1
-AND     cm.creator = au.userId
-                         ]]>
-            </value>
-        </property>
-        <property name="fieldNames">
-            <list>
-                <value>creatorFullName</value>
-                <value>currentDate</value>
                 <value>complaintNumber</value>
                 <value>complaintTitle</value>
+                <value>currentDate</value>
+                <value>initiatorName</value>
+                <value>initiatorAddress</value>
+                <value>initiatorOrganization</value>
+                <value>initiatorContact</value>
+                <value>userFullName</value>
             </list>
         </property>
     </bean> 
