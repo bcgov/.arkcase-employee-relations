@@ -14,6 +14,7 @@ ldapConfig.userDomain=${userDomain}
 
 ldapConfig.syncPageSize=${syncPageSize}
 
+ldapConfig.enableEditingLdapUsers=${enableEditingLdapUsers?c}
 
 ldapConfig.userSearchFilter=${userSearchFilter}
 ldapConfig.allUsersFilter=${allUsersFilter}
@@ -24,3 +25,4 @@ ldapConfig.userIdAttributeName=${userIdAttributeName}
 ldapConfig.groupSearchFilter=${groupSearchFilter}
 ldapConfig.groupSearchPageFilter=${groupSearchPageFilter}
 ldapConfig.groupsSortingAttribute=${groupsSortingAttribute}
+
