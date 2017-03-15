@@ -39,7 +39,7 @@
                 <!-- comma delimited content types which need to be skip for processing-->
                 <prop key="skipResponseContentTypes">application/x-font-(woff|ttf).*$, application/(pdf|excel|vnd\.ms-excel|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet).*$, image/.*$</prop>
                 <!-- comma delimited pair of pattern which match url, and parameter which need to be appended-->
-                <prop key="appendUrlParams">^.*prpt/viewer$:userid=admin&amp;password=password</prop>
+                <prop key="appendUrlParams">^.*prpt/viewer$:userid=${PENTAHO_SERVER_USER}&amp;password=${PENTAHO_SERVER_PASSWORD}</prop>
             </props>
         </property>
     </bean>
