@@ -44,9 +44,6 @@
 			<custom-filter
 				ref="acmBasicAndTokenAuthenticationFilter"
 				before="BASIC_AUTH_FILTER" />
-			<custom-filter
-				ref="corsFilter"
-				after="PRE_AUTH_FILTER" />
 			<custom-filter 
 				position="CONCURRENT_SESSION_FILTER" 
 				ref="concurrencyFilter"/>        
@@ -77,9 +74,6 @@
                     <custom-filter
                         ref="acmBasicAndTokenAuthenticationFilter"
                         before="BASIC_AUTH_FILTER" />
-                    <custom-filter
-                        ref="corsFilter"
-                        after="PRE_AUTH_FILTER" />
                     <custom-filter 
                     	position="CONCURRENT_SESSION_FILTER" 
                     	ref="concurrencyFilter"/>
@@ -111,9 +105,6 @@
                      <custom-filter
                          ref="acmBasicAndTokenAuthenticationFilter"
                          before="BASIC_AUTH_FILTER" />
-                     <custom-filter
-                         ref="corsFilter"
-                         after="PRE_AUTH_FILTER" />
                     <custom-filter 
                         position="CONCURRENT_SESSION_FILTER" 
                         ref="concurrencyFilter" />
