@@ -345,11 +345,6 @@
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/latest/plugin/admin/templates/activated/{objectType}"/>
-                    <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean>
-                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/latest/plugin/admin/template/{templateId}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
