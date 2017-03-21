@@ -13,5 +13,6 @@
         <value>ROLE_CALLCENTER</value>
         <value>ROLE_ADMINISTRATOR</value>
         <value>ROLE_CATEGORY_ADMINISTRATOR</value>
+        <value>ROLE_CALENDAR_ADMINISTRATOR</value>
     </util:list>
 </beans>
