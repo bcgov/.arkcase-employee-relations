@@ -736,7 +736,51 @@
             </list>
         </property>
     </bean>
-
+	<bean id="acmOrganizationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+            </list>
+        </property>
+    </bean>
+	<bean id="acmOrganizationDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-details"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_INVESTIGATOR</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_CALLCENTER</value>
+                    <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+            </list>
+        </property>
+    </bean>
+	
     <!--Admin Plugin-->
     <bean id="acmAdminModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-admin-module"/>
