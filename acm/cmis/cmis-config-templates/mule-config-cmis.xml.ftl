@@ -12,7 +12,7 @@
         <spring:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
             <spring:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
             <spring:property name="location" value="file:${user.home}/.arkcase/acm/cmis/mule-config-${id}-cmis.properties"/>
-            <spring:property name="placeholderPrefix" value="${${id}."/>
+            <spring:property name="placeholderPrefix" value="$\{id}."/>
         </spring:bean>
 
         <!-- register this configuration -->
