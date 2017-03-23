@@ -13,6 +13,7 @@
                 <ref bean="acmPersonAssociationDeletePrivilege"/>
                 <ref bean="acmPersonListPrivilege"/>
                 <ref bean="acmPersonTypesPrivilege"/>
+                <ref bean="acmPersonModulePrivilege"/>
             </list>
         </property>
         <property name="urlPrivileges">
@@ -47,6 +48,11 @@
                     <property name="url" value="/api/{version}/plugin/person/types"/>
                     <property name="requiredPrivilege" ref="acmPersonTypesPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/people/views"/>
+                    <property name="requiredPrivilege" ref="acmPersonModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
@@ -77,6 +83,7 @@
                 <ref bean="acmOrganizationListPrivilege"/>
                 <ref bean="acmOrganizationDeletePrivilege"/>
                 <ref bean="acmOrganizationDetailsPrivilege"/>
+                <ref bean="acmOrganizationModulePrivilege"/>
             </list>
         </property>
         <property name="urlPrivileges">
@@ -84,12 +91,12 @@
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/organizations"/>
-                    <property name="requiredPrivilege" ref="acmPersonAssociationSavePrivilege"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationSavePrivilege"/>
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/organizations"/>
-                    <property name="requiredPrivilege" ref="acmPersonAssociationSavePrivilege"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationSavePrivilege"/>
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -105,6 +112,11 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/organizations/{organizationId}"/>
                     <property name="requiredPrivilege" ref="acmOrganizationDetailsPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/organizations/views"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationModulePrivilege"/>
                 </bean>
             </list>
         </property>
