@@ -52,6 +52,8 @@
                 <ref bean="tagNavigatorAction"/>
                 <ref bean="timeTrackingNavigatorAction"/>
                 <ref bean="costTrackingNavigatorAction"/>
+                <ref bean="personNavigatorAction"/>
+                <ref bean="organizationNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -234,6 +236,22 @@
         <property name="url" value="/plugin/tag"/>
         <property name="requiredPrivilege" value="acm-tag-module"/>
     </bean>
+	
+	<bean id="personNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="People"/>
+        <property name="actionResourceName" value="common:navigation.label.people" />
+        <property name="iconName" value="fa fa-people"/>
+        <property name="url" value="/plugin/person"/>
+        <property name="requiredPrivilege" value="acm-person-module"/>
+    </bean>
+	
+	<bean id="organizationNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Organizations"/>
+        <property name="actionResourceName" value="common:navigation.label.organizations" />
+        <property name="iconName" value="fa fa-organization"/>
+        <property name="url" value="/plugin/organization"/>
+        <property name="requiredPrivilege" value="acm-organization-module"/>
+    </bean>
     <!-- end of navigator tabs -->
 
     <!-- begin of objectTypes -->
@@ -289,13 +307,13 @@
             </map>
         </property>
     </bean>
-    <bean id="personType" class="com.armedia.acm.core.AcmObjectType">
+	<bean id="personType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="PERSON"/>
         <property name="description" value="Person"/>
-        <property name="iconName" value=""/>
+        <property name="iconName" value="i i-checkmark"/>
         <property name="url">
             <map>
-                <entry key="PERSON" value=""/>
+                <entry key="PERSON" value="/home.html#!/people/%d/main"/>
             </map>
         </property>
     </bean>
@@ -341,16 +359,17 @@
             </map>
         </property>
     </bean>
-    <bean id="organizationType" class="com.armedia.acm.core.AcmObjectType">
+	<bean id="organizationType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="ORGANIZATION"/>
         <property name="description" value="Organization"/>
-        <property name="iconName" value=""/>
+        <property name="iconName" value="i i-checkmark"/>
         <property name="url">
             <map>
-                <entry key="ORGANIZATION" value=""/>
+                <entry key="ORGANIZATION" value="/home.html#!/organizations/%d/main"/>
             </map>
         </property>
     </bean>
+
     <bean id="groupType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="GROUP"/>
         <property name="description" value="Group"/>
