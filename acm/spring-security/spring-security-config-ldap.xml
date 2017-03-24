@@ -20,7 +20,6 @@
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
@@ -38,7 +37,6 @@
             <intercept-url pattern="^/.*$" access="isAuthenticated()" />
             <http-basic/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
                     authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
@@ -55,7 +53,6 @@
             <intercept-url pattern="/**" access="isAuthenticated()"/>
             <http-basic/>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <custom-filter ref="corsFilter" after="PRE_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
                     login-page="/login"
