@@ -932,4 +932,45 @@
             </list>
         </property>
     </bean>
+    
+    <!--Category Management Plugin-->
+    <bean id="acmCategoryManagementPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-manage-categories"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCategoryManagementPrivilege??>
+                <#list acmCategoryManagementPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    
+    <!--Analytics Plugin-->
+    <bean id="acmReportModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-analytics-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmAnalyticsModulePrivilege?? >
+                <#list acmAnalyticsModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="analyticsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-analytics"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if analyticsPrivilege??>
+                <#list analyticsPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>

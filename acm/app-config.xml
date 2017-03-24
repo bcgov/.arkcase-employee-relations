@@ -54,6 +54,7 @@
                 <ref bean="timeTrackingNavigatorAction"/>
                 <ref bean="costTrackingNavigatorAction"/>
                 <ref bean="documentRepositoryNavigatorAction"/>
+                <ref bean="analyticsNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -252,6 +253,14 @@
         <property name="iconName" value="i i-folder"/>
         <property name="url" value="/plugin/documentrepository"/>
         <property name="requiredPrivilege" value="acm-document-repository-module"/>
+    </bean>
+
+    <bean id="analyticsNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Analytics"/>
+        <property name="actionResourceName" value="common:navigation.label.analytics" />
+        <property name="iconName" value="i i-stats"/>
+        <property name="url" value="/plugin/analytics"/>
+        <property name="requiredPrivilege" value="acm-analytics-module"/>
     </bean>
     <!-- end of navigator tabs -->
 
