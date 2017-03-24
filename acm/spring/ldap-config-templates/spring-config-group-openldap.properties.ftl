@@ -1,4 +1,4 @@
-openLdapAddGroupConfig.cn=${cn}
-openLdapAddGroupConfig.member=${member}
-openLdapAddGroupConfig.gidNumber=${gidNumber}
-openLdapAddGroupConfig.objectClass=top,groupOfNames,sortableGroupofnames
+openLdapAddGroupConfig.cn=${cn!"cn"}
+openLdapAddGroupConfig.member=${member!"member"}
+openLdapAddGroupConfig.gidNumber=${gidNumber!"gidNumber"}
+openLdapAddGroupConfig.objectClass=${objectClass!"top,groupOfNames,sortableGroupofnames"}
