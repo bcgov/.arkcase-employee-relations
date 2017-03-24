@@ -11,8 +11,8 @@
     <spring:beans>
         <spring:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
             <spring:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-            <spring:property name="location" value="file:${user.home}/.arkcase/acm/cmis/mule-config-${id}-cmis.properties"/>
-            <spring:property name="placeholderPrefix" value="${${id}."/>
+            <spring:property name="location" value="file:$\{user.home}/.arkcase/acm/cmis/mule-config-${id}-cmis.properties"/>
+            <spring:property name="placeholderPrefix" value="$\{id}."/>
         </spring:bean>
 
         <!-- register this configuration -->
@@ -21,8 +21,8 @@
             <spring:property name="targetMethod" value="registerCmisConfig"/>
             <spring:property name="arguments">
                 <spring:list>
-                    <beans:value>${r"${id}".cmis.id}</beans:value>
-                    <beans:value>${r"${id}".cmis.versioningState}</beans:value>
+                    <beans:value>$\{${id}.cmis.id}</beans:value>
+                    <beans:value>$\{${id}.cmis.versioningState}</beans:value>
                     <!-- put here additional parameters not used in <cmis:config/> section below -->
                 </spring:list>
             </spring:property>
@@ -31,24 +31,24 @@
 
     <cmis:config
             name="${id}"
-            baseUrl="${r"${id}".cmis.baseUrl}"
-            username="${r"${id}".cmis.username}"
-            password="${r"${id}".cmis.password}"
-            useAlfrescoExtension="${r"${id}".cmis.useAlfrescoExtension}"
-            endpoint="${r"${id}".cmis.endpoint}"
-            repositoryId="#{ "${r"${id}".cmis.repositoryId}" == "" ? null : "${r"${id}".cmis.repositoryId}" }">
+            baseUrl="$\{"${id}".cmis.baseUrl}"
+            username="$\{"${id}".cmis.username}"
+            password="$\{"${id}".cmis.password}"
+            useAlfrescoExtension="$\{"${id}".cmis.useAlfrescoExtension}"
+            endpoint="$\{"${id}".cmis.endpoint}"
+            repositoryId="$\{ "$\{"id".cmis.repositoryId}" == "" ? null : "$\{"id".cmis.repositoryId}" }">
         <!-- for Alfresco we don"t need a repository ID, so if the property is empty, use null instead... that is what
         the above expression does. Documentum does need a repository ID. -->
 
         <!-- somehow we can"t use a property for exhausted action. -->
         <cmis:connection-pooling-profile
-                maxActive="${r"${id}".cmis.maxActive}"
-                maxIdle="${r"${id}".cmis.maxIdle}"
+                maxActive="$\{"${id}".cmis.maxActive}"
+                maxIdle="$\{"${id}".cmis.maxIdle}"
                 exhaustedAction="WHEN_EXHAUSTED_GROW"
-                maxWait="${r"${id}".cmis.maxWait}"
-                minEvictionMillis="${r"${id}".cmis.minEvictionMillis}"
-                evictionCheckIntervalMillis="${r"${id}".cmis.evictionCheckIntervalMillis}"/>
-        <reconnect count="${r"${id}".cmis.reconnectCount}" frequency="${r"${id}".cmis.reconnectFrequency}"/>
+                maxWait="$\{"${id}".cmis.maxWait}"
+                minEvictionMillis="$\{"${id}".cmis.minEvictionMillis}"
+                evictionCheckIntervalMillis="$\{"${id}".cmis.evictionCheckIntervalMillis}"/>
+        <reconnect count="$\{"${id}".cmis.reconnectCount}" frequency="$\{"${id}".cmis.reconnectFrequency}"/>
 
     </cmis:config>
 </mule>
