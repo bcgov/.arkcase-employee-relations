@@ -948,7 +948,7 @@
     </bean>
     
     <!--Analytics Plugin-->
-    <bean id="acmReportModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmAnalyticsModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-analytics-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
