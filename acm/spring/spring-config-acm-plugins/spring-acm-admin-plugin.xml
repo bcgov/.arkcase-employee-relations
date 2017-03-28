@@ -386,6 +386,11 @@
                               value="/api/{version}/plugin/admin/cmisconfiguration/config/{cmisId}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/latest/plugin/admin/googleAnalytics/config.js"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
