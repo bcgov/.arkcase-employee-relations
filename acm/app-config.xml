@@ -60,6 +60,7 @@
                 <ref bean="caseFileType"/>
                 <ref bean="taskType"/>
                 <ref bean="documentType"/>
+                <ref bean="documentRepositoryType"/>
                 <ref bean="fileType"/>
                 <ref bean="personType"/>
                 <ref bean="personAssociationType"/>
@@ -264,6 +265,16 @@
         <property name="url">
             <map>
                 <entry key="TASK" value="/home.html#!/tasks/TASK/%d/main"/>
+            </map>
+        </property>
+    </bean>
+     <bean id="documentRepositoryType" class="com.armedia.acm.core.AcmObjectType">
+        <property name="name" value="DOC_REPO"/>
+        <property name="description" value="Document Repository"/>
+        <property name="iconName" value="i i-folder"/>
+        <property name="url">
+            <map>
+                <entry key="DOC_REPO" value="/home.html#!/document-repository/%d/main"/>
             </map>
         </property>
     </bean>
