@@ -13,7 +13,7 @@
         <property name="privilegeName" value="acm-global-allow"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                                <value>ROLE_ANALYST</value>
+                    <value>ROLE_ANALYST</value>
                     <value>ROLE_INVESTIGATOR</value>
                     <value>ROLE_ADMINISTRATOR</value>
                     <value>ROLE_CALLCENTER</value>
@@ -611,6 +611,16 @@
                     <value>ROLE_ADMINISTRATOR</value>
                     <value>ROLE_CALLCENTER</value>
                     <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+            </list>
+        </property>
+    </bean>
+
+    <!--ACM Document Repositories-->
+    <bean id="documentRepositoryManagerPrivilige" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="document-repository-manager"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_ADMINISTRATOR</value>
             </list>
         </property>
     </bean>
