@@ -973,4 +973,31 @@
             </list>
         </property>
     </bean>
+    
+    <!--Audit Analytics Plugin-->
+    <bean id="acmAnalyticsAuditModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-analytics-audit-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmAnalyticsAuditModulePrivilege?? >
+                <#list acmAnalyticsAuditModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="analyticsAuditPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-analytics-audit"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if analyticsAuditPrivilege??>
+                <#list analyticsAuditPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>
