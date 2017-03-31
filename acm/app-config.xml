@@ -55,6 +55,7 @@
                 <ref bean="costTrackingNavigatorAction"/>
                 <ref bean="documentRepositoryNavigatorAction"/>
                 <ref bean="analyticsNavigatorAction"/>
+                <ref bean="analyticsAuditNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -261,6 +262,14 @@
         <property name="iconName" value="i i-stats"/>
         <property name="url" value="/plugin/analytics"/>
         <property name="requiredPrivilege" value="acm-analytics-module"/>
+    </bean>
+
+    <bean id="analyticsAuditNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Audit Analytics"/>
+        <property name="actionResourceName" value="common:navigation.label.analytics-audit" />
+        <property name="iconName" value="i i-stats"/>
+        <property name="url" value="/plugin/analytics-audit"/>
+        <property name="requiredPrivilege" value="acm-analytics-audit-module"/>
     </bean>
     <!-- end of navigator tabs -->
 
