@@ -616,7 +616,7 @@
     </bean>
 
     <!--ACM Document Repositories-->
-    <bean id="documentRepositoryManagerPrivilige" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="documentRepositoryManagerPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="document-repository-manager"/>
         <property name="applicationRolesWithPrivilege">
             <list>
