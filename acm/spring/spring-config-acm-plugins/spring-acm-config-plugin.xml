@@ -17,12 +17,13 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/config"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>
+                </bean><!-- verified -->
+				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/config/{name}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
             </list>
         </property>
     </bean>

@@ -17,48 +17,56 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/tag"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="addNewTag" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/tag"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="associateTag" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/tag/{objectId}/{objectType}/{tagId}"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="listAllTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/tag"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="listAssociatedTagsByObjectTypeAndId"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/tag/{objectId}/{objectType}"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="removeTag" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/service/tag/{tagId}"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="removeTagAssociation" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/service/tag/{objectId}/{objectType}/{tagId}"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="updateTag" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/tag"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="tagViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/tags/views/"/>
                     <property name="requiredPrivilege" ref="acmTagModulePrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
             </list>
         </property>
     </bean>

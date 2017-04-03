@@ -19,22 +19,26 @@
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectLockPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="objectUnLockUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectUnLockPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="objectsLockedUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/objects/{objectType}/locked"/>
                     <property name="requiredPrivilege" ref="listLockedObjectsPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
                 <bean id="locksDetailsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/locks/{objectType}"/>
                     <property name="requiredPrivilege" ref="listLocksDetailsPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
+				
             </list>
         </property>
     </bean>

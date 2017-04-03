@@ -16,7 +16,7 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/signature/confirm/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="acmSignatureConfirmPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
             </list>
         </property>
     </bean>
@@ -34,7 +34,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/signature/find/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="acmSignatureFindPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
             </list>
         </property>
     </bean>

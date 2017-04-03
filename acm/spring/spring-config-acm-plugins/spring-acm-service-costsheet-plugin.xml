@@ -17,59 +17,60 @@
         </property>
         <property name="urlPrivileges">
             <list>
+			
                 <bean id="costsheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/costsheet"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
 
                 <bean id="costsheetWizardUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/costsheet/wizard"/>
                     <property name="requiredPrivilege" ref="costsheetCreatePrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
                 
                 <bean id="getCostsheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/costsheet/{id}"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
                 
                 <bean id="getCostsheetsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/costsheet"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
-                
+                </bean><!-- Verified -->
+             
                 <bean id="getCostsheetsForUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/service/costsheet/user/{userId}"/>
+                    <property name="url" value="/api/{version}/service/costsheet/user/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
+                </bean><!-- Verified. I added (:.+) -->
                 
                 <bean id="getCostsheetsForObjectIdAndTypeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/costsheet/objectId/{objectId}/objectType/{objectType}"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
                 
                 <bean id="saveCostsheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/costsheet"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
-
+                </bean><!-- Verified -->
+				
                 <bean id="getCostsheetByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/costsheet/{costsheetId}"/>
                     <property name="requiredPrivilege" ref="costsheetPrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
                 
                 <bean id="costsheetViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/cost-tracking/views/"/>
                     <property name="requiredPrivilege" ref="acmCostModulePrivilege"/>
-                </bean>
+                </bean><!-- Verified -->
             </list>
         </property>
     </bean>
