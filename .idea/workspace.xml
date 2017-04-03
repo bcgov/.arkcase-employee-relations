@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e6659a7-56c3-433b-9157-cf618d1a01cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/datasource.properties" afterPath="$PROJECT_DIR$/acm/datasource.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-admin-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-admin-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-audit-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-audit-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-case-file-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-case-file-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-complaint-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-complaint-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-config-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-config-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-correspondence-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-correspondence-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-dashboard-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-dashboard-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-data-access-control-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-data-access-control-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-ecm-file-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-ecm-file-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-electronic-signature-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-electronic-signature-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-event-service.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-event-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-milestone-service-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-milestone-service-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-ms-outlook-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-ms-outlook-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-note-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-note-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-notification-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-notification-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-object-lock-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-object-lock-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-particpants-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-particpants-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-person-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-person-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-profile-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-profile-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-report-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-report-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-search-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-search-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-service-costsheet-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-service-costsheet-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-service-timesheet-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-service-timesheet-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-subscription-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-subscription-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-tag-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-tag-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-task-plugin.xml" afterPath="$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-task-plugin.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +21,34 @@
         <entry file="file://$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-admin-plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-              <folding />
+              <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <marker date="1491240545728" expanded="true" signature="18287:18533" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="18622:18873" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="18962:19225" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="19314:19585" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="19674:19927" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="20016:20276" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="20365:20630" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="20719:20993" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="21082:21369" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="21458:21726" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="21815:22101" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="22190:22442" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="22531:22786" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="22875:23130" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="23219:23489" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="23578:23842" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="23931:24208" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="24297:24572" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="24679:24947" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="25036:25305" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="25394:25704" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="25793:26100" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="26189:26464" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="26553:26809" ph="..." />
+                <marker date="1491240545728" expanded="true" signature="26898:27154" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -645,12 +645,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491237084523</updated>
-      <workItem from="1491237087194" duration="1727000" />
+      <workItem from="1491237087194" duration="2323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1727000" />
+    <option name="totallyTimeSpent" value="2323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -700,8 +700,34 @@
     <entry file="file://$PROJECT_DIR$/acm/spring/spring-config-acm-plugins/spring-acm-admin-plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-          <folding />
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <marker date="1491240545728" expanded="true" signature="18287:18533" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="18622:18873" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="18962:19225" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="19314:19585" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="19674:19927" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="20016:20276" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="20365:20630" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="20719:20993" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="21082:21369" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="21458:21726" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="21815:22101" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="22190:22442" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="22531:22786" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="22875:23130" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="23219:23489" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="23578:23842" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="23931:24208" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="24297:24572" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="24679:24947" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="25036:25305" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="25394:25704" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="25793:26100" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="26189:26464" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="26553:26809" ph="..." />
+            <marker date="1491240545728" expanded="true" signature="26898:27154" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
