@@ -18,23 +18,27 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/audit"/>
                     <property name="requiredPrivilege" ref="auditPrivilege"/>
-                </bean>
+                </bean><!-- verified -->
+				
                 <bean id="auditPageUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/audit/page"/>
                     <property name="requiredPrivilege" ref="auditPrivilege"/>
-                </bean>
+                </bean><!-- verified -->
+				
                 <bean id="auditByObjectTypeAndObjectIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/audit/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="auditReadEventsForObjectPrivilege"/>
-                </bean>
+                </bean><!-- verified -->
+				
                 <bean id="postAuditEventAPIController"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/audit/event"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>
+                </bean><!-- verified -->
+				
                 <bean id="createGenericEventUrl"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
@@ -45,7 +49,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/audit/views/"/>
                     <property name="requiredPrivilege" ref="acmAuditModulePrivilege"/>
-                </bean>
+                </bean><!-- verified -->
             </list>
         </property>
     </bean>
