@@ -20,52 +20,52 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/notification"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="acmDeleteNotificationByIdUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/notification/{notificationId}"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="acmListNotificationsUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/notification/{user:.+}"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified. I added (:.+) -->
+                </bean>
 
                 <bean id="notificationUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/notification"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="acmPopUpNotificationsUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/notification/{user}/popup"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
                 
                 <bean id="notificationViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/notifications/views/"/>
                     <property name="requiredPrivilege" ref="acmNotificationModulePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="notificationViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="createEmailWithAttachmentsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/notification/email/withattachments"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="notificationViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="createEmailWithEmbeddedLinksUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/notification/email/withembeddedlinks"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
             </list>
         </property>
     </bean>

@@ -24,72 +24,72 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/complaint"/>
                     <property name="requiredPrivilege" ref="acmComplaintCreatePrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!-- create complaint wizard -->
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/complaint/wizard"/>
                     <property name="requiredPrivilege" ref="acmComplaintCreatePrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/complaint/forUser/{user:.+}"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied. I added :.+ to variable name -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!-- complaint navigator tab home page -->
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/complaint"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/complaint/{complaintId}"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!-- list of complaints -->
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/complaint/list/{timePeriod}"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/complaint/types"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/complaint/priorities"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!-- attach a file to the complaint -->
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/complaint/workflow"/>
                     <property name="requiredPrivilege" ref="acmComplaintCreatePrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!-- attach a file to the complaint -->
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/complaint/byId/{complaintId}"/>
                     <property name="requiredPrivilege" ref="acmComplaintListPrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
 				
                 <bean id="complaintViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/complaints/views/"/>
                     <property name="requiredPrivilege" ref="acmComplaintModulePrivilege"/>
-                </bean><!-- Verfied -->
+                </bean>
             </list>
         </property>
     </bean>

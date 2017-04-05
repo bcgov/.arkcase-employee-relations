@@ -17,19 +17,19 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/correspondence/listTemplates"/>
                     <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/admin/templates/activated/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/correspondence"/>
                     <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
             </list>
         </property>
     </bean>

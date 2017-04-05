@@ -13,13 +13,11 @@
         </property>
         <property name="urlPrivileges">
             <list>
-                
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="atGetTokenForAuthenticationUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/authenticationtoken"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
-
+                </bean>
 		   </list>
         </property>
     </bean>

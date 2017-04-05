@@ -15,149 +15,149 @@
         <property name="urlPrivileges">
             <list>
                 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/groups/get"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/get"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetSubGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/get/subgroups"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetTopLevelGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/get/toplevel"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetGroupMembersUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/get/members"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetGroupSupervisorsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/get/supervisor"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersCreateLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersCreateLdapSubgroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{parentGroupName:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersRemoveGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/remove"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersRemoveSupervisorsFromGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/members/remove"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersRemoveSupervisorFromGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/supervisor/remove/{applyToAll}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersSaveGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/save"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersSaveSubGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/save/{parentId}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersSaveMembersToGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/members/save"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersAddSupervisorsToGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/supervisor/save/{applyToAll}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersFindParticipantTypesForObjectTypeNameUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/participantTypesForObjectTypeName/{objectTypeName}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersFindUsersWithPrivilegeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/withPrivilege/{privilege}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetUsersInfoUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/info"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersGetUsersByGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/by-group/{group}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersIsEditingLdapUsersEnabledUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/editingEnabled"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersAddLdapUsersToGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/users"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersAddLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/users"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersEditLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap{directory:.+}/users/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
                 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersChangePasswordUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 		   </list>
         </property>
     </bean>

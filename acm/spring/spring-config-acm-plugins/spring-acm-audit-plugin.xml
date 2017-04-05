@@ -18,26 +18,26 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/audit"/>
                     <property name="requiredPrivilege" ref="auditPrivilege"/>
-                </bean><!-- verified -->
-				
+                </bean>
+                
                 <bean id="auditPageUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/audit/page"/>
                     <property name="requiredPrivilege" ref="auditPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="auditByObjectTypeAndObjectIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/audit/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="auditReadEventsForObjectPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="postAuditEventAPIController"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/audit/event"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="createGenericEventUrl"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -49,7 +49,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/audit/views/"/>
                     <property name="requiredPrivilege" ref="acmAuditModulePrivilege"/>
-                </bean><!-- verified -->
+                </bean>
             </list>
         </property>
     </bean>

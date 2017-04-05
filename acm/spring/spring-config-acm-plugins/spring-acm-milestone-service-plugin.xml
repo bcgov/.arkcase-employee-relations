@@ -17,7 +17,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/milestonebyname/{objectType}"/>
                     <property name="requiredPrivilege" ref="listMilestonesGroupedByDate"/>
-                </bean><!-- Verified -->
+                </bean>
             </list>
         </property>
     </bean>

@@ -75,7 +75,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/advancedSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <!-- NO URL FOR THIS BEAN && A duplicate. Double trouble *******************************************************************************
 				<bean id="getAvailableFiltersUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -90,16 +90,13 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/searchNotifications/advanced"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>-->
 				
-				
-				
-				<!-- THIS BEAN IS THE ONLY ONE LEFT IN THIS LIST THAT HAS NO COPY IN THE BOTTOM LIST -->
                 <bean id="searchViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/search/views/"/>
                     <property name="requiredPrivilege" ref="acmSearchModulePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
             </list>
         </property>
@@ -118,103 +115,103 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/search"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="quickSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/quickSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="advancedSearchAlternateUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/advanced/{objectType}"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="advancedSearchAllAlternateUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/advanced/{objectType}/all"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="ChildrenUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/children"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="objectTypeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/{objectType}"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="ComplaintsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/complaintsSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="CaseFilesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/caseFilesSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="CaseFilesByDueDateUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/caseFilesSearch/byTimeInterval"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 
                 <bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/complaintsSearch/byTimeInterval"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
-                <bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="mainNotFilteredFacetedSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/facetedSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
-				<bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+				<bean id="PersonSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/personSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
-				<bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+				<bean id="childrenAdvancedSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/children/advanced"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
-				<bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+				<bean id="usersSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/usersSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
-				<bean id="ComplaintsUrlByCreatedDate" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+				<bean id="suggestSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/suggest"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="advancedSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/search/advancedSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
 				
                 <bean id="getNotificationsAdvancedSearch" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/searchNotifications/advanced"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
-                </bean><!-- Verified & has identical copy on top list -->
+                </bean>
             </list>
         </property>
 

@@ -13,56 +13,54 @@
             </list>
         </property>
         <property name="urlPrivileges">
-            <list>
-                
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+            <list>                
+                <bean id="faGetApplicationRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/functionalaccess/roles"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetApplicationRolesToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/functionalaccess/rolestogroups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetTopLevelGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/groups/toplevel"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetGroupsByPrivilegeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/groups/{privilege}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetUsersByPrivilegeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/users/{privilege}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetUsersByPrivilegeAndGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/users/{privilege}/{group}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetUsersByPrivilegeAndGroupPlusCurrentAssigneeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/users/{privilege}/{group}/{currentAssignee}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
-                <bean id="adminUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faSaveApplicationRolesToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/functionalaccess/rolestogroups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
-                </bean><!-- Verified -->
-
+                </bean>
            </list>
         </property>
     </bean>

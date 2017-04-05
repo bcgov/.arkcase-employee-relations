@@ -21,37 +21,37 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/person"/>
                     <property name="requiredPrivilege" ref="acmPersonSavePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/person/find"/>
                     <property name="requiredPrivilege" ref="acmPersonFindPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/person/delete/{personId}"/>
                     <property name="requiredPrivilege" ref="acmPersonDeletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/personAssociation/delete/{personAssocId}"/>
                     <property name="requiredPrivilege" ref="acmPersonAssociationDeletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/person/list/{parentType}/{parentId}"/>
                     <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/person/types"/>
                     <property name="requiredPrivilege" ref="acmPersonTypesPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
             </list>
         </property>
@@ -71,7 +71,7 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/personAssociation"/>
                     <property name="requiredPrivilege" ref="acmPersonAssociationSavePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
             </list>
         </property>

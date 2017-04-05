@@ -18,50 +18,50 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/get"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!--create dashboard set config service-->
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/set/"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/widgets/get"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/widgets/rolesByWidget/all"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/widgets/set"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="preferredWidgets" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/widgets/preferred/{moduleName}"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="preferredWidgets" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/dashboard/widgets/preferred"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="dashboardViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/dashboard/views/"/>
                     <property name="requiredPrivilege" ref="acmDashboardModulePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
             </list>
         </property>
     </bean>

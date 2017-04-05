@@ -20,31 +20,31 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/timesheet"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="timesheetWizardUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/timesheet/wizard"/>
                     <property name="requiredPrivilege" ref="timesheetCreatePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="getTimesheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/timesheet/{id}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="getTimesheetsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/timesheet"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="getTimesheetsForUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/timesheet/user/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified. I added (:.+) -->
+                </bean>
 
                 <bean id="getTimesheetsForObjectIdAndTypeUrl"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -52,25 +52,25 @@
                     <property name="url"
                               value="/api/{version}/service/timesheet/objectId/{objectId}/objectType/{objectType}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="saveTimesheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/timesheet"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 
                 <bean id="getTimesheetByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/timesheet/{timesheetId}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="timesheetViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/time-tracking/views/"/>
                     <property name="requiredPrivilege" ref="acmTimeModulePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
             </list>
         </property>
