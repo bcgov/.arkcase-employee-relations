@@ -651,6 +651,19 @@
         </property>
     </bean>
 
+    <bean id="documentRepositoryModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-document-repository-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if documentRepositoryModulePrivilege??>
+                <#list documentRepositoryModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
     <!--Milestone Plugin-->
     <bean id="listMilestonesGroupedByDate" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-milestone-service"/>

@@ -35,6 +35,7 @@
                 <ref bean="createTaskAction"/>
                 <ref bean="createTimesheetAction"/>
                 <ref bean="createCostsheetAction"/>
+                <ref bean="createDocumentRepositoryAction"/>
             </list>
         </property>
         <property name="navigatorTabs">
@@ -52,6 +53,7 @@
                 <ref bean="tagNavigatorAction"/>
                 <ref bean="timeTrackingNavigatorAction"/>
                 <ref bean="costTrackingNavigatorAction"/>
+                <ref bean="documentRepositoryNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -126,6 +128,14 @@
         <property name="iconName" value="fa fa-money"/>
         <property name="url" value="/plugin/costsheet/wizard"/>
         <property name="requiredPrivilege" value="acm-costsheet-create"/>
+    </bean>
+
+    <bean id="createDocumentRepositoryAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="DocumentRepository"/>
+        <property name="actionResourceName" value="common:top-bar.button.document-repository" />
+        <property name="iconName" value="fa fa-folder"/>
+        <property name="url" value="/plugin/documentrepository"/>
+        <property name="requiredPrivilege" value="document-repository-manager"/>
     </bean>
 
 
@@ -234,6 +244,14 @@
         <property name="iconName" value="fa fa-tags"/>
         <property name="url" value="/plugin/tag"/>
         <property name="requiredPrivilege" value="acm-tag-module"/>
+    </bean>
+
+    <bean id="documentRepositoryNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Documents"/>
+        <property name="actionResourceName" value="common:navigation.label.documentRepository" />
+        <property name="iconName" value="i i-folder"/>
+        <property name="url" value="/plugin/documentrepository"/>
+        <property name="requiredPrivilege" value="acm-document-repository-module"/>
     </bean>
     <!-- end of navigator tabs -->
 
