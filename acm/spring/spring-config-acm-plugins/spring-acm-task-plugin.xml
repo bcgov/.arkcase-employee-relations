@@ -22,13 +22,13 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/save/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskCreatePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/saveReference"/>
                     <property name="requiredPrivilege" ref="acmTaskCreatePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -40,7 +40,7 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/task"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -52,87 +52,87 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/task/forUser/{user:.+}"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified. I added (:.+) -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property value="GET" name="httpMethod"/>
                     <property value="/api/{version}/plugin/task/list/{due}" name="url"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property value="GET" name="httpMethod"/>
                     <property value="/api/{version}/plugin/task/getListByDueDate/{due}" name="url"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/completeTask/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskCompletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/completeTask"/>
                     <property name="requiredPrivilege" ref="acmTaskCompletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/deleteTask/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskDeletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/adHocTask"/>
                     <property name="requiredPrivilege" ref="acmTaskCreatePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/task/byId/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/task/history/{id}/{adhoc}"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="claimTaskUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/claim/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskClaimPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="unclaimTaskUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/unclaim/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskClaimPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="deleteProcessInstanceUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
                               value="/api/{version}/plugin/task/deleteProcessInstance/{parentObjectId}/{processInstanceId}"/>
                     <property name="requiredPrivilege" ref="acmTaskDeletePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="sendDueTaskEmailNotificationUrl"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/task/task/sendDueTaskEmailNotification"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="taskViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/tasks/views/"/>
                     <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
             </list>
         </property>
     </bean>

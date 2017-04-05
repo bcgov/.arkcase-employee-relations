@@ -16,27 +16,27 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/participant/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="changeRole" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/service/participant/{participantId}/{participantType}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="removeParticipant" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url"
                               value="/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
                 <bean id="addParticipant" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url"
                               value="/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
-                </bean><!-- Verified -->
+                </bean>
 				
             </list>
         </property>

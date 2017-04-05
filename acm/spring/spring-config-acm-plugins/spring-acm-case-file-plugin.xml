@@ -21,99 +21,99 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/caseTypes"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="casefileLandingPage" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/casefile"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
 			    <bean id="getCaseUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/casefile/{caseId}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="getCaseMergeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/merge-casefiles"/>
                     <property name="requiredPrivilege" ref="saveCasePrivilege"/>
-                </bean><!-- verified. changed privilege to saveCasePrivilege -->
+                </bean>
 				
                 <bean id="getCasefileSplitUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/casefile/split/{parentCasefileId}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="caseById" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/byId/{id}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
 				<bean id="saveCaseUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/casefile"/>
                     <property name="requiredPrivilege" ref="saveCasePrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="getCasesByStatusUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casebystatus/{timePeriod}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="listAllCasesByUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/forUser/{user:.+}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="getCaseFileStatusSummaryUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casebystatus/summary"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="splitCaseFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/copyCaseFile"/>
                     <property name="requiredPrivilege" ref="splitCaseFilePrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 
                 <bean id="listQueuesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/queues"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="numberOfActiveCaseFilesByQueueGetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/number/by/queue"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 				
                 <bean id="nextPossibleQueues" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/nextPossibleQueues/{caseFileId}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
-                </bean><!-- verified -->
+                </bean>
 
                 <bean id="enqueueCaseFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/casefile/enqueue/{caseId}"/>
                     <property name="requiredPrivilege" ref="saveCasePrivilege"/>
-                </bean><!-- verified. changed privilege to saveCasePrivilege-->
+                </bean>
                 
                 <bean id="caseViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/cases/views/"/>
                     <property name="requiredPrivilege" ref="acmCaseModulePrivilege"/>
-                </bean><!-- verified -->
+                </bean>
             </list>
         </property>
     </bean>
