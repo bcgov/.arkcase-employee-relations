@@ -17,67 +17,63 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/init"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/init"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/init"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/init"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-				
-				
                 <bean id="frevvoFormDoGetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/get/{action}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/get/{action}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/get/{action}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/get/{action}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-				
-				
                 <bean id="frevvoFormDoSaveUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/save"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/save"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/save"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>				
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                </bean>             
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/forms/crud/acm/{formName}/save"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-		   </list>
+           </list>
         </property>
     </bean>
 </beans>

@@ -12,7 +12,7 @@
             </list>
         </property>
         <property name="urlPrivileges">
-            <list>			
+            <list>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <!--create dashboard get config service-->
                     <property name="httpMethod" value="GET"/>

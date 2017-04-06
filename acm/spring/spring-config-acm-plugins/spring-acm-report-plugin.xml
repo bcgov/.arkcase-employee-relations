@@ -20,43 +20,36 @@
                     <property name="url" value="/plugin/report"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="pentahoReportsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/get/pentaho"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="saveReportsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/report/save"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="reportsToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/reporttogroupsmap"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="saveReportsToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/report/reporttogroupsmap"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="getAuthorizedReportsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/authorized"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				
                 <bean id="reportViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/reports/views/"/>
                     <property name="requiredPrivilege" ref="acmReportModulePrivilege"/>
                 </bean>
-				
             </list>
         </property>
     </bean>
