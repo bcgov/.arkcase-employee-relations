@@ -18,6 +18,7 @@
                     <property name="url" value="/api/{version}/milestonebyname/{objectType}"/>
                     <property name="requiredPrivilege" ref="listMilestonesGroupedByDate"/>
                 </bean>
+
             </list>
         </property>
     </bean>
