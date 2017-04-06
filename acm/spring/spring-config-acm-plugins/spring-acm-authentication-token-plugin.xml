@@ -18,7 +18,7 @@
                     <property name="url" value="/api/{version}/authenticationtoken"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-		   </list>
+            </list>
         </property>
     </bean>
 </beans>
