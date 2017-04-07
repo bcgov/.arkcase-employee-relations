@@ -28,6 +28,11 @@
                     <property name="url" value="/api/{version}/plugin/people"/>
                     <property name="requiredPrivilege" ref="acmPersonSavePrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/people/{id}/images"/>
+                    <property name="requiredPrivilege" ref="acmPersonSavePrivilege"/>
+                </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/person/find"/>
@@ -36,6 +41,11 @@
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/people/{id}"/>
+                    <property name="requiredPrivilege" ref="acmPersonFindPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/people/{id}/images"/>
                     <property name="requiredPrivilege" ref="acmPersonFindPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -68,9 +78,6 @@
                     <property name="url" value="/modules/people/views"/>
                     <property name="requiredPrivilege" ref="acmPersonModulePrivilege"/>
                 </bean>
-				
-				
-				
             </list>
         </property>
     </bean>
