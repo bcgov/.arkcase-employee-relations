@@ -15,7 +15,7 @@
             <list>
                 <bean id="getSubscriptionsByUser" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/service/subscription/{userId}"/>
+                    <property name="url" value="/api/{version}/service/subscription/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="subscribePrivilege"/>
                 </bean>
                 <bean id="getSubscriptionByUserObjectIdAndType"
