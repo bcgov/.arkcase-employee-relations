@@ -429,14 +429,6 @@
       "userIsParticipantTypeAny":["assignee", "supervisor", "owning group", "co-owner", "approver", "collaborator"],
       "userRolesAny": [],
       "userRolesAll": []
-    },
-     {
-      "actionName": "createDocumentRepository",
-      "objectType": "",
-      "objectProperties": {},
-      "userIsParticipantTypeAny": [],
-      "userRolesAny": ["ROLE_ADMINISTRATOR"],
-      "userRolesAll": ["ROLE_ADMINISTRATOR"]
     }
   ]
 }
