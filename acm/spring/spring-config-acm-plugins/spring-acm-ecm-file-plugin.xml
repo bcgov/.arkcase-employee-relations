@@ -13,23 +13,77 @@
         </property>
         <property name="urlPrivileges">
             <list>
-                <bean id="alfrescoDownloadUrlPrivilege"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/ecm/download"/>
-                    <property name="requiredPrivilege" ref="filePrivilege"/>
-                </bean>
-                <bean id="documentUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/plugin/document/{fileId}"/>
-                    <property name="requiredPrivilege" ref="filePrivilege"/>
-                </bean>
                 <bean id="folderListUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
-                <bean id="containerListUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="copyFolderUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/service/ecm/{ecmFileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="downloadFileByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/ecm/download"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/counts/{objectType}/{objectId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="getEcmFileByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="getTotalPageCountUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/totalpagecount/{parentObjectType}/{parentObjectId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="moveFolderUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/move/{folderToMoveId}/{dstFolderId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/{objectId}/rename"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="replaceFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/replace/{fileToBeReplacedId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="setFileActiveVersionUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="bulkUpdateFileTypeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/bulk/type/{fileType}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="updateSecurityFieldUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/{fileId}/security-field/{securityFieldValue}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/plugin/document/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="getFolderDocumentCountListUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/ecm/container/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
@@ -49,7 +103,7 @@
                     <property name="url" value="/api/{version}/service/ecm/folder/{objectId}/{newName}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
-                <bean id="renameFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="renameFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/ecm/file/{objectId}/{newName}/{extension}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
@@ -59,7 +113,7 @@
                     <property name="url" value="/api/{version}/service/ecm/id/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
-                <bean id="moveFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="moveFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
                               value="/api/{version}/service/ecm/moveToAnotherContainer/{targetObjectType}/{targetObjectId}"/>
@@ -69,11 +123,6 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
                               value="/api/{version}/service/ecm/copyToAnotherContainer/{targetObjectType}/{targetObjectId}"/>
-                    <property name="requiredPrivilege" ref="filePrivilege"/>
-                </bean>
-                <bean id="replaceFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/service/ecm/replace"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
                 <bean id="deleteFolder" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -109,6 +158,11 @@
                 <bean id="documentDetailsViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/document-details/views/"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="viewFileByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/plugin/document/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>
