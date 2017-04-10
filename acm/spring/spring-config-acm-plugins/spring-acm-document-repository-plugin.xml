@@ -16,7 +16,7 @@
                  <bean id="saveDocumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/documentrepository"/>
-                    <property name="requiredPrivilege" ref="documentRepositoryManagerPrivilege"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
                 </bean>
                   <bean id="documentRepositoryViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
