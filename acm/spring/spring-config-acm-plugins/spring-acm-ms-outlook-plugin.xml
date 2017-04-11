@@ -47,11 +47,6 @@
                     <property name="url" value="/api/{version}/plugin/outlook/contacts"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-                <bean id="emailWithAttachmentsUrlPost" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/plugin/outlook/email/withattachments"/>
-                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>
             </list>
         </property>
     </bean>

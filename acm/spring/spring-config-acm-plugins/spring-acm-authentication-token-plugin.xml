@@ -3,24 +3,22 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
-
-    <bean id="milestonePluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
-        <property name="pluginName" value="Milestone Plugin"/>
+    <bean id="authenticationTokenPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges"
+          depends-on="acmGlobalAllowPrivilege">
+        <property name="pluginName" value="Authentication Token Plugin"/>
         <property name="privileges">
             <list>
-                <ref bean="listMilestonesGroupedByDate"/>
+                <ref bean="acmGlobalAllowPrivilege"/>
             </list>
         </property>
         <property name="urlPrivileges">
             <list>
-                <bean id="listMilestonesUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="atGetTokenForAuthenticationUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/milestonebyname/{objectType}"/>
-                    <property name="requiredPrivilege" ref="listMilestonesGroupedByDate"/>
+                    <property name="url" value="/api/{version}/authenticationtoken"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-
             </list>
         </property>
     </bean>
-
 </beans>
