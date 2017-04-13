@@ -165,6 +165,11 @@
                     <property name="url" value="/plugin/document/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+				<bean id="updateFileMetadata" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/metadata/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
