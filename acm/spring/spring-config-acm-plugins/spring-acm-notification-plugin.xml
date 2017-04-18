@@ -32,7 +32,7 @@
                 <bean id="acmListNotificationsUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/notification/{user}"/>
+                    <property name="url" value="/api/{version}/plugin/notification/{user:.+}"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
                 </bean>
 
@@ -42,13 +42,6 @@
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
                 </bean>
 
-                <bean id="acmEmailNotificationUrlPrivilege"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/service/notification/email"/>
-                    <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
-                </bean>
-                
                 <bean id="acmPopUpNotificationsUrlPrivilege"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -60,6 +53,16 @@
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/notifications/views/"/>
                     <property name="requiredPrivilege" ref="acmNotificationModulePrivilege"/>
+                </bean>
+                <bean id="createEmailWithAttachmentsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/notification/email/withattachments"/>
+                    <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
+                </bean>
+                <bean id="createEmailWithEmbeddedLinksUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/notification/email/withembeddedlinks"/>
+                    <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
                 </bean>
             </list>
         </property>

@@ -42,7 +42,7 @@
 
                 <bean id="getTimesheetsForUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/service/timesheet/user/{userId}"/>
+                    <property name="url" value="/api/{version}/service/timesheet/user/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
                 </bean>
 
