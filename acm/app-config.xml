@@ -257,7 +257,7 @@
 
     <bean id="analyticsNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Analytics"/>
-        <property name="actionResourceName" value="common:navigation.label.analytics" />
+        <property name="actionResourceName" value="common:navigation.label.analytics"/>
         <property name="iconName" value="i i-stats"/>
         <property name="url" value="/plugin/analytics"/>
         <property name="requiredPrivilege" value="acm-analytics-module"/>
