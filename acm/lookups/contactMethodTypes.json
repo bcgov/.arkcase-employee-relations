@@ -1,38 +1,59 @@
-[{
+[	{
 		"type": "phone",
 		"name": "Phone",
 		"subTypes":
-		[{
+		[	{
 				"type": "Home",
 				"name": "Home"
-			}, {
-				"type": "Bussiness",
-				"name": "Bussiness"
+			},
+			{
+				"type": "Work",
+				"name": "Work"
+			}, 
+			{
+				"type": "Mobile",
+				"name": "Mobile"
 			}
 		]
-	}, {
+	}, 
+	{
 
 		"type": "email",
 		"name": "Email",
 		"subTypes":
-		[{
+		[	{
 				"type": "Personal",
 				"name": "Personal"
-			}, {
+			}, 
+			{
 				"type": "Bussiness",
 				"name": "Bussiness"
 			}
 		]
-	}, {
+	}, 
+	{
 		"type": "url",
 		"name": "Url",
 		"subTypes":
-		[{
+		[	{
+				"type": "Web Site",
+				"name": "Web Site"
+			},
+			{
 				"type": "Facebook",
 				"name": "Facebook"
-			}, {
+			},
+			{
+				"type": "LinkedIn",
+				"name": "LinkedIn"
+			},
+			{
 				"type": "Twitter",
 				"name": "Twitter"
+			},
+			{
+				"type": "Other",
+				"name": "Other"
 			}
 		]
 	}
