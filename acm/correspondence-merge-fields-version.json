@@ -1,0 +1,13 @@
+[ {
+  "mergingVersion" : "1.0",
+  "mergingActiveVersion" : true,
+  "mergingType" : "CASE_FILE",
+  "modifier" : "System User",
+  "modified" : 1492701382202
+}, {
+  "mergingVersion" : "1.0",
+  "mergingActiveVersion" : true,
+  "mergingType" : "COMPLAINT",
+  "modifier" : "System User",
+  "modified" : 1492701382202
+} ]
