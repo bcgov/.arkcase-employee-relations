@@ -10,7 +10,6 @@ acm/notificationLastBatchUpdate.properties
 acm/datasource.properties.oracle
 acm/caseFileSolrLastMod.properties
 acm/complaintSolrLastMod.properties
-acm/correspondence-merge-fields*.json
 custom
 tmp
 acm/resources/resources
