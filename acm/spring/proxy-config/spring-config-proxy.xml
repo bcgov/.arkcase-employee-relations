@@ -60,8 +60,28 @@
                 <prop key="responseUrlMatchers">^.*$</prop>
                 <!-- given pairs for replacement pattern1:replacement1,pattern2:replacement2-->
                 <prop key="responseContentRewritePairs">/frevvo/:/arkcase/frevvo/,%2Ffrevvo%2F:%2Farkcase%2Ffrevvo%2F</prop>
-                <!-- comma delimited content types which need to be skip for processing-->
-                <prop key="skipResponseContentTypes">application/x-font-ttf, application/x-font-woff</prop>
+            </props>
+        </property>
+    </bean>
+	
+	<bean id="/solr/**" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+        <property name="servletClass" value="com.armedia.acm.proxy.http.ProxyServlet"/>
+        <property name="servletName" value="solr"/>
+        <property name="initParameters">
+            <props>
+                <!-- TODO: parameterize the URLs -->
+                <prop key="targetUri">https://acm-arkcase</prop>
+                <prop key="http.protocol.handle-redirects">true</prop>
+                <!-- resource names regex patterns separated with comma "," if multiple.
+                Will be processed and override urls inside the response-->
+                <prop key="responseUrlMatchers">^.*$</prop>
+				<!-- resource names regex patterns separated with comma "," if multiple.
+                Will be processed and override urls inside the response-->
+                <prop key="skipResponseUrlMatchers">/solr/acmAdvancedSearch/select$, /solr/acmQuickSearch/select$, .*ttf$, .*woff$</prop>
+				<!-- comma delimited content types which need to be skip for processing-->
+                <prop key="skipResponseContentTypes">font/fontawesome-webfont-(woff|ttf).*$</prop>
+                <!-- given pairs for replacement pattern1:replacement1,pattern2:replacement2-->
+                <prop key="responseContentRewritePairs">/solr/banana-release/:/arkcase/solr/banana-release/, /solr/:/arkcase/solr/</prop>
             </props>
         </property>
     </bean>
