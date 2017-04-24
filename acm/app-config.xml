@@ -257,7 +257,7 @@
     </bean>
 
     <bean id="analyticsNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
-        <property name="actionName" value="Analytics"/>
+        <property name="actionName" value="Data Analytics"/>
         <property name="actionResourceName" value="common:navigation.label.analytics"/>
         <property name="iconName" value="i i-stats"/>
         <property name="url" value="/plugin/analytics"/>
@@ -265,7 +265,7 @@
     </bean>
 
     <bean id="analyticsAuditNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
-        <property name="actionName" value="Audit Analytics"/>
+        <property name="actionName" value="Log Analytics"/>
         <property name="actionResourceName" value="common:navigation.label.analytics-audit" />
         <property name="iconName" value="i i-stats"/>
         <property name="url" value="/plugin/analytics-audit"/>
