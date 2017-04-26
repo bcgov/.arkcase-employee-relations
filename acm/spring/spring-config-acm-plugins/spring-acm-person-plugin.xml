@@ -78,6 +78,16 @@
                     <property name="url" value="/modules/people/views"/>
                     <property name="requiredPrivilege" ref="acmPersonModulePrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/people/{id}/cases"/>
+                    <property name="requiredPrivilege" ref="acmPersonFindPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/people/{id}/complaints"/>
+                    <property name="requiredPrivilege" ref="acmPersonFindPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
