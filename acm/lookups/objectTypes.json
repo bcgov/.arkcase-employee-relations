@@ -26,7 +26,14 @@
   "iconName": "i i-checkmark",
   "state": "tasks.main",
   "url": "#!/tasks/ADHOC/:id/main"
-}, {
+},{
+  "type": "DOC_REPO",
+  "key": "DOC_REPO",
+  "description": "Document Repository",
+  "iconName": "i i-folder",
+  "state": "document-repository.main",
+  "url": "#!/document-repository/:id/main"
+  }, {
   "type": "DOCUMENT",
   "key": "DOCUMENT",
   "description": "Document",
@@ -39,6 +46,7 @@
   "description": "File",
   "iconName": "",
   "url": "api/latest/plugin/ecm/download?ecmFileId=:id",
+  "viewerUrl":"#!/viewer/:id/:containerId/:containerType/:name/:selectedIds",
   "target": "_blank"
 }, {
   "type": "PERSON",

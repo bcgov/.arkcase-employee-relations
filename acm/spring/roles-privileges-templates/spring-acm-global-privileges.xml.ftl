@@ -637,6 +637,33 @@
         </property>
     </bean>
 
+    <!--ACM Document Repositories-->
+    <bean id="documentRepositoryManagerPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="document-repository-manager"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if documentRepositoryManagerPrivilege??>
+                <#list documentRepositoryManagerPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="documentRepositoryModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-document-repository-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if documentRepositoryModulePrivilege??>
+                <#list documentRepositoryModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
     <!--Milestone Plugin-->
     <bean id="listMilestonesGroupedByDate" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-milestone-service"/>
@@ -902,6 +929,20 @@
                         <value>${role}</value>
                     </#list>
                 </#if>
+            </list>
+        </property>
+    </bean>
+    
+    <!--Category Management Plugin-->
+    <bean id="acmCategoryManagementPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-manage-categories"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCategoryManagementPrivilege??>
+                <#list acmCategoryManagementPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
             </list>
         </property>
     </bean>
