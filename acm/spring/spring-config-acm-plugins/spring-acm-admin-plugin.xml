@@ -410,6 +410,11 @@
                     <property name="url" value="/api/{version}/plugin/admin/email/configuration"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/admin/email/configuration/validate"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
