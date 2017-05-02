@@ -16,6 +16,16 @@
 			}
 		]
 	}, 
+		{
+		"type": "fax",
+		"name": "fax",
+		"subTypes":
+		[	{
+				"type": "Fax",
+				"name": "Fax"
+			}
+		]
+	}, 
 	{
 
 		"type": "email",
