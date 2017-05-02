@@ -932,4 +932,18 @@
             </list>
         </property>
     </bean>
+    
+    <!--Category Management Plugin-->
+    <bean id="acmCategoryManagementPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-manage-categories"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCategoryManagementPrivilege??>
+                <#list acmCategoryManagementPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>

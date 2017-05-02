@@ -12,40 +12,56 @@
                     SELECT
                         cf.caseNumber,
                         cf.title,
-                        CURRENT_DATE,
-                        TRIM(CONCAT(
-                            COALESCE(p.givenName, ''),
-                            ' ',
-                            CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
-                            COALESCE(p.familyName, '')
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(addr.streetAddress, ''),
-                            CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
-                            CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
-                            CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
-                            CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
-                            CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(orgs.organizationType, ''),
-                            CASE COALESCE(orgs.organizationValue, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', orgs.organizationValue) END
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(contacts.type, ''),
-                            CASE COALESCE(contacts.value, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', contacts.value) END
-                        )),
-                        au.fullName
+                        cf.caseType,
+                        cf.status,
+                        cf.details,
+                        cf.incidentDate,
+                        cf.created,
+                        au.fullName,
+                        cf.modified,
+                        aum.fullName,
+                        cf.closed,
+                        cf.disposition,
+                        cf.priority,
+                        cf.dueDate,
+                        cf.courtroomName,
+                        cf.nextCourtDate,
+                        cf.responsibleOrganization,
+                        COALESCE(p.title, ''),
+                        COALESCE(p.givenName, ''),
+                        COALESCE(p.middleName, ''),
+                        COALESCE(p.familyName, ''),
+                        COALESCE(p.hairColor, ''),
+                        COALESCE(p.eyeColor, ''),
+                        p.heightInInches,
+                        p.weightInPounds,
+                        p.dateOfBirth,
+                        COALESCE(p.placeOfBirth, ''),
+                        p.dateMarried,
+                        COALESCE(addr.streetAddress, ''),
+                        COALESCE(addr.streetAddress2, ''),
+                        COALESCE(addr.city, ''),
+                        COALESCE(addr.state, ''),
+                        COALESCE(addr.zip, ''),
+                        COALESCE(addr.country, ''),
+                        COALESCE(orgs.organizationType, ''),
+                        COALESCE(orgs.organizationValue, ''),
+                        COALESCE(contacts.type, ''),
+                        COALESCE(contacts.value, ''),
+                        COALESCE(aliases.aliasType, ''),
+                        COALESCE(aliases.aliasValue, ''),
+                        CURRENT_DATE
                     FROM
-                        CaseFile cf     
-                    JOIN AcmUser au
+                        CaseFile cf
                     JOIN PersonAssociation pa
                     JOIN pa.person p
                     LEFT JOIN p.addresses addr
                     LEFT JOIN p.organizations orgs
                     LEFT JOIN p.contactMethods contacts
+                    LEFT JOIN p.personAliases aliases
+                    LEFT JOIN AcmUser au ON cf.creator = au.userId
+                    LEFT JOIN AcmUser aum ON cf.modifier = aum.userId
                     WHERE cf.id = ?1
-                    AND cf.creator = au.userId
                     AND cf.id = pa.parentId
                     AND pa.parentType='CASE_FILE'
                     AND pa.personType = "Initiator"
@@ -56,12 +72,45 @@
             <list>
                 <value>caseNumber</value>
                 <value>caseTitle</value>
+                <value>caseType</value>
+                <value>caseStatus</value>
+                <value>caseDetails</value>
+                <value>caseIncidentDate</value>
+                <value>caseCreatedDate</value>
+                <value>caseCreator</value>
+                <value>caseModifiedDate</value>
+                <value>caseModifier</value>
+                <value>caseClosedDate</value>
+                <value>caseDisposition</value>
+                <value>casePriority</value>
+                <value>caseDueDate</value>
+                <value>caseCourtRoomName</value>
+                <value>caseNextCourtDate</value>
+                <value>caseResponsibleOrganization</value>
+                <value>initiatorTitle</value>
+                <value>initiatorGivenName</value>
+                <value>initiatorMiddleName</value>
+                <value>initiatorFamilyName</value>
+                <value>initiatorHairColor</value>
+                <value>initiatorEyeColor</value>
+                <value>initiatorHeightInInches</value>
+                <value>initiatorWeightInPounds</value>
+                <value>initiatorDateOfBirth</value>
+                <value>initiatorPlaceOfBirth</value>
+                <value>initiatorDateMarried</value>
+                <value>initiatorStreetAddress</value>
+                <value>initiatorStreetAddress2</value>
+                <value>initiatorCity</value>
+                <value>initiatorState</value>
+                <value>initiatorZipCode</value>
+                <value>initiatorCountry</value>
+                <value>initiatorOrganizationType</value>
+                <value>initiatorOrganizationValue</value>
+                <value>initiatorContactType</value>
+                <value>initiatorContactValue</value>
+                <value>initiatorAliasType</value>
+                <value>initiatorAliasValue</value>
                 <value>currentDate</value>
-                <value>initiatorName</value>
-                <value>initiatorAddress</value>
-                <value>initiatorOrganization</value>
-                <value>initiatorContact</value>
-                <value>userFullName</value>
             </list>
         </property>
     </bean>
@@ -76,40 +125,55 @@
                     SELECT
                         cm.complaintNumber,
                         cm.complaintTitle,
-                        CURRENT_DATE,
-                        TRIM(CONCAT(
-                            COALESCE(p.givenName, ''),
-                            ' ',
-                            CASE COALESCE(p.middleName, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(p.middleName, ' ') END,
-                            COALESCE(p.familyName, '')
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(addr.streetAddress, ''),
-                            CASE COALESCE(addr.streetAddress2, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.streetAddress2) END,
-                            CASE COALESCE(addr.city, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.city) END,
-                            CASE COALESCE(addr.state, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', addr.state) END,
-                            CASE COALESCE(addr.zip, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(' ', addr.zip) END,
-                            CASE COALESCE(addr.country, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT('  ', addr.country) END
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(orgs.organizationType, ''),
-                            CASE COALESCE(orgs.organizationValue, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', orgs.organizationValue) END
-                        )),
-                        TRIM(',' FROM CONCAT(
-                            COALESCE(contacts.type, ''),
-                            CASE COALESCE(contacts.value, 'NULL') WHEN 'NULL' THEN '' ELSE CONCAT(', ', contacts.value) END
-                        )),
-                        au.fullName
+                        cm.complaintType,
+                        cm.status,
+                        cm.details,
+                        cm.incidentDate,
+                        cm.created,
+                        au.fullName,
+                        cm.modified,
+                        aum.fullName,
+                        d.closeDate,
+                        COALESCE(d.dispositionType, ''),
+                        COALESCE(d.referExternalOrganizationName, ''),
+                        COALESCE(d.referExternalContactPersonName, ''),
+                        cm.dueDate,
+                        COALESCE(p.title, ''),
+                        COALESCE(p.givenName, ''),
+                        COALESCE(p.middleName, ''),
+                        COALESCE(p.familyName, ''),
+                        COALESCE(p.hairColor, ''),
+                        COALESCE(p.eyeColor, ''),
+                        p.heightInInches,
+                        p.weightInPounds,
+                        p.dateOfBirth,
+                        COALESCE(p.placeOfBirth, ''),
+                        p.dateMarried,
+                        COALESCE(addr.streetAddress, ''),
+                        COALESCE(addr.streetAddress2, ''),
+                        COALESCE(addr.city, ''),
+                        COALESCE(addr.state, ''),
+                        COALESCE(addr.zip, ''),
+                        COALESCE(addr.country, ''),
+                        COALESCE(orgs.organizationType, ''),
+                        COALESCE(orgs.organizationValue, ''),
+                        COALESCE(contacts.type, ''),
+                        COALESCE(contacts.value, ''),
+                        COALESCE(aliases.aliasType, ''),
+                        COALESCE(aliases.aliasValue, ''),
+                        CURRENT_DATE
                     FROM
-                        Complaint cm     
-                    JOIN AcmUser au
+                        Complaint cm
                     JOIN PersonAssociation pa
                     JOIN pa.person p
                     LEFT JOIN p.addresses addr
                     LEFT JOIN p.organizations orgs
                     LEFT JOIN p.contactMethods contacts
+                    LEFT JOIN p.personAliases aliases
+                    LEFT JOIN AcmUser au ON cm.creator = au.userId
+                    LEFT JOIN AcmUser aum ON cm.modifier = aum.userId
+                    LEFT JOIN Disposition d ON cm.complaintId = d.id
                     WHERE cm.complaintId = ?1
-                    AND cm.creator = au.userId
                     AND cm.complaintId = pa.parentId
                     AND pa.parentType='COMPLAINT'
                     AND pa.personType = "Initiator"
@@ -120,12 +184,43 @@
             <list>
                 <value>complaintNumber</value>
                 <value>complaintTitle</value>
+                <value>complaintType</value>
+                <value>complaintStatus</value>
+                <value>complaintDetails</value>
+                <value>complaintIncidentDate</value>
+                <value>complaintCreatedDate</value>
+                <value>complaintCreator</value>
+                <value>complaintModifiedDate</value>
+                <value>complaintModifier</value>
+                <value>complaintCloseDate</value>
+                <value>complaintDispositionType</value>
+                <value>complaintReferExternalOrganizationName</value>
+                <value>complaintReferExternalContactPersonName</value>
+                <value>complaintDueDate</value>
+                <value>initiatorTitle</value>
+                <value>initiatorGivenName</value>
+                <value>initiatorMiddleName</value>
+                <value>initiatorFamilyName</value>
+                <value>initiatorHairColor</value>
+                <value>initiatorEyeColor</value>
+                <value>initiatorHeightInInches</value>
+                <value>initiatorWeightInPounds</value>
+                <value>initiatorDateOfBirth</value>
+                <value>initiatorPlaceOfBirth</value>
+                <value>initiatorDateMarried</value>
+                <value>initiatorStreetAddress</value>
+                <value>initiatorStreetAddress2</value>
+                <value>initiatorCity</value>
+                <value>initiatorState</value>
+                <value>initiatorZipCode</value>
+                <value>initiatorCountry</value>
+                <value>initiatorOrganizationType</value>
+                <value>initiatorOrganizationValue</value>
+                <value>initiatorContactType</value>
+                <value>initiatorContactValue</value>
+                <value>initiatorAliasType</value>
+                <value>initiatorAliasValue</value>
                 <value>currentDate</value>
-                <value>initiatorName</value>
-                <value>initiatorAddress</value>
-                <value>initiatorOrganization</value>
-                <value>initiatorContact</value>
-                <value>userFullName</value>
             </list>
         </property>
     </bean> 
