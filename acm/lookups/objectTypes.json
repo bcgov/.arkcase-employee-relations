@@ -46,6 +46,7 @@
   "description": "File",
   "iconName": "",
   "url": "api/latest/plugin/ecm/download?ecmFileId=:id",
+  "viewerUrl":"#!/viewer/:id/:containerId/:containerType/:name/:selectedIds",
   "target": "_blank"
 }, {
   "type": "PERSON",

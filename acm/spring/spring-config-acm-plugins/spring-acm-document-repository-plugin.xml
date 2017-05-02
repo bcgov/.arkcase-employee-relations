@@ -16,7 +16,7 @@
                  <bean id="saveDocumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/documentrepository"/>
-                    <property name="requiredPrivilege" ref="documentRepositoryManagerPrivilege"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
                 </bean>
                   <bean id="documentRepositoryViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -25,6 +25,11 @@
                 </bean>
                 <bean id="findDcumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+                <bean id="deleteDcumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
                     <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
                 </bean>
