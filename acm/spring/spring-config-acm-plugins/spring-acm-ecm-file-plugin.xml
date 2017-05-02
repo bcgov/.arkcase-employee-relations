@@ -130,6 +130,11 @@
                     <property name="url" value="/api/{version}/service/ecm/folder/{folderId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+                <bean id="getDeleteFolderInfo" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/{folderId}/count"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
                 <bean id="listSubFolder" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/{objectType}/{objectId}/{folderId}"/>
@@ -163,6 +168,11 @@
                 <bean id="viewFileByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/plugin/document/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+				<bean id="updateFileMetadata" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/metadata/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>

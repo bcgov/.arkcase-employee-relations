@@ -435,8 +435,18 @@
       "objectType": "",
       "objectProperties": {},
       "userIsParticipantTypeAny": [],
-      "userRolesAny": ["ROLE_ADMINISTRATOR"],
-      "userRolesAll": ["ROLE_ADMINISTRATOR"]
-    }
+      "userRolesAny": [ 
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+        ],
+        "userRolesAll": []
+    } 
   ]
 }
