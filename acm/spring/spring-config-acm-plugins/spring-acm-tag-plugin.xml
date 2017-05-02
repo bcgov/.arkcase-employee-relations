@@ -25,7 +25,7 @@
                 </bean>
                 <bean id="associateTag" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
-                    <property name="url" value="/api/{version}/service/tag/{objectId}/{objectType}/{tagId}"/>
+                    <property name="url" value="/api/{version}/service/tag/{objectId}/{objectType}/{objectTitle}/{tagId}"/>
                     <property name="requiredPrivilege" ref="tagPrivilege"/>
                 </bean>
                 <bean id="listAllTags" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">

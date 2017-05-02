@@ -33,5 +33,6 @@ keytool -importkeystore -srckeystore keystore.p12 -srcstoretype PKCS12 -destkeys
 The **_trusstore_** file should contain all self signed certificates that are used in the communication between Arkcase and other connected systems. These include the Root CA certificate used to generate the server certificate, the Root CA certificate for the LDAP server (when LDAP profile is used), the Root CA certificate for the ADFS server (when SAML profile is used). To create this file having the _ca-chain.cert.pem_ and _ldap.cert.pem_ files, use the following commands (note that the appropriate passwords will have to be set in the settings file above):
 ```
 keytool -import -trustcacerts -alias arkcase -keystore truststore -file ca-chain.cert.pem
+keytool -import -trustcacerts -alias arkcaseIntermediate -keystore truststore -file intermediate.cert.pem
 keytool -import -trustcacerts -alias ldap -keystore truststore -file ldap.cert.pem
 ```
