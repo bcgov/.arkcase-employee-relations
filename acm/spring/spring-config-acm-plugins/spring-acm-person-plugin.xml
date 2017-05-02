@@ -145,6 +145,16 @@
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/organizations/{organizationId}/cases"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/organizations/{organizationId}/complaints"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/organizations/{organizationId}"/>
                     <property name="requiredPrivilege" ref="acmOrganizationDetailsPrivilege"/>
                 </bean>
