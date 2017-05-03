@@ -166,4 +166,29 @@
             </list>
         </property>
     </bean>
+	
+	    <bean id="organizationAssociationPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="OrganizationAssocaition Plugin"/>
+        <property name="privileges">
+            <list>
+				<ref bean="acmOrganizationAssociationDeletePrivilege"/>
+                <ref bean="acmOrganizationAssociationSavePrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/organizationAssociation"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationAssociationSavePrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/organizationAssociation/delete/{organizationAssocId}"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationAssociationDeletePrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+	
 </beans>
