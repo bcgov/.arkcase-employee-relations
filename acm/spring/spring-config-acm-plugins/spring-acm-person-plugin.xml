@@ -80,17 +80,7 @@
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/people/{id}/cases"/>
-                    <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
-                </bean>
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/people/{id}/complaints"/>
-                    <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
-                </bean>
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/people/{id}/organizations"/>
+                    <property name="url" value="/api/{version}/plugin/people/{personId}/associations/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
                 </bean>
             </list>
@@ -150,17 +140,7 @@
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/organizations/{organizationId}/cases"/>
-                    <property name="requiredPrivilege" ref="acmOrganizationListPrivilege"/>
-                </bean>
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/organizations/{organizationId}/people"/>
-                    <property name="requiredPrivilege" ref="acmOrganizationListPrivilege"/>
-                </bean>
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/organizations/{organizationId}/complaints"/>
+					<property name="url" value="/api/{version}/plugin/organizations/{organizationId}/associations/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmOrganizationListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
