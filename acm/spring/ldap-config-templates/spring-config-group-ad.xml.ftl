@@ -9,17 +9,15 @@
 
     <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-group-armedia-openldap.properties"/>
+        <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-group-${id}-ad.properties"/>
     </beans:bean>
    
-    <beans:bean id="armedia_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
+    <beans:bean id="${id}_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
         <beans:property name="attributes">
             <beans:map>
-                <beans:entry key="cn" value='${openLdapAddGroupConfig.cn}'/>
-                <beans:entry key="gidNumber" value='${openLdapAddGroupConfig.gidNumber}'/>
-                <beans:entry key="objectClass" value='${openLdapAddGroupConfig.objectClass}'/>
-                <beans:entry key="member" value='${openLdapAddGroupConfig.member}'/>
-                <beans:entry key="memberOf" value='${openLdapAddGroupConfig.memberOf}'/>
+                <beans:entry key="cn" value='${r"${adAddUserConfig.cn}"}'/>
+                <beans:entry key="objectClass" value='${r"${adAddUserConfig.objectClass}"}'/>
+                <beans:entry key="sAMAccountName" value='${r"${adAddUserConfig.sAMAccountName}"}'/>
             </beans:map>
         </beans:property>
     </beans:bean>
