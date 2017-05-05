@@ -15,9 +15,9 @@
     <beans:bean id="adtest_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
         <beans:property name="attributes">
             <beans:map>
-                <beans:entry key="cn" value='${openLdapAddGroupConfig.cn}'/>
-                <beans:entry key="objectClass" value='${openLdapAddGroupConfig.objectClass}'/>
-                <beans:entry key="sAMAccountName" value='${openLdapAddGroupConfig.sAMAccountName}'/>
+                <beans:entry key="cn" value='${adAddUserConfig.cn}'/>
+                <beans:entry key="objectClass" value='${adAddUserConfig.objectClass}'/>
+                <beans:entry key="sAMAccountName" value='${adAddUserConfig.sAMAccountName}'/>
             </beans:map>
         </beans:property>
     </beans:bean>
