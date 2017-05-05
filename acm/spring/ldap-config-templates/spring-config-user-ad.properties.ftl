@@ -1,0 +1,10 @@
+adAddUserConfig.id=${id}
+adAddUserConfig.cn=${cn!"cn"}
+adAddUserConfig.sAMAccountName=${sAMAccountName!"sAMAccountName"}
+adAddUserConfig.givenName=${givenName!"givenName"}
+adAddUserConfig.sn=${sn!"sn"}
+adAddUserConfig.mail=${mail!"mail"}
+adAddUserConfig.userAccountControl=${userAccountControl!1}
+adAddUserConfig.unicodePwd=${unicodePwd!"unicodePwd"}
+adAddUserConfig.homeDirectory=${homeDirectory!"homeDirectory"}
+adAddUserConfig.objectClass=${objectClass!"top,person,user,organizationalPerson"}
