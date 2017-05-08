@@ -1,0 +1,18 @@
+[
+  {
+    "type": "SSN",
+    "name": "SSN"
+  },
+  {
+    "type": "Driver’s License",
+    "name": "Driver’s License"
+  },
+    {
+    "type": "Passport",
+    "name": "Passport"
+  },
+  {
+    "type": "Birth Certificate",
+    "name": "Birth Certificate"
+  }
+]
