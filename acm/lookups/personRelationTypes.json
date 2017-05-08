@@ -1,14 +1,17 @@
 [
   {
-    "type": "Brother",
-    "name": "Brother"
+    "type": "Sibling",
+	"inverseType", "Sibling",
+    "name": "Sibling"
   },
   {
-    "type": "Sister",
-    "name": "Sister"
+    "type": "Children",
+    "inverseType", "Parent",
+	"name": "Children"
   },
   {
-    "type": "Father",
-    "name": "Father"
+    "type": "Parent",
+	"inverseType", "Children",
+    "name": "Parent"
   }
 ]
