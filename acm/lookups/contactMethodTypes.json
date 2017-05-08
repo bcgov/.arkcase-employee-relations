@@ -1,23 +1,70 @@
-[
-  {
-    "type": "Home phone",
-    "name": "Home phone"
-  },
-  {
-    "type": "Work phone",
-    "name": "Work phone"
-  },
-  {
-    "type": "Mobile",
-    "name": "Mobile"
-  },
-  {
-    "type": "Email",
-    "name": "Email"
-  },
-  {
-    "type": "Facebook",
-    "name": "Facebook"
-  }
-]
+[	{
+		"type": "phone",
+		"name": "Phone",
+		"subTypes":
+		[	{
+				"type": "Home",
+				"name": "Home"
+			},
+			{
+				"type": "Work",
+				"name": "Work"
+			}, 
+			{
+				"type": "Mobile",
+				"name": "Mobile"
+			}
+		]
+	}, 
+		{
+		"type": "fax",
+		"name": "fax",
+		"subTypes":
+		[	{
+				"type": "Fax",
+				"name": "Fax"
+			}
+		]
+	}, 
+	{
 
+		"type": "email",
+		"name": "Email",
+		"subTypes":
+		[	{
+				"type": "Personal",
+				"name": "Personal"
+			}, 
+			{
+				"type": "Business",
+				"name": "Business"
+			}
+		]
+	}, 
+	{
+		"type": "url",
+		"name": "Url",
+		"subTypes":
+		[	{
+				"type": "Web Site",
+				"name": "Web Site"
+			},
+			{
+				"type": "Facebook",
+				"name": "Facebook"
+			},
+			{
+				"type": "LinkedIn",
+				"name": "LinkedIn"
+			},
+			{
+				"type": "Twitter",
+				"name": "Twitter"
+			},
+			{
+				"type": "Other",
+				"name": "Other"
+			}
+		]
+	}
+]
