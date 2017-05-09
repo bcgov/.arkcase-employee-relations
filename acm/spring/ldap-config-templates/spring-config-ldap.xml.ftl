@@ -189,6 +189,8 @@
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
             <beans:property name="enableEditingLdapUsers" value='${r"${ldapConfig.enableEditingLdapUsers}"}'/>
+            <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
+            <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
         </beans:bean>
     </beans:beans>
 
