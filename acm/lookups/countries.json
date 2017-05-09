@@ -753,10 +753,10 @@
 		"continent": "Asia"
 	},
 	{
-		"name": "Macedonia, The Former Yugoslav Republic of",
+		"name": "Macedonia",
 		"code": "MK",
 		"continent": "Europe",
-		"filename": "macedonia-the-former-yugoslav-republic-of"
+		"filename": "macedonia"
 	},
 	{
 		"name": "Madagascar",
