@@ -56,7 +56,7 @@
                 </bean>
                 <bean id="createEmailWithAttachmentsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/latest/service/notification/email/withattachments"/>
+                    <property name="url" value="/api/{version}/service/notification/email/withattachments"/>
                     <property name="requiredPrivilege" ref="acmNotificationPrivilege"/>
                 </bean>
                 <bean id="createEmailWithEmbeddedLinksUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
