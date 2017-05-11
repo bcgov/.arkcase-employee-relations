@@ -54,7 +54,7 @@
   "description": "Person",
   "iconName": "i i-checkmark",
   "state": "people.main",
-  "url": "#!/people/:id/main",  
+  "url": "#!/people/:id/main"  
 }, {
   "type": "PERSON-ASSOCIATION",
   "key": "PERSON-ASSOCIATION",
