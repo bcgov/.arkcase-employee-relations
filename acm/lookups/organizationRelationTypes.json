@@ -1,0 +1,10 @@
+[
+  {
+    "type": "Partner",
+    "name": "Partner"
+  },
+  {
+    "type": "SubCompany",
+    "name": "SubCompany"
+  }
+]

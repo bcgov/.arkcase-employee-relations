@@ -38,6 +38,11 @@
                     <property name="url" value="/modules/preference/views/"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+				<bean id="commonViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/common/views/"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
