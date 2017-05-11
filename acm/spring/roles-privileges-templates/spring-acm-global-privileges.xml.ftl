@@ -765,6 +765,18 @@
             </list>
         </property>
     </bean>
+	<bean id="acmPersonAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-personAssociation-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmPersonAssociationListPrivilege??>
+                <#list acmPersonAssociationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
     <bean id="acmPersonTypesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-person-values"/>
         <property name="applicationRolesWithPrivilege">
@@ -789,6 +801,118 @@
             </list>
         </property>
     </bean>
+	
+	<bean id="acmPersonModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-person-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmPersonModulePrivilege??>
+                <#list acmPersonModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	
+	<bean id="acmOrganizationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationSavePrivilege??>
+                <#list acmOrganizationSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationListPrivilege??>
+                <#list acmOrganizationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationDeletePrivilege??>
+                <#list acmOrganizationDeletePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="acmOrganizationDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-details"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationDetailsPrivilege??>
+                <#list acmOrganizationDetailsPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	
+	<bean id="acmOrganizationModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationModulePrivilege??>
+                <#list acmOrganizationModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationListPrivilege??>
+                <#list acmOrganizationAssociationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationAssociationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationSavePrivilege??>
+                <#list acmOrganizationAssociationSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationDeletePrivilege??>
+                <#list acmOrganizationAssociationDeletePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
 
     <!--Admin Plugin-->
     <bean id="acmAdminModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
@@ -929,6 +1053,20 @@
                         <value>${role}</value>
                     </#list>
                 </#if>
+            </list>
+        </property>
+    </bean>
+    
+    <!--Category Management Plugin-->
+    <bean id="acmCategoryManagementPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-manage-categories"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCategoryManagementPrivilege??>
+                <#list acmCategoryManagementPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
             </list>
         </property>
     </bean>
