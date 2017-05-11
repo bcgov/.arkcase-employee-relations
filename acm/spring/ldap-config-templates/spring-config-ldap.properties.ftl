@@ -17,6 +17,7 @@ ldapConfig.userDomain=${userDomain}
 ldapConfig.syncPageSize=${syncPageSize}
 
 ldapConfig.enableEditingLdapUsers=${enableEditingLdapUsers?c}
+ldapConfig.directoryType=${directoryType}
 
 ldapConfig.userSearchFilter=${userSearchFilter}
 ldapConfig.allUsersFilter=${allUsersFilter}

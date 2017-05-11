@@ -1,0 +1,29 @@
+# id refers to directory name which must be unique across all LDAP sync beans
+ldapConfig.id=adtest
+ldapConfig.base=dc=armedianet,dc=com
+ldapConfig.authUserDn=CN=Arkcase User,OU=ServiceAccounts,DC=armedianet,DC=COM
+ldapConfig.authUserPassword=ENC(UIE7lX4icUIu8hoCl8Z4HEPBGSbp5+VcMjCk17LHPvI=)
+
+ldapConfig.userSearchBase=OU=Users,OU=TestJSAP,OU=Clients
+ldapConfig.groupSearchBase=OU=Groups,OU=TestJSAP,OU=Clients
+
+ldapConfig.ldapUrl=ldaps://armclc6sad01.armedianet.com:636
+
+# Set the user' federated domain name in case of Single Sing-On scenraio. Leave it blank when authenticating against LDAP directly
+ldapConfig.userDomain=
+
+ldapConfig.syncPageSize=500
+
+ldapConfig.enableEditingLdapUsers=true
+ldapConfig.directoryType=activedirectory
+
+ldapConfig.userSearchFilter=(&(objectClass=user)(sAMAccountName=%s))
+ldapConfig.allUsersFilter=(&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
+ldapConfig.allUsersPageFilter=&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(sAMAccountName>=%s))
+ldapConfig.allUsersSortingAttribute=sAMAccountName
+ldapConfig.groupSearchFilterForUser=(&(objectClass=group)(member=%s))
+ldapConfig.userIdAttributeName=sAMAccountName
+ldapConfig.groupSearchFilter=(objectclass=group)
+ldapConfig.groupSearchPageFilter=(&(objectclass=group)(cn>=%s))
+ldapConfig.groupsSortingAttribute=cn
+
