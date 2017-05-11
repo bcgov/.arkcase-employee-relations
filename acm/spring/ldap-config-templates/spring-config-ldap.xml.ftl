@@ -78,6 +78,7 @@
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
         <beans:property name="syncPageSize" value='${r"${ldapConfig.syncPageSize}"}'/>
         <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
+        <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
         <beans:property name="allUsersSortingAttribute" value='${r"${ldapConfig.allUsersSortingAttribute}"}'/>
         <beans:property name="groupsSortingAttribute" value='${r"${ldapConfig.groupsSortingAttribute}"}'/>
     </beans:bean>
@@ -164,6 +165,8 @@
 
             <!-- do not change ldapDao properties. -->
             <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+            <beans:property name="userDao" ref="userJpaDao"/>
+            <beans:property name="ldapUserDao" ref="springLdapUserDao"/>
         </beans:bean>
 
         <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
@@ -186,6 +189,8 @@
                  servers use "uid". -->
             <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
             <beans:property name="enableEditingLdapUsers" value='${r"${ldapConfig.enableEditingLdapUsers}"}'/>
+            <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
+            <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
         </beans:bean>
     </beans:beans>
 
