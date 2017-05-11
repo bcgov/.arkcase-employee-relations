@@ -85,7 +85,7 @@
   "description": "Organization",
   "iconName": "i i-checkmark",
   "state": "organizations.main",
-  "url": "#!/organizations/:id/main",
+  "url": "#!/organizations/:id/main"
 }, {
   "type": "GROUP",
   "key": "GROUP",
