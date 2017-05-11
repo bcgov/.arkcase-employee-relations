@@ -83,6 +83,14 @@
       ],
       "userRolesAll": []
     },
+	{
+      "actionName": "editCaseOwningGroup",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+	  "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
     {
       "actionName": "reinvestigateCase",
       "objectType": "CASE_FILE",
@@ -378,6 +386,14 @@
         "Evidence Tech",
         "ROLE_TECHNICIAN"
       ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "editComplaintOwningGroup",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+	  "userIsParticipantTypeAny":["assignee", "supervisor", "owning group"],
+      "userRolesAny": [],
       "userRolesAll": []
     },
 	{
