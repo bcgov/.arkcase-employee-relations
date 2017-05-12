@@ -1070,4 +1070,70 @@
             </list>
         </property>
     </bean>
+
+    
+    <!--Calendar Management Plugin-->
+    <bean id="acmCalendarAdminPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-config-calendar"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarConfigPrivilege??>
+                <#list acmCalendarConfigPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- Calendar Plugin -->
+    <bean id="acmCalendarEventsListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsListPrivilege??>
+                <#list acmCalendarEventsListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsCreatePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-create"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
 </beans>
