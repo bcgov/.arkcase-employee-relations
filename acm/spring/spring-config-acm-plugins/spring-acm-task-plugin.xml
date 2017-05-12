@@ -115,6 +115,11 @@
                     <property name="url" value="/modules/tasks/views/"/>
                     <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
                 </bean>
+                <bean id="diagramTaskUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{latest}/plugin/task/diagram/{taskId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
