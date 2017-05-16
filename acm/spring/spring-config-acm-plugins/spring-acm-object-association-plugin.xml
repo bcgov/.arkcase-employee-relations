@@ -15,7 +15,7 @@
             <list>
                 <bean id="objectAssociationAddReferenceUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/service/objectassociation"/>
+                    <property name="url" value="/api/{version}/service/objectassociation/reference"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
             </list>
