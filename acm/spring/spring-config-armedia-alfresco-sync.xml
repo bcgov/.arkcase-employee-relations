@@ -3,18 +3,18 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
-       <bean id="arkcase-alfrescoSyncScheduledBean" class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoSyncScheduledBean">
-	       <property name="enabled" value="true"/>
+       <bean id="arkcase-alfrescoSyncScheduledBean" name="arkcase-alfrescoSyncScheduledBean" class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoSyncScheduledBean">
+	       <property name="enabled" value="false"/>
 	       <property name="alfrescoSyncService" ref="arkcase-alfrescoSyncService"/>
        </bean>
 
        <bean id="arkcase-alfrescoSyncService" class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoSyncService">
 	       <property name="propertyFileManager" ref="propertyFileManager"/>
 	       <property name="auditApplicationRestClient" ref="arkcase-auditApplicationRestClient"/>
-	       <property name="auditApplicationLastAuditIdsFilename" value="${user.home}/.arkcase/acm/arkcase-auditApplicationLastIds.properties"/>
+	       <property name="auditApplicationLastAuditIdsFilename" value="#{ systemProperties ['user.home'] }/.arkcase/acm/arkcase-auditApplicationLastIds.properties"/> 
 	       <property name="auditApplications">
 		   <map>
-	               <entry key="AuditExampleExtractors" value-ref="arkcase-nodeServiceCreateReader"/>
+	               <entry key="AuditArkCaseExtractors" value-ref="arkcase-nodeServiceCreateReader"/>
 	               <entry key="AuditArkCaseCreate" value-ref="arkcase-fileFolderServiceCreateReader"/>
 	               <entry key="AuditArkCaseDeleteExtractors" value-ref="arkcase-nodeServiceDeleteReader"/>
 	           </map>
