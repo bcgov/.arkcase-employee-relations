@@ -18,6 +18,11 @@
                     <property name="url" value="/api/{version}/service/ecm/folder/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+                <bean id="listFlatSearchResultsFromFolderContent" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/{objectType}/{objectId}/search"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
                 <bean id="copyFolderUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"/>
