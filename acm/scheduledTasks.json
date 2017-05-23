@@ -1,9 +1,9 @@
 {
   "scheduleEnabled": "false",
-  "scheduleIntervalInMinutes": "1",
+  "scheduleIntervalInSeconds": "15",
   "tasks": [
     {
-      "howOftenInMinutes": "30",
+      "howOftenInSeconds": "15",
       "name": "Alfresco Sync Service",
       "beanName": "arkcase-alfrescoSyncScheduledBean"
     }
