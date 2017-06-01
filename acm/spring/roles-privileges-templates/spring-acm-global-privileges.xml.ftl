@@ -1077,8 +1077,8 @@
         <property name="privilegeName" value="acm-config-calendar"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-            <#if acmCalendarConfigPrivilege??>
-                <#list acmCalendarConfigPrivilege as role>
+            <#if acmCalendarAdminPrivilege??>
+                <#list acmCalendarAdminPrivilege as role>
                     <value>${role}</value>
                 </#list>
             </#if>
