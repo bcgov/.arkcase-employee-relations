@@ -1,12 +1,12 @@
 [
   {
     "type": "Owner",
-	"inverseType": "Owner",
+	"inverseType": "Owned",
     "name": "Owner"
   },
   {
     "type": "Employee",
-    "inverseType": "Employee",
+    "inverseType": "Employer",
 	"name": "Employee"
   },
   {
