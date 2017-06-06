@@ -59,6 +59,11 @@
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property value="GET" name="httpMethod"/>
+                    <property value="/api/{version}/plugin/task/businessProcessTasks" name="url"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/completeTask/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskCompletePrivilege"/>
@@ -113,6 +118,11 @@
                 <bean id="taskViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/modules/tasks/views/"/>
+                    <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
+                </bean>
+                <bean id="diagramTaskUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{latest}/plugin/task/diagram/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
                 </bean>
             </list>

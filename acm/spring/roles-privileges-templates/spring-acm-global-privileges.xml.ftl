@@ -765,6 +765,18 @@
             </list>
         </property>
     </bean>
+	<bean id="acmPersonAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-personAssociation-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmPersonAssociationListPrivilege??>
+                <#list acmPersonAssociationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
     <bean id="acmPersonTypesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-person-values"/>
         <property name="applicationRolesWithPrivilege">
@@ -789,6 +801,118 @@
             </list>
         </property>
     </bean>
+
+	<bean id="acmPersonModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-person-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmPersonModulePrivilege??>
+                <#list acmPersonModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+	<bean id="acmOrganizationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationSavePrivilege??>
+                <#list acmOrganizationSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationListPrivilege??>
+                <#list acmOrganizationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationDeletePrivilege??>
+                <#list acmOrganizationDeletePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="acmOrganizationDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-details"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationDetailsPrivilege??>
+                <#list acmOrganizationDetailsPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+	<bean id="acmOrganizationModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-module"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationModulePrivilege??>
+                <#list acmOrganizationModulePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+	<bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationListPrivilege??>
+                <#list acmOrganizationAssociationListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationAssociationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationSavePrivilege??>
+                <#list acmOrganizationAssociationSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmOrganizationAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-organization-association-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmOrganizationAssociationDeletePrivilege??>
+                <#list acmOrganizationAssociationDeletePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
 
     <!--Admin Plugin-->
     <bean id="acmAdminModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
@@ -932,7 +1056,7 @@
             </list>
         </property>
     </bean>
-    
+
     <!--Category Management Plugin-->
     <bean id="acmCategoryManagementPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-manage-categories"/>
@@ -946,7 +1070,72 @@
             </list>
         </property>
     </bean>
-    
+
+
+    <!--Calendar Management Plugin-->
+    <bean id="acmCalendarAdminPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-config-calendar"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarAdminPrivilege??>
+                <#list acmCalendarAdminPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Calendar Plugin -->
+    <bean id="acmCalendarEventsListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-list"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsListPrivilege??>
+                <#list acmCalendarEventsListPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-save"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsCreatePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-create"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCalendarEventsDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-events-delete"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarEventsSavePrivilege??>
+                <#list acmCalendarEventsSavePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
     <!--Analytics Plugin-->
     <bean id="acmAnalyticsModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-analytics-module"/>
@@ -960,7 +1149,6 @@
             </list>
         </property>
     </bean>
-
     <bean id="analyticsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-analytics"/>
         <property name="applicationRolesWithPrivilege">
@@ -973,7 +1161,7 @@
             </list>
         </property>
     </bean>
-    
+
     <!--Audit Analytics Plugin-->
     <bean id="acmAnalyticsAuditModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-analytics-audit-module"/>
@@ -987,7 +1175,6 @@
             </list>
         </property>
     </bean>
-
     <bean id="analyticsAuditPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-analytics-audit"/>
         <property name="applicationRolesWithPrivilege">
@@ -1000,4 +1187,5 @@
             </list>
         </property>
     </bean>
+
 </beans>

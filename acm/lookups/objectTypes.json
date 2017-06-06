@@ -46,15 +46,15 @@
   "description": "File",
   "iconName": "",
   "url": "api/latest/plugin/ecm/download?ecmFileId=:id",
+  "viewerUrl":"#!/viewer/:id/:containerId/:containerType/:name/:selectedIds",
   "target": "_blank"
 }, {
   "type": "PERSON",
   "key": "PERSON",
   "description": "Person",
-  "iconName": "",
-  "state": "",
-  "url": "",
-  "target": "_blank"
+  "iconName": "i i-checkmark",
+  "state": "people.main",
+  "url": "#!/people/:id/main"  
 }, {
   "type": "PERSON-ASSOCIATION",
   "key": "PERSON-ASSOCIATION",
@@ -83,10 +83,9 @@
   "type": "ORGANIZATION",
   "key": "ORGANIZATION",
   "description": "Organization",
-  "iconName": "",
-  "state": "",
-  "url": "",
-  "target": "_blank"
+  "iconName": "i i-checkmark",
+  "state": "organizations.main",
+  "url": "#!/organizations/:id/main"
 }, {
   "type": "GROUP",
   "key": "GROUP",

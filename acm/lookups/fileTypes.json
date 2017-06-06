@@ -1,23 +1,24 @@
 [
+  
   {
-    "type": "mr",
-    "label": "Medical Release"
+    "type": "ev",
+    "label": "eDelivery"
   },
   {
     "type": "gr",
     "label": "General Release"
   },
   {
-    "type": "ev",
-    "label": "eDelivery"
-  },
-  {
-    "type": "sig",
-    "label": "SF86 Signature"
+    "type": "mr",
+    "label": "Medical Release"
   },
   {
     "type": "noi",
     "label": "Notice of Investigation"
+  },
+  {
+    "type": "sig",
+    "label": "SF86 Signature"
   },
   {
     "type": "wir",
