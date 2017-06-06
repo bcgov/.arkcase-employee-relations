@@ -765,7 +765,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmPersonAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmPersonAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-personAssociation-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -802,7 +802,7 @@
         </property>
     </bean>
 
-	<bean id="acmPersonModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmPersonModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-person-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -815,7 +815,7 @@
         </property>
     </bean>
 
-	<bean id="acmOrganizationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -851,7 +851,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmOrganizationDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-details"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -864,7 +864,7 @@
         </property>
     </bean>
 
-	<bean id="acmOrganizationModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationModulePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-module"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -876,7 +876,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-association-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
