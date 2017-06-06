@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Owner",
+	"inverseType": "Owned",
+    "name": "Owner"
+  },
+  {
+    "type": "Employee",
+    "inverseType": "Employer",
+	"name": "Employee"
+  },
+  {
+    "type": "Partner",
+	"inverseType": "Partner",
+    "name": "Partner"
+  }
+]
