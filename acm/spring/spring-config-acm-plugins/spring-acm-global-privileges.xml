@@ -724,7 +724,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmPersonAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmPersonAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-person-association-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -846,7 +846,7 @@
         </property>
     </bean>
 
-	<bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationAssociationListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-association-list"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -857,7 +857,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmOrganizationAssociationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationAssociationSavePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-association-save"/>
         <property name="applicationRolesWithPrivilege">
             <list>
@@ -868,7 +868,7 @@
             </list>
         </property>
     </bean>
-	<bean id="acmOrganizationAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmOrganizationAssociationDeletePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-organization-association-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
