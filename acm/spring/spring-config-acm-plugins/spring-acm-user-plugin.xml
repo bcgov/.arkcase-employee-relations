@@ -136,7 +136,7 @@
                 </bean>
 				<bean id="usersRemoveLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
-                    <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/remove"/>
+                    <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
            </list>
