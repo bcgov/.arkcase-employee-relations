@@ -134,6 +134,11 @@
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+				<bean id="usersRemoveLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
            </list>
         </property>
     </bean>
