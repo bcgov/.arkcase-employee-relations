@@ -33,7 +33,14 @@
   "iconName": "i i-folder",
   "state": "document-repository.main",
   "url": "#!/document-repository/:id/main"
-  }, {
+  },{
+  "type": "DOC_REPO",
+  "key": "MY_DOC_REPO",
+  "description": "My Documents",
+  "iconName": "i i-folder",
+  "state": "my-documents.main",
+  "url": "#!/my-documents/:id/main"
+  },{
   "type": "DOCUMENT",
   "key": "DOCUMENT",
   "description": "Document",

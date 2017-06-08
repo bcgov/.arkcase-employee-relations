@@ -23,6 +23,11 @@
                     <property name="url" value="/modules/document-repository/views/"/>
                     <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
                 </bean>
+                 <bean id="myDocumentRepositoryViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/my-documents/views/"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
                 <bean id="findDcumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
