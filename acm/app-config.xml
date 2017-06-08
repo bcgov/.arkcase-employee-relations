@@ -56,6 +56,8 @@
                 <ref bean="documentRepositoryNavigatorAction"/>
                 <ref bean="personNavigatorAction"/>
                 <ref bean="organizationNavigatorAction"/>
+                <ref bean="analyticsNavigatorAction"/>
+                <ref bean="analyticsAuditNavigatorAction"/>
             </list>
         </property>
         <property name="objectTypes">
@@ -270,6 +272,22 @@
         <property name="iconName" value="fa fa-organization"/>
         <property name="url" value="/plugin/organization"/>
         <property name="requiredPrivilege" value="acm-organization-module"/>
+    </bean>
+
+    <bean id="analyticsNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Data Analytics"/>
+        <property name="actionResourceName" value="common:navigation.label.analytics"/>
+        <property name="iconName" value="i i-stats"/>
+        <property name="url" value="/plugin/analytics"/>
+        <property name="requiredPrivilege" value="acm-analytics-module"/>
+    </bean>
+
+    <bean id="analyticsAuditNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Log Analytics"/>
+        <property name="actionResourceName" value="common:navigation.label.analytics-audit"/>
+        <property name="iconName" value="i i-stats"/>
+        <property name="url" value="/plugin/analytics-audit"/>
+        <property name="requiredPrivilege" value="acm-analytics-audit-module"/>
     </bean>
     <!-- end of navigator tabs -->
 
