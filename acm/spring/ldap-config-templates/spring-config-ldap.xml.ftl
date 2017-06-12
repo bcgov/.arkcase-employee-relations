@@ -81,6 +81,7 @@
         <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
         <beans:property name="allUsersSortingAttribute" value='${r"${ldapConfig.allUsersSortingAttribute}"}'/>
         <beans:property name="groupsSortingAttribute" value='${r"${ldapConfig.groupsSortingAttribute}"}'/>
+        <beans:property name="userSyncAttributes" value='${r"${ldapConfig.userAttributes}"}'/>
     </beans:bean>
 
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
