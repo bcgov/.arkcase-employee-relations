@@ -1115,8 +1115,8 @@
         <property name="privilegeName" value="acm-calendar-events-create"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-            <#if acmCalendarEventsSavePrivilege??>
-                <#list acmCalendarEventsSavePrivilege as role>
+            <#if acmCalendarEventsCreatePrivilege??>
+                <#list acmCalendarEventsCreatePrivilege as role>
                     <value>${role}</value>
                 </#list>
             </#if>
@@ -1127,8 +1127,22 @@
         <property name="privilegeName" value="acm-calendar-events-delete"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-            <#if acmCalendarEventsSavePrivilege??>
-                <#list acmCalendarEventsSavePrivilege as role>
+            <#if acmCalendarEventsDeletePrivilege??>
+                <#list acmCalendarEventsDeletePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Mail Plugin -->
+    <bean id="acmEmailConfigureTemplatePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-mail-configure-template"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmEmailConfigureTemplatePrivilege??>
+                <#list acmEmailConfigureTemplatePrivilege as role>
                     <value>${role}</value>
                 </#list>
             </#if>
