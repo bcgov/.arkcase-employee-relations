@@ -1005,7 +1005,7 @@
         <property name="privilegeName" value="acm-config-calendar"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-                    <value>ROLE_CALENDAR_ADMINISTRATOR</value>
+                <value>ROLE_CALENDAR_ADMINISTRATOR</value>
             </list>
         </property>
     </bean>
@@ -1056,6 +1056,16 @@
                     <value>ROLE_CALENDAR_ADMINISTRATOR</value>
                     <value>ROLE_ADMINISTRATOR</value>
                     <value>ROLE_INVESTIGATOR</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Mail Plugin -->
+    <bean id="acmEmailConfigurePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-mail-configure-template"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_EMAIL_ADMINISTRATOR</value>
             </list>
         </property>
     </bean>
