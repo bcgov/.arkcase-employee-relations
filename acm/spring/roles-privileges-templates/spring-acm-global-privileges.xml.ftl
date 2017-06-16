@@ -1137,12 +1137,12 @@
     </bean>
 
     <!-- Mail Plugin -->
-    <bean id="acmEmailConfigureTemplatePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+    <bean id="acmEmailConfigurePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-mail-configure-template"/>
         <property name="applicationRolesWithPrivilege">
             <list>
-            <#if acmEmailConfigureTemplatePrivilege??>
-                <#list acmEmailConfigureTemplatePrivilege as role>
+            <#if acmEmailConfigurePrivilege??>
+                <#list acmEmailConfigurePrivilege as role>
                     <value>${role}</value>
                 </#list>
             </#if>
