@@ -29,6 +29,11 @@
                     <property name="url" value="/api/{version}/users/group/{groupId}/get/subgroups"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+                <bean id="usersGroupByDirectoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/users/directory/groups"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
                 <bean id="usersGetTopLevelGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/get/toplevel"/>
@@ -125,8 +130,13 @@
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean id="usersEditLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean id="usersCloneLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/ldap{directory:.+}/users/{userId:.+}"/>
+                    <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean id="usersChangePasswordUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -134,17 +144,17 @@
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-				<bean id="usersRemoveLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersRemoveLdapUserUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/users/{userId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-				<bean id="usersRemoveLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="usersRemoveLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-           </list>
+            </list>
         </property>
     </bean>
 </beans>
