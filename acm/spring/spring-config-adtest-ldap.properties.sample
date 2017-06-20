@@ -9,6 +9,8 @@ ldapConfig.groupSearchBase=OU=Groups,OU=TestJSAP,OU=Clients
 
 ldapConfig.ldapUrl=ldaps://armclc6sad01.armedianet.com:636
 
+ldapConfig.userAttributes=cn,userAccountControl,sn,givenName,dn,distinguishedname,memberOf,sAMAccountName,userPrincipalName,uid,uidNumber,c,co,company,department,title,msDS-UserPasswordExpiryTimeComputed
+
 # Set the user' federated domain name in case of Single Sing-On scenraio. Leave it blank when authenticating against LDAP directly
 ldapConfig.userDomain=
 
@@ -19,7 +21,7 @@ ldapConfig.directoryType=activedirectory
 
 ldapConfig.userSearchFilter=(&(objectClass=user)(sAMAccountName=%s))
 ldapConfig.allUsersFilter=(&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
-ldapConfig.allUsersPageFilter=&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(sAMAccountName>=%s))
+ldapConfig.allUsersPageFilter=(&(objectCategory=person)(objectClass=user)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(sAMAccountName>=%s))
 ldapConfig.allUsersSortingAttribute=sAMAccountName
 ldapConfig.groupSearchFilterForUser=(&(objectClass=group)(member=%s))
 ldapConfig.userIdAttributeName=sAMAccountName
