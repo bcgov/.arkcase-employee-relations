@@ -84,43 +84,6 @@
         <beans:property name="userSyncAttributes" value='${r"${ldapConfig.userAttributes}"}'/>
     </beans:bean>
 
-    <beans:bean id="${id}_contextSource"
-                class="org.springframework.ldap.core.support.LdapContextSource">
-        <beans:property name="url" value='${r"${ldapConfig.ldapUrl}"}' />
-        <beans:property name="base" value='${r"${ldapConfig.base}"}' />
-        <beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}' />
-        <beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}' />
-        <beans:property name="pooled" value="true" />
-        <!-- AD Specific Setting for avoiding the partial exception error -->
-        <beans:property name="referral" value="follow" />
-    </beans:bean>
-
-    <beans:bean id="${id}_contextSourceProxy" 
-        class="org.springframework.ldap.transaction.compensating.manager.TransactionAwareContextSourceProxy">
-         <beans:constructor-arg ref="${id}_contextSource" />
-    </beans:bean>
-
-    <beans:bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
-        <beans:constructor-arg ref="${id}_contextSourceProxy" />
-    </beans:bean>
-
-    <beans:bean id="transactionManager" 
-        class="org.springframework.ldap.transaction.compensating.manager.ContextSourceTransactionManager">
-        <beans:property name="contextSource" ref="${id}_contextSourceProxy" />
-    </beans:bean>
-
-   
-    <beans:bean id="${id}_ldapSync" 
-        class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
-        <beans:property name="transactionManager" ref="transactionManager" />
-        <beans:property name="target" ref="${id}_ldapSyncJob" />
-        <beans:property name="transactionAttributes">
-            <beans:props>
-                <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
-            </beans:props>
-        </beans:property>
-    </beans:bean>
-
      <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
         <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you are using anonymous authentication -->
         <beans:property name="authUserDn" value='${r"${ldapConfig.authUserDn}"}'/>
@@ -144,16 +107,17 @@
         <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
     </beans:bean>
 
-    <beans:bean id="${id}_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
-        <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
-        <beans:constructor-arg index="1" value='${r"${ldapConfig.userIdAttributeName}={0}"}' />
-        <beans:constructor-arg index="2" ref="${id}_contextSource" />
-    </beans:bean>
-
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
          is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
          is why these beans are active both for Kerberos and LDAP. -->
     <beans:beans profile="ldap,kerberos,externalAuth">
+
+        <beans:bean id="${id}_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+            <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
+            <beans:constructor-arg index="1" value='${r"${ldapConfig.userIdAttributeName}={0}"}' />
+            <beans:constructor-arg index="2" ref="${id}_contextSource" />
+        </beans:bean>
+        
         <beans:bean id="${id}_authenticationProvider"
                 class="com.armedia.acm.auth.AcmLdapAuthenticationProvider">
             <beans:constructor-arg>
@@ -177,6 +141,43 @@
             </beans:constructor-arg>
             <beans:property name="userDao" ref="userJpaDao"/>
             <beans:property name="ldapSyncService" ref="${id}_ldapSyncJob"/>
+        </beans:bean>
+
+        <beans:bean id="${id}_contextSource"
+                    class="org.springframework.ldap.core.support.LdapContextSource">
+            <beans:property name="url" value='${r"${ldapConfig.ldapUrl}"}' />
+            <beans:property name="base" value='${r"${ldapConfig.base}"}' />
+            <beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}' />
+            <beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}' />
+            <beans:property name="pooled" value="true" />
+            <!-- AD Specific Setting for avoiding the partial exception error -->
+            <beans:property name="referral" value="follow" />
+        </beans:bean>
+
+        <beans:bean id="${id}_contextSourceProxy" 
+            class="org.springframework.ldap.transaction.compensating.manager.TransactionAwareContextSourceProxy">
+             <beans:constructor-arg ref="${id}_contextSource" />
+        </beans:bean>
+
+        <beans:bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+            <beans:constructor-arg ref="${id}_contextSourceProxy" />
+        </beans:bean>
+
+        <beans:bean id="transactionManager" 
+            class="org.springframework.ldap.transaction.compensating.manager.ContextSourceTransactionManager">
+            <beans:property name="contextSource" ref="${id}_contextSourceProxy" />
+        </beans:bean>
+
+       
+        <beans:bean id="${id}_ldapSync" 
+            class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+            <beans:property name="transactionManager" ref="transactionManager" />
+            <beans:property name="target" ref="${id}_ldapSyncJob" />
+            <beans:property name="transactionAttributes">
+                <beans:props>
+                    <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
+                </beans:props>
+            </beans:property>
         </beans:bean>
 
         <!--
