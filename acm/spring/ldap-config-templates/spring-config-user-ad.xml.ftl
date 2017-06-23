@@ -17,6 +17,7 @@
             <beans:map>
                 <beans:entry key="cn" value='${r"${adAddUserConfig.cn}"}'/>
                 <beans:entry key="sAMAccountName" value='${r"${adAddUserConfig.sAMAccountName}"}'/>
+                <beans:entry key="userPrincipalName" value='${r"${adAddUserConfig.userPrincipalName}"}'/>
                 <beans:entry key="givenName" value='${r"${adAddUserConfig.givenName}"}'/>
                 <beans:entry key="sn" value='${r"${adAddUserConfig.sn}"}'/>
                 <beans:entry key="mail" value='${r"${adAddUserConfig.mail}"}'/>
