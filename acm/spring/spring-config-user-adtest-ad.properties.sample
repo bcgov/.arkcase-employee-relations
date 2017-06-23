@@ -1,6 +1,7 @@
 adAddUserConfig.id=adtest
 adAddUserConfig.cn=cn
 adAddUserConfig.sAMAccountName=sAMAccountName
+adAddUserConfig.userPrincipalName=userPrincipalName
 adAddUserConfig.givenName=givenName
 adAddUserConfig.sn=sn
 adAddUserConfig.mail=mail
