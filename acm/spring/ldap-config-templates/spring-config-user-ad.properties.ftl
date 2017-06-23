@@ -1,6 +1,7 @@
 adAddUserConfig.id=${id}
 adAddUserConfig.cn=${cn!"cn"}
 adAddUserConfig.sAMAccountName=${sAMAccountName!"sAMAccountName"}
+adAddUserConfig.userPrincipalName=${userPrincipalName!"userPrincipalName"}
 adAddUserConfig.givenName=${givenName!"givenName"}
 adAddUserConfig.sn=${sn!"sn"}
 adAddUserConfig.mail=${mail!"mail"}
