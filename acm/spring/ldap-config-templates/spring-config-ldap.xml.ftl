@@ -185,9 +185,10 @@
         beans, each with its own LdapAuthenticateService.
         -->
         <beans:bean id="${id}_ldapAuthenticateService" class="com.armedia.acm.services.users.service.ldap.LdapAuthenticateService">
-            <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean, which should be defined below. -->
+            <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean -->
             <beans:property name="ldapAuthenticateConfig" ref="${id}_authenticate"/>
-
+            <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean -->
+            <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
             <!-- do not change ldapDao properties. -->
             <beans:property name="ldapDao" ref="customPagedLdapDao"/>
             <beans:property name="userDao" ref="userJpaDao"/>
