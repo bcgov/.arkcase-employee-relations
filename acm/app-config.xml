@@ -19,6 +19,7 @@
         <!-- The logoutUrl bean is defined in spring-security-config-*.xml -->
         <property name="logoutUrl" ref="logoutUrl"/>
         <property name="helpUrl" value="http://www.arkcase.com/docs/"/>
+        <property name="baseUrl" value="https://acm-arkcase/arkcase"/>
 
         <!--
             Set "issueCollectorFlag" flag as "true" only if ArkCase instance is inside Armedia network or on the Armedia VPN or
