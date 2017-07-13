@@ -31,7 +31,12 @@
                 </bean>
                 <bean id="usersGroupByDirectoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/directory/groups"/>
+                    <property name="url" value="/api/{version}/users/{directory:.+}/groups"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="usersAdhocGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/users/groups/adhoc"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetTopLevelGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
