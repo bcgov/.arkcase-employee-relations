@@ -1,10 +1,12 @@
 [
   {
     "type": "Partner",
+    "inverseType": "Partner",
     "name": "Partner"
   },
   {
     "type": "SubCompany",
+    "inverseType": "ParentCompany",
     "name": "SubCompany"
   }
 ]
