@@ -42,7 +42,7 @@
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="syncEnabled" value="false"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
     </beans:bean>
@@ -58,7 +58,7 @@
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="syncEnabled" value="false"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
     </beans:bean>
