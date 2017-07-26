@@ -13,5 +13,25 @@
     "type": "Partner",
 	"inverseType": "Partner",
     "name": "Partner"
+  },
+  {
+    "type": "Director/President/CEO",
+    "inverseType": "Director/President/CEO",
+    "name" : "Director"
+  },
+  {
+    "type": "Manager",
+    "inverseType": "Manager",
+    "name" : "Manager"
+  },
+  {
+    "type": "General Counsel",
+    "inverseType": "General Counsel",
+    "name" : "Counsel"
+  },
+  {
+    "type": "Executive",
+    "inverseType": "Executive",
+    "name" : "Executive"
   }
 ]
