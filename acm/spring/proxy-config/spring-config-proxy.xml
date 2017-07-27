@@ -14,6 +14,7 @@
                 <!-- resource names regex patterns separated with comma "," if multiple.
                 Will be processed and override urls inside the response-->
                 <prop key="responseUrlMatchers">^.*config\.js$</prop>
+                <prop key="skipResponseUrlMatchers">.*ttf$, .*woff$, .*png$</prop>
                 <!-- given pairs for replacement pattern1:replacement1,pattern2:replacement2-->
                 <prop key="responseContentRewritePairs">/VirtualViewerJavaHTML5/:/arkcase/VirtualViewerJavaHTML5/</prop>
             </props>
@@ -55,6 +56,7 @@
                 <!-- TODO: parameterize the URLs -->
                 <prop key="targetUri">https://acm-arkcase/</prop>
                 <prop key="http.protocol.handle-redirects">false</prop>
+                <prop key="skipResponseUrlMatchers">.*ttf$, .*woff$, .*png$</prop>
                 <!-- resource names regex patterns separated with comma "," if multiple.
                 Will be processed and override urls inside the response-->
                 <prop key="responseUrlMatchers">^.*$</prop>
