@@ -127,6 +127,16 @@
                     <property name="url" value="/api/{version}/plugin/person-associations"/>
                     <property name="requiredPrivilege" ref="acmPersonAssociationListPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/personAssociation/{id}"/>
+                    <property name="requiredPrivilege" ref="acmPersonAssociationListPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/person-associations/{id}"/>
+                    <property name="requiredPrivilege" ref="acmPersonAssociationListPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
@@ -217,6 +227,11 @@
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/organization-associations"/>
+                    <property name="requiredPrivilege" ref="acmOrganizationAssociationListPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/organization-associations/{id}"/>
                     <property name="requiredPrivilege" ref="acmOrganizationAssociationListPrivilege"/>
                 </bean>
             </list>
