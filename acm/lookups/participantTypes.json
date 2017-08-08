@@ -17,7 +17,7 @@
   {
     "type": "owning group",
     "name": "Owning Group",
-    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION"]
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "approver",
@@ -27,7 +27,7 @@
   {
     "type": "collaborator",
     "name": "Collaborator",
-    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION"]
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "follower",
@@ -37,16 +37,16 @@
   {
     "type": "reader",
     "name": "Reader",
-    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION"]
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "No Access",
     "name": "No Access",
-    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION"]
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type" : "owner",
     "name" : "Owner",
-    "objectTypes" : ["ORGANIZATION"]
+    "objectTypes" : ["ORGANIZATION", "PERSON"]
   }
 ]
