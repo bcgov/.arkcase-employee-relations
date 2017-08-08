@@ -492,6 +492,35 @@
       "userIsParticipantTypeAny":["owner", "owning group", "collaborator"],
       "userRolesAny": [],
       "userRolesAll": []
+    },
+    {
+      "actionName": "viewPersonPage",
+      "objectType": "PERSON",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR"
+      ],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "editPerson",
+      "objectType": "PERSON",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["owner", "owning group", "collaborator"],
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+    {
+      "actionName": "restrictPerson",
+      "objectType": "PERSON",
+      "objectProperties": {},
+      "userIsParticipantTypeAny":["owner", "owning group", "collaborator"],
+      "userRolesAny": [],
+      "userRolesAll": []
     }
   ]
 }
