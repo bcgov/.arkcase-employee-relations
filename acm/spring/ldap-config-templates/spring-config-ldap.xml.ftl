@@ -31,8 +31,6 @@
 
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
     <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
-        <!-- directoryName: must be unique across all LDAP sync beans -->
-        <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
@@ -42,69 +40,75 @@
         <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
         <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="propertyFileManager" ref="propertyFileManager"/>
+        <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
+        <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
+    </beans:bean>
+	
+	<!-- ensure this bean id is unique across all the LDAP sync beans. -->
+    <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
+        <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
+        <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
+        <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
+        <beans:property name="ldapDao" ref="customPagedLdapDao"/>
+        <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
+        <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
+        <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
+        <beans:property name="syncEnabled" value="false"/>
+        <beans:property name="propertyFileManager" ref="propertyFileManager"/>
+        <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
+        <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
-    <beans:bean id="${id}_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig">
-        <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you
-             are using anonymous authentication -->
+    <beans:bean id="${id}_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
+        <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
+        <beans:property name="ldapUrl" value='${r"${ldapConfig.ldapUrl}"}'/>
+         <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you are using anonymous authentication -->
         <beans:property name="authUserDn" value='${r"${ldapConfig.authUserDn}"}'/>
         <!-- only specify authUserPassword if you also specify authUserDn -->
         <beans:property name="authUserPassword" value='${r"${ldapConfig.authUserPassword}"}'/>
+        <!-- base is the domain component (e.g. dc=armedia,dc=com). -->
+        <beans:property name="baseDC" value='${r"${ldapConfig.base}"}'/>
+        <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP servers use "uid". -->
+        <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
+         <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
+        <beans:property name="mailAttributeName" value="mail"/>
+         <!-- ignorePartialResultException: true if your LDAP server is Active Directory, false for other LDAP servers -->
+        <beans:property name="ignorePartialResultException" value="true"/>
+        <!-- referral: "follow" if you want to follow LDAP referrals, "ignore" otherwise (search "ldap referral" for more info). -->
+        <beans:property name="referral" value="follow"/>
+        <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
+        <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
+    </beans:bean>
+
+    <beans:bean id="${id}_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig" parent="${id}_ldap_config">
         <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
         <beans:property name="groupSearchBase" value='${r"${ldapConfig.groupSearchBase}"}'/>
         <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
         <beans:property name="groupSearchFilter" value='${r"${ldapConfig.groupSearchFilter}"}'/>
         <!-- filter to retrieve all groups with a name greater than some group name - used to page group search results -->
         <beans:property name="groupSearchPageFilter" value='${r"${ldapConfig.groupSearchPageFilter}"}'/>
-        <!-- ignorePartialResultException: true if your LDAP server is Active Directory, false for other LDAP servers -->
-        <beans:property name="ignorePartialResultException" value="true"/>
-        <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
-        <beans:property name="ldapUrl" value='${r"${ldapConfig.ldapUrl}"}'/>
-        <beans:property name="baseDC" value='${r"${ldapConfig.base}"}'/>
-        <!-- referral: "follow" if you want to follow LDAP referrals, "ignore" otherwise (search "ldap referral" for more info). -->
-        <beans:property name="referral" value="follow"/>
-        <!-- mailAttributeName: use "mail"  Most  LDAP servers use "mail". -->
-        <beans:property name="mailAttributeName" value="mail"/>
-
         <beans:property name="allUsersFilter" value='${r"${ldapConfig.allUsersFilter}"}'/>
+        <beans:property name="allChangedUsersFilter" value='${r"${ldapConfig.allChangedUsersFilter}"}'/>
         <beans:property name="allUsersPageFilter" value='${r"${ldapConfig.allUsersPageFilter}"}'/>
-        <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP
-             servers use "uid". -->
-        <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
+        <beans:property name="allChangedUsersPageFilter" value='${r"${ldapConfig.allChangedUsersPageFilter}"}'/>
         <beans:property name="roleToGroupMap" ref="${id}_RoleToGroupProperties"/>
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
         <beans:property name="syncPageSize" value='${r"${ldapConfig.syncPageSize}"}'/>
-        <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
-        <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
         <beans:property name="allUsersSortingAttribute" value='${r"${ldapConfig.allUsersSortingAttribute}"}'/>
         <beans:property name="groupsSortingAttribute" value='${r"${ldapConfig.groupsSortingAttribute}"}'/>
         <beans:property name="userSyncAttributes" value='${r"${ldapConfig.userAttributes}"}'/>
+        <beans:property name="changedGroupSearchFilter" value='${r"${ldapConfig.changedGroupSearchFilter}"}'/>
+        <beans:property name="changedGroupSearchPageFilter" value='${r"${ldapConfig.changedGroupSearchPageFilter}"}'/>
     </beans:bean>
 
-     <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig">
-        <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you are using anonymous authentication -->
-        <beans:property name="authUserDn" value='${r"${ldapConfig.authUserDn}"}'/>
-        <!-- only specify authUserPassword if you also specify authUserDn -->
-        <beans:property name="authUserPassword" value='${r"${ldapConfig.authUserPassword}"}'/>
-        <!-- base is the domain component (e.g. dc=armedia,dc=com). -->
-        <beans:property name="baseDC" value='${r"${ldapConfig.base}"}'/>
+     <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig" parent="${id}_ldap_config">
         <!-- userSearchBase is the tree under which users are found (e.g. cn=users).  -->
         <beans:property name="searchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
-        <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
-        <beans:property name="ignorePartialResultException" value="true"/>
-        <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
-        <beans:property name="ldapUrl" value='${r"${ldapConfig.ldapUrl}"}'/>
-        <!-- referral: "follow" if you want to follow LDAP referrals, "ignore" otherwise (search "ldap referral" for more info). -->
-        <beans:property name="referral" value="follow"/>
-        <!-- userIdAttributeName: use "samAccountName" if your LDAP server is Active Directory.  Most other LDAP servers use "uid". -->
-        <beans:property name="userIdAttributeName" value='${r"${ldapConfig.userIdAttributeName}"}'/>
         <beans:property name="enableEditingLdapUsers" value='${r"${ldapConfig.enableEditingLdapUsers}"}'/>
-        <beans:property name="mailAttributeName" value="mail"/>
-        <beans:property name="directoryType" value='${r"${ldapConfig.directoryType}"}'/>
-        <beans:property name="directoryName" value='${r"${ldapConfig.id}"}'/>
     </beans:bean>
 
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
