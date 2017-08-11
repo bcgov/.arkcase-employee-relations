@@ -3,6 +3,7 @@ default-config/*
 activemq/*
 acm/activiti/*.xml
 acm/activiti/versions/*.xml
+acm/ldapLastSync.properties
 acm/solrLastBatchUpdate.properties
 acm/subscriptionEventLastBatchInsert.properties
 acm/dataAccessPolicyLastBatchUpdate.properties
