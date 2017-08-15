@@ -4,7 +4,6 @@ openLdapAddUserConfig.givenName=${givenName!"givenName"}
 openLdapAddUserConfig.sn=${sn!"sn"}
 openLdapAddUserConfig.uid=${uid!"uid"}
 openLdapAddUserConfig.mail=${mail!"mail"}
-openLdapAddUserConfig.memberOf=${memberOf!"memberOf"}
 openLdapAddUserConfig.userAccountControl=${userAccountControl!1}
 openLdapAddUserConfig.userPassword=${userPassword!"userPassword"}
 openLdapAddUserConfig.uidNumber=${uidNumber!"uidNumber"}
