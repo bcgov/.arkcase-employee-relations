@@ -19,7 +19,6 @@
                 <beans:entry key="gidNumber" value='${openLdapAddGroupConfig.gidNumber}'/>
                 <beans:entry key="objectClass" value='${openLdapAddGroupConfig.objectClass}'/>
                 <beans:entry key="member" value='${openLdapAddGroupConfig.member}'/>
-                <beans:entry key="memberOf" value='${openLdapAddGroupConfig.memberOf}'/>
             </beans:map>
         </beans:property>
     </beans:bean>

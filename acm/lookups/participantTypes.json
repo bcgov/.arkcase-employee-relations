@@ -1,38 +1,52 @@
 [
   {
     "type": "assignee",
-    "name": "Assignee"
+    "name": "Assignee",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT"]
   },
   {
     "type": "co-owner",
-    "name": "Co-Owner"
+    "name": "Co-Owner",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT"]
   },
   {
     "type": "supervisor",
-    "name": "Supervisor"
+    "name": "Supervisor",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT"]
   },
   {
     "type": "owning group",
-    "name": "Owning Group"
+    "name": "Owning Group",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "approver",
-    "name": "Approver"
+    "name": "Approver",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT"]
   },
   {
     "type": "collaborator",
-    "name": "Collaborator"
+    "name": "Collaborator",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "follower",
-    "name": "Follower"
+    "name": "Follower",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT"]
   },
   {
     "type": "reader",
-    "name": "Reader"
+    "name": "Reader",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
   },
   {
     "type": "No Access",
-    "name": "No Access"
+    "name": "No Access",
+    "objectTypes" : ["CASE_FILE", "COMPLAINT", "ORGANIZATION", "PERSON"]
+  },
+  {
+    "type" : "owner",
+    "name" : "Owner",
+    "objectTypes" : ["ORGANIZATION", "PERSON"]
   }
 ]
