@@ -17,7 +17,7 @@
                 <!-- Administration API privileges. -->
                 <bean id="calendarAdminUrlGet" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/service/calendar/exchange/configure"/>
+                    <property name="url" value="/api/{version}/service/calendar/exchange/configure/credentials/invalid"/>
                     <property name="requiredPrivilege" ref="acmCalendarAdminPrivilege"/>
                 </bean>
                 <bean id="calendarAdminUrlPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
