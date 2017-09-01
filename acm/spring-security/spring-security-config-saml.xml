@@ -185,9 +185,22 @@
 				<beans:list>
 					<beans:bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
 						<beans:constructor-arg>
-							<beans:bean class="org.opensaml.saml2.metadata.provider.FilesystemMetadataProvider">
+							<beans:bean class="org.opensaml.saml2.metadata.provider.FileBackedHTTPMetadataProvider">
 								<beans:constructor-arg>
-									<beans:value type="java.io.File">${user.home}/.arkcase/acm/sso/idp.xml</beans:value>
+									<beans:bean class="java.util.Timer">
+										<beans:constructor-arg>
+											<beans:value>true</beans:value>
+										</beans:constructor-arg>
+									</beans:bean>
+								</beans:constructor-arg>
+								<beans:constructor-arg>
+									<beans:bean class="org.apache.commons.httpclient.HttpClient"/>
+								</beans:constructor-arg>
+								<beans:constructor-arg>
+									<beans:value type="java.lang.String">${saml.federationMetadata.url}</beans:value>
+								</beans:constructor-arg>
+								<beans:constructor-arg>
+									<beans:value type="java.lang.String">${saml.federationMetadata.backupFile}</beans:value>
 								</beans:constructor-arg>
 								<beans:property
 									name="parserPool"
