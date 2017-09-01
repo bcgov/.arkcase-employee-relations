@@ -197,10 +197,10 @@
 									<beans:bean class="org.apache.commons.httpclient.HttpClient"/>
 								</beans:constructor-arg>
 								<beans:constructor-arg>
-									<beans:value type="java.lang.String">${saml.federationmetadata.url}</beans:value>
+									<beans:value type="java.lang.String">${saml.federationMetadata.url}</beans:value>
 								</beans:constructor-arg>
 								<beans:constructor-arg>
-									<beans:value type="java.lang.String">${saml.federationmetadata.backupfile}</beans:value>
+									<beans:value type="java.lang.String">${saml.federationMetadata.backupFile}</beans:value>
 								</beans:constructor-arg>
 								<beans:property
 									name="parserPool"
