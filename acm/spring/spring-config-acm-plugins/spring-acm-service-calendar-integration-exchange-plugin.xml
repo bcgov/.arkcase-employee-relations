@@ -33,7 +33,7 @@
                 </bean>
                 <bean id="calendarFoldersUrlPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
-                    <property name="url" value="/api/{version}/service/calendar/exchange/calendarfolders/recreated"/>
+                    <property name="url" value="/api/{version}/service/calendar/exchange/folders/recreated"/>
                     <property name="requiredPrivilege" ref="acmCalendarEventsListPrivilege"/>
                 </bean>
 
