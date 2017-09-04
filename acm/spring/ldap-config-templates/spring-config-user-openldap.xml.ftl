@@ -20,7 +20,6 @@
                 <beans:entry key="sn" value='${r"${openLdapAddUserConfig.sn}"}'/>
                 <beans:entry key="uid" value='${r"${openLdapAddUserConfig.uid}"}'/>
                 <beans:entry key="mail" value='${r"${openLdapAddUserConfig.mail}"}'/>
-                <beans:entry key="memberOf" value='${r"${openLdapAddUserConfig.memberOf}"}'/>
                 <beans:entry key="userAccountControl" value='${r"${openLdapAddUserConfig.userAccountControl}"}'/>
                 <beans:entry key="userPassword" value='${r"${openLdapAddUserConfig.userPassword}"}'/>
                 <beans:entry key="uidNumber" value='${r"${openLdapAddUserConfig.uidNumber}"}'/>
