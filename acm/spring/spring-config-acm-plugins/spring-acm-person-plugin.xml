@@ -37,6 +37,11 @@
                     <property name="url" value="/api/{version}/plugin/people/{id}/images"/>
                     <property name="requiredPrivilege" ref="acmPersonSavePrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/people/{id}/images/{imageId}"/>
+                    <property name="requiredPrivilege" ref="acmPersonSavePrivilege"/>
+                </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/person/find"/>
