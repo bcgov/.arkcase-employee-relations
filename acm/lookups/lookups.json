@@ -1,1348 +1,1368 @@
 {
-	"standardLookup": [{
-		"addressTypes": [{
-			"key": "Business",
-			"value": "lookups.addressTypes.business"
-		},
-		{
-			"key": "Home",
-			"value": "lookups.common.home"
-		}]
-	},
-	{
-		"aliasTypes": [{
-			"key": "FKA",
-			"value": "lookups.aliasTypes.fka"
-		},
-		{
-			"key": "Married",
-			"value": "lookups.aliasTypes.married"
-		}]
-	},
-	{
-		"dbasTypes": [{
-			"key": "DBA",
-			"value": "DBA"
-		}]
-	},
-	{
-		"fileTypes": [{
-			"key": "ev",
-			"value": "lookups.fileTypes.ev"
-		},
-		{
-			"key": "gr",
-			"value": "lookups.fileTypes.gr"
-		},
-		{
-			"key": "mr",
-			"value": "lookups.fileTypes.mr"
-		},
-		{
-			"key": "noi",
-			"value": "lookups.fileTypes.noi"
-		},
-		{
-			"key": "sig",
-			"value": "lookups.fileTypes.sig"
-		},
-		{
-			"key": "wir",
-			"value": "lookups.fileTypes.wir"
-		}]
-	},
-	{
-		"identificationTypes": [{
-			"key": "ssn",
-			"value": "lookups.identificationTypes.ssn"
-		},
-		{
-			"key": "driverLicense",
-			"value": "lookups.identificationTypes.driverLicense"
-		},
-		{
-			"key": "passport",
-			"value": "lookups.identificationTypes.passport"
-		},
-		{
-			"key": "birthCertificate",
-			"value": "lookups.identificationTypes.birthCertificate"
-		}]
-	},
-	{
-		"countries": [{
-			"key": "AF",
-			"value": "lookups.countries.AF"
-		},
-		{
-			"key": "AX",
-			"value": "lookups.countries.AX"
-		},
-		{
-			"key": "AL",
-			"value": "lookups.countries.AL"
-		},
-		{
-			"key": "DZ",
-			"value": "lookups.countries.DZ"
-		},
-		{
-			"key": "AS",
-			"value": "lookups.countries.AS"
-		},
-		{
-			"key": "AD",
-			"value": "lookups.countries.AD"
-		},
-		{
-			"key": "AO",
-			"value": "lookups.countries.AO"
-		},
-		{
-			"key": "AI",
-			"value": "lookups.countries.AI"
-		},
-		{
-			"key": "AQ",
-			"value": "lookups.countries.AQ"
-		},
-		{
-			"key": "AG",
-			"value": "lookups.countries.AG"
-		},
-		{
-			"key": "AR",
-			"value": "lookups.countries.AR"
-		},
-		{
-			"key": "AM",
-			"value": "lookups.countries.AM"
-		},
-		{
-			"key": "AW",
-			"value": "lookups.countries.AW"
-		},
-		{
-			"key": "AU",
-			"value": "lookups.countries.AU"
-		},
-		{
-			"key": "AT",
-			"value": "lookups.countries.AT"
-		},
-		{
-			"key": "AZ",
-			"value": "lookups.countries.AZ"
-		},
-		{
-			"key": "BS",
-			"value": "lookups.countries.BS"
-		},
-		{
-			"key": "BH",
-			"value": "lookups.countries.BH"
-		},
-		{
-			"key": "BD",
-			"value": "lookups.countries.BD"
-		},
-		{
-			"key": "BB",
-			"value": "lookups.countries.BB"
-		},
-		{
-			"key": "BY",
-			"value": "lookups.countries.BY"
-		},
-		{
-			"key": "BE",
-			"value": "lookups.countries.BE"
-		},
-		{
-			"key": "BZ",
-			"value": "lookups.countries.BZ"
-		},
-		{
-			"key": "BJ",
-			"value": "lookups.countries.BJ"
-		},
-		{
-			"key": "BM",
-			"value": "lookups.countries.BM"
-		},
-		{
-			"key": "BT",
-			"value": "lookups.countries.BT"
-		},
-		{
-			"key": "BO",
-			"value": "lookups.countries.BO"
-		},
-		{
-			"key": "BA",
-			"value": "lookups.countries.BA"
-		},
-		{
-			"key": "BW",
-			"value": "lookups.countries.BW"
-		},
-		{
-			"key": "BV",
-			"value": "lookups.countries.BV"
-		},
-		{
-			"key": "BR",
-			"value": "lookups.countries.BR"
-		},
-		{
-			"key": "IO",
-			"value": "lookups.countries.IO"
-		},
-		{
-			"key": "BN",
-			"value": "lookups.countries.BN"
-		},
-		{
-			"key": "BG",
-			"value": "lookups.countries.BG"
-		},
-		{
-			"key": "BF",
-			"value": "lookups.countries.BF"
-		},
-		{
-			"key": "BI",
-			"value": "lookups.countries.BI"
-		},
-		{
-			"key": "KH",
-			"value": "lookups.countries.KH"
-		},
-		{
-			"key": "CM",
-			"value": "lookups.countries.CM"
-		},
-		{
-			"key": "CA",
-			"value": "lookups.countries.CA"
-		},
-		{
-			"key": "CV",
-			"value": "lookups.countries.CV"
-		},
-		{
-			"key": "KY",
-			"value": "lookups.countries.KY"
-		},
-		{
-			"key": "CF",
-			"value": "lookups.countries.CF"
-		},
-		{
-			"key": "TD",
-			"value": "lookups.countries.TD"
-		},
-		{
-			"key": "CL",
-			"value": "lookups.countries.CL"
-		},
-		{
-			"key": "CN",
-			"value": "lookups.countries.CN"
-		},
-		{
-			"key": "CX",
-			"value": "lookups.countries.CX"
-		},
-		{
-			"key": "CC",
-			"value": "lookups.countries.CC"
-		},
-		{
-			"key": "CO",
-			"value": "lookups.countries.CO"
-		},
-		{
-			"key": "KM",
-			"value": "lookups.countries.KM"
-		},
-		{
-			"key": "CG",
-			"value": "lookups.countries.CG"
-		},
-		{
-			"key": "CD",
-			"value": "lookups.countries.CD"
-		},
-		{
-			"key": "CK",
-			"value": "lookups.countries.CK"
-		},
-		{
-			"key": "CR",
-			"value": "lookups.countries.CR"
-		},
-		{
-			"key": "CI",
-			"value": "lookups.countries.CI"
-		},
-		{
-			"key": "HR",
-			"value": "lookups.countries.HR"
-		},
-		{
-			"key": "CU",
-			"value": "lookups.countries.CU"
-		},
-		{
-			"key": "CW",
-			"value": "lookups.countries.CW"
-		},
-		{
-			"key": "CY",
-			"value": "lookups.countries.CY"
-		},
-		{
-			"key": "CZ",
-			"value": "lookups.countries.CZ"
-		},
-		{
-			"key": "DK",
-			"value": "lookups.countries.DK"
-		},
-		{
-			"key": "DJ",
-			"value": "lookups.countries.DJ"
-		},
-		{
-			"key": "DM",
-			"value": "lookups.countries.DM"
-		},
-		{
-			"key": "DO",
-			"value": "lookups.countries.DO"
-		},
-		{
-			"key": "EC",
-			"value": "lookups.countries.EC"
-		},
-		{
-			"key": "EG",
-			"value": "lookups.countries.EG"
-		},
-		{
-			"key": "SV",
-			"value": "lookups.countries.SV"
-		},
-		{
-			"key": "GQ",
-			"value": "lookups.countries.GQ"
-		},
-		{
-			"key": "ER",
-			"value": "lookups.countries.ER"
-		},
-		{
-			"key": "EE",
-			"value": "lookups.countries.EE"
-		},
-		{
-			"key": "ET",
-			"value": "lookups.countries.ET"
-		},
-		{
-			"key": "FK",
-			"value": "lookups.countries.FK"
-		},
-		{
-			"key": "FO",
-			"value": "lookups.countries.FO"
-		},
-		{
-			"key": "FJ",
-			"value": "lookups.countries.FJ"
-		},
-		{
-			"key": "FI",
-			"value": "lookups.countries.FI"
-		},
-		{
-			"key": "FR",
-			"value": "lookups.countries.FR"
-		},
-		{
-			"key": "GF",
-			"value": "lookups.countries.GF"
-		},
-		{
-			"key": "PF",
-			"value": "lookups.countries.PF"
-		},
-		{
-			"key": "TF",
-			"value": "lookups.countries.TF"
-		},
-		{
-			"key": "GA",
-			"value": "lookups.countries.GA"
-		},
-		{
-			"key": "GM",
-			"value": "lookups.countries.GM"
-		},
-		{
-			"key": "GE",
-			"value": "lookups.countries.GE"
-		},
-		{
-			"key": "DE",
-			"value": "lookups.countries.DE"
-		},
-		{
-			"key": "GH",
-			"value": "lookups.countries.GH"
-		},
-		{
-			"key": "GI",
-			"value": "lookups.countries.GI"
-		},
-		{
-			"key": "GR",
-			"value": "lookups.countries.GR"
-		},
-		{
-			"key": "GL",
-			"value": "lookups.countries.GL"
-		},
-		{
-			"key": "GD",
-			"value": "lookups.countries.GD"
-		},
-		{
-			"key": "GP",
-			"value": "lookups.countries.GP"
-		},
-		{
-			"key": "GU",
-			"value": "lookups.countries.GU"
-		},
-		{
-			"key": "GT",
-			"value": "lookups.countries.GT"
-		},
-		{
-			"key": "GG",
-			"value": "lookups.countries.GG"
-		},
-		{
-			"key": "GN",
-			"value": "lookups.countries.GN"
-		},
-		{
-			"key": "GW",
-			"value": "lookups.countries.GW"
-		},
-		{
-			"key": "GY",
-			"value": "lookups.countries.GY"
-		},
-		{
-			"key": "HT",
-			"value": "lookups.countries.HT"
-		},
-		{
-			"key": "HM",
-			"value": "lookups.countries.HM"
-		},
-		{
-			"key": "VA",
-			"value": "lookups.countries.VA"
-		},
-		{
-			"key": "HN",
-			"value": "lookups.countries.HN"
-		},
-		{
-			"key": "HK",
-			"value": "lookups.countries.HK"
-		},
-		{
-			"key": "HU",
-			"value": "lookups.countries.HU"
-		},
-		{
-			"key": "IS",
-			"value": "lookups.countries.IS"
-		},
-		{
-			"key": "IN",
-			"value": "lookups.countries.IN"
-		},
-		{
-			"key": "ID",
-			"value": "lookups.countries.ID"
-		},
-		{
-			"key": "IR",
-			"value": "lookups.countries.IR"
-		},
-		{
-			"key": "IQ",
-			"value": "lookups.countries.IQ"
-		},
-		{
-			"key": "IE",
-			"value": "lookups.countries.IE"
-		},
-		{
-			"key": "IM",
-			"value": "lookups.countries.IM"
-		},
-		{
-			"key": "IL",
-			"value": "lookups.countries.IL"
-		},
-		{
-			"key": "IT",
-			"value": "lookups.countries.IT"
-		},
-		{
-			"key": "JM",
-			"value": "lookups.countries.JM"
-		},
-		{
-			"key": "JP",
-			"value": "lookups.countries.JP"
-		},
-		{
-			"key": "JE",
-			"value": "lookups.countries.JE"
-		},
-		{
-			"key": "JO",
-			"value": "lookups.countries.JO"
-		},
-		{
-			"key": "KZ",
-			"value": "lookups.countries.KZ"
-		},
-		{
-			"key": "KE",
-			"value": "lookups.countries.KE"
-		},
-		{
-			"key": "KI",
-			"value": "lookups.countries.KI"
-		},
-		{
-			"key": "KP",
-			"value": "lookups.countries.KP"
-		},
-		{
-			"key": "KR",
-			"value": "lookups.countries.KR"
-		},
-		{
-			"key": "KW",
-			"value": "lookups.countries.KW"
-		},
-		{
-			"key": "KG",
-			"value": "lookups.countries.KG"
-		},
-		{
-			"key": "LA",
-			"value": "lookups.countries.LA"
-		},
-		{
-			"key": "LV",
-			"value": "lookups.countries.LV"
-		},
-		{
-			"key": "LB",
-			"value": "lookups.countries.LB"
-		},
-		{
-			"key": "LS",
-			"value": "lookups.countries.LS"
-		},
-		{
-			"key": "LR",
-			"value": "lookups.countries.LR"
-		},
-		{
-			"key": "LY",
-			"value": "lookups.countries.LY"
-		},
-		{
-			"key": "LI",
-			"value": "lookups.countries.LI"
-		},
-		{
-			"key": "LT",
-			"value": "lookups.countries.LT"
-		},
-		{
-			"key": "LU",
-			"value": "lookups.countries.LU"
-		},
-		{
-			"key": "MO",
-			"value": "lookups.countries.MO"
-		},
-		{
-			"key": "MK",
-			"value": "lookups.countries.MK"
-		},
-		{
-			"key": "MG",
-			"value": "lookups.countries.MG"
-		},
-		{
-			"key": "MW",
-			"value": "lookups.countries.MW"
-		},
-		{
-			"key": "MY",
-			"value": "lookups.countries.MY"
-		},
-		{
-			"key": "MV",
-			"value": "lookups.countries.MV"
-		},
-		{
-			"key": "ML",
-			"value": "lookups.countries.ML"
-		},
-		{
-			"key": "MT",
-			"value": "lookups.countries.MT"
-		},
-		{
-			"key": "MH",
-			"value": "lookups.countries.MH"
-		},
-		{
-			"key": "MQ",
-			"value": "lookups.countries.MQ"
-		},
-		{
-			"key": "MR",
-			"value": "lookups.countries.MR"
-		},
-		{
-			"key": "MU",
-			"value": "lookups.countries.MU"
-		},
-		{
-			"key": "YT",
-			"value": "lookups.countries.YT"
-		},
-		{
-			"key": "MX",
-			"value": "lookups.countries.MX"
-		},
-		{
-			"key": "FM",
-			"value": "lookups.countries.FM"
-		},
-		{
-			"key": "MD",
-			"value": "lookups.countries.MD"
-		},
-		{
-			"key": "MC",
-			"value": "lookups.countries.MC"
-		},
-		{
-			"key": "MN",
-			"value": "lookups.countries.MN"
-		},
-		{
-			"key": "ME",
-			"value": "lookups.countries.ME"
-		},
-		{
-			"key": "MS",
-			"value": "lookups.countries.MS"
-		},
-		{
-			"key": "MA",
-			"value": "lookups.countries.MA"
-		},
-		{
-			"key": "MZ",
-			"value": "lookups.countries.MZ"
-		},
-		{
-			"key": "MM",
-			"value": "lookups.countries.MM"
-		},
-		{
-			"key": "NA",
-			"value": "lookups.countries.NA"
-		},
-		{
-			"key": "NR",
-			"value": "lookups.countries.NR"
-		},
-		{
-			"key": "NP",
-			"value": "lookups.countries.NP"
-		},
-		{
-			"key": "NL",
-			"value": "lookups.countries.NL"
-		},
-		{
-			"key": "AN",
-			"value": "lookups.countries.AN"
-		},
-		{
-			"key": "NC",
-			"value": "lookups.countries.NC"
-		},
-		{
-			"key": "NZ",
-			"value": "lookups.countries.NZ"
-		},
-		{
-			"key": "NI",
-			"value": "lookups.countries.NI"
-		},
-		{
-			"key": "NE",
-			"value": "lookups.countries.NE"
-		},
-		{
-			"key": "NG",
-			"value": "lookups.countries.NG"
-		},
-		{
-			"key": "NU",
-			"value": "lookups.countries.NU"
-		},
-		{
-			"key": "NF",
-			"value": "lookups.countries.NF"
-		},
-		{
-			"key": "MP",
-			"value": "lookups.countries.MP"
-		},
-		{
-			"key": "NO",
-			"value": "lookups.countries.NO"
-		},
-		{
-			"key": "OM",
-			"value": "lookups.countries.OM"
-		},
-		{
-			"key": "PK",
-			"value": "lookups.countries.PK"
-		},
-		{
-			"key": "PW",
-			"value": "lookups.countries.PW"
-		},
-		{
-			"key": "PS",
-			"value": "lookups.countries.PS"
-		},
-		{
-			"key": "PA",
-			"value": "lookups.countries.PA"
-		},
-		{
-			"key": "PG",
-			"value": "lookups.countries.PG"
-		},
-		{
-			"key": "PY",
-			"value": "lookups.countries.PY"
-		},
-		{
-			"key": "PE",
-			"value": "lookups.countries.PE"
-		},
-		{
-			"key": "PH",
-			"value": "lookups.countries.PH"
-		},
-		{
-			"key": "PN",
-			"value": "lookups.countries.PN"
-		},
-		{
-			"key": "PL",
-			"value": "lookups.countries.PL"
-		},
-		{
-			"key": "PT",
-			"value": "lookups.countries.PT"
-		},
-		{
-			"key": "PR",
-			"value": "lookups.countries.PR"
-		},
-		{
-			"key": "QA",
-			"value": "lookups.countries.QA"
-		},
-		{
-			"key": "RE",
-			"value": "lookups.countries.RE"
-		},
-		{
-			"key": "RO",
-			"value": "lookups.countries.RO"
-		},
-		{
-			"key": "RU",
-			"value": "lookups.countries.RU"
-		},
-		{
-			"key": "RW",
-			"value": "lookups.countries.RW"
-		},
-		{
-			"key": "SH",
-			"value": "lookups.countries.SH"
-		},
-		{
-			"key": "KN",
-			"value": "lookups.countries.KN"
-		},
-		{
-			"key": "LC",
-			"value": "lookups.countries.LC"
-		},
-		{
-			"key": "PM",
-			"value": "lookups.countries.PM"
-		},
-		{
-			"key": "VC",
-			"value": "lookups.countries.VC"
-		},
-		{
-			"key": "WS",
-			"value": "lookups.countries.WS"
-		},
-		{
-			"key": "SM",
-			"value": "lookups.countries.SM"
-		},
-		{
-			"key": "ST",
-			"value": "lookups.countries.ST"
-		},
-		{
-			"key": "SA",
-			"value": "lookups.countries.SA"
-		},
-		{
-			"key": "SN",
-			"value": "lookups.countries.SN"
-		},
-		{
-			"key": "RS",
-			"value": "lookups.countries.RS"
-		},
-		{
-			"key": "SC",
-			"value": "lookups.countries.SC"
-		},
-		{
-			"key": "SL",
-			"value": "lookups.countries.SL"
-		},
-		{
-			"key": "SG",
-			"value": "lookups.countries.SG"
-		},
-		{
-			"key": "SX",
-			"value": "lookups.countries.SX"
-		},
-		{
-			"key": "SK",
-			"value": "lookups.countries.SK"
-		},
-		{
-			"key": "SI",
-			"value": "lookups.countries.SI"
-		},
-		{
-			"key": "SB",
-			"value": "lookups.countries.SB"
-		},
-		{
-			"key": "SO",
-			"value": "lookups.countries.SO"
-		},
-		{
-			"key": "ZA",
-			"value": "lookups.countries.ZA"
-		},
-		{
-			"key": "GS",
-			"value": "lookups.countries.GS"
-		},
-		{
-			"key": "SS",
-			"value": "lookups.countries.SS"
-		},
-		{
-			"key": "ES",
-			"value": "lookups.countries.ES"
-		},
-		{
-			"key": "LK",
-			"value": "lookups.countries.LK"
-		},
-		{
-			"key": "SD",
-			"value": "lookups.countries.SD"
-		},
-		{
-			"key": "SR",
-			"value": "lookups.countries.SR"
-		},
-		{
-			"key": "SJ",
-			"value": "lookups.countries.SJ"
-		},
-		{
-			"key": "SZ",
-			"value": "lookups.countries.SZ"
-		},
-		{
-			"key": "SE",
-			"value": "lookups.countries.SE"
-		},
-		{
-			"key": "CH",
-			"value": "lookups.countries.CH"
-		},
-		{
-			"key": "SY",
-			"value": "lookups.countries.SY"
-		},
-		{
-			"key": "TW",
-			"value": "lookups.countries.TW"
-		},
-		{
-			"key": "TJ",
-			"value": "lookups.countries.TJ"
-		},
-		{
-			"key": "TZ",
-			"value": "lookups.countries.TZ"
-		},
-		{
-			"key": "TH",
-			"value": "lookups.countries.TH"
-		},
-		{
-			"key": "TL",
-			"value": "lookups.countries.TL"
-		},
-		{
-			"key": "TG",
-			"value": "lookups.countries.TG"
-		},
-		{
-			"key": "TK",
-			"value": "lookups.countries.TK"
-		},
-		{
-			"key": "TO",
-			"value": "lookups.countries.TO"
-		},
-		{
-			"key": "TT",
-			"value": "lookups.countries.TT"
-		},
-		{
-			"key": "TN",
-			"value": "lookups.countries.TN"
-		},
-		{
-			"key": "TR",
-			"value": "lookups.countries.TR"
-		},
-		{
-			"key": "TM",
-			"value": "lookups.countries.TM"
-		},
-		{
-			"key": "TC",
-			"value": "lookups.countries.TC"
-		},
-		{
-			"key": "TV",
-			"value": "lookups.countries.TV"
-		},
-		{
-			"key": "UG",
-			"value": "lookups.countries.UG"
-		},
-		{
-			"key": "UA",
-			"value": "lookups.countries.UA"
-		},
-		{
-			"key": "AE",
-			"value": "lookups.countries.AE"
-		},
-		{
-			"key": "GB",
-			"value": "lookups.countries.GB"
-		},
-		{
-			"key": "US",
-			"value": "lookups.countries.US"
-		},
-		{
-			"key": "UM",
-			"value": "lookups.countries.UM"
-		},
-		{
-			"key": "UY",
-			"value": "lookups.countries.UY"
-		},
-		{
-			"key": "UZ",
-			"value": "lookups.countries.UZ"
-		},
-		{
-			"key": "VU",
-			"value": "lookups.countries.VU"
-		},
-		{
-			"key": "VE",
-			"value": "lookups.countries.VE"
-		},
-		{
-			"key": "VN",
-			"value": "lookups.countries.VN"
-		},
-		{
-			"key": "VG",
-			"value": "lookups.countries.VG"
-		},
-		{
-			"key": "VI",
-			"value": "lookups.countries.VI"
-		},
-		{
-			"key": "WF",
-			"value": "lookups.countries.WF"
-		},
-		{
-			"key": "EH",
-			"value": "lookups.countries.EH"
-		},
-		{
-			"key": "YE",
-			"value": "lookups.countries.YE"
-		},
-		{
-			"key": "ZM",
-			"value": "lookups.countries.ZM"
-		},
-		{
-			"key": "ZW",
-			"value": "lookups.countries.ZW"
-		}]
-	},
-	{
-		"organizationIdTypes": [{
-			"key": "EIN",
-			"value": "lookups.organizationIdTypes.ein"
-		},
-		{
-			"key": "DUNS",
-			"value": "lookups.organizationIdTypes.duns"
-		},
-		{
-			"key": "Cage Code",
-			"value": "lookups.organizationIdTypes.cageCode"
-		}]
-	},
-	{
-		"organizationTypes": [{
-			"key": "Non-profit",
-			"value": "lookups.organizationTypes.non-profit"
-		},
-		{
-			"key": "Government",
-			"value": "lookups.organizationTypes.government"
-		},
-		{
-			"key": "Corporation",
-			"value": "lookups.organizationTypes.corporation"
-		}]
-	},
-	{
-		"personTitles": [{
-			"key": "mr",
-			"value": "lookups.personTitles.mr"
-		},
-		{
-			"key": "mrs",
-			"value": "lookups.personTitles.mrs"
-		},
-		{
-			"key": "ms",
-			"value": "lookups.personTitles.ms"
-		},
-		{
-			"key": "miss",
-			"value": "lookups.personTitles.miss"
-		}]
-	},
-	{
-		"organizationalParticipantTypes": [{
-			"key": "owning group",
-			"value": "lookups.common.owning-group"
-		},
-		{
-			"key": "collaborator",
-			"value": "lookups.common.collaborator"
-		},
-		{
-			"key": "reader",
-			"value": "lookups.common.reader"
-		},
-		{
-			"key": "No Access",
-			"value": "lookups.common.no-access"
-		}]
-	},
-	{
-		"entitiesParticipantTypes": [{
-			"key": "assignee",
-			"value": "lookups.entitiesParticipantTypes.assignee"
-		},
-		{
-			"key": "co-owner",
-			"value": "lookups.entitiesParticipantTypes.co-owner"
-		},
-		{
-			"key": "supervisor",
-			"value": "lookups.entitiesParticipantTypes.supervisor"
-		},
-		{
-			"key": "owning group",
-			"value": "lookups.common.owning-group"
-		},
-		{
-			"key": "approver",
-			"value": "lookups.entitiesParticipantTypes.approver"
-		},
-		{
-			"key": "collaborator",
-			"value": "lookups.common.collaborator"
-		},
-		{
-			"key": "follower",
-			"value": "lookups.entitiesParticipantTypes.follower"
-		},
-		{
-			"key": "reader",
-			"value": "lookups.common.reader"
-		},
-		{
-			"key": "No Access",
-			"value": "lookups.common.no-access"
-		}]
-	},
-	{
-		"locales": []
-	}],
-	"nestedLookup": [{
-		"contactMethodTypes": [{
-			"key": "phone",
-			"value": "lookups.contactMethodTypes.phone",
-			"subLookup": [{
-				"key": "Home",
-				"value": "lookups.common.home"
-			},
-			{
-				"key": "Work",
-				"value": "lookups.contactMethodTypes.work"
-			},
-			{
-				"key": "Mobile",
-				"value": "lookups.contactMethodTypes.mobile"
-			}]
-		},
-		{
-			"key": "Fax",
-			"value": "lookups.contactMethodTypes.fax",
-			"subLookup": []
-		},
-		{
-			"key": "email",
-			"value": "lookups.contactMethodTypes.email",
-			"subLookup": [{
-				"key": "Personal",
-				"value": "Personal"
-			},
-			{
-				"key": "Business",
-				"value": "Business"
-			}]
-		},
-		{
-			"key": "url",
-			"value": "Url",
-			"subLookup": [{
-				"key": "Web Site",
-				"value": "Web Site"
-			},
-			{
-				"key": "Facebook",
-				"value": "Facebook"
-			},
-			{
-				"key": "LinkedIn",
-				"value": "LinkedIn"
-			},
-			{
-				"key": "Twitter",
-				"value": "Twitter"
-			},
-			{
-				"key": "Other",
-				"value": "Other"
-			}]
-		}]
-	}],
-	"inverseValuesLookup": [{
-		"organizationRelationTypes": [{
-			"key": "partner",
-			"value": "lookups.organizationRelationTypes.partner",
-			"inverseKey": "partner",
-			"inverseValue": "lookups.organizationRelationTypes.partner"
-		},
-		{
-			"key": "subCompany",
-			"value": "lookups.organizationRelationTypes.subCompany",
-			"inverseKey": "parentCompany",
-			"inverseValue": "lookups.organizationRelationTypes.parentCompany"
-		}]
-	},
-	{
-		"personOrganizationRelationTypes": [{
-			"key": "owner",
-			"value": "lookups.personOrganizationRelationTypes.owner",
-			"inverseKey": "owned",
-			"inverseValue": "lookups.personOrganizationRelationTypes.owned"
-		},
-		{
-			"key": "employee",
-			"value": "lookups.personOrganizationRelationTypes.employee",
-			"inverseKey": "employer",
-			"inverseValue": "lookups.personOrganizationRelationTypes.employer"
-		},
-		{
-			"key": "partner",
-			"value": "lookups.personOrganizationRelationTypes.partner",
-			"inverseKey": "partner",
-			"inverseValue": "lookups.personOrganizationRelationTypes.partner"
-		},
-		{
-			"key": "director-president-ceo",
-			"value": "lookups.personOrganizationRelationTypes.director-president-ceo",
-			"inverseKey": "director-president-ceo",
-			"inverseValue": "lookups.personOrganizationRelationTypes.director-president-ceo"
-		},
-		{
-			"key": "manager",
-			"value": "lookups.personOrganizationRelationTypes.manager",
-			"inverseKey": "manager",
-			"inverseValue": "lookups.personOrganizationRelationTypes.manager"
-		},
-		{
-			"key": "general-counsel",
-			"value": "lookups.personOrganizationRelationTypes.general-counsel",
-			"inverseKey": "general-counsel",
-			"inverseValue": "lookups.personOrganizationRelationTypes.general-counsel"
-		},
-		{
-			"key": "executive",
-			"value": "lookups.personOrganizationRelationTypes.executive",
-			"inverseKey": "executive",
-			"inverseValue": "lookups.personOrganizationRelationTypes.executive"
-		}]
-	},
-	{
-		"organizationPersonRelationTypes": [{
-			"key": "owned",
-			"value": "lookups.personOrganizationRelationTypes.owned",
-			"inverseKey": "owner",
-			"inverseValue": "lookups.personOrganizationRelationTypes.owner"
-		},
-		{
-			"key": "employer",
-			"value": "lookups.personOrganizationRelationTypes.employer",
-			"inverseKey": "employee",
-			"inverseValue": "lookups.personOrganizationRelationTypes.employee"
-		},
-		{
-			"key": "partner",
-			"value": "lookups.personOrganizationRelationTypes.partner",
-			"inverseKey": "partner",
-			"inverseValue": "lookups.personOrganizationRelationTypes.partner"
-		},
-		{
-			"key": "director-president-ceo",
-			"value": "lookups.personOrganizationRelationTypes.director-president-ceo",
-			"inverseKey": "director-president-ceo",
-			"inverseValue": "lookups.personOrganizationRelationTypes.director-president-ceo"
-		},
-		{
-			"key": "manager",
-			"value": "lookups.personOrganizationRelationTypes.manager",
-			"inverseKey": "manager",
-			"inverseValue": "lookups.personOrganizationRelationTypes.manager"
-		},
-		{
-			"key": "general-counsel",
-			"value": "lookups.personOrganizationRelationTypes.general-counsel",
-			"inverseKey": "general-counsel",
-			"inverseValue": "lookups.personOrganizationRelationTypes.general-counsel"
-		},
-		{
-			"key": "executive",
-			"value": "lookups.personOrganizationRelationTypes.executive",
-			"inverseKey": "executive",
-			"inverseValue": "lookups.personOrganizationRelationTypes.executive"
-		}]
-	},
-	{
-		"personRelationTypes": [{
-			"key": "sibling",
-			"value": "lookups.personRelationTypes.sibling",
-			"inverseKey": "sibling",
-			"inverseValue": "lookups.personRelationTypes.sibling"
-		},
-		{
-			"key": "children",
-			"value": "lookups.personRelationTypes.children",
-			"inverseKey": "parent",
-			"inverseValue": "lookups.personRelationTypes.parent"
-		},
-		{
-			"key": "parent",
-			"value": "lookups.personRelationTypes.parent",
-			"inverseKey": "children",
-			"inverseValue": "lookups.personRelationTypes.children"
-		}]
-	}]
+  "inverseValuesLookup": [
+    {"organizationRelationTypes": [
+      {
+        "inverseValue": "admin.lookups.organizationRelationTypes.partner",
+        "inverseKey": "partner",
+        "value": "admin.lookups.organizationRelationTypes.partner",
+        "key": "partner"
+      },
+      {
+        "inverseValue": "admin.lookups.organizationRelationTypes.parentCompany",
+        "inverseKey": "parentCompany",
+        "value": "admin.lookups.organizationRelationTypes.subCompany",
+        "key": "subCompany"
+      }
+    ]},
+    {"personOrganizationRelationTypes": [
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.owned",
+        "inverseKey": "owned",
+        "value": "admin.lookups.personOrganizationRelationTypes.owner",
+        "key": "owner"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.employer",
+        "inverseKey": "employer",
+        "value": "admin.lookups.personOrganizationRelationTypes.employee",
+        "key": "employee"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.partner",
+        "inverseKey": "partner",
+        "value": "admin.lookups.personOrganizationRelationTypes.partner",
+        "key": "partner"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.director-president-ceo",
+        "inverseKey": "director-president-ceo",
+        "value": "admin.lookups.personOrganizationRelationTypes.director-president-ceo",
+        "key": "director-president-ceo"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.manager",
+        "inverseKey": "manager",
+        "value": "admin.lookups.personOrganizationRelationTypes.manager",
+        "key": "manager"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.general-counsel",
+        "inverseKey": "general-counsel",
+        "value": "admin.lookups.personOrganizationRelationTypes.general-counsel",
+        "key": "general-counsel"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.executive",
+        "inverseKey": "executive",
+        "value": "admin.lookups.personOrganizationRelationTypes.executive",
+        "key": "executive"
+      }
+    ]},
+    {"organizationPersonRelationTypes": [
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.owner",
+        "inverseKey": "owner",
+        "value": "admin.lookups.personOrganizationRelationTypes.owned",
+        "key": "owned"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.employee",
+        "inverseKey": "employee",
+        "value": "admin.lookups.personOrganizationRelationTypes.employer",
+        "key": "employer"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.partner",
+        "inverseKey": "partner",
+        "value": "admin.lookups.personOrganizationRelationTypes.partner",
+        "key": "partner"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.director-president-ceo",
+        "inverseKey": "director-president-ceo",
+        "value": "admin.lookups.personOrganizationRelationTypes.director-president-ceo",
+        "key": "director-president-ceo"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.manager",
+        "inverseKey": "manager",
+        "value": "admin.lookups.personOrganizationRelationTypes.manager",
+        "key": "manager"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.general-counsel",
+        "inverseKey": "general-counsel",
+        "value": "admin.lookups.personOrganizationRelationTypes.general-counsel",
+        "key": "general-counsel"
+      },
+      {
+        "inverseValue": "admin.lookups.personOrganizationRelationTypes.executive",
+        "inverseKey": "executive",
+        "value": "admin.lookups.personOrganizationRelationTypes.executive",
+        "key": "executive"
+      }
+    ]},
+    {"personRelationTypes": [
+      {
+        "inverseValue": "admin.lookups.personRelationTypes.sibling",
+        "inverseKey": "sibling",
+        "value": "admin.lookups.personRelationTypes.sibling",
+        "key": "sibling"
+      },
+      {
+        "inverseValue": "admin.lookups.personRelationTypes.parent",
+        "inverseKey": "parent",
+        "value": "admin.lookups.personRelationTypes.children",
+        "key": "children"
+      },
+      {
+        "inverseValue": "admin.lookups.personRelationTypes.children",
+        "inverseKey": "children",
+        "value": "admin.lookups.personRelationTypes.parent",
+        "key": "parent"
+      }
+    ]}
+  ],
+  "nestedLookup": [{"contactMethodTypes": [
+    {
+      "subLookup": [
+        {
+          "value": "admin.lookups.common.home",
+          "key": "Home"
+        },
+        {
+          "value": "admin.lookups.contactMethodTypes.work",
+          "key": "Work"
+        },
+        {
+          "value": "admin.lookups.contactMethodTypes.mobile",
+          "key": "Mobile"
+        }
+      ],
+      "value": "admin.lookups.contactMethodTypes.phone",
+      "key": "phone"
+    },
+    {
+      "subLookup": [],
+      "value": "admin.lookups.contactMethodTypes.fax",
+      "key": "Fax"
+    },
+    {
+      "subLookup": [
+        {
+          "value": "Personal",
+          "key": "Personal"
+        },
+        {
+          "value": "Business",
+          "key": "Business"
+        }
+      ],
+      "value": "admin.lookups.contactMethodTypes.email",
+      "key": "email"
+    },
+    {
+      "subLookup": [
+        {
+          "value": "Web Site",
+          "key": "Web Site"
+        },
+        {
+          "value": "Facebook",
+          "key": "Facebook"
+        },
+        {
+          "value": "LinkedIn",
+          "key": "LinkedIn"
+        },
+        {
+          "value": "Twitter",
+          "key": "Twitter"
+        },
+        {
+          "value": "Other",
+          "key": "Other"
+        }
+      ],
+      "value": "Url",
+      "key": "url"
+    }
+  ]}],
+  "standardLookup": [
+    {"newLookup": [
+      {
+        "value": "value1",
+        "key": "key1"
+      },
+      {
+        "value": "value2",
+        "key": "key2"
+      }
+    ]},
+    {"addressTypes": [
+      {
+        "value": "admin.lookups.addressTypes.business",
+        "key": "Business"
+      },
+      {
+        "value": "admin.lookups.addressTypes.home",
+        "key": "Home"
+      },
+      {
+        "value": "admin.workflows.config.grid.modified",
+        "key": "someKey"
+      }
+    ]},
+    {"aliasTypes": [
+      {
+        "value": "admin.lookups.aliasTypes.fka",
+        "key": "FKA"
+      },
+      {
+        "value": "admin.lookups.aliasTypes.married",
+        "key": "Married"
+      }
+    ]},
+    {"dbasTypes": [{
+      "value": "DBA",
+      "key": "DBA"
+    }]},
+    {"fileTypes": [
+      {
+        "value": "admin.lookups.fileTypes.ev",
+        "key": "ev"
+      },
+      {
+        "value": "admin.lookups.fileTypes.gr",
+        "key": "gr"
+      },
+      {
+        "value": "admin.lookups.fileTypes.mr",
+        "key": "mr"
+      },
+      {
+        "value": "admin.lookups.fileTypes.noi",
+        "key": "noi"
+      },
+      {
+        "value": "admin.lookups.fileTypes.sig",
+        "key": "sig"
+      },
+      {
+        "value": "admin.lookups.fileTypes.wir",
+        "key": "wir"
+      }
+    ]},
+    {"identificationTypes": [
+      {
+        "value": "admin.lookups.identificationTypes.ssn",
+        "key": "ssn"
+      },
+      {
+        "value": "admin.lookups.identificationTypes.driverLicense",
+        "key": "driverLicense"
+      },
+      {
+        "value": "admin.lookups.identificationTypes.passport",
+        "key": "passport"
+      },
+      {
+        "value": "admin.lookups.identificationTypes.birthCertificate",
+        "key": "birthCertificate"
+      }
+    ]},
+    {"countries": [
+      {
+        "value": "admin.lookups.countries.AF",
+        "key": "AF"
+      },
+      {
+        "value": "admin.lookups.countries.AX",
+        "key": "AX"
+      },
+      {
+        "value": "admin.lookups.countries.AL",
+        "key": "AL"
+      },
+      {
+        "value": "admin.lookups.countries.DZ",
+        "key": "DZ"
+      },
+      {
+        "value": "admin.lookups.countries.AS",
+        "key": "AS"
+      },
+      {
+        "value": "admin.lookups.countries.AD",
+        "key": "AD"
+      },
+      {
+        "value": "admin.lookups.countries.AO",
+        "key": "AO"
+      },
+      {
+        "value": "admin.lookups.countries.AI",
+        "key": "AI"
+      },
+      {
+        "value": "admin.lookups.countries.AQ",
+        "key": "AQ"
+      },
+      {
+        "value": "admin.lookups.countries.AG",
+        "key": "AG"
+      },
+      {
+        "value": "admin.lookups.countries.AR",
+        "key": "AR"
+      },
+      {
+        "value": "admin.lookups.countries.AM",
+        "key": "AM"
+      },
+      {
+        "value": "admin.lookups.countries.AW",
+        "key": "AW"
+      },
+      {
+        "value": "admin.lookups.countries.AU",
+        "key": "AU"
+      },
+      {
+        "value": "admin.lookups.countries.AT",
+        "key": "AT"
+      },
+      {
+        "value": "admin.lookups.countries.AZ",
+        "key": "AZ"
+      },
+      {
+        "value": "admin.lookups.countries.BS",
+        "key": "BS"
+      },
+      {
+        "value": "admin.lookups.countries.BH",
+        "key": "BH"
+      },
+      {
+        "value": "admin.lookups.countries.BD",
+        "key": "BD"
+      },
+      {
+        "value": "admin.lookups.countries.BB",
+        "key": "BB"
+      },
+      {
+        "value": "admin.lookups.countries.BY",
+        "key": "BY"
+      },
+      {
+        "value": "admin.lookups.countries.BE",
+        "key": "BE"
+      },
+      {
+        "value": "admin.lookups.countries.BZ",
+        "key": "BZ"
+      },
+      {
+        "value": "admin.lookups.countries.BJ",
+        "key": "BJ"
+      },
+      {
+        "value": "admin.lookups.countries.BM",
+        "key": "BM"
+      },
+      {
+        "value": "admin.lookups.countries.BT",
+        "key": "BT"
+      },
+      {
+        "value": "admin.lookups.countries.BO",
+        "key": "BO"
+      },
+      {
+        "value": "admin.lookups.countries.BA",
+        "key": "BA"
+      },
+      {
+        "value": "admin.lookups.countries.BW",
+        "key": "BW"
+      },
+      {
+        "value": "admin.lookups.countries.BV",
+        "key": "BV"
+      },
+      {
+        "value": "admin.lookups.countries.BR",
+        "key": "BR"
+      },
+      {
+        "value": "admin.lookups.countries.IO",
+        "key": "IO"
+      },
+      {
+        "value": "admin.lookups.countries.BN",
+        "key": "BN"
+      },
+      {
+        "value": "admin.lookups.countries.BG",
+        "key": "BG"
+      },
+      {
+        "value": "admin.lookups.countries.BF",
+        "key": "BF"
+      },
+      {
+        "value": "admin.lookups.countries.BI",
+        "key": "BI"
+      },
+      {
+        "value": "admin.lookups.countries.KH",
+        "key": "KH"
+      },
+      {
+        "value": "admin.lookups.countries.CM",
+        "key": "CM"
+      },
+      {
+        "value": "admin.lookups.countries.CA",
+        "key": "CA"
+      },
+      {
+        "value": "admin.lookups.countries.CV",
+        "key": "CV"
+      },
+      {
+        "value": "admin.lookups.countries.KY",
+        "key": "KY"
+      },
+      {
+        "value": "admin.lookups.countries.CF",
+        "key": "CF"
+      },
+      {
+        "value": "admin.lookups.countries.TD",
+        "key": "TD"
+      },
+      {
+        "value": "admin.lookups.countries.CL",
+        "key": "CL"
+      },
+      {
+        "value": "admin.lookups.countries.CN",
+        "key": "CN"
+      },
+      {
+        "value": "admin.lookups.countries.CX",
+        "key": "CX"
+      },
+      {
+        "value": "admin.lookups.countries.CC",
+        "key": "CC"
+      },
+      {
+        "value": "admin.lookups.countries.CO",
+        "key": "CO"
+      },
+      {
+        "value": "admin.lookups.countries.KM",
+        "key": "KM"
+      },
+      {
+        "value": "admin.lookups.countries.CG",
+        "key": "CG"
+      },
+      {
+        "value": "admin.lookups.countries.CD",
+        "key": "CD"
+      },
+      {
+        "value": "admin.lookups.countries.CK",
+        "key": "CK"
+      },
+      {
+        "value": "admin.lookups.countries.CR",
+        "key": "CR"
+      },
+      {
+        "value": "admin.lookups.countries.CI",
+        "key": "CI"
+      },
+      {
+        "value": "admin.lookups.countries.HR",
+        "key": "HR"
+      },
+      {
+        "value": "admin.lookups.countries.CU",
+        "key": "CU"
+      },
+      {
+        "value": "admin.lookups.countries.CW",
+        "key": "CW"
+      },
+      {
+        "value": "admin.lookups.countries.CY",
+        "key": "CY"
+      },
+      {
+        "value": "admin.lookups.countries.CZ",
+        "key": "CZ"
+      },
+      {
+        "value": "admin.lookups.countries.DK",
+        "key": "DK"
+      },
+      {
+        "value": "admin.lookups.countries.DJ",
+        "key": "DJ"
+      },
+      {
+        "value": "admin.lookups.countries.DM",
+        "key": "DM"
+      },
+      {
+        "value": "admin.lookups.countries.DO",
+        "key": "DO"
+      },
+      {
+        "value": "admin.lookups.countries.EC",
+        "key": "EC"
+      },
+      {
+        "value": "admin.lookups.countries.EG",
+        "key": "EG"
+      },
+      {
+        "value": "admin.lookups.countries.SV",
+        "key": "SV"
+      },
+      {
+        "value": "admin.lookups.countries.GQ",
+        "key": "GQ"
+      },
+      {
+        "value": "admin.lookups.countries.ER",
+        "key": "ER"
+      },
+      {
+        "value": "admin.lookups.countries.EE",
+        "key": "EE"
+      },
+      {
+        "value": "admin.lookups.countries.ET",
+        "key": "ET"
+      },
+      {
+        "value": "admin.lookups.countries.FK",
+        "key": "FK"
+      },
+      {
+        "value": "admin.lookups.countries.FO",
+        "key": "FO"
+      },
+      {
+        "value": "admin.lookups.countries.FJ",
+        "key": "FJ"
+      },
+      {
+        "value": "admin.lookups.countries.FI",
+        "key": "FI"
+      },
+      {
+        "value": "admin.lookups.countries.FR",
+        "key": "FR"
+      },
+      {
+        "value": "admin.lookups.countries.GF",
+        "key": "GF"
+      },
+      {
+        "value": "admin.lookups.countries.PF",
+        "key": "PF"
+      },
+      {
+        "value": "admin.lookups.countries.TF",
+        "key": "TF"
+      },
+      {
+        "value": "admin.lookups.countries.GA",
+        "key": "GA"
+      },
+      {
+        "value": "admin.lookups.countries.GM",
+        "key": "GM"
+      },
+      {
+        "value": "admin.lookups.countries.GE",
+        "key": "GE"
+      },
+      {
+        "value": "admin.lookups.countries.DE",
+        "key": "DE"
+      },
+      {
+        "value": "admin.lookups.countries.GH",
+        "key": "GH"
+      },
+      {
+        "value": "admin.lookups.countries.GI",
+        "key": "GI"
+      },
+      {
+        "value": "admin.lookups.countries.GR",
+        "key": "GR"
+      },
+      {
+        "value": "admin.lookups.countries.GL",
+        "key": "GL"
+      },
+      {
+        "value": "admin.lookups.countries.GD",
+        "key": "GD"
+      },
+      {
+        "value": "admin.lookups.countries.GP",
+        "key": "GP"
+      },
+      {
+        "value": "admin.lookups.countries.GU",
+        "key": "GU"
+      },
+      {
+        "value": "admin.lookups.countries.GT",
+        "key": "GT"
+      },
+      {
+        "value": "admin.lookups.countries.GG",
+        "key": "GG"
+      },
+      {
+        "value": "admin.lookups.countries.GN",
+        "key": "GN"
+      },
+      {
+        "value": "admin.lookups.countries.GW",
+        "key": "GW"
+      },
+      {
+        "value": "admin.lookups.countries.GY",
+        "key": "GY"
+      },
+      {
+        "value": "admin.lookups.countries.HT",
+        "key": "HT"
+      },
+      {
+        "value": "admin.lookups.countries.HM",
+        "key": "HM"
+      },
+      {
+        "value": "admin.lookups.countries.VA",
+        "key": "VA"
+      },
+      {
+        "value": "admin.lookups.countries.HN",
+        "key": "HN"
+      },
+      {
+        "value": "admin.lookups.countries.HK",
+        "key": "HK"
+      },
+      {
+        "value": "admin.lookups.countries.HU",
+        "key": "HU"
+      },
+      {
+        "value": "admin.lookups.countries.IS",
+        "key": "IS"
+      },
+      {
+        "value": "admin.lookups.countries.IN",
+        "key": "IN"
+      },
+      {
+        "value": "admin.lookups.countries.ID",
+        "key": "ID"
+      },
+      {
+        "value": "admin.lookups.countries.IR",
+        "key": "IR"
+      },
+      {
+        "value": "admin.lookups.countries.IQ",
+        "key": "IQ"
+      },
+      {
+        "value": "admin.lookups.countries.IE",
+        "key": "IE"
+      },
+      {
+        "value": "admin.lookups.countries.IM",
+        "key": "IM"
+      },
+      {
+        "value": "admin.lookups.countries.IL",
+        "key": "IL"
+      },
+      {
+        "value": "admin.lookups.countries.IT",
+        "key": "IT"
+      },
+      {
+        "value": "admin.lookups.countries.JM",
+        "key": "JM"
+      },
+      {
+        "value": "admin.lookups.countries.JP",
+        "key": "JP"
+      },
+      {
+        "value": "admin.lookups.countries.JE",
+        "key": "JE"
+      },
+      {
+        "value": "admin.lookups.countries.JO",
+        "key": "JO"
+      },
+      {
+        "value": "admin.lookups.countries.KZ",
+        "key": "KZ"
+      },
+      {
+        "value": "admin.lookups.countries.KE",
+        "key": "KE"
+      },
+      {
+        "value": "admin.lookups.countries.KI",
+        "key": "KI"
+      },
+      {
+        "value": "admin.lookups.countries.KP",
+        "key": "KP"
+      },
+      {
+        "value": "admin.lookups.countries.KR",
+        "key": "KR"
+      },
+      {
+        "value": "admin.lookups.countries.KW",
+        "key": "KW"
+      },
+      {
+        "value": "admin.lookups.countries.KG",
+        "key": "KG"
+      },
+      {
+        "value": "admin.lookups.countries.LA",
+        "key": "LA"
+      },
+      {
+        "value": "admin.lookups.countries.LV",
+        "key": "LV"
+      },
+      {
+        "value": "admin.lookups.countries.LB",
+        "key": "LB"
+      },
+      {
+        "value": "admin.lookups.countries.LS",
+        "key": "LS"
+      },
+      {
+        "value": "admin.lookups.countries.LR",
+        "key": "LR"
+      },
+      {
+        "value": "admin.lookups.countries.LY",
+        "key": "LY"
+      },
+      {
+        "value": "admin.lookups.countries.LI",
+        "key": "LI"
+      },
+      {
+        "value": "admin.lookups.countries.LT",
+        "key": "LT"
+      },
+      {
+        "value": "admin.lookups.countries.LU",
+        "key": "LU"
+      },
+      {
+        "value": "admin.lookups.countries.MO",
+        "key": "MO"
+      },
+      {
+        "value": "admin.lookups.countries.MK",
+        "key": "MK"
+      },
+      {
+        "value": "admin.lookups.countries.MG",
+        "key": "MG"
+      },
+      {
+        "value": "admin.lookups.countries.MW",
+        "key": "MW"
+      },
+      {
+        "value": "admin.lookups.countries.MY",
+        "key": "MY"
+      },
+      {
+        "value": "admin.lookups.countries.MV",
+        "key": "MV"
+      },
+      {
+        "value": "admin.lookups.countries.ML",
+        "key": "ML"
+      },
+      {
+        "value": "admin.lookups.countries.MT",
+        "key": "MT"
+      },
+      {
+        "value": "admin.lookups.countries.MH",
+        "key": "MH"
+      },
+      {
+        "value": "admin.lookups.countries.MQ",
+        "key": "MQ"
+      },
+      {
+        "value": "admin.lookups.countries.MR",
+        "key": "MR"
+      },
+      {
+        "value": "admin.lookups.countries.MU",
+        "key": "MU"
+      },
+      {
+        "value": "admin.lookups.countries.YT",
+        "key": "YT"
+      },
+      {
+        "value": "admin.lookups.countries.MX",
+        "key": "MX"
+      },
+      {
+        "value": "admin.lookups.countries.FM",
+        "key": "FM"
+      },
+      {
+        "value": "admin.lookups.countries.MD",
+        "key": "MD"
+      },
+      {
+        "value": "admin.lookups.countries.MC",
+        "key": "MC"
+      },
+      {
+        "value": "admin.lookups.countries.MN",
+        "key": "MN"
+      },
+      {
+        "value": "admin.lookups.countries.ME",
+        "key": "ME"
+      },
+      {
+        "value": "admin.lookups.countries.MS",
+        "key": "MS"
+      },
+      {
+        "value": "admin.lookups.countries.MA",
+        "key": "MA"
+      },
+      {
+        "value": "admin.lookups.countries.MZ",
+        "key": "MZ"
+      },
+      {
+        "value": "admin.lookups.countries.MM",
+        "key": "MM"
+      },
+      {
+        "value": "admin.lookups.countries.NA",
+        "key": "NA"
+      },
+      {
+        "value": "admin.lookups.countries.NR",
+        "key": "NR"
+      },
+      {
+        "value": "admin.lookups.countries.NP",
+        "key": "NP"
+      },
+      {
+        "value": "admin.lookups.countries.NL",
+        "key": "NL"
+      },
+      {
+        "value": "admin.lookups.countries.AN",
+        "key": "AN"
+      },
+      {
+        "value": "admin.lookups.countries.NC",
+        "key": "NC"
+      },
+      {
+        "value": "admin.lookups.countries.NZ",
+        "key": "NZ"
+      },
+      {
+        "value": "admin.lookups.countries.NI",
+        "key": "NI"
+      },
+      {
+        "value": "admin.lookups.countries.NE",
+        "key": "NE"
+      },
+      {
+        "value": "admin.lookups.countries.NG",
+        "key": "NG"
+      },
+      {
+        "value": "admin.lookups.countries.NU",
+        "key": "NU"
+      },
+      {
+        "value": "admin.lookups.countries.NF",
+        "key": "NF"
+      },
+      {
+        "value": "admin.lookups.countries.MP",
+        "key": "MP"
+      },
+      {
+        "value": "admin.lookups.countries.NO",
+        "key": "NO"
+      },
+      {
+        "value": "admin.lookups.countries.OM",
+        "key": "OM"
+      },
+      {
+        "value": "admin.lookups.countries.PK",
+        "key": "PK"
+      },
+      {
+        "value": "admin.lookups.countries.PW",
+        "key": "PW"
+      },
+      {
+        "value": "admin.lookups.countries.PS",
+        "key": "PS"
+      },
+      {
+        "value": "admin.lookups.countries.PA",
+        "key": "PA"
+      },
+      {
+        "value": "admin.lookups.countries.PG",
+        "key": "PG"
+      },
+      {
+        "value": "admin.lookups.countries.PY",
+        "key": "PY"
+      },
+      {
+        "value": "admin.lookups.countries.PE",
+        "key": "PE"
+      },
+      {
+        "value": "admin.lookups.countries.PH",
+        "key": "PH"
+      },
+      {
+        "value": "admin.lookups.countries.PN",
+        "key": "PN"
+      },
+      {
+        "value": "admin.lookups.countries.PL",
+        "key": "PL"
+      },
+      {
+        "value": "admin.lookups.countries.PT",
+        "key": "PT"
+      },
+      {
+        "value": "admin.lookups.countries.PR",
+        "key": "PR"
+      },
+      {
+        "value": "admin.lookups.countries.QA",
+        "key": "QA"
+      },
+      {
+        "value": "admin.lookups.countries.RE",
+        "key": "RE"
+      },
+      {
+        "value": "admin.lookups.countries.RO",
+        "key": "RO"
+      },
+      {
+        "value": "admin.lookups.countries.RU",
+        "key": "RU"
+      },
+      {
+        "value": "admin.lookups.countries.RW",
+        "key": "RW"
+      },
+      {
+        "value": "admin.lookups.countries.SH",
+        "key": "SH"
+      },
+      {
+        "value": "admin.lookups.countries.KN",
+        "key": "KN"
+      },
+      {
+        "value": "admin.lookups.countries.LC",
+        "key": "LC"
+      },
+      {
+        "value": "admin.lookups.countries.PM",
+        "key": "PM"
+      },
+      {
+        "value": "admin.lookups.countries.VC",
+        "key": "VC"
+      },
+      {
+        "value": "admin.lookups.countries.WS",
+        "key": "WS"
+      },
+      {
+        "value": "admin.lookups.countries.SM",
+        "key": "SM"
+      },
+      {
+        "value": "admin.lookups.countries.ST",
+        "key": "ST"
+      },
+      {
+        "value": "admin.lookups.countries.SA",
+        "key": "SA"
+      },
+      {
+        "value": "admin.lookups.countries.SN",
+        "key": "SN"
+      },
+      {
+        "value": "admin.lookups.countries.RS",
+        "key": "RS"
+      },
+      {
+        "value": "admin.lookups.countries.SC",
+        "key": "SC"
+      },
+      {
+        "value": "admin.lookups.countries.SL",
+        "key": "SL"
+      },
+      {
+        "value": "admin.lookups.countries.SG",
+        "key": "SG"
+      },
+      {
+        "value": "admin.lookups.countries.SX",
+        "key": "SX"
+      },
+      {
+        "value": "admin.lookups.countries.SK",
+        "key": "SK"
+      },
+      {
+        "value": "admin.lookups.countries.SI",
+        "key": "SI"
+      },
+      {
+        "value": "admin.lookups.countries.SB",
+        "key": "SB"
+      },
+      {
+        "value": "admin.lookups.countries.SO",
+        "key": "SO"
+      },
+      {
+        "value": "admin.lookups.countries.ZA",
+        "key": "ZA"
+      },
+      {
+        "value": "admin.lookups.countries.GS",
+        "key": "GS"
+      },
+      {
+        "value": "admin.lookups.countries.SS",
+        "key": "SS"
+      },
+      {
+        "value": "admin.lookups.countries.ES",
+        "key": "ES"
+      },
+      {
+        "value": "admin.lookups.countries.LK",
+        "key": "LK"
+      },
+      {
+        "value": "admin.lookups.countries.SD",
+        "key": "SD"
+      },
+      {
+        "value": "admin.lookups.countries.SR",
+        "key": "SR"
+      },
+      {
+        "value": "admin.lookups.countries.SJ",
+        "key": "SJ"
+      },
+      {
+        "value": "admin.lookups.countries.SZ",
+        "key": "SZ"
+      },
+      {
+        "value": "admin.lookups.countries.SE",
+        "key": "SE"
+      },
+      {
+        "value": "admin.lookups.countries.CH",
+        "key": "CH"
+      },
+      {
+        "value": "admin.lookups.countries.SY",
+        "key": "SY"
+      },
+      {
+        "value": "admin.lookups.countries.TW",
+        "key": "TW"
+      },
+      {
+        "value": "admin.lookups.countries.TJ",
+        "key": "TJ"
+      },
+      {
+        "value": "admin.lookups.countries.TZ",
+        "key": "TZ"
+      },
+      {
+        "value": "admin.lookups.countries.TH",
+        "key": "TH"
+      },
+      {
+        "value": "admin.lookups.countries.TL",
+        "key": "TL"
+      },
+      {
+        "value": "admin.lookups.countries.TG",
+        "key": "TG"
+      },
+      {
+        "value": "admin.lookups.countries.TK",
+        "key": "TK"
+      },
+      {
+        "value": "admin.lookups.countries.TO",
+        "key": "TO"
+      },
+      {
+        "value": "admin.lookups.countries.TT",
+        "key": "TT"
+      },
+      {
+        "value": "admin.lookups.countries.TN",
+        "key": "TN"
+      },
+      {
+        "value": "admin.lookups.countries.TR",
+        "key": "TR"
+      },
+      {
+        "value": "admin.lookups.countries.TM",
+        "key": "TM"
+      },
+      {
+        "value": "admin.lookups.countries.TC",
+        "key": "TC"
+      },
+      {
+        "value": "admin.lookups.countries.TV",
+        "key": "TV"
+      },
+      {
+        "value": "admin.lookups.countries.UG",
+        "key": "UG"
+      },
+      {
+        "value": "admin.lookups.countries.UA",
+        "key": "UA"
+      },
+      {
+        "value": "admin.lookups.countries.AE",
+        "key": "AE"
+      },
+      {
+        "value": "admin.lookups.countries.GB",
+        "key": "GB"
+      },
+      {
+        "value": "admin.lookups.countries.US",
+        "key": "US"
+      },
+      {
+        "value": "admin.lookups.countries.UM",
+        "key": "UM"
+      },
+      {
+        "value": "admin.lookups.countries.UY",
+        "key": "UY"
+      },
+      {
+        "value": "admin.lookups.countries.UZ",
+        "key": "UZ"
+      },
+      {
+        "value": "admin.lookups.countries.VU",
+        "key": "VU"
+      },
+      {
+        "value": "admin.lookups.countries.VE",
+        "key": "VE"
+      },
+      {
+        "value": "admin.lookups.countries.VN",
+        "key": "VN"
+      },
+      {
+        "value": "admin.lookups.countries.VG",
+        "key": "VG"
+      },
+      {
+        "value": "admin.lookups.countries.VI",
+        "key": "VI"
+      },
+      {
+        "value": "admin.lookups.countries.WF",
+        "key": "WF"
+      },
+      {
+        "value": "admin.lookups.countries.EH",
+        "key": "EH"
+      },
+      {
+        "value": "admin.lookups.countries.YE",
+        "key": "YE"
+      },
+      {
+        "value": "admin.lookups.countries.ZM",
+        "key": "ZM"
+      },
+      {
+        "value": "admin.lookups.countries.ZW",
+        "key": "ZW"
+      }
+    ]},
+    {"organizationIdTypes": [
+      {
+        "value": "admin.lookups.organizationIdTypes.ein",
+        "key": "EIN"
+      },
+      {
+        "value": "admin.lookups.organizationIdTypes.duns",
+        "key": "DUNS"
+      },
+      {
+        "value": "admin.lookups.organizationIdTypes.cageCode",
+        "key": "Cage Code"
+      }
+    ]},
+    {"organizationTypes": [
+      {
+        "value": "admin.lookups.organizationTypes.non-profit",
+        "key": "Non-profit"
+      },
+      {
+        "value": "admin.lookups.organizationTypes.government",
+        "key": "Government"
+      },
+      {
+        "value": "admin.lookups.organizationTypes.corporation",
+        "key": "Corporation"
+      }
+    ]},
+    {"personTitles": [
+      {
+        "value": "admin.lookups.personTitles.mr",
+        "key": "mr"
+      },
+      {
+        "value": "admin.lookups.personTitles.mrs",
+        "key": "mrs"
+      },
+      {
+        "value": "admin.lookups.personTitles.ms",
+        "key": "ms"
+      },
+      {
+        "value": "admin.lookups.personTitles.miss",
+        "key": "miss"
+      }
+    ]},
+    {"organizationalParticipantTypes": [
+      {
+        "value": "admin.lookups.common.owning-group",
+        "key": "owning group"
+      },
+      {
+        "value": "admin.lookups.common.collaborator",
+        "key": "collaborator"
+      },
+      {
+        "value": "admin.lookups.common.reader",
+        "key": "reader"
+      },
+      {
+        "value": "admin.lookups.common.no-access",
+        "key": "No Access"
+      }
+    ]},
+    {"entitiesParticipantTypes": [
+      {
+        "value": "admin.lookups.entitiesParticipantTypes.assignee",
+        "key": "assignee"
+      },
+      {
+        "value": "admin.lookups.entitiesParticipantTypes.co-owner",
+        "key": "co-owner"
+      },
+      {
+        "value": "admin.lookups.entitiesParticipantTypes.supervisor",
+        "key": "supervisor"
+      },
+      {
+        "value": "admin.lookups.common.owning-group",
+        "key": "owning group"
+      },
+      {
+        "value": "admin.lookups.entitiesParticipantTypes.approver",
+        "key": "approver"
+      },
+      {
+        "value": "admin.lookups.common.collaborator",
+        "key": "collaborator"
+      },
+      {
+        "value": "admin.lookups.entitiesParticipantTypes.follower",
+        "key": "follower"
+      },
+      {
+        "value": "admin.lookups.common.reader",
+        "key": "reader"
+      },
+      {
+        "value": "admin.lookups.common.no-access",
+        "key": "No Access"
+      }
+    ]},
+    {"locales": []}
+  ]
 }
