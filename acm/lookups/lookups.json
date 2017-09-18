@@ -143,18 +143,21 @@
       "key": "phone"
     },
     {
-      "subLookup": [],
+      "subLookup": [{
+        "value": "admin.lookups.contactMethodTypes.fax",
+        "key": "Fax"
+      }],
       "value": "admin.lookups.contactMethodTypes.fax",
       "key": "Fax"
     },
     {
       "subLookup": [
         {
-          "value": "Personal",
+          "value": "admin.lookups.contactMethodTypes.personal",
           "key": "Personal"
         },
         {
-          "value": "Business",
+          "value": "admin.lookups.contactMethodTypes.business",
           "key": "Business"
         }
       ],
@@ -164,53 +167,39 @@
     {
       "subLookup": [
         {
-          "value": "Web Site",
+          "value": "admin.lookups.contactMethodTypes.website",
           "key": "Web Site"
         },
         {
-          "value": "Facebook",
+          "value": "admin.lookups.contactMethodTypes.facebook",
           "key": "Facebook"
         },
         {
-          "value": "LinkedIn",
+          "value": "admin.lookups.contactMethodTypes.linkedIn",
           "key": "LinkedIn"
         },
         {
-          "value": "Twitter",
+          "value": "admin.lookups.contactMethodTypes.twitter",
           "key": "Twitter"
         },
         {
-          "value": "Other",
+          "value": "admin.lookups.common.other",
           "key": "Other"
         }
       ],
-      "value": "Url",
+      "value": "admin.lookups.contactMethodTypes.url",
       "key": "url"
     }
   ]}],
   "standardLookup": [
-    {"newLookup": [
-      {
-        "value": "value1",
-        "key": "key1"
-      },
-      {
-        "value": "value2",
-        "key": "key2"
-      }
-    ]},
     {"addressTypes": [
       {
         "value": "admin.lookups.addressTypes.business",
         "key": "Business"
       },
       {
-        "value": "admin.lookups.addressTypes.home",
+        "value": "admin.lookups.common.home",
         "key": "Home"
-      },
-      {
-        "value": "admin.workflows.config.grid.modified",
-        "key": "someKey"
       }
     ]},
     {"aliasTypes": [
@@ -224,7 +213,7 @@
       }
     ]},
     {"dbasTypes": [{
-      "value": "DBA",
+      "value": "admin.lookups.dbasTypes.dba",
       "key": "DBA"
     }]},
     {"fileTypes": [
