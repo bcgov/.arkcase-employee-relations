@@ -192,6 +192,70 @@
     }
   ]}],
   "standardLookup": [
+    {"changeCaseStatuses": [
+      {
+        "value": "core.lookups.changeCase.statuses.active",
+        "key": "ACTIVE"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.inactive",
+        "key": "INACTIVE"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.closed",
+        "key": "CLOSED"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.deleted",
+        "key": "DELETED"
+      }
+    ]},
+    {"timesheetStatuses": [
+      {
+        "value": "core.lookups.timesheet.statuses.draft",
+        "key": "DRAFT"
+      },
+      {
+        "value": "core.lookups.timesheet.statuses.inapproval",
+        "key": "IN_APPROVAL"
+      },
+      {
+        "value": "core.lookups.timesheet.statuses.approved",
+        "key": "APPROVED"
+      }
+    ]},
+    {"costsheetStatuses": [
+      {
+        "value": "core.lookups.timesheet.statuses.draft",
+        "key": "DRAFT"
+      },
+      {
+        "value": "core.lookups.timesheet.statuses.inapproval",
+        "key": "IN_APPROVAL"
+      },
+      {
+        "value": "core.lookups.timesheet.statuses.approved",
+        "key": "APPROVED"
+      }
+    ]},
+    {"costsheetTitles": [
+      {
+        "value": "admin.lookups.costsheet.titles.taxi",
+        "key": "Taxi"
+      },
+      {
+        "value": "admin.lookups.costsheet.titles.hotel",
+        "key": "Hotel"
+      },
+      {
+        "value": "admin.lookups.costsheet.titles.overtime",
+        "key": "Overtime"
+      },
+      {
+        "value": "admin.lookups.costsheet.titles.food",
+        "key": "Food"
+      }
+    ]},
     {"addressTypes": [
       {
         "value": "core.lookups.addressTypes.business",
