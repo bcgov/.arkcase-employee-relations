@@ -240,20 +240,502 @@
     ]},
     {"costsheetTitles": [
       {
-        "value": "admin.lookups.costsheet.titles.taxi",
+        "value": "core.lookups.costsheet.titles.taxi",
         "key": "Taxi"
       },
       {
-        "value": "admin.lookups.costsheet.titles.hotel",
+        "value": "core.lookups.costsheet.titles.hotel",
         "key": "Hotel"
       },
       {
-        "value": "admin.lookups.costsheet.titles.overtime",
+        "value": "core.lookups.costsheet.titles.overtime",
         "key": "Overtime"
       },
       {
-        "value": "admin.lookups.costsheet.titles.food",
+        "value": "core.lookups.costsheet.titles.food",
         "key": "Food"
+      }
+    ]},
+    {"complaintPersonTypes": [
+      {
+        "value": "core.lookups.complaintPersonTypes.initiator",
+        "key": "Initiator"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.complaintant",
+        "key": "Complaintant"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.subject",
+        "key": "Subject"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.witness",
+        "key": "Witness"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.wrongdoer",
+        "key": "Wrongdoer"
+      },
+      {
+        "value": "core.lookups.common.other",
+        "key": "Other"
+      }
+    ]},
+    {"deviceTypes": [
+      {
+        "value": "core.lookups.deviceTypes.homePhone",
+        "key": "Home phone"
+      },
+      {
+        "value": "core.lookups.deviceTypes.workPhone",
+        "key": "Work phone"
+      },
+      {
+        "value": "core.lookups.deviceTypes.mobile",
+        "key": "Mobile"
+      },
+      {
+        "value": "core.lookups.deviceTypes.email",
+        "key": "Email"
+      },
+      {
+        "value": "core.lookups.deviceTypes.facebook",
+        "key": "Facebook"
+      }
+    ]},
+    {"locationTypes": [
+      {
+        "value": "core.lookups.addressTypes.business",
+        "key": "Business"
+      },
+      {
+        "value": "core.lookups.common.home",
+        "key": "Home"
+      }
+    ]},
+    {"priorities": [
+      {
+        "value": "core.lookups.priorities.low",
+        "key": "Low"
+      },
+      {
+        "value": "core.lookups.priorities.medium",
+        "key": "Medium"
+      },
+      {
+        "value": "core.lookups.priorities.high",
+        "key": "High"
+      },
+      {
+        "value": "core.lookups.priorities.expedite",
+        "key": "Expedite"
+      }
+    ]},
+    {"frequencies": [
+      {
+        "value": "core.lookups.frequencies.once",
+        "key": "Once"
+      },
+      {
+        "value": "core.lookups.frequencies.ongoing",
+        "key": "Ongoing"
+      },
+      {
+        "value": "core.lookups.frequencies.intermittent",
+        "key": "Intermittent"
+      }
+    ]},
+    {"dispositions": [
+      {
+        "value": "core.lookups.dispositions.add_existing_case",
+        "key": "add_existing_case"
+      },
+      {
+        "value": "core.lookups.dispositions.open_investigation",
+        "key": "open_investigation"
+      },
+      {
+        "value": "core.lookups.dispositions.no_action",
+        "key": "no_action"
+      },
+      {
+        "value": "core.lookups.dispositions.refer_external",
+        "key": "refer_external"
+      }
+    ]},
+    {"resolutions": [
+      {
+        "value": "core.lookups.resolutions.denied",
+        "key": "DENIED"
+      },
+      {
+        "value": "core.lookups.resolutions.full",
+        "key": "FULL"
+      },
+      {
+        "value": "core.lookups.resolutions.partial",
+        "key": "PARTIAL"
+      }
+    ]},
+    {"complaintTypes": [
+      {
+        "value": "core.lookups.categories.agricultural",
+        "key": "Agricultural"
+      },
+      {
+        "value": "core.lookups.categories.arson",
+        "key": "Arson"
+      },
+      {
+        "value": "core.lookups.categories.backgroundInvestigation",
+        "key": "Background Investigation"
+      },
+      {
+        "value": "core.lookups.categories.benefits-appeal",
+        "key": "Benefits Appeal"
+      },
+      {
+        "value": "core.lookups.categories.better-business-dispute",
+        "key": "Better Business Dispute"
+      },
+      {
+        "value": "core.lookups.categories.clinical-investigator-fraud",
+        "key": "Clinical Investigator Fraud"
+      },
+      {
+        "value": "core.lookups.categories.congressionalResponse",
+        "key": "Congressional Response"
+      },
+      {
+        "value": "core.lookups.categories.disability-waiver-request",
+        "key": "Disability Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.domesticDispute",
+        "key": "Domestic Dispute"
+      },
+      {
+        "value": "core.lookups.categories.drugTrafficking",
+        "key": "Drug Trafficking"
+      },
+      {
+        "value": "core.lookups.categories.education-waiver-request",
+        "key": "Education Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.eeo-harassment",
+        "key": "EEO/Harassment"
+      },
+      {
+        "value": "core.lookups.categories.embezzlement",
+        "key": "Embezzlement"
+      },
+      {
+        "value": "core.lookups.categories.extortion",
+        "key": "Extortion"
+      },
+      {
+        "value": "core.lookups.categories.fraud",
+        "key": "Fraud"
+      },
+      {
+        "value": "core.lookups.categories.government",
+        "key": "Government"
+      },
+      {
+        "value": "core.lookups.categories.investorComplaint",
+        "key": "Investor Complaint"
+      },
+      {
+        "value": "core.lookups.categories.laborRacketeering",
+        "key": "Labor Racketeering"
+      },
+      {
+        "value": "core.lookups.categories.local",
+        "key": "Local"
+      },
+      {
+        "value": "core.lookups.categories.murder",
+        "key": "Murder"
+      },
+      {
+        "value": "core.lookups.categories.new-drug-application-fraud",
+        "key": "New Drug Application Fraud"
+      },
+      {
+        "value": "core.lookups.categories.payoff",
+        "key": "Payoff"
+      },
+      {
+        "value": "core.lookups.categories.pension-waiver-request",
+        "key": "Pension Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.pollution",
+        "key": "Pollution"
+      },
+      {
+        "value": "core.lookups.categories.productTampering",
+        "key": "Product Tampering"
+      },
+      {
+        "value": "core.lookups.categories.theft-or-misuse-of-asset",
+        "key": "Theft or misuse of asset"
+      }
+    ]},
+    {"complaintParticipantTypes": [
+      {
+        "value": "core.lookups.personOrganizationRelationTypes.owner",
+        "key": "assignee"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.follower",
+        "key": "follower"
+      }
+    ]},
+    {"caseFileParticipantTypes": [
+      {
+        "value": "core.lookups.personOrganizationRelationTypes.owner",
+        "key": "assignee"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.co-owner",
+        "key": "co-owner"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.supervisor",
+        "key": "supervisor"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.approver",
+        "key": "approver"
+      },
+      {
+        "value": "core.lookups.common.collaborator",
+        "key": "collaborator"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.follower",
+        "key": "follower"
+      },
+      {
+        "value": "core.lookups.common.reader",
+        "key": "reader"
+      },
+      {
+        "value": "core.lookups.common.no-access",
+        "key": "no access"
+      }
+    ]},
+    {"projectParticipantTypes": [
+      {
+        "value": "core.lookups.personOrganizationRelationTypes.owner",
+        "key": "assignee"
+      },
+      {
+        "value": "core.lookups.entitiesParticipantTypes.follower",
+        "key": "follower"
+      }
+    ]},
+    {"caseFileTypes": [
+      {
+        "value": "core.lookups.categories.agricultural",
+        "key": "Agricultural"
+      },
+      {
+        "value": "core.lookups.categories.arson",
+        "key": "Arson"
+      },
+      {
+        "value": "core.lookups.categories.backgroundInvestigation",
+        "key": "Background Investigation"
+      },
+      {
+        "value": "core.lookups.categories.benefits-appeal",
+        "key": "Benefits Appeal"
+      },
+      {
+        "value": "core.lookups.categories.better-business-dispute",
+        "key": "Better Business Dispute"
+      },
+      {
+        "value": "core.lookups.categories.clinical-investigator-fraud",
+        "key": "Clinical Investigator Fraud"
+      },
+      {
+        "value": "core.lookups.categories.congressionalResponse",
+        "key": "Congressional Response"
+      },
+      {
+        "value": "core.lookups.categories.disability-waiver-request",
+        "key": "Disability Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.domesticDispute",
+        "key": "Domestic Dispute"
+      },
+      {
+        "value": "core.lookups.categories.drugTrafficking",
+        "key": "Drug Trafficking"
+      },
+      {
+        "value": "core.lookups.categories.education-waiver-request",
+        "key": "Education Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.eeo-harassment",
+        "key": "EEO/Harassment"
+      },
+      {
+        "value": "core.lookups.categories.embezzlement",
+        "key": "Embezzlement"
+      },
+      {
+        "value": "core.lookups.categories.extortion",
+        "key": "Extortion"
+      },
+      {
+        "value": "core.lookups.categories.fraud",
+        "key": "Fraud"
+      },
+      {
+        "value": "core.lookups.categories.government",
+        "key": "Government"
+      },
+      {
+        "value": "core.lookups.categories.investorComplaint",
+        "key": "Investor Complaint"
+      },
+      {
+        "value": "core.lookups.categories.laborRacketeering",
+        "key": "Labor Racketeering"
+      },
+      {
+        "value": "core.lookups.categories.local",
+        "key": "Local"
+      },
+      {
+        "value": "core.lookups.categories.murder",
+        "key": "Murder"
+      },
+      {
+        "value": "core.lookups.categories.new-drug-application-fraud",
+        "key": "New Drug Application Fraud"
+      },
+      {
+        "value": "core.lookups.categories.payoff",
+        "key": "Payoff"
+      },
+      {
+        "value": "core.lookups.categories.pension-waiver-request",
+        "key": "Pension Waiver Request"
+      },
+      {
+        "value": "core.lookups.categories.pollution",
+        "key": "Pollution"
+      },
+      {
+        "value": "core.lookups.categories.productTampering",
+        "key": "Product Tampering"
+      },
+      {
+        "value": "core.lookups.categories.theft-or-misuse-of-asset",
+        "key": "Theft or misuse of asset"
+      }
+    ]},
+    {"timesheetTypes": [
+      {
+        "value": "core.lookups.timesheet.types.case_file",
+        "key": "CASE_FILE"
+      },
+      {
+        "value": "core.lookups.timesheet.types.complaint",
+        "key": "COMPLAINT"
+      },
+      {
+        "value": "core.lookups.common.other",
+        "key": "OTHER"
+      }
+    ]},
+    {"costsheetTypes": [
+      {
+        "value": "core.lookups.timesheet.types.case_file",
+        "key": "CASE_FILE"
+      },
+      {
+        "value": "core.lookups.timesheet.types.complaint",
+        "key": "COMPLAINT"
+      }
+    ]},
+    {"caseFilePersonTypes": [
+      {
+        "value": "core.lookups.complaintPersonTypes.initiator",
+        "key": "Initiator"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.complaintant",
+        "key": "Complaintant"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.subject",
+        "key": "Subject"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.witness",
+        "key": "Witness"
+      },
+      {
+        "value": "core.lookups.complaintPersonTypes.wrongdoer",
+        "key": "Wrongdoer"
+      },
+      {
+        "value": "core.lookups.common.other",
+        "key": "Other"
+      },
+      {
+        "value": "core.lookups.caseFilePersonTypes.defendant",
+        "key": "Defendant"
+      },
+      {
+        "value": "core.lookups.caseFilePersonTypes.was-officer",
+        "key": "WAS Officer"
+      },
+      {
+        "value": "core.lookups.caseFilePersonTypes.victim",
+        "key": "Victim"
+      },
+      {
+        "value": "core.lookups.caseFilePersonTypes.defenseCounsel",
+        "key": "Defense Counsel"
+      },
+      {
+        "value": "core.lookups.caseFilePersonTypes.forensicScientist",
+        "key": "Forensic Scientist"
+      }
+    ]},
+    {"plainTargets": [
+      {
+        "value": "core.lookups.common.case",
+        "key": "CASE_FILE"
+      },
+      {
+        "value": "core.lookups.timesheet.types.complaint",
+        "key": "COMPLAINT"
+      }
+    ]},
+    {"changeCaseStatusResolutions": [
+      {
+        "value": "core.lookups.changeCase.resolutions.denied",
+        "key": "DENIED"
+      },
+      {
+        "value": "core.lookups.changeCase.resolutions.full",
+        "key": "FULL"
+      },
+      {
+        "value": "core.lookups.changeCase.resolutions.partial",
+        "key": "PARTIAL"
       }
     ]},
     {"addressTypes": [
