@@ -50,6 +50,11 @@
                     <property name="url" value="/modules/reports/views/"/>
                     <property name="requiredPrivilege" ref="acmReportModulePrivilege"/>
                 </bean>
+                <bean id="saveReportsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/report/sync"/>
+                    <property name="requiredPrivilege" ref="reportPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
