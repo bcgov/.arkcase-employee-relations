@@ -12,32 +12,22 @@
         <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-${id}-ldap.properties"/>
     </beans:bean>
                             
-    <beans:bean id="${id}_RoleToGroupProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean" >
-        
-		<!-- note: must leave "file:" at the start of the file name for spring
-             to be able to read the file; otherwise it will try to read from the
-             classpath -->
-        <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/applicationRoleToUserGroup.properties"/>
-        <beans:property name="ignoreResourceNotFound" value="true"/>
-    </beans:bean>
-
-
     <!-- change the ref to match the bean name of your ldap sync job; and change the 
          cron to the desired cron expression (see JavaDoc for org.springframework.scheduling.support.CronSequenceGenerator).  
          No other changes are needed. -->
     <task:scheduled-tasks scheduler="ldapSyncTaskScheduler">
-        <task:scheduled ref="${id}_ldapSyncJob" method="ldapSync" cron="0 0/30 * * * *"/>
+        <task:scheduled ref="${id}_ldapSyncJob" method="ldapSync" cron="0 0 * * * *"/>
+        <task:scheduled ref="${id}_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
     </task:scheduled-tasks>
 
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
+    <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
-        <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
         <beans:property name="syncEnabled" value="true"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
@@ -46,15 +36,14 @@
     </beans:bean>
 	
 	<!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
+    <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
-        <beans:property name="ldapSyncDatabaseHelper" ref="userDatabaseHelper"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="false"/>
+        <beans:property name="syncEnabled" value="true"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
@@ -92,7 +81,6 @@
         <beans:property name="allChangedUsersFilter" value='${r"${ldapConfig.allChangedUsersFilter}"}'/>
         <beans:property name="allUsersPageFilter" value='${r"${ldapConfig.allUsersPageFilter}"}'/>
         <beans:property name="allChangedUsersPageFilter" value='${r"${ldapConfig.allChangedUsersPageFilter}"}'/>
-        <beans:property name="roleToGroupMap" ref="${id}_RoleToGroupProperties"/>
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
