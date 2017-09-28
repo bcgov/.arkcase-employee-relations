@@ -148,7 +148,7 @@
         "key": "Fax"
       }],
       "value": "core.lookups.contactMethodTypes.fax",
-      "key": "Fax"
+      "key": "fax"
     },
     {
       "subLookup": [
@@ -1897,7 +1897,6 @@
         "value": "core.lookups.common.no-access",
         "key": "No Access"
       }
-    ]},
-    {"locales": []}
+    ]}
   ]
 }
