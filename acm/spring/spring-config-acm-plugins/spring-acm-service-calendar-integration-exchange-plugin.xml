@@ -8,6 +8,7 @@
         <property name="privileges">
             <list>
                 <ref bean="acmCalendarAdminPrivilege"/>
+                <ref bean="acmCalendarEventsListPrivilege"/>
             </list>
         </property>
 
@@ -24,6 +25,11 @@
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/calendar/exchange/configure"/>
                     <property name="requiredPrivilege" ref="acmCalendarAdminPrivilege"/>
+                </bean>
+                <bean id="calendarFoldersUrlPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/service/calendar/exchange/folders/recreated"/>
+                    <property name="requiredPrivilege" ref="acmCalendarEventsListPrivilege"/>
                 </bean>
 
             </list>
