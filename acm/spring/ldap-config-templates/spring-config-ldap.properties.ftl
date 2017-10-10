@@ -32,4 +32,4 @@ ldapConfig.changedGroupSearchFilter=${changedGroupSearchFilter}
 ldapConfig.groupSearchPageFilter=${groupSearchPageFilter}
 ldapConfig.changedGroupSearchPageFilter=${changedGroupSearchPageFilter}
 ldapConfig.groupsSortingAttribute=${groupsSortingAttribute}
-
+ldapConfig.syncEnabled=${syncEnabled?c}
