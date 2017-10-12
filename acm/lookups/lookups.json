@@ -256,6 +256,34 @@
         "key": "Food"
       }
     ]},
+	
+	    {"documentPersonTypes": [
+      {
+        "value": "core.lookups.documentPersonTypes.defendent",
+        "key": "Defendant"
+      },
+      {
+        "value": "core.lookups.documentPersonTypes.witness",
+        "key": "Witness"
+      },
+      {
+        "value": "core.lookups.documentPersonTypes.was-officer",
+        "key": "WAS Officer"
+      },
+      {
+        "value": "core.lookups.documentPersonTypes.victim",
+        "key": "Victim"
+      },
+      {
+        "value": "core.lookups.documentPersonTypes.defense-counsel",
+        "key": "Defense Counsel"
+      },
+      {
+        "value": "core.lookups.documentPersonTypes.forensic-scientist",
+        "key": "Forensic Scientist"
+      }
+    ]},
+	
     {"complaintPersonTypes": [
       {
         "value": "core.lookups.complaintPersonTypes.initiator",
