@@ -104,7 +104,8 @@
       "organizationId"
     ],
     "includeFields": [
-      "company",
+      "organizationType",
+      "organizationValue",
       "status",
       "details",
       "restricted",
