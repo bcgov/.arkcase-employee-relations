@@ -18,7 +18,7 @@
 
         <!-- The logoutUrl bean is defined in spring-security-config-*.xml -->
         <property name="logoutUrl" ref="logoutUrl"/>
-        <property name="helpUrl" value="http://www.arkcase.com/docs/"/>
+        <property name="helpUrl" value="https://arkcase.zendesk.com/hc/en-us/categories/115000495408-Using-ArkCase"/>
         <property name="baseUrl" value="https://acm-arkcase/arkcase"/>
 
         <!--
