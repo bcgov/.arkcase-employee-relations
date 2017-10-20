@@ -1929,6 +1929,32 @@
         "value": "core.lookups.common.no-access",
         "key": "No Access"
       }
+    ]},
+    {"documentsParticipantTypes": [
+      {
+        "value": "core.lookups.documentsParticipantTypes.group-write",
+        "key": "group-write"
+      },
+      {
+        "value": "core.lookups.documentsParticipantTypes.group-read",
+        "key": "group-read"
+      },
+      {
+        "value": "core.lookups.documentsParticipantTypes.group-no-access",
+        "key": "group-no-access"
+      },
+      {
+        "value": "core.lookups.documentsParticipantTypes.write",
+        "key": "write"
+      },
+      {
+        "value": "core.lookups.documentsParticipantTypes.read",
+        "key": "read"
+      },
+      {
+        "value": "core.lookups.documentsParticipantTypes.no-access",
+        "key": "no-access"
+      }
     ]}
   ]
 }
