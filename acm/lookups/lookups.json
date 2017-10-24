@@ -1945,6 +1945,33 @@
         "value": "core.lookups.common.no-access",
         "key": "No Access"
       }
+    ]},
+    {"taskOutcomes": [
+      {
+        "value": "core.lookups.taskOutcomes.approve",
+        "key": "Approve Document"
+      },
+      {
+        "value": "core.lookups.taskOutcomes.rework",
+        "key": "Send for Rework"
+      },
+      {
+        "value": "core.lookups.taskOutcomes.resubmit",
+        "key": "Resubmit"
+      },
+      {
+        "value": "core.lookups.taskOutcomes.cancel",
+        "key": "Cancel Document"
+      },
+      {
+        "value": "core.lookups.taskOutcomes.concur",
+        "key": "Concur"
+      },
+      {
+        "value": "core.lookups.taskOutcomes.nonConcur",
+        "key": "Non-Concur"
+      }
     ]}
   ]
 }
+
