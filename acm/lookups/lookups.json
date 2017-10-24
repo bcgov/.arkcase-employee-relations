@@ -192,6 +192,32 @@
     }
   ]}],
   "standardLookup": [
+    {"caseFilePersonInitiatorTypes": [{
+      "value": "core.lookups.complaintPersonTypes.initiator",
+      "key": "Initiator"
+    }]},
+    {"complaintPersonInitiatorTypes": [{
+      "value": "core.lookups.complaintPersonTypes.initiator",
+      "key": "Initiator"
+    }]},
+    {"changeCaseStatuses": [
+      {
+        "value": "core.lookups.changeCase.statuses.active",
+        "key": "ACTIVE"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.inactive",
+        "key": "INACTIVE"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.closed",
+        "key": "CLOSED"
+      },
+      {
+        "value": "core.lookups.changeCase.statuses.deleted",
+        "key": "DELETED"
+      }
+    ]},
     {"changeCaseStatuses": [
       {
         "value": "core.lookups.changeCase.statuses.active",
@@ -256,8 +282,7 @@
         "key": "Food"
       }
     ]},
-	
-	    {"documentPersonTypes": [
+    {"documentPersonTypes": [
       {
         "value": "core.lookups.documentPersonTypes.defendent",
         "key": "Defendant"
@@ -283,12 +308,7 @@
         "key": "Forensic Scientist"
       }
     ]},
-	
     {"complaintPersonTypes": [
-      {
-        "value": "core.lookups.complaintPersonTypes.initiator",
-        "key": "Initiator"
-      },
       {
         "value": "core.lookups.complaintPersonTypes.complaintant",
         "key": "Complaintant"
@@ -697,10 +717,6 @@
       }
     ]},
     {"caseFilePersonTypes": [
-      {
-        "value": "core.lookups.complaintPersonTypes.initiator",
-        "key": "Initiator"
-      },
       {
         "value": "core.lookups.complaintPersonTypes.complaintant",
         "key": "Complaintant"
