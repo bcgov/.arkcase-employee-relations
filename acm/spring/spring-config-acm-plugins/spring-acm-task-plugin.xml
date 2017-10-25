@@ -125,6 +125,46 @@
                     <property name="url" value="/api/{latest}/plugin/task/diagram/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/getBuckslipFutureTasks/businessProcessId/{businessProcessId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/getBuckslipPastTasks/businessProcessId/{businessProcessId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/getBuckslipProcessesForObject/objectType/{objectType}/objectId/{objectId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/isWorkflowInitiable/businessProcessId/{businessProcessId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/isWorkflowWithdrawable/businessProcessId/{businessProcessId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/task/initiateRoutingWorkflow/businessProcessId/{businessProcessId}/receiveTaskId/{receiveTaskId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/task/withdrawRoutingWorkflow/taskId/{taskId}/messageName/{messageName}"/>
+                    <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
+                </bean>				
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/task/updateBuckslipProcess"/>
+                    <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
+                </bean>				
             </list>
         </property>
     </bean>
