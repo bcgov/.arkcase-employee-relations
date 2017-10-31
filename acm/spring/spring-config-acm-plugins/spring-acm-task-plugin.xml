@@ -127,42 +127,42 @@
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/getBuckslipFutureTasks/businessProcessId/{businessProcessId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/futureTasks"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/getBuckslipPastTasks/businessProcessId/{businessProcessId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/pastTasks"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/getBuckslipProcessesForChildren/objectType/{objectType}/objectId/{objectId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/objectType/{type}/objectId/{id}/buckslipProcessesForChildren"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/isWorkflowInitiable/businessProcessId/{businessProcessId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/initiatable"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/isWorkflowWithdrawable/businessProcessId/{businessProcessId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/withdrawable"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/plugin/task/initiateRoutingWorkflow/businessProcessId/{businessProcessId}/receiveTaskId/{receiveTaskId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/initiate"/>
                     <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
                 </bean>
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/plugin/task/withdrawRoutingWorkflow/taskId/{taskId}/messageName/{messageName}"/>
+                    <property name="url" value="/api/{version}/plugin/task/{taskId}/withdraw"/>
                     <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
                 </bean>				
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/plugin/task/updateBuckslipProcess"/>
+                    <property name="url" value="/api/{version}/plugin/task/buckslipProcesses"/>
                     <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
                 </bean>				
             </list>
