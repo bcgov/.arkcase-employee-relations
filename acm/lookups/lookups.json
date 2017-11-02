@@ -12,6 +12,12 @@
         "inverseKey": "parentCompany",
         "value": "core.lookups.organizationRelationTypes.subCompany",
         "key": "subCompany"
+      },
+      {
+        "inverseValue": "core.lookups.organizationRelationTypes.subCompany",
+        "inverseKey": "subCompany",
+        "value": "core.lookups.organizationRelationTypes.parentCompany",
+        "key": "parentCompany"
       }
     ]},
     {"personOrganizationRelationTypes": [
@@ -1974,4 +1980,3 @@
     ]}
   ]
 }
-
