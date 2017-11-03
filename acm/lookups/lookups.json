@@ -1977,6 +1977,58 @@
         "value": "core.lookups.taskOutcomes.nonConcur",
         "key": "Non-Concur"
       }
+    ]},
+    {"reportStates": [
+      {
+        "value": "core.lookups.reportStates.draft",
+        "key": "Draft"
+      },
+      {
+        "value": "core.lookups.reportStates.inApproval",
+        "key": "In Approval"
+      },
+      {
+        "value": "core.lookups.reportStates.active",
+        "key": "Active"
+      },
+      {
+        "value": "core.lookups.reportStates.inActive",
+        "key": "Inactive"
+      },
+      {
+        "value": "core.lookups.reportStates.closed",
+        "key": "Closed"
+      }
+    ]},
+    {"auditReportNames": [
+      {
+        "value": "core.lookups.auditReportNames.cases",
+        "key": "Case Files"
+      },
+      {
+        "value": "core.lookups.auditReportNames.complaints",
+        "key": "Complaints"
+      },
+      {
+        "value": "core.lookups.auditReportNames.tasks",
+        "key": "Tasks"
+      },
+      {
+        "value": "core.lookups.auditReportNames.files",
+        "key": "Files"
+      },
+      {
+        "value": "core.lookups.auditReportNames.documents",
+        "key": "Documents"
+      },
+      {
+        "value": "core.lookups.auditReportNames.people",
+        "key": "People"
+      },
+      {
+        "value": "core.lookups.auditReportNames.organizations",
+        "key": "Organizations"
+      }
     ]}
   ]
 }
