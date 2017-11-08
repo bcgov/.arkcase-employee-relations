@@ -1087,6 +1087,18 @@
     </bean>
 
     <!-- Calendar Plugin -->
+    <bean id="acmCalendarReadShortenedConfigPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-calendar-shortened-config"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCalendarReadShortenedConfigPrivilege??>
+                <#list acmCalendarReadShortenedConfigPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
     <bean id="acmCalendarEventsListPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
         <property name="privilegeName" value="acm-calendar-events-list"/>
         <property name="applicationRolesWithPrivilege">
