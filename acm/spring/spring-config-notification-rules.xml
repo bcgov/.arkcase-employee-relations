@@ -101,7 +101,7 @@
 					FROM 
 						AuditEvent a,  AcmAssignment s, AcmAssignment s2
 					WHERE
-						a.objectType = "TASK" 
+						a.objectType = 'TASK' 
 					AND 
 						(a.eventDescription = 'CONCUR' OR a.eventDescription = 'NON_CONCUR')
 					AND
@@ -944,7 +944,7 @@
 		pool-size="1" />
 	<task:scheduled-tasks scheduler="notificationTaskScheduler">
 		<task:scheduled ref="notificationService" method="run"
-			fixed-delay="30000" />
+			fixed-delay="300000" />
 	</task:scheduled-tasks>
 
 	<!-- Service Definition -->
