@@ -1997,34 +1997,32 @@
     {"auditReportNames": [
       {
         "value": "core.lookups.auditReportNames.cases",
-        "key": "Case Files"
+        "key": "Case"
       },
       {
         "value": "core.lookups.auditReportNames.complaints",
-        "key": "Complaints"
+        "key": "Complaint"
       },
       {
         "value": "core.lookups.auditReportNames.tasks",
-        "key": "Tasks"
+        "key": "Task"
       },
       {
         "value": "core.lookups.auditReportNames.files",
-        "key": "Files"
+        "key": "File"
       },
       {
         "value": "core.lookups.auditReportNames.documents",
-        "key": "Documents"
+        "key": "Document"
       },
       {
         "value": "core.lookups.auditReportNames.people",
-        "key": "People"
+        "key": "Person"
       },
       {
         "value": "core.lookups.auditReportNames.organizations",
-        "key": "Organizations"
+        "key": "Organization"
       }
     ]}
   ]
-
 }
-
