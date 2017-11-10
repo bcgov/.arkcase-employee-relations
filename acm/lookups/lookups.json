@@ -1996,31 +1996,31 @@
     ]},
     {"auditReportNames": [
       {
-        "value": "core.lookups.auditReportNames.cases",
+        "value": "core.lookups.auditReportNames.case",
         "key": "Case"
       },
       {
-        "value": "core.lookups.auditReportNames.complaints",
+        "value": "core.lookups.auditReportNames.complaint",
         "key": "Complaint"
       },
       {
-        "value": "core.lookups.auditReportNames.tasks",
+        "value": "core.lookups.auditReportNames.task",
         "key": "Task"
       },
       {
-        "value": "core.lookups.auditReportNames.files",
+        "value": "core.lookups.auditReportNames.file",
         "key": "File"
       },
       {
-        "value": "core.lookups.auditReportNames.documents",
+        "value": "core.lookups.auditReportNames.document",
         "key": "Document"
       },
       {
-        "value": "core.lookups.auditReportNames.people",
+        "value": "core.lookups.auditReportNames.person",
         "key": "Person"
       },
       {
-        "value": "core.lookups.auditReportNames.organizations",
+        "value": "core.lookups.auditReportNames.organization",
         "key": "Organization"
       }
     ]}
