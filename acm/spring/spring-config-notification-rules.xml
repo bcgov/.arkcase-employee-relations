@@ -76,6 +76,50 @@
 			</value>
 		</property>
 	</bean>
+	
+	<bean id="concurNonConcurRule"
+		class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+		<property name="globalRule" value="true" />
+		<property name="queryType" value="CREATE" />
+		<property name="executor" ref="sendExecutor" />
+		<property name="usersNotified" ref="assigneeNotified"/>
+		<property name="jpaQuery">
+			<value>
+				<![CDATA[
+					SELECT
+						CONCAT('Task ', a.objectId, ' completed') AS title,
+						CONCAT('Task ', a.objectId, ' completed with ', a.eventDescription, ' action by ', s2.newAssignee) AS note,
+						'user' AS notificationType,
+						a.objectId AS objectId,
+						a.objectType AS objectType,
+						'' AS parentName,
+						'' AS parentTitle,
+						a.parentObjectId AS relatedObjectId,
+						a.parentObjectType AS relatedObjectType,
+						a.eventDate AS actionDate,
+						s.newAssignee AS sendNotificationTo
+					FROM 
+						AuditEvent a,  AcmAssignment s, AcmAssignment s2
+					WHERE
+						a.objectType = 'TASK' 
+					AND 
+						(a.eventDescription = 'CONCUR' OR a.eventDescription = 'NON_CONCUR')
+					AND
+						s.objectType = a.parentObjectType
+					AND
+						s.objectId = a.parentObjectId
+					AND
+						s2.objectType = a.objectType
+					AND
+						s2.objectId = a.objectId
+					AND
+						s.newAssignee != 'None'	
+					AND 
+						a.eventDate >= :lastRunDate
+				]]>
+			</value>
+		</property>
+	</bean>
 
 	<bean id="purgeRule"
 		class="com.armedia.acm.services.notification.model.BasicNotificationRule">
