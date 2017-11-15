@@ -80,6 +80,11 @@
                     <property name="url" value="/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="acmCalendarEventsDeletePrivilege"/>
                 </bean>
+                <bean id="isIntegrationEnabled" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/calendar/{objectType}/integration"/>
+                    <property name="requiredPrivilege" ref="acmCalendarEventsListPrivilege"/>
+                </bean>
 
             </list>
         </property>
