@@ -2028,6 +2028,13 @@
       {
         "value": "core.lookups.auditReportNames.organizations",
         "key": "Organizations"
+
+      }
+    ]},
+    {"businessProcessTypes": [
+      {
+        "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+        "key": "acmDocumentWorkflow"
       }
     ]}
   ]
