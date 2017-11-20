@@ -8,6 +8,7 @@
         <property name="privileges">
             <list>
                 <ref bean="acmCalendarAdminPrivilege"/>
+                <ref bean="acmCalendarReadShortenedConfigPrivilege"/>
                 <ref bean="acmCalendarEventsListPrivilege"/>
                 <ref bean="acmCalendarEventsSavePrivilege"/>
                 <ref bean="acmCalendarEventsCreatePrivilege"/>
@@ -21,7 +22,7 @@
                 <bean id="calendarAdminUrlGet" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/calendar/configure"/>
-                    <property name="requiredPrivilege" ref="acmCalendarAdminPrivilege"/>
+                    <property name="requiredPrivilege" ref="acmCalendarReadShortenedConfigPrivilege"/>
                 </bean>
                 <bean id="calendarAdminUrlPost" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
@@ -63,6 +64,11 @@
                 <bean id="getCalendarEventUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/calendar/calendarevents/event/{objectType}/{objectId}"/>
+                    <property name="requiredPrivilege" ref="acmCalendarEventsListPrivilege"/>
+                </bean>
+                <bean id="getCalendarEventUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/calendar/calendarevents/attachment/{objectType}/{objectId}"/>
                     <property name="requiredPrivilege" ref="acmCalendarEventsListPrivilege"/>
                 </bean>
                 <bean id="addCalendarEventUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
