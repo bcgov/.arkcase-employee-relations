@@ -2002,32 +2002,32 @@
     ]},
     {"auditReportNames": [
       {
-        "value": "core.lookups.auditReportNames.case",
-        "key": "Case"
+        "value": "core.lookups.auditReportNames.all",
+        "key": ""
+      },
+      {
+        "value": "core.lookups.auditReportNames.case_file",
+        "key": "case_file"
       },
       {
         "value": "core.lookups.auditReportNames.complaint",
-        "key": "Complaint"
+        "key": "complaint"
       },
       {
         "value": "core.lookups.auditReportNames.task",
-        "key": "Task"
+        "key": "task"
       },
       {
         "value": "core.lookups.auditReportNames.file",
-        "key": "File"
-      },
-      {
-        "value": "core.lookups.auditReportNames.document",
-        "key": "Document"
+        "key": "file"
       },
       {
         "value": "core.lookups.auditReportNames.person",
-        "key": "Person"
+        "key": "person"
       },
       {
         "value": "core.lookups.auditReportNames.organization",
-        "key": "Organization"
+        "key": "organization"
       }
     ]}
   ]
