@@ -836,6 +836,14 @@
       {
         "value": "core.lookups.fileTypes.wir",
         "key": "wir"
+      },
+      {
+        "value": "core.lookups.fileTypes.draw",
+        "key": "draw"
+      },
+      {
+        "value": "core.lookups.fileTypes.other",
+        "key": "other"
       }
     ]},
     {"identificationTypes": [
