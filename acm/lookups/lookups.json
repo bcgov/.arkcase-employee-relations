@@ -2007,27 +2007,27 @@
       },
       {
         "value": "core.lookups.auditReportNames.case_file",
-        "key": "case_file"
+        "key": "CASE_FILE"
       },
       {
         "value": "core.lookups.auditReportNames.complaint",
-        "key": "complaint"
+        "key": "COMPLAINT"
       },
       {
         "value": "core.lookups.auditReportNames.task",
-        "key": "task"
+        "key": "TASK"
       },
       {
         "value": "core.lookups.auditReportNames.file",
-        "key": "file"
+        "key": "FILE"
       },
       {
         "value": "core.lookups.auditReportNames.person",
-        "key": "person"
+        "key": "PERSON"
       },
       {
         "value": "core.lookups.auditReportNames.organization",
-        "key": "organization"
+        "key": "ORGANIZATION"
       }
     ]}
   ]
