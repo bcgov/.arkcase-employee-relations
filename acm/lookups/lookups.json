@@ -2002,33 +2002,36 @@
     ]},
     {"auditReportNames": [
       {
-        "value": "core.lookups.auditReportNames.cases",
-        "key": "Case Files"
+        "value": "core.lookups.auditReportNames.all",
+        "key": ""
       },
       {
-        "value": "core.lookups.auditReportNames.complaints",
-        "key": "Complaints"
+        "value": "core.lookups.auditReportNames.case_file",
+        "key": "CASE_FILE"
       },
       {
-        "value": "core.lookups.auditReportNames.tasks",
-        "key": "Tasks"
+        "value": "core.lookups.auditReportNames.complaint",
+        "key": "COMPLAINT"
       },
       {
-        "value": "core.lookups.auditReportNames.files",
-        "key": "Files"
+        "value": "core.lookups.auditReportNames.task",
+        "key": "TASK"
       },
       {
-        "value": "core.lookups.auditReportNames.documents",
-        "key": "Documents"
+        "value": "core.lookups.auditReportNames.file",
+        "key": "FILE"
       },
       {
-        "value": "core.lookups.auditReportNames.people",
-        "key": "People"
+        "value": "core.lookups.auditReportNames.person",
+        "key": "PERSON"
       },
       {
         "value": "core.lookups.auditReportNames.organizations",
         "key": "Organizations"
-
+      },
+      {
+        "value": "core.lookups.auditReportNames.organization",
+        "key": "ORGANIZATION"
       }
     ]},
     {"businessProcessTypes": [
