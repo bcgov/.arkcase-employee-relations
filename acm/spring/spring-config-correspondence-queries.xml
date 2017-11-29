@@ -125,7 +125,7 @@
                 <value>initiatorAliasType</value>
                 <value>initiatorAliasValue</value>
                 <value>currentDate</value>
-				<value>currentDate_PLUS_30_DAYS</value>
+                <value>currentDate_PLUS_30_DAYS</value>
             </list>
         </property>
     </bean>
