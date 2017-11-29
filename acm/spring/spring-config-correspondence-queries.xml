@@ -64,7 +64,7 @@
                         COALESCE(aliases.aliasType, ''),
                         COALESCE(aliases.aliasValue, ''),
                         CURRENT_DATE,
-						CURRENT_DATE
+                        CURRENT_DATE
                     FROM
                         CaseFile cf
                     JOIN PersonAssociation pa
