@@ -5,14 +5,14 @@
 
     <!--
 		
-		If you want to add/remove amount to/from a date, the ID in the 'fieldNames' must be in this format: <FIELD_ID_NAME>_<ACTION>_<AMOUNT>_<UNIT>
+        If you want to add/remove amount to/from a date, the ID in the 'fieldNames' must be in this format: <FIELD_ID_NAME>_<ACTION>_<AMOUNT>_<UNIT>
         Where:
             <FIELD_ID_NAME> is the name that will not have "_" in the name
             <ACTION> can have two values: PLUS or MINUS (can be any case sensitive)
             <AMOUNT> any positive integer number
             <UNIT> can have these values: MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS, YEARS (can be any case sensitive)
-		Example:
-			currentDate_PLUS_30_DAYS
+        Example:
+            currentDate_PLUS_30_DAYS
 		
     -->
 	   
