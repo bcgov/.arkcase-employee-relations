@@ -3,6 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--
+		
+        If you want to add/remove amount to/from a date, the ID in the 'fieldNames' must be in this format: <FIELD_ID_NAME>_<ACTION>_<AMOUNT>_<UNIT>
+        Where:
+            <FIELD_ID_NAME> is the name that will not have "_" in the name
+            <ACTION> can have two values: PLUS or MINUS (can be any case sensitive)
+            <AMOUNT> any positive integer number
+            <UNIT> can have these values: MILLISECONDS, SECONDS, MINUTES, HOURS, DAYS, YEARS (can be any case sensitive)
+        Example:
+            currentDate_PLUS_30_DAYS
+		
+    -->
+	   
     <!-- Case File query -->
     <bean id="caseCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="type" value="CASE_FILE" />
@@ -50,6 +63,7 @@
                         COALESCE(contacts.value, ''),
                         COALESCE(aliases.aliasType, ''),
                         COALESCE(aliases.aliasValue, ''),
+                        CURRENT_DATE,
                         CURRENT_DATE
                     FROM
                         CaseFile cf
@@ -111,6 +125,7 @@
                 <value>initiatorAliasType</value>
                 <value>initiatorAliasValue</value>
                 <value>currentDate</value>
+                <value>currentDate_PLUS_30_DAYS</value>
             </list>
         </property>
     </bean>
