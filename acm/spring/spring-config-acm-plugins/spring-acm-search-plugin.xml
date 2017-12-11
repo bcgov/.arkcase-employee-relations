@@ -93,8 +93,13 @@
                     <property name="url" value="/api/{version}/plugin/search/suggest"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
                 </bean>
-                <bean id="advancedSearchUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="advancedSearchGetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/search/advancedSearch"/>
+                    <property name="requiredPrivilege" ref="searchPrivilege"/>
+                </bean>
+                <bean id="advancedSearchPostUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/search/advancedSearch"/>
                     <property name="requiredPrivilege" ref="searchPrivilege"/>
                 </bean>
