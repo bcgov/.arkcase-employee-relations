@@ -1,6 +1,8 @@
 {
   "inverseValuesLookup": [
-    {"organizationRelationTypes": [
+    {
+	"name": "organizationRelationTypes",
+	"entries": [
       {
         "inverseValue": "core.lookups.organizationRelationTypes.partner",
         "inverseKey": "partner",
@@ -19,8 +21,12 @@
         "value": "core.lookups.organizationRelationTypes.parentCompany",
         "key": "parentCompany"
       }
-    ]},
-    {"personOrganizationRelationTypes": [
+    ],
+	"readonly": true
+	},
+    {
+	"name": "personOrganizationRelationTypes",
+	"entries": [
       {
         "inverseValue": "core.lookups.personOrganizationRelationTypes.owned",
         "inverseKey": "owned",
@@ -63,8 +69,12 @@
         "value": "core.lookups.personOrganizationRelationTypes.executive",
         "key": "executive"
       }
-    ]},
-    {"organizationPersonRelationTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "organizationPersonRelationTypes",
+	"entries": [
       {
         "inverseValue": "core.lookups.personOrganizationRelationTypes.owner",
         "inverseKey": "owner",
@@ -107,8 +117,12 @@
         "value": "core.lookups.personOrganizationRelationTypes.executive",
         "key": "executive"
       }
-    ]},
-    {"personRelationTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "personRelationTypes",
+	"entries": [
       {
         "inverseValue": "core.lookups.personRelationTypes.sibling",
         "inverseKey": "sibling",
@@ -127,9 +141,13 @@
         "value": "core.lookups.personRelationTypes.parent",
         "key": "parent"
       }
-    ]}
+    ], 
+	"readonly": true
+	}
   ],
-  "nestedLookup": [{"contactMethodTypes": [
+  "nestedLookup": [{
+   "name": "contactMethodTypes",
+   "entries": [
     {
       "subLookup": [
         {
@@ -196,17 +214,29 @@
       "value": "core.lookups.contactMethodTypes.url",
       "key": "url"
     }
-  ]}],
+  ], 
+	"readonly": true
+  }],
   "standardLookup": [
-    {"caseFilePersonInitiatorTypes": [{
+    {
+	"name": "caseFilePersonInitiatorTypes",
+	"entries": [{
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
-    }]},
-    {"complaintPersonInitiatorTypes": [{
+    }], 
+	"readonly": true
+	},
+    {
+	"name": "complaintPersonInitiatorTypes",
+	"entries": [{
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
-    }]},
-    {"changeCaseStatuses": [
+    }], 
+	"readonly": true
+	},
+    {
+	"name": "changeCaseStatuses",
+	"entries": [
       {
         "value": "core.lookups.changeCase.statuses.active",
         "key": "ACTIVE"
@@ -223,26 +253,12 @@
         "value": "core.lookups.changeCase.statuses.deleted",
         "key": "DELETED"
       }
-    ]},
-    {"changeCaseStatuses": [
-      {
-        "value": "core.lookups.changeCase.statuses.active",
-        "key": "ACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.inactive",
-        "key": "INACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.closed",
-        "key": "CLOSED"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.deleted",
-        "key": "DELETED"
-      }
-    ]},
-    {"timesheetStatuses": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "timesheetStatuses",
+	"entries": [
       {
         "value": "core.lookups.timesheet.statuses.draft",
         "key": "DRAFT"
@@ -255,8 +271,12 @@
         "value": "core.lookups.timesheet.statuses.approved",
         "key": "APPROVED"
       }
-    ]},
-    {"costsheetStatuses": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "costsheetStatuses",
+	"entries": [
       {
         "value": "core.lookups.timesheet.statuses.draft",
         "key": "DRAFT"
@@ -269,8 +289,12 @@
         "value": "core.lookups.timesheet.statuses.approved",
         "key": "APPROVED"
       }
-    ]},
-    {"costsheetTitles": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "costsheetTitles",
+	"entries": [
       {
         "value": "core.lookups.costsheet.titles.taxi",
         "key": "Taxi"
@@ -287,8 +311,12 @@
         "value": "core.lookups.costsheet.titles.food",
         "key": "Food"
       }
-    ]},
-    {"documentPersonTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "documentPersonTypes",
+	"entries": [
       {
         "value": "core.lookups.documentPersonTypes.defendent",
         "key": "Defendant"
@@ -313,8 +341,12 @@
         "value": "core.lookups.documentPersonTypes.forensic-scientist",
         "key": "Forensic Scientist"
       }
-    ]},
-    {"complaintPersonTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "complaintPersonTypes",
+	"entries": [
       {
         "value": "core.lookups.complaintPersonTypes.complaintant",
         "key": "Complaintant"
@@ -335,8 +367,12 @@
         "value": "core.lookups.common.other",
         "key": "Other"
       }
-    ]},
-    {"deviceTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "deviceTypes",
+	"entries": [
       {
         "value": "core.lookups.deviceTypes.homePhone",
         "key": "Home phone"
@@ -357,8 +393,12 @@
         "value": "core.lookups.deviceTypes.facebook",
         "key": "Facebook"
       }
-    ]},
-    {"locationTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "locationTypes",
+	"entries": [
       {
         "value": "core.lookups.addressTypes.business",
         "key": "Business"
@@ -367,8 +407,12 @@
         "value": "core.lookups.common.home",
         "key": "Home"
       }
-    ]},
-    {"priorities": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "priorities",
+	"entries": [
       {
         "value": "core.lookups.priorities.low",
         "key": "Low"
@@ -385,8 +429,12 @@
         "value": "core.lookups.priorities.expedite",
         "key": "Expedite"
       }
-    ]},
-    {"frequencies": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "frequencies",
+	"entries": [
       {
         "value": "core.lookups.frequencies.once",
         "key": "Once"
@@ -399,8 +447,12 @@
         "value": "core.lookups.frequencies.intermittent",
         "key": "Intermittent"
       }
-    ]},
-    {"dispositions": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "dispositions",
+	"entries": [
       {
         "value": "core.lookups.dispositions.add_existing_case",
         "key": "add_existing_case"
@@ -417,8 +469,12 @@
         "value": "core.lookups.dispositions.refer_external",
         "key": "refer_external"
       }
-    ]},
-    {"resolutions": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "resolutions",
+	"entries": [
       {
         "value": "core.lookups.resolutions.denied",
         "key": "DENIED"
@@ -431,8 +487,12 @@
         "value": "core.lookups.resolutions.partial",
         "key": "PARTIAL"
       }
-    ]},
-    {"complaintTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "complaintTypes",
+	"entries": [
       {
         "value": "core.lookups.categories.agricultural",
         "key": "Agricultural"
@@ -537,8 +597,12 @@
         "value": "core.lookups.categories.theft-or-misuse-of-asset",
         "key": "Theft or misuse of asset"
       }
-    ]},
-    {"complaintParticipantTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "complaintParticipantTypes",
+	"entries": [
       {
         "value": "core.lookups.personOrganizationRelationTypes.owner",
         "key": "assignee"
@@ -547,8 +611,12 @@
         "value": "core.lookups.entitiesParticipantTypes.follower",
         "key": "follower"
       }
-    ]},
-    {"caseFileParticipantTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "caseFileParticipantTypes",
+	"entries": [
       {
         "value": "core.lookups.personOrganizationRelationTypes.owner",
         "key": "assignee"
@@ -581,8 +649,12 @@
         "value": "core.lookups.common.no-access",
         "key": "no access"
       }
-    ]},
-    {"projectParticipantTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "projectParticipantTypes",
+	"entries": [
       {
         "value": "core.lookups.personOrganizationRelationTypes.owner",
         "key": "assignee"
@@ -591,8 +663,12 @@
         "value": "core.lookups.entitiesParticipantTypes.follower",
         "key": "follower"
       }
-    ]},
-    {"caseFileTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "caseFileTypes",
+	"entries": [
       {
         "value": "core.lookups.categories.agricultural",
         "key": "Agricultural"
@@ -697,8 +773,12 @@
         "value": "core.lookups.categories.theft-or-misuse-of-asset",
         "key": "Theft or misuse of asset"
       }
-    ]},
-    {"timesheetTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "timesheetTypes",
+	"entries": [
       {
         "value": "core.lookups.timesheet.types.case_file",
         "key": "CASE_FILE"
@@ -711,8 +791,12 @@
         "value": "core.lookups.common.other",
         "key": "OTHER"
       }
-    ]},
-    {"costsheetTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "costsheetTypes",
+	"entries": [
       {
         "value": "core.lookups.timesheet.types.case_file",
         "key": "CASE_FILE"
@@ -721,8 +805,12 @@
         "value": "core.lookups.timesheet.types.complaint",
         "key": "COMPLAINT"
       }
-    ]},
-    {"caseFilePersonTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "caseFilePersonTypes",
+	"entries": [
       {
         "value": "core.lookups.complaintPersonTypes.complaintant",
         "key": "Complaintant"
@@ -763,8 +851,12 @@
         "value": "core.lookups.caseFilePersonTypes.forensicScientist",
         "key": "Forensic Scientist"
       }
-    ]},
-    {"plainTargets": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "plainTargets",
+	"entries": [
       {
         "value": "core.lookups.common.case",
         "key": "CASE_FILE"
@@ -773,8 +865,12 @@
         "value": "core.lookups.timesheet.types.complaint",
         "key": "COMPLAINT"
       }
-    ]},
-    {"changeCaseStatusResolutions": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "changeCaseStatusResolutions",
+	"entries": [
       {
         "value": "core.lookups.changeCase.resolutions.denied",
         "key": "DENIED"
@@ -787,8 +883,12 @@
         "value": "core.lookups.changeCase.resolutions.partial",
         "key": "PARTIAL"
       }
-    ]},
-    {"addressTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "addressTypes",
+	"entries": [
       {
         "value": "core.lookups.addressTypes.business",
         "key": "Business"
@@ -797,8 +897,12 @@
         "value": "core.lookups.common.home",
         "key": "Home"
       }
-    ]},
-    {"aliasTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "aliasTypes",
+	"entries": [
       {
         "value": "core.lookups.aliasTypes.fka",
         "key": "FKA"
@@ -807,12 +911,20 @@
         "value": "core.lookups.aliasTypes.married",
         "key": "Married"
       }
-    ]},
-    {"dbasTypes": [{
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "dbasTypes",
+	"entries": [{
       "value": "core.lookups.dbasTypes.dba",
       "key": "DBA"
-    }]},
-    {"fileTypes": [
+    }], 
+	"readonly": true
+	},
+    {
+	"name": "fileTypes",
+	"entries": [
       {
         "value": "core.lookups.fileTypes.ev",
         "key": "ev"
@@ -837,8 +949,12 @@
         "value": "core.lookups.fileTypes.wir",
         "key": "wir"
       }
-    ]},
-    {"identificationTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "identificationTypes",
+	"entries": [
       {
         "value": "core.lookups.identificationTypes.ssn",
         "key": "ssn"
@@ -855,8 +971,12 @@
         "value": "core.lookups.identificationTypes.birthCertificate",
         "key": "birthCertificate"
       }
-    ]},
-    {"countries": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "countries",
+	"entries": [
       {
         "value": "core.lookups.countries.AF",
         "key": "AF"
@@ -1845,8 +1965,12 @@
         "value": "core.lookups.countries.ZW",
         "key": "ZW"
       }
-    ]},
-    {"organizationIdTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "organizationIdTypes",
+	"entries": [
       {
         "value": "core.lookups.organizationIdTypes.ein",
         "key": "EIN"
@@ -1859,8 +1983,12 @@
         "value": "core.lookups.organizationIdTypes.cageCode",
         "key": "Cage Code"
       }
-    ]},
-    {"organizationTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "organizationTypes",
+	"entries": [
       {
         "value": "core.lookups.organizationTypes.non-profit",
         "key": "Non-profit"
@@ -1873,8 +2001,12 @@
         "value": "core.lookups.organizationTypes.corporation",
         "key": "Corporation"
       }
-    ]},
-    {"personTitles": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "personTitles",
+	"entries": [
       {
         "value": "core.lookups.personTitles.mr",
         "key": "mr"
@@ -1891,8 +2023,12 @@
         "value": "core.lookups.personTitles.miss",
         "key": "miss"
       }
-    ]},
-    {"organizationalParticipantTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "organizationalParticipantTypes",
+	"entries": [
       {
         "value": "core.lookups.common.owning-group",
         "key": "owning group"
@@ -1913,8 +2049,12 @@
         "value": "core.lookups.organizationalParticipantTypes.owner",
         "key": "owner"
       }
-    ]},
-    {"entitiesParticipantTypes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "entitiesParticipantTypes",
+	"entries": [
       {
         "value": "core.lookups.entitiesParticipantTypes.assignee",
         "key": "assignee"
@@ -1951,8 +2091,12 @@
         "value": "core.lookups.common.no-access",
         "key": "No Access"
       }
-    ]},
-    {"taskOutcomes": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "taskOutcomes",
+	"entries": [
       {
         "value": "core.lookups.taskOutcomes.approve",
         "key": "Approve Document"
@@ -1977,8 +2121,12 @@
         "value": "core.lookups.taskOutcomes.nonConcur",
         "key": "Non-Concur"
       }
-    ]},
-    {"reportStates": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "reportStates",
+	"entries": [
       {
         "value": "core.lookups.reportStates.draft",
         "key": "Draft"
@@ -1999,8 +2147,12 @@
         "value": "core.lookups.reportStates.closed",
         "key": "Closed"
       }
-    ]},
-    {"auditReportNames": [
+    ], 
+	"readonly": true
+	},
+    {
+	"name": "auditReportNames",
+	"entries": [
       {
         "value": "core.lookups.auditReportNames.all",
         "key": ""
@@ -2029,6 +2181,8 @@
         "value": "core.lookups.auditReportNames.organization",
         "key": "organization"
       }
-    ]}
+    ], 
+	"readonly": true
+	}
   ]
 }
