@@ -145,7 +145,7 @@
 
         <beans:bean id="${id}_contextSource"
                     class="org.springframework.ldap.core.support.LdapContextSource">
-            <beans:property name="urls" ref='ldapUrls' />
+            <beans:property name="urls" ref='${id}_ldapUrls' />
             <beans:property name="base" value='${r"${ldapConfig.base}"}' />
             <beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}' />
             <beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}' />
