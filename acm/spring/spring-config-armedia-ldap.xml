@@ -48,9 +48,17 @@
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
+    <beans:bean id="ldapUrl" class="java.lang.String">
+        <beans:constructor-arg value='${ldapConfig.ldapUrl}'/>
+    </beans:bean>
+
+    <beans:bean id="ldapUrls" factory-bean="ldapUrl" factory-method="split">
+        <beans:constructor-arg value=','/>
+    </beans:bean>
+
     <beans:bean id="armedia_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
          <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
-        <beans:property name="ldapUrl" value='${ldapConfig.ldapUrl}'/>
+        <beans:property name="ldapUrl" ref='ldapUrls'/>
         <beans:property name="baseDC" value='${ldapConfig.base}'/>
          <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you
              are using anonymous authentication -->
@@ -140,7 +148,7 @@
 
         <beans:bean id="armedia_contextSource"
             class="org.springframework.ldap.core.support.LdapContextSource">
-            <beans:property name="url" value='${ldapConfig.ldapUrl}' />
+            <beans:property name="urls" ref='ldapUrls' />
             <beans:property name="base" value='${ldapConfig.base}' />
             <beans:property name="userDn" value='${ldapConfig.authUserDn}' />
             <beans:property name="password" value='${ldapConfig.authUserPassword}' />
