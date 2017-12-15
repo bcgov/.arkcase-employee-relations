@@ -538,6 +538,40 @@
       "userIsParticipantTypeAny":["owner", "owning group", "collaborator"],
       "userRolesAny": [],
       "userRolesAll": []
+    },
+	{
+      "actionName": "declareAsRecords",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "declareAsRecords",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userRolesAny": [
+        "ROLE_INVESTIGATOR",
+        "ROLE_INVESTIGATOR_SUPERVISOR",
+        "ROLE_ANALYST",
+        "ROLE_CALLCENTER",
+        "ROLE_ADMINISTRATOR",
+        "ROLE_PROSECUTOR",
+        "Role_Ronda",
+        "Evidence Tech",
+        "ROLE_TECHNICIAN"
+      ],
+      "userRolesAll": []
     }
   ]
 }
