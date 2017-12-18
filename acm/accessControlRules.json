@@ -538,6 +538,20 @@
       "userIsParticipantTypeAny":["owner", "owning group", "collaborator"],
       "userRolesAny": [],
       "userRolesAll": []
+    },
+	{
+      "actionName": "declareAsRecords",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "declareAsRecords",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
     }
   ]
 }
