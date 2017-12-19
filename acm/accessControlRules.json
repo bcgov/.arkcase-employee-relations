@@ -552,6 +552,20 @@
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
+    },
+	{
+      "actionName": "renameFile",
+      "objectType": "FILE",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
+    },
+	{
+      "actionName": "renameFolder",
+      "objectType": "FOLDER",
+      "objectProperties": {},
+      "userRolesAny": [],
+      "userRolesAll": []
     }
   ]
 }
