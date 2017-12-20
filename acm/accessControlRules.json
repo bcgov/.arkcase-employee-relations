@@ -539,28 +539,28 @@
       "userRolesAny": [],
       "userRolesAll": []
     },
-	{
+    {
       "actionName": "declareAsRecords",
       "objectType": "CASE_FILE",
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
     },
-	{
+    {
       "actionName": "declareAsRecords",
       "objectType": "COMPLAINT",
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
     },
-	{
+    {
       "actionName": "renameFile",
       "objectType": "FILE",
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
     },
-	{
+    {
       "actionName": "renameFolder",
       "objectType": "FOLDER",
       "objectProperties": {},
