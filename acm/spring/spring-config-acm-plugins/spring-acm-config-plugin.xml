@@ -34,6 +34,11 @@
                     <property name="url" value="/api/{version}/service/config/lookups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/service/config/lookups/{name}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
