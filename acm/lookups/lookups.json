@@ -226,6 +226,30 @@
       "name":"caseFilePersonInitiatorTypes",
       "entries":[
         {
+    {"endpoint": [
+      {
+        "value": "core.lookups.endpoint.atom",
+        "key": "ATOM"
+      },
+      {
+        "value": "core.lookups.endpoint.soap",
+        "key": "SOAP"
+      }
+    ]},
+    {"versioningState": [
+      {
+        "value": "core.lookups.versioningState.none",
+        "key": "NONE"
+      },
+      {
+        "value": "core.lookups.versioningState.minor",
+        "key": "MINOR"
+      },
+      {
+        "value": "core.lookups.versioningState.major",
+        "key": "MAJOR"
+      }
+    ]},
           "value":"core.lookups.complaintPersonTypes.initiator",
           "key":"Initiator"
         }
@@ -958,6 +982,14 @@
         {
           "value":"core.lookups.fileTypes.wir",
           "key":"wir"
+      },
+      {
+        "value": "core.lookups.fileTypes.draw",
+        "key": "draw"
+      },
+      {
+        "value": "core.lookups.fileTypes.other",
+        "key": "other"
         }
       ],
       "readonly":true
@@ -2169,30 +2201,32 @@
         },
         {
           "value":"core.lookups.auditReportNames.case_file",
-          "key":"case_file"
+        "key": "CASE_FILE"
         },
         {
           "value":"core.lookups.auditReportNames.complaint",
-          "key":"complaint"
+        "key": "COMPLAINT"
         },
         {
           "value":"core.lookups.auditReportNames.task",
-          "key":"task"
+        "key": "TASK"
         },
         {
           "value":"core.lookups.auditReportNames.file",
-          "key":"file"
+        "key": "FILE"
         },
         {
           "value":"core.lookups.auditReportNames.person",
-          "key":"person"
+        "key": "PERSON"
         },
         {
           "value":"core.lookups.auditReportNames.organization",
-          "key":"organization"
+        "key": "ORGANIZATION"
         }
-      ],
-      "readonly":true
-    }
+    ]},
+    {"businessProcessTypes": [{
+      "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+      "key": "acmDocumentWorkflow"
+    }]}
   ]
 }
