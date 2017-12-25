@@ -245,6 +245,12 @@
   "fieldType" : "CASE_FILE",
   "fieldVersion" : "1.0"
 }, {
+  "fieldId" : "currentDate_PLUS_30_DAYS",
+  "fieldValue" : "currentDate_PLUS_30_DAYS",
+  "fieldDescription" : "Current Date Plus 30 Days Place Holder",
+  "fieldType" : "CASE_FILE",
+  "fieldVersion" : "1.0"
+}, {
   "fieldId" : "complaintNumber",
   "fieldValue" : "complaintNumber",
   "fieldDescription" : "complaint Number Place Holder",
