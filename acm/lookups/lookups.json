@@ -202,6 +202,30 @@
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
     }]},
+	    {"endpoint": [
+      {
+        "value": "core.lookups.endpoint.atom",
+        "key": "ATOM"
+      },
+      {
+        "value": "core.lookups.endpoint.soap",
+        "key": "SOAP"
+      }
+    ]},
+    {"versioningState": [
+      {
+        "value": "core.lookups.versioningState.none",
+        "key": "NONE"
+      },
+      {
+        "value": "core.lookups.versioningState.minor",
+        "key": "MINOR"
+      },
+      {
+        "value": "core.lookups.versioningState.major",
+        "key": "MAJOR"
+      }
+    ]},
     {"complaintPersonInitiatorTypes": [{
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
@@ -836,14 +860,6 @@
       {
         "value": "core.lookups.fileTypes.wir",
         "key": "wir"
-      },
-      {
-        "value": "core.lookups.fileTypes.draw",
-        "key": "draw"
-      },
-      {
-        "value": "core.lookups.fileTypes.other",
-        "key": "other"
       }
     ]},
     {"identificationTypes": [
