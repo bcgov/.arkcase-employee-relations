@@ -29,6 +29,11 @@
                     <property name="url" value="/api/{version}/service/email/configure/template/{templateName}"/>
                     <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
                 </bean>
+                <bean id="emailConfigureTemplateValidateUrlPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/service/email/configure/template/validate"/>
+                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                </bean>
 
                 <!-- Sending API privileges. -->
                 <bean id="emailSenderUrlWithattachmentsPost" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
