@@ -172,7 +172,7 @@
                 </bean>	
 				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/task/case/{caseId}"/>
+                    <property name="url" value="/api/{version}/plugin/task/objectType/{type}/objectId/{id}/completedBuckslipProcessIdForObject"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>				
             </list>
