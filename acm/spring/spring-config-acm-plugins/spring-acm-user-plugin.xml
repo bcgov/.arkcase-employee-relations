@@ -69,6 +69,11 @@
                     <property name="url" value="/api/{version}/users/group/{groupId}/remove"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                 <bean id="removeLdapGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/parent/{parentName:.+}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
                 <bean id="usersRemoveSupervisorsFromGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/members/remove"/>
@@ -162,6 +167,11 @@
                 <bean id="usersRemoveLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                 <bean id="removeGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
             </list>
