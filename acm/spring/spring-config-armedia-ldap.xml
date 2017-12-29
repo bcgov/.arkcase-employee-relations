@@ -16,7 +16,7 @@
          cron to the desired cron expression (see JavaDoc for org.springframework.scheduling.support.CronSequenceGenerator).  
          No other changes are needed. -->
     <task:scheduled-tasks scheduler="ldapSyncTaskScheduler">
-        <task:scheduled ref="armedia_ldapSyncJob" method="ldapSync" cron="0 0 * * * *"/>
+        <task:scheduled ref="armedia_ldapSyncJob" method="ldapSync" cron="0 5 * * * *"/>
         <task:scheduled ref="armedia_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
     </task:scheduled-tasks>
 
