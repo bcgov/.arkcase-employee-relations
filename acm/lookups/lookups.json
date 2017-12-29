@@ -223,33 +223,41 @@
   ],
   "standardLookup":[
     {
+	  "name":"endpoint",
+	  "entries":[
+        {
+          "value": "core.lookups.endpoint.atom",
+          "key": "ATOM"
+        },
+        {
+          "value": "core.lookups.endpoint.soap",
+          "key": "SOAP"
+        }
+     ],
+	 "readonly":true
+	},
+    {
+	  "name":"versioningState",
+	  "entries":[
+        {
+          "value": "core.lookups.versioningState.none",
+          "key": "NONE"
+        },
+        {
+          "value": "core.lookups.versioningState.minor",
+          "key": "MINOR"
+        },
+        {
+          "value": "core.lookups.versioningState.major",
+          "key": "MAJOR"
+        }
+    ],
+	  "readonly":true
+	},
+	{
       "name":"caseFilePersonInitiatorTypes",
       "entries":[
         {
-    {"endpoint": [
-      {
-        "value": "core.lookups.endpoint.atom",
-        "key": "ATOM"
-      },
-      {
-        "value": "core.lookups.endpoint.soap",
-        "key": "SOAP"
-      }
-    ]},
-    {"versioningState": [
-      {
-        "value": "core.lookups.versioningState.none",
-        "key": "NONE"
-      },
-      {
-        "value": "core.lookups.versioningState.minor",
-        "key": "MINOR"
-      },
-      {
-        "value": "core.lookups.versioningState.major",
-        "key": "MAJOR"
-      }
-    ]},
           "value":"core.lookups.complaintPersonTypes.initiator",
           "key":"Initiator"
         }
@@ -896,6 +904,10 @@
         {
           "value":"core.lookups.timesheet.types.complaint",
           "key":"COMPLAINT"
+        },
+		{
+          "value":"core.lookups.timesheet.types.task",
+          "key":"TASK"
         }
       ],
       "readonly":true
@@ -2201,32 +2213,39 @@
         },
         {
           "value":"core.lookups.auditReportNames.case_file",
-        "key": "CASE_FILE"
+          "key": "CASE_FILE"
         },
         {
           "value":"core.lookups.auditReportNames.complaint",
-        "key": "COMPLAINT"
+          "key": "COMPLAINT"
         },
         {
           "value":"core.lookups.auditReportNames.task",
-        "key": "TASK"
+          "key": "TASK"
         },
         {
           "value":"core.lookups.auditReportNames.file",
-        "key": "FILE"
+          "key": "FILE"
         },
         {
           "value":"core.lookups.auditReportNames.person",
-        "key": "PERSON"
+          "key": "PERSON"
         },
         {
           "value":"core.lookups.auditReportNames.organization",
-        "key": "ORGANIZATION"
+          "key": "ORGANIZATION"
         }
-    ]},
-    {"businessProcessTypes": [{
-      "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-      "key": "acmDocumentWorkflow"
-    }]}
+    ],
+      "readonly":true
+    },
+    {
+      "name":"businessProcessTypes",
+      "entries":[
+    {
+          "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+          "key": "acmDocumentWorkflow"
+    }],
+      "readonly":true
+    }
   ]
 }
