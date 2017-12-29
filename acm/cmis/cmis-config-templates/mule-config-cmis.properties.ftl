@@ -1,4 +1,3 @@
-<#setting number_format="computer">
 # do not change this value once configured, it is used as a discriminator in acm_file and acm_folder tables
 cmis.id=${id}
 cmis.baseUrl=${baseUrl}
