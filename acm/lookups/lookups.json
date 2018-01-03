@@ -202,16 +202,6 @@
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
     }]},
-	{"endpoint": [
-      {
-        "value": "core.lookups.endpoint.atom",
-        "key": "ATOM"
-      },
-      {
-        "value": "core.lookups.endpoint.soap",
-        "key": "SOAP"
-      }
-    ]},
     {"versioningState": [
       {
         "value": "core.lookups.versioningState.none",
