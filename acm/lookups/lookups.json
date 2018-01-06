@@ -655,6 +655,28 @@
       "readonly":true
     },
     {
+      "name":"complaintStatuses",
+      "entries":[
+        {
+          "value":"core.lookups.complaint.statuses.draft",
+          "key":"DRAFT"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.inapproval",
+          "key":"IN APPROVAL"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.closed",
+          "key":"CLOSED"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.deleted",
+          "key":"DELETED"
+        }
+      ],
+      "readonly":true
+    },
+    {
       "name":"caseFileParticipantTypes",
       "entries":[
         {
