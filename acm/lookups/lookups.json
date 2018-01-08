@@ -2266,6 +2266,10 @@
     {
           "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
           "key": "acmDocumentWorkflow"
+    },
+    {
+          "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
+          "key": "CorrectiveActionPlan"
     }],
       "readonly":true
     }
