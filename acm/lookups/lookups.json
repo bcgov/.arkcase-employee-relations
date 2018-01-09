@@ -222,38 +222,24 @@
     }
   ],
   "standardLookup":[
-    {
-	  "name":"endpoint",
-	  "entries":[
-        {
-          "value": "core.lookups.endpoint.atom",
-          "key": "ATOM"
-        },
-        {
-          "value": "core.lookups.endpoint.soap",
-          "key": "SOAP"
-        }
-     ],
-	 "readonly":true
-	},
-    {
-	  "name":"versioningState",
-	  "entries":[
-        {
-          "value": "core.lookups.versioningState.none",
-          "key": "NONE"
-        },
-        {
-          "value": "core.lookups.versioningState.minor",
-          "key": "MINOR"
-        },
-        {
-          "value": "core.lookups.versioningState.major",
-          "key": "MAJOR"
-        }
-    ],
-	  "readonly":true
-	},
+      {
+          "name":"cmisVersioningState",
+          "entries": [
+          {
+              "value": "core.lookups.cmisVersioningState.none",
+              "key": "NONE"
+          },
+          {
+              "value": "core.lookups.cmisVersioningState.minor",
+              "key": "MINOR"
+          },
+          {
+              "value": "core.lookups.cmisVersioningState.major",
+              "key": "MAJOR"
+          }
+      ],
+               "readonly":true
+           },
 	{
       "name":"caseFilePersonInitiatorTypes",
       "entries":[
