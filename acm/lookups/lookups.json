@@ -202,17 +202,17 @@
       "value": "core.lookups.complaintPersonTypes.initiator",
       "key": "Initiator"
     }]},
-    {"versioningState": [
+    {"cmisVersioningState": [
       {
-        "value": "core.lookups.versioningState.none",
+        "value": "core.lookups.cmisVersioningState.none",
         "key": "NONE"
       },
       {
-        "value": "core.lookups.versioningState.minor",
+        "value": "core.lookups.cmisVersioningState.minor",
         "key": "MINOR"
       },
       {
-        "value": "core.lookups.versioningState.major",
+        "value": "core.lookups.cmisVersioningState.major",
         "key": "MAJOR"
       }
     ]},
@@ -858,7 +858,6 @@
       {
         "value": "core.lookups.fileTypes.other",
         "key": "other"
-
       }
     ]},
     {"identificationTypes": [
@@ -2057,11 +2056,9 @@
         "key": "ORGANIZATION"
       }
     ]},
-    {"businessProcessTypes": [
-      {
-        "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-        "key": "acmDocumentWorkflow"
-      }
-    ]}
+    {"businessProcessTypes": [{
+      "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+      "key": "acmDocumentWorkflow"
+    }]}
   ]
 }
