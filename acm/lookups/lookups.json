@@ -1,855 +1,1021 @@
 {
-  "inverseValuesLookup": [
-    {"organizationRelationTypes": [
-      {
-        "inverseValue": "core.lookups.organizationRelationTypes.partner",
-        "inverseKey": "partner",
-        "value": "core.lookups.organizationRelationTypes.partner",
-        "key": "partner"
-      },
-      {
-        "inverseValue": "core.lookups.organizationRelationTypes.parentCompany",
-        "inverseKey": "parentCompany",
-        "value": "core.lookups.organizationRelationTypes.subCompany",
-        "key": "subCompany"
-      },
-      {
-        "inverseValue": "core.lookups.organizationRelationTypes.subCompany",
-        "inverseKey": "subCompany",
-        "value": "core.lookups.organizationRelationTypes.parentCompany",
-        "key": "parentCompany"
-      }
-    ]},
-    {"personOrganizationRelationTypes": [
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.owned",
-        "inverseKey": "owned",
-        "value": "core.lookups.personOrganizationRelationTypes.owner",
-        "key": "owner"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.employer",
-        "inverseKey": "employer",
-        "value": "core.lookups.personOrganizationRelationTypes.employee",
-        "key": "employee"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.partner",
-        "inverseKey": "partner",
-        "value": "core.lookups.personOrganizationRelationTypes.partner",
-        "key": "partner"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
-        "inverseKey": "director-president-ceo",
-        "value": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
-        "key": "director-president-ceo"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.manager",
-        "inverseKey": "manager",
-        "value": "core.lookups.personOrganizationRelationTypes.manager",
-        "key": "manager"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.general-counsel",
-        "inverseKey": "general-counsel",
-        "value": "core.lookups.personOrganizationRelationTypes.general-counsel",
-        "key": "general-counsel"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.executive",
-        "inverseKey": "executive",
-        "value": "core.lookups.personOrganizationRelationTypes.executive",
-        "key": "executive"
-      }
-    ]},
-    {"organizationPersonRelationTypes": [
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.owner",
-        "inverseKey": "owner",
-        "value": "core.lookups.personOrganizationRelationTypes.owned",
-        "key": "owned"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.employee",
-        "inverseKey": "employee",
-        "value": "core.lookups.personOrganizationRelationTypes.employer",
-        "key": "employer"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.partner",
-        "inverseKey": "partner",
-        "value": "core.lookups.personOrganizationRelationTypes.partner",
-        "key": "partner"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
-        "inverseKey": "director-president-ceo",
-        "value": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
-        "key": "director-president-ceo"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.manager",
-        "inverseKey": "manager",
-        "value": "core.lookups.personOrganizationRelationTypes.manager",
-        "key": "manager"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.general-counsel",
-        "inverseKey": "general-counsel",
-        "value": "core.lookups.personOrganizationRelationTypes.general-counsel",
-        "key": "general-counsel"
-      },
-      {
-        "inverseValue": "core.lookups.personOrganizationRelationTypes.executive",
-        "inverseKey": "executive",
-        "value": "core.lookups.personOrganizationRelationTypes.executive",
-        "key": "executive"
-      }
-    ]},
-    {"personRelationTypes": [
-      {
-        "inverseValue": "core.lookups.personRelationTypes.sibling",
-        "inverseKey": "sibling",
-        "value": "core.lookups.personRelationTypes.sibling",
-        "key": "sibling"
-      },
-      {
-        "inverseValue": "core.lookups.personRelationTypes.parent",
-        "inverseKey": "parent",
-        "value": "core.lookups.personRelationTypes.children",
-        "key": "children"
-      },
-      {
-        "inverseValue": "core.lookups.personRelationTypes.children",
-        "inverseKey": "children",
-        "value": "core.lookups.personRelationTypes.parent",
-        "key": "parent"
-      }
-    ]}
-  ],
-  "nestedLookup": [{"contactMethodTypes": [
+  "inverseValuesLookup":[
     {
-      "subLookup": [
+      "name":"organizationRelationTypes",
+      "entries":[
         {
-          "value": "core.lookups.common.home",
-          "key": "Home"
+          "inverseValue":"core.lookups.organizationRelationTypes.partner",
+          "inverseKey":"partner",
+          "value":"core.lookups.organizationRelationTypes.partner",
+          "key":"partner"
         },
         {
-          "value": "core.lookups.contactMethodTypes.work",
-          "key": "Work"
+          "inverseValue":"core.lookups.organizationRelationTypes.parentCompany",
+          "inverseKey":"parentCompany",
+          "value":"core.lookups.organizationRelationTypes.subCompany",
+          "key":"subCompany"
         },
         {
-          "value": "core.lookups.contactMethodTypes.mobile",
-          "key": "Mobile"
+          "inverseValue":"core.lookups.organizationRelationTypes.subCompany",
+          "inverseKey":"subCompany",
+          "value":"core.lookups.organizationRelationTypes.parentCompany",
+          "key":"parentCompany"
         }
       ],
-      "value": "core.lookups.contactMethodTypes.phone",
-      "key": "phone"
+      "readonly":true
     },
     {
-      "subLookup": [{
-        "value": "core.lookups.contactMethodTypes.fax",
-        "key": "Fax"
-      }],
-      "value": "core.lookups.contactMethodTypes.fax",
-      "key": "fax"
-    },
-    {
-      "subLookup": [
+      "name":"personOrganizationRelationTypes",
+      "entries":[
         {
-          "value": "core.lookups.contactMethodTypes.personal",
-          "key": "Personal"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.owned",
+          "inverseKey":"owned",
+          "value":"core.lookups.personOrganizationRelationTypes.owner",
+          "key":"owner"
         },
         {
-          "value": "core.lookups.contactMethodTypes.business",
-          "key": "Business"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.employer",
+          "inverseKey":"employer",
+          "value":"core.lookups.personOrganizationRelationTypes.employee",
+          "key":"employee"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.partner",
+          "inverseKey":"partner",
+          "value":"core.lookups.personOrganizationRelationTypes.partner",
+          "key":"partner"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
+          "inverseKey":"director-president-ceo",
+          "value":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
+          "key":"director-president-ceo"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.manager",
+          "inverseKey":"manager",
+          "value":"core.lookups.personOrganizationRelationTypes.manager",
+          "key":"manager"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.general-counsel",
+          "inverseKey":"general-counsel",
+          "value":"core.lookups.personOrganizationRelationTypes.general-counsel",
+          "key":"general-counsel"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.executive",
+          "inverseKey":"executive",
+          "value":"core.lookups.personOrganizationRelationTypes.executive",
+          "key":"executive"
         }
       ],
-      "value": "core.lookups.contactMethodTypes.email",
-      "key": "email"
+      "readonly":true
     },
     {
-      "subLookup": [
+      "name":"organizationPersonRelationTypes",
+      "entries":[
         {
-          "value": "core.lookups.contactMethodTypes.website",
-          "key": "Web Site"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.owner",
+          "inverseKey":"owner",
+          "value":"core.lookups.personOrganizationRelationTypes.owned",
+          "key":"owned"
         },
         {
-          "value": "core.lookups.contactMethodTypes.facebook",
-          "key": "Facebook"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.employee",
+          "inverseKey":"employee",
+          "value":"core.lookups.personOrganizationRelationTypes.employer",
+          "key":"employer"
         },
         {
-          "value": "core.lookups.contactMethodTypes.linkedIn",
-          "key": "LinkedIn"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.partner",
+          "inverseKey":"partner",
+          "value":"core.lookups.personOrganizationRelationTypes.partner",
+          "key":"partner"
         },
         {
-          "value": "core.lookups.contactMethodTypes.twitter",
-          "key": "Twitter"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
+          "inverseKey":"director-president-ceo",
+          "value":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
+          "key":"director-president-ceo"
         },
         {
-          "value": "core.lookups.common.other",
-          "key": "Other"
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.manager",
+          "inverseKey":"manager",
+          "value":"core.lookups.personOrganizationRelationTypes.manager",
+          "key":"manager"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.general-counsel",
+          "inverseKey":"general-counsel",
+          "value":"core.lookups.personOrganizationRelationTypes.general-counsel",
+          "key":"general-counsel"
+        },
+        {
+          "inverseValue":"core.lookups.personOrganizationRelationTypes.executive",
+          "inverseKey":"executive",
+          "value":"core.lookups.personOrganizationRelationTypes.executive",
+          "key":"executive"
         }
       ],
-      "value": "core.lookups.contactMethodTypes.url",
-      "key": "url"
+      "readonly":true
+    },
+    {
+      "name":"personRelationTypes",
+      "entries":[
+        {
+          "inverseValue":"core.lookups.personRelationTypes.sibling",
+          "inverseKey":"sibling",
+          "value":"core.lookups.personRelationTypes.sibling",
+          "key":"sibling"
+        },
+        {
+          "inverseValue":"core.lookups.personRelationTypes.parent",
+          "inverseKey":"parent",
+          "value":"core.lookups.personRelationTypes.children",
+          "key":"children"
+        },
+        {
+          "inverseValue":"core.lookups.personRelationTypes.children",
+          "inverseKey":"children",
+          "value":"core.lookups.personRelationTypes.parent",
+          "key":"parent"
+        }
+      ],
+      "readonly":true
     }
-  ]}],
-  "standardLookup": [
-    {"caseFilePersonInitiatorTypes": [{
-      "value": "core.lookups.complaintPersonTypes.initiator",
-      "key": "Initiator"
-    }]},
-    {"cmisVersioningState": [
-      {
-        "value": "core.lookups.cmisVersioningState.none",
-        "key": "NONE"
-      },
-      {
-        "value": "core.lookups.cmisVersioningState.minor",
-        "key": "MINOR"
-      },
-      {
-        "value": "core.lookups.cmisVersioningState.major",
-        "key": "MAJOR"
-      }
-    ]},
-    {"complaintPersonInitiatorTypes": [{
-      "value": "core.lookups.complaintPersonTypes.initiator",
-      "key": "Initiator"
-    }]},
-    {"changeCaseStatuses": [
-      {
-        "value": "core.lookups.changeCase.statuses.active",
-        "key": "ACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.inactive",
-        "key": "INACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.closed",
-        "key": "CLOSED"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.deleted",
-        "key": "DELETED"
-      }
-    ]},
-    {"changeCaseStatuses": [
-      {
-        "value": "core.lookups.changeCase.statuses.active",
-        "key": "ACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.inactive",
-        "key": "INACTIVE"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.closed",
-        "key": "CLOSED"
-      },
-      {
-        "value": "core.lookups.changeCase.statuses.deleted",
-        "key": "DELETED"
-      }
-    ]},
-    {"timesheetStatuses": [
-      {
-        "value": "core.lookups.timesheet.statuses.draft",
-        "key": "DRAFT"
-      },
-      {
-        "value": "core.lookups.timesheet.statuses.inapproval",
-        "key": "IN_APPROVAL"
-      },
-      {
-        "value": "core.lookups.timesheet.statuses.approved",
-        "key": "APPROVED"
-      }
-    ]},
-    {"costsheetStatuses": [
-      {
-        "value": "core.lookups.timesheet.statuses.draft",
-        "key": "DRAFT"
-      },
-      {
-        "value": "core.lookups.timesheet.statuses.inapproval",
-        "key": "IN_APPROVAL"
-      },
-      {
-        "value": "core.lookups.timesheet.statuses.approved",
-        "key": "APPROVED"
-      }
-    ]},
-    {"costsheetTitles": [
-      {
-        "value": "core.lookups.costsheet.titles.taxi",
-        "key": "Taxi"
-      },
-      {
-        "value": "core.lookups.costsheet.titles.hotel",
-        "key": "Hotel"
-      },
-      {
-        "value": "core.lookups.costsheet.titles.overtime",
-        "key": "Overtime"
-      },
-      {
-        "value": "core.lookups.costsheet.titles.food",
-        "key": "Food"
-      }
-    ]},
-    {"documentPersonTypes": [
-      {
-        "value": "core.lookups.documentPersonTypes.defendent",
-        "key": "Defendant"
-      },
-      {
-        "value": "core.lookups.documentPersonTypes.witness",
-        "key": "Witness"
-      },
-      {
-        "value": "core.lookups.documentPersonTypes.was-officer",
-        "key": "WAS Officer"
-      },
-      {
-        "value": "core.lookups.documentPersonTypes.victim",
-        "key": "Victim"
-      },
-      {
-        "value": "core.lookups.documentPersonTypes.defense-counsel",
-        "key": "Defense Counsel"
-      },
-      {
-        "value": "core.lookups.documentPersonTypes.forensic-scientist",
-        "key": "Forensic Scientist"
-      }
-    ]},
-    {"complaintPersonTypes": [
-      {
-        "value": "core.lookups.complaintPersonTypes.complaintant",
-        "key": "Complaintant"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.subject",
-        "key": "Subject"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.witness",
-        "key": "Witness"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.wrongdoer",
-        "key": "Wrongdoer"
-      },
-      {
-        "value": "core.lookups.common.other",
-        "key": "Other"
-      }
-    ]},
-    {"deviceTypes": [
-      {
-        "value": "core.lookups.deviceTypes.homePhone",
-        "key": "Home phone"
-      },
-      {
-        "value": "core.lookups.deviceTypes.workPhone",
-        "key": "Work phone"
-      },
-      {
-        "value": "core.lookups.deviceTypes.mobile",
-        "key": "Mobile"
-      },
-      {
-        "value": "core.lookups.deviceTypes.email",
-        "key": "Email"
-      },
-      {
-        "value": "core.lookups.deviceTypes.facebook",
-        "key": "Facebook"
-      }
-    ]},
-    {"locationTypes": [
-      {
-        "value": "core.lookups.addressTypes.business",
-        "key": "Business"
-      },
-      {
-        "value": "core.lookups.common.home",
-        "key": "Home"
-      }
-    ]},
-    {"priorities": [
-      {
-        "value": "core.lookups.priorities.low",
-        "key": "Low"
-      },
-      {
-        "value": "core.lookups.priorities.medium",
-        "key": "Medium"
-      },
-      {
-        "value": "core.lookups.priorities.high",
-        "key": "High"
-      },
-      {
-        "value": "core.lookups.priorities.expedite",
-        "key": "Expedite"
-      }
-    ]},
-    {"frequencies": [
-      {
-        "value": "core.lookups.frequencies.once",
-        "key": "Once"
-      },
-      {
-        "value": "core.lookups.frequencies.ongoing",
-        "key": "Ongoing"
-      },
-      {
-        "value": "core.lookups.frequencies.intermittent",
-        "key": "Intermittent"
-      }
-    ]},
-    {"dispositions": [
-      {
-        "value": "core.lookups.dispositions.add_existing_case",
-        "key": "add_existing_case"
-      },
-      {
-        "value": "core.lookups.dispositions.open_investigation",
-        "key": "open_investigation"
-      },
-      {
-        "value": "core.lookups.dispositions.no_action",
-        "key": "no_action"
-      },
-      {
-        "value": "core.lookups.dispositions.refer_external",
-        "key": "refer_external"
-      }
-    ]},
-    {"resolutions": [
-      {
-        "value": "core.lookups.resolutions.denied",
-        "key": "DENIED"
-      },
-      {
-        "value": "core.lookups.resolutions.full",
-        "key": "FULL"
-      },
-      {
-        "value": "core.lookups.resolutions.partial",
-        "key": "PARTIAL"
-      }
-    ]},
-    {"complaintTypes": [
-      {
-        "value": "core.lookups.categories.agricultural",
-        "key": "Agricultural"
-      },
-      {
-        "value": "core.lookups.categories.arson",
-        "key": "Arson"
-      },
-      {
-        "value": "core.lookups.categories.backgroundInvestigation",
-        "key": "Background Investigation"
-      },
-      {
-        "value": "core.lookups.categories.benefits-appeal",
-        "key": "Benefits Appeal"
-      },
-      {
-        "value": "core.lookups.categories.better-business-dispute",
-        "key": "Better Business Dispute"
-      },
-      {
-        "value": "core.lookups.categories.clinical-investigator-fraud",
-        "key": "Clinical Investigator Fraud"
-      },
-      {
-        "value": "core.lookups.categories.congressionalResponse",
-        "key": "Congressional Response"
-      },
-      {
-        "value": "core.lookups.categories.disability-waiver-request",
-        "key": "Disability Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.domesticDispute",
-        "key": "Domestic Dispute"
-      },
-      {
-        "value": "core.lookups.categories.drugTrafficking",
-        "key": "Drug Trafficking"
-      },
-      {
-        "value": "core.lookups.categories.education-waiver-request",
-        "key": "Education Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.eeo-harassment",
-        "key": "EEO/Harassment"
-      },
-      {
-        "value": "core.lookups.categories.embezzlement",
-        "key": "Embezzlement"
-      },
-      {
-        "value": "core.lookups.categories.extortion",
-        "key": "Extortion"
-      },
-      {
-        "value": "core.lookups.categories.fraud",
-        "key": "Fraud"
-      },
-      {
-        "value": "core.lookups.categories.government",
-        "key": "Government"
-      },
-      {
-        "value": "core.lookups.categories.investorComplaint",
-        "key": "Investor Complaint"
-      },
-      {
-        "value": "core.lookups.categories.laborRacketeering",
-        "key": "Labor Racketeering"
-      },
-      {
-        "value": "core.lookups.categories.local",
-        "key": "Local"
-      },
-      {
-        "value": "core.lookups.categories.murder",
-        "key": "Murder"
-      },
-      {
-        "value": "core.lookups.categories.new-drug-application-fraud",
-        "key": "New Drug Application Fraud"
-      },
-      {
-        "value": "core.lookups.categories.payoff",
-        "key": "Payoff"
-      },
-      {
-        "value": "core.lookups.categories.pension-waiver-request",
-        "key": "Pension Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.pollution",
-        "key": "Pollution"
-      },
-      {
-        "value": "core.lookups.categories.productTampering",
-        "key": "Product Tampering"
-      },
-      {
-        "value": "core.lookups.categories.theft-or-misuse-of-asset",
-        "key": "Theft or misuse of asset"
-      }
-    ]},
-    {"complaintParticipantTypes": [
-      {
-        "value": "core.lookups.personOrganizationRelationTypes.owner",
-        "key": "assignee"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.follower",
-        "key": "follower"
-      }
-    ]},
-    {"caseFileParticipantTypes": [
-      {
-        "value": "core.lookups.personOrganizationRelationTypes.owner",
-        "key": "assignee"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.co-owner",
-        "key": "co-owner"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.supervisor",
-        "key": "supervisor"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.approver",
-        "key": "approver"
-      },
-      {
-        "value": "core.lookups.common.collaborator",
-        "key": "collaborator"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.follower",
-        "key": "follower"
-      },
-      {
-        "value": "core.lookups.common.reader",
-        "key": "reader"
-      },
-      {
-        "value": "core.lookups.common.no-access",
-        "key": "no access"
-      }
-    ]},
-    {"projectParticipantTypes": [
-      {
-        "value": "core.lookups.personOrganizationRelationTypes.owner",
-        "key": "assignee"
-      },
-      {
-        "value": "core.lookups.entitiesParticipantTypes.follower",
-        "key": "follower"
-      }
-    ]},
-    {"caseFileTypes": [
-      {
-        "value": "core.lookups.categories.agricultural",
-        "key": "Agricultural"
-      },
-      {
-        "value": "core.lookups.categories.arson",
-        "key": "Arson"
-      },
-      {
-        "value": "core.lookups.categories.backgroundInvestigation",
-        "key": "Background Investigation"
-      },
-      {
-        "value": "core.lookups.categories.benefits-appeal",
-        "key": "Benefits Appeal"
-      },
-      {
-        "value": "core.lookups.categories.better-business-dispute",
-        "key": "Better Business Dispute"
-      },
-      {
-        "value": "core.lookups.categories.clinical-investigator-fraud",
-        "key": "Clinical Investigator Fraud"
-      },
-      {
-        "value": "core.lookups.categories.congressionalResponse",
-        "key": "Congressional Response"
-      },
-      {
-        "value": "core.lookups.categories.disability-waiver-request",
-        "key": "Disability Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.domesticDispute",
-        "key": "Domestic Dispute"
-      },
-      {
-        "value": "core.lookups.categories.drugTrafficking",
-        "key": "Drug Trafficking"
-      },
-      {
-        "value": "core.lookups.categories.education-waiver-request",
-        "key": "Education Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.eeo-harassment",
-        "key": "EEO/Harassment"
-      },
-      {
-        "value": "core.lookups.categories.embezzlement",
-        "key": "Embezzlement"
-      },
-      {
-        "value": "core.lookups.categories.extortion",
-        "key": "Extortion"
-      },
-      {
-        "value": "core.lookups.categories.fraud",
-        "key": "Fraud"
-      },
-      {
-        "value": "core.lookups.categories.government",
-        "key": "Government"
-      },
-      {
-        "value": "core.lookups.categories.investorComplaint",
-        "key": "Investor Complaint"
-      },
-      {
-        "value": "core.lookups.categories.laborRacketeering",
-        "key": "Labor Racketeering"
-      },
-      {
-        "value": "core.lookups.categories.local",
-        "key": "Local"
-      },
-      {
-        "value": "core.lookups.categories.murder",
-        "key": "Murder"
-      },
-      {
-        "value": "core.lookups.categories.new-drug-application-fraud",
-        "key": "New Drug Application Fraud"
-      },
-      {
-        "value": "core.lookups.categories.payoff",
-        "key": "Payoff"
-      },
-      {
-        "value": "core.lookups.categories.pension-waiver-request",
-        "key": "Pension Waiver Request"
-      },
-      {
-        "value": "core.lookups.categories.pollution",
-        "key": "Pollution"
-      },
-      {
-        "value": "core.lookups.categories.productTampering",
-        "key": "Product Tampering"
-      },
-      {
-        "value": "core.lookups.categories.theft-or-misuse-of-asset",
-        "key": "Theft or misuse of asset"
-      }
-    ]},
-    {"timesheetTypes": [
-      {
-        "value": "core.lookups.timesheet.types.case_file",
-        "key": "CASE_FILE"
-      },
-      {
-        "value": "core.lookups.timesheet.types.complaint",
-        "key": "COMPLAINT"
-      },
-      {
-        "value": "core.lookups.common.other",
-        "key": "OTHER"
-      }
-    ]},
-    {"costsheetTypes": [
-      {
-        "value": "core.lookups.timesheet.types.case_file",
-        "key": "CASE_FILE"
-      },
-      {
-        "value": "core.lookups.timesheet.types.complaint",
-        "key": "COMPLAINT"
-      }
-    ]},
-    {"caseFilePersonTypes": [
-      {
-        "value": "core.lookups.complaintPersonTypes.complaintant",
-        "key": "Complaintant"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.subject",
-        "key": "Subject"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.witness",
-        "key": "Witness"
-      },
-      {
-        "value": "core.lookups.complaintPersonTypes.wrongdoer",
-        "key": "Wrongdoer"
-      },
-      {
-        "value": "core.lookups.common.other",
-        "key": "Other"
-      },
-      {
-        "value": "core.lookups.caseFilePersonTypes.defendant",
-        "key": "Defendant"
-      },
-      {
-        "value": "core.lookups.caseFilePersonTypes.was-officer",
-        "key": "WAS Officer"
-      },
-      {
-        "value": "core.lookups.caseFilePersonTypes.victim",
-        "key": "Victim"
-      },
-      {
-        "value": "core.lookups.caseFilePersonTypes.defenseCounsel",
-        "key": "Defense Counsel"
-      },
-      {
-        "value": "core.lookups.caseFilePersonTypes.forensicScientist",
-        "key": "Forensic Scientist"
-      }
-    ]},
-    {"plainTargets": [
-      {
-        "value": "core.lookups.common.case",
-        "key": "CASE_FILE"
-      },
-      {
-        "value": "core.lookups.timesheet.types.complaint",
-        "key": "COMPLAINT"
-      }
-    ]},
-    {"changeCaseStatusResolutions": [
-      {
-        "value": "core.lookups.changeCase.resolutions.denied",
-        "key": "DENIED"
-      },
-      {
-        "value": "core.lookups.changeCase.resolutions.full",
-        "key": "FULL"
-      },
-      {
-        "value": "core.lookups.changeCase.resolutions.partial",
-        "key": "PARTIAL"
-      }
-    ]},
-    {"addressTypes": [
-      {
-        "value": "core.lookups.addressTypes.business",
-        "key": "Business"
-      },
-      {
-        "value": "core.lookups.common.home",
-        "key": "Home"
-      }
-    ]},
-    {"aliasTypes": [
-      {
-        "value": "core.lookups.aliasTypes.fka",
-        "key": "FKA"
-      },
-      {
-        "value": "core.lookups.aliasTypes.married",
-        "key": "Married"
-      }
-    ]},
-    {"dbasTypes": [{
-      "value": "core.lookups.dbasTypes.dba",
-      "key": "DBA"
-    }]},
-    {"fileTypes": [
-      {
-        "value": "core.lookups.fileTypes.ev",
-        "key": "ev"
-      },
-      {
-        "value": "core.lookups.fileTypes.gr",
-        "key": "gr"
-      },
-      {
-        "value": "core.lookups.fileTypes.mr",
-        "key": "mr"
-      },
-      {
-        "value": "core.lookups.fileTypes.noi",
-        "key": "noi"
-      },
-      {
-        "value": "core.lookups.fileTypes.sig",
-        "key": "sig"
-      },
-      {
-        "value": "core.lookups.fileTypes.wir",
-        "key": "wir"
+  ],
+  "nestedLookup":[
+    {
+      "name":"contactMethodTypes",
+      "entries":[
+        {
+          "subLookup":[
+            {
+              "value":"core.lookups.common.home",
+              "key":"Home"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.work",
+              "key":"Work"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.mobile",
+              "key":"Mobile"
+            }
+          ],
+          "value":"core.lookups.contactMethodTypes.phone",
+          "key":"phone"
+        },
+        {
+          "subLookup":[
+            {
+              "value":"core.lookups.contactMethodTypes.fax",
+              "key":"Fax"
+            }
+          ],
+          "value":"core.lookups.contactMethodTypes.fax",
+          "key":"fax"
+        },
+        {
+          "subLookup":[
+            {
+              "value":"core.lookups.contactMethodTypes.personal",
+              "key":"Personal"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.business",
+              "key":"Business"
+            }
+          ],
+          "value":"core.lookups.contactMethodTypes.email",
+          "key":"email"
+        },
+        {
+          "subLookup":[
+            {
+              "value":"core.lookups.contactMethodTypes.website",
+              "key":"Web Site"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.facebook",
+              "key":"Facebook"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.linkedIn",
+              "key":"LinkedIn"
+            },
+            {
+              "value":"core.lookups.contactMethodTypes.twitter",
+              "key":"Twitter"
+            },
+            {
+              "value":"core.lookups.common.other",
+              "key":"Other"
+            }
+          ],
+          "value":"core.lookups.contactMethodTypes.url",
+          "key":"url"
+        }
+      ],
+      "readonly":true
+    }
+  ],
+  "standardLookup":[
+    {
+	  "name":"endpoint",
+	  "entries":[
+        {
+          "value": "core.lookups.endpoint.atom",
+          "key": "ATOM"
+        },
+        {
+          "value": "core.lookups.endpoint.soap",
+          "key": "SOAP"
+        }
+     ],
+	 "readonly":true
+	},
+    {
+	  "name":"versioningState",
+	  "entries":[
+        {
+          "value": "core.lookups.versioningState.none",
+          "key": "NONE"
+        },
+        {
+          "value": "core.lookups.versioningState.minor",
+          "key": "MINOR"
+        },
+        {
+          "value": "core.lookups.versioningState.major",
+          "key": "MAJOR"
+        }
+    ],
+	  "readonly":true
+	},
+	{
+      "name":"caseFilePersonInitiatorTypes",
+      "entries":[
+        {
+          "value":"core.lookups.complaintPersonTypes.initiator",
+          "key":"Initiator"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"complaintPersonInitiatorTypes",
+      "entries":[
+        {
+          "value":"core.lookups.complaintPersonTypes.initiator",
+          "key":"Initiator"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"changeCaseStatuses",
+      "entries":[
+        {
+          "value":"core.lookups.changeCase.statuses.active",
+          "key":"ACTIVE"
+        },
+        {
+          "value":"core.lookups.changeCase.statuses.inactive",
+          "key":"INACTIVE"
+        },
+        {
+          "value":"core.lookups.changeCase.statuses.closed",
+          "key":"CLOSED"
+        },
+        {
+          "value":"core.lookups.changeCase.statuses.deleted",
+          "key":"DELETED"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"timesheetStatuses",
+      "entries":[
+        {
+          "value":"core.lookups.timesheet.statuses.draft",
+          "key":"DRAFT"
+        },
+        {
+          "value":"core.lookups.timesheet.statuses.inapproval",
+          "key":"IN_APPROVAL"
+        },
+        {
+          "value":"core.lookups.timesheet.statuses.approved",
+          "key":"APPROVED"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"costsheetStatuses",
+      "entries":[
+        {
+          "value":"core.lookups.timesheet.statuses.draft",
+          "key":"DRAFT"
+        },
+        {
+          "value":"core.lookups.timesheet.statuses.inapproval",
+          "key":"IN_APPROVAL"
+        },
+        {
+          "value":"core.lookups.timesheet.statuses.approved",
+          "key":"APPROVED"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"costsheetTitles",
+      "entries":[
+        {
+          "value":"core.lookups.costsheet.titles.taxi",
+          "key":"Taxi"
+        },
+        {
+          "value":"core.lookups.costsheet.titles.hotel",
+          "key":"Hotel"
+        },
+        {
+          "value":"core.lookups.costsheet.titles.overtime",
+          "key":"Overtime"
+        },
+        {
+          "value":"core.lookups.costsheet.titles.food",
+          "key":"Food"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"documentPersonTypes",
+      "entries":[
+        {
+          "value":"core.lookups.documentPersonTypes.defendent",
+          "key":"Defendant"
+        },
+        {
+          "value":"core.lookups.documentPersonTypes.witness",
+          "key":"Witness"
+        },
+        {
+          "value":"core.lookups.documentPersonTypes.was-officer",
+          "key":"WAS Officer"
+        },
+        {
+          "value":"core.lookups.documentPersonTypes.victim",
+          "key":"Victim"
+        },
+        {
+          "value":"core.lookups.documentPersonTypes.defense-counsel",
+          "key":"Defense Counsel"
+        },
+        {
+          "value":"core.lookups.documentPersonTypes.forensic-scientist",
+          "key":"Forensic Scientist"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"complaintPersonTypes",
+      "entries":[
+        {
+          "value":"core.lookups.complaintPersonTypes.complaintant",
+          "key":"Complaintant"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.subject",
+          "key":"Subject"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.witness",
+          "key":"Witness"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.wrongdoer",
+          "key":"Wrongdoer"
+        },
+        {
+          "value":"core.lookups.common.other",
+          "key":"Other"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"deviceTypes",
+      "entries":[
+        {
+          "value":"core.lookups.deviceTypes.homePhone",
+          "key":"Home phone"
+        },
+        {
+          "value":"core.lookups.deviceTypes.workPhone",
+          "key":"Work phone"
+        },
+        {
+          "value":"core.lookups.deviceTypes.mobile",
+          "key":"Mobile"
+        },
+        {
+          "value":"core.lookups.deviceTypes.email",
+          "key":"Email"
+        },
+        {
+          "value":"core.lookups.deviceTypes.facebook",
+          "key":"Facebook"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"locationTypes",
+      "entries":[
+        {
+          "value":"core.lookups.addressTypes.business",
+          "key":"Business"
+        },
+        {
+          "value":"core.lookups.common.home",
+          "key":"Home"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"priorities",
+      "entries":[
+        {
+          "value":"core.lookups.priorities.low",
+          "key":"Low"
+        },
+        {
+          "value":"core.lookups.priorities.medium",
+          "key":"Medium"
+        },
+        {
+          "value":"core.lookups.priorities.high",
+          "key":"High"
+        },
+        {
+          "value":"core.lookups.priorities.expedite",
+          "key":"Expedite"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"frequencies",
+      "entries":[
+        {
+          "value":"core.lookups.frequencies.once",
+          "key":"Once"
+        },
+        {
+          "value":"core.lookups.frequencies.ongoing",
+          "key":"Ongoing"
+        },
+        {
+          "value":"core.lookups.frequencies.intermittent",
+          "key":"Intermittent"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"dispositions",
+      "entries":[
+        {
+          "value":"core.lookups.dispositions.add_existing_case",
+          "key":"add_existing_case"
+        },
+        {
+          "value":"core.lookups.dispositions.open_investigation",
+          "key":"open_investigation"
+        },
+        {
+          "value":"core.lookups.dispositions.no_action",
+          "key":"no_action"
+        },
+        {
+          "value":"core.lookups.dispositions.refer_external",
+          "key":"refer_external"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"resolutions",
+      "entries":[
+        {
+          "value":"core.lookups.resolutions.denied",
+          "key":"DENIED"
+        },
+        {
+          "value":"core.lookups.resolutions.full",
+          "key":"FULL"
+        },
+        {
+          "value":"core.lookups.resolutions.partial",
+          "key":"PARTIAL"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"complaintTypes",
+      "entries":[
+        {
+          "value":"core.lookups.categories.agricultural",
+          "key":"Agricultural"
+        },
+        {
+          "value":"core.lookups.categories.arson",
+          "key":"Arson"
+        },
+        {
+          "value":"core.lookups.categories.backgroundInvestigation",
+          "key":"Background Investigation"
+        },
+        {
+          "value":"core.lookups.categories.benefits-appeal",
+          "key":"Benefits Appeal"
+        },
+        {
+          "value":"core.lookups.categories.better-business-dispute",
+          "key":"Better Business Dispute"
+        },
+        {
+          "value":"core.lookups.categories.clinical-investigator-fraud",
+          "key":"Clinical Investigator Fraud"
+        },
+        {
+          "value":"core.lookups.categories.congressionalResponse",
+          "key":"Congressional Response"
+        },
+        {
+          "value":"core.lookups.categories.disability-waiver-request",
+          "key":"Disability Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.domesticDispute",
+          "key":"Domestic Dispute"
+        },
+        {
+          "value":"core.lookups.categories.drugTrafficking",
+          "key":"Drug Trafficking"
+        },
+        {
+          "value":"core.lookups.categories.education-waiver-request",
+          "key":"Education Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.eeo-harassment",
+          "key":"EEO/Harassment"
+        },
+        {
+          "value":"core.lookups.categories.embezzlement",
+          "key":"Embezzlement"
+        },
+        {
+          "value":"core.lookups.categories.extortion",
+          "key":"Extortion"
+        },
+        {
+          "value":"core.lookups.categories.fraud",
+          "key":"Fraud"
+        },
+        {
+          "value":"core.lookups.categories.government",
+          "key":"Government"
+        },
+        {
+          "value":"core.lookups.categories.investorComplaint",
+          "key":"Investor Complaint"
+        },
+        {
+          "value":"core.lookups.categories.laborRacketeering",
+          "key":"Labor Racketeering"
+        },
+        {
+          "value":"core.lookups.categories.local",
+          "key":"Local"
+        },
+        {
+          "value":"core.lookups.categories.murder",
+          "key":"Murder"
+        },
+        {
+          "value":"core.lookups.categories.new-drug-application-fraud",
+          "key":"New Drug Application Fraud"
+        },
+        {
+          "value":"core.lookups.categories.payoff",
+          "key":"Payoff"
+        },
+        {
+          "value":"core.lookups.categories.pension-waiver-request",
+          "key":"Pension Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.pollution",
+          "key":"Pollution"
+        },
+        {
+          "value":"core.lookups.categories.productTampering",
+          "key":"Product Tampering"
+        },
+        {
+          "value":"core.lookups.categories.theft-or-misuse-of-asset",
+          "key":"Theft or misuse of asset"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"complaintParticipantTypes",
+      "entries":[
+        {
+          "value":"core.lookups.personOrganizationRelationTypes.owner",
+          "key":"assignee"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.follower",
+          "key":"follower"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"complaintStatuses",
+      "entries":[
+        {
+          "value":"core.lookups.complaint.statuses.draft",
+          "key":"DRAFT"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.inapproval",
+          "key":"IN APPROVAL"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.closed",
+          "key":"CLOSED"
+        },
+        {
+          "value":"core.lookups.complaint.statuses.deleted",
+          "key":"DELETED"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"caseFileParticipantTypes",
+      "entries":[
+        {
+          "value":"core.lookups.personOrganizationRelationTypes.owner",
+          "key":"assignee"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.co-owner",
+          "key":"co-owner"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.supervisor",
+          "key":"supervisor"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.approver",
+          "key":"approver"
+        },
+        {
+          "value":"core.lookups.common.collaborator",
+          "key":"collaborator"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.follower",
+          "key":"follower"
+        },
+        {
+          "value":"core.lookups.common.reader",
+          "key":"reader"
+        },
+        {
+          "value":"core.lookups.common.no-access",
+          "key":"no access"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"projectParticipantTypes",
+      "entries":[
+        {
+          "value":"core.lookups.personOrganizationRelationTypes.owner",
+          "key":"assignee"
+        },
+        {
+          "value":"core.lookups.entitiesParticipantTypes.follower",
+          "key":"follower"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"caseFileTypes",
+      "entries":[
+        {
+          "value":"core.lookups.categories.agricultural",
+          "key":"Agricultural"
+        },
+        {
+          "value":"core.lookups.categories.arson",
+          "key":"Arson"
+        },
+        {
+          "value":"core.lookups.categories.backgroundInvestigation",
+          "key":"Background Investigation"
+        },
+        {
+          "value":"core.lookups.categories.benefits-appeal",
+          "key":"Benefits Appeal"
+        },
+        {
+          "value":"core.lookups.categories.better-business-dispute",
+          "key":"Better Business Dispute"
+        },
+        {
+          "value":"core.lookups.categories.clinical-investigator-fraud",
+          "key":"Clinical Investigator Fraud"
+        },
+        {
+          "value":"core.lookups.categories.congressionalResponse",
+          "key":"Congressional Response"
+        },
+        {
+          "value":"core.lookups.categories.disability-waiver-request",
+          "key":"Disability Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.domesticDispute",
+          "key":"Domestic Dispute"
+        },
+        {
+          "value":"core.lookups.categories.drugTrafficking",
+          "key":"Drug Trafficking"
+        },
+        {
+          "value":"core.lookups.categories.education-waiver-request",
+          "key":"Education Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.eeo-harassment",
+          "key":"EEO/Harassment"
+        },
+        {
+          "value":"core.lookups.categories.embezzlement",
+          "key":"Embezzlement"
+        },
+        {
+          "value":"core.lookups.categories.extortion",
+          "key":"Extortion"
+        },
+        {
+          "value":"core.lookups.categories.fraud",
+          "key":"Fraud"
+        },
+        {
+          "value":"core.lookups.categories.government",
+          "key":"Government"
+        },
+        {
+          "value":"core.lookups.categories.investorComplaint",
+          "key":"Investor Complaint"
+        },
+        {
+          "value":"core.lookups.categories.laborRacketeering",
+          "key":"Labor Racketeering"
+        },
+        {
+          "value":"core.lookups.categories.local",
+          "key":"Local"
+        },
+        {
+          "value":"core.lookups.categories.murder",
+          "key":"Murder"
+        },
+        {
+          "value":"core.lookups.categories.new-drug-application-fraud",
+          "key":"New Drug Application Fraud"
+        },
+        {
+          "value":"core.lookups.categories.payoff",
+          "key":"Payoff"
+        },
+        {
+          "value":"core.lookups.categories.pension-waiver-request",
+          "key":"Pension Waiver Request"
+        },
+        {
+          "value":"core.lookups.categories.pollution",
+          "key":"Pollution"
+        },
+        {
+          "value":"core.lookups.categories.productTampering",
+          "key":"Product Tampering"
+        },
+        {
+          "value":"core.lookups.categories.theft-or-misuse-of-asset",
+          "key":"Theft or misuse of asset"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"timesheetTypes",
+      "entries":[
+        {
+          "value":"core.lookups.timesheet.types.case_file",
+          "key":"CASE_FILE"
+        },
+        {
+          "value":"core.lookups.timesheet.types.complaint",
+          "key":"COMPLAINT"
+        },
+        {
+          "value":"core.lookups.common.other",
+          "key":"OTHER"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"costsheetTypes",
+      "entries":[
+        {
+          "value":"core.lookups.timesheet.types.case_file",
+          "key":"CASE_FILE"
+        },
+        {
+          "value":"core.lookups.timesheet.types.complaint",
+          "key":"COMPLAINT"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"caseFilePersonTypes",
+      "entries":[
+        {
+          "value":"core.lookups.complaintPersonTypes.complaintant",
+          "key":"Complaintant"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.subject",
+          "key":"Subject"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.witness",
+          "key":"Witness"
+        },
+        {
+          "value":"core.lookups.complaintPersonTypes.wrongdoer",
+          "key":"Wrongdoer"
+        },
+        {
+          "value":"core.lookups.common.other",
+          "key":"Other"
+        },
+        {
+          "value":"core.lookups.caseFilePersonTypes.defendant",
+          "key":"Defendant"
+        },
+        {
+          "value":"core.lookups.caseFilePersonTypes.was-officer",
+          "key":"WAS Officer"
+        },
+        {
+          "value":"core.lookups.caseFilePersonTypes.victim",
+          "key":"Victim"
+        },
+        {
+          "value":"core.lookups.caseFilePersonTypes.defenseCounsel",
+          "key":"Defense Counsel"
+        },
+        {
+          "value":"core.lookups.caseFilePersonTypes.forensicScientist",
+          "key":"Forensic Scientist"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"plainTargets",
+      "entries":[
+        {
+          "value":"core.lookups.common.case",
+          "key":"CASE_FILE"
+        },
+        {
+          "value":"core.lookups.timesheet.types.complaint",
+          "key":"COMPLAINT"
+        },
+		{
+          "value":"core.lookups.timesheet.types.task",
+          "key":"TASK"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"changeCaseStatusResolutions",
+      "entries":[
+        {
+          "value":"core.lookups.changeCase.resolutions.denied",
+          "key":"DENIED"
+        },
+        {
+          "value":"core.lookups.changeCase.resolutions.full",
+          "key":"FULL"
+        },
+        {
+          "value":"core.lookups.changeCase.resolutions.partial",
+          "key":"PARTIAL"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"addressTypes",
+      "entries":[
+        {
+          "value":"core.lookups.addressTypes.business",
+          "key":"Business"
+        },
+        {
+          "value":"core.lookups.common.home",
+          "key":"Home"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"aliasTypes",
+      "entries":[
+        {
+          "value":"core.lookups.aliasTypes.fka",
+          "key":"FKA"
+        },
+        {
+          "value":"core.lookups.aliasTypes.married",
+          "key":"Married"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"dbasTypes",
+      "entries":[
+        {
+          "value":"core.lookups.dbasTypes.dba",
+          "key":"DBA"
+        }
+      ],
+      "readonly":true
+    },
+    {
+      "name":"fileTypes",
+      "entries":[
+        {
+          "value":"core.lookups.fileTypes.ev",
+          "key":"ev"
+        },
+        {
+          "value":"core.lookups.fileTypes.gr",
+          "key":"gr"
+        },
+        {
+          "value":"core.lookups.fileTypes.mr",
+          "key":"mr"
+        },
+        {
+          "value":"core.lookups.fileTypes.noi",
+          "key":"noi"
+        },
+        {
+          "value":"core.lookups.fileTypes.sig",
+          "key":"sig"
+        },
+        {
+          "value":"core.lookups.fileTypes.wir",
+          "key":"wir"
       },
       {
         "value": "core.lookups.fileTypes.draw",
@@ -2056,9 +2222,11 @@
         "key": "ORGANIZATION"
       }
     ]},
-    {"businessProcessTypes": [{
-      "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-      "key": "acmDocumentWorkflow"
-    }]}
+    {"businessProcessTypes": [
+      {
+        "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+        "key": "acmDocumentWorkflow"
+      }
+    ]}
   ]
 }
