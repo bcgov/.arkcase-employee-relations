@@ -18,4 +18,4 @@ cmis.reconnectFrequency=${reconnectFrequency}
 ## For Documentum: set cmis.repositoryId to the docbase name.
 cmis.repositoryId=${repositoryId}
 # document versioning support: NONE (OpenCMIS Fileshare), NONE/MINOR/MAJOR (Alfresco, Documentum)
-cmis.versioningState=${versioningState}
+cmis.cmisVersioningState=${cmisVersioningState}
