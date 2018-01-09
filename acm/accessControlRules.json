@@ -566,6 +566,24 @@
       "objectProperties": {},
       "userRolesAny": [],
       "userRolesAll": []
+    },
+	{
+	  "actionName": "editCaseStatus",
+      "objectType": "CASE_FILE",
+      "objectProperties": {},
+      "userRolesAny": [
+        "NONE"
+      ],
+      "userRolesAll": []
+    },
+	{
+	  "actionName": "editComplaintStatus",
+      "objectType": "COMPLAINT",
+      "objectProperties": {},
+      "userRolesAny": [
+        "NONE"
+      ],
+      "userRolesAll": []
     }
   ]
 }
