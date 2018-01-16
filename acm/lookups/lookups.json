@@ -1,2277 +1,2278 @@
 {
-  "inverseValuesLookup":[
-    {
-      "name":"organizationRelationTypes",
-      "entries":[
+    "inverseValuesLookup": [
         {
-          "inverseValue":"core.lookups.organizationRelationTypes.partner",
-          "inverseKey":"partner",
-          "value":"core.lookups.organizationRelationTypes.partner",
-          "key":"partner"
+            "name": "organizationRelationTypes",
+            "entries": [
+                {
+                    "inverseValue": "core.lookups.organizationRelationTypes.partner",
+                    "inverseKey": "partner",
+                    "value": "core.lookups.organizationRelationTypes.partner",
+                    "key": "partner"
+                },
+                {
+                    "inverseValue": "core.lookups.organizationRelationTypes.parentCompany",
+                    "inverseKey": "parentCompany",
+                    "value": "core.lookups.organizationRelationTypes.subCompany",
+                    "key": "subCompany"
+                },
+                {
+                    "inverseValue": "core.lookups.organizationRelationTypes.subCompany",
+                    "inverseKey": "subCompany",
+                    "value": "core.lookups.organizationRelationTypes.parentCompany",
+                    "key": "parentCompany"
+                }
+            ],
+            "readonly": true
         },
         {
-          "inverseValue":"core.lookups.organizationRelationTypes.parentCompany",
-          "inverseKey":"parentCompany",
-          "value":"core.lookups.organizationRelationTypes.subCompany",
-          "key":"subCompany"
+            "name": "personOrganizationRelationTypes",
+            "entries": [
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.owned",
+                    "inverseKey": "owned",
+                    "value": "core.lookups.personOrganizationRelationTypes.owner",
+                    "key": "owner"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.employer",
+                    "inverseKey": "employer",
+                    "value": "core.lookups.personOrganizationRelationTypes.employee",
+                    "key": "employee"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.partner",
+                    "inverseKey": "partner",
+                    "value": "core.lookups.personOrganizationRelationTypes.partner",
+                    "key": "partner"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
+                    "inverseKey": "director-president-ceo",
+                    "value": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
+                    "key": "director-president-ceo"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.manager",
+                    "inverseKey": "manager",
+                    "value": "core.lookups.personOrganizationRelationTypes.manager",
+                    "key": "manager"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.general-counsel",
+                    "inverseKey": "general-counsel",
+                    "value": "core.lookups.personOrganizationRelationTypes.general-counsel",
+                    "key": "general-counsel"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.executive",
+                    "inverseKey": "executive",
+                    "value": "core.lookups.personOrganizationRelationTypes.executive",
+                    "key": "executive"
+                }
+            ],
+            "readonly": true
         },
         {
-          "inverseValue":"core.lookups.organizationRelationTypes.subCompany",
-          "inverseKey":"subCompany",
-          "value":"core.lookups.organizationRelationTypes.parentCompany",
-          "key":"parentCompany"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"personOrganizationRelationTypes",
-      "entries":[
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.owned",
-          "inverseKey":"owned",
-          "value":"core.lookups.personOrganizationRelationTypes.owner",
-          "key":"owner"
+            "name": "organizationPersonRelationTypes",
+            "entries": [
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.owner",
+                    "inverseKey": "owner",
+                    "value": "core.lookups.personOrganizationRelationTypes.owned",
+                    "key": "owned"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.employee",
+                    "inverseKey": "employee",
+                    "value": "core.lookups.personOrganizationRelationTypes.employer",
+                    "key": "employer"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.partner",
+                    "inverseKey": "partner",
+                    "value": "core.lookups.personOrganizationRelationTypes.partner",
+                    "key": "partner"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
+                    "inverseKey": "director-president-ceo",
+                    "value": "core.lookups.personOrganizationRelationTypes.director-president-ceo",
+                    "key": "director-president-ceo"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.manager",
+                    "inverseKey": "manager",
+                    "value": "core.lookups.personOrganizationRelationTypes.manager",
+                    "key": "manager"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.general-counsel",
+                    "inverseKey": "general-counsel",
+                    "value": "core.lookups.personOrganizationRelationTypes.general-counsel",
+                    "key": "general-counsel"
+                },
+                {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.executive",
+                    "inverseKey": "executive",
+                    "value": "core.lookups.personOrganizationRelationTypes.executive",
+                    "key": "executive"
+                }
+            ],
+            "readonly": true
         },
         {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.employer",
-          "inverseKey":"employer",
-          "value":"core.lookups.personOrganizationRelationTypes.employee",
-          "key":"employee"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.partner",
-          "inverseKey":"partner",
-          "value":"core.lookups.personOrganizationRelationTypes.partner",
-          "key":"partner"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
-          "inverseKey":"director-president-ceo",
-          "value":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
-          "key":"director-president-ceo"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.manager",
-          "inverseKey":"manager",
-          "value":"core.lookups.personOrganizationRelationTypes.manager",
-          "key":"manager"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.general-counsel",
-          "inverseKey":"general-counsel",
-          "value":"core.lookups.personOrganizationRelationTypes.general-counsel",
-          "key":"general-counsel"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.executive",
-          "inverseKey":"executive",
-          "value":"core.lookups.personOrganizationRelationTypes.executive",
-          "key":"executive"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"organizationPersonRelationTypes",
-      "entries":[
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.owner",
-          "inverseKey":"owner",
-          "value":"core.lookups.personOrganizationRelationTypes.owned",
-          "key":"owned"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.employee",
-          "inverseKey":"employee",
-          "value":"core.lookups.personOrganizationRelationTypes.employer",
-          "key":"employer"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.partner",
-          "inverseKey":"partner",
-          "value":"core.lookups.personOrganizationRelationTypes.partner",
-          "key":"partner"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
-          "inverseKey":"director-president-ceo",
-          "value":"core.lookups.personOrganizationRelationTypes.director-president-ceo",
-          "key":"director-president-ceo"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.manager",
-          "inverseKey":"manager",
-          "value":"core.lookups.personOrganizationRelationTypes.manager",
-          "key":"manager"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.general-counsel",
-          "inverseKey":"general-counsel",
-          "value":"core.lookups.personOrganizationRelationTypes.general-counsel",
-          "key":"general-counsel"
-        },
-        {
-          "inverseValue":"core.lookups.personOrganizationRelationTypes.executive",
-          "inverseKey":"executive",
-          "value":"core.lookups.personOrganizationRelationTypes.executive",
-          "key":"executive"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"personRelationTypes",
-      "entries":[
-        {
-          "inverseValue":"core.lookups.personRelationTypes.sibling",
-          "inverseKey":"sibling",
-          "value":"core.lookups.personRelationTypes.sibling",
-          "key":"sibling"
-        },
-        {
-          "inverseValue":"core.lookups.personRelationTypes.parent",
-          "inverseKey":"parent",
-          "value":"core.lookups.personRelationTypes.children",
-          "key":"children"
-        },
-        {
-          "inverseValue":"core.lookups.personRelationTypes.children",
-          "inverseKey":"children",
-          "value":"core.lookups.personRelationTypes.parent",
-          "key":"parent"
-        }
-      ],
-      "readonly":true
-    }
-  ],
-  "nestedLookup":[
-    {
-      "name":"contactMethodTypes",
-      "entries":[
-        {
-          "subLookup":[
-            {
-              "value":"core.lookups.common.home",
-              "key":"Home"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.work",
-              "key":"Work"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.mobile",
-              "key":"Mobile"
-            }
-          ],
-          "value":"core.lookups.contactMethodTypes.phone",
-          "key":"phone"
-        },
-        {
-          "subLookup":[
-            {
-              "value":"core.lookups.contactMethodTypes.fax",
-              "key":"Fax"
-            }
-          ],
-          "value":"core.lookups.contactMethodTypes.fax",
-          "key":"fax"
-        },
-        {
-          "subLookup":[
-            {
-              "value":"core.lookups.contactMethodTypes.personal",
-              "key":"Personal"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.business",
-              "key":"Business"
-            }
-          ],
-          "value":"core.lookups.contactMethodTypes.email",
-          "key":"email"
-        },
-        {
-          "subLookup":[
-            {
-              "value":"core.lookups.contactMethodTypes.website",
-              "key":"Web Site"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.facebook",
-              "key":"Facebook"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.linkedIn",
-              "key":"LinkedIn"
-            },
-            {
-              "value":"core.lookups.contactMethodTypes.twitter",
-              "key":"Twitter"
-            },
-            {
-              "value":"core.lookups.common.other",
-              "key":"Other"
-            }
-          ],
-          "value":"core.lookups.contactMethodTypes.url",
-          "key":"url"
-        }
-      ],
-      "readonly":true
-    }
-  ],
-  "standardLookup":[
-    {
-	  "name":"endpoint",
-	  "entries":[
-        {
-          "value": "core.lookups.endpoint.atom",
-          "key": "ATOM"
-        },
-        {
-          "value": "core.lookups.endpoint.soap",
-          "key": "SOAP"
-        }
-     ],
-	 "readonly":true
-	},
-    {
-	  "name":"versioningState",
-	  "entries":[
-        {
-          "value": "core.lookups.versioningState.none",
-          "key": "NONE"
-        },
-        {
-          "value": "core.lookups.versioningState.minor",
-          "key": "MINOR"
-        },
-        {
-          "value": "core.lookups.versioningState.major",
-          "key": "MAJOR"
+            "name": "personRelationTypes",
+            "entries": [
+                {
+                    "inverseValue": "core.lookups.personRelationTypes.sibling",
+                    "inverseKey": "sibling",
+                    "value": "core.lookups.personRelationTypes.sibling",
+                    "key": "sibling"
+                },
+                {
+                    "inverseValue": "core.lookups.personRelationTypes.parent",
+                    "inverseKey": "parent",
+                    "value": "core.lookups.personRelationTypes.children",
+                    "key": "children"
+                },
+                {
+                    "inverseValue": "core.lookups.personRelationTypes.children",
+                    "inverseKey": "children",
+                    "value": "core.lookups.personRelationTypes.parent",
+                    "key": "parent"
+                }
+            ],
+            "readonly": true
         }
     ],
-	  "readonly":true
-	},
-	{
-      "name":"caseFilePersonInitiatorTypes",
-      "entries":[
-        {
-          "value":"core.lookups.complaintPersonTypes.initiator",
-          "key":"Initiator"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"complaintPersonInitiatorTypes",
-      "entries":[
-        {
-          "value":"core.lookups.complaintPersonTypes.initiator",
-          "key":"Initiator"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"changeCaseStatuses",
-      "entries":[
-        {
-          "value":"core.lookups.changeCase.statuses.active",
-          "key":"ACTIVE"
-        },
-        {
-          "value":"core.lookups.changeCase.statuses.inactive",
-          "key":"INACTIVE"
-        },
-        {
-          "value":"core.lookups.changeCase.statuses.closed",
-          "key":"CLOSED"
-        },
-        {
-          "value":"core.lookups.changeCase.statuses.deleted",
-          "key":"DELETED"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"timesheetStatuses",
-      "entries":[
-        {
-          "value":"core.lookups.timesheet.statuses.draft",
-          "key":"DRAFT"
-        },
-        {
-          "value":"core.lookups.timesheet.statuses.inapproval",
-          "key":"IN_APPROVAL"
-        },
-        {
-          "value":"core.lookups.timesheet.statuses.approved",
-          "key":"APPROVED"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"costsheetStatuses",
-      "entries":[
-        {
-          "value":"core.lookups.timesheet.statuses.draft",
-          "key":"DRAFT"
-        },
-        {
-          "value":"core.lookups.timesheet.statuses.inapproval",
-          "key":"IN_APPROVAL"
-        },
-        {
-          "value":"core.lookups.timesheet.statuses.approved",
-          "key":"APPROVED"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"costsheetTitles",
-      "entries":[
-        {
-          "value":"core.lookups.costsheet.titles.taxi",
-          "key":"Taxi"
-        },
-        {
-          "value":"core.lookups.costsheet.titles.hotel",
-          "key":"Hotel"
-        },
-        {
-          "value":"core.lookups.costsheet.titles.overtime",
-          "key":"Overtime"
-        },
-        {
-          "value":"core.lookups.costsheet.titles.food",
-          "key":"Food"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"documentPersonTypes",
-      "entries":[
-        {
-          "value":"core.lookups.documentPersonTypes.defendent",
-          "key":"Defendant"
-        },
-        {
-          "value":"core.lookups.documentPersonTypes.witness",
-          "key":"Witness"
-        },
-        {
-          "value":"core.lookups.documentPersonTypes.was-officer",
-          "key":"WAS Officer"
-        },
-        {
-          "value":"core.lookups.documentPersonTypes.victim",
-          "key":"Victim"
-        },
-        {
-          "value":"core.lookups.documentPersonTypes.defense-counsel",
-          "key":"Defense Counsel"
-        },
-        {
-          "value":"core.lookups.documentPersonTypes.forensic-scientist",
-          "key":"Forensic Scientist"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"complaintPersonTypes",
-      "entries":[
-        {
-          "value":"core.lookups.complaintPersonTypes.complaintant",
-          "key":"Complaintant"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.subject",
-          "key":"Subject"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.witness",
-          "key":"Witness"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.wrongdoer",
-          "key":"Wrongdoer"
-        },
-        {
-          "value":"core.lookups.common.other",
-          "key":"Other"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"deviceTypes",
-      "entries":[
-        {
-          "value":"core.lookups.deviceTypes.homePhone",
-          "key":"Home phone"
-        },
-        {
-          "value":"core.lookups.deviceTypes.workPhone",
-          "key":"Work phone"
-        },
-        {
-          "value":"core.lookups.deviceTypes.mobile",
-          "key":"Mobile"
-        },
-        {
-          "value":"core.lookups.deviceTypes.email",
-          "key":"Email"
-        },
-        {
-          "value":"core.lookups.deviceTypes.facebook",
-          "key":"Facebook"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"locationTypes",
-      "entries":[
-        {
-          "value":"core.lookups.addressTypes.business",
-          "key":"Business"
-        },
-        {
-          "value":"core.lookups.common.home",
-          "key":"Home"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"priorities",
-      "entries":[
-        {
-          "value":"core.lookups.priorities.low",
-          "key":"Low"
-        },
-        {
-          "value":"core.lookups.priorities.medium",
-          "key":"Medium"
-        },
-        {
-          "value":"core.lookups.priorities.high",
-          "key":"High"
-        },
-        {
-          "value":"core.lookups.priorities.expedite",
-          "key":"Expedite"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"frequencies",
-      "entries":[
-        {
-          "value":"core.lookups.frequencies.once",
-          "key":"Once"
-        },
-        {
-          "value":"core.lookups.frequencies.ongoing",
-          "key":"Ongoing"
-        },
-        {
-          "value":"core.lookups.frequencies.intermittent",
-          "key":"Intermittent"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"dispositions",
-      "entries":[
-        {
-          "value":"core.lookups.dispositions.add_existing_case",
-          "key":"add_existing_case"
-        },
-        {
-          "value":"core.lookups.dispositions.open_investigation",
-          "key":"open_investigation"
-        },
-        {
-          "value":"core.lookups.dispositions.no_action",
-          "key":"no_action"
-        },
-        {
-          "value":"core.lookups.dispositions.refer_external",
-          "key":"refer_external"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"resolutions",
-      "entries":[
-        {
-          "value":"core.lookups.resolutions.denied",
-          "key":"DENIED"
-        },
-        {
-          "value":"core.lookups.resolutions.full",
-          "key":"FULL"
-        },
-        {
-          "value":"core.lookups.resolutions.partial",
-          "key":"PARTIAL"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"complaintTypes",
-      "entries":[
-        {
-          "value":"core.lookups.categories.agricultural",
-          "key":"Agricultural"
-        },
-        {
-          "value":"core.lookups.categories.arson",
-          "key":"Arson"
-        },
-        {
-          "value":"core.lookups.categories.backgroundInvestigation",
-          "key":"Background Investigation"
-        },
-        {
-          "value":"core.lookups.categories.benefits-appeal",
-          "key":"Benefits Appeal"
-        },
-        {
-          "value":"core.lookups.categories.better-business-dispute",
-          "key":"Better Business Dispute"
-        },
-        {
-          "value":"core.lookups.categories.clinical-investigator-fraud",
-          "key":"Clinical Investigator Fraud"
-        },
-        {
-          "value":"core.lookups.categories.congressionalResponse",
-          "key":"Congressional Response"
-        },
-        {
-          "value":"core.lookups.categories.disability-waiver-request",
-          "key":"Disability Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.domesticDispute",
-          "key":"Domestic Dispute"
-        },
-        {
-          "value":"core.lookups.categories.drugTrafficking",
-          "key":"Drug Trafficking"
-        },
-        {
-          "value":"core.lookups.categories.education-waiver-request",
-          "key":"Education Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.eeo-harassment",
-          "key":"EEO/Harassment"
-        },
-        {
-          "value":"core.lookups.categories.embezzlement",
-          "key":"Embezzlement"
-        },
-        {
-          "value":"core.lookups.categories.extortion",
-          "key":"Extortion"
-        },
-        {
-          "value":"core.lookups.categories.fraud",
-          "key":"Fraud"
-        },
-        {
-          "value":"core.lookups.categories.government",
-          "key":"Government"
-        },
-        {
-          "value":"core.lookups.categories.investorComplaint",
-          "key":"Investor Complaint"
-        },
-        {
-          "value":"core.lookups.categories.laborRacketeering",
-          "key":"Labor Racketeering"
-        },
-        {
-          "value":"core.lookups.categories.local",
-          "key":"Local"
-        },
-        {
-          "value":"core.lookups.categories.murder",
-          "key":"Murder"
-        },
-        {
-          "value":"core.lookups.categories.new-drug-application-fraud",
-          "key":"New Drug Application Fraud"
-        },
-        {
-          "value":"core.lookups.categories.payoff",
-          "key":"Payoff"
-        },
-        {
-          "value":"core.lookups.categories.pension-waiver-request",
-          "key":"Pension Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.pollution",
-          "key":"Pollution"
-        },
-        {
-          "value":"core.lookups.categories.productTampering",
-          "key":"Product Tampering"
-        },
-        {
-          "value":"core.lookups.categories.theft-or-misuse-of-asset",
-          "key":"Theft or misuse of asset"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"complaintParticipantTypes",
-      "entries":[
-        {
-          "value":"core.lookups.personOrganizationRelationTypes.owner",
-          "key":"assignee"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.follower",
-          "key":"follower"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"complaintStatuses",
-      "entries":[
-        {
-          "value":"core.lookups.complaint.statuses.draft",
-          "key":"DRAFT"
-        },
-        {
-          "value":"core.lookups.complaint.statuses.inapproval",
-          "key":"IN APPROVAL"
-        },
-        {
-          "value":"core.lookups.complaint.statuses.closed",
-          "key":"CLOSED"
-        },
-        {
-          "value":"core.lookups.complaint.statuses.deleted",
-          "key":"DELETED"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"caseFileParticipantTypes",
-      "entries":[
-        {
-          "value":"core.lookups.personOrganizationRelationTypes.owner",
-          "key":"assignee"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.co-owner",
-          "key":"co-owner"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.supervisor",
-          "key":"supervisor"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.approver",
-          "key":"approver"
-        },
-        {
-          "value":"core.lookups.common.collaborator",
-          "key":"collaborator"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.follower",
-          "key":"follower"
-        },
-        {
-          "value":"core.lookups.common.reader",
-          "key":"reader"
-        },
-        {
-          "value":"core.lookups.common.no-access",
-          "key":"no access"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"projectParticipantTypes",
-      "entries":[
-        {
-          "value":"core.lookups.personOrganizationRelationTypes.owner",
-          "key":"assignee"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.follower",
-          "key":"follower"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"caseFileTypes",
-      "entries":[
-        {
-          "value":"core.lookups.categories.agricultural",
-          "key":"Agricultural"
-        },
-        {
-          "value":"core.lookups.categories.arson",
-          "key":"Arson"
-        },
-        {
-          "value":"core.lookups.categories.backgroundInvestigation",
-          "key":"Background Investigation"
-        },
-        {
-          "value":"core.lookups.categories.benefits-appeal",
-          "key":"Benefits Appeal"
-        },
-        {
-          "value":"core.lookups.categories.better-business-dispute",
-          "key":"Better Business Dispute"
-        },
-        {
-          "value":"core.lookups.categories.clinical-investigator-fraud",
-          "key":"Clinical Investigator Fraud"
-        },
-        {
-          "value":"core.lookups.categories.congressionalResponse",
-          "key":"Congressional Response"
-        },
-        {
-          "value":"core.lookups.categories.disability-waiver-request",
-          "key":"Disability Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.domesticDispute",
-          "key":"Domestic Dispute"
-        },
-        {
-          "value":"core.lookups.categories.drugTrafficking",
-          "key":"Drug Trafficking"
-        },
-        {
-          "value":"core.lookups.categories.education-waiver-request",
-          "key":"Education Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.eeo-harassment",
-          "key":"EEO/Harassment"
-        },
-        {
-          "value":"core.lookups.categories.embezzlement",
-          "key":"Embezzlement"
-        },
-        {
-          "value":"core.lookups.categories.extortion",
-          "key":"Extortion"
-        },
-        {
-          "value":"core.lookups.categories.fraud",
-          "key":"Fraud"
-        },
-        {
-          "value":"core.lookups.categories.government",
-          "key":"Government"
-        },
-        {
-          "value":"core.lookups.categories.investorComplaint",
-          "key":"Investor Complaint"
-        },
-        {
-          "value":"core.lookups.categories.laborRacketeering",
-          "key":"Labor Racketeering"
-        },
-        {
-          "value":"core.lookups.categories.local",
-          "key":"Local"
-        },
-        {
-          "value":"core.lookups.categories.murder",
-          "key":"Murder"
-        },
-        {
-          "value":"core.lookups.categories.new-drug-application-fraud",
-          "key":"New Drug Application Fraud"
-        },
-        {
-          "value":"core.lookups.categories.payoff",
-          "key":"Payoff"
-        },
-        {
-          "value":"core.lookups.categories.pension-waiver-request",
-          "key":"Pension Waiver Request"
-        },
-        {
-          "value":"core.lookups.categories.pollution",
-          "key":"Pollution"
-        },
-        {
-          "value":"core.lookups.categories.productTampering",
-          "key":"Product Tampering"
-        },
-        {
-          "value":"core.lookups.categories.theft-or-misuse-of-asset",
-          "key":"Theft or misuse of asset"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"timesheetTypes",
-      "entries":[
-        {
-          "value":"core.lookups.timesheet.types.case_file",
-          "key":"CASE_FILE"
-        },
-        {
-          "value":"core.lookups.timesheet.types.complaint",
-          "key":"COMPLAINT"
-        },
-        {
-          "value":"core.lookups.common.other",
-          "key":"OTHER"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"costsheetTypes",
-      "entries":[
-        {
-          "value":"core.lookups.timesheet.types.case_file",
-          "key":"CASE_FILE"
-        },
-        {
-          "value":"core.lookups.timesheet.types.complaint",
-          "key":"COMPLAINT"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"caseFilePersonTypes",
-      "entries":[
-        {
-          "value":"core.lookups.complaintPersonTypes.complaintant",
-          "key":"Complaintant"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.subject",
-          "key":"Subject"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.witness",
-          "key":"Witness"
-        },
-        {
-          "value":"core.lookups.complaintPersonTypes.wrongdoer",
-          "key":"Wrongdoer"
-        },
-        {
-          "value":"core.lookups.common.other",
-          "key":"Other"
-        },
-        {
-          "value":"core.lookups.caseFilePersonTypes.defendant",
-          "key":"Defendant"
-        },
-        {
-          "value":"core.lookups.caseFilePersonTypes.was-officer",
-          "key":"WAS Officer"
-        },
-        {
-          "value":"core.lookups.caseFilePersonTypes.victim",
-          "key":"Victim"
-        },
-        {
-          "value":"core.lookups.caseFilePersonTypes.defenseCounsel",
-          "key":"Defense Counsel"
-        },
-        {
-          "value":"core.lookups.caseFilePersonTypes.forensicScientist",
-          "key":"Forensic Scientist"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"plainTargets",
-      "entries":[
-        {
-          "value":"core.lookups.common.case",
-          "key":"CASE_FILE"
-        },
-        {
-          "value":"core.lookups.timesheet.types.complaint",
-          "key":"COMPLAINT"
-        },
-		{
-          "value":"core.lookups.timesheet.types.task",
-          "key":"TASK"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"changeCaseStatusResolutions",
-      "entries":[
-        {
-          "value":"core.lookups.changeCase.resolutions.denied",
-          "key":"DENIED"
-        },
-        {
-          "value":"core.lookups.changeCase.resolutions.full",
-          "key":"FULL"
-        },
-        {
-          "value":"core.lookups.changeCase.resolutions.partial",
-          "key":"PARTIAL"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"addressTypes",
-      "entries":[
-        {
-          "value":"core.lookups.addressTypes.business",
-          "key":"Business"
-        },
-        {
-          "value":"core.lookups.common.home",
-          "key":"Home"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"aliasTypes",
-      "entries":[
-        {
-          "value":"core.lookups.aliasTypes.fka",
-          "key":"FKA"
-        },
-        {
-          "value":"core.lookups.aliasTypes.married",
-          "key":"Married"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"dbasTypes",
-      "entries":[
-        {
-          "value":"core.lookups.dbasTypes.dba",
-          "key":"DBA"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"fileTypes",
-      "entries":[
-        {
-          "value":"core.lookups.fileTypes.ev",
-          "key":"ev"
-        },
-        {
-          "value":"core.lookups.fileTypes.gr",
-          "key":"gr"
-        },
-        {
-          "value":"core.lookups.fileTypes.mr",
-          "key":"mr"
-        },
-        {
-          "value":"core.lookups.fileTypes.noi",
-          "key":"noi"
-        },
-        {
-          "value":"core.lookups.fileTypes.sig",
-          "key":"sig"
-        },
-        {
-          "value":"core.lookups.fileTypes.wir",
-          "key":"wir"
-      },
-      {
-        "value": "core.lookups.fileTypes.draw",
-        "key": "draw"
-      },
-      {
-        "value": "core.lookups.fileTypes.other",
-        "key": "other"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"identificationTypes",
-      "entries":[
-        {
-          "value":"core.lookups.identificationTypes.ssn",
-          "key":"ssn"
-        },
-        {
-          "value":"core.lookups.identificationTypes.driverLicense",
-          "key":"driverLicense"
-        },
-        {
-          "value":"core.lookups.identificationTypes.passport",
-          "key":"passport"
-        },
-        {
-          "value":"core.lookups.identificationTypes.birthCertificate",
-          "key":"birthCertificate"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"countries",
-      "entries":[
-        {
-          "value":"core.lookups.countries.AF",
-          "key":"AF"
-        },
-        {
-          "value":"core.lookups.countries.AX",
-          "key":"AX"
-        },
-        {
-          "value":"core.lookups.countries.AL",
-          "key":"AL"
-        },
-        {
-          "value":"core.lookups.countries.DZ",
-          "key":"DZ"
-        },
-        {
-          "value":"core.lookups.countries.AS",
-          "key":"AS"
-        },
-        {
-          "value":"core.lookups.countries.AD",
-          "key":"AD"
-        },
-        {
-          "value":"core.lookups.countries.AO",
-          "key":"AO"
-        },
-        {
-          "value":"core.lookups.countries.AI",
-          "key":"AI"
-        },
-        {
-          "value":"core.lookups.countries.AQ",
-          "key":"AQ"
-        },
-        {
-          "value":"core.lookups.countries.AG",
-          "key":"AG"
-        },
-        {
-          "value":"core.lookups.countries.AR",
-          "key":"AR"
-        },
-        {
-          "value":"core.lookups.countries.AM",
-          "key":"AM"
-        },
-        {
-          "value":"core.lookups.countries.AW",
-          "key":"AW"
-        },
-        {
-          "value":"core.lookups.countries.AU",
-          "key":"AU"
-        },
-        {
-          "value":"core.lookups.countries.AT",
-          "key":"AT"
-        },
-        {
-          "value":"core.lookups.countries.AZ",
-          "key":"AZ"
-        },
-        {
-          "value":"core.lookups.countries.BS",
-          "key":"BS"
-        },
-        {
-          "value":"core.lookups.countries.BH",
-          "key":"BH"
-        },
-        {
-          "value":"core.lookups.countries.BD",
-          "key":"BD"
-        },
-        {
-          "value":"core.lookups.countries.BB",
-          "key":"BB"
-        },
-        {
-          "value":"core.lookups.countries.BY",
-          "key":"BY"
-        },
-        {
-          "value":"core.lookups.countries.BE",
-          "key":"BE"
-        },
-        {
-          "value":"core.lookups.countries.BZ",
-          "key":"BZ"
-        },
-        {
-          "value":"core.lookups.countries.BJ",
-          "key":"BJ"
-        },
-        {
-          "value":"core.lookups.countries.BM",
-          "key":"BM"
-        },
-        {
-          "value":"core.lookups.countries.BT",
-          "key":"BT"
-        },
-        {
-          "value":"core.lookups.countries.BO",
-          "key":"BO"
-        },
-        {
-          "value":"core.lookups.countries.BA",
-          "key":"BA"
-        },
-        {
-          "value":"core.lookups.countries.BW",
-          "key":"BW"
-        },
-        {
-          "value":"core.lookups.countries.BV",
-          "key":"BV"
-        },
-        {
-          "value":"core.lookups.countries.BR",
-          "key":"BR"
-        },
-        {
-          "value":"core.lookups.countries.IO",
-          "key":"IO"
-        },
-        {
-          "value":"core.lookups.countries.BN",
-          "key":"BN"
-        },
-        {
-          "value":"core.lookups.countries.BG",
-          "key":"BG"
-        },
-        {
-          "value":"core.lookups.countries.BF",
-          "key":"BF"
-        },
-        {
-          "value":"core.lookups.countries.BI",
-          "key":"BI"
-        },
-        {
-          "value":"core.lookups.countries.KH",
-          "key":"KH"
-        },
-        {
-          "value":"core.lookups.countries.CM",
-          "key":"CM"
-        },
-        {
-          "value":"core.lookups.countries.CA",
-          "key":"CA"
-        },
-        {
-          "value":"core.lookups.countries.CV",
-          "key":"CV"
-        },
-        {
-          "value":"core.lookups.countries.KY",
-          "key":"KY"
-        },
-        {
-          "value":"core.lookups.countries.CF",
-          "key":"CF"
-        },
-        {
-          "value":"core.lookups.countries.TD",
-          "key":"TD"
-        },
-        {
-          "value":"core.lookups.countries.CL",
-          "key":"CL"
-        },
-        {
-          "value":"core.lookups.countries.CN",
-          "key":"CN"
-        },
-        {
-          "value":"core.lookups.countries.CX",
-          "key":"CX"
-        },
-        {
-          "value":"core.lookups.countries.CC",
-          "key":"CC"
-        },
-        {
-          "value":"core.lookups.countries.CO",
-          "key":"CO"
-        },
-        {
-          "value":"core.lookups.countries.KM",
-          "key":"KM"
-        },
-        {
-          "value":"core.lookups.countries.CG",
-          "key":"CG"
-        },
-        {
-          "value":"core.lookups.countries.CD",
-          "key":"CD"
-        },
-        {
-          "value":"core.lookups.countries.CK",
-          "key":"CK"
-        },
-        {
-          "value":"core.lookups.countries.CR",
-          "key":"CR"
-        },
-        {
-          "value":"core.lookups.countries.CI",
-          "key":"CI"
-        },
-        {
-          "value":"core.lookups.countries.HR",
-          "key":"HR"
-        },
-        {
-          "value":"core.lookups.countries.CU",
-          "key":"CU"
-        },
-        {
-          "value":"core.lookups.countries.CW",
-          "key":"CW"
-        },
-        {
-          "value":"core.lookups.countries.CY",
-          "key":"CY"
-        },
-        {
-          "value":"core.lookups.countries.CZ",
-          "key":"CZ"
-        },
-        {
-          "value":"core.lookups.countries.DK",
-          "key":"DK"
-        },
-        {
-          "value":"core.lookups.countries.DJ",
-          "key":"DJ"
-        },
-        {
-          "value":"core.lookups.countries.DM",
-          "key":"DM"
-        },
-        {
-          "value":"core.lookups.countries.DO",
-          "key":"DO"
-        },
-        {
-          "value":"core.lookups.countries.EC",
-          "key":"EC"
-        },
-        {
-          "value":"core.lookups.countries.EG",
-          "key":"EG"
-        },
-        {
-          "value":"core.lookups.countries.SV",
-          "key":"SV"
-        },
-        {
-          "value":"core.lookups.countries.GQ",
-          "key":"GQ"
-        },
-        {
-          "value":"core.lookups.countries.ER",
-          "key":"ER"
-        },
-        {
-          "value":"core.lookups.countries.EE",
-          "key":"EE"
-        },
-        {
-          "value":"core.lookups.countries.ET",
-          "key":"ET"
-        },
-        {
-          "value":"core.lookups.countries.FK",
-          "key":"FK"
-        },
-        {
-          "value":"core.lookups.countries.FO",
-          "key":"FO"
-        },
-        {
-          "value":"core.lookups.countries.FJ",
-          "key":"FJ"
-        },
-        {
-          "value":"core.lookups.countries.FI",
-          "key":"FI"
-        },
-        {
-          "value":"core.lookups.countries.FR",
-          "key":"FR"
-        },
-        {
-          "value":"core.lookups.countries.GF",
-          "key":"GF"
-        },
-        {
-          "value":"core.lookups.countries.PF",
-          "key":"PF"
-        },
-        {
-          "value":"core.lookups.countries.TF",
-          "key":"TF"
-        },
-        {
-          "value":"core.lookups.countries.GA",
-          "key":"GA"
-        },
-        {
-          "value":"core.lookups.countries.GM",
-          "key":"GM"
-        },
-        {
-          "value":"core.lookups.countries.GE",
-          "key":"GE"
-        },
-        {
-          "value":"core.lookups.countries.DE",
-          "key":"DE"
-        },
-        {
-          "value":"core.lookups.countries.GH",
-          "key":"GH"
-        },
-        {
-          "value":"core.lookups.countries.GI",
-          "key":"GI"
-        },
-        {
-          "value":"core.lookups.countries.GR",
-          "key":"GR"
-        },
-        {
-          "value":"core.lookups.countries.GL",
-          "key":"GL"
-        },
-        {
-          "value":"core.lookups.countries.GD",
-          "key":"GD"
-        },
-        {
-          "value":"core.lookups.countries.GP",
-          "key":"GP"
-        },
-        {
-          "value":"core.lookups.countries.GU",
-          "key":"GU"
-        },
-        {
-          "value":"core.lookups.countries.GT",
-          "key":"GT"
-        },
-        {
-          "value":"core.lookups.countries.GG",
-          "key":"GG"
-        },
-        {
-          "value":"core.lookups.countries.GN",
-          "key":"GN"
-        },
-        {
-          "value":"core.lookups.countries.GW",
-          "key":"GW"
-        },
-        {
-          "value":"core.lookups.countries.GY",
-          "key":"GY"
-        },
-        {
-          "value":"core.lookups.countries.HT",
-          "key":"HT"
-        },
-        {
-          "value":"core.lookups.countries.HM",
-          "key":"HM"
-        },
-        {
-          "value":"core.lookups.countries.VA",
-          "key":"VA"
-        },
-        {
-          "value":"core.lookups.countries.HN",
-          "key":"HN"
-        },
-        {
-          "value":"core.lookups.countries.HK",
-          "key":"HK"
-        },
-        {
-          "value":"core.lookups.countries.HU",
-          "key":"HU"
-        },
-        {
-          "value":"core.lookups.countries.IS",
-          "key":"IS"
-        },
-        {
-          "value":"core.lookups.countries.IN",
-          "key":"IN"
-        },
-        {
-          "value":"core.lookups.countries.ID",
-          "key":"ID"
-        },
-        {
-          "value":"core.lookups.countries.IR",
-          "key":"IR"
-        },
-        {
-          "value":"core.lookups.countries.IQ",
-          "key":"IQ"
-        },
-        {
-          "value":"core.lookups.countries.IE",
-          "key":"IE"
-        },
-        {
-          "value":"core.lookups.countries.IM",
-          "key":"IM"
-        },
-        {
-          "value":"core.lookups.countries.IL",
-          "key":"IL"
-        },
-        {
-          "value":"core.lookups.countries.IT",
-          "key":"IT"
-        },
-        {
-          "value":"core.lookups.countries.JM",
-          "key":"JM"
-        },
-        {
-          "value":"core.lookups.countries.JP",
-          "key":"JP"
-        },
-        {
-          "value":"core.lookups.countries.JE",
-          "key":"JE"
-        },
-        {
-          "value":"core.lookups.countries.JO",
-          "key":"JO"
-        },
-        {
-          "value":"core.lookups.countries.KZ",
-          "key":"KZ"
-        },
-        {
-          "value":"core.lookups.countries.KE",
-          "key":"KE"
-        },
-        {
-          "value":"core.lookups.countries.KI",
-          "key":"KI"
-        },
-        {
-          "value":"core.lookups.countries.KP",
-          "key":"KP"
-        },
-        {
-          "value":"core.lookups.countries.KR",
-          "key":"KR"
-        },
-        {
-          "value":"core.lookups.countries.KW",
-          "key":"KW"
-        },
-        {
-          "value":"core.lookups.countries.KG",
-          "key":"KG"
-        },
-        {
-          "value":"core.lookups.countries.LA",
-          "key":"LA"
-        },
-        {
-          "value":"core.lookups.countries.LV",
-          "key":"LV"
-        },
-        {
-          "value":"core.lookups.countries.LB",
-          "key":"LB"
-        },
-        {
-          "value":"core.lookups.countries.LS",
-          "key":"LS"
-        },
-        {
-          "value":"core.lookups.countries.LR",
-          "key":"LR"
-        },
-        {
-          "value":"core.lookups.countries.LY",
-          "key":"LY"
-        },
-        {
-          "value":"core.lookups.countries.LI",
-          "key":"LI"
-        },
-        {
-          "value":"core.lookups.countries.LT",
-          "key":"LT"
-        },
-        {
-          "value":"core.lookups.countries.LU",
-          "key":"LU"
-        },
-        {
-          "value":"core.lookups.countries.MO",
-          "key":"MO"
-        },
-        {
-          "value":"core.lookups.countries.MK",
-          "key":"MK"
-        },
-        {
-          "value":"core.lookups.countries.MG",
-          "key":"MG"
-        },
-        {
-          "value":"core.lookups.countries.MW",
-          "key":"MW"
-        },
-        {
-          "value":"core.lookups.countries.MY",
-          "key":"MY"
-        },
-        {
-          "value":"core.lookups.countries.MV",
-          "key":"MV"
-        },
-        {
-          "value":"core.lookups.countries.ML",
-          "key":"ML"
-        },
-        {
-          "value":"core.lookups.countries.MT",
-          "key":"MT"
-        },
-        {
-          "value":"core.lookups.countries.MH",
-          "key":"MH"
-        },
-        {
-          "value":"core.lookups.countries.MQ",
-          "key":"MQ"
-        },
-        {
-          "value":"core.lookups.countries.MR",
-          "key":"MR"
-        },
-        {
-          "value":"core.lookups.countries.MU",
-          "key":"MU"
-        },
-        {
-          "value":"core.lookups.countries.YT",
-          "key":"YT"
-        },
-        {
-          "value":"core.lookups.countries.MX",
-          "key":"MX"
-        },
-        {
-          "value":"core.lookups.countries.FM",
-          "key":"FM"
-        },
-        {
-          "value":"core.lookups.countries.MD",
-          "key":"MD"
-        },
-        {
-          "value":"core.lookups.countries.MC",
-          "key":"MC"
-        },
-        {
-          "value":"core.lookups.countries.MN",
-          "key":"MN"
-        },
-        {
-          "value":"core.lookups.countries.ME",
-          "key":"ME"
-        },
-        {
-          "value":"core.lookups.countries.MS",
-          "key":"MS"
-        },
-        {
-          "value":"core.lookups.countries.MA",
-          "key":"MA"
-        },
-        {
-          "value":"core.lookups.countries.MZ",
-          "key":"MZ"
-        },
-        {
-          "value":"core.lookups.countries.MM",
-          "key":"MM"
-        },
-        {
-          "value":"core.lookups.countries.NA",
-          "key":"NA"
-        },
-        {
-          "value":"core.lookups.countries.NR",
-          "key":"NR"
-        },
-        {
-          "value":"core.lookups.countries.NP",
-          "key":"NP"
-        },
-        {
-          "value":"core.lookups.countries.NL",
-          "key":"NL"
-        },
-        {
-          "value":"core.lookups.countries.AN",
-          "key":"AN"
-        },
-        {
-          "value":"core.lookups.countries.NC",
-          "key":"NC"
-        },
-        {
-          "value":"core.lookups.countries.NZ",
-          "key":"NZ"
-        },
-        {
-          "value":"core.lookups.countries.NI",
-          "key":"NI"
-        },
-        {
-          "value":"core.lookups.countries.NE",
-          "key":"NE"
-        },
-        {
-          "value":"core.lookups.countries.NG",
-          "key":"NG"
-        },
-        {
-          "value":"core.lookups.countries.NU",
-          "key":"NU"
-        },
-        {
-          "value":"core.lookups.countries.NF",
-          "key":"NF"
-        },
-        {
-          "value":"core.lookups.countries.MP",
-          "key":"MP"
-        },
-        {
-          "value":"core.lookups.countries.NO",
-          "key":"NO"
-        },
-        {
-          "value":"core.lookups.countries.OM",
-          "key":"OM"
-        },
-        {
-          "value":"core.lookups.countries.PK",
-          "key":"PK"
-        },
-        {
-          "value":"core.lookups.countries.PW",
-          "key":"PW"
-        },
-        {
-          "value":"core.lookups.countries.PS",
-          "key":"PS"
-        },
-        {
-          "value":"core.lookups.countries.PA",
-          "key":"PA"
-        },
-        {
-          "value":"core.lookups.countries.PG",
-          "key":"PG"
-        },
-        {
-          "value":"core.lookups.countries.PY",
-          "key":"PY"
-        },
-        {
-          "value":"core.lookups.countries.PE",
-          "key":"PE"
-        },
-        {
-          "value":"core.lookups.countries.PH",
-          "key":"PH"
-        },
-        {
-          "value":"core.lookups.countries.PN",
-          "key":"PN"
-        },
-        {
-          "value":"core.lookups.countries.PL",
-          "key":"PL"
-        },
-        {
-          "value":"core.lookups.countries.PT",
-          "key":"PT"
-        },
-        {
-          "value":"core.lookups.countries.PR",
-          "key":"PR"
-        },
-        {
-          "value":"core.lookups.countries.QA",
-          "key":"QA"
-        },
-        {
-          "value":"core.lookups.countries.RE",
-          "key":"RE"
-        },
-        {
-          "value":"core.lookups.countries.RO",
-          "key":"RO"
-        },
-        {
-          "value":"core.lookups.countries.RU",
-          "key":"RU"
-        },
-        {
-          "value":"core.lookups.countries.RW",
-          "key":"RW"
-        },
-        {
-          "value":"core.lookups.countries.SH",
-          "key":"SH"
-        },
-        {
-          "value":"core.lookups.countries.KN",
-          "key":"KN"
-        },
-        {
-          "value":"core.lookups.countries.LC",
-          "key":"LC"
-        },
-        {
-          "value":"core.lookups.countries.PM",
-          "key":"PM"
-        },
-        {
-          "value":"core.lookups.countries.VC",
-          "key":"VC"
-        },
-        {
-          "value":"core.lookups.countries.WS",
-          "key":"WS"
-        },
-        {
-          "value":"core.lookups.countries.SM",
-          "key":"SM"
-        },
-        {
-          "value":"core.lookups.countries.ST",
-          "key":"ST"
-        },
-        {
-          "value":"core.lookups.countries.SA",
-          "key":"SA"
-        },
-        {
-          "value":"core.lookups.countries.SN",
-          "key":"SN"
-        },
-        {
-          "value":"core.lookups.countries.RS",
-          "key":"RS"
-        },
-        {
-          "value":"core.lookups.countries.SC",
-          "key":"SC"
-        },
-        {
-          "value":"core.lookups.countries.SL",
-          "key":"SL"
-        },
-        {
-          "value":"core.lookups.countries.SG",
-          "key":"SG"
-        },
-        {
-          "value":"core.lookups.countries.SX",
-          "key":"SX"
-        },
-        {
-          "value":"core.lookups.countries.SK",
-          "key":"SK"
-        },
-        {
-          "value":"core.lookups.countries.SI",
-          "key":"SI"
-        },
-        {
-          "value":"core.lookups.countries.SB",
-          "key":"SB"
-        },
-        {
-          "value":"core.lookups.countries.SO",
-          "key":"SO"
-        },
-        {
-          "value":"core.lookups.countries.ZA",
-          "key":"ZA"
-        },
-        {
-          "value":"core.lookups.countries.GS",
-          "key":"GS"
-        },
-        {
-          "value":"core.lookups.countries.SS",
-          "key":"SS"
-        },
-        {
-          "value":"core.lookups.countries.ES",
-          "key":"ES"
-        },
-        {
-          "value":"core.lookups.countries.LK",
-          "key":"LK"
-        },
-        {
-          "value":"core.lookups.countries.SD",
-          "key":"SD"
-        },
-        {
-          "value":"core.lookups.countries.SR",
-          "key":"SR"
-        },
-        {
-          "value":"core.lookups.countries.SJ",
-          "key":"SJ"
-        },
-        {
-          "value":"core.lookups.countries.SZ",
-          "key":"SZ"
-        },
-        {
-          "value":"core.lookups.countries.SE",
-          "key":"SE"
-        },
-        {
-          "value":"core.lookups.countries.CH",
-          "key":"CH"
-        },
-        {
-          "value":"core.lookups.countries.SY",
-          "key":"SY"
-        },
-        {
-          "value":"core.lookups.countries.TW",
-          "key":"TW"
-        },
-        {
-          "value":"core.lookups.countries.TJ",
-          "key":"TJ"
-        },
-        {
-          "value":"core.lookups.countries.TZ",
-          "key":"TZ"
-        },
-        {
-          "value":"core.lookups.countries.TH",
-          "key":"TH"
-        },
-        {
-          "value":"core.lookups.countries.TL",
-          "key":"TL"
-        },
-        {
-          "value":"core.lookups.countries.TG",
-          "key":"TG"
-        },
-        {
-          "value":"core.lookups.countries.TK",
-          "key":"TK"
-        },
-        {
-          "value":"core.lookups.countries.TO",
-          "key":"TO"
-        },
-        {
-          "value":"core.lookups.countries.TT",
-          "key":"TT"
-        },
-        {
-          "value":"core.lookups.countries.TN",
-          "key":"TN"
-        },
-        {
-          "value":"core.lookups.countries.TR",
-          "key":"TR"
-        },
-        {
-          "value":"core.lookups.countries.TM",
-          "key":"TM"
-        },
-        {
-          "value":"core.lookups.countries.TC",
-          "key":"TC"
-        },
-        {
-          "value":"core.lookups.countries.TV",
-          "key":"TV"
-        },
-        {
-          "value":"core.lookups.countries.UG",
-          "key":"UG"
-        },
-        {
-          "value":"core.lookups.countries.UA",
-          "key":"UA"
-        },
-        {
-          "value":"core.lookups.countries.AE",
-          "key":"AE"
-        },
-        {
-          "value":"core.lookups.countries.GB",
-          "key":"GB"
-        },
-        {
-          "value":"core.lookups.countries.US",
-          "key":"US"
-        },
-        {
-          "value":"core.lookups.countries.UM",
-          "key":"UM"
-        },
-        {
-          "value":"core.lookups.countries.UY",
-          "key":"UY"
-        },
-        {
-          "value":"core.lookups.countries.UZ",
-          "key":"UZ"
-        },
-        {
-          "value":"core.lookups.countries.VU",
-          "key":"VU"
-        },
-        {
-          "value":"core.lookups.countries.VE",
-          "key":"VE"
-        },
-        {
-          "value":"core.lookups.countries.VN",
-          "key":"VN"
-        },
-        {
-          "value":"core.lookups.countries.VG",
-          "key":"VG"
-        },
-        {
-          "value":"core.lookups.countries.VI",
-          "key":"VI"
-        },
-        {
-          "value":"core.lookups.countries.WF",
-          "key":"WF"
-        },
-        {
-          "value":"core.lookups.countries.EH",
-          "key":"EH"
-        },
-        {
-          "value":"core.lookups.countries.YE",
-          "key":"YE"
-        },
-        {
-          "value":"core.lookups.countries.ZM",
-          "key":"ZM"
-        },
-        {
-          "value":"core.lookups.countries.ZW",
-          "key":"ZW"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"organizationIdTypes",
-      "entries":[
-        {
-          "value":"core.lookups.organizationIdTypes.ein",
-          "key":"EIN"
-        },
-        {
-          "value":"core.lookups.organizationIdTypes.duns",
-          "key":"DUNS"
-        },
-        {
-          "value":"core.lookups.organizationIdTypes.cageCode",
-          "key":"Cage Code"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"organizationTypes",
-      "entries":[
-        {
-          "value":"core.lookups.organizationTypes.non-profit",
-          "key":"Non-profit"
-        },
-        {
-          "value":"core.lookups.organizationTypes.government",
-          "key":"Government"
-        },
-        {
-          "value":"core.lookups.organizationTypes.corporation",
-          "key":"Corporation"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"personTitles",
-      "entries":[
-        {
-          "value":"core.lookups.personTitles.mr",
-          "key":"mr"
-        },
-        {
-          "value":"core.lookups.personTitles.mrs",
-          "key":"mrs"
-        },
-        {
-          "value":"core.lookups.personTitles.ms",
-          "key":"ms"
-        },
-        {
-          "value":"core.lookups.personTitles.miss",
-          "key":"miss"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"organizationalParticipantTypes",
-      "entries":[
-        {
-          "value":"core.lookups.common.owning-group",
-          "key":"owning group"
-        },
-        {
-          "value":"core.lookups.common.collaborator",
-          "key":"collaborator"
-        },
-        {
-          "value":"core.lookups.common.reader",
-          "key":"reader"
-        },
-        {
-          "value":"core.lookups.common.no-access",
-          "key":"No Access"
-        },
-        {
-          "value":"core.lookups.organizationalParticipantTypes.owner",
-          "key":"owner"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"entitiesParticipantTypes",
-      "entries":[
-        {
-          "value":"core.lookups.entitiesParticipantTypes.assignee",
-          "key":"assignee"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.co-owner",
-          "key":"co-owner"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.supervisor",
-          "key":"supervisor"
-        },
-        {
-          "value":"core.lookups.common.owning-group",
-          "key":"owning group"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.approver",
-          "key":"approver"
-        },
-        {
-          "value":"core.lookups.common.collaborator",
-          "key":"collaborator"
-        },
-        {
-          "value":"core.lookups.entitiesParticipantTypes.follower",
-          "key":"follower"
-        },
-        {
-          "value":"core.lookups.common.reader",
-          "key":"reader"
-        },
-        {
-          "value":"core.lookups.common.no-access",
-          "key":"No Access"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"taskOutcomes",
-      "entries":[
-        {
-          "value":"core.lookups.taskOutcomes.approve",
-          "key":"Approve Document"
-        },
-        {
-          "value":"core.lookups.taskOutcomes.rework",
-          "key":"Send for Rework"
-        },
-        {
-          "value":"core.lookups.taskOutcomes.resubmit",
-          "key":"Resubmit"
-        },
-        {
-          "value":"core.lookups.taskOutcomes.cancel",
-          "key":"Cancel Document"
-        },
-        {
-          "value":"core.lookups.taskOutcomes.concur",
-          "key":"Concur"
-        },
-        {
-          "value":"core.lookups.taskOutcomes.nonConcur",
-          "key":"Non-Concur"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"reportStates",
-      "entries":[
-        {
-          "value":"core.lookups.reportStates.draft",
-          "key":"Draft"
-        },
-        {
-          "value":"core.lookups.reportStates.inApproval",
-          "key":"In Approval"
-        },
-        {
-          "value":"core.lookups.reportStates.active",
-          "key":"Active"
-        },
-        {
-          "value":"core.lookups.reportStates.inActive",
-          "key":"Inactive"
-        },
-        {
-          "value":"core.lookups.reportStates.closed",
-          "key":"Closed"
-        }
-      ],
-      "readonly":true
-    },
-    {
-      "name":"auditReportNames",
-      "entries":[
-        {
-          "value":"core.lookups.auditReportNames.all",
-          "key":""
-        },
-        {
-          "value":"core.lookups.auditReportNames.case_file",
-          "key": "CASE_FILE"
-        },
-        {
-          "value":"core.lookups.auditReportNames.complaint",
-          "key": "COMPLAINT"
-        },
-        {
-          "value":"core.lookups.auditReportNames.task",
-          "key": "TASK"
-        },
-        {
-          "value":"core.lookups.auditReportNames.file",
-          "key": "FILE"
-        },
-        {
-          "value":"core.lookups.auditReportNames.person",
-          "key": "PERSON"
-        },
-        {
-          "value":"core.lookups.auditReportNames.organization",
-          "key": "ORGANIZATION"
+    "nestedLookup": [
+        {
+            "name": "contactMethodTypes",
+            "entries": [
+                {
+                    "subLookup": [
+                        {
+                            "value": "core.lookups.common.home",
+                            "key": "Home"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.work",
+                            "key": "Work"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.mobile",
+                            "key": "Mobile"
+                        }
+                    ],
+                    "value": "core.lookups.contactMethodTypes.phone",
+                    "key": "phone"
+                },
+                {
+                    "subLookup": [
+                        {
+                            "value": "core.lookups.contactMethodTypes.fax",
+                            "key": "Fax"
+                        }
+                    ],
+                    "value": "core.lookups.contactMethodTypes.fax",
+                    "key": "fax"
+                },
+                {
+                    "subLookup": [
+                        {
+                            "value": "core.lookups.contactMethodTypes.personal",
+                            "key": "Personal"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.business",
+                            "key": "Business"
+                        }
+                    ],
+                    "value": "core.lookups.contactMethodTypes.email",
+                    "key": "email"
+                },
+                {
+                    "subLookup": [
+                        {
+                            "value": "core.lookups.contactMethodTypes.website",
+                            "key": "Web Site"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.facebook",
+                            "key": "Facebook"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.linkedIn",
+                            "key": "LinkedIn"
+                        },
+                        {
+                            "value": "core.lookups.contactMethodTypes.twitter",
+                            "key": "Twitter"
+                        },
+                        {
+                            "value": "core.lookups.common.other",
+                            "key": "Other"
+                        }
+                    ],
+                    "value": "core.lookups.contactMethodTypes.url",
+                    "key": "url"
+                }
+            ],
+            "readonly": true
         }
     ],
-      "readonly":true
-    },
-    {
-      "name":"businessProcessTypes",
-      "entries":[
-    {
-          "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-          "key": "acmDocumentWorkflow"
-    },
-    {
-          "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-          "key": "CorrectiveActionPlan"
-    }],
-      "readonly":true
-    }
-  ]
+    "standardLookup": [
+        {
+            "name": "endpoint",
+            "entries": [
+                {
+                    "value": "core.lookups.endpoint.atom",
+                    "key": "ATOM"
+                },
+                {
+                    "value": "core.lookups.endpoint.soap",
+                    "key": "SOAP"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "versioningState",
+            "entries": [
+                {
+                    "value": "core.lookups.versioningState.none",
+                    "key": "NONE"
+                },
+                {
+                    "value": "core.lookups.versioningState.minor",
+                    "key": "MINOR"
+                },
+                {
+                    "value": "core.lookups.versioningState.major",
+                    "key": "MAJOR"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "caseFilePersonInitiatorTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.complaintPersonTypes.initiator",
+                    "key": "Initiator"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "complaintPersonInitiatorTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.complaintPersonTypes.initiator",
+                    "key": "Initiator"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "changeCaseStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.changeCase.statuses.active",
+                    "key": "ACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeCase.statuses.inactive",
+                    "key": "INACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeCase.statuses.closed",
+                    "key": "CLOSED"
+                },
+                {
+                    "value": "core.lookups.changeCase.statuses.deleted",
+                    "key": "DELETED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "timesheetStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.timesheet.statuses.draft",
+                    "key": "DRAFT"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.inapproval",
+                    "key": "IN_APPROVAL"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.approved",
+                    "key": "APPROVED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "costsheetStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.timesheet.statuses.draft",
+                    "key": "DRAFT"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.inapproval",
+                    "key": "IN_APPROVAL"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.approved",
+                    "key": "APPROVED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "costsheetTitles",
+            "entries": [
+                {
+                    "value": "core.lookups.costsheet.titles.taxi",
+                    "key": "Taxi"
+                },
+                {
+                    "value": "core.lookups.costsheet.titles.hotel",
+                    "key": "Hotel"
+                },
+                {
+                    "value": "core.lookups.costsheet.titles.overtime",
+                    "key": "Overtime"
+                },
+                {
+                    "value": "core.lookups.costsheet.titles.food",
+                    "key": "Food"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "documentPersonTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.documentPersonTypes.defendent",
+                    "key": "Defendant"
+                },
+                {
+                    "value": "core.lookups.documentPersonTypes.witness",
+                    "key": "Witness"
+                },
+                {
+                    "value": "core.lookups.documentPersonTypes.was-officer",
+                    "key": "WAS Officer"
+                },
+                {
+                    "value": "core.lookups.documentPersonTypes.victim",
+                    "key": "Victim"
+                },
+                {
+                    "value": "core.lookups.documentPersonTypes.defense-counsel",
+                    "key": "Defense Counsel"
+                },
+                {
+                    "value": "core.lookups.documentPersonTypes.forensic-scientist",
+                    "key": "Forensic Scientist"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "complaintPersonTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.complaintPersonTypes.complaintant",
+                    "key": "Complaintant"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.subject",
+                    "key": "Subject"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.witness",
+                    "key": "Witness"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.wrongdoer",
+                    "key": "Wrongdoer"
+                },
+                {
+                    "value": "core.lookups.common.other",
+                    "key": "Other"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "deviceTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.deviceTypes.homePhone",
+                    "key": "Home phone"
+                },
+                {
+                    "value": "core.lookups.deviceTypes.workPhone",
+                    "key": "Work phone"
+                },
+                {
+                    "value": "core.lookups.deviceTypes.mobile",
+                    "key": "Mobile"
+                },
+                {
+                    "value": "core.lookups.deviceTypes.email",
+                    "key": "Email"
+                },
+                {
+                    "value": "core.lookups.deviceTypes.facebook",
+                    "key": "Facebook"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "locationTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.addressTypes.business",
+                    "key": "Business"
+                },
+                {
+                    "value": "core.lookups.common.home",
+                    "key": "Home"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "priorities",
+            "entries": [
+                {
+                    "value": "core.lookups.priorities.low",
+                    "key": "Low"
+                },
+                {
+                    "value": "core.lookups.priorities.medium",
+                    "key": "Medium"
+                },
+                {
+                    "value": "core.lookups.priorities.high",
+                    "key": "High"
+                },
+                {
+                    "value": "core.lookups.priorities.expedite",
+                    "key": "Expedite"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "frequencies",
+            "entries": [
+                {
+                    "value": "core.lookups.frequencies.once",
+                    "key": "Once"
+                },
+                {
+                    "value": "core.lookups.frequencies.ongoing",
+                    "key": "Ongoing"
+                },
+                {
+                    "value": "core.lookups.frequencies.intermittent",
+                    "key": "Intermittent"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "dispositions",
+            "entries": [
+                {
+                    "value": "core.lookups.dispositions.add_existing_case",
+                    "key": "add_existing_case"
+                },
+                {
+                    "value": "core.lookups.dispositions.open_investigation",
+                    "key": "open_investigation"
+                },
+                {
+                    "value": "core.lookups.dispositions.no_action",
+                    "key": "no_action"
+                },
+                {
+                    "value": "core.lookups.dispositions.refer_external",
+                    "key": "refer_external"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "resolutions",
+            "entries": [
+                {
+                    "value": "core.lookups.resolutions.denied",
+                    "key": "DENIED"
+                },
+                {
+                    "value": "core.lookups.resolutions.full",
+                    "key": "FULL"
+                },
+                {
+                    "value": "core.lookups.resolutions.partial",
+                    "key": "PARTIAL"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "complaintTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.categories.agricultural",
+                    "key": "Agricultural"
+                },
+                {
+                    "value": "core.lookups.categories.arson",
+                    "key": "Arson"
+                },
+                {
+                    "value": "core.lookups.categories.backgroundInvestigation",
+                    "key": "Background Investigation"
+                },
+                {
+                    "value": "core.lookups.categories.benefits-appeal",
+                    "key": "Benefits Appeal"
+                },
+                {
+                    "value": "core.lookups.categories.better-business-dispute",
+                    "key": "Better Business Dispute"
+                },
+                {
+                    "value": "core.lookups.categories.clinical-investigator-fraud",
+                    "key": "Clinical Investigator Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.congressionalResponse",
+                    "key": "Congressional Response"
+                },
+                {
+                    "value": "core.lookups.categories.disability-waiver-request",
+                    "key": "Disability Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.domesticDispute",
+                    "key": "Domestic Dispute"
+                },
+                {
+                    "value": "core.lookups.categories.drugTrafficking",
+                    "key": "Drug Trafficking"
+                },
+                {
+                    "value": "core.lookups.categories.education-waiver-request",
+                    "key": "Education Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.eeo-harassment",
+                    "key": "EEO/Harassment"
+                },
+                {
+                    "value": "core.lookups.categories.embezzlement",
+                    "key": "Embezzlement"
+                },
+                {
+                    "value": "core.lookups.categories.extortion",
+                    "key": "Extortion"
+                },
+                {
+                    "value": "core.lookups.categories.fraud",
+                    "key": "Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.government",
+                    "key": "Government"
+                },
+                {
+                    "value": "core.lookups.categories.investorComplaint",
+                    "key": "Investor Complaint"
+                },
+                {
+                    "value": "core.lookups.categories.laborRacketeering",
+                    "key": "Labor Racketeering"
+                },
+                {
+                    "value": "core.lookups.categories.local",
+                    "key": "Local"
+                },
+                {
+                    "value": "core.lookups.categories.murder",
+                    "key": "Murder"
+                },
+                {
+                    "value": "core.lookups.categories.new-drug-application-fraud",
+                    "key": "New Drug Application Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.payoff",
+                    "key": "Payoff"
+                },
+                {
+                    "value": "core.lookups.categories.pension-waiver-request",
+                    "key": "Pension Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.pollution",
+                    "key": "Pollution"
+                },
+                {
+                    "value": "core.lookups.categories.productTampering",
+                    "key": "Product Tampering"
+                },
+                {
+                    "value": "core.lookups.categories.theft-or-misuse-of-asset",
+                    "key": "Theft or misuse of asset"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "complaintParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.personOrganizationRelationTypes.owner",
+                    "key": "assignee"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.follower",
+                    "key": "follower"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "complaintStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.complaint.statuses.draft",
+                    "key": "DRAFT"
+                },
+                {
+                    "value": "core.lookups.complaint.statuses.inapproval",
+                    "key": "IN APPROVAL"
+                },
+                {
+                    "value": "core.lookups.complaint.statuses.closed",
+                    "key": "CLOSED"
+                },
+                {
+                    "value": "core.lookups.complaint.statuses.deleted",
+                    "key": "DELETED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "caseFileParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.personOrganizationRelationTypes.owner",
+                    "key": "assignee"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.co-owner",
+                    "key": "co-owner"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.supervisor",
+                    "key": "supervisor"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.approver",
+                    "key": "approver"
+                },
+                {
+                    "value": "core.lookups.common.collaborator",
+                    "key": "collaborator"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.follower",
+                    "key": "follower"
+                },
+                {
+                    "value": "core.lookups.common.reader",
+                    "key": "reader"
+                },
+                {
+                    "value": "core.lookups.common.no-access",
+                    "key": "no access"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "projectParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.personOrganizationRelationTypes.owner",
+                    "key": "assignee"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.follower",
+                    "key": "follower"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "caseFileTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.categories.agricultural",
+                    "key": "Agricultural"
+                },
+                {
+                    "value": "core.lookups.categories.arson",
+                    "key": "Arson"
+                },
+                {
+                    "value": "core.lookups.categories.backgroundInvestigation",
+                    "key": "Background Investigation"
+                },
+                {
+                    "value": "core.lookups.categories.benefits-appeal",
+                    "key": "Benefits Appeal"
+                },
+                {
+                    "value": "core.lookups.categories.better-business-dispute",
+                    "key": "Better Business Dispute"
+                },
+                {
+                    "value": "core.lookups.categories.clinical-investigator-fraud",
+                    "key": "Clinical Investigator Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.congressionalResponse",
+                    "key": "Congressional Response"
+                },
+                {
+                    "value": "core.lookups.categories.disability-waiver-request",
+                    "key": "Disability Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.domesticDispute",
+                    "key": "Domestic Dispute"
+                },
+                {
+                    "value": "core.lookups.categories.drugTrafficking",
+                    "key": "Drug Trafficking"
+                },
+                {
+                    "value": "core.lookups.categories.education-waiver-request",
+                    "key": "Education Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.eeo-harassment",
+                    "key": "EEO/Harassment"
+                },
+                {
+                    "value": "core.lookups.categories.embezzlement",
+                    "key": "Embezzlement"
+                },
+                {
+                    "value": "core.lookups.categories.extortion",
+                    "key": "Extortion"
+                },
+                {
+                    "value": "core.lookups.categories.fraud",
+                    "key": "Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.government",
+                    "key": "Government"
+                },
+                {
+                    "value": "core.lookups.categories.investorComplaint",
+                    "key": "Investor Complaint"
+                },
+                {
+                    "value": "core.lookups.categories.laborRacketeering",
+                    "key": "Labor Racketeering"
+                },
+                {
+                    "value": "core.lookups.categories.local",
+                    "key": "Local"
+                },
+                {
+                    "value": "core.lookups.categories.murder",
+                    "key": "Murder"
+                },
+                {
+                    "value": "core.lookups.categories.new-drug-application-fraud",
+                    "key": "New Drug Application Fraud"
+                },
+                {
+                    "value": "core.lookups.categories.payoff",
+                    "key": "Payoff"
+                },
+                {
+                    "value": "core.lookups.categories.pension-waiver-request",
+                    "key": "Pension Waiver Request"
+                },
+                {
+                    "value": "core.lookups.categories.pollution",
+                    "key": "Pollution"
+                },
+                {
+                    "value": "core.lookups.categories.productTampering",
+                    "key": "Product Tampering"
+                },
+                {
+                    "value": "core.lookups.categories.theft-or-misuse-of-asset",
+                    "key": "Theft or misuse of asset"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "timesheetTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.timesheet.types.case_file",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.complaint",
+                    "key": "COMPLAINT"
+                },
+                {
+                    "value": "core.lookups.common.other",
+                    "key": "OTHER"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "costsheetTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.timesheet.types.case_file",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.complaint",
+                    "key": "COMPLAINT"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "caseFilePersonTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.complaintPersonTypes.complaintant",
+                    "key": "Complaintant"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.subject",
+                    "key": "Subject"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.witness",
+                    "key": "Witness"
+                },
+                {
+                    "value": "core.lookups.complaintPersonTypes.wrongdoer",
+                    "key": "Wrongdoer"
+                },
+                {
+                    "value": "core.lookups.common.other",
+                    "key": "Other"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.defendant",
+                    "key": "Defendant"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.was-officer",
+                    "key": "WAS Officer"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.victim",
+                    "key": "Victim"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.defenseCounsel",
+                    "key": "Defense Counsel"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.forensicScientist",
+                    "key": "Forensic Scientist"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "plainTargets",
+            "entries": [
+                {
+                    "value": "core.lookups.common.case",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.complaint",
+                    "key": "COMPLAINT"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.task",
+                    "key": "TASK"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "changeCaseStatusResolutions",
+            "entries": [
+                {
+                    "value": "core.lookups.changeCase.resolutions.denied",
+                    "key": "DENIED"
+                },
+                {
+                    "value": "core.lookups.changeCase.resolutions.full",
+                    "key": "FULL"
+                },
+                {
+                    "value": "core.lookups.changeCase.resolutions.partial",
+                    "key": "PARTIAL"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "addressTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.addressTypes.business",
+                    "key": "Business"
+                },
+                {
+                    "value": "core.lookups.common.home",
+                    "key": "Home"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "aliasTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.aliasTypes.fka",
+                    "key": "FKA"
+                },
+                {
+                    "value": "core.lookups.aliasTypes.married",
+                    "key": "Married"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "dbasTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.dbasTypes.dba",
+                    "key": "DBA"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "fileTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.fileTypes.ev",
+                    "key": "ev"
+                },
+                {
+                    "value": "core.lookups.fileTypes.gr",
+                    "key": "gr"
+                },
+                {
+                    "value": "core.lookups.fileTypes.mr",
+                    "key": "mr"
+                },
+                {
+                    "value": "core.lookups.fileTypes.noi",
+                    "key": "noi"
+                },
+                {
+                    "value": "core.lookups.fileTypes.sig",
+                    "key": "sig"
+                },
+                {
+                    "value": "core.lookups.fileTypes.wir",
+                    "key": "wir"
+                },
+                {
+                    "value": "core.lookups.fileTypes.draw",
+                    "key": "draw"
+                },
+                {
+                    "value": "core.lookups.fileTypes.other",
+                    "key": "other"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "identificationTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.identificationTypes.ssn",
+                    "key": "ssn"
+                },
+                {
+                    "value": "core.lookups.identificationTypes.driverLicense",
+                    "key": "driverLicense"
+                },
+                {
+                    "value": "core.lookups.identificationTypes.passport",
+                    "key": "passport"
+                },
+                {
+                    "value": "core.lookups.identificationTypes.birthCertificate",
+                    "key": "birthCertificate"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "countries",
+            "entries": [
+                {
+                    "value": "core.lookups.countries.AF",
+                    "key": "AF"
+                },
+                {
+                    "value": "core.lookups.countries.AX",
+                    "key": "AX"
+                },
+                {
+                    "value": "core.lookups.countries.AL",
+                    "key": "AL"
+                },
+                {
+                    "value": "core.lookups.countries.DZ",
+                    "key": "DZ"
+                },
+                {
+                    "value": "core.lookups.countries.AS",
+                    "key": "AS"
+                },
+                {
+                    "value": "core.lookups.countries.AD",
+                    "key": "AD"
+                },
+                {
+                    "value": "core.lookups.countries.AO",
+                    "key": "AO"
+                },
+                {
+                    "value": "core.lookups.countries.AI",
+                    "key": "AI"
+                },
+                {
+                    "value": "core.lookups.countries.AQ",
+                    "key": "AQ"
+                },
+                {
+                    "value": "core.lookups.countries.AG",
+                    "key": "AG"
+                },
+                {
+                    "value": "core.lookups.countries.AR",
+                    "key": "AR"
+                },
+                {
+                    "value": "core.lookups.countries.AM",
+                    "key": "AM"
+                },
+                {
+                    "value": "core.lookups.countries.AW",
+                    "key": "AW"
+                },
+                {
+                    "value": "core.lookups.countries.AU",
+                    "key": "AU"
+                },
+                {
+                    "value": "core.lookups.countries.AT",
+                    "key": "AT"
+                },
+                {
+                    "value": "core.lookups.countries.AZ",
+                    "key": "AZ"
+                },
+                {
+                    "value": "core.lookups.countries.BS",
+                    "key": "BS"
+                },
+                {
+                    "value": "core.lookups.countries.BH",
+                    "key": "BH"
+                },
+                {
+                    "value": "core.lookups.countries.BD",
+                    "key": "BD"
+                },
+                {
+                    "value": "core.lookups.countries.BB",
+                    "key": "BB"
+                },
+                {
+                    "value": "core.lookups.countries.BY",
+                    "key": "BY"
+                },
+                {
+                    "value": "core.lookups.countries.BE",
+                    "key": "BE"
+                },
+                {
+                    "value": "core.lookups.countries.BZ",
+                    "key": "BZ"
+                },
+                {
+                    "value": "core.lookups.countries.BJ",
+                    "key": "BJ"
+                },
+                {
+                    "value": "core.lookups.countries.BM",
+                    "key": "BM"
+                },
+                {
+                    "value": "core.lookups.countries.BT",
+                    "key": "BT"
+                },
+                {
+                    "value": "core.lookups.countries.BO",
+                    "key": "BO"
+                },
+                {
+                    "value": "core.lookups.countries.BA",
+                    "key": "BA"
+                },
+                {
+                    "value": "core.lookups.countries.BW",
+                    "key": "BW"
+                },
+                {
+                    "value": "core.lookups.countries.BV",
+                    "key": "BV"
+                },
+                {
+                    "value": "core.lookups.countries.BR",
+                    "key": "BR"
+                },
+                {
+                    "value": "core.lookups.countries.IO",
+                    "key": "IO"
+                },
+                {
+                    "value": "core.lookups.countries.BN",
+                    "key": "BN"
+                },
+                {
+                    "value": "core.lookups.countries.BG",
+                    "key": "BG"
+                },
+                {
+                    "value": "core.lookups.countries.BF",
+                    "key": "BF"
+                },
+                {
+                    "value": "core.lookups.countries.BI",
+                    "key": "BI"
+                },
+                {
+                    "value": "core.lookups.countries.KH",
+                    "key": "KH"
+                },
+                {
+                    "value": "core.lookups.countries.CM",
+                    "key": "CM"
+                },
+                {
+                    "value": "core.lookups.countries.CA",
+                    "key": "CA"
+                },
+                {
+                    "value": "core.lookups.countries.CV",
+                    "key": "CV"
+                },
+                {
+                    "value": "core.lookups.countries.KY",
+                    "key": "KY"
+                },
+                {
+                    "value": "core.lookups.countries.CF",
+                    "key": "CF"
+                },
+                {
+                    "value": "core.lookups.countries.TD",
+                    "key": "TD"
+                },
+                {
+                    "value": "core.lookups.countries.CL",
+                    "key": "CL"
+                },
+                {
+                    "value": "core.lookups.countries.CN",
+                    "key": "CN"
+                },
+                {
+                    "value": "core.lookups.countries.CX",
+                    "key": "CX"
+                },
+                {
+                    "value": "core.lookups.countries.CC",
+                    "key": "CC"
+                },
+                {
+                    "value": "core.lookups.countries.CO",
+                    "key": "CO"
+                },
+                {
+                    "value": "core.lookups.countries.KM",
+                    "key": "KM"
+                },
+                {
+                    "value": "core.lookups.countries.CG",
+                    "key": "CG"
+                },
+                {
+                    "value": "core.lookups.countries.CD",
+                    "key": "CD"
+                },
+                {
+                    "value": "core.lookups.countries.CK",
+                    "key": "CK"
+                },
+                {
+                    "value": "core.lookups.countries.CR",
+                    "key": "CR"
+                },
+                {
+                    "value": "core.lookups.countries.CI",
+                    "key": "CI"
+                },
+                {
+                    "value": "core.lookups.countries.HR",
+                    "key": "HR"
+                },
+                {
+                    "value": "core.lookups.countries.CU",
+                    "key": "CU"
+                },
+                {
+                    "value": "core.lookups.countries.CW",
+                    "key": "CW"
+                },
+                {
+                    "value": "core.lookups.countries.CY",
+                    "key": "CY"
+                },
+                {
+                    "value": "core.lookups.countries.CZ",
+                    "key": "CZ"
+                },
+                {
+                    "value": "core.lookups.countries.DK",
+                    "key": "DK"
+                },
+                {
+                    "value": "core.lookups.countries.DJ",
+                    "key": "DJ"
+                },
+                {
+                    "value": "core.lookups.countries.DM",
+                    "key": "DM"
+                },
+                {
+                    "value": "core.lookups.countries.DO",
+                    "key": "DO"
+                },
+                {
+                    "value": "core.lookups.countries.EC",
+                    "key": "EC"
+                },
+                {
+                    "value": "core.lookups.countries.EG",
+                    "key": "EG"
+                },
+                {
+                    "value": "core.lookups.countries.SV",
+                    "key": "SV"
+                },
+                {
+                    "value": "core.lookups.countries.GQ",
+                    "key": "GQ"
+                },
+                {
+                    "value": "core.lookups.countries.ER",
+                    "key": "ER"
+                },
+                {
+                    "value": "core.lookups.countries.EE",
+                    "key": "EE"
+                },
+                {
+                    "value": "core.lookups.countries.ET",
+                    "key": "ET"
+                },
+                {
+                    "value": "core.lookups.countries.FK",
+                    "key": "FK"
+                },
+                {
+                    "value": "core.lookups.countries.FO",
+                    "key": "FO"
+                },
+                {
+                    "value": "core.lookups.countries.FJ",
+                    "key": "FJ"
+                },
+                {
+                    "value": "core.lookups.countries.FI",
+                    "key": "FI"
+                },
+                {
+                    "value": "core.lookups.countries.FR",
+                    "key": "FR"
+                },
+                {
+                    "value": "core.lookups.countries.GF",
+                    "key": "GF"
+                },
+                {
+                    "value": "core.lookups.countries.PF",
+                    "key": "PF"
+                },
+                {
+                    "value": "core.lookups.countries.TF",
+                    "key": "TF"
+                },
+                {
+                    "value": "core.lookups.countries.GA",
+                    "key": "GA"
+                },
+                {
+                    "value": "core.lookups.countries.GM",
+                    "key": "GM"
+                },
+                {
+                    "value": "core.lookups.countries.GE",
+                    "key": "GE"
+                },
+                {
+                    "value": "core.lookups.countries.DE",
+                    "key": "DE"
+                },
+                {
+                    "value": "core.lookups.countries.GH",
+                    "key": "GH"
+                },
+                {
+                    "value": "core.lookups.countries.GI",
+                    "key": "GI"
+                },
+                {
+                    "value": "core.lookups.countries.GR",
+                    "key": "GR"
+                },
+                {
+                    "value": "core.lookups.countries.GL",
+                    "key": "GL"
+                },
+                {
+                    "value": "core.lookups.countries.GD",
+                    "key": "GD"
+                },
+                {
+                    "value": "core.lookups.countries.GP",
+                    "key": "GP"
+                },
+                {
+                    "value": "core.lookups.countries.GU",
+                    "key": "GU"
+                },
+                {
+                    "value": "core.lookups.countries.GT",
+                    "key": "GT"
+                },
+                {
+                    "value": "core.lookups.countries.GG",
+                    "key": "GG"
+                },
+                {
+                    "value": "core.lookups.countries.GN",
+                    "key": "GN"
+                },
+                {
+                    "value": "core.lookups.countries.GW",
+                    "key": "GW"
+                },
+                {
+                    "value": "core.lookups.countries.GY",
+                    "key": "GY"
+                },
+                {
+                    "value": "core.lookups.countries.HT",
+                    "key": "HT"
+                },
+                {
+                    "value": "core.lookups.countries.HM",
+                    "key": "HM"
+                },
+                {
+                    "value": "core.lookups.countries.VA",
+                    "key": "VA"
+                },
+                {
+                    "value": "core.lookups.countries.HN",
+                    "key": "HN"
+                },
+                {
+                    "value": "core.lookups.countries.HK",
+                    "key": "HK"
+                },
+                {
+                    "value": "core.lookups.countries.HU",
+                    "key": "HU"
+                },
+                {
+                    "value": "core.lookups.countries.IS",
+                    "key": "IS"
+                },
+                {
+                    "value": "core.lookups.countries.IN",
+                    "key": "IN"
+                },
+                {
+                    "value": "core.lookups.countries.ID",
+                    "key": "ID"
+                },
+                {
+                    "value": "core.lookups.countries.IR",
+                    "key": "IR"
+                },
+                {
+                    "value": "core.lookups.countries.IQ",
+                    "key": "IQ"
+                },
+                {
+                    "value": "core.lookups.countries.IE",
+                    "key": "IE"
+                },
+                {
+                    "value": "core.lookups.countries.IM",
+                    "key": "IM"
+                },
+                {
+                    "value": "core.lookups.countries.IL",
+                    "key": "IL"
+                },
+                {
+                    "value": "core.lookups.countries.IT",
+                    "key": "IT"
+                },
+                {
+                    "value": "core.lookups.countries.JM",
+                    "key": "JM"
+                },
+                {
+                    "value": "core.lookups.countries.JP",
+                    "key": "JP"
+                },
+                {
+                    "value": "core.lookups.countries.JE",
+                    "key": "JE"
+                },
+                {
+                    "value": "core.lookups.countries.JO",
+                    "key": "JO"
+                },
+                {
+                    "value": "core.lookups.countries.KZ",
+                    "key": "KZ"
+                },
+                {
+                    "value": "core.lookups.countries.KE",
+                    "key": "KE"
+                },
+                {
+                    "value": "core.lookups.countries.KI",
+                    "key": "KI"
+                },
+                {
+                    "value": "core.lookups.countries.KP",
+                    "key": "KP"
+                },
+                {
+                    "value": "core.lookups.countries.KR",
+                    "key": "KR"
+                },
+                {
+                    "value": "core.lookups.countries.KW",
+                    "key": "KW"
+                },
+                {
+                    "value": "core.lookups.countries.KG",
+                    "key": "KG"
+                },
+                {
+                    "value": "core.lookups.countries.LA",
+                    "key": "LA"
+                },
+                {
+                    "value": "core.lookups.countries.LV",
+                    "key": "LV"
+                },
+                {
+                    "value": "core.lookups.countries.LB",
+                    "key": "LB"
+                },
+                {
+                    "value": "core.lookups.countries.LS",
+                    "key": "LS"
+                },
+                {
+                    "value": "core.lookups.countries.LR",
+                    "key": "LR"
+                },
+                {
+                    "value": "core.lookups.countries.LY",
+                    "key": "LY"
+                },
+                {
+                    "value": "core.lookups.countries.LI",
+                    "key": "LI"
+                },
+                {
+                    "value": "core.lookups.countries.LT",
+                    "key": "LT"
+                },
+                {
+                    "value": "core.lookups.countries.LU",
+                    "key": "LU"
+                },
+                {
+                    "value": "core.lookups.countries.MO",
+                    "key": "MO"
+                },
+                {
+                    "value": "core.lookups.countries.MK",
+                    "key": "MK"
+                },
+                {
+                    "value": "core.lookups.countries.MG",
+                    "key": "MG"
+                },
+                {
+                    "value": "core.lookups.countries.MW",
+                    "key": "MW"
+                },
+                {
+                    "value": "core.lookups.countries.MY",
+                    "key": "MY"
+                },
+                {
+                    "value": "core.lookups.countries.MV",
+                    "key": "MV"
+                },
+                {
+                    "value": "core.lookups.countries.ML",
+                    "key": "ML"
+                },
+                {
+                    "value": "core.lookups.countries.MT",
+                    "key": "MT"
+                },
+                {
+                    "value": "core.lookups.countries.MH",
+                    "key": "MH"
+                },
+                {
+                    "value": "core.lookups.countries.MQ",
+                    "key": "MQ"
+                },
+                {
+                    "value": "core.lookups.countries.MR",
+                    "key": "MR"
+                },
+                {
+                    "value": "core.lookups.countries.MU",
+                    "key": "MU"
+                },
+                {
+                    "value": "core.lookups.countries.YT",
+                    "key": "YT"
+                },
+                {
+                    "value": "core.lookups.countries.MX",
+                    "key": "MX"
+                },
+                {
+                    "value": "core.lookups.countries.FM",
+                    "key": "FM"
+                },
+                {
+                    "value": "core.lookups.countries.MD",
+                    "key": "MD"
+                },
+                {
+                    "value": "core.lookups.countries.MC",
+                    "key": "MC"
+                },
+                {
+                    "value": "core.lookups.countries.MN",
+                    "key": "MN"
+                },
+                {
+                    "value": "core.lookups.countries.ME",
+                    "key": "ME"
+                },
+                {
+                    "value": "core.lookups.countries.MS",
+                    "key": "MS"
+                },
+                {
+                    "value": "core.lookups.countries.MA",
+                    "key": "MA"
+                },
+                {
+                    "value": "core.lookups.countries.MZ",
+                    "key": "MZ"
+                },
+                {
+                    "value": "core.lookups.countries.MM",
+                    "key": "MM"
+                },
+                {
+                    "value": "core.lookups.countries.NA",
+                    "key": "NA"
+                },
+                {
+                    "value": "core.lookups.countries.NR",
+                    "key": "NR"
+                },
+                {
+                    "value": "core.lookups.countries.NP",
+                    "key": "NP"
+                },
+                {
+                    "value": "core.lookups.countries.NL",
+                    "key": "NL"
+                },
+                {
+                    "value": "core.lookups.countries.AN",
+                    "key": "AN"
+                },
+                {
+                    "value": "core.lookups.countries.NC",
+                    "key": "NC"
+                },
+                {
+                    "value": "core.lookups.countries.NZ",
+                    "key": "NZ"
+                },
+                {
+                    "value": "core.lookups.countries.NI",
+                    "key": "NI"
+                },
+                {
+                    "value": "core.lookups.countries.NE",
+                    "key": "NE"
+                },
+                {
+                    "value": "core.lookups.countries.NG",
+                    "key": "NG"
+                },
+                {
+                    "value": "core.lookups.countries.NU",
+                    "key": "NU"
+                },
+                {
+                    "value": "core.lookups.countries.NF",
+                    "key": "NF"
+                },
+                {
+                    "value": "core.lookups.countries.MP",
+                    "key": "MP"
+                },
+                {
+                    "value": "core.lookups.countries.NO",
+                    "key": "NO"
+                },
+                {
+                    "value": "core.lookups.countries.OM",
+                    "key": "OM"
+                },
+                {
+                    "value": "core.lookups.countries.PK",
+                    "key": "PK"
+                },
+                {
+                    "value": "core.lookups.countries.PW",
+                    "key": "PW"
+                },
+                {
+                    "value": "core.lookups.countries.PS",
+                    "key": "PS"
+                },
+                {
+                    "value": "core.lookups.countries.PA",
+                    "key": "PA"
+                },
+                {
+                    "value": "core.lookups.countries.PG",
+                    "key": "PG"
+                },
+                {
+                    "value": "core.lookups.countries.PY",
+                    "key": "PY"
+                },
+                {
+                    "value": "core.lookups.countries.PE",
+                    "key": "PE"
+                },
+                {
+                    "value": "core.lookups.countries.PH",
+                    "key": "PH"
+                },
+                {
+                    "value": "core.lookups.countries.PN",
+                    "key": "PN"
+                },
+                {
+                    "value": "core.lookups.countries.PL",
+                    "key": "PL"
+                },
+                {
+                    "value": "core.lookups.countries.PT",
+                    "key": "PT"
+                },
+                {
+                    "value": "core.lookups.countries.PR",
+                    "key": "PR"
+                },
+                {
+                    "value": "core.lookups.countries.QA",
+                    "key": "QA"
+                },
+                {
+                    "value": "core.lookups.countries.RE",
+                    "key": "RE"
+                },
+                {
+                    "value": "core.lookups.countries.RO",
+                    "key": "RO"
+                },
+                {
+                    "value": "core.lookups.countries.RU",
+                    "key": "RU"
+                },
+                {
+                    "value": "core.lookups.countries.RW",
+                    "key": "RW"
+                },
+                {
+                    "value": "core.lookups.countries.SH",
+                    "key": "SH"
+                },
+                {
+                    "value": "core.lookups.countries.KN",
+                    "key": "KN"
+                },
+                {
+                    "value": "core.lookups.countries.LC",
+                    "key": "LC"
+                },
+                {
+                    "value": "core.lookups.countries.PM",
+                    "key": "PM"
+                },
+                {
+                    "value": "core.lookups.countries.VC",
+                    "key": "VC"
+                },
+                {
+                    "value": "core.lookups.countries.WS",
+                    "key": "WS"
+                },
+                {
+                    "value": "core.lookups.countries.SM",
+                    "key": "SM"
+                },
+                {
+                    "value": "core.lookups.countries.ST",
+                    "key": "ST"
+                },
+                {
+                    "value": "core.lookups.countries.SA",
+                    "key": "SA"
+                },
+                {
+                    "value": "core.lookups.countries.SN",
+                    "key": "SN"
+                },
+                {
+                    "value": "core.lookups.countries.RS",
+                    "key": "RS"
+                },
+                {
+                    "value": "core.lookups.countries.SC",
+                    "key": "SC"
+                },
+                {
+                    "value": "core.lookups.countries.SL",
+                    "key": "SL"
+                },
+                {
+                    "value": "core.lookups.countries.SG",
+                    "key": "SG"
+                },
+                {
+                    "value": "core.lookups.countries.SX",
+                    "key": "SX"
+                },
+                {
+                    "value": "core.lookups.countries.SK",
+                    "key": "SK"
+                },
+                {
+                    "value": "core.lookups.countries.SI",
+                    "key": "SI"
+                },
+                {
+                    "value": "core.lookups.countries.SB",
+                    "key": "SB"
+                },
+                {
+                    "value": "core.lookups.countries.SO",
+                    "key": "SO"
+                },
+                {
+                    "value": "core.lookups.countries.ZA",
+                    "key": "ZA"
+                },
+                {
+                    "value": "core.lookups.countries.GS",
+                    "key": "GS"
+                },
+                {
+                    "value": "core.lookups.countries.SS",
+                    "key": "SS"
+                },
+                {
+                    "value": "core.lookups.countries.ES",
+                    "key": "ES"
+                },
+                {
+                    "value": "core.lookups.countries.LK",
+                    "key": "LK"
+                },
+                {
+                    "value": "core.lookups.countries.SD",
+                    "key": "SD"
+                },
+                {
+                    "value": "core.lookups.countries.SR",
+                    "key": "SR"
+                },
+                {
+                    "value": "core.lookups.countries.SJ",
+                    "key": "SJ"
+                },
+                {
+                    "value": "core.lookups.countries.SZ",
+                    "key": "SZ"
+                },
+                {
+                    "value": "core.lookups.countries.SE",
+                    "key": "SE"
+                },
+                {
+                    "value": "core.lookups.countries.CH",
+                    "key": "CH"
+                },
+                {
+                    "value": "core.lookups.countries.SY",
+                    "key": "SY"
+                },
+                {
+                    "value": "core.lookups.countries.TW",
+                    "key": "TW"
+                },
+                {
+                    "value": "core.lookups.countries.TJ",
+                    "key": "TJ"
+                },
+                {
+                    "value": "core.lookups.countries.TZ",
+                    "key": "TZ"
+                },
+                {
+                    "value": "core.lookups.countries.TH",
+                    "key": "TH"
+                },
+                {
+                    "value": "core.lookups.countries.TL",
+                    "key": "TL"
+                },
+                {
+                    "value": "core.lookups.countries.TG",
+                    "key": "TG"
+                },
+                {
+                    "value": "core.lookups.countries.TK",
+                    "key": "TK"
+                },
+                {
+                    "value": "core.lookups.countries.TO",
+                    "key": "TO"
+                },
+                {
+                    "value": "core.lookups.countries.TT",
+                    "key": "TT"
+                },
+                {
+                    "value": "core.lookups.countries.TN",
+                    "key": "TN"
+                },
+                {
+                    "value": "core.lookups.countries.TR",
+                    "key": "TR"
+                },
+                {
+                    "value": "core.lookups.countries.TM",
+                    "key": "TM"
+                },
+                {
+                    "value": "core.lookups.countries.TC",
+                    "key": "TC"
+                },
+                {
+                    "value": "core.lookups.countries.TV",
+                    "key": "TV"
+                },
+                {
+                    "value": "core.lookups.countries.UG",
+                    "key": "UG"
+                },
+                {
+                    "value": "core.lookups.countries.UA",
+                    "key": "UA"
+                },
+                {
+                    "value": "core.lookups.countries.AE",
+                    "key": "AE"
+                },
+                {
+                    "value": "core.lookups.countries.GB",
+                    "key": "GB"
+                },
+                {
+                    "value": "core.lookups.countries.US",
+                    "key": "US"
+                },
+                {
+                    "value": "core.lookups.countries.UM",
+                    "key": "UM"
+                },
+                {
+                    "value": "core.lookups.countries.UY",
+                    "key": "UY"
+                },
+                {
+                    "value": "core.lookups.countries.UZ",
+                    "key": "UZ"
+                },
+                {
+                    "value": "core.lookups.countries.VU",
+                    "key": "VU"
+                },
+                {
+                    "value": "core.lookups.countries.VE",
+                    "key": "VE"
+                },
+                {
+                    "value": "core.lookups.countries.VN",
+                    "key": "VN"
+                },
+                {
+                    "value": "core.lookups.countries.VG",
+                    "key": "VG"
+                },
+                {
+                    "value": "core.lookups.countries.VI",
+                    "key": "VI"
+                },
+                {
+                    "value": "core.lookups.countries.WF",
+                    "key": "WF"
+                },
+                {
+                    "value": "core.lookups.countries.EH",
+                    "key": "EH"
+                },
+                {
+                    "value": "core.lookups.countries.YE",
+                    "key": "YE"
+                },
+                {
+                    "value": "core.lookups.countries.ZM",
+                    "key": "ZM"
+                },
+                {
+                    "value": "core.lookups.countries.ZW",
+                    "key": "ZW"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "organizationIdTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.organizationIdTypes.ein",
+                    "key": "EIN"
+                },
+                {
+                    "value": "core.lookups.organizationIdTypes.duns",
+                    "key": "DUNS"
+                },
+                {
+                    "value": "core.lookups.organizationIdTypes.cageCode",
+                    "key": "Cage Code"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "organizationTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.organizationTypes.non-profit",
+                    "key": "Non-profit"
+                },
+                {
+                    "value": "core.lookups.organizationTypes.government",
+                    "key": "Government"
+                },
+                {
+                    "value": "core.lookups.organizationTypes.corporation",
+                    "key": "Corporation"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "personTitles",
+            "entries": [
+                {
+                    "value": "core.lookups.personTitles.mr",
+                    "key": "mr"
+                },
+                {
+                    "value": "core.lookups.personTitles.mrs",
+                    "key": "mrs"
+                },
+                {
+                    "value": "core.lookups.personTitles.ms",
+                    "key": "ms"
+                },
+                {
+                    "value": "core.lookups.personTitles.miss",
+                    "key": "miss"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "organizationalParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.common.owning-group",
+                    "key": "owning group"
+                },
+                {
+                    "value": "core.lookups.common.collaborator",
+                    "key": "collaborator"
+                },
+                {
+                    "value": "core.lookups.common.reader",
+                    "key": "reader"
+                },
+                {
+                    "value": "core.lookups.common.no-access",
+                    "key": "No Access"
+                },
+                {
+                    "value": "core.lookups.organizationalParticipantTypes.owner",
+                    "key": "owner"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "entitiesParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.assignee",
+                    "key": "assignee"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.co-owner",
+                    "key": "co-owner"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.supervisor",
+                    "key": "supervisor"
+                },
+                {
+                    "value": "core.lookups.common.owning-group",
+                    "key": "owning group"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.approver",
+                    "key": "approver"
+                },
+                {
+                    "value": "core.lookups.common.collaborator",
+                    "key": "collaborator"
+                },
+                {
+                    "value": "core.lookups.entitiesParticipantTypes.follower",
+                    "key": "follower"
+                },
+                {
+                    "value": "core.lookups.common.reader",
+                    "key": "reader"
+                },
+                {
+                    "value": "core.lookups.common.no-access",
+                    "key": "No Access"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "taskOutcomes",
+            "entries": [
+                {
+                    "value": "core.lookups.taskOutcomes.approve",
+                    "key": "Approve Document"
+                },
+                {
+                    "value": "core.lookups.taskOutcomes.rework",
+                    "key": "Send for Rework"
+                },
+                {
+                    "value": "core.lookups.taskOutcomes.resubmit",
+                    "key": "Resubmit"
+                },
+                {
+                    "value": "core.lookups.taskOutcomes.cancel",
+                    "key": "Cancel Document"
+                },
+                {
+                    "value": "core.lookups.taskOutcomes.concur",
+                    "key": "Concur"
+                },
+                {
+                    "value": "core.lookups.taskOutcomes.nonConcur",
+                    "key": "Non-Concur"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "reportStates",
+            "entries": [
+                {
+                    "value": "core.lookups.reportStates.draft",
+                    "key": "Draft"
+                },
+                {
+                    "value": "core.lookups.reportStates.inApproval",
+                    "key": "In Approval"
+                },
+                {
+                    "value": "core.lookups.reportStates.active",
+                    "key": "Active"
+                },
+                {
+                    "value": "core.lookups.reportStates.inActive",
+                    "key": "Inactive"
+                },
+                {
+                    "value": "core.lookups.reportStates.closed",
+                    "key": "Closed"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "auditReportNames",
+            "entries": [
+                {
+                    "value": "core.lookups.auditReportNames.all",
+                    "key": ""
+                },
+                {
+                    "value": "core.lookups.auditReportNames.case_file",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.auditReportNames.complaint",
+                    "key": "COMPLAINT"
+                },
+                {
+                    "value": "core.lookups.auditReportNames.task",
+                    "key": "TASK"
+                },
+                {
+                    "value": "core.lookups.auditReportNames.file",
+                    "key": "FILE"
+                },
+                {
+                    "value": "core.lookups.auditReportNames.person",
+                    "key": "PERSON"
+                },
+                {
+                    "value": "core.lookups.auditReportNames.organization",
+                    "key": "ORGANIZATION"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "businessProcessTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
+                    "key": "acmDocumentWorkflow"
+                },
+                {
+                    "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
+                    "key": "CorrectiveActionPlan"
+                }
+            ],
+            "readonly": true
+        }
+    ]
 }
