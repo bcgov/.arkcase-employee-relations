@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:amq="http://activemq.apache.org/schema/core"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:amq="http://activemq.apache.org/schema/core" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
         http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core-5.13.2.xsd">
 
     <!--*************************************************************************** -->
     <!-- ActiveMQ Configuration                                                     -->
     <!--*************************************************************************** -->
 
-    <amq:broker id="broker" useJmx="false" persistent="true"
-                deleteAllMessagesOnStartup="${ark.activemq.deleteAllMessagesOnStartup}" enableStatistics="true">
+    <amq:broker id="broker" useJmx="false" persistent="true" deleteAllMessagesOnStartup="${ark.activemq.deleteAllMessagesOnStartup}"
+        enableStatistics="true">
         <amq:persistenceAdapter>
             <amq:kahaDB directory="${user.home}/.arkcase/activemq"/>
         </amq:persistenceAdapter>
@@ -18,16 +16,14 @@
         <amq:destinationPolicy>
             <amq:policyMap>
                 <amq:policyEntries>
-                    <amq:policyEntry queue=">" deadLetterStrategy="discarding"
-                                     advisoryWhenFull="true"
-                                     advisoryForFastProducers="true" memoryLimit="${ark.activemq.queueMemoryLimit}">
+                    <amq:policyEntry queue=">" deadLetterStrategy="discarding" advisoryWhenFull="true" advisoryForFastProducers="true"
+                        memoryLimit="${ark.activemq.queueMemoryLimit}">
                         <amq:deadLetterStrategy>
                             <amq:discarding/>
                         </amq:deadLetterStrategy>
                     </amq:policyEntry>
-                    <amq:policyEntry topic=">" deadLetterStrategy="discarding"
-                                     advisoryWhenFull="true"
-                                     advisoryForFastProducers="true" memoryLimit="${ark.activemq.topicMemoryLimit}">
+                    <amq:policyEntry topic=">" deadLetterStrategy="discarding" advisoryWhenFull="true" advisoryForFastProducers="true"
+                        memoryLimit="${ark.activemq.topicMemoryLimit}">
                         <amq:deadLetterStrategy>
                             <amq:discarding/>
                         </amq:deadLetterStrategy>
@@ -110,11 +106,9 @@
         <property name="trustedPackages" ref="activeMqTrustedPackages"/>
     </bean>
 
-    <bean id="jmsConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory"
-          destroy-method="stop" depends-on="broker">
+    <bean id="jmsConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop" depends-on="broker">
         <property name="connectionFactory" ref="amqConnectionFactory"/>
         <property name="maxConnections" value="${ark.activemq.maxConnections}"/>
     </bean>
-
 
 </beans>
