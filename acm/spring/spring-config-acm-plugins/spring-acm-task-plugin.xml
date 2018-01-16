@@ -169,6 +169,11 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/task/buckslipProcesses"/>
                     <property name="requiredPrivilege" ref="acmTaskSavePrivilege"/>
+                </bean>	
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/task/businessProcess/{objectType}/{objectId}/pastTasks"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>				
             </list>
         </property>

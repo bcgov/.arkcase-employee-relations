@@ -25,6 +25,12 @@
                     <property name="url" value="/api/{version}/service/compressor/download/{folderId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+				<bean id="downloadCompressedFilesAndFolderSPrivilege"
+                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/compressor/download"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
