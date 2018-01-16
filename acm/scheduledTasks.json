@@ -5,14 +5,12 @@
         {
             "name": "Alfresco Sync Service",
             "beanName": "arkcase-alfrescoSyncScheduledBean",
-            "howOftenInSeconds": "15",
-            "taskLastRun": 1516135229348
+            "howOftenInSeconds": "15"
         },
         {
             "name": "Calendar Events Purging Service",
             "beanName": "scheduledCalendarPurger",
-            "howOftenInSeconds": "120",
-            "taskLastRun": 1516135184348
+            "howOftenInSeconds": "120"
         }
     ]
 }
