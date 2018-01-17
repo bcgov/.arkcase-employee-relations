@@ -177,6 +177,11 @@
                     <property name="url" value="/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                  <bean id="initiatePartialSyncUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/ldap/{directory}/partial-sync"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
