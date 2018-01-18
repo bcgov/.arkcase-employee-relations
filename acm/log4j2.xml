@@ -23,10 +23,10 @@
             <AppenderRef ref="Console"/>
             <AppenderRef ref="file-log"/>
         </Logger>
-<!--        <Logger name="org.mule" level="debug" additivity="false">
-            <AppenderRef ref="Console"/>
-            <AppenderRef ref="file-log"/>
-        </Logger> -->
+        <!--        <Logger name="org.mule" level="debug" additivity="false">
+                    <AppenderRef ref="Console"/>
+                    <AppenderRef ref="file-log"/>
+                </Logger> -->
         <Logger name="com.armedia.acm.userinterface.angular.AngularResourceCopier" level="warn" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="file-log"/>
