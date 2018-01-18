@@ -6,57 +6,56 @@
 
     <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-armedia-ldap.properties"/>
+        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-armedianet-ldap.properties"/>
     </beans:bean>
 
     <!-- change the ref to match the bean name of your ldap sync job; and change the 
          cron to the desired cron expression (see JavaDoc for org.springframework.scheduling.support.CronSequenceGenerator).  
          No other changes are needed. -->
     <task:scheduled-tasks scheduler="ldapSyncTaskScheduler">
-        <task:scheduled ref="armedia_ldapSyncJob" method="ldapSync" cron="0 5 * * * *"/>
-        <task:scheduled ref="armedia_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
+        <task:scheduled ref="armedianet_ldapSyncJob" method="ldapSync" cron="0 5 * * * *"/>
+        <task:scheduled ref="armedianet_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
     </task:scheduled-tasks>
 
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="armedia_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
+    <beans:bean id="armedianet_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
-        <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
+        <beans:property name="ldapSyncConfig" ref="armedianet_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value='${ldapConfig.syncEnabled}'/>
+        <beans:property name="syncEnabled" value="true"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
-    <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="armedia_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService"
+    <beans:bean id="armedianet_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService"
         init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
-        <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
+        <beans:property name="ldapSyncConfig" ref="armedianet_sync"/>
         <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value='${ldapConfig.syncEnabled}'/>
+        <beans:property name="syncEnabled" value="true"/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
-    <beans:bean id="armedia_ldapUrl" class="java.lang.String">
+    <beans:bean id="armedianet_ldapUrl" class="java.lang.String">
         <beans:constructor-arg value='${ldapConfig.ldapUrl}'/>
     </beans:bean>
 
-    <beans:bean id="armedia_ldapUrls" factory-bean="armedia_ldapUrl" factory-method="split">
+    <beans:bean id="armedianet_ldapUrls" factory-bean="armedianet_ldapUrl" factory-method="split">
         <beans:constructor-arg value=','/>
     </beans:bean>
 
-    <beans:bean id="armedia_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
+    <beans:bean id="armedianet_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
         <!-- ldapUrl: URL of the ldap instance (e.g. ldap://armedia.com:389) -->
-        <beans:property name="ldapUrl" ref='armedia_ldapUrls'/>
+        <beans:property name="ldapUrl" ref='armedianet_ldapUrls'/>
         <beans:property name="baseDC" value='${ldapConfig.base}'/>
         <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you
             are using anonymous authentication -->
@@ -76,7 +75,7 @@
         <beans:property name="directoryType" value='${ldapConfig.directoryType}'/>
     </beans:bean>
 
-    <beans:bean id="armedia_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig" parent="armedia_ldap_config">
+    <beans:bean id="armedianet_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig" parent="armedianet_ldap_config">
         <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
         <beans:property name="groupSearchBase" value='${ldapConfig.groupSearchBase}'/>
         <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
@@ -99,8 +98,8 @@
         <beans:property name="changedGroupSearchPageFilter" value='${ldapConfig.changedGroupSearchPageFilter}'/>
     </beans:bean>
 
-    <beans:bean id="armedia_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig"
-        parent="armedia_ldap_config">
+    <beans:bean id="armedianet_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig"
+        parent="armedianet_ldap_config">
         <!-- userSearchBase is the tree under which users are found (e.g. cn=users).  -->
         <beans:property name="searchBase" value='${ldapConfig.userSearchBase}'/>
         <beans:property name="enableEditingLdapUsers" value='${ldapConfig.enableEditingLdapUsers}'/>
@@ -111,22 +110,22 @@
          is why these beans are active both for Kerberos and LDAP. -->
     <beans:beans profile="ldap,kerberos,externalAuth">
 
-        <beans:bean id="armedia_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
+        <beans:bean id="armedianet_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${ldapConfig.userSearchBase}'/>
             <beans:constructor-arg index="1" value='${ldapConfig.userIdAttributeName}={0}'/>
-            <beans:constructor-arg index="2" ref="armedia_contextSource"/>
+            <beans:constructor-arg index="2" ref="armedianet_contextSource"/>
         </beans:bean>
 
-        <beans:bean id="armedia_authenticationProvider" class="com.armedia.acm.auth.AcmLdapAuthenticationProvider">
+        <beans:bean id="armedianet_authenticationProvider" class="com.armedia.acm.auth.AcmLdapAuthenticationProvider">
             <beans:constructor-arg>
                 <beans:bean class="org.springframework.security.ldap.authentication.BindAuthenticator">
-                    <beans:constructor-arg ref="armedia_contextSource"/>
-                    <beans:property name="userSearch" ref="armedia_userSearch"/>
+                    <beans:constructor-arg ref="armedianet_contextSource"/>
+                    <beans:property name="userSearch" ref="armedianet_userSearch"/>
                 </beans:bean>
             </beans:constructor-arg>
             <beans:constructor-arg>
                 <beans:bean class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
-                    <beans:constructor-arg ref="armedia_contextSource"/>
+                    <beans:constructor-arg ref="armedianet_contextSource"/>
                     <beans:constructor-arg value='${ldapConfig.groupSearchBase}'/>
                     <beans:property name="groupSearchFilter" value="member={0}"/>
                     <beans:property name="rolePrefix" value=""/>
@@ -136,11 +135,11 @@
                 </beans:bean>
             </beans:constructor-arg>
             <beans:property name="userDao" ref="userJpaDao"/>
-            <beans:property name="ldapSyncService" ref="armedia_ldapSyncJob"/>
+            <beans:property name="ldapSyncService" ref="armedianet_ldapSyncJob"/>
         </beans:bean>
 
-        <beans:bean id="armedia_contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
-            <beans:property name="urls" ref='armedia_ldapUrls'/>
+        <beans:bean id="armedianet_contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+            <beans:property name="urls" ref='armedianet_ldapUrls'/>
             <beans:property name="base" value='${ldapConfig.base}'/>
             <beans:property name="userDn" value='${ldapConfig.authUserDn}'/>
             <beans:property name="password" value='${ldapConfig.authUserPassword}'/>
@@ -149,23 +148,23 @@
             <beans:property name="referral" value="follow"/>
         </beans:bean>
 
-        <beans:bean id="armedia_contextSourceProxy"
+        <beans:bean id="armedianet_contextSourceProxy"
             class="org.springframework.ldap.transaction.compensating.manager.TransactionAwareContextSourceProxy">
-            <beans:constructor-arg ref="armedia_contextSource"/>
+            <beans:constructor-arg ref="armedianet_contextSource"/>
         </beans:bean>
 
         <beans:bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
-            <beans:constructor-arg ref="armedia_contextSourceProxy"/>
+            <beans:constructor-arg ref="armedianet_contextSourceProxy"/>
         </beans:bean>
 
         <beans:bean id="transactionManager"
             class="org.springframework.ldap.transaction.compensating.manager.ContextSourceTransactionManager">
-            <beans:property name="contextSource" ref="armedia_contextSourceProxy"/>
+            <beans:property name="contextSource" ref="armedianet_contextSourceProxy"/>
         </beans:bean>
 
-        <beans:bean id="armedia_ldapSync" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+        <beans:bean id="armedianet_ldapSync" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
             <beans:property name="transactionManager" ref="transactionManager"/>
-            <beans:property name="target" ref="armedia_ldapSyncJob"/>
+            <beans:property name="target" ref="armedianet_ldapSyncJob"/>
             <beans:property name="transactionAttributes">
                 <beans:props>
                     <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
@@ -177,11 +176,11 @@
         Authenticates a user id and password against LDAP directory.  To support multiple LDAP configurations, create multiple Spring 
         beans, each with its own LdapAuthenticateService.
         -->
-        <beans:bean id="armedia_ldapAuthenticateService" class="com.armedia.acm.services.users.service.ldap.LdapAuthenticateService">
+        <beans:bean id="armedianet_ldapAuthenticateService" class="com.armedia.acm.services.users.service.ldap.LdapAuthenticateService">
             <!-- ldapAuthenticateConfig: ref must match an AcmLdapAuthenticateConfig bean -->
-            <beans:property name="ldapAuthenticateConfig" ref="armedia_authenticate"/>
+            <beans:property name="ldapAuthenticateConfig" ref="armedianet_authenticate"/>
             <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean -->
-            <beans:property name="ldapSyncConfig" ref="armedia_sync"/>
+            <beans:property name="ldapSyncConfig" ref="armedianet_sync"/>
             <!-- do not change ldapDao properties. -->
             <beans:property name="ldapDao" ref="customPagedLdapDao"/>
             <beans:property name="userDao" ref="userJpaDao"/>
@@ -191,22 +190,22 @@
     </beans:beans>
 
     <beans:beans profile="externalAuth">
-        <beans:bean id="armedia_userDetailsService" class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
-            <beans:constructor-arg index="0" ref="armedia_userSearch"/>
+        <beans:bean id="armedianet_userDetailsService" class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+            <beans:constructor-arg index="0" ref="armedianet_userSearch"/>
             <beans:constructor-arg index="1">
-                <beans:bean id="armedia_authoritiesPopulator"
+                <beans:bean id="armedianet_authoritiesPopulator"
                     class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
-                    <beans:constructor-arg index="0" ref="armedia_contextSource"/>
+                    <beans:constructor-arg index="0" ref="armedianet_contextSource"/>
                     <beans:constructor-arg index="1" value='${ldapConfig.groupSearchBase}'/>
                 </beans:bean>
             </beans:constructor-arg>
         </beans:bean>
-        <beans:bean id="armedia_externalAuthProvider"
+        <beans:bean id="armedianet_externalAuthProvider"
             class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
             <beans:property name="preAuthenticatedUserDetailsService">
-                <beans:bean id="armedia_userDetailsServiceWrapper"
+                <beans:bean id="armedianet_userDetailsServiceWrapper"
                     class="org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper">
-                    <beans:property name="userDetailsService" ref="armedia_userDetailsService"/>
+                    <beans:property name="userDetailsService" ref="armedianet_userDetailsService"/>
                 </beans:bean>
             </beans:property>
         </beans:bean>
