@@ -19,7 +19,7 @@
             <spring:property name="arguments">
                 <spring:list>
                     <spring:value>${alfresco.cmis.id}</spring:value>
-                    <spring:value>${alfresco.cmis.versioningState}</spring:value>
+                    <spring:value>${alfresco.cmis.cmisVersioningState}</spring:value>
                     <!-- put here additional parameters not used in <cmis:config/> section below -->
                 </spring:list>
             </spring:property>
