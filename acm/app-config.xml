@@ -13,7 +13,7 @@
              So with this attribute we can control what is sent to Alfresco.
              Valid values: uid, samAccountName, userPrincipalName, distinguishedName
         -->
-        <property name="alfrescoUserIdLdapAttribute" value="samAccountName"/>
+        <property name="alfrescoUserIdLdapAttribute" value="uid"/>
 
         <!-- The logoutUrl bean is defined in spring-security-config-*.xml -->
         <property name="logoutUrl" ref="logoutUrl"/>
