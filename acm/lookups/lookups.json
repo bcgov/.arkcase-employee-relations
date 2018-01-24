@@ -223,32 +223,18 @@
     ],
     "standardLookup": [
         {
-            "name": "endpoint",
+            "name": "cmisVersioningState",
             "entries": [
                 {
-                    "value": "core.lookups.endpoint.atom",
-                    "key": "ATOM"
-                },
-                {
-                    "value": "core.lookups.endpoint.soap",
-                    "key": "SOAP"
-                }
-            ],
-            "readonly": true
-        },
-        {
-            "name": "versioningState",
-            "entries": [
-                {
-                    "value": "core.lookups.versioningState.none",
+                    "value": "core.lookups.cmisVersioningState.none",
                     "key": "NONE"
                 },
                 {
-                    "value": "core.lookups.versioningState.minor",
+                    "value": "core.lookups.cmisVersioningState.minor",
                     "key": "MINOR"
                 },
                 {
-                    "value": "core.lookups.versioningState.major",
+                    "value": "core.lookups.cmisVersioningState.major",
                     "key": "MAJOR"
                 }
             ],
