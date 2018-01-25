@@ -24,17 +24,17 @@
             "restricted",
             "addresses",
             "participants",
-            "defaultPhone",
+            "contactMethods",
+			"personAliases",
+            "identifications",
+            "securityTags",
+			"defaultPhone",
             "defaultEmail",
             "defaultAddress",
             "defaultUrl",
             "defaultAlias",
             "defaultIdentification",
-            "defaultPicture",
-            "personAliases",
-            "identifications",
-            "securityTags",
-            "contactMethods"
+            "defaultPicture"
         ]
     },
     {
@@ -111,14 +111,14 @@
             "restricted",
             "addresses",
             "participants",
+			"identifications",
+            "contactMethods",
             "defaultPhone",
             "defaultEmail",
             "defaultAddress",
             "defaultUrl",
             "defaultFax",
-            "defaultIdentification",
-            "identifications",
-            "contactMethods"
+            "defaultIdentification"
         ]
     }
 ]
