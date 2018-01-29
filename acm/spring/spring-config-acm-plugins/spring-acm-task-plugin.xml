@@ -172,6 +172,12 @@
                     <property name="url" value="/api/{version}/plugin/task/businessProcess/{objectType}/{objectId}/pastTasks"/>
                     <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url"
+                        value="/api/{version}/plugin/task/businessProcess/{objectType}/{objectId}/{processVariable}/businessProcessVariable"/>
+                    <property name="requiredPrivilege" ref="acmTaskListPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
