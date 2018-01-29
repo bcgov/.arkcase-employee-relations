@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--
 		
@@ -15,10 +14,10 @@
             currentDate_PLUS_30_DAYS
 		
     -->
-	   
+
     <!-- Case File query -->
     <bean id="caseCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="CASE_FILE" />
+        <property name="type" value="CASE_FILE"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -129,11 +128,10 @@
             </list>
         </property>
     </bean>
-    
-    
+
     <!-- Complaint query -->
     <bean id="complaintCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
-        <property name="type" value="COMPLAINT" />
+        <property name="type" value="COMPLAINT"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -238,5 +236,5 @@
                 <value>currentDate</value>
             </list>
         </property>
-    </bean> 
+    </bean>
 </beans>
