@@ -22,7 +22,7 @@
             <spring:property name="arguments">
                 <spring:list>
                     <beans:value>$\{${id}.cmis.id}</beans:value>
-                    <beans:value>$\{${id}.cmis.versioningState}</beans:value>
+                    <beans:value>$\{${id}.cmis.cmisVersioningState}</beans:value>
                     <!-- put here additional parameters not used in <cmis:config/> section below -->
                 </spring:list>
             </spring:property>

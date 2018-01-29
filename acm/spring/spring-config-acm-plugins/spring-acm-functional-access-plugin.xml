@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
     <bean id="functionalAccessPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges"
-          depends-on="acmGlobalAllowPrivilege">
+        depends-on="acmGlobalAllowPrivilege">
         <property name="pluginName" value="Functional Access Plugin"/>
         <property name="privileges">
             <list>
@@ -13,7 +12,7 @@
             </list>
         </property>
         <property name="urlPrivileges">
-            <list>                
+            <list>
                 <bean id="faGetApplicationRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/functionalaccess/roles"/>
@@ -44,7 +43,8 @@
                     <property name="url" value="/api/{version}/service/functionalaccess/users/{privilege}/{group}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
-                <bean id="faGetUsersByPrivilegeAndGroupPlusCurrentAssigneeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="faGetUsersByPrivilegeAndGroupPlusCurrentAssigneeUrl"
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/functionalaccess/users/{privilege}/{group}/{currentAssignee}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
@@ -54,7 +54,7 @@
                     <property name="url" value="/api/{version}/functionalaccess/rolestogroups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-           </list>
+            </list>
         </property>
     </bean>
 </beans>

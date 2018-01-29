@@ -1,13 +1,16 @@
 {
     "scheduleEnabled": "true",
     "scheduleIntervalInSeconds": "15",
-    "tasks": [{
-        "name": "Alfresco Sync Service",
-        "beanName": "arkcase-alfrescoSyncScheduledBean",
-        "howOftenInSeconds": "15"
-    }, {
-        "name": "Calendar Events Purging Service",
-        "beanName": "scheduledCalendarPurger",
-        "howOftenInSeconds": "120"
-    }]
+    "tasks": [
+        {
+            "name": "Alfresco Sync Service",
+            "beanName": "arkcase-alfrescoSyncScheduledBean",
+            "howOftenInSeconds": "15"
+        },
+        {
+            "name": "Calendar Events Purging Service",
+            "beanName": "scheduledCalendarPurger",
+            "howOftenInSeconds": "120"
+        }
+    ]
 }
