@@ -77,6 +77,16 @@
                     <property name="url" value="/api/{version}/users/group/{groupId}/get/supervisor"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+                <bean id="usersGetGroupSupervisorsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/ldap/getFilteredUsers/search"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="usersGetGroupSupervisorsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/ldap/getNUsers/search"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
                 <bean id="usersCreateLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups"/>
