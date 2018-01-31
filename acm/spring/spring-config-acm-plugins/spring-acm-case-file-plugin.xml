@@ -46,6 +46,11 @@
                     <property name="url" value="/api/{version}/plugin/casefile/byId/{id}"/>
                     <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
                 </bean>
+				<bean id="caseByTitle" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/casefile/byTitle/{title}"/>
+                    <property name="requiredPrivilege" ref="caseFileListPrivilege"/>
+                </bean>
                 <bean id="saveCaseUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/casefile"/>
