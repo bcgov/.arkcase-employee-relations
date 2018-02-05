@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
-    <bean id="userPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges"
-          depends-on="acmGlobalAllowPrivilege">
+    <bean id="userPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges" depends-on="acmGlobalAllowPrivilege">
         <property name="pluginName" value="User Plugin"/>
         <property name="privileges">
             <list>
@@ -69,7 +67,7 @@
                     <property name="url" value="/api/{version}/users/group/{groupId}/remove"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-                 <bean id="removeLdapGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="removeLdapGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/parent/{parentName:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
@@ -87,6 +85,11 @@
                 <bean id="usersSaveGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/save"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean id="usersSaveSubGroupByIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/users/group/save/{subGroupId}/{parentId}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean id="usersSaveSubGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -107,11 +110,6 @@
                 <bean id="usersFindParticipantTypesForObjectTypeNameUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/participantTypesForObjectTypeName/{objectTypeName}"/>
-                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
-                </bean>
-                <bean id="usersFindUsersWithPrivilegeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/withPrivilege/{privilege}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetUsersInfoUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -169,7 +167,7 @@
                     <property name="url" value="/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-                 <bean id="removeGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="removeGroupMembershipUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
