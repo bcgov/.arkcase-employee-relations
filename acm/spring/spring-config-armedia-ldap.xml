@@ -137,7 +137,6 @@
             </beans:constructor-arg>
             <beans:property name="userDao" ref="userJpaDao"/>
             <beans:property name="ldapSyncService" ref="armedia_ldapSyncJob"/>
-            <beans:property name="alfrescoLdapSyncer" ref="alfrescoLdapSyncer"/>
         </beans:bean>
 
         <beans:bean id="armedia_contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
