@@ -142,7 +142,6 @@
             </beans:constructor-arg>
             <beans:property name="userDao" ref="userJpaDao"/>
             <beans:property name="ldapSyncService" ref="adtest_ldapSyncJob"/>
-            <beans:property name="alfrescoLdapSyncer" ref="alfrescoLdapSyncer"/>
         </beans:bean>
 
         <beans:bean id="adtest_contextSource"
