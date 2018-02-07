@@ -19,22 +19,22 @@
                 </bean>
                 <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/getAllAuthorizedGroups"/>
+                    <property name="url" value="/api/{version}/users/get/authorized/groups/foruser"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/getFilteredAuthorizedGroups"/>
+                    <property name="url" value="/api/{version}/users/get/authorized/groups/filtered"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/getFilteredUnauthorizedGroups"/>
+                    <property name="url" value="/api/{version}/users/get/unauthorized/groups/filtered"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/users/getAllUnauthorizedGroups"/>
+                    <property name="url" value="/api/{version}/users/get/unauthorized/groups/foruser"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -74,12 +74,12 @@
                 </bean>
                 <bean id="usersGetGroupSupervisorsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/ldap/getFilteredUsers/search"/>
+                    <property name="url" value="/api/{version}/ldap/search/users/filtered"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetGroupSupervisorsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/ldap/getNUsers/search"/>
+                    <property name="url" value="/api/{version}/ldap/search/n/users"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersCreateLdapGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
