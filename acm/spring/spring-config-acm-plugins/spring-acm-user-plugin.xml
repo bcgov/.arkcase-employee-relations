@@ -17,9 +17,19 @@
                     <property name="url" value="/api/{version}/users/groups/get"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+                <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/users"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
                 <bean id="usersGetGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/get"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/users/{userid:.+}/groups"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetSubGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
