@@ -20,6 +20,8 @@
         <task:scheduled ref="${id}_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
     </task:scheduled-tasks>
 
+    <task:annotation-driven scheduler="ldapSyncTaskScheduler"/>
+
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
     <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
