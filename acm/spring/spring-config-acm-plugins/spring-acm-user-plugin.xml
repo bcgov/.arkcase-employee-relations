@@ -30,6 +30,10 @@
                 <bean id="usersGetAllGroupsAndSubgroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/users/{userid:.+}/groups"/>
+                </bean>
+                <bean id="getGroupsByNameFilterUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/groups"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
                 <bean id="usersGetSubGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
