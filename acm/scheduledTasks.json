@@ -5,19 +5,16 @@
         {
             "name": "Alfresco Sync Service",
             "beanName": "arkcase-alfrescoSyncScheduledBean",
-            "taskLastRun": 1518035152072,
             "howOftenInSeconds": "15"
         },
         {
             "name": "Calendar Events Purging Service",
             "beanName": "scheduledCalendarPurger",
-            "taskLastRun": 1518035047065,
             "howOftenInSeconds": "120"
         },
         {
             "name": "Pentaho Scheduled Report Sync Service",
             "beanName": "scheduleGeneratedReportService",
-            "taskLastRun": 1518035047068,
             "howOftenInSeconds": "120"
         }
     ]
