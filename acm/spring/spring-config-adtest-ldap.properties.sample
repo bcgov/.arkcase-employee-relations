@@ -2,7 +2,7 @@
 ldapConfig.id=adtest
 ldapConfig.base=dc=armedianet,dc=com
 ldapConfig.authUserDn=CN=Arkcase User,OU=ServiceAccounts,DC=armedianet,DC=com
-ldapConfig.authUserPassword=ENC(UIE7lX4icUIu8hoCl8Z4HEPBGSbp5+VcMjCk17LHPvI=)
+ldapConfig.authUserPassword=ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)
 
 ldapConfig.userSearchBase=OU=Users,OU=TestJSAP,OU=Clients
 ldapConfig.groupSearchBase=OU=Groups,OU=TestJSAP,OU=Clients
