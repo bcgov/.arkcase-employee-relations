@@ -62,20 +62,6 @@
                     <property name="requiredPrivilege" ref="acmDashboardModulePrivilege"/>
                 </bean>
 				
-				<bean id="readSiteByUser"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url"
-                              value="/api/{version}/plugin/dashboard/widgets/site/byUser"/>
-                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean>
-                <bean id="readSiteById"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url"
-                              value="/api/{version}/plugin/dashboard/widgets/site/byId/{id}"/>
-                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean>
                 <bean id="readSites"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
@@ -83,32 +69,11 @@
                               value="/api/{version}/plugin/dashboard/widgets/site"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
                 </bean>
-                <bean id="readSitePage"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url"
-                              value="/api/{version}/plugin/dashboard/widgets/site/page"/>
-                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean>
                 <bean id="createSite"
                       class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
                               value="/api/{version}/plugin/dashboard/widgets/site"/>
-                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean>
-                <bean id="deleteSiteByUser"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="DELETE"/>
-                    <property name="url"
-                              value="/api/{version}/plugin/dashboard/widgets/site/byUser"/>
-                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
-                </bean>
-                <bean id="deleteSiteById"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="DELETE"/>
-                    <property name="url"
-                              value="/api/{version}/plugin/dashboard/widgets/site/byId/{id}"/>
                     <property name="requiredPrivilege" ref="dashboardPrivilege"/>
                 </bean>
             </list>
