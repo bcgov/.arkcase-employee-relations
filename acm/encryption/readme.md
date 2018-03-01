@@ -6,7 +6,7 @@ Then, encrypt the symmetric key using a public key. To decrypt, first decrypt th
 
 To encrypt a plaintext create a file **plaintextFile** containing the plaintext to encrypt. Run the following command:
 ```
-openssl enc -aes-256-cbc -a -v -in plaintextFile -out plaintextFile.encrypted -p
+openssl enc -md sha256 -aes-256-cbc -a -v -in plaintextFile -out plaintextFile.encrypted -p
 ```
 Use the symmetric key as passphrase (in core branch it is **AcMd3v$**)
 
