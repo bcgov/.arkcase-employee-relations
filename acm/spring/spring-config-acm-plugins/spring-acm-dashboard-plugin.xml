@@ -61,6 +61,21 @@
                     <property name="url" value="/modules/dashboard/views/"/>
                     <property name="requiredPrivilege" ref="acmDashboardModulePrivilege"/>
                 </bean>
+				
+                <bean id="readSites"
+                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url"
+                              value="/api/{version}/plugin/dashboard/widgets/site"/>
+                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
+                </bean>
+                <bean id="createSite"
+                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url"
+                              value="/api/{version}/plugin/dashboard/widgets/site"/>
+                    <property name="requiredPrivilege" ref="dashboardPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
