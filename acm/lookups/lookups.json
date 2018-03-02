@@ -7,19 +7,22 @@
                     "inverseValue": "core.lookups.organizationRelationTypes.partner",
                     "inverseKey": "partner",
                     "value": "core.lookups.organizationRelationTypes.partner",
-                    "key": "partner"
+                    "key": "partner",
+                    "readonly": true
                 },
                 {
                     "inverseValue": "core.lookups.organizationRelationTypes.parentCompany",
                     "inverseKey": "parentCompany",
                     "value": "core.lookups.organizationRelationTypes.subCompany",
-                    "key": "subCompany"
+                    "key": "subCompany",
+                    "readonly": true
                 },
                 {
                     "inverseValue": "core.lookups.organizationRelationTypes.subCompany",
                     "inverseKey": "subCompany",
                     "value": "core.lookups.organizationRelationTypes.parentCompany",
-                    "key": "parentCompany"
+                    "key": "parentCompany",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -165,7 +168,8 @@
                         }
                     ],
                     "value": "core.lookups.contactMethodTypes.phone",
-                    "key": "phone"
+                    "key": "phone",
+                    "readonly": true
                 },
                 {
                     "subLookup": [
@@ -175,7 +179,8 @@
                         }
                     ],
                     "value": "core.lookups.contactMethodTypes.fax",
-                    "key": "fax"
+                    "key": "fax",
+                    "readonly": true
                 },
                 {
                     "subLookup": [
@@ -189,7 +194,8 @@
                         }
                     ],
                     "value": "core.lookups.contactMethodTypes.email",
-                    "key": "email"
+                    "key": "email",
+                    "readonly": true
                 },
                 {
                     "subLookup": [
@@ -215,7 +221,8 @@
                         }
                     ],
                     "value": "core.lookups.contactMethodTypes.url",
-                    "key": "url"
+                    "key": "url",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -227,15 +234,18 @@
             "entries": [
                 {
                     "value": "core.lookups.cmisVersioningState.none",
-                    "key": "NONE"
+                    "key": "NONE",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.cmisVersioningState.minor",
-                    "key": "MINOR"
+                    "key": "MINOR",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.cmisVersioningState.major",
-                    "key": "MAJOR"
+                    "key": "MAJOR",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -245,7 +255,8 @@
             "entries": [
                 {
                     "value": "core.lookups.complaintPersonTypes.initiator",
-                    "key": "Initiator"
+                    "key": "Initiator",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -255,7 +266,8 @@
             "entries": [
                 {
                     "value": "core.lookups.complaintPersonTypes.initiator",
-                    "key": "Initiator"
+                    "key": "Initiator",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -265,19 +277,23 @@
             "entries": [
                 {
                     "value": "core.lookups.changeCase.statuses.active",
-                    "key": "ACTIVE"
+                    "key": "ACTIVE",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.inactive",
-                    "key": "INACTIVE"
+                    "key": "INACTIVE",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.closed",
-                    "key": "CLOSED"
+                    "key": "CLOSED",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.deleted",
-                    "key": "DELETED"
+                    "key": "DELETED",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -287,15 +303,18 @@
             "entries": [
                 {
                     "value": "core.lookups.timesheet.statuses.draft",
-                    "key": "DRAFT"
+                    "key": "DRAFT",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.inapproval",
-                    "key": "IN_APPROVAL"
+                    "key": "IN_APPROVAL",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
-                    "key": "APPROVED"
+                    "key": "APPROVED",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -305,15 +324,18 @@
             "entries": [
                 {
                     "value": "core.lookups.timesheet.statuses.draft",
-                    "key": "DRAFT"
+                    "key": "DRAFT",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.inapproval",
-                    "key": "IN_APPROVAL"
+                    "key": "IN_APPROVAL",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
-                    "key": "APPROVED"
+                    "key": "APPROVED",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -441,19 +463,23 @@
             "entries": [
                 {
                     "value": "core.lookups.priorities.low",
-                    "key": "Low"
+                    "key": "Low",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.priorities.medium",
-                    "key": "Medium"
+                    "key": "Medium",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.priorities.high",
-                    "key": "High"
+                    "key": "High",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.priorities.expedite",
-                    "key": "Expedite"
+                    "key": "Expedite",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -481,11 +507,13 @@
             "entries": [
                 {
                     "value": "core.lookups.dispositions.add_existing_case",
-                    "key": "add_existing_case"
+                    "key": "add_existing_case",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.dispositions.open_investigation",
-                    "key": "open_investigation"
+                    "key": "open_investigation",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.dispositions.no_action",
@@ -631,11 +659,13 @@
             "entries": [
                 {
                     "value": "core.lookups.personOrganizationRelationTypes.owner",
-                    "key": "assignee"
+                    "key": "assignee",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.follower",
-                    "key": "follower"
+                    "key": "follower",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -645,19 +675,23 @@
             "entries": [
                 {
                     "value": "core.lookups.complaint.statuses.draft",
-                    "key": "DRAFT"
+                    "key": "DRAFT",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.complaint.statuses.inapproval",
-                    "key": "IN APPROVAL"
+                    "key": "IN APPROVAL",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.complaint.statuses.closed",
-                    "key": "CLOSED"
+                    "key": "CLOSED",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.complaint.statuses.deleted",
-                    "key": "DELETED"
+                    "key": "DELETED",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -667,35 +701,43 @@
             "entries": [
                 {
                     "value": "core.lookups.personOrganizationRelationTypes.owner",
-                    "key": "assignee"
+                    "key": "assignee",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.co-owner",
-                    "key": "co-owner"
+                    "key": "co-owner",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.supervisor",
-                    "key": "supervisor"
+                    "key": "supervisor",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.approver",
-                    "key": "approver"
+                    "key": "approver",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.collaborator",
-                    "key": "collaborator"
+                    "key": "collaborator",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.follower",
-                    "key": "follower"
+                    "key": "follower",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.reader",
-                    "key": "reader"
+                    "key": "reader",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.no-access",
-                    "key": "no access"
+                    "key": "no access",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -705,11 +747,13 @@
             "entries": [
                 {
                     "value": "core.lookups.personOrganizationRelationTypes.owner",
-                    "key": "assignee"
+                    "key": "assignee",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.follower",
-                    "key": "follower"
+                    "key": "follower",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -2093,23 +2137,28 @@
             "entries": [
                 {
                     "value": "core.lookups.common.owning-group",
-                    "key": "owning group"
+                    "key": "owning group",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.collaborator",
-                    "key": "collaborator"
+                    "key": "collaborator",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.reader",
-                    "key": "reader"
+                    "key": "reader",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.no-access",
-                    "key": "No Access"
+                    "key": "No Access",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.organizationalParticipantTypes.owner",
-                    "key": "owner"
+                    "key": "owner",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -2119,39 +2168,48 @@
             "entries": [
                 {
                     "value": "core.lookups.entitiesParticipantTypes.assignee",
-                    "key": "assignee"
+                    "key": "assignee",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.co-owner",
-                    "key": "co-owner"
+                    "key": "co-owner",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.supervisor",
-                    "key": "supervisor"
+                    "key": "supervisor",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.owning-group",
-                    "key": "owning group"
+                    "key": "owning group",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.approver",
-                    "key": "approver"
+                    "key": "approver",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.collaborator",
-                    "key": "collaborator"
+                    "key": "collaborator",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.entitiesParticipantTypes.follower",
-                    "key": "follower"
+                    "key": "follower",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.reader",
-                    "key": "reader"
+                    "key": "reader",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.common.no-access",
-                    "key": "No Access"
+                    "key": "No Access",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -2251,11 +2309,13 @@
             "entries": [
                 {
                     "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-                    "key": "acmDocumentWorkflow"
+                    "key": "acmDocumentWorkflow",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-                    "key": "CorrectiveActionPlan"
+                    "key": "CorrectiveActionPlan",
+                    "readonly": true
                 }
             ],
             "readonly": true
@@ -2265,27 +2325,33 @@
             "entries":[
                 {
                     "value": "core.lookups.documentsParticipantTypes.group-write",
-                    "key": "group-write"
+                    "key": "group-write",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.documentsParticipantTypes.group-read",
-                    "key": "group-read"
+                    "key": "group-read",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.documentsParticipantTypes.group-no-access",
-                    "key": "group-no-access"
+                    "key": "group-no-access",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.documentsParticipantTypes.write",
-                    "key": "write"
+                    "key": "write",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.documentsParticipantTypes.read",
-                    "key": "read"
+                    "key": "read",
+                    "readonly": true
                 },
                 {
                     "value": "core.lookups.documentsParticipantTypes.no-access",
-                    "key": "no-access"
+                    "key": "no-access",
+                    "readonly": true
                 }
             ],
             "readonly":true
