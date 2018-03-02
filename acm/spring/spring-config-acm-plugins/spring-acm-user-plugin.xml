@@ -112,6 +112,11 @@
                     <property name="url" value="/api/{version}/users/group/save/{parentId}"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                 <bean id="usersSaveSubGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/users/group/{parentId}"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
                 <bean id="usersSaveMembersToGroupUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/users/group/{groupId}/members/save"/>
