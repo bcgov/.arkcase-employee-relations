@@ -53,6 +53,13 @@
                               value="/api/{version}/plugin/okta/factor/enrollment/reset"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+				<bean id="retrieveAuthLoginProfile"
+                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url"
+                              value="/api/{version}/plugin/okta/authprofile"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
