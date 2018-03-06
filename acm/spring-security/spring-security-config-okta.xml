@@ -4,14 +4,14 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
                http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
-    <beans:beans profile="okta">
+    <beans:beans profile="mfa-okta">
     <!-- This file contains common beans and filters for LDAP authentication -->
         <!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory,
             acmBasicAndTokenAuthenticationFilter, acmRestAuthenticationSuccessHandler, acmRestAuthenticationFailureHandler, acmRestAuthenticationEntryPoint
             are defined in spring-library-user-login.xml -->
 
 
-        <beans:bean id="acmMultiFactorAuthenticationManager" class="org.reps.okta.auth.AcmMultiFactorAuthenticationManager">
+        <beans:bean id="acmMultiFactorAuthenticationManager" class="com.armedia.acm.auth.AcmAuthenticationManager">
             <beans:property name="springContextHolder" ref="acmContextHolder"/>
             <beans:property name="authoritiesMapper" ref="acmAuthoritiesMapper"/>
             <beans:property name="authenticationEventPublisher" ref="ssAuthenticationEventPublisher"/>
