@@ -610,6 +610,13 @@
         },
         {
             "actionName": "declareAsRecords",
+            "objectType": "TASK",
+            "objectProperties": {},
+            "userRolesAny": [],
+            "userRolesAll": []
+        },
+        {
+            "actionName": "declareAsRecords",
             "objectType": "COMPLAINT",
             "objectProperties": {},
             "userRolesAny": [],
