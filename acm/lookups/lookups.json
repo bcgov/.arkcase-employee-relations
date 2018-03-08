@@ -277,23 +277,19 @@
             "entries": [
                 {
                     "value": "core.lookups.changeCase.statuses.active",
-                    "key": "ACTIVE",
-                    "readonly": true
+                    "key": "ACTIVE"
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.inactive",
-                    "key": "INACTIVE",
-                    "readonly": true
+                    "key": "INACTIVE"
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.closed",
-                    "key": "CLOSED",
-                    "readonly": true
+                    "key": "CLOSED"
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.deleted",
-                    "key": "DELETED",
-                    "readonly": true
+                    "key": "DELETED"
                 }
             ],
             "readonly": true
@@ -303,18 +299,15 @@
             "entries": [
                 {
                     "value": "core.lookups.timesheet.statuses.draft",
-                    "key": "DRAFT",
-                    "readonly": true
+                    "key": "DRAFT"
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.inapproval",
-                    "key": "IN_APPROVAL",
-                    "readonly": true
+                    "key": "IN_APPROVAL"
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
-                    "key": "APPROVED",
-                    "readonly": true
+                    "key": "APPROVED"
                 }
             ],
             "readonly": true
@@ -324,18 +317,15 @@
             "entries": [
                 {
                     "value": "core.lookups.timesheet.statuses.draft",
-                    "key": "DRAFT",
-                    "readonly": true
+                    "key": "DRAFT"
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.inapproval",
-                    "key": "IN_APPROVAL",
-                    "readonly": true
+                    "key": "IN_APPROVAL"
                 },
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
-                    "key": "APPROVED",
-                    "readonly": true
+                    "key": "APPROVED"
                 }
             ],
             "readonly": true
@@ -675,23 +665,19 @@
             "entries": [
                 {
                     "value": "core.lookups.complaint.statuses.draft",
-                    "key": "DRAFT",
-                    "readonly": true
+                    "key": "DRAFT"
                 },
                 {
                     "value": "core.lookups.complaint.statuses.inapproval",
-                    "key": "IN APPROVAL",
-                    "readonly": true
+                    "key": "IN APPROVAL"
                 },
                 {
                     "value": "core.lookups.complaint.statuses.closed",
-                    "key": "CLOSED",
-                    "readonly": true
+                    "key": "CLOSED"
                 },
                 {
                     "value": "core.lookups.complaint.statuses.deleted",
-                    "key": "DELETED",
-                    "readonly": true
+                    "key": "DELETED"
                 }
             ],
             "readonly": true
