@@ -66,6 +66,17 @@
                     <property name="url" value="/modules/time-tracking/views/"/>
                     <property name="requiredPrivilege" ref="acmTimeModulePrivilege"/>
                 </bean>
+				<bean id="getTimesheetConfig" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/timesheet/config"/>
+                    <property name="requiredPrivilege" ref="timesheetPrivilege"/>
+                </bean>
+				<bean id="saveTimesheetConfig" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/timesheet/config"/>
+                    <property name="requiredPrivilege" ref="timesheetPrivilege"/>
+                </bean>
+
             </list>
         </property>
     </bean>
