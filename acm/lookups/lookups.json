@@ -872,6 +872,22 @@
             ],
             "readonly": true
         },
+		{
+            "name": "timesheetChargeRoles",
+            "entries": [
+                {
+                    "value": "core.lookups.timesheet.chargeCodes.investigator",
+                    "key": "INVESTIGATOR",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.timesheet.chargeCodes.analyst",
+                    "key": "ANALYST",
+                    "readonly": true
+                }
+            ],
+            "readonly": true
+        },
         {
             "name": "costsheetTypes",
             "entries": [
