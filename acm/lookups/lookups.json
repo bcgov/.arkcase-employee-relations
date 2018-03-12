@@ -877,13 +877,11 @@
             "entries": [
                 {
                     "value": "core.lookups.timesheet.chargeCodes.investigator",
-                    "key": "INVESTIGATOR",
-                    "readonly": true
+                    "key": "INVESTIGATOR"                    
                 },
                 {
                     "value": "core.lookups.timesheet.chargeCodes.analyst",
-                    "key": "ANALYST",
-                    "readonly": true
+                    "key": "ANALYST"                    
                 }
             ],
             "readonly": true
