@@ -24,11 +24,6 @@
                 </bean>
                 <bean id="pentahoReportsPagedUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/report/pentaho/paged"/>
-                    <property name="requiredPrivilege" ref="reportPrivilege"/>
-                </bean>
-                <bean id="pentahoReportsByMatchingName" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/pentaho"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
