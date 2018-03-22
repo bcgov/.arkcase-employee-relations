@@ -16,6 +16,11 @@
             "name": "Pentaho Scheduled Report Sync Service",
             "beanName": "scheduleGeneratedReportService",
             "howOftenInSeconds": "120"
+        },
+		{
+            "name": "Transcribe Queue-to-Processing Job",
+            "beanName": "transcribeQueueJob",
+            "howOftenInSeconds": "60"
         }
     ]
 }
