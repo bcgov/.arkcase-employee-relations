@@ -444,6 +444,16 @@
                     <property name="url" value="/api/{version}/plugin/admin/transcribe/configuration"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/holidayConfig"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/holidayConfig"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
