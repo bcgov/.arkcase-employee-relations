@@ -35,10 +35,10 @@
                 Will be processed and override urls inside the response-->
                 <prop key="skipResponseUrlMatchers">.*ttf$, .*woff$</prop>
                 <!-- given pairs for replacement pattern1:replacement1,pattern2:replacement2-->
-                <prop key="responseContentRewritePairs">(?&lt;=['"])/pentaho/:/arkcase/pentaho/</prop>
+                <prop key="responseContentRewritePairs">(?&lt;=CONTEXT_PATH = ['"][\\]?/)pentaho(?=[\\]?/['"]):arkcase/pentaho,(?&lt;=src=['"])/pentaho/:/arkcase/pentaho/,(?&lt;=root. ['"][\\]?/)pentaho(?=[\\]?/['"]):arkcase/pentaho</prop>
                 <!-- comma delimited content types which need to be skip for processing-->
                 <prop key="skipResponseContentTypes">application/x-font-(woff|ttf).*$,
-                    application/(pdf|excel|vnd\.ms-excel|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet).*$, image/.*$
+                    application/(pdf|excel|x-shockwave-flash|vnd\.ms-excel|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet).*$, image/.*$
                 </prop>
                 <!-- comma delimited pair of pattern which match url, and parameter which need to be appended-->
                 <!--<prop key="appendUrlParams">^.*prpt/viewer$:userid=${PENTAHO_SERVER_USER}&amp;password=${PENTAHO_SERVER_PASSWORD}</prop>-->
