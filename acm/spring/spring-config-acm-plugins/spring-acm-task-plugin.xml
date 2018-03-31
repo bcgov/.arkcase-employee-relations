@@ -127,6 +127,11 @@
                     <property name="url" value="/api/{latest}/plugin/task/diagram/{taskId}"/>
                     <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
                 </bean>
+				<bean id="diagramProcessIdUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{latest}/plugin/task/diagram/process/{processId}"/>
+                    <property name="requiredPrivilege" ref="acmTaskModulePrivilege"/>
+                </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/task/businessProcess/{id}/futureTasks"/>

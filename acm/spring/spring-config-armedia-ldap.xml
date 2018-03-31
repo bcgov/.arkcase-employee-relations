@@ -27,12 +27,13 @@
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="syncEnabled" value='${ldapConfig.syncEnabled}'/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
+    <!-- ensure this bean id is unique across all the partial LDAP sync beans. -->
     <beans:bean id="armedia_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService"
         init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
@@ -41,7 +42,7 @@
         <beans:property name="ldapDao" ref="customPagedLdapDao"/>
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value="true"/>
+        <beans:property name="syncEnabled" value='${ldapConfig.syncEnabled}'/>
         <beans:property name="propertyFileManager" ref="propertyFileManager"/>
         <beans:property name="ldapLastSyncPropertyFileLocation" value="${user.home}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
@@ -110,7 +111,7 @@
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile
          is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
          is why these beans are active both for Kerberos and LDAP. -->
-    <beans:beans profile="ldap,kerberos,externalAuth">
+    <beans:beans profile="ldap,kerberos,externalAuth,mfa-okta">
 
         <beans:bean id="armedia_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${ldapConfig.userSearchBase}'/>
