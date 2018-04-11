@@ -64,6 +64,24 @@
         "viewerUrl": "#!/viewer/:id/:containerId/:containerType/:name/:selectedIds",
         "target": "_blank"
     },
+	{
+        "type": "TRANSCRIBE_ITEM",
+        "key": "TRANSCRIBE_ITEM",
+        "description": "TRANSCRIBE_ITEM",
+        "iconName": "",
+        "url": "",
+        "viewerUrl": "#!/viewer/:id/:containerId/:containerType/:name/:selectedIds/:seconds",
+        "target": "_blank"
+    },
+	{
+        "type": "TRANSCRIBE",
+        "key": "TRANSCRIBE",
+        "description": "TRANSCRIBE",
+        "iconName": "",
+        "url": "",
+        "viewerUrl": "#!/viewer/:id/:containerId/:containerType/:name/:selectedIds",
+        "target": "_blank"
+    },
     {
         "type": "PERSON",
         "key": "PERSON",
