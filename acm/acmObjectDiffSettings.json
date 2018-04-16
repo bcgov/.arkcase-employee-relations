@@ -120,5 +120,54 @@
             "defaultFax",
             "defaultIdentification"
         ]
+    },
+    {
+        "className": "com.armedia.acm.plugins.person.model.PersonAssociation",
+        "name": "personAssociation",
+        "displayExpression": "person.givenName + ' ' + person.familyName + ' - ' + personType",
+        "id": [
+            "id"
+        ],
+        "includeFields": [
+            "person",
+            "personType",
+            "personDescription"
+        ]
+    },
+    {
+        "className": "com.armedia.acm.plugins.person.model.OrganizationAssociation",
+        "name": "organizationAssociation",
+        "displayExpression": "organization.organizationValue + ' - ' + associationType",
+        "id": [
+            "id"
+        ],
+        "includeFields": [
+            "organization.organizationValue",
+            "associationType",
+            "description"
+        ]
+    },
+    {
+        "className": "com.armedia.acm.plugins.complaint.model.Complaint",
+        "name": "complaint",
+        "displayExpression": "complaintType + ' ' + complaintTitle",
+        "id": [
+            "complaintId"
+        ],
+        "includeFields": [
+            "complaintNumber",
+            "complaintType",
+            "priority",
+            "complaintTitle",
+            "details",
+            "status",
+            "dueDate",
+            "childObjects",
+            "personAssociations",
+            "organizationAssociations",
+            "participants",
+            "addresses",
+            "defaultAddress"
+        ]
     }
 ]
