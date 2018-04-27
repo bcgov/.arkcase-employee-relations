@@ -1,5 +1,5 @@
 {
-  "weekends" : false,
+  "includeWeekends" : false,
   "holidays" : [ {
     "holidayName" : "New Year' Day",
     "holidayDate" : "2018-01-01"
