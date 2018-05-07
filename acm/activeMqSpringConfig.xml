@@ -51,6 +51,8 @@
     <bean id="jmsConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop">
         <property name="connectionFactory" ref="amqConnectionFactory"/>
         <property name="maxConnections" value="${ark.activemq.maxConnections}"/>
+        <property name="username" value="${ark.activemq.username}"/>
+        <property name="password" value="${ark.activemq.password}"/>
     </bean>
 
 </beans>
