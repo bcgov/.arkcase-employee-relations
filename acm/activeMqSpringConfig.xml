@@ -46,13 +46,13 @@
         <property name="brokerURL" value="${ark.activemq.transportConnectorURI}"/>
         <property name="watchTopicAdvisories" value="true"/>
         <property name="trustedPackages" ref="activeMqTrustedPackages"/>
+        <property name="userName" value="${ark.activemq.username}"/>
+        <property name="password" value="${ark.activemq.password}"/>
     </bean>
 
     <bean id="jmsConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop">
         <property name="connectionFactory" ref="amqConnectionFactory"/>
         <property name="maxConnections" value="${ark.activemq.maxConnections}"/>
-        <property name="username" value="${ark.activemq.username}"/>
-        <property name="password" value="${ark.activemq.password}"/>
     </bean>
 
 </beans>
