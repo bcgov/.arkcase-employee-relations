@@ -33,7 +33,7 @@
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 
-    <!-- ensure this bean id is unique across all the LDAP sync beans. -->
+    <!-- ensure this bean id is unique across all the partial LDAP sync beans. -->
     <beans:bean id="armedia_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService"
         init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
