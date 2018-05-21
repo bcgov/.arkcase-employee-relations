@@ -33,7 +33,7 @@
         <Logger name="com.armedia" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="file-log"/>
-			<AppenderRef ref="file-errors-log"/>
+            <AppenderRef ref="file-errors-log"/>
         </Logger>
         <Logger name="com.armedia.acm.userinterface.angular.AngularResourceCopier" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
