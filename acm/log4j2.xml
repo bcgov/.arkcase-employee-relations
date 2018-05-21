@@ -16,9 +16,9 @@
             </Policies>
             <ThresholdFilter level="debug"/>
         </RollingFile>
-		<RollingFile name="file-errors-log" fileName="${sys:catalina.base}/logs/arkcase-errors.log"
+        <RollingFile name="file-errors-log" fileName="${sys:catalina.base}/logs/arkcase-errors.log"
             filePattern="${sys:catalina.base}/logs/arkcase-errors-%d{yyyy-MM-dd}.log">
-			 <JsonLayout>
+        	 <JsonLayout>
                 <complete>true</complete>
                 <compact>true</compact>
             </JsonLayout>
