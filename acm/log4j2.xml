@@ -16,12 +16,24 @@
             </Policies>
             <ThresholdFilter level="debug"/>
         </RollingFile>
+        <RollingFile name="file-errors-log" fileName="${sys:catalina.base}/logs/arkcase-errors.log"
+            filePattern="${sys:catalina.base}/logs/arkcase-errors-%d{yyyy-MM-dd}.log">
+        	 <JsonLayout>
+                <complete>true</complete>
+                <compact>true</compact>
+            </JsonLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <ThresholdFilter level="error"/>
+        </RollingFile>
     </Appenders>
     <Loggers>
         <!-- INFO and above to console and log file; com.armedia debug and above to log file -->
         <Logger name="com.armedia" level="debug" additivity="false">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="file-log"/>
+            <AppenderRef ref="file-errors-log"/>
         </Logger>
         <!--        <Logger name="org.mule" level="debug" additivity="false">
                     <AppenderRef ref="Console"/>

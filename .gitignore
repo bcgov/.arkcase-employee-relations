@@ -17,3 +17,4 @@ acm/resources/resources
 seleniumTests/SeleniumReports
 seleniumTests/SeleniumDownload
 .idea/*
+acm/arkcase-instance-identity.properties
