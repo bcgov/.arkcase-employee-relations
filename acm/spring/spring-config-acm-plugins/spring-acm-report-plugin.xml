@@ -39,6 +39,21 @@
                 </bean>
                 <bean id="reportsToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/report/reportstogroups"/>
+                    <property name="requiredPrivilege" ref="reportPrivilege"/>
+                </bean>
+                <bean id="addAdhocGroupsToReportUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/report/{reportName:.+}/groups"/>
+                    <property name="requiredPrivilege" ref="reportPrivilege"/>
+                </bean>
+                <bean id="removeAdhocGroupsToReportUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/report/{reportName:.+}/groups"/>
+                    <property name="requiredPrivilege" ref="reportPrivilege"/>
+                </bean>
+                <bean id="reportsToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/{reportId:.+}/groups"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>

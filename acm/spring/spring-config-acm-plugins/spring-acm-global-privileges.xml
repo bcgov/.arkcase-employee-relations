@@ -1100,4 +1100,29 @@
         </property>
     </bean>
 
+	<!--State Of Arkcase Plugin-->
+    <bean id="getStateOfArkcasePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="get-state-of-arkcase-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
+	<bean id="listStateOfArkcasePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="list-state-of-arkcase-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
+	<bean id="generateStateOfArkcasePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="generate-state-of-arkcase-privilege"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
 </beans>
