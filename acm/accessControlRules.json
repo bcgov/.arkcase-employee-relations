@@ -175,11 +175,8 @@
             "userRolesAll": [
             ],
             "userIsParticipantTypeAny": [
-                "assignee",
-                "supervisor",
+                "owner",
                 "owning group",
-                "co-owner",
-                "approver",
                 "collaborator",
                 "reader"
             ]
