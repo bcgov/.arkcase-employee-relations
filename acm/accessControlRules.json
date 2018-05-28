@@ -150,7 +150,7 @@
         },
         {
             "actionName": "getObject",
-            "objectType": "COSTSHEET|TIMESHEET|TASK|PERSON|ORGANIZATION|CASE_FILE|COMPLAINT",
+            "objectType": "COSTSHEET|TIMESHEET|TASK|CASE_FILE|COMPLAINT",
             "objectProperties": {
             },
             "userRolesAny": [
@@ -163,6 +163,38 @@
                 "ROLE_TECHNICIAN"
             ],
             "userRolesAll": [
+            ]
+        },
+		{
+            "actionName": "getObject",
+            "objectType": "PERSON",
+            "objectProperties": {
+            },
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ],
+            "userIsParticipantTypeAny": [
+                "owner",
+                "owning group",
+                "collaborator",
+                "reader"
+            ]
+        },
+		{
+            "actionName": "getObject",
+            "objectType": "ORGANIZATION",
+            "objectProperties": {
+            },
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ],
+            "userIsParticipantTypeAny": [
+                "owner",
+                "owning group",
+                "collaborator",
+                "reader"
             ]
         },
         {
