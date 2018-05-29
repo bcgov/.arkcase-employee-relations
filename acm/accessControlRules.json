@@ -150,7 +150,7 @@
         },
         {
             "actionName": "getObject",
-            "objectType": "COSTSHEET|TIMESHEET|TASK|PERSON|ORGANIZATION|CASE_FILE|COMPLAINT",
+            "objectType": "COSTSHEET|TIMESHEET|TASK|CASE_FILE|COMPLAINT",
             "objectProperties": {
             },
             "userRolesAny": [
@@ -165,6 +165,38 @@
             "userRolesAll": [
             ]
         },
+		{
+            "actionName": "getObject",
+            "objectType": "PERSON",
+            "objectProperties": {
+            },
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ],
+            "userIsParticipantTypeAny": [
+                "owner",
+                "owning group",
+                "collaborator",
+                "reader"
+            ]
+        },
+		{
+            "actionName": "getObject",
+            "objectType": "ORGANIZATION",
+            "objectProperties": {
+            },
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ],
+            "userIsParticipantTypeAny": [
+                "owner",
+                "owning group",
+                "collaborator",
+                "reader"
+            ]
+        },
         {
             "actionName": "getObject",
             "objectType": "DOC_REPO",
@@ -175,11 +207,8 @@
             "userRolesAll": [
             ],
             "userIsParticipantTypeAny": [
-                "assignee",
-                "supervisor",
+                "owner",
                 "owning group",
-                "co-owner",
-                "approver",
                 "collaborator",
                 "reader"
             ]
