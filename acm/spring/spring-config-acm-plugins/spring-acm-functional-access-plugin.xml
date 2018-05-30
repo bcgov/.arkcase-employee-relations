@@ -18,9 +18,24 @@
                     <property name="url" value="/api/{version}/functionalaccess/roles"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+                <bean id="faGetApplicationRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/functionalaccess/appRoles"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
                 <bean id="faGetApplicationRolesToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/functionalaccess/rolestogroups"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean id="faAddGroupsToApplicationRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/functionalaccess/{roleName:.+}/groups"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean id="faAddGroupsToApplicationRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/functionalaccess/{roleName:.+}/groups"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean id="faGetApplicationRoleToGroupsUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">

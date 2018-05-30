@@ -75,7 +75,7 @@
         <property name="initParameters">
             <props>
                 <!-- TODO: parameterize the URLs -->
-                <prop key="targetUri">https://acm-arkcase</prop>
+                <prop key="targetUri">https://acm-arkcase/</prop>
                 <prop key="http.protocol.handle-redirects">true</prop>
                 <!-- resource names regex patterns separated with comma "," if multiple.
                 Will be processed and override urls inside the response-->
