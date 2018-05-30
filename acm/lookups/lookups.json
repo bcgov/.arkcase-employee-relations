@@ -2132,6 +2132,37 @@
             ],
             "readonly": true
         },
+		{
+            "name": "documentParticipantTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.common.owning-group",
+                    "key": "owning group",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.common.collaborator",
+                    "key": "collaborator",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.common.reader",
+                    "key": "reader",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.common.no-access",
+                    "key": "No Access",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.organizationalParticipantTypes.owner",
+                    "key": "owner",
+                    "readonly": true
+                }
+            ],
+            "readonly": true
+        },
         {
             "name": "organizationalParticipantTypes",
             "entries": [
@@ -2355,6 +2386,93 @@
                 }
             ],
             "readonly":true
+        },
+        {
+            "name":"annotationTags",
+            "entries":[
+                {
+                    "value": "X1",
+                    "key": "X1",
+                    "readonly": true
+                },
+                {
+                    "value": "X2",
+                    "key": "X2",
+                    "readonly": true
+                },
+                {
+                    "value": "X3",
+                    "key": "X3",
+                    "readonly": true
+                },
+                {
+                    "value": "X4",
+                    "key": "X4",
+                    "readonly": true
+                },
+                {
+                    "value": "X5.1",
+                    "key": "X5.1",
+                    "readonly": true
+                },
+                {
+                    "value": "X5.2",
+                    "key": "X5.2",
+                    "readonly": true
+                },
+                {
+                    "value": "X5.3",
+                    "key": "X5.3",
+                    "readonly": true
+                },
+                {
+                    "value": "X6",
+                    "key": "X6",
+                    "readonly": true
+                },
+                {
+                    "value": "X7a",
+                    "key": "X7a",
+                    "readonly": true
+                },
+                {
+                    "value": "X7b",
+                    "key": "X7b",
+                    "readonly": true
+                },
+                {
+                    "value": "X7c",
+                    "key": "X7c",
+                    "readonly": true
+                },
+                {
+                    "value": "X7d",
+                    "key": "X7d",
+                    "readonly": true
+                },
+                {
+                    "value": "X7e",
+                    "key": "X7e",
+                    "readonly": true
+                },
+                {
+                    "value": "X7f",
+                    "key": "X7f",
+                    "readonly": true
+                },
+                {
+                    "value": "X8",
+                    "key": "X8",
+                    "readonly": true
+                },
+                {
+                    "value": "X9",
+                    "key": "X9",
+                    "readonly": true
+                }
+            ],
+            "readonly":true
         }
+        
     ]
 }
