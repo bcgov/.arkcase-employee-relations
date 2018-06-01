@@ -18,66 +18,80 @@
     <!-- Case File query -->
     <bean id="caseCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="type" value="CASE_FILE"/>
-        <property name="jpaQuery">
+        <property name="sqlQuery">
             <value>
                 <![CDATA[
                     SELECT
-                        cf.caseNumber,
-                        cf.title,
-                        cf.caseType,
-                        cf.status,
-                        cf.details,
-                        cf.incidentDate,
-                        cf.created,
-                        au.fullName,
-                        cf.modified,
-                        aum.fullName,
-                        cf.closed,
-                        cf.disposition,
-                        cf.priority,
-                        cf.dueDate,
-                        cf.courtroomName,
-                        cf.nextCourtDate,
-                        cf.responsibleOrganization,
-                        COALESCE(p.title, ''),
-                        COALESCE(p.givenName, ''),
-                        COALESCE(p.middleName, ''),
-                        COALESCE(p.familyName, ''),
-                        COALESCE(p.hairColor, ''),
-                        COALESCE(p.eyeColor, ''),
-                        p.heightInInches,
-                        p.weightInPounds,
-                        p.dateOfBirth,
-                        COALESCE(p.placeOfBirth, ''),
-                        p.dateMarried,
-                        COALESCE(addr.streetAddress, ''),
-                        COALESCE(addr.streetAddress2, ''),
-                        COALESCE(addr.city, ''),
-                        COALESCE(addr.state, ''),
-                        COALESCE(addr.zip, ''),
-                        COALESCE(addr.country, ''),
-                        COALESCE(orgs.organizationType, ''),
-                        COALESCE(orgs.organizationValue, ''),
-                        COALESCE(contacts.type, ''),
-                        COALESCE(contacts.value, ''),
-                        COALESCE(aliases.aliasType, ''),
-                        COALESCE(aliases.aliasValue, ''),
+                        cf.cm_case_number,
+                        cf.cm_case_title,
+                        cf.cm_case_type,
+                        cf.cm_case_status,
+                        cf.cm_case_details,
+                        cf.cm_case_incident_date,
+                        cf.cm_case_created,
+                        au.cm_full_name,
+                        cf.cm_case_modified,
+                        aum.cm_full_name,
+                        cf.cm_case_closed,
+                        cf.cm_case_disposition,
+                        cf.cm_case_priority,
+                        cf.cm_due_date,
+                        cf.cm_courtroom_name,
+                        cf.cm_next_court_date,
+                        cf.cm_responsible_organization,
+                        COALESCE(p.cm_person_title, ''),
+                        COALESCE(p.cm_given_name, ''),
+                        COALESCE(p.cm_middle_name, ''),
+                        COALESCE(p.cm_family_name, ''),
+                        COALESCE(p.cm_person_hair_color, ''),
+                        COALESCE(p.cm_person_eye_color, ''),
+                        p.cm_person_height_inches,
+                        p.cm_person_weight_pounds,
+                        p.cm_person_date_of_birth,
+                        COALESCE(p.cm_place_of_birth, ''),
+                        p.cm_person_date_married,
+                        COALESCE(addr.cm_street_address, ''),
+                        COALESCE(addr.cm_street_address_extra, ''),
+                        COALESCE(addr.cm_locality, ''),
+                        COALESCE(addr.cm_region, ''),
+                        COALESCE(addr.cm_postal_code, ''),
+                        COALESCE(addr.cm_country, ''),
+                        COALESCE(orgs.cm_organization_type, ''),
+                        COALESCE(orgs.cm_organization_value, ''),
+                        COALESCE(contacts.cm_contact_type, ''),
+                        COALESCE(contacts.cm_contact_value, ''),
+                        COALESCE(aliases.cm_person_alias_type, ''),
+                        COALESCE(aliases.cm_person_alias_value, ''),
                         CURRENT_DATE,
                         CURRENT_DATE
                     FROM
-                        CaseFile cf
-                    JOIN PersonAssociation pa
-                    JOIN pa.person p
-                    LEFT JOIN p.addresses addr
-                    LEFT JOIN p.organizations orgs
-                    LEFT JOIN p.contactMethods contacts
-                    LEFT JOIN p.personAliases aliases
-                    LEFT JOIN AcmUser au ON cf.creator = au.userId
-                    LEFT JOIN AcmUser aum ON cf.modifier = aum.userId
-                    WHERE cf.id = ?1
-                    AND cf.id = pa.parentId
-                    AND pa.parentType='CASE_FILE'
-                    AND pa.personType = "Initiator"
+                        acm_case_file cf
+                    
+                    JOIN acm_person_assoc pa ON cf.cm_case_id = pa.cm_person_assoc_parent_id
+                         AND cf.cm_object_type = pa.cm_person_assoc_parent_type
+                    
+                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id 
+                    
+                    LEFT JOIN acm_person_postal_address paddr ON p.cm_person_id = paddr.cm_person_id
+                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id
+                    
+                    LEFT JOIN acm_person_organization porgs ON p.cm_person_id = porgs.cm_person_id
+                    LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
+                    
+                    LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
+                    LEFT JOIN acm_contact_method contacts ON pcontacts.cm_contact_method_id = contacts.cm_contact_method_id
+                    
+                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
+                    
+                    LEFT JOIN acm_user au ON cf.cm_case_creator = au.cm_user_id
+                    
+                    LEFT JOIN acm_user aum ON cf.cm_case_modifier = aum.cm_user_id
+                    
+                    WHERE cf.cm_case_id = ?1
+                    
+                    AND cf.cm_case_id = pa.cm_person_assoc_parent_id
+                    AND pa.cm_person_assoc_parent_type = 'CASE_FILE'
+                    AND pa.cm_person_assoc_person_type = 'Initiator'
                 ]]>
             </value>
         </property>
@@ -132,64 +146,79 @@
     <!-- Complaint query -->
     <bean id="complaintCorrespondenceQuery" class="com.armedia.acm.correspondence.model.CorrespondenceQuery">
         <property name="type" value="COMPLAINT"/>
-        <property name="jpaQuery">
+        <property name="sqlQuery">
             <value>
                 <![CDATA[
                     SELECT
-                        cm.complaintNumber,
-                        cm.complaintTitle,
-                        cm.complaintType,
-                        cm.status,
-                        cm.details,
-                        cm.incidentDate,
-                        cm.created,
-                        au.fullName,
-                        cm.modified,
-                        aum.fullName,
-                        d.closeDate,
-                        COALESCE(d.dispositionType, ''),
-                        COALESCE(d.referExternalOrganizationName, ''),
-                        COALESCE(d.referExternalContactPersonName, ''),
-                        cm.dueDate,
-                        COALESCE(p.title, ''),
-                        COALESCE(p.givenName, ''),
-                        COALESCE(p.middleName, ''),
-                        COALESCE(p.familyName, ''),
-                        COALESCE(p.hairColor, ''),
-                        COALESCE(p.eyeColor, ''),
-                        p.heightInInches,
-                        p.weightInPounds,
-                        p.dateOfBirth,
-                        COALESCE(p.placeOfBirth, ''),
-                        p.dateMarried,
-                        COALESCE(addr.streetAddress, ''),
-                        COALESCE(addr.streetAddress2, ''),
-                        COALESCE(addr.city, ''),
-                        COALESCE(addr.state, ''),
-                        COALESCE(addr.zip, ''),
-                        COALESCE(addr.country, ''),
-                        COALESCE(orgs.organizationType, ''),
-                        COALESCE(orgs.organizationValue, ''),
-                        COALESCE(contacts.type, ''),
-                        COALESCE(contacts.value, ''),
-                        COALESCE(aliases.aliasType, ''),
-                        COALESCE(aliases.aliasValue, ''),
+                        cm.cm_complaint_number,
+                        cm.cm_complaint_title,
+                        cm.cm_complaint_type,
+                        cm.cm_complaint_status,
+                        cm.cm_complaint_details,
+                        cm.cm_complaint_incident_date,
+                        cm.cm_complaint_created,
+                        au.cm_full_name,
+                        cm.cm_complaint_modified,
+                        aum.cm_full_name,
+                        d.cm_close_date,
+                        COALESCE(d.cm_disposition_type, ''),
+                        COALESCE(d.cm_refer_ext_org_name, ''),
+                        COALESCE(d.cm_refer_ext_person_name, ''),
+                        cm.cm_due_date,
+                        COALESCE(p.cm_person_title, ''),
+                        COALESCE(p.cm_given_name, ''),
+                        COALESCE(p.cm_middle_name, ''),
+                        COALESCE(p.cm_family_name, ''),
+                        COALESCE(p.cm_person_hair_color, ''),
+                        COALESCE(p.cm_person_eye_color, ''),
+                        p.cm_person_height_inches,
+                        p.cm_person_weight_pounds,
+                        p.cm_person_date_of_birth,
+                        COALESCE(p.cm_place_of_birth, ''),
+                        p.cm_person_date_married,
+                        COALESCE(addr.cm_street_address, ''),
+                        COALESCE(addr.cm_street_address_extra, ''),
+                        COALESCE(addr.cm_locality, ''),
+                        COALESCE(addr.cm_region, ''),
+                        COALESCE(addr.cm_postal_code, ''),
+                        COALESCE(addr.cm_country, ''),
+                        COALESCE(orgs.cm_organization_type, ''),
+                        COALESCE(orgs.cm_organization_value, ''),
+                        COALESCE(contacts.cm_contact_type, ''),
+                        COALESCE(contacts.cm_contact_value, ''),
+                        COALESCE(aliases.cm_person_alias_type, ''),
+                        COALESCE(aliases.cm_person_alias_value, ''),
                         CURRENT_DATE
                     FROM
-                        Complaint cm
-                    JOIN PersonAssociation pa
-                    JOIN pa.person p
-                    LEFT JOIN p.addresses addr
-                    LEFT JOIN p.organizations orgs
-                    LEFT JOIN p.contactMethods contacts
-                    LEFT JOIN p.personAliases aliases
-                    LEFT JOIN AcmUser au ON cm.creator = au.userId
-                    LEFT JOIN AcmUser aum ON cm.modifier = aum.userId
-                    LEFT JOIN Disposition d ON cm.complaintId = d.id
-                    WHERE cm.complaintId = ?1
-                    AND cm.complaintId = pa.parentId
-                    AND pa.parentType='COMPLAINT'
-                    AND pa.personType = "Initiator"
+                        acm_complaint cm
+                    
+                    JOIN acm_person_assoc pa ON cm.cm_complaint_id = pa.cm_person_assoc_parent_id
+                         AND cm.cm_object_type = pa.cm_person_assoc_parent_type
+                    
+                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id 
+                    
+                    LEFT JOIN acm_person_postal_address paddr ON p.cm_person_id = paddr.cm_person_id
+                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id
+                    
+                    LEFT JOIN acm_person_organization porgs ON p.cm_person_id = porgs.cm_person_id
+                    LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
+                    
+                    LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
+                    LEFT JOIN acm_contact_method contacts ON pcontacts.cm_contact_method_id = contacts.cm_contact_method_id
+                    
+                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
+                    
+                    LEFT JOIN acm_user au ON cm.cm_complaint_creator = au.cm_user_id
+                    
+                    LEFT JOIN acm_user aum ON cm.cm_complaint_modifier = aum.cm_user_id
+                    
+                    LEFT JOIN acm_disposition d ON cm.cm_complaint_id = d.cm_disposition_id
+                    
+                    WHERE cm.cm_complaint_id = ?1
+                    
+                    AND cm.cm_complaint_id = pa.cm_person_assoc_parent_id
+                    AND pa.cm_person_assoc_parent_type = 'COMPLAINT'
+                    AND pa.cm_person_assoc_person_type = 'Initiator'
                 ]]>
             </value>
         </property>
