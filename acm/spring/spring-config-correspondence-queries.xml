@@ -58,8 +58,9 @@
                         COALESCE(addr.cm_country, ''),
                         COALESCE(orgs.cm_organization_type, ''),
                         COALESCE(orgs.cm_organization_value, ''),
-                        COALESCE(contacts.cm_contact_type, ''),
-                        COALESCE(contacts.cm_contact_value, ''),
+                        COALESCE(MAX(contactsPhone.cm_contact_value), ''),
+                        COALESCE(MAX(contactsFax.cm_contact_value), ''),
+                        COALESCE(MAX(contactsEmail.cm_contact_value), ''),
                         COALESCE(aliases.cm_person_alias_type, ''),
                         COALESCE(aliases.cm_person_alias_value, ''),
                         CURRENT_DATE,
@@ -79,7 +80,12 @@
                     LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
                     
                     LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
-                    LEFT JOIN acm_contact_method contacts ON pcontacts.cm_contact_method_id = contacts.cm_contact_method_id
+                    LEFT JOIN acm_contact_method contactsPhone ON pcontacts.cm_contact_method_id = contactsPhone.cm_contact_method_id
+                              AND contactsPhone.cm_contact_type = 'phone'
+                    LEFT JOIN acm_contact_method contactsFax ON pcontacts.cm_contact_method_id = contactsFax.cm_contact_method_id
+                              AND contactsFax.cm_contact_type = 'fax'
+                    LEFT JOIN acm_contact_method contactsEmail ON pcontacts.cm_contact_method_id = contactsEmail.cm_contact_method_id
+                              AND contactsEmail.cm_contact_type = 'email'
                     
                     LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
                     
@@ -92,6 +98,7 @@
                     AND cf.cm_case_id = pa.cm_person_assoc_parent_id
                     AND pa.cm_person_assoc_parent_type = 'CASE_FILE'
                     AND pa.cm_person_assoc_person_type = 'Initiator'
+                    GROUP BY cf.cm_case_number
                 ]]>
             </value>
         </property>
@@ -133,8 +140,9 @@
                 <value>initiatorCountry</value>
                 <value>initiatorOrganizationType</value>
                 <value>initiatorOrganizationValue</value>
-                <value>initiatorContactType</value>
-                <value>initiatorContactValue</value>
+                <value>initiatorContactPhone</value>
+                <value>initiatorContactFax</value>
+                <value>initiatorContactEmail</value>
                 <value>initiatorAliasType</value>
                 <value>initiatorAliasValue</value>
                 <value>currentDate</value>
@@ -184,8 +192,9 @@
                         COALESCE(addr.cm_country, ''),
                         COALESCE(orgs.cm_organization_type, ''),
                         COALESCE(orgs.cm_organization_value, ''),
-                        COALESCE(contacts.cm_contact_type, ''),
-                        COALESCE(contacts.cm_contact_value, ''),
+                        COALESCE(MAX(contactsPhone.cm_contact_value), ''),
+                        COALESCE(MAX(contactsFax.cm_contact_value), ''),
+                        COALESCE(MAX(contactsEmail.cm_contact_value), ''),
                         COALESCE(aliases.cm_person_alias_type, ''),
                         COALESCE(aliases.cm_person_alias_value, ''),
                         CURRENT_DATE
@@ -204,7 +213,12 @@
                     LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
                     
                     LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
-                    LEFT JOIN acm_contact_method contacts ON pcontacts.cm_contact_method_id = contacts.cm_contact_method_id
+                    LEFT JOIN acm_contact_method contactsPhone ON pcontacts.cm_contact_method_id = contactsPhone.cm_contact_method_id
+                              AND contactsPhone.cm_contact_type = 'phone'
+                    LEFT JOIN acm_contact_method contactsFax ON pcontacts.cm_contact_method_id = contactsFax.cm_contact_method_id
+                              AND contactsFax.cm_contact_type = 'fax'
+                    LEFT JOIN acm_contact_method contactsEmail ON pcontacts.cm_contact_method_id = contactsEmail.cm_contact_method_id
+                              AND contactsEmail.cm_contact_type = 'email'
                     
                     LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
                     
@@ -219,6 +233,7 @@
                     AND cm.cm_complaint_id = pa.cm_person_assoc_parent_id
                     AND pa.cm_person_assoc_parent_type = 'COMPLAINT'
                     AND pa.cm_person_assoc_person_type = 'Initiator'
+                    GROUP BY cm.cm_complaint_number
                 ]]>
             </value>
         </property>
@@ -258,8 +273,9 @@
                 <value>initiatorCountry</value>
                 <value>initiatorOrganizationType</value>
                 <value>initiatorOrganizationValue</value>
-                <value>initiatorContactType</value>
-                <value>initiatorContactValue</value>
+                <value>initiatorContactPhone</value>
+                <value>initiatorContactFax</value>
+                <value>initiatorContactEmail</value>
                 <value>initiatorAliasType</value>
                 <value>initiatorAliasValue</value>
                 <value>currentDate</value>
