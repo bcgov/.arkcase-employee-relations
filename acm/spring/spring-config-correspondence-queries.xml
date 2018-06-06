@@ -66,38 +66,26 @@
                         CURRENT_DATE,
                         CURRENT_DATE
                     FROM
-                        acm_case_file cf
-                    
+                        acm_case_file cf                    
                     JOIN acm_person_assoc pa ON cf.cm_case_id = pa.cm_person_assoc_parent_id
-                         AND cf.cm_object_type = pa.cm_person_assoc_parent_type
-                    
-                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id 
-                    
+                         AND cf.cm_object_type = pa.cm_person_assoc_parent_type                    
+                         AND pa.cm_person_assoc_person_type = 'Initiator'             
+                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id                     
                     LEFT JOIN acm_person_postal_address paddr ON p.cm_person_id = paddr.cm_person_id
-                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id
-                    
+                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id                    
                     LEFT JOIN acm_person_organization porgs ON p.cm_person_id = porgs.cm_person_id
-                    LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
-                    
+                    LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id                    
                     LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
                     LEFT JOIN acm_contact_method contactsPhone ON pcontacts.cm_contact_method_id = contactsPhone.cm_contact_method_id
                               AND contactsPhone.cm_contact_type = 'phone'
                     LEFT JOIN acm_contact_method contactsFax ON pcontacts.cm_contact_method_id = contactsFax.cm_contact_method_id
                               AND contactsFax.cm_contact_type = 'fax'
                     LEFT JOIN acm_contact_method contactsEmail ON pcontacts.cm_contact_method_id = contactsEmail.cm_contact_method_id
-                              AND contactsEmail.cm_contact_type = 'email'
-                    
-                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
-                    
-                    LEFT JOIN acm_user au ON cf.cm_case_creator = au.cm_user_id
-                    
-                    LEFT JOIN acm_user aum ON cf.cm_case_modifier = aum.cm_user_id
-                    
+                              AND contactsEmail.cm_contact_type = 'email'                    
+                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id                    
+                    LEFT JOIN acm_user au ON cf.cm_case_creator = au.cm_user_id                    
+                    LEFT JOIN acm_user aum ON cf.cm_case_modifier = aum.cm_user_id                    
                     WHERE cf.cm_case_id = ?1
-                    
-                    AND cf.cm_case_id = pa.cm_person_assoc_parent_id
-                    AND pa.cm_person_assoc_parent_type = 'CASE_FILE'
-                    AND pa.cm_person_assoc_person_type = 'Initiator'
                     GROUP BY cf.cm_case_number
                 ]]>
             </value>
@@ -157,7 +145,7 @@
         <property name="sqlQuery">
             <value>
                 <![CDATA[
-                    SELECT
+                   SELECT
                         cm.cm_complaint_number,
                         cm.cm_complaint_title,
                         cm.cm_complaint_type,
@@ -199,40 +187,27 @@
                         COALESCE(aliases.cm_person_alias_value, ''),
                         CURRENT_DATE
                     FROM
-                        acm_complaint cm
-                    
+                        acm_complaint cm                    
                     JOIN acm_person_assoc pa ON cm.cm_complaint_id = pa.cm_person_assoc_parent_id
-                         AND cm.cm_object_type = pa.cm_person_assoc_parent_type
-                    
-                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id 
-                    
+                         AND cm.cm_object_type = pa.cm_person_assoc_parent_type                            
+                         AND pa.cm_person_assoc_person_type = 'Initiator'                 
+                    JOIN acm_person p ON pa.cm_person_assoc_person_id = p.cm_person_id                     
                     LEFT JOIN acm_person_postal_address paddr ON p.cm_person_id = paddr.cm_person_id
-                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id
-                    
+                    LEFT JOIN acm_postal_address addr ON paddr.cm_address_id = addr.cm_address_id                    
                     LEFT JOIN acm_person_organization porgs ON p.cm_person_id = porgs.cm_person_id
                     LEFT JOIN acm_organization orgs ON porgs.cm_organization_id = orgs.cm_organization_id
-                    
                     LEFT JOIN acm_person_contact_method pcontacts ON p.cm_person_id = pcontacts.cm_person_id 
                     LEFT JOIN acm_contact_method contactsPhone ON pcontacts.cm_contact_method_id = contactsPhone.cm_contact_method_id
                               AND contactsPhone.cm_contact_type = 'phone'
                     LEFT JOIN acm_contact_method contactsFax ON pcontacts.cm_contact_method_id = contactsFax.cm_contact_method_id
                               AND contactsFax.cm_contact_type = 'fax'
                     LEFT JOIN acm_contact_method contactsEmail ON pcontacts.cm_contact_method_id = contactsEmail.cm_contact_method_id
-                              AND contactsEmail.cm_contact_type = 'email'
-                    
-                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id
-                    
-                    LEFT JOIN acm_user au ON cm.cm_complaint_creator = au.cm_user_id
-                    
-                    LEFT JOIN acm_user aum ON cm.cm_complaint_modifier = aum.cm_user_id
-                    
-                    LEFT JOIN acm_disposition d ON cm.cm_complaint_id = d.cm_disposition_id
-                    
-                    WHERE cm.cm_complaint_id = ?1
-                    
-                    AND cm.cm_complaint_id = pa.cm_person_assoc_parent_id
-                    AND pa.cm_person_assoc_parent_type = 'COMPLAINT'
-                    AND pa.cm_person_assoc_person_type = 'Initiator'
+                              AND contactsEmail.cm_contact_type = 'email'                    
+                    LEFT JOIN acm_person_alias aliases ON p.cm_person_id = aliases.cm_person_id                    
+                    LEFT JOIN acm_user au ON cm.cm_complaint_creator = au.cm_user_id                    
+                    LEFT JOIN acm_user aum ON cm.cm_complaint_modifier = aum.cm_user_id                    
+                    LEFT JOIN acm_disposition d ON cm.cm_complaint_id = d.cm_disposition_id                    
+                    WHERE cm.cm_complaint_id = ?1        
                     GROUP BY cm.cm_complaint_number
                 ]]>
             </value>
