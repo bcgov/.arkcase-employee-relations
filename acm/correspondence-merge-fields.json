@@ -252,16 +252,23 @@
         "fieldVersion": "1.0"
     },
     {
-        "fieldId": "initiatorContactType",
-        "fieldValue": "initiatorContactType",
-        "fieldDescription": "initiator Contact Type Place Holder",
+        "fieldId": "initiatorContactPhone",
+        "fieldValue": "initiatorContactPhone",
+        "fieldDescription": "initiator Contact Phone Place Holder",
         "fieldType": "CASE_FILE",
         "fieldVersion": "1.0"
     },
     {
-        "fieldId": "initiatorContactValue",
-        "fieldValue": "initiatorContactValue",
-        "fieldDescription": "initiator Contact Value Place Holder",
+        "fieldId": "initiatorContactFax",
+        "fieldValue": "initiatorContactFax",
+        "fieldDescription": "initiator Contact Fax Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactEmail",
+        "fieldValue": "initiatorContactEmail",
+        "fieldDescription": "initiator Contact Email Place Holder",
         "fieldType": "CASE_FILE",
         "fieldVersion": "1.0"
     },
@@ -532,16 +539,23 @@
         "fieldVersion": "1.0"
     },
     {
-        "fieldId": "initiatorContactType",
-        "fieldValue": "initiatorContactType",
-        "fieldDescription": "initiator Contact Type Place Holder",
+        "fieldId": "initiatorContactPhone",
+        "fieldValue": "initiatorContactPhone",
+        "fieldDescription": "initiator Contact Phone Place Holder",
         "fieldType": "COMPLAINT",
         "fieldVersion": "1.0"
     },
     {
-        "fieldId": "initiatorContactValue",
-        "fieldValue": "initiatorContactValue",
-        "fieldDescription": "initiator Contact Value Place Holder",
+        "fieldId": "initiatorContactFax",
+        "fieldValue": "initiatorContactFax",
+        "fieldDescription": "initiator Contact Fax Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactEmail",
+        "fieldValue": "initiatorContactEmail",
+        "fieldDescription": "initiator Contact Email Place Holder",
         "fieldType": "COMPLAINT",
         "fieldVersion": "1.0"
     },
