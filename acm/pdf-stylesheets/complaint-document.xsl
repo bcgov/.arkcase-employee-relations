@@ -38,47 +38,47 @@
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
                         Initiator
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/initiator"/>
 						</fo:block>
                     </fo:block>
 					<fo:block font-size="10pt" space-after="0.15in">
                         Complaint Title
-						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/complaintTitle"/>
 						</fo:block>
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
                         Incident Category 
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/complaintType"/>
 						</fo:block>
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
                         Complaint Number
-						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/complaintNumber"/></fo:block>
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
                         Priority
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/priority"/>
 						</fo:block>
                     </fo:block>
 					<fo:block font-size="10pt" space-after="0.15in">
                         Complaint Tag
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/complaintTag"/></fo:block>
                     </fo:block>
 					<fo:block font-size="10pt" space-after="0.15in">
                         Frequency
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="complaint/frequency"/>
 						</fo:block>
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
                         Complaint Description
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt">
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" padding="1mm">
 							<xsl:value-of select="complaint/complaintDescription"/></fo:block>
                     </fo:block>
 					<fo:block font-size="11pt" space-after="0.15in">
