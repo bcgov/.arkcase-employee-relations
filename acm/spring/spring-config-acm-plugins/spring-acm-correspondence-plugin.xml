@@ -26,6 +26,11 @@
                     <property name="url" value="/api/{version}/service/correspondence"/>
                     <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
                 </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/correspondence/multitemplate"/>
+                    <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
