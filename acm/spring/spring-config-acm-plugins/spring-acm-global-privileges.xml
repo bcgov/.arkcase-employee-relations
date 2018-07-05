@@ -1125,4 +1125,29 @@
             </list>
         </property>
     </bean>
+    
+    <!--Billing Service-->
+    <bean id="acmAddBillingItemPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-add-billing-item"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                <value>ROLE_CALLCENTER</value>
+                <value>ROLE_ANALYST</value>
+                <value>ROLE_ADMINISTRATOR</value>
+                <value>ROLE_INVESTIGATOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingItemsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-items"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
+                <value>ROLE_CALLCENTER</value>
+                <value>ROLE_ADMINISTRATOR</value>
+                <value>ROLE_INVESTIGATOR</value>
+            </list>
+        </property>
+    </bean>
 </beans>

@@ -1251,4 +1251,30 @@
             </list>
         </property>
     </bean>
+    
+    <!--Billing Service-->
+    <bean id="acmAddBillingItemPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-add-billing-item"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmAddBillingItemPrivilege??>
+                <#list acmAddBillingItemPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingItemsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-items"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmListBillingItemsPrivilege??>
+                <#list acmListBillingItemsPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>
