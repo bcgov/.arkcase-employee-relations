@@ -5,9 +5,29 @@
         "object_sub_type_s":"objectSubType",
         "queue_name_s":"queue.name",
         "name":"name",
-        "status_lcs":"status"
+        "status_lcs":"status",
+        "public_doc_b":"public_doc_b",
+        "protected_object_b":"protected_object_b"
     },
     "accessControlRuleList":[  
+        {
+            "actionName":"getObject",
+            "objectType": "COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION|FILE|FOLDER",
+            "objectProperties":{
+                "protected_object_b":false
+            },
+            "userRolesAny": [],
+            "userRolesAll": []
+        },
+        {
+            "actionName":"getObject",
+            "objectType": "COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION|FILE|FOLDER",
+            "objectProperties":{
+                "public_doc_b":true
+            },
+            "userRolesAny": [],
+            "userRolesAll": []
+        },
         {  
             "actionName":"editObject",
             "objectType":"CASE_FILE",
