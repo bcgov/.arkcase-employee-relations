@@ -1,35 +1,52 @@
-{
-    "propertiesMapping": {
-        "object_id_s": "objectId",
-        "object_type_s": "objectType",
-        "object_sub_type_s": "objectSubType",
-        "queue_name_s": "queue.name",
-        "name": "name",
-        "status_lcs": "status"
+{  
+    "propertiesMapping":{  
+        "object_id_s":"objectId",
+        "object_type_s":"objectType",
+        "object_sub_type_s":"objectSubType",
+        "queue_name_s":"queue.name",
+        "name":"name",
+        "status_lcs":"status",
+        "public_doc_b":"public_doc_b",
+        "protected_object_b":"protected_object_b"
     },
-    "accessControlRuleList": [
+    "accessControlRuleList":[  
         {
-            "actionName": "editObject",
-            "objectType": "CASE_FILE",
-            "objectProperties": {
-                "status": [
+            "actionName":"getObject",
+            "objectType": "COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION|FILE|FOLDER",
+            "objectProperties":{
+                "protected_object_b":false
+            },
+            "userRolesAny": [],
+            "userRolesAll": []
+        },
+        {
+            "actionName":"getObject",
+            "objectType": "COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION|FILE|FOLDER",
+            "objectProperties":{
+                "public_doc_b":true
+            },
+            "userRolesAny": [],
+            "userRolesAll": []
+        },
+        {  
+            "actionName":"editObject",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT",
                     "ACTIVE",
                     "INACTIVE"
                 ]
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -38,26 +55,23 @@
                 "collaborator"
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "COMPLAINT",
-            "objectProperties": {
-                "status": [
+        {  
+            "actionName":"editObject",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT"
                 ]
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -66,12 +80,13 @@
                 "collaborator"
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "DOC_REPO",
-            "objectProperties": {
+        {  
+            "actionName":"editObject",
+            "objectType":"DOC_REPO",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -79,209 +94,221 @@
                 "approver",
                 "collaborator"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "FILE|FOLDER",
-            "objectProperties": {
+        {  
+            "actionName":"editObject",
+            "objectType":"FILE|FOLDER",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "group-write",
                 "write"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "PERSON|ORGANIZATION",
-            "objectProperties": {
+        {  
+            "actionName":"editObject",
+            "objectType":"PERSON|ORGANIZATION",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "owner",
                 "owning group",
                 "collaborator"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "COSTSHEET|TIMESHEET",
-            "objectProperties": {
+        {  
+            "actionName":"editObject",
+            "objectType":"COSTSHEET|TIMESHEET",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "editObject",
-            "objectType": "TASK",
-            "objectProperties": {
-                "completed": false
+        {  
+            "actionName":"editObject",
+            "objectType":"TASK",
+            "objectProperties":{  
+                "completed":false
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "getObject",
-            "objectType": "COSTSHEET|TIMESHEET|TASK|CASE_FILE|COMPLAINT",
-            "objectProperties": {
+        {  
+            "actionName":"getObject",
+            "objectType":"COSTSHEET|TIMESHEET|TASK|CASE_FILE|COMPLAINT",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONSUMER",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-		{
-            "actionName": "getObject",
-            "objectType": "PERSON",
-            "objectProperties": {
+        {  
+            "actionName":"getObject",
+            "objectType":"PERSON",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "owner",
                 "owning group",
                 "collaborator",
                 "reader"
             ]
         },
-		{
-            "actionName": "getObject",
-            "objectType": "ORGANIZATION",
-            "objectProperties": {
+        {  
+            "actionName":"getObject",
+            "objectType":"ORGANIZATION",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "owner",
                 "owning group",
                 "collaborator",
                 "reader"
             ]
         },
-        {
-            "actionName": "getObject",
-            "objectType": "DOC_REPO",
-            "objectProperties": {
+        {  
+            "actionName":"getObject",
+            "objectType":"DOC_REPO",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "owner",
                 "owning group",
                 "collaborator",
                 "reader"
             ]
         },
-        {
-            "actionName": "getObject",
-            "objectType": "FILE|FOLDER",
-            "objectProperties": {
+        {  
+            "actionName":"getObject",
+            "objectType":"FILE|FOLDER",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "read",
                 "group-write",
                 "group-read",
                 "write"
             ]
         },
-        {
-            "actionName": "insertObject",
-            "objectType": "COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION",
-            "objectProperties": {
+        {  
+            "actionName":"insertObject",
+            "objectType":"COSTSHEET|TIMESHEET|CASE_FILE|COMPLAINT|TASK|DOC_REPO|PERSON|ORGANIZATION",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "insertObject",
-            "objectType": "FILE|FOLDER",
-            "objectProperties": {
+        {  
+            "actionName":"insertObject",
+            "objectType":"FILE|FOLDER",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "group-write",
                 "write"
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "CASE_FILE",
-            "objectProperties": {
-                "status": [
+        {  
+            "actionName":"deleteObject",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT",
                     "ACTIVE",
                     "INACTIVE"
                 ]
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -290,26 +317,23 @@
                 "collaborator"
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "COMPLAINT",
-            "objectProperties": {
-                "status": [
+        {  
+            "actionName":"deleteObject",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT"
                 ]
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ],
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -318,12 +342,13 @@
                 "collaborator"
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "DOC_REPO",
-            "objectProperties": {
+        {  
+            "actionName":"deleteObject",
+            "objectType":"DOC_REPO",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -331,137 +356,146 @@
                 "approver",
                 "collaborator"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "FILE|FOLDER",
-            "objectProperties": {
+        {  
+            "actionName":"deleteObject",
+            "objectType":"FILE|FOLDER",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "group-write",
                 "write"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "PERSON|ORGANIZATION",
-            "objectProperties": {
+        {  
+            "actionName":"deleteObject",
+            "objectType":"PERSON|ORGANIZATION",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "owner",
                 "owning group",
                 "collaborator"
             ],
-            "userRolesAny": [
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "COSTSHEET|TIMESHEET",
-            "objectProperties": {
+        {  
+            "actionName":"deleteObject",
+            "objectType":"COSTSHEET|TIMESHEET",
+            "objectProperties":{  
+
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "deleteObject",
-            "objectType": "TASK",
-            "objectProperties": {
-                "completed": false
+        {  
+            "actionName":"deleteObject",
+            "objectType":"TASK",
+            "objectProperties":{  
+                "completed":false
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": [
+            "userRolesAll":[  
+
             ]
         },
-        {
-            "actionName": "editCaseOwningGroup",
-            "objectType": "CASE_FILE",
-            "objectProperties": {},
-            "userIsParticipantTypeAny": [
+        {  
+            "actionName":"editCaseOwningGroup",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "reinvestigateCase",
-            "objectType": "CASE_FILE",
-            "objectProperties": {
-                "status": "CLOSED"
+        {  
+            "actionName":"reinvestigateCase",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+                "status":"CLOSED"
             },
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "Role_Ronda",
-                "Evidence Tech",
-                "ROLE_TECHNICIAN"
-            ],
-            "userRolesAll": []
-        },
-        {
-            "actionName": "addComment",
-            "objectType": "FILE",
-            "objectProperties": {},
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
-            ],
-            "userRolesAll": []
-        },
-        {
-            "actionName": "cancelLock",
-            "objectType": "FILE",
-            "objectProperties": {},
-            "userRolesAny": [
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
                 "ROLE_ADMINISTRATOR"
             ],
-            "userRolesAll": []
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editAttachments",
-            "objectType": "TASK",
-            "objectProperties": {
-                "status": "ACTIVE"
+        {  
+            "actionName":"addComment",
+            "objectType":"FILE",
+            "objectProperties":{  
+
             },
-            "userIsParticipantTypeAny": [
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
+            ],
+            "userRolesAll":[  
+
+            ]
+        },
+        {  
+            "actionName":"cancelLock",
+            "objectType":"FILE",
+            "objectProperties":{  
+
+            },
+            "userRolesAny":[  
+                "ROLE_ADMINISTRATOR"
+            ],
+            "userRolesAll":[  
+
+            ]
+        },
+        {  
+            "actionName":"editAttachments",
+            "objectType":"TASK",
+            "objectProperties":{  
+                "status":"ACTIVE"
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -469,47 +503,57 @@
                 "approver",
                 "collaborator"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
-        },
-        {
-            "actionName": "addTag",
-            "objectType": "FILE",
-            "objectProperties": {},
-            "userRolesAny": [
-                "ROLE_INVESTIGATOR",
-                "ROLE_INVESTIGATOR_SUPERVISOR",
-                "ROLE_ANALYST",
-                "ROLE_CALLCENTER",
-                "ROLE_ADMINISTRATOR",
-                "ROLE_PROSECUTOR",
-                "ROLE_TECHNICIAN"
+            "userRolesAny":[  
+
             ],
-            "userRolesAll": []
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editComplaintOwningGroup",
-            "objectType": "COMPLAINT",
-            "objectProperties": {},
-            "userIsParticipantTypeAny": [
+        {  
+            "actionName":"addTag",
+            "objectType":"FILE",
+            "objectProperties":{  
+
+            },
+            "userRolesAny":[  
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
+            ],
+            "userRolesAll":[  
+
+            ]
+        },
+        {  
+            "actionName":"editComplaintOwningGroup",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editAttachments",
-            "objectType": "COMPLAINT",
-            "objectProperties": {
-                "status": [
+        {  
+            "actionName":"editAttachments",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT",
                     "ACTIVE",
                     "INACTIVE"
                 ]
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -517,54 +561,76 @@
                 "approver",
                 "collaborator"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "restrictCase",
-            "objectType": "CASE_FILE",
-            "objectProperties": {},
-            "userIsParticipantTypeAny": [
+        {  
+            "actionName":"restrictCase",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "restrictComplaint",
-            "objectType": "COMPLAINT",
-            "objectProperties": {},
-            "userIsParticipantTypeAny": [
+        {  
+            "actionName":"restrictComplaint",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "restrictDocumentRepository",
-            "objectType": "DOC_REPO",
-            "objectProperties": {},
-            "userIsParticipantTypeAny": [
+        {  
+            "actionName":"restrictDocumentRepository",
+            "objectType":"DOC_REPO",
+            "objectProperties":{  
+
+            },
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editAttachments",
-            "objectType": "DOC_REPO",
-            "objectProperties": {
-                "status": [
+        {  
+            "actionName":"editAttachments",
+            "objectType":"DOC_REPO",
+            "objectProperties":{  
+                "status":[  
                     "DRAFT"
                 ]
             },
-            "userIsParticipantTypeAny": [
+            "userIsParticipantTypeAny":[  
                 "assignee",
                 "supervisor",
                 "owning group",
@@ -572,26 +638,38 @@
                 "approver",
                 "collaborator"
             ],
-            "userRolesAny": [],
-            "userRolesAll": []
+            "userRolesAny":[  
+
+            ],
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editCaseStatus",
-            "objectType": "CASE_FILE",
-            "objectProperties": {},
-            "userRolesAny": [
+        {  
+            "actionName":"editCaseStatus",
+            "objectType":"CASE_FILE",
+            "objectProperties":{  
+
+            },
+            "userRolesAny":[  
                 "NONE"
             ],
-            "userRolesAll": []
+            "userRolesAll":[  
+
+            ]
         },
-        {
-            "actionName": "editComplaintStatus",
-            "objectType": "COMPLAINT",
-            "objectProperties": {},
-            "userRolesAny": [
+        {  
+            "actionName":"editComplaintStatus",
+            "objectType":"COMPLAINT",
+            "objectProperties":{  
+
+            },
+            "userRolesAny":[  
                 "NONE"
             ],
-            "userRolesAll": []
+            "userRolesAll":[  
+
+            ]
         }
     ]
 }
