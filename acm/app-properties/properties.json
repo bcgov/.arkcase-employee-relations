@@ -1,4 +1,5 @@
 {
-    "displayUserName": "userName",
-    "historyDays": 31
+	"formsType":"frevvo",
+	"displayUserName":"userName",
+	"historyDays":31
 }
