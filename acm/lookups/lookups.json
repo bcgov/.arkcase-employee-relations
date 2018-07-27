@@ -2393,82 +2393,82 @@
                 {
                     "value": "X1",
                     "key": "X1",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X2",
                     "key": "X2",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X3",
                     "key": "X3",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X4",
                     "key": "X4",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X5.1",
                     "key": "X5.1",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X5.2",
                     "key": "X5.2",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X5.3",
                     "key": "X5.3",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X6",
                     "key": "X6",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7a",
                     "key": "X7a",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7b",
                     "key": "X7b",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7c",
                     "key": "X7c",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7d",
                     "key": "X7d",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7e",
                     "key": "X7e",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X7f",
                     "key": "X7f",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X8",
                     "key": "X8",
-                    "readonly": true
+                    "readonly": false
                 },
                 {
                     "value": "X9",
                     "key": "X9",
-                    "readonly": true
+                    "readonly": false
                 }
             ],
             "readonly":true
