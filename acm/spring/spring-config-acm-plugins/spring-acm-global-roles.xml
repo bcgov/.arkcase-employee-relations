@@ -4,13 +4,11 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
 
     <util:list id="acmRolesList" value-type="java.lang.String">
-        <value>ROLE_INVESTIGATOR</value>
-        <value>ROLE_INVESTIGATOR_SUPERVISOR</value>
-        <value>ROLE_ANALYST</value>
-        <value>ROLE_CALLCENTER</value>
         <value>ROLE_ADMINISTRATOR</value>
-        <value>ROLE_CATEGORY_ADMINISTRATOR</value>
-        <value>ROLE_CALENDAR_ADMINISTRATOR</value>
-        <value>ROLE_EMAIL_ADMINISTRATOR</value>
+        <value>ROLE_SUPERVISOR</value>
+        <value>ROLE_CONTRIBUTOR</value>
+        <value>ROLE_CONSUMER</value>
+        <value>ROLE_EXTERNAL</value>
+        <value>ROLE_ENTITY_ADMINISTRATOR</value>
     </util:list>
 </beans>
