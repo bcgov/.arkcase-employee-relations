@@ -1251,4 +1251,54 @@
             </list>
         </property>
     </bean>
+    
+    <!--Billing Service-->
+    <bean id="acmCreateBillingItemPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-create-billing-item"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCreateBillingItemPrivilege??>
+                <#list acmCreateBillingItemPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingItemsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-items"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmListBillingItemsPrivilege??>
+                <#list acmListBillingItemsPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCreateBillingInvoicePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-create-billing-invoice"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmCreateBillingInvoicePrivilege??>
+                <#list acmCreateBillingInvoicePrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingInvoicesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-invoices"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmListBillingInvoicesPrivilege??>
+                <#list acmListBillingInvoicesPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>
