@@ -1115,4 +1115,54 @@
             </list>
         </property>
     </bean>
+    
+    <!--Billing Service-->
+    <bean id="acmCreateBillingItemPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-create-billing-item"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_CONSUMER</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ENTITY_ADMINISTRATOR</value>
+                    <value>ROLE_SUPERVISOR</value>
+                    <value>ROLE_CONTRIBUTOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingItemsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-items"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_CONSUMER</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ENTITY_ADMINISTRATOR</value>
+                    <value>ROLE_SUPERVISOR</value>
+                    <value>ROLE_CONTRIBUTOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmCreateBillingInvoicePrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-create-billing-invoice"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_CONSUMER</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ENTITY_ADMINISTRATOR</value>
+                    <value>ROLE_SUPERVISOR</value>
+                    <value>ROLE_CONTRIBUTOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmListBillingInvoicesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-list-billing-invoices"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                    <value>ROLE_CONSUMER</value>
+                    <value>ROLE_ADMINISTRATOR</value>
+                    <value>ROLE_ENTITY_ADMINISTRATOR</value>
+                    <value>ROLE_SUPERVISOR</value>
+                    <value>ROLE_CONTRIBUTOR</value>
+            </list>
+        </property>
+    </bean>
 </beans>
