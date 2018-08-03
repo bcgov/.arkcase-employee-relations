@@ -126,17 +126,12 @@
 								<fo:table-row line-height="12pt" font-size="10pt">
 									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalNameOfAgency"/>
+											<xsl:value-of select="closeComplaint/existingCaseNumber"/>
 										</fo:block>
 									</fo:table-cell>
 									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalDate"/>
-										</fo:block>
-									</fo:table-cell>
-									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalContactName"/>
+											<xsl:value-of select="closeComplaint/existingCaseSearchBtn"/>
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
@@ -158,23 +153,43 @@
 								<fo:table-row line-height="12pt" font-size="10pt">
 									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalNameOfAgency"/>
+											<xsl:value-of select="closeComplaint/existingCaseTitle"/>
 										</fo:block>
 									</fo:table-cell>
 									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalDate"/>
+											<xsl:value-of select="closeComplaint/existingCaseCreated"/>
 										</fo:block>
 									</fo:table-cell>
 									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block text-align="center">
-											<xsl:value-of select="closeComplaint/referExternalContactName"/>
+											<xsl:value-of select="closeComplaint/existingCasePriority"/>
 										</fo:block>
 									</fo:table-cell>
 								</fo:table-row>
 						    </fo:table-body>
 						</fo:table>
 					</fo:block>
+					<fo:block font-size="11pt" space-after="0.15in">
+						  <fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
+							  <fo:table-body font-weight="normal" font-size="12pt">
+								  <fo:table-row line-height="12pt">
+									   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+			                                <fo:block text-align="center">Select Approver</fo:block>
+		                               </fo:table-cell>
+								   </fo:table-row>
+								  <xsl:for-each select="closeComplaint/participants">
+									  <xsl:for-each select="participant">
+										   <fo:table-row line-height="12pt" font-size="10pt">
+											   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+					                               <fo:block text-align="center"><xsl:value-of select="participantName"/></fo:block>
+				                               </fo:table-cell>
+										   </fo:table-row>
+									   </xsl:for-each>
+							   </xsl:for-each>
+						   </fo:table-body>
+					      </fo:table>
+					   </fo:block>
                 </fo:flow>
             </fo:page-sequence>
 
