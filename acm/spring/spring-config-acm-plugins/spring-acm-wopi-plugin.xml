@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+    <bean id="wopiIntegrationPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="WOPI Integration"/>
+        <property name="privileges">
+            <list>
+                <ref bean="filePrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="wopiGetFileInfo" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                 <bean id="wopiGetFileContents" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/contents"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                 <bean id="wopiPutFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/contents"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiLockFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/lock"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiGetLockFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/lock"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiRefreshLockFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiUnlockFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiRenameFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}/rename"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiDeleteFile" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/files/{id}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiGetResourceLocations" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/resources"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="wopiGetUserInfo" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/users"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="wopiGetSessionInfo" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/wopi/users/resource/{file_id}"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="wopiGetUI" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/plugin/office/{fileId}"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+                <bean id="wopiGetUI" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/plugin/office/testapp/{fileId}"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>
