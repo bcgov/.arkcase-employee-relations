@@ -97,13 +97,13 @@
 						  <fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
 							  <fo:table-column column-width="40%"/>
 							  <fo:table-column column-width="60%"/>
-							  <fo:table-body font-weight="normal" font-size="12pt">
+							  <fo:table-body font-weight="normal" font-size="10pt">
 								  <fo:table-row line-height="12pt">
 									   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-			                                <fo:block text-align="center">Person Type</fo:block>
+			                                <fo:block font-weight="bold" text-align="center">Person Type</fo:block>
 		                               </fo:table-cell>
 									   <fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-		                               		<fo:block text-align="center">Person</fo:block>
+		                               		<fo:block font-weight="bold" text-align="center">Person</fo:block>
 			                            </fo:table-cell>
 								   </fo:table-row>
 								  <xsl:for-each select="complaint/people">
@@ -125,13 +125,15 @@
 					    <fo:block font-size="11pt" space-after="0.15in">
 							Participants
 						  <fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
-							  <fo:table-body font-weight="normal" font-size="12pt">
+							  <fo:table-column column-width="40%"/>
+							  <fo:table-column column-width="60%"/>
+							  <fo:table-body font-weight="normal" font-size="10pt">
 								  <fo:table-row line-height="12pt">
 									   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-			                                <fo:block text-align="center">Participant Type</fo:block>
+			                                <fo:block font-weight="bold" text-align="center">Participant Type</fo:block>
 		                               </fo:table-cell>
 									   <fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-		                               		<fo:block text-align="center">Participant</fo:block>
+		                               		<fo:block font-weight="bold" text-align="center">Participant</fo:block>
 			                            </fo:table-cell>
 								   </fo:table-row>
 								  <xsl:for-each select="complaint/participants">
