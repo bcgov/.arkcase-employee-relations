@@ -29,69 +29,30 @@
 
                 <!-- output data goes here -->
                 <fo:flow flow-name="xsl-region-body" font-family="'Lucida Grande',Tahoma,Arial,sans-serif">
-					<xsl:apply-templates select="complaint"/>
-                    <fo:block font-size="16pt" text-align="center" font-weight="bold" space-after="0.25in">
-                        Incident Information
-                    </fo:block>
-                    <fo:block font-size="13pt" text-align="center" space-after="0.75in">
-                        <xsl:value-of select="complaint/incidentDate"/>
+					<xsl:apply-templates select="casefile"/>
+					<fo:block font-size="10pt" space-after="0.15in">
+                        Case Title
+						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
+							<xsl:value-of select="casefile/caseTitle"/>
+						</fo:block>
                     </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in">
+                        Case Type
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
+							<xsl:value-of select="casefile/caseType"/>
+						</fo:block>
+                    </fo:block>
+                    <fo:block font-size="10pt" space-after="0.15in">
+                        Description
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" padding="1mm">
+							<xsl:value-of select="casefile/caseDetails"/></fo:block>
+                    </fo:block>
+					<fo:block font-size="10pt" space-after="0.15in">
                         Initiator
 						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/initiator"/>
+							<xsl:value-of select="casefile/initiator"/>
 						</fo:block>
                     </fo:block>
-					<fo:block font-size="10pt" space-after="0.15in">
-                        Complaint Title
-						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/complaintTitle"/>
-						</fo:block>
-                    </fo:block>
-                    <fo:block font-size="10pt" space-after="0.15in">
-                        Incident Category 
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/complaintType"/>
-						</fo:block>
-                    </fo:block>
-                    <fo:block font-size="10pt" space-after="0.15in">
-                        Complaint Number
-						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/complaintNumber"/></fo:block>
-                    </fo:block>
-                    <fo:block font-size="10pt" space-after="0.15in">
-                        Priority
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/priority"/>
-						</fo:block>
-                    </fo:block>
-					<fo:block font-size="10pt" space-after="0.15in">
-                        Complaint Tag
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/complaintTag"/></fo:block>
-                    </fo:block>
-					<fo:block font-size="10pt" space-after="0.15in">
-                        Frequency
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="complaint/frequency"/>
-						</fo:block>
-                    </fo:block>
-                    <fo:block font-size="10pt" space-after="0.15in">
-                        Complaint Description
-						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" padding="1mm">
-							<xsl:value-of select="complaint/complaintDescription"/></fo:block>
-                    </fo:block>
-					<fo:block font-size="11pt" space-after="0.15in">
-								Location
-							   <fo:block>
-									Type: <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationType"/></fo:inline>
-									Address: <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationAddress"/></fo:inline>
-									City:  <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationCity"/></fo:inline>
-									State:  <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationState"/></fo:inline>
-									Zip:  <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationZip"/></fo:inline>
-									Added by:  <fo:inline font-weight="bold"><xsl:value-of select="complaint/locationAddedBy"/></fo:inline>
-								</fo:block>
-	                  </fo:block>
 					  <fo:block font-size="11pt" space-after="0.15in">
 						  People
 						  <fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
@@ -106,7 +67,7 @@
 		                               		<fo:block font-weight="bold" text-align="center">Person</fo:block>
 			                            </fo:table-cell>
 								   </fo:table-row>
-								  <xsl:for-each select="complaint/people">
+								  <xsl:for-each select="casefile/people">
 									  <xsl:for-each select="person">
 										   <fo:table-row line-height="12pt" font-size="10pt">
 											   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
@@ -136,7 +97,7 @@
 		                               		<fo:block font-weight="bold" text-align="center">Participant</fo:block>
 			                            </fo:table-cell>
 								   </fo:table-row>
-								  <xsl:for-each select="complaint/participants">
+								  <xsl:for-each select="casefile/participants">
 									  <xsl:for-each select="participant">
 										   <fo:table-row line-height="12pt" font-size="10pt">
 											   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
