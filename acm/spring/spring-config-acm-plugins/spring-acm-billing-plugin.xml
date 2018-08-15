@@ -52,11 +52,6 @@
                     <property name="url" value="/api/{version}/plugin/billing/invoices"/>
                     <property name="requiredPrivilege" ref="acmCreateBillingInvoicePrivilege"/>
                 </bean>
-                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="PUT"/>
-                    <property name="url" value="/api/{version}/plugin/billing/invoices/document"/>
-                    <property name="requiredPrivilege" ref="acmCreateBillingInvoicePrivilege"/>
-                </bean>
             </list>
         </property>
     </bean>
@@ -73,11 +68,6 @@
                 <bean id="acmListBillingInvoicesUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/billing/invoices"/>
-                    <property name="requiredPrivilege" ref="acmListBillingInvoicesPrivilege"/>
-                </bean>
-                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
-                    <property name="url" value="/api/{version}/plugin/billing/invoices/all"/>
                     <property name="requiredPrivilege" ref="acmListBillingInvoicesPrivilege"/>
                 </bean>
             </list>
