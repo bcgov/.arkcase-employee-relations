@@ -4,6 +4,7 @@
 
    <bean id="acmObjectLockingManager" class="com.armedia.acm.service.objectlock.service.AcmObjectLockingManager">
         <property name="defaultObjectLockingProvider" ref="defaultObjectLockingProvider"/>
+		<property name="acmObjectLockService" ref="objectLockService"/>
         <property name="objectLockingProvidersMap">
             <map>
                 <entry key="FILE" value-ref="fileLockingProvider"/>
