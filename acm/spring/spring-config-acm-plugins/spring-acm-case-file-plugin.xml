@@ -112,7 +112,7 @@
 				
                 <bean id="changeCaseFileState" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/plugin/casefile/change/status"/>
+                    <property name="url" value="/api/{version}/plugin/casefile/change/status/{mode}"/>
                     <property name="requiredPrivilege" ref="acmCaseModulePrivilege"/>
                 </bean>
             </list>
