@@ -36,34 +36,6 @@
 							<xsl:value-of select="changeCaseFileState/caseTitle"/>
 						</fo:block>
                     </fo:block>
-							Participants
-						  <fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
-							  <fo:table-column column-width="40%"/>
-							  <fo:table-column column-width="60%"/>
-							  <fo:table-body font-weight="normal" font-size="10pt">
-								  <fo:table-row line-height="12pt">
-									   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-			                                <fo:block font-weight="bold" text-align="center">Participant Type</fo:block>
-		                               </fo:table-cell>
-									   <fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-		                               		<fo:block font-weight="bold" text-align="center">Participant</fo:block>
-			                            </fo:table-cell>
-								   </fo:table-row>
-								  <xsl:for-each select="casefile/participants">
-									  <xsl:for-each select="participant">
-										   <fo:table-row line-height="12pt" font-size="10pt">
-											   <fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-					                               <fo:block text-align="center"><xsl:value-of select="participantType"/></fo:block>
-				                               </fo:table-cell>
-											   <fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-				                               		<fo:block text-align="center"><xsl:value-of select="participantName"/></fo:block>
-					                            </fo:table-cell>
-										   </fo:table-row>
-									   </xsl:for-each>
-							   </xsl:for-each>
-						   </fo:table-body>
-					      </fo:table>
-					   </fo:block>
                 </fo:flow>
             </fo:page-sequence>
 
