@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
    <bean id="acmObjectLockingManager" class="com.armedia.acm.service.objectlock.service.AcmObjectLockingManager">
         <property name="defaultObjectLockingProvider" ref="defaultObjectLockingProvider"/>
@@ -13,5 +14,12 @@
             </map>
         </property>
     </bean>
-    
+	
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties">
+			<util:properties>
+				<prop key="expired_locks.scan_interval">10000</prop>
+			</util:properties>
+		</property>
+	</bean>
 </beans>
