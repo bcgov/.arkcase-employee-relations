@@ -77,25 +77,25 @@
                     <property name="url" value="/api/{version}/plugin/report/sync"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				<bean id="createReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="createReportSchedule"
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule"/>
+                        value="/api/{version}/plugin/report/schedule"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
                 <bean id="retrieveReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule"/>
+                        value="/api/{version}/plugin/report/schedule"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
                 <bean id="deleteReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule/byId"/>
+                        value="/api/{version}/plugin/report/schedule/byId"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
             </list>
