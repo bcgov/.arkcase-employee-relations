@@ -32,7 +32,7 @@
                     <property name="url" value="/api/{version}/plugin/report/save"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				<bean id="reportsToRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="reportsToRolesUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/report/reporttorolesmap"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
@@ -42,7 +42,7 @@
                     <property name="url" value="/api/{version}/plugin/report/reportstoroles"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				<bean id="addRolesToReportUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="addRolesToReportUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/report/{reportName:.+}/roles"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
@@ -77,25 +77,25 @@
                     <property name="url" value="/api/{version}/plugin/report/sync"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
-				<bean id="createReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="createReportSchedule"
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule"/>
+                        value="/api/{version}/plugin/report/schedule"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
                 <bean id="retrieveReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule"/>
+                        value="/api/{version}/plugin/report/schedule"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
                 <bean id="deleteReportSchedule"
-                      class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url"
-                              value="/api/{version}/plugin/report/schedule/byId"/>
+                        value="/api/{version}/plugin/report/schedule/byId"/>
                     <property name="requiredPrivilege" ref="reportPrivilege"/>
                 </bean>
             </list>
