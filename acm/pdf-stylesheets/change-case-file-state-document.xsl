@@ -31,11 +31,67 @@
                 <fo:flow flow-name="xsl-region-body" font-family="'Lucida Grande',Tahoma,Arial,sans-serif">
 					<xsl:apply-templates select="changeCaseFileState"/>
 					<fo:block font-size="10pt" space-after="0.15in">
-                        Case Title
+                        Change Case Status Information
+                    </fo:block>
+					<fo:block font-size="10pt" space-after="0.15in">
+                        Change Date
 						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
-							<xsl:value-of select="changeCaseFileState/caseTitle"/>
+							<xsl:value-of select="changeCaseFileState/changeDate"/>
 						</fo:block>
                     </fo:block>
+					<fo:block font-size="10pt" space-after="0.15in">
+                        Case Number
+						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
+							<xsl:value-of select="changeCaseFileState/caseNumber"/>
+						</fo:block>
+                    </fo:block>
+					<fo:block font-size="10pt" space-after="0.15in">
+                        Status
+						<fo:block font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
+							<xsl:value-of select="changeCaseFileState/status"/>
+						</fo:block>
+                    </fo:block>
+					<xsl:value-of select="changeCaseFileState/showStatusResolution"/>
+						<fo:block font-size="10pt" space-after="0.15in">
+							Case Resolution
+							<fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
+								<fo:table-body font-weight="normal" font-size="12pt">
+									<fo:table-row line-height="12pt">
+										<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+											<fo:block text-align="center">Denied</fo:block>
+									    </fo:table-cell>
+										<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+											<fo:block text-align="center">Full</fo:block>
+									    </fo:table-cell>
+										<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+											<fo:block text-align="center">Partial</fo:block>
+									    </fo:table-cell>
+									</fo:table-row>
+								</fo:table-body>
+							</fo:table>
+
+						</fo:block>
+					<fo:block font-size="11pt" space-after="0.15in">
+						<fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
+							<fo:table-body font-weight="normal" font-size="12pt">
+								<fo:table-row line-height="12pt">
+									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+										<fo:block text-align="center">Select Approver</fo:block>
+									</fo:table-cell>
+								</fo:table-row>
+								<xsl:for-each select="changeCaseFileState/participants">
+									<xsl:for-each select="participant">
+										<fo:table-row line-height="12pt" font-size="10pt">
+											<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+												<fo:block text-align="center"><xsl:value-of select="participantName"/></fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</xsl:for-each>
+								</xsl:for-each>
+							</fo:table-body>
+						</fo:table>
+				   </fo:block>
+
                 </fo:flow>
             </fo:page-sequence>
 
