@@ -53,6 +53,49 @@
 							<xsl:value-of select="costsheet/code"/></fo:block>
                     </fo:block>
 					<fo:block font-size="11pt" space-after="0.15in">
+						Costs
+						<fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
+							<fo:table-column column-width="20%"/>
+							<fo:table-column column-width="20%"/>
+							<fo:table-column column-width="35%"/>
+							<fo:table-column column-width="25%"/>
+							<fo:table-body font-weight="normal" font-size="10pt">
+								<fo:table-row line-height="12pt">
+									<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+										<fo:block font-weight="bold" text-align="center">Date</fo:block>
+									</fo:table-cell>
+									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+										<fo:block font-weight="bold" text-align="center">Title</fo:block>
+									</fo:table-cell>
+									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+										<fo:block font-weight="bold" text-align="center">Description</fo:block>
+									</fo:table-cell>
+									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+										<fo:block font-weight="bold" text-align="center">Amount</fo:block>
+									</fo:table-cell>
+								</fo:table-row>
+								<xsl:for-each select="costsheet/costs">
+									<xsl:for-each select="cost">
+										<fo:table-row line-height="12pt" font-size="10pt">
+											<fo:table-cell  border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+												<fo:block text-align="center"><xsl:value-of select="date"/></fo:block>
+											</fo:table-cell>
+											<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+												<fo:block text-align="center"><xsl:value-of select="title"/></fo:block>
+											</fo:table-cell>
+											<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+												<fo:block text-align="center"><xsl:value-of select="description"/></fo:block>
+											</fo:table-cell>
+											<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
+												<fo:block text-align="center"><xsl:value-of select="amount"/></fo:block>
+											</fo:table-cell>
+										</fo:table-row>
+									</xsl:for-each>
+								</xsl:for-each>
+							</fo:table-body>
+						</fo:table>
+					</fo:block> 
+					<fo:block font-size="11pt" space-after="0.15in">
 						<fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
 							<fo:table-column column-width="75%"/>
 							<fo:table-column column-width="25%"/>
