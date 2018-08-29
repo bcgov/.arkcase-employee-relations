@@ -76,6 +76,11 @@
                     <property name="url" value="/modules/complaints/views/"/>
                     <property name="requiredPrivilege" ref="acmComplaintModulePrivilege"/>
                 </bean>
+                <bean id="complaintClose" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/complaint/close/{mode}"/>
+                    <property name="requiredPrivilege" ref="acmComplaintModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
