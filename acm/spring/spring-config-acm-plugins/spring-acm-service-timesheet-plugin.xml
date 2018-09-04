@@ -52,7 +52,7 @@
 
                 <bean id="saveTimesheetUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/service/timesheet"/>
+                    <property name="url" value="/api/{version}/service/timesheet/{submissionName}"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
                 </bean>
 
