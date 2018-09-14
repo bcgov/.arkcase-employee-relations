@@ -35,7 +35,14 @@
                 "status":[  
                     "DRAFT",
                     "ACTIVE",
-                    "INACTIVE"
+                    "INACTIVE",
+					"IN APPROVAL",
+					"BILING",
+					"IN FULFILEMENT",
+					"GC REVIEW",
+					"HOLD",
+					"IN REVIEW",
+					"SUSPENDED"
                 ]
             },
             "userRolesAny":[  
@@ -60,7 +67,8 @@
             "objectType":"COMPLAINT",
             "objectProperties":{  
                 "status":[  
-                    "DRAFT"
+                    "DRAFT",
+					"IN APPROVAL"
                 ]
             },
             "userRolesAny":[  
