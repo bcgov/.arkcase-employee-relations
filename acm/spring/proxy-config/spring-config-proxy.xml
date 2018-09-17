@@ -69,7 +69,7 @@
         </property>
     </bean>
 
-    <bean id="/solr/**" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+    <bean id="/solr/banana/**" class="org.springframework.web.servlet.mvc.ServletWrappingController">
         <property name="servletClass" value="com.armedia.acm.proxy.http.ProxyServlet"/>
         <property name="servletName" value="solr"/>
         <property name="initParameters">
