@@ -193,7 +193,7 @@
     </beans:beans>
 
     <beans:beans profile="externalAuth">
-        <beans:bean id="armedia_userDetailsService" class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+        <beans:bean id="armedia_userDetailsService" class="com.armedia.acm.auth.AcmLdapUserDetailsService">
             <beans:constructor-arg index="0" ref="armedia_userSearch"/>
             <beans:constructor-arg index="1">
                 <beans:bean id="armedia_authoritiesPopulator"
@@ -202,6 +202,7 @@
                     <beans:constructor-arg index="1" value='${ldapConfig.groupSearchBase}'/>
                 </beans:bean>
             </beans:constructor-arg>
+            <beans:property name="acmLdapSyncConfig" ref="armedia_sync"/>
         </beans:bean>
         <beans:bean id="armedia_externalAuthProvider"
             class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
