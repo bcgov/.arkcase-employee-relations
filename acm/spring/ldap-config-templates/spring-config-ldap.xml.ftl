@@ -112,7 +112,7 @@
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
          is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
          is why these beans are active both for Kerberos and LDAP. -->
-    <beans:beans profile="ldap,kerberos,externalAuth">
+    <beans:beans profile="ldap,kerberos,externalAuth,externalSaml">
 
         <beans:bean id="${id}_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
@@ -199,9 +199,9 @@
 
     </beans:beans>
 
-    <beans:beans profile="externalAuth">
+    <beans:beans profile="externalAuth,externalSaml">
         <beans:bean id="${id}_userDetailsService"
-                    class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+                    class="com.armedia.acm.auth.AcmLdapUserDetailsService">
             <beans:constructor-arg index="0" ref="${id}_userSearch"/>
             <beans:constructor-arg index="1">
                 <beans:bean id="${id}_authoritiesPopulator"
@@ -210,6 +210,7 @@
                     <beans:constructor-arg index="1" value='${r"${ldapConfig.groupSearchBase}"}'/>
                 </beans:bean>
             </beans:constructor-arg>
+            <beans:property name="acmLdapSyncConfig" ref="${id}_sync"/>
         </beans:bean>
         <beans:bean id="${id}_externalAuthProvider"
                     class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
