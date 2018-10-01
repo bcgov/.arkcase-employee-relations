@@ -21,6 +21,11 @@
             "name": "Transcribe Queue-to-Processing Job",
             "beanName": "transcribeQueueJob",
             "howOftenInSeconds": "60"
-        }
+        },
+		{
+			"name": "Automatically release expired locks",
+            "beanName": "acmObjectLockingManager",
+            "howOftenInSeconds": "15"
+		}
     ]
 }
