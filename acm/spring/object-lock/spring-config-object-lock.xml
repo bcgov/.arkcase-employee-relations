@@ -15,11 +15,4 @@
         </property>
     </bean>
 	
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="properties">
-			<util:properties>
-				<prop key="expired_locks.scan_interval">10000</prop>
-			</util:properties>
-		</property>
-	</bean>
 </beans>
