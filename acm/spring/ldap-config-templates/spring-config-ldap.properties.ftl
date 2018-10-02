@@ -32,3 +32,5 @@ ldapConfig.groupSearchPageFilter=${groupSearchPageFilter}
 ldapConfig.changedGroupSearchPageFilter=${changedGroupSearchPageFilter}
 ldapConfig.groupsSortingAttribute=${groupsSortingAttribute}
 ldapConfig.syncEnabled=${syncEnabled?c}
+ldapConfig.userPrefix=${userPrefix}
+ldapConfig.userControlGroup=${userControlGroup}
