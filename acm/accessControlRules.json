@@ -686,6 +686,92 @@
          "userRolesAll":[
 
          ]
+      },
+      {
+         "actionName":"editOnlyOfficeDocument",
+         "objectType":"FILE",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "group-write",
+            "write"
+         ],
+         "userRolesAny":[
+            "ROLE_CONTRIBUTOR"
+         ],
+         "userRolesAll":[
+
+         ]
+      },
+      {
+         "actionName":"reviewOnlyOfficeDocument",
+         "objectType":"FILE",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "group-write",
+            "write"
+         ],
+         "userRolesAny":[
+			"ROLE_SUPERVISOR"
+         ],
+         "userRolesAll":[
+
+         ]
+      },
+      {
+         "actionName":"printOnlyOfficeDocument",
+         "objectType":"FILE",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "read",
+            "group-read"
+         ],
+         "userRolesAny":[
+			
+         ],
+         "userRolesAll":[
+
+         ]
+      },
+      {
+         "actionName":"downloadOnlyOfficeDocument",
+         "objectType":"FILE",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "read",
+            "group-read"
+         ],
+         "userRolesAny":[
+			
+         ],
+         "userRolesAll":[
+
+         ]
+      },
+      {
+         "actionName":"commentOnlyOfficeDocument",
+         "objectType":"FILE",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "group-write",
+            "write"
+         ],
+         "userRolesAny":[
+			"ROLE_SUPERVISOR",
+			"ROLE_CONTRIBUTOR"
+         ],
+         "userRolesAll":[
+
+         ]
       }
    ]
 }
