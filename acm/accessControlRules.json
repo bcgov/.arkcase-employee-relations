@@ -686,6 +686,17 @@
          "userRolesAll":[
 
          ]
+      },
+      {
+            "actionName": "declareAsRecords",
+            "objectType": "TASK",
+            "objectProperties": {},
+            "userRolesAny":[
+                "ROLE_SUPERVISOR",
+                "ROLE_CONTRIBUTOR",
+                "ROLE_ADMINISTRATOR"
+             ],
+            "userRolesAll": []
       }
    ]
 }
