@@ -171,6 +171,7 @@
          "actionName":"editObject",
          "objectType":"TASK",
          "objectProperties":{
+            "status":"ACTIVE"
          },
          "userRolesAny":[
             "ROLE_SUPERVISOR",
