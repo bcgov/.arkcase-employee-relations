@@ -37,7 +37,7 @@
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 	
-	<!-- ensure this bean id is unique across all the LDAP sync beans. -->
+	<!-- ensure this bean id is unique across all the partial LDAP sync beans. -->
     <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
@@ -92,6 +92,8 @@
         <beans:property name="allUsersPageFilter" value='${r"${ldapConfig.allUsersPageFilter}"}'/>
         <beans:property name="allChangedUsersPageFilter" value='${r"${ldapConfig.allChangedUsersPageFilter}"}'/>
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
+        <beans:property name="userPrefix" value='${r"${ldapConfig.userPrefix}"}'/>
+        <beans:property name="userControlGroup"  value='${r"${ldapConfig.userControlGroup}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
