@@ -772,6 +772,23 @@
          "userRolesAll":[
 
          ]
+      },
+      {
+         "actionName":"allowCopyingFile",
+         "objectType":"FOLDER",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "write",
+            "group-write"
+         ],
+         "userRolesAny":[
+
+         ],
+         "userRolesAll":[
+
+         ]
       }
    ]
 }
