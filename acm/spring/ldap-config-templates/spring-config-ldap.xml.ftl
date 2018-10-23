@@ -94,6 +94,7 @@
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
         <beans:property name="userPrefix" value='${r"${ldapConfig.userPrefix}"}'/>
         <beans:property name="userControlGroup"  value='${r"${ldapConfig.userControlGroup}"}'/>
+        <beans:property name="groupControlGroup" value='${r"${ldapConfig.groupControlGroup}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
