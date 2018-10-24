@@ -732,7 +732,7 @@
             "group-read"
          ],
          "userRolesAny":[
-			
+
          ],
          "userRolesAll":[
 
@@ -749,7 +749,7 @@
             "group-read"
          ],
          "userRolesAny":[
-			
+
          ],
          "userRolesAll":[
 
@@ -768,6 +768,23 @@
          "userRolesAny":[
 			"ROLE_SUPERVISOR",
 			"ROLE_CONTRIBUTOR"
+         ],
+         "userRolesAll":[
+
+         ]
+      },
+      {
+         "actionName":"allowCopyingFile",
+         "objectType":"FOLDER",
+         "objectProperties":{
+
+         },
+         "userIsParticipantTypeAny":[
+            "write",
+            "group-write"
+         ],
+         "userRolesAny":[
+
          ],
          "userRolesAll":[
 
