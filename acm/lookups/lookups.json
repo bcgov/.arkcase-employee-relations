@@ -2079,257 +2079,257 @@
                 {
                     "readonly": false,
                     "value": "core.lookups.states.AK",
-                    "key": "AK"
+                    "key": "AK_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.AL",
-                    "key": "AL"
+                    "key": "AL_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.AR",
-                    "key": "AR"
+                    "key": "AR_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.AZ",
-                    "key": "AZ"
+                    "key": "AZ_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.CA",
-                    "key": "CA"
+                    "key": "CA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.CO",
-                    "key": "CO"
+                    "key": "CO_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.CT",
-                    "key": "CT"
+                    "key": "CT_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.DC",
-                    "key": "DC"
+                    "key": "DC_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.DE",
-                    "key": "DE"
+                    "key": "DE_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.FL",
-                    "key": "FL"
+                    "key": "FL_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.GA",
-                    "key": "GA"
+                    "key": "GA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.HI",
-                    "key": "HI"
+                    "key": "HI_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.IA",
-                    "key": "IA"
+                    "key": "IA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.ID",
-                    "key": "ID"
+                    "key": "ID_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.IL",
-                    "key": "IL"
+                    "key": "IL_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.IN",
-                    "key": "IN"
+                    "key": "IN_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.KS",
-                    "key": "KS"
+                    "key": "KS_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.KY",
-                    "key": "KY"
+                    "key": "KY_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.LA",
-                    "key": "LA"
+                    "key": "LA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MA",
-                    "key": "MA"
+                    "key": "MA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MD",
-                    "key": "MD"
+                    "key": "MD_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.ME",
-                    "key": "ME"
+                    "key": "ME_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MI",
-                    "key": "MI"
+                    "key": "MI_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MN",
-                    "key": "MN"
+                    "key": "MN_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MO",
-                    "key": "MO"
+                    "key": "MO_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MS",
-                    "key": "MS"
+                    "key": "MS_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.MT",
-                    "key": "MT"
+                    "key": "MT_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NC",
-                    "key": "NC"
+                    "key": "NC_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.ND",
-                    "key": "ND"
+                    "key": "ND_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NE",
-                    "key": "NE"
+                    "key": "NE_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NH",
-                    "key": "NH"
+                    "key": "NH_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NJ",
-                    "key": "NJ"
+                    "key": "NJ_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NM",
-                    "key": "NM"
+                    "key": "NM_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NV",
-                    "key": "NV"
+                    "key": "NV_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.NY",
-                    "key": "NY"
+                    "key": "NY_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.OH",
-                    "key": "OH"
+                    "key": "OH_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.OK",
-                    "key": "OK"
+                    "key": "OK_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.OR",
-                    "key": "OR"
+                    "key": "OR_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.PA",
-                    "key": "PA"
+                    "key": "PA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.RI",
-                    "key": "RI"
+                    "key": "RI_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.SC",
-                    "key": "SC"
+                    "key": "SC_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.SD",
-                    "key": "SD"
+                    "key": "SD_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.TN",
-                    "key": "TN"
+                    "key": "TN_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.TX",
-                    "key": "TX"
+                    "key": "TX_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.UT",
-                    "key": "UT"
+                    "key": "UT_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.VA",
-                    "key": "VA"
+                    "key": "VA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.VT",
-                    "key": "VT"
+                    "key": "VT_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.WA",
-                    "key": "WA"
+                    "key": "WA_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.WI",
-                    "key": "WI"
+                    "key": "WI_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.WV",
-                    "key": "WV"
+                    "key": "WV_USA"
                 },
                 {
                     "readonly": false,
                     "value": "core.lookups.states.WY",
-                    "key": "WY"
+                    "key": "WY_USA"
                 }
             ],
             "readonly": true,
