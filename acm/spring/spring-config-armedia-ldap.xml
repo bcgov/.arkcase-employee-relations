@@ -79,7 +79,7 @@
     </beans:bean>
 
     <beans:bean id="armedia_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig" parent="armedia_ldap_config">
-        <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com).  -->
+        <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=armedia,dc=com). -->
         <beans:property name="groupSearchBase" value='${ldapConfig.groupSearchBase}'/>
         <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
         <beans:property name="groupSearchFilter" value='${ldapConfig.groupSearchFilter}'/>
@@ -92,6 +92,7 @@
         <beans:property name="userDomain" value='${ldapConfig.userDomain}'/>
         <beans:property name="userPrefix" value="${ldapConfig.userPrefix}"/>
         <beans:property name="userControlGroup" value="${ldapConfig.userControlGroup}"/>
+        <beans:property name="groupControlGroup" value="${ldapConfig.groupControlGroup}"/>
         <beans:property name="userSearchBase" value='${ldapConfig.userSearchBase}'/>
         <beans:property name="userSearchFilter" value='${ldapConfig.userSearchFilter}'/>
         <beans:property name="groupSearchFilterForUser" value='${ldapConfig.groupSearchFilterForUser}'/>
