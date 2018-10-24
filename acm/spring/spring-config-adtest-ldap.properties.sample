@@ -33,3 +33,4 @@ ldapConfig.changedGroupSearchPageFilter=(&(objectclass=group)(cn>=%s)(modifyTime
 ldapConfig.groupsSortingAttribute=cn
 ldapConfig.userPrefix=
 ldapConfig.userControlGroup=
+ldapConfig.groupControlGroup=
