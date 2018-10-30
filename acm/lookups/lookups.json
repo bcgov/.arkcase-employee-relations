@@ -326,6 +326,10 @@
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
                     "key": "APPROVED"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.final",
+                    "key": "FINAL"
                 }
             ],
             "readonly": true
