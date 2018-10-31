@@ -31,3 +31,6 @@ ldapConfig.changedGroupSearchFilter=(&(objectclass=group)(modifyTimestamp>=%s))
 ldapConfig.groupSearchPageFilter=(&(objectclass=group)(cn>=%s))
 ldapConfig.changedGroupSearchPageFilter=(&(objectclass=group)(cn>=%s)(modifyTimestamp>=%s))
 ldapConfig.groupsSortingAttribute=cn
+ldapConfig.userPrefix=
+ldapConfig.userControlGroup=
+ldapConfig.groupControlGroup=
