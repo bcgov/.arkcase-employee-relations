@@ -872,7 +872,7 @@
             ],
             "readonly": true
         },
-		{
+        {
             "name": "timesheetChargeRoles",
             "entries": [
                 {
@@ -2075,6 +2075,267 @@
             "readonly": true
         },
         {
+            "entries": [
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.AK",
+                    "key": "AK_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.AL",
+                    "key": "AL_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.AR",
+                    "key": "AR_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.AZ",
+                    "key": "AZ_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.CA",
+                    "key": "CA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.CO",
+                    "key": "CO_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.CT",
+                    "key": "CT_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.DC",
+                    "key": "DC_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.DE",
+                    "key": "DE_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.FL",
+                    "key": "FL_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.GA",
+                    "key": "GA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.HI",
+                    "key": "HI_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.IA",
+                    "key": "IA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.ID",
+                    "key": "ID_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.IL",
+                    "key": "IL_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.IN",
+                    "key": "IN_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.KS",
+                    "key": "KS_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.KY",
+                    "key": "KY_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.LA",
+                    "key": "LA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MA",
+                    "key": "MA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MD",
+                    "key": "MD_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.ME",
+                    "key": "ME_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MI",
+                    "key": "MI_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MN",
+                    "key": "MN_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MO",
+                    "key": "MO_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MS",
+                    "key": "MS_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.MT",
+                    "key": "MT_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NC",
+                    "key": "NC_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.ND",
+                    "key": "ND_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NE",
+                    "key": "NE_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NH",
+                    "key": "NH_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NJ",
+                    "key": "NJ_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NM",
+                    "key": "NM_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NV",
+                    "key": "NV_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.NY",
+                    "key": "NY_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.OH",
+                    "key": "OH_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.OK",
+                    "key": "OK_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.OR",
+                    "key": "OR_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.PA",
+                    "key": "PA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.RI",
+                    "key": "RI_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.SC",
+                    "key": "SC_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.SD",
+                    "key": "SD_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.TN",
+                    "key": "TN_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.TX",
+                    "key": "TX_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.UT",
+                    "key": "UT_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.VA",
+                    "key": "VA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.VT",
+                    "key": "VT_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.WA",
+                    "key": "WA_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.WI",
+                    "key": "WI_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.WV",
+                    "key": "WV_USA"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.states.WY",
+                    "key": "WY_USA"
+                }
+            ],
+            "readonly": true,
+            "name": "states"
+        },
+        {
             "name": "organizationIdTypes",
             "entries": [
                 {
@@ -2132,7 +2393,7 @@
             ],
             "readonly": true
         },
-		{
+        {
             "name": "documentParticipantTypes",
             "entries": [
                 {
@@ -2340,7 +2601,7 @@
             "entries": [
                 {
                     "value": "core.lookups.businessProcessTypes.acmDocumentWorkflow",
-                    "key": "acmDocumentWorkflow",
+                    "key": "acmDocumentTaskWorkflow",
                     "readonly": true
                 },
                 {

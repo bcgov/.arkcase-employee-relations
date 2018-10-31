@@ -37,7 +37,7 @@
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
     </beans:bean>
 	
-	<!-- ensure this bean id is unique across all the LDAP sync beans. -->
+	<!-- ensure this bean id is unique across all the partial LDAP sync beans. -->
     <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapPartialSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
@@ -92,6 +92,9 @@
         <beans:property name="allUsersPageFilter" value='${r"${ldapConfig.allUsersPageFilter}"}'/>
         <beans:property name="allChangedUsersPageFilter" value='${r"${ldapConfig.allChangedUsersPageFilter}"}'/>
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
+        <beans:property name="userPrefix" value='${r"${ldapConfig.userPrefix}"}'/>
+        <beans:property name="userControlGroup"  value='${r"${ldapConfig.userControlGroup}"}'/>
+        <beans:property name="groupControlGroup" value='${r"${ldapConfig.groupControlGroup}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
         <beans:property name="userSearchFilter" value='${r"${ldapConfig.userSearchFilter}"}'/>
         <beans:property name="groupSearchFilterForUser" value='${r"${ldapConfig.groupSearchFilterForUser}"}'/>
@@ -112,7 +115,7 @@
     <!-- NOTE, do NOT activate both Kerberos and LDAP profiles at the same time.  When the kerberos profile 
          is enabled, the LDAP authentication is still used as a backup, in case Kerberos auth fails.  That 
          is why these beans are active both for Kerberos and LDAP. -->
-    <beans:beans profile="ldap,kerberos,externalAuth">
+    <beans:beans profile="ldap,kerberos,externalAuth,externalSaml">
 
         <beans:bean id="${id}_userSearch" class="org.springframework.security.ldap.search.FilterBasedLdapUserSearch">
             <beans:constructor-arg index="0" value='${r"${ldapConfig.userSearchBase}"}' />
@@ -199,9 +202,9 @@
 
     </beans:beans>
 
-    <beans:beans profile="externalAuth">
+    <beans:beans profile="externalAuth,externalSaml">
         <beans:bean id="${id}_userDetailsService"
-                    class="org.springframework.security.ldap.userdetails.LdapUserDetailsService">
+                    class="com.armedia.acm.auth.AcmLdapUserDetailsService">
             <beans:constructor-arg index="0" ref="${id}_userSearch"/>
             <beans:constructor-arg index="1">
                 <beans:bean id="${id}_authoritiesPopulator"
@@ -210,6 +213,7 @@
                     <beans:constructor-arg index="1" value='${r"${ldapConfig.groupSearchBase}"}'/>
                 </beans:bean>
             </beans:constructor-arg>
+            <beans:property name="acmLdapSyncConfig" ref="${id}_sync"/>
         </beans:bean>
         <beans:bean id="${id}_externalAuthProvider"
                     class="org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationProvider">
