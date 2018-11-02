@@ -67,6 +67,19 @@
                     <property name="url" value="/modules/cost-tracking/views/"/>
                     <property name="requiredPrivilege" ref="acmCostModulePrivilege"/>
                 </bean>
+
+                <bean id="getCostsheetProperties" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/costsheet/properties"/>
+                    <property name="requiredPrivilege" ref="costsheetPrivilege"/>
+                </bean>
+
+                <bean id="saveCostsheetProperties" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/costsheet/properties"/>
+                    <property name="requiredPrivilege" ref="costsheetPrivilege"/>
+                </bean>
+
             </list>
         </property>
     </bean>
