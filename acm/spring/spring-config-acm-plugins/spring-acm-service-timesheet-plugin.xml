@@ -76,6 +76,16 @@
                     <property name="url" value="/api/{version}/service/timesheet/config"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
                 </bean>
+                <bean id="getTimesheetProperties" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/timesheet/properties"/>
+                    <property name="requiredPrivilege" ref="timesheetPrivilege"/>
+                </bean>
+                <bean id="saveTimesheetProperties" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/timesheet/properties"/>
+                    <property name="requiredPrivilege" ref="timesheetPrivilege"/>
+                </bean>
 
             </list>
         </property>
