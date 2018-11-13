@@ -808,6 +808,10 @@
                     "key": "Fraud"
                 },
                 {
+                    "value": "core.lookups.categories.generatedFromEmail",
+                    "key": "Generated from Email"
+                },
+                {
                     "value": "core.lookups.categories.government",
                     "key": "Government"
                 },
