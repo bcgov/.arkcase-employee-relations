@@ -489,7 +489,7 @@
                     <property name="url" value="/api/{version}/plugin/admin/pdfConversion"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
-				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+		        <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/v1/api/labelcheck"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
