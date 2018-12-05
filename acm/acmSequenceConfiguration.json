@@ -1,0 +1,64 @@
+[
+   {
+      "sequenceName":"caseNumberSequence",
+      "sequenceEnabled":"true",
+      "sequenceDescription":"Sequence for case number generation (ex. 20181201_101)",
+      "sequenceParts": [
+         {
+            "sequencePartName":"Date1",
+            "sequencePartType":"DATE",
+            "sequenceDateFormat":"yyyyMMdd"
+         },
+         {
+            "sequencePartName":"Text1",
+            "sequencePartType":"ARBITRARY_TEXT",
+            "sequenceArbitraryText":"_"
+         },
+         {
+            "sequencePartName":"Autoincrement1",
+            "sequencePartType":"AUTOINCREMENT",
+            "sequenceStartNumber":"1000",
+            "sequenceIncrementSize":"1",
+            "sequenceNumberLength":"4",
+            "sequenceFillBlanks":"true"
+         }
+      ]
+   },
+   {
+      "sequenceName":"caseTitleSequence",
+      "sequenceEnabled":"false",
+      "sequenceDescription":"Sequence for case title, follows caseNumber property",
+      "sequenceParts": [
+         {
+            "sequencePartName":"ObjectProperty1",
+            "sequencePartType":"OBJECT_PROPERTY",
+            "sequenceObjectPropertyName":"caseNumber"
+         }
+      ]
+   },
+   {
+      "sequenceName":"complaintNumberSequence",
+      "sequenceEnabled":"true",
+      "sequenceDescription":"Sequence for complaint number generation (ex. 20181201_101)",
+      "sequenceParts": [
+         {
+            "sequencePartName":"Date1",
+            "sequencePartType":"DATE",
+            "sequenceDateFormat":"yyyyMMdd"
+         },
+         {
+            "sequencePartName":"Text1",
+            "sequencePartType":"ARBITRARY_TEXT",
+            "sequenceArbitraryText":"_"
+         },
+         {
+            "sequencePartName":"Autoincrement1",
+            "sequencePartType":"AUTOINCREMENT",
+            "sequenceStartNumber":"1000",
+            "sequenceIncrementSize":"1",
+            "sequenceNumberLength":"4",
+            "sequenceFillBlanks":"true"
+         }
+      ]
+   }
+]
