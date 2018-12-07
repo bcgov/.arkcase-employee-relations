@@ -2614,7 +2614,7 @@
                 },
                 {
                     "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-                    "key": "CorrectiveActionPlan",
+                    "key": "CorrectiveTaskActionPlan",
                     "readonly": true
                 }
             ],
