@@ -298,6 +298,7 @@
         <property name="url">
             <map>
                 <entry key="COMPLAINT" value="/home.html#!/complaints/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/complaints/%d/details"/>
             </map>
         </property>
     </bean>
@@ -308,6 +309,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/cases/%d/details"/>
             </map>
         </property>
     </bean>
@@ -318,6 +320,7 @@
         <property name="url">
             <map>
                 <entry key="TASK" value="/home.html#!/tasks/TASK/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/tasks/TASK/%d/details"/>
             </map>
         </property>
     </bean>
@@ -328,6 +331,7 @@
         <property name="url">
             <map>
                 <entry key="DOC_REPO" value="/home.html#!/document-repository/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/document-repository/%d/details"/>
             </map>
         </property>
     </bean>
@@ -360,6 +364,14 @@
         <property name="url">
             <map>
                 <entry key="PERSON" value="/home.html#!/people/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/people/%d/details"/>
+                <entry key="PICTURE" value="/home.html#!/people/%d/pictures"/>
+                <entry key="PHONE" value="/home.html#!/people/%d/phones"/>
+                <entry key="EMAIL" value="/home.html#!/people/%d/emails"/>
+                <entry key="URL" value="/home.html#!/people/%d/urls"/>
+                <entry key="ALIAS" value="/home.html#!/people/%d/aliases"/>
+                <entry key="COMPLAINT" value="/home.html#!/people/%d/complaints"/>
+                <entry key="CASE_FILE" value="/home.html#!/people/%d/cases"/>
             </map>
         </property>
     </bean>
@@ -412,6 +424,15 @@
         <property name="url">
             <map>
                 <entry key="ORGANIZATION" value="/home.html#!/organizations/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/organizations/%d/details"/>
+                <entry key="PHONE" value="/home.html#!/organizations/%d/phones"/>
+                <entry key="FAX" value="/home.html#!/organizations/%d/faxes"/>
+                <entry key="EMAIL" value="/home.html#!/organizations/%d/emails"/>
+                <entry key="URL" value="/home.html#!/organizations/%d/urls"/>
+                <entry key="DBA" value="/home.html#!/organizations/%d/dbas"/>
+                <entry key="COMPLAINT" value="/home.html#!/organizations/%d/complaints"/>
+                <entry key="CASE_FILE" value="/home.html#!/organizations/%d/cases"/>
+                <entry key="RELATED" value="/home.html#!/organizations/%d/related"/>
             </map>
         </property>
     </bean>
@@ -463,6 +484,7 @@
         <property name="url">
             <map>
                 <entry key="TIMESHEET" value="/home.html#!/time-tracking/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/time-tracking/%d/details"/>
             </map>
         </property>
     </bean>
@@ -473,6 +495,7 @@
         <property name="url">
             <map>
                 <entry key="COSTSHEET" value="/home.html#!/cost-tracking/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/cost-tracking/%d/details"/>
             </map>
         </property>
     </bean>
@@ -484,6 +507,9 @@
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/notes"/>
                 <entry key="COMPLAINT" value="/home.html#!/complaints/%d/notes"/>
+                <entry key="TASK" value="/home.html#!/tasks/TASK/%d/notes"/>
+                <entry key="TASK_REJECT_COMMENT" value="/home.html#!/tasks/ADHOC/%d/rejcomments"/>
+                <entry key="DOC_REPO" value="/home.html#!/document-repository/%d/notes"/>
             </map>
         </property>
     </bean>
