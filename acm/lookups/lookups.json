@@ -973,6 +973,21 @@
             "readonly": true
         },
         {
+            "name": "correspondenceObjectTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.correspondence.casefile",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.correspondence.complaint",
+                    "key": "COMPLAINT"
+                }
+            ],
+            "readonly": true
+        },
+        {
+
             "name": "changeCaseStatusResolutions",
             "entries": [
                 {
@@ -2614,7 +2629,7 @@
                 },
                 {
                     "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-                    "key": "CorrectiveActionPlan",
+                    "key": "CorrectiveTaskActionPlan",
                     "readonly": true
                 }
             ],
