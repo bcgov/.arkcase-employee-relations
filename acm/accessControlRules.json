@@ -789,6 +789,44 @@
          "userRolesAll":[
 
          ]
+      },
+      {
+         "actionName":"allowCopyingFile",
+         "objectType":"CASE_FILE",
+         "objectProperties":{
+         },
+         "userRolesAny":[
+         ],
+         "userRolesAll":[
+
+         ],
+         "userIsParticipantTypeAny":[
+            "assignee",
+            "supervisor",
+            "owning group",
+            "co-owner",
+			"owner",
+            "collaborator"
+         ]
+      },
+      {
+         "actionName":"allowCopyingFile",
+         "objectType":"COMPLAINT",
+         "objectProperties":{
+         },
+         "userRolesAny":[
+         ],
+         "userRolesAll":[
+
+         ],
+         "userIsParticipantTypeAny":[
+            "assignee",
+            "supervisor",
+            "owning group",
+            "co-owner",
+            "owner",
+            "collaborator"
+         ]
       }
    ]
 }
