@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="acmGetSequenceConfigurationPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Get Sequence Configuration Service Plugin"/>
+        <property name="privileges">
+            <list>
+                <ref bean="acmGetSequenceConfigurationPrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="acmGetSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
+                    <property name="requiredPrivilege" ref="acmGetSequenceConfigurationPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="acmSaveSequenceConfigurationPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Save Sequence Configuration Service Plugin"/>
+        <property name="privileges">
+            <list>
+                <ref bean="acmSaveSequenceConfigurationPrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="acmSaveSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceConfigurationPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="acmGetSequenceResetPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Get Sequence Reset Service Plugin"/>
+        <property name="privileges">
+            <list>
+                <ref bean="acmGetSequenceResetPrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="acmGetSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/reset"/>
+                    <property name="requiredPrivilege" ref="acmGetSequenceResetPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="acmSaveSequenceResetPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Save Sequence Reset Service Plugin"/>
+        <property name="privileges">
+            <list>
+                <ref bean="acmSaveSequenceResetPrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="acmSaveSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/reset"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceResetPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

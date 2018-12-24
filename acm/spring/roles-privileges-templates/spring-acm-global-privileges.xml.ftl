@@ -1301,4 +1301,54 @@
             </list>
         </property>
     </bean>
+    
+    <!--Sequence Manager Service-->
+    <bean id="acmGetSequenceConfigurationPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-configuration"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmGetSequenceConfigurationPrivilege??>
+                <#list acmGetSequenceConfigurationPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmSaveSequenceConfigurationPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-save-sequence-configuration"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmSaveSequenceConfigurationPrivilege??>
+                <#list acmSaveSequenceConfigurationPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmGetSequenceResetPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-reset"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmGetSequenceResetPrivilege??>
+                <#list acmGetSequenceResetPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmSaveSequenceResetPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-save-sequence-reset"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmSaveSequenceResetPrivilege??>
+                <#list acmSaveSequenceResetPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>
