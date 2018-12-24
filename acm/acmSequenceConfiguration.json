@@ -25,18 +25,6 @@
       ]
    },
    {
-      "sequenceName":"caseTitleSequence",
-      "sequenceEnabled":"false",
-      "sequenceDescription":"Sequence for case title, follows caseNumber property",
-      "sequenceParts": [
-         {
-            "sequencePartName":"ObjectProperty1",
-            "sequencePartType":"OBJECT_PROPERTY",
-            "sequenceObjectPropertyName":"caseNumber"
-         }
-      ]
-   },
-   {
       "sequenceName":"complaintNumberSequence",
       "sequenceEnabled":"true",
       "sequenceDescription":"Sequence for complaint number generation (ex. 20181201_101)",
