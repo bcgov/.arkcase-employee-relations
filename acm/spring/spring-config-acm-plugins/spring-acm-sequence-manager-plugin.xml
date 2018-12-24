@@ -29,7 +29,12 @@
         </property>
         <property name="urlPrivileges">
             <list>
-                <bean id="acmSaveSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="acmAddSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceConfigurationPrivilege"/>
+                </bean>
+                <bean id="acmUpdateSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
                     <property name="requiredPrivilege" ref="acmSaveSequenceConfigurationPrivilege"/>
@@ -65,7 +70,12 @@
         </property>
         <property name="urlPrivileges">
             <list>
-                <bean id="acmSaveSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="acmAddSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/reset"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceResetPrivilege"/>
+                </bean>
+                <bean id="acmUpdateSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/sequence/reset"/>
                     <property name="requiredPrivilege" ref="acmSaveSequenceResetPrivilege"/>
