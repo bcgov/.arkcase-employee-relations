@@ -2756,6 +2756,38 @@
                 }
             ],
             "readonly":true
+        },
+        {
+            "name": "sequenceParts",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceParts.autoincrement",
+                    "key": "AUTOINCREMENT",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.objectProperty",
+                    "key": "OBJECT_PROPERTY",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.uuid",
+                    "key": "UUID",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.date",
+                    "key": "DATE",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.arbitaryText",
+                    "key": "ARBITRARY_TEXT",
+                    "readonly": false
+                }
+				
+            ],
+            "readonly":true
         }
         
     ]
