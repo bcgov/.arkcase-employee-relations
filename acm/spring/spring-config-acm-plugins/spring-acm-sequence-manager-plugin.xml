@@ -80,6 +80,11 @@
                     <property name="url" value="/api/{version}/plugin/sequence/reset"/>
                     <property name="requiredPrivilege" ref="acmSaveSequenceResetPrivilege"/>
                 </bean>
+                <bean id="acmDeleteSequenceResetUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/reset"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceResetPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
