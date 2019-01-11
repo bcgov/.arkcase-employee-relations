@@ -88,7 +88,10 @@
 
         <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
         <!-- Do not change this bean id. It is used in AcmSamlAuthenticationCheckFilter -->
-        <beans:bean id="samlAuthenticationProvider" class="org.springframework.security.saml.SAMLAuthenticationProvider"></beans:bean>
+        <beans:bean id="samlAuthenticationProvider" class="com.armedia.acm.auth.AcmSamlAuthenticationProvider">
+            <beans:property name="userDomain" value="${saml.userDomain}"/>
+            <beans:property name="userPrefix" value="${saml.userPrefix}"/>
+        </beans:bean>
 
         <!-- XML parser pool needed for OpenSAML parsing -->
         <beans:bean id="parserPool" class="org.opensaml.xml.parse.StaticBasicParserPool" init-method="initialize">
