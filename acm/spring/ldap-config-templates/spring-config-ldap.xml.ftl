@@ -93,6 +93,7 @@
         <beans:property name="allChangedUsersPageFilter" value='${r"${ldapConfig.allChangedUsersPageFilter}"}'/>
         <beans:property name="userDomain" value='${r"${ldapConfig.userDomain}"}'/>
         <beans:property name="userPrefix" value='${r"${ldapConfig.userPrefix}"}'/>
+        <beans:property name="groupPrefix" value='${r"${ldapConfig.groupPrefix}"}'/>
         <beans:property name="userControlGroup"  value='${r"${ldapConfig.userControlGroup}"}'/>
         <beans:property name="groupControlGroup" value='${r"${ldapConfig.groupControlGroup}"}'/>
         <beans:property name="userSearchBase" value='${r"${ldapConfig.userSearchBase}"}'/>
