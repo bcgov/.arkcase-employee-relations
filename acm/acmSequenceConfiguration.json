@@ -1,7 +1,7 @@
 [
    {
       "sequenceName":"caseNumberSequence",
-      "sequenceEnabled":"true",
+      "sequenceEnabled":"false",
       "sequenceDescription":"Sequence for case number generation (ex. 20181201_101)",
       "sequenceParts": [
          {
@@ -17,16 +17,15 @@
          {
             "sequencePartName":"Autoincrement1",
             "sequencePartType":"AUTOINCREMENT",
-            "sequenceStartNumber":"1000",
+            "sequenceStartNumber":"100",
             "sequenceIncrementSize":"1",
-            "sequenceNumberLength":"4",
             "sequenceFillBlanks":"true"
          }
       ]
    },
    {
       "sequenceName":"complaintNumberSequence",
-      "sequenceEnabled":"true",
+      "sequenceEnabled":"false",
       "sequenceDescription":"Sequence for complaint number generation (ex. 20181201_101)",
       "sequenceParts": [
          {
@@ -42,9 +41,8 @@
          {
             "sequencePartName":"Autoincrement1",
             "sequencePartType":"AUTOINCREMENT",
-            "sequenceStartNumber":"1000",
+            "sequenceStartNumber":"100",
             "sequenceIncrementSize":"1",
-            "sequenceNumberLength":"4",
             "sequenceFillBlanks":"true"
          }
       ]
