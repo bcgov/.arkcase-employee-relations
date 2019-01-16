@@ -2788,6 +2788,32 @@
 				
             ],
             "readonly":true
+        },
+		{
+            "name": "sequenceResetPeriod",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceResetPeriod.daily",
+                    "key": "0",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.weekly",
+                    "key": "-1",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.monthly",
+                    "key": "-2",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.yearly",
+                    "key": "-3",
+                    "readonly": false
+                }
+            ],
+            "readonly":true
         }
         
     ]
