@@ -2628,8 +2628,8 @@
                     "readonly": true
                 },
                 {
-                    "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-                    "key": "CorrectiveTaskActionPlan",
+                    "value": "core.lookups.businessProcessTypes.notDefinedWorkflow",
+                    "key": "notDefinedWorkflow",
                     "readonly": true
                 }
             ],
