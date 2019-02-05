@@ -19,6 +19,7 @@
                 <entry key="AuditArkCaseCreate" value-ref="arkcase-fileFolderServiceCreateReader"/>
                 <entry key="AuditArkCaseDeleteExtractors" value-ref="arkcase-nodeServiceDeleteReader"/>
                 <entry key="AuditArkCaseMoveFrom" value-ref="arkcase-fileFolderServiceMoveReader"/>
+                <entry key="AuditArkCaseCopy" value-ref="arkcase-copyServiceCopyReader"/>
             </map>
         </property>
     </bean>
@@ -31,6 +32,8 @@
         class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoFileFolderServiceCreateAuditResponseReader"/>
     <bean id="arkcase-fileFolderServiceMoveReader"
         class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoFileFolderServiceMoveAuditResponseReader"/>
+    <bean id="arkcase-copyServiceCopyReader"
+        class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoCopyServiceCopyAuditResponseReader"/>
 
     <bean id="arkcase-auditApplicationRestClient" class="com.armedia.acm.plugins.ecm.service.sync.impl.AlfrescoAuditApplicationRestClient">
         <property name="protocol" value="https"/>
