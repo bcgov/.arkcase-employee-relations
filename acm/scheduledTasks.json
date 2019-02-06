@@ -17,15 +17,20 @@
             "beanName": "scheduleGeneratedReportService",
             "howOftenInSeconds": "120"
         },
-		{
+        {
             "name": "Transcribe Queue-to-Processing Job",
             "beanName": "transcribeQueueJob",
             "howOftenInSeconds": "60"
         },
-		{
-			"name": "Automatically release expired locks",
+        {
+            "name": "OCR Queue-to-Processing Job",
+            "beanName": "ocrQueueJob",
+            "howOftenInSeconds": "30"
+        },
+        {
+            "name": "Automatically release expired locks",
             "beanName": "acmObjectLockingManager",
             "howOftenInSeconds": "15"
-		}
+        }
     ]
 }
