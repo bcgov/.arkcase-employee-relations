@@ -1165,4 +1165,38 @@
             </list>
         </property>
     </bean>
+    
+        <!--Sequence Manager Service -->
+    <bean id="acmGetSequenceConfigurationPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-configuration"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmSaveSequenceConfigurationPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-save-sequence-configuration"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmGetSequenceResetPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-reset"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="acmSaveSequenceResetPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-save-sequence-reset"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
 </beans>

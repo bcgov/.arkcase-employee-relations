@@ -2628,8 +2628,8 @@
                     "readonly": true
                 },
                 {
-                    "value": "core.lookups.businessProcessTypes.correctiveActionPlan",
-                    "key": "CorrectiveTaskActionPlan",
+                    "value": "core.lookups.businessProcessTypes.notDefinedWorkflow",
+                    "key": "notDefinedWorkflow",
                     "readonly": true
                 }
             ],
@@ -2752,6 +2752,64 @@
                 {
                     "value": "X9",
                     "key": "X9",
+                    "readonly": false
+                }
+            ],
+            "readonly":true
+        },
+        {
+            "name": "sequenceParts",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceParts.autoincrement",
+                    "key": "AUTOINCREMENT",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.objectProperty",
+                    "key": "OBJECT_PROPERTY",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.uuid",
+                    "key": "UUID",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.date",
+                    "key": "DATE",
+                    "readonly": false
+                },
+				{
+                    "value": "core.lookups.sequenceParts.arbitaryText",
+                    "key": "ARBITRARY_TEXT",
+                    "readonly": false
+                }
+				
+            ],
+            "readonly":true
+        },
+		{
+            "name": "sequenceResetPeriod",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceResetPeriod.daily",
+                    "key": "0",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.weekly",
+                    "key": "-1",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.monthly",
+                    "key": "-2",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceResetPeriod.yearly",
+                    "key": "-3",
                     "readonly": false
                 }
             ],
