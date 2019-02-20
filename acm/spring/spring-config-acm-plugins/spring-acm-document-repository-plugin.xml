@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="acmDocumentRepositoryPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="ACM Documents Repository"/>
+        <property name="privileges">
+            <list>
+                <ref bean="documentRepositoryManagerPrivilege"/>
+                <ref bean="documentRepositoryModulePrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="saveDocumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/documentrepository"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+                <bean id="documentRepositoryViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/document-repository/views/"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+                <bean id="myDocumentRepositoryViews" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/modules/my-documents/views/"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+                <bean id="findDcumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+                <bean id="deleteDcumentRepositoryUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

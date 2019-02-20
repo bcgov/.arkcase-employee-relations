@@ -1,0 +1,583 @@
+[
+    {
+        "fieldId": "caseNumber",
+        "fieldValue": "caseNumber",
+        "fieldDescription": "case Number Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseTitle",
+        "fieldValue": "caseTitle",
+        "fieldDescription": "case Title Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseType",
+        "fieldValue": "caseType",
+        "fieldDescription": "case Type Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseStatus",
+        "fieldValue": "caseStatus",
+        "fieldDescription": "case Status Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseDetails",
+        "fieldValue": "caseDetails",
+        "fieldDescription": "case Details Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseIncidentDate",
+        "fieldValue": "caseIncidentDate",
+        "fieldDescription": "case Incident Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseCreatedDate",
+        "fieldValue": "caseCreatedDate",
+        "fieldDescription": "case Created Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseCreator",
+        "fieldValue": "caseCreator",
+        "fieldDescription": "case Creator Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseModifiedDate",
+        "fieldValue": "caseModifiedDate",
+        "fieldDescription": "case Modified Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseModifier",
+        "fieldValue": "caseModifier",
+        "fieldDescription": "case Modifier Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseClosedDate",
+        "fieldValue": "caseClosedDate",
+        "fieldDescription": "case Closed Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseDisposition",
+        "fieldValue": "caseDisposition",
+        "fieldDescription": "case Disposition Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "casePriority",
+        "fieldValue": "casePriority",
+        "fieldDescription": "case Priority Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseDueDate",
+        "fieldValue": "caseDueDate",
+        "fieldDescription": "case Due Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseCourtRoomName",
+        "fieldValue": "caseCourtRoomName",
+        "fieldDescription": "case Court Room Name Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseNextCourtDate",
+        "fieldValue": "caseNextCourtDate",
+        "fieldDescription": "case Next Court Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "caseResponsibleOrganization",
+        "fieldValue": "caseResponsibleOrganization",
+        "fieldDescription": "case Responsible Organization Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorTitle",
+        "fieldValue": "initiatorTitle",
+        "fieldDescription": "initiator Title Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorGivenName",
+        "fieldValue": "initiatorGivenName",
+        "fieldDescription": "initiator Given Name Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorMiddleName",
+        "fieldValue": "initiatorMiddleName",
+        "fieldDescription": "initiator Middle Name Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorFamilyName",
+        "fieldValue": "initiatorFamilyName",
+        "fieldDescription": "initiator Family Name Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorHairColor",
+        "fieldValue": "initiatorHairColor",
+        "fieldDescription": "initiator Hair Color Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorEyeColor",
+        "fieldValue": "initiatorEyeColor",
+        "fieldDescription": "initiator Eye Color Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorHeightInInches",
+        "fieldValue": "initiatorHeightInInches",
+        "fieldDescription": "initiator Height In Inches Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorWeightInPounds",
+        "fieldValue": "initiatorWeightInPounds",
+        "fieldDescription": "initiator Weight In Pounds Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorDateOfBirth",
+        "fieldValue": "initiatorDateOfBirth",
+        "fieldDescription": "initiator Date Of Birth Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorPlaceOfBirth",
+        "fieldValue": "initiatorPlaceOfBirth",
+        "fieldDescription": "initiator Place Of Birth Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorDateMarried",
+        "fieldValue": "initiatorDateMarried",
+        "fieldDescription": "initiator Date Married Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorStreetAddress",
+        "fieldValue": "initiatorStreetAddress",
+        "fieldDescription": "initiator Street Address Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorStreetAddress2",
+        "fieldValue": "initiatorStreetAddress2",
+        "fieldDescription": "initiator Street Address 2 Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorCity",
+        "fieldValue": "initiatorCity",
+        "fieldDescription": "initiator City Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorState",
+        "fieldValue": "initiatorState",
+        "fieldDescription": "initiator State Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorZipCode",
+        "fieldValue": "initiatorZipCode",
+        "fieldDescription": "initiator Zip Code Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorCountry",
+        "fieldValue": "initiatorCountry",
+        "fieldDescription": "initiator Country Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorOrganizationType",
+        "fieldValue": "initiatorOrganizationType",
+        "fieldDescription": "initiator Organization Type Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorOrganizationValue",
+        "fieldValue": "initiatorOrganizationValue",
+        "fieldDescription": "initiator Organization Value Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactPhone",
+        "fieldValue": "initiatorContactPhone",
+        "fieldDescription": "initiator Contact Phone Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactFax",
+        "fieldValue": "initiatorContactFax",
+        "fieldDescription": "initiator Contact Fax Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactEmail",
+        "fieldValue": "initiatorContactEmail",
+        "fieldDescription": "initiator Contact Email Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorAliasType",
+        "fieldValue": "initiatorAliasType",
+        "fieldDescription": "initiator Alias Type Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorAliasValue",
+        "fieldValue": "initiatorAliasValue",
+        "fieldDescription": "initiator Alias Value Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "currentDate",
+        "fieldValue": "currentDate",
+        "fieldDescription": "current Date Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "currentDate_PLUS_30_DAYS",
+        "fieldValue": "currentDate_PLUS_30_DAYS",
+        "fieldDescription": "Current Date Plus 30 Days Place Holder",
+        "fieldType": "CASE_FILE",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintNumber",
+        "fieldValue": "complaintNumber",
+        "fieldDescription": "complaint Number Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintTitle",
+        "fieldValue": "complaintTitle",
+        "fieldDescription": "complaint Title Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintType",
+        "fieldValue": "complaintType",
+        "fieldDescription": "complaint Type Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintStatus",
+        "fieldValue": "complaintStatus",
+        "fieldDescription": "complaint Status Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintDetails",
+        "fieldValue": "complaintDetails",
+        "fieldDescription": "complaint Details Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintIncidentDate",
+        "fieldValue": "complaintIncidentDate",
+        "fieldDescription": "complaint Incident Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintCreatedDate",
+        "fieldValue": "complaintCreatedDate",
+        "fieldDescription": "complaint Created Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintCreator",
+        "fieldValue": "complaintCreator",
+        "fieldDescription": "complaint Creator Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintModifiedDate",
+        "fieldValue": "complaintModifiedDate",
+        "fieldDescription": "complaint Modified Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintModifier",
+        "fieldValue": "complaintModifier",
+        "fieldDescription": "complaint Modifier Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintCloseDate",
+        "fieldValue": "complaintCloseDate",
+        "fieldDescription": "complaint Close Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintDispositionType",
+        "fieldValue": "complaintDispositionType",
+        "fieldDescription": "complaint Disposition Type Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintReferExternalOrganizationName",
+        "fieldValue": "complaintReferExternalOrganizationName",
+        "fieldDescription": "complaint Refer External Organization Name Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintReferExternalContactPersonName",
+        "fieldValue": "complaintReferExternalContactPersonName",
+        "fieldDescription": "complaint Refer External Contact Person Name Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "complaintDueDate",
+        "fieldValue": "complaintDueDate",
+        "fieldDescription": "complaint Due Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorTitle",
+        "fieldValue": "initiatorTitle",
+        "fieldDescription": "initiator Title Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorGivenName",
+        "fieldValue": "initiatorGivenName",
+        "fieldDescription": "initiator Given Name Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorMiddleName",
+        "fieldValue": "initiatorMiddleName",
+        "fieldDescription": "initiator Middle Name Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorFamilyName",
+        "fieldValue": "initiatorFamilyName",
+        "fieldDescription": "initiator Family Name Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorHairColor",
+        "fieldValue": "initiatorHairColor",
+        "fieldDescription": "initiator Hair Color Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorEyeColor",
+        "fieldValue": "initiatorEyeColor",
+        "fieldDescription": "initiator Eye Color Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorHeightInInches",
+        "fieldValue": "initiatorHeightInInches",
+        "fieldDescription": "initiator Height In Inches Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorWeightInPounds",
+        "fieldValue": "initiatorWeightInPounds",
+        "fieldDescription": "initiator Weight In Pounds Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorDateOfBirth",
+        "fieldValue": "initiatorDateOfBirth",
+        "fieldDescription": "initiator Date Of Birth Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorPlaceOfBirth",
+        "fieldValue": "initiatorPlaceOfBirth",
+        "fieldDescription": "initiator Place Of Birth Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorDateMarried",
+        "fieldValue": "initiatorDateMarried",
+        "fieldDescription": "initiator Date Married Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorStreetAddress",
+        "fieldValue": "initiatorStreetAddress",
+        "fieldDescription": "initiator Street Address Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorStreetAddress2",
+        "fieldValue": "initiatorStreetAddress2",
+        "fieldDescription": "initiator Street Address 2 Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorCity",
+        "fieldValue": "initiatorCity",
+        "fieldDescription": "initiator City Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorState",
+        "fieldValue": "initiatorState",
+        "fieldDescription": "initiator State Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorZipCode",
+        "fieldValue": "initiatorZipCode",
+        "fieldDescription": "initiator Zip Code Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorCountry",
+        "fieldValue": "initiatorCountry",
+        "fieldDescription": "initiator Country Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorOrganizationType",
+        "fieldValue": "initiatorOrganizationType",
+        "fieldDescription": "initiator Organization Type Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorOrganizationValue",
+        "fieldValue": "initiatorOrganizationValue",
+        "fieldDescription": "initiator Organization Value Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactPhone",
+        "fieldValue": "initiatorContactPhone",
+        "fieldDescription": "initiator Contact Phone Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactFax",
+        "fieldValue": "initiatorContactFax",
+        "fieldDescription": "initiator Contact Fax Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorContactEmail",
+        "fieldValue": "initiatorContactEmail",
+        "fieldDescription": "initiator Contact Email Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorAliasType",
+        "fieldValue": "initiatorAliasType",
+        "fieldDescription": "initiator Alias Type Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "initiatorAliasValue",
+        "fieldValue": "initiatorAliasValue",
+        "fieldDescription": "initiator Alias Value Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    },
+    {
+        "fieldId": "currentDate",
+        "fieldValue": "currentDate",
+        "fieldDescription": "current Date Place Holder",
+        "fieldType": "COMPLAINT",
+        "fieldVersion": "1.0"
+    }
+]
