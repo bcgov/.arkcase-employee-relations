@@ -1,1 +1,1 @@
-{"displayUserName":"userName","idleLimit":"600000","historyDays":31,"singleChunkFileSizeLimit":15728640,"uploadFileSizeLimit":52428800}
+{"singleChunkFileSizeLimit":10485760,"uploadFileSizeLimit":52428800,"enableFileChunkUpload":false}
