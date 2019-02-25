@@ -121,6 +121,16 @@
                     <property name="url" value="/api/{version}/service/ecm/id/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+                <bean id="deleteFileTemporary" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/temporary/id/{fileId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="deleteFilesPermanent" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/latest/service/ecm/permanent"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
                 <bean id="moveFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/ecm/moveToAnotherContainer/{targetObjectType}/{targetObjectId}"/>
