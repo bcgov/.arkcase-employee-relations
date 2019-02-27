@@ -24,7 +24,8 @@
 					  	a.objectTitle AS objectTitle,
 					  	NULL AS relatedObjectId,
 					 	NULL AS relatedObjectType,
-						a.created AS actionDate
+						a.created AS actionDate,
+						'objectAssigned' as templateModelName
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -58,7 +59,8 @@
 					  	a.objectTitle AS objectTitle,
 					  	NULL AS relatedObjectId,
 					  	NULL AS relatedObjectType,
-					  	a.created AS actionDate
+					  	a.created AS actionDate,
+						'objectUnassigned' AS templateModelName
 					FROM 
 						AcmAssignment a, AcmUser u 
 					WHERE 
@@ -84,7 +86,7 @@
                 <![CDATA[
 					SELECT
 						CONCAT('Task ', a.objectId, ' completed') AS title,
-						CONCAT('Task ', a.objectId, ' completed with ', a.eventDescription, ' action by ', s2.newAssignee) AS note,
+						CONCAT('Task ', s2.objectName, ' completed with ', a.eventDescription, ' action by ', s2.newAssignee) AS note,
 						'user' AS notificationType,
 						a.objectId AS objectId,
 						a.objectType AS objectType,
@@ -93,7 +95,8 @@
 						a.parentObjectId AS relatedObjectId,
 						a.parentObjectType AS relatedObjectType,
 						a.eventDate AS actionDate,
-						s.newAssignee AS sendNotificationTo
+						s.newAssignee AS sendNotificationTo,
+						'concurNonConcur' AS templateModelName
 					FROM 
 						AuditEvent a,  AcmAssignment s, AcmAssignment s2
 					WHERE
@@ -109,7 +112,7 @@
 					AND
 						s2.objectId = a.objectId
 					AND
-						s.newAssignee != 'None'	
+						(s.newAssignee != '' AND s.newAssignee != NULL AND s.newAssignee != 'None')
 					AND 
 						a.eventDate >= :lastRunDate
 				]]>
@@ -156,7 +159,8 @@
 					  	ecmf.fileName AS objectTitle,
 					  	a.parentObjectId AS relatedObjectId,
 					  	a.parentObjectType AS relatedObjectType,
-					  	a.eventDate AS actionDate
+					  	a.eventDate AS actionDate,
+						'fileUploaded' AS templateModelName
 					FROM
 						AuditEvent a
 					JOIN AcmUser u ON a.userId = u.userId
@@ -910,6 +914,47 @@
             </value>
         </property>
     </bean>
+	
+	    <bean id="transcribeStatus" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="sendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'transcribeStatus'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="transcribeQueue" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="sendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'transcribeQueued'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+
 
     <!-- notificationSenderFactory is defined in spring-library-notification.xml now; do not define it here. -->
 
