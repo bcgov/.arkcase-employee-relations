@@ -9,7 +9,7 @@
     <bean id="assignRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="CREATE"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="usersNotified" ref="participantsNotified"/>
         <property name="jpaQuery">
             <value>
@@ -44,7 +44,7 @@
     <bean id="unassignRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="CREATE"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="usersNotified" ref="participantsNotified"/>
         <property name="jpaQuery">
             <value>
@@ -79,7 +79,7 @@
     <bean id="concurNonConcurRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="CREATE"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="usersNotified" ref="assigneeNotified"/>
         <property name="jpaQuery">
             <value>
@@ -203,7 +203,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId    
@@ -240,7 +241,8 @@
                         ecmf.fileName AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -279,7 +281,8 @@
                         ecmf.fileName AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -317,7 +320,8 @@
                         c.complaintTitle AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -351,7 +355,8 @@
                         c.title AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -386,7 +391,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -419,7 +425,8 @@
                         c.complaintTitle AS objectTitle,
                         a.parentObjectId AS parentId,
                         a.parentObjectType AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -453,7 +460,8 @@
                         c.complaintTitle AS objectTitle,
                         a.parentObjectId AS parentId,
                         a.parentObjectType AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -487,7 +495,8 @@
                         c.title AS objectTitle,
                         a.parentObjectId AS parentId,
                         a.parentObjectType AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -521,7 +530,8 @@
                         c.title AS objectTitle,
                         a.parentObjectId AS parentId,
                         a.parentObjectType AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -556,7 +566,8 @@
                         CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                         NULL AS parentId,
                         NULL AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM 
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -590,7 +601,8 @@
                         CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                         NULL AS parentId,
                         NULL AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -624,7 +636,8 @@
                         CONCAT(a.objectType, '-', a.objectId) AS objectTitle,
                         NULL AS parentId,
                         NULL AS parentType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -658,7 +671,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -692,7 +706,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -725,7 +740,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -759,7 +775,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -793,7 +810,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -827,7 +845,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -861,7 +880,8 @@
                         '' AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -895,7 +915,8 @@
                         ecmf.fileName AS objectTitle,
                         a.parentObjectId AS relatedObjectId,
                         a.parentObjectType AS relatedObjectType,
-                        a.eventDate AS actionDate
+                        a.eventDate AS actionDate,
+                        NULL as templateModelName
                     FROM
                         AuditEvent a
                     JOIN AcmUser u ON a.userId = u.userId
@@ -917,7 +938,7 @@
         <bean id="onForgotPassword" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="userSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -937,7 +958,7 @@
     <bean id="onForgotUsername" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="forgotUsernameSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -957,7 +978,7 @@
     <bean id="taskOverdue" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="acmEntitySendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -977,7 +998,7 @@
     <bean id="taskUpcoming" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="acmEntitySendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -994,30 +1015,10 @@
         </property>
     </bean>
     
-    <bean id="fileAttached" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
-        <property name="globalRule" value="true"/>
-        <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-                    SELECT
-                        n
-                    FROM
-                        Notification n
-                    WHERE
-                        n.created >= :lastRunDate
-                    AND
-                        n.templateModelName = 'fileAttached'
-                ]]>
-            </value>
-        </property>
-    </bean>
-    
     <bean id="mentions" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -1036,7 +1037,7 @@
     <bean id="transcribeStatus" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -1056,7 +1057,7 @@
     <bean id="transcribeQueue" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
-        <property name="executor" ref="sendExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
