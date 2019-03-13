@@ -467,4 +467,18 @@ search.plugin:
     \"queue_name_s\":\"Queue\",
     \"request_sub_type_lcs\":\"Type\",
     \"object_type_s\":\"Object Type\",
-    \"parent_object_type_s\":\"Parent Object Type\"}"    
+    \"parent_object_type_s\":\"Parent Object Type\"}"
+navigator:
+  case.name: "Requests"
+  queue:
+    name: "Queues"
+    resourceName: "common:navigation.label.queues"
+    iconName: "i i-alarm"
+    privilege: "acmQueueModulePrivilege"
+    privilegeName: "acm-queue-module"
+  complaint:
+    name:
+    resourceName: 
+    iconName:
+    privilege: 
+    privilegeName:
