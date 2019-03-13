@@ -2814,6 +2814,21 @@
                 }
             ],
             "readonly":true
+        },
+        {
+            "name":"objectTitleTypes",
+            "entries":[
+                {
+                    "value": "core.lookups.objectTitleTypes.caseFile",
+                    "key": "CASE_FILE",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.objectTitleTypes.complaint",
+                    "key": "COMPLAINT",
+                    "readonly": true
+                }
+            ]
         }
         
     ]
