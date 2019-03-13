@@ -1247,7 +1247,7 @@ search.plugin:
 sessionControl:
   #number of concurrent session allowed
   #set to -1 to allow unlimited sessions 
-  maximumSessions: 1
+  maximumSessions: -1
   #determines whether the user should be prevented from opening more sessions than allowed
   #If set to true, the user authenticating will be prevented from authenticating. 
   #if set to false, the user that has already authenticated will be forcibly logged out.
