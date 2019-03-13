@@ -920,13 +920,7 @@
     </task:scheduled-tasks>
 
     <!-- Service Definition -->
-    <bean id="notificationFormatter" class="com.armedia.acm.services.notification.service.NotificationFormatter">
-        <property name="notificationProperties" ref="notificationProperties"/>
-    </bean>
     <bean id="notificationService" class="com.armedia.acm.services.notification.service.NotificationServiceImpl">
-        <property name="batchRun" ref="notificationUserBatchRun"/>
-        <property name="batchSize" ref="notificationUserBatchSize"/>
-        <property name="purgeDays" ref="notificationPurgeDays"/>
         <property name="propertyFileManager" ref="propertyFileManager"/>
         <property name="notificationPropertyFileLocation" ref="notificationPropertyFileLocation"/>
         <property name="notificationDao" ref="notificationDao"/>
@@ -934,6 +928,7 @@
         <property name="springContextHolder" ref="acmContextHolder"/>
         <property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
         <property name="notificationFormatter" ref="notificationFormatter"/>
+        <property name="notificationConfig" ref="notificationConfig"/>
     </bean>
 
 </beans>
