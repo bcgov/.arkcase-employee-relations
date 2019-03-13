@@ -1,0 +1,11 @@
+{
+  "objectTitleTypes" : [ {
+    "objectType" : "CASE_FILE",
+    "enableTitleField" : true,
+    "title" : "Use the 'Object ID' as a Title"
+  }, {
+    "objectType" : "COMPLAINT",
+    "enableTitleField" : true,
+    "title" : "Use the 'Object ID - Title' as a Title"
+  } ]
+}
