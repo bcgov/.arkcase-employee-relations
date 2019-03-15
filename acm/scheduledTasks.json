@@ -5,37 +5,35 @@
         {
             "name": "Alfresco Sync Service",
             "beanName": "arkcase-alfrescoSyncScheduledBean",
-            "taskLastRun": 1552316778046,
+            "taskLastRun": 1529676742600,
             "howOftenInSeconds": "15"
         },
         {
             "name": "Calendar Events Purging Service",
             "beanName": "scheduledCalendarPurger",
-            "taskLastRun": 1552316763047,
+            "taskLastRun": 1529676684199,
             "howOftenInSeconds": "120"
         },
         {
             "name": "Pentaho Scheduled Report Sync Service",
             "beanName": "scheduleGeneratedReportService",
-            "taskLastRun": 1552316763060,
+            "taskLastRun": 1529676684199,
             "howOftenInSeconds": "120"
         },
         {
             "name": "Transcribe Queue-to-Processing Job",
             "beanName": "transcribeQueueJob",
-            "taskLastRun": 1552316718066,
+            "taskLastRun": 1529676712601,
             "howOftenInSeconds": "60"
         },
         {
             "name": "OCR Queue-to-Processing Job",
             "beanName": "ocrQueueJob",
-            "taskLastRun": 1552316778047,
             "howOftenInSeconds": "30"
         },
         {
             "name": "Automatically release expired locks",
             "beanName": "acmObjectLockingManager",
-            "taskLastRun": 1552316763048,
             "howOftenInSeconds": "15"
         }
     ]
