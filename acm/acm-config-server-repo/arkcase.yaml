@@ -1442,10 +1442,6 @@ objectTitleConfig: "{
     \"CASE_FILE\": {
         \"enableTitleField\": true,
         \"title\" : \"Use the 'Object ID' as a Title\"
-    }, 
-    \"REQUEST\" : {
-        \"enableTitleField\": false,
-        \"title\": \"Use the 'Object ID - Title' as a Title\"
     },
     \"COMPLAINT\": {
         \"enableTitleField\": true,
