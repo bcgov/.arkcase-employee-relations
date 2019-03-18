@@ -1080,7 +1080,7 @@
     <!-- Task Scheduler -->
     <task:scheduler id="notificationTaskScheduler" pool-size="1"/>
     <task:scheduled-tasks scheduler="notificationTaskScheduler">
-        <task:scheduled ref="notificationService" method="run" fixed-delay="300000"/>
+        <task:scheduled ref="notificationService" method="run" fixed-delay="60000"/>
     </task:scheduled-tasks>
 
     <!-- Service Definition -->
