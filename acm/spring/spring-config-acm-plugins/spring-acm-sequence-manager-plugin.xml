@@ -16,6 +16,11 @@
                     <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
                     <property name="requiredPrivilege" ref="acmGetSequenceConfigurationPrivilege"/>
                 </bean>
+				<bean id="acmGetSequenceEntityConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/configuration/getSequence"/>
+                    <property name="requiredPrivilege" ref="acmGetSequenceConfigurationPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
@@ -37,6 +42,11 @@
                 <bean id="acmUpdateSequenceConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/plugin/sequence/configuration"/>
+                    <property name="requiredPrivilege" ref="acmSaveSequenceConfigurationPrivilege"/>
+                </bean>
+				<bean id="acmUpdateSequenceNumberConfigurationUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/configuration/updateSequenceNumber"/>
                     <property name="requiredPrivilege" ref="acmSaveSequenceConfigurationPrivilege"/>
                 </bean>
             </list>
@@ -88,4 +98,23 @@
             </list>
         </property>
     </bean>
+    
+    <bean id="acmGetSequenceRegistryPluginPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Get Sequence Registry"/>
+        <property name="privileges">
+            <list>
+                <ref bean="acmGetSequenceRegistryPrivilege"/>
+            </list>
+        </property>
+        <property name="urlPrivileges">
+            <list>
+                <bean id="acmGetSequenceRegistryUrlPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/sequence/registry"/>
+                    <property name="requiredPrivilege" ref="acmGetSequenceRegistryPrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
 </beans>
