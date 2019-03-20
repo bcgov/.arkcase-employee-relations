@@ -1199,4 +1199,12 @@
             </list>
         </property>
     </bean>
+	<bean id="acmGetSequenceRegistryPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-registry"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+                <value>ROLE_ADMINISTRATOR</value>
+            </list>
+        </property>
+    </bean>
 </beans>
