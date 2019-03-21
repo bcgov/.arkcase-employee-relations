@@ -1279,6 +1279,7 @@ solr:
   batchUpdateBatchSize: 50
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
+  suggestHandler: "suggest_handler"
 ################### State Of Arkcase Configuration (stateOfArkCase.properties) ###################
 state_of_arkcase.reports:
   #specify in which folder reports will be generated and kept there
