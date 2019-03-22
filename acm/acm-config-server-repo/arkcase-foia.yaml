@@ -13,11 +13,9 @@ external.integration:
   userId: "arkcase-administrator@armedia.com"
 gov.foia.broker:
   url: "ssl://acm-activemq:61616"
-  #{ systemProperties ['user.home'] }/.arkcase/acm/private/keystore.old
-  keystore: 
-  password: "password"
-  #{ systemProperties ['user.home'] }/.arkcase/acm/private/truststore
-  truststore: 
+  keystore: "${user.home}/.arkcase/acm/private/keystore.old"
+  keystore.password: "password"
+  truststore: "${user.home}/.arkcase/acm/private/truststore"
   truststore.password: "AcMd3v$"
   max_concurrent_workers: 2
   max_concurrent_listeners: 1
