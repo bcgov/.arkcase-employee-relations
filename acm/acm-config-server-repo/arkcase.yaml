@@ -524,6 +524,11 @@ audit.plugin:
     message.properties.enabled: false
   #comma separated list of contentTypes that will be logged
   contentTypesToLog: "application/json,application/atom+xml,text/plain,text/csv,text/html"
+  AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
+  AUDIT_CRITERIA: "[{\"name\":\"Audit\",\"inputs\":[{\"name\":\"objectType\", \"type\":\"select\", \"desc\":\"Object to audit\",\"options\":[{\"value\":\"\", \"text\":\"ALL\"}
+  ,{\"value\":\"CASE\", \"text\":\"Case Files\"},{\"value\":\"COMPLAINT\", \"text\":\"Complaints\"}
+  ,{\"value\":\"TASK\", \"text\":\"Tasks\"},{\"value\":\"FILE\", \"text\":\"Files\"}]},{\"name\":\"objectId\",\"type\":\"text\",\"value\":\"\", \"desc\":\"#\"}
+  ,{\"name\":\"dateRange\",\"nameStartDate\":\"startDate\",\"nameEndDate\":\"endDate\", \"type\":\"dateRange\", \"desc\":\"Date Range\"}]}]"
 ################### (eventDescription.properties) ###################
 # store key-value pairs used for automatic audit event description generation
 # key - fully qualified event name
@@ -533,11 +538,6 @@ audit.plugin:
 audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' added.'\",
 \"com.armedia.acm.ecm.file.downloaded\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\"}"
-AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
-AUDIT_CRITERIA: "[{\"name\":\"Audit\",\"inputs\":[{\"name\":\"objectType\", \"type\":\"select\", \"desc\":\"Object to audit\",\"options\":[{\"value\":\"\", \"text\":\"ALL\"}
-,{\"value\":\"CASE\", \"text\":\"Case Files\"},{\"value\":\"COMPLAINT\", \"text\":\"Complaints\"}
-,{\"value\":\"TASK\", \"text\":\"Tasks\"},{\"value\":\"FILE\", \"text\":\"Files\"}]},{\"name\":\"objectId\",\"type\":\"text\",\"value\":\"\", \"desc\":\"#\"}
-,{\"name\":\"dateRange\",\"nameStartDate\":\"startDate\",\"nameEndDate\":\"endDate\", \"type\":\"dateRange\", \"desc\":\"Date Range\"}]}]"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
