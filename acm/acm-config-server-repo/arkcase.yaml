@@ -1228,6 +1228,7 @@ search.plugin:
     \"incident_type_facet\": \"Incident Type\",
     \"status_facet\": \"Status\",
     \"parent_object_type_facet\": \"Parent Object Type\",
+    \"parent_type_facet\": \"Parent Type\",
     \"owner_facet\": \"Owner\",
     \"groups_id_ss\": \"Group\",
     \"tag_token_facet\": \"Tag Token\",
