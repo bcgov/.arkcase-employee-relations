@@ -1442,12 +1442,12 @@ responseFolderConversion: false
 ################### (objectTitleConfig.properties) ###################
 objectTitleConfig: "{
     \"CASE_FILE\": {
-        \"enableTitleField\": true,
-        \"title\" : \"Use the 'Object ID' as a Title\"
+        \"enableTitleField\": false,
+        \"title\" : \"objectId\"
     },
     \"COMPLAINT\": {
-        \"enableTitleField\": true,
-        \"title\": \"Use the 'Object ID - Title' as a Title\"
+        \"enableTitleField\": false,
+        \"title\": \"objectIdTitle\"
     } 
 }"
 
