@@ -856,7 +856,7 @@ email:
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
-    encryption: off
+    encryption: "off" 
     allowAttachments: true
     allowDocuments: true
     host: "internalmail.armedia.com"
