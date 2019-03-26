@@ -1440,3 +1440,15 @@ wopi.plugin:
   enabled: true
 ################### (pdfConversionProperties.properties) ###################
 responseFolderConversion: false
+################### (objectTitleConfig.properties) ###################
+objectTitleConfig: "{
+    \"CASE_FILE\": {
+        \"enableTitleField\": false,
+        \"title\" : \"objectId\"
+    },
+    \"COMPLAINT\": {
+        \"enableTitleField\": false,
+        \"title\": \"objectIdTitle\"
+    } 
+}"
+
