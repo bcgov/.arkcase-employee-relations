@@ -500,3 +500,10 @@ navigator:
     iconName:
     privilege: 
     privilegeName:
+################### (objectTitleConfig.properties) ###################
+    objectTitleConfig: "{
+    \"CASE_FILE\" : {
+        \"enableTitleField\": true,
+        \"title\": \"titleTitle\"
+    }
+}"
