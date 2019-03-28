@@ -506,3 +506,6 @@ navigator:
         \"title\": \"titleTitle\"
     }
 }"
+################### Activiti Configuration (activiti.properties) ####################
+activiti:
+  workflow.file.pattern: "classpath*:/activiti/foia*.bpmn20.xml,classpath*:/activiti/OCR*.bpmn20.xml,classpath*:/activiti/Transcribe*.bpmn20.xml"
