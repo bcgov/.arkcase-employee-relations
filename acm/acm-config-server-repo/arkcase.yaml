@@ -199,7 +199,9 @@ report:
     \"COMPLAINT_DISPOSITION_COUNT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
     \"COMPLAINT_REPORT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\"}"
 ################### Activiti Configuration (activiti.properties) ####################
-activiti.job.executor.activate: true
+activiti:
+  job.executor.activate: true
+  workflow.file.pattern: "classpath*:/activiti/acm*.bpmn20.xml,classpath*:/activiti/ArkCase*.bpmn20.xml,classpath*:/activiti/DefaultComplaint*.bpmn20.xml,classpath*:/activiti/Corrective*.bpmn20.xml,classpath*:/activiti/OCR*.bpmn20.xml,classpath*:/activiti/Transcribe*.bpmn20.xml"
 ################### Alfresco Ldap Syncer Service Configuration (alfrescoLdapSyncerService.properties) ####################
 alfresco.admin:
   baseurl: "https://acm-arkcase/alfresco/s/enterprise/admin/admin-sync"
