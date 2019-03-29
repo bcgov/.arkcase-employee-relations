@@ -71,6 +71,15 @@ dashboard.plugin:
   ,{\"role\":\"ROLE_DOCUMENT_UPLOADER_SENATE\", \"widgetList\":\"teamWorkload,myTasks,userWebsites\"}]"
   modules: "DASHBOARD,CASE,TASK,COMPLAINT,DOC_REPO,PERSON,ORGANIZATION,MY_DOC_REPO"
   modules.dashboard.widgets: "casesByQueue,myCases,myTasks,newCases,userWebsites,myOverdueRequests"
-    
+################### (objectTitleConfig.properties) ###################
+objectTitleConfig: "{
+    \"CASE_FILE\" : {
+        \"enableTitleField\": false,
+        \"title\": \"titleTitle\"
+    }
+}"
+################### Activiti Configuration (activiti.properties) ####################
+activiti:
+  workflow.file.pattern: "classpath*:/activiti/legtech*.bpmn20.xml,classpath*:/activiti/OCR*.bpmn20.xml,classpath*:/activiti/Transcribe*.bpmn20.xml"
 
 

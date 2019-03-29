@@ -13,11 +13,9 @@ external.integration:
   userId: "arkcase-administrator@armedia.com"
 gov.foia.broker:
   url: "ssl://acm-activemq:61616"
-  #{ systemProperties ['user.home'] }/.arkcase/acm/private/keystore.old
-  keystore: 
-  password: "password"
-  #{ systemProperties ['user.home'] }/.arkcase/acm/private/truststore
-  truststore: 
+  keystore: "${user.home}/.arkcase/acm/private/keystore.old"
+  keystore.password: "password"
+  truststore: "${user.home}/.arkcase/acm/private/truststore"
   truststore.password: "AcMd3v$"
   max_concurrent_workers: 2
   max_concurrent_listeners: 1
@@ -428,8 +426,9 @@ notification.CASE_FILE.label: "Request"
 person.plugin:
   types: "Requester"
   folder.pictures: "Pictures"
-report.plugin:
-  PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:foia/children"
+report:
+  plugin:
+    PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:foia/children"
   config:
     reports: "{\"FOIA_PERSONNEL_AND_COSTS\":\"/arkcase/pentaho/api/repos/:public:foia:FOIA Personnel and Costs.prpt/viewer\",
     \"DISPOSITIONS_OF_FOIA_REQUESTS_-_ALL_PROCESSED_REQUESTS\":\"/arkcase/pentaho/api/repos/:public:foia:Dispositions of FOIA Requests - All Processed Requests.prpt/viewer\",
@@ -458,7 +457,7 @@ report.plugin:
     \"PENDING_REQUESTS_-_ALL_PENDING_PERFECTED_REQUESTS\":\"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR\",
     \"FEES_COLLECTED_FOR_PROCESSING_REQUESTS\":\"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR\",
     \"FOIA_REQUESTS_-_RECEIVED_PROCESSED_AND_PENDING_FOIA_REQUESTS\":\"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR\",
-    \"PROCESSED_SIMPLE_REQUESTS_-_RESPONSE_TIME_IN_DAY_INCREMENTS\", \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR\"}"
+    \"PROCESSED_SIMPLE_REQUESTS_-_RESPONSE_TIME_IN_DAY_INCREMENTS\": \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR\"}"
 search.plugin:
   facet: "{\"assignee_full_name_facet\": \"Assignee Full Name\",
     \"date.received_date_tdt\": \"Received Date\",
@@ -500,3 +499,13 @@ navigator:
     iconName:
     privilege: 
     privilegeName:
+################### (objectTitleConfig.properties) ###################
+    objectTitleConfig: "{
+    \"CASE_FILE\" : {
+        \"enableTitleField\": true,
+        \"title\": \"titleTitle\"
+    }
+}"
+################### Activiti Configuration (activiti.properties) ####################
+activiti:
+  workflow.file.pattern: "classpath*:/activiti/foia*.bpmn20.xml,classpath*:/activiti/OCR*.bpmn20.xml,classpath*:/activiti/Transcribe*.bpmn20.xml"
