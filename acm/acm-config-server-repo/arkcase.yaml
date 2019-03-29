@@ -199,7 +199,9 @@ report:
     \"COMPLAINT_DISPOSITION_COUNT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
     \"COMPLAINT_REPORT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\"}"
 ################### Activiti Configuration (activiti.properties) ####################
-activiti.job.executor.activate: true
+activiti:
+  job.executor.activate: true
+  workflow.file.pattern: "classpath*:/activiti/acm*.bpmn20.xml,classpath*:/activiti/ArkCase*.bpmn20.xml,classpath*:/activiti/DefaultComplaint*.bpmn20.xml,classpath*:/activiti/Corrective*.bpmn20.xml,classpath*:/activiti/OCR*.bpmn20.xml,classpath*:/activiti/Transcribe*.bpmn20.xml"
 ################### Alfresco Ldap Syncer Service Configuration (alfrescoLdapSyncerService.properties) ####################
 alfresco.admin:
   baseurl: "https://acm-arkcase/alfresco/s/enterprise/admin/admin-sync"
@@ -457,7 +459,7 @@ application:
   \"ROLE_EXTERNAL\": \"ARKCASE_EXTERNAL@ARMEDIA.COM\",
   \"ROLE_CONTRIBUTOR\": \"ARKCASE_CONTRIBUTOR@ARMEDIA.COM\"}"
   ################### (applicationRolesPrivileges.properties) ###################
-  rolesToPrivileges: "{\"ROLE_ENTITY_ADMINISTRATOR\": \"acmGlobalAllowPrivilege,acmPersonSavePrivilege,acmPersonDeletePrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonTypesPrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege]\",
+  rolesToPrivileges: "{\"ROLE_ENTITY_ADMINISTRATOR\": \"acmGlobalAllowPrivilege,acmPersonSavePrivilege,acmPersonDeletePrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonTypesPrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
   \"ROLE_CONSUMER\": \"acmGlobalAllowPrivilege,dashboardPrivilege,acmPersonListPrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,blogPrivilege,acmListNotesPrivilege,tagPrivilege,acmSearchModulePrivilege,acmSignatureFindPrivilege,profilePrivilege,acmPersonFindPrivilege,acmTaskListPrivilege,acmAuditModulePrivilege,acmComplaintListPrivilege,participantPrivilege,listMilestonesGroupedByDate,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmPersonTypesPrivilege,caseFileListPrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmOutlookListObjectsPrivilege,searchPrivilege,auditReadEventsForObjectPrivilege,acmSearchPrivilege,acmNotificationPrivilege,acmDashboardModulePrivilege,costsheetPrivilege,acmTagModulePrivilege,acmCaseModulePrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationListPrivilege,acmOrganizationDetailsPrivilege,acmCalendarEventsListPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
   \"ROLE_SUPERVISOR\": \"acmGlobalAllowPrivilege,auditPrivilege,auditReadEventsForObjectPrivilege,acmGenerateCorrespondencePrivilege,dashboardPrivilege,filePrivilege,participantPrivilege,blogPrivilege,helloWorldPrivilege,profilePrivilege,reportPrivilege,costsheetCreatePrivilege,costsheetApprovePrivilege,timesheetApprovePrivilege,acmComplaintListPrivilege,acmComplaintSavePrivilege,acmComplaintCreatePrivilege,acmComplaintApprovePrivilege,acmSearchPrivilege,searchPrivilege,acmCaseApprovePrivilege,saveCasePrivilege,caseFileListPrivilege,caseFileCreatePrivilege,acmPersonSavePrivilege,acmPersonDeletePrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,acmDeleteNoteByIdPrivilege,acmListNotesPrivilege,costsheetPrivilege,timesheetCreatePrivilege,timesheetPrivilege,tagPrivilege,acmTaskListPrivilege,acmTaskSavePrivilege,acmTaskCreatePrivilege,acmTaskCompletePrivilege,acmTaskDeletePrivilege,acmNotificationPrivilege,subscribePrivilege,listMilestonesGroupedByDate,acmSignatureConfirmPrivilege,acmSignatureFindPrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonTypesPrivilege,acmSaveNotePrivilege,acmOutlookListObjectsPrivilege,splitCaseFilePrivilege,acmTaskModulePrivilege,acmComplaintModulePrivilege,acmSearchModulePrivilege,acmDashboardModulePrivilege,acmAuditModulePrivilege,acmReportModulePrivilege,acmSubscriptionModulePrivilege,acmNotificationModulePrivilege,acmTimeModulePrivilege,acmCostModulePrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmCaseModulePrivilege,objectLockPrivilege,objectUnLockPrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,documentRepositoryModulePrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmCalendarEventsCreatePrivilege,acmCalendarEventsDeletePrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
   \"ROLE_ADMINISTRATOR\": \"acmAdminModulePrivilege,acmAnalyticsAuditModulePrivilege,acmAnalyticsModulePrivilege,acmAuditModulePrivilege,acmCalendarAdminPrivilege,acmCalendarEventsCreatePrivilege,acmCalendarEventsDeletePrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmCaseApprovePrivilege,acmCaseModulePrivilege,acmCategoryManagementPrivilege,acmComplaintApprovePrivilege,acmComplaintCreatePrivilege,acmComplaintListPrivilege,acmComplaintModulePrivilege,acmComplaintSavePrivilege,acmCostModulePrivilege,acmDashboardModulePrivilege,acmDeleteNoteByIdPrivilege,acmEmailConfigurePrivilege,acmGenerateCorrespondencePrivilege,acmGlobalAllowPrivilege,acmListNotesPrivilege,acmNotificationModulePrivilege,acmNotificationPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationListPrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOutlookListObjectsPrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationListPrivilege,acmPersonAssociationSavePrivilege,acmPersonDeletePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonModulePrivilege,acmPersonSavePrivilege,acmPersonTypesPrivilege,acmReportModulePrivilege,acmSaveNotePrivilege,acmSearchModulePrivilege,acmSearchPrivilege,acmSignatureConfirmPrivilege,acmSignatureFindPrivilege,acmSubscriptionModulePrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmTaskCompletePrivilege,acmTaskCreatePrivilege,acmTaskDeletePrivilege,acmTaskListPrivilege,acmTaskModulePrivilege,acmTaskSavePrivilege,acmTimeModulePrivilege,adminPrivilege,auditPrivilege,auditReadEventsForObjectPrivilege,blogPrivilege,caseFileCreatePrivilege,caseFileListPrivilege,costsheetApprovePrivilege,costsheetCreatePrivilege,costsheetPrivilege,dashboardPrivilege,documentRepositoryManagerPrivilege,documentRepositoryModulePrivilege,filePrivilege,generateStateOfArkcasePrivilege,getStateOfArkcasePrivilege,helloWorldPrivilege,listLockedObjectsPrivilege,listLocksDetailsPrivilege,listMilestonesGroupedByDate,listStateOfArkcasePrivilege,objectLockPrivilege,objectUnLockPrivilege,participantPrivilege,profilePrivilege,reportPrivilege,saveCasePrivilege,searchPrivilege,splitCaseFilePrivilege,subscribePrivilege,tagPrivilege,timesheetApprovePrivilege,timesheetCreatePrivilege,timesheetPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
@@ -524,6 +526,11 @@ audit.plugin:
     message.properties.enabled: false
   #comma separated list of contentTypes that will be logged
   contentTypesToLog: "application/json,application/atom+xml,text/plain,text/csv,text/html"
+  AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
+  AUDIT_CRITERIA: "[{\"name\":\"Audit\",\"inputs\":[{\"name\":\"objectType\", \"type\":\"select\", \"desc\":\"Object to audit\",\"options\":[{\"value\":\"\", \"text\":\"ALL\"}
+  ,{\"value\":\"CASE\", \"text\":\"Case Files\"},{\"value\":\"COMPLAINT\", \"text\":\"Complaints\"}
+  ,{\"value\":\"TASK\", \"text\":\"Tasks\"},{\"value\":\"FILE\", \"text\":\"Files\"}]},{\"name\":\"objectId\",\"type\":\"text\",\"value\":\"\", \"desc\":\"#\"}
+  ,{\"name\":\"dateRange\",\"nameStartDate\":\"startDate\",\"nameEndDate\":\"endDate\", \"type\":\"dateRange\", \"desc\":\"Date Range\"}]}]"
 ################### (eventDescription.properties) ###################
 # store key-value pairs used for automatic audit event description generation
 # key - fully qualified event name
@@ -533,11 +540,6 @@ audit.plugin:
 audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' added.'\",
 \"com.armedia.acm.ecm.file.downloaded\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\"}"
-AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
-AUDIT_CRITERIA: "[{\"name\":\"Audit\",\"inputs\":[{\"name\":\"objectType\", \"type\":\"select\", \"desc\":\"Object to audit\",\"options\":[{\"value\":\"\", \"text\":\"ALL\"}
-,{\"value\":\"CASE\", \"text\":\"Case Files\"},{\"value\":\"COMPLAINT\", \"text\":\"Complaints\"}
-,{\"value\":\"TASK\", \"text\":\"Tasks\"},{\"value\":\"FILE\", \"text\":\"Files\"}]},{\"name\":\"objectId\",\"type\":\"text\",\"value\":\"\", \"desc\":\"#\"}
-,{\"name\":\"dateRange\",\"nameStartDate\":\"startDate\",\"nameEndDate\":\"endDate\", \"type\":\"dateRange\", \"desc\":\"Date Range\"}]}]"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
@@ -855,14 +857,15 @@ email:
     complaint.enabled: false
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
-    type: smtp
-    encryption: off
+    type: "smtp"
+    encryption: "off"
     allowAttachments: true
     allowDocuments: true
     host: "internalmail.armedia.com"
     allowHyperlinks: true
     userFrom: "***REMOVED***"
     port: 25
+    username: "ann-acm"
     password: "AcMd3v$"
     convertDocumentsToPdf: false
 #################### EcmFile Service Configuration (ecmFileService.properties) ####################
@@ -1227,6 +1230,7 @@ search.plugin:
     \"incident_type_facet\": \"Incident Type\",
     \"status_facet\": \"Status\",
     \"parent_object_type_facet\": \"Parent Object Type\",
+    \"parent_type_facet\": \"Parent Type\",
     \"owner_facet\": \"Owner\",
     \"groups_id_ss\": \"Group\",
     \"tag_token_facet\": \"Tag Token\",
@@ -1278,6 +1282,7 @@ solr:
   batchUpdateBatchSize: 50
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
+  suggestHandler: "suggest_handler"
 ################### State Of Arkcase Configuration (stateOfArkCase.properties) ###################
 state_of_arkcase.reports:
   #specify in which folder reports will be generated and kept there
@@ -1437,6 +1442,17 @@ wopi.plugin:
   enabled: true
 ################### (pdfConversionProperties.properties) ###################
 responseFolderConversion: false
+################### (objectTitleConfig.properties) ###################
+objectTitleConfig: "{
+    \"CASE_FILE\": {
+        \"enableTitleField\": false,
+        \"title\" : \"objectId\"
+    },
+    \"COMPLAINT\": {
+        \"enableTitleField\": false,
+        \"title\": \"objectIdTitle\"
+    }
+}"
 ################### File Uploader Configuration app.properties ################
 fileUploader:
 # ECM file chunks configuration
