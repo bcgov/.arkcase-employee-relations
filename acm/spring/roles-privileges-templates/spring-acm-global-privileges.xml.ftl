@@ -1351,4 +1351,16 @@
             </list>
         </property>
     </bean>
+	<bean id="acmGetSequenceRegistryPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
+        <property name="privilegeName" value="acm-get-sequence-registry"/>
+        <property name="applicationRolesWithPrivilege">
+            <list>
+            <#if acmGetSequenceRegistryPrivilege??>
+                <#list acmGetSequenceRegistryPrivilege as role>
+                    <value>${role}</value>
+                </#list>
+            </#if>
+            </list>
+        </property>
+    </bean>
 </beans>

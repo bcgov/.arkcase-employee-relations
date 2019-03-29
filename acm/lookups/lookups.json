@@ -2816,6 +2816,48 @@
             "readonly":true
         },
         {
+            "name": "sequenceName",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceName.caseNumberSequence",
+                    "key": "caseNumberSequence",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceName.complaintNumberSequence",
+                    "key": "complaintNumberSequence",
+                    "readonly": false
+                }
+            ],
+            "readonly":true
+        },
+        {
+            "name": "sequenceObjectProperty",
+            "entries":[
+                {
+                    "value": "core.lookups.sequenceObjectProperty.id",
+                    "key": "id",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceObjectProperty.caseType",
+                    "key": "caseType",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceObjectProperty.status",
+                    "key": "status",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceObjectProperty.priority",
+                    "key": "priority",
+                    "readonly": false
+                }
+            ],
+            "readonly":true
+        },
+        {
             "name":"objectTitleTypes",
             "entries":[
                 {
@@ -2830,6 +2872,5 @@
                 }
             ]
         }
-        
     ]
 }
