@@ -216,6 +216,16 @@
                     <property name="url" value="/api/{version}/service/ecm/participants/FOLDER/{objectId}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
                 </bean>
+                <bean id="ecmFileUploaderManagementGet" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
+                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                </bean>
+                <bean id="emcFileUploaderManagementPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
+                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
