@@ -1074,6 +1074,26 @@
         </property>
     </bean>
 
+    <bean id="zipFileCreation" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'ArkCaseEmailZipDownloadTemplate'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+
 
     <!-- notificationSenderFactory is defined in spring-library-notification.xml now; do not define it here. -->
 
