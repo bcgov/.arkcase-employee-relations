@@ -910,11 +910,6 @@ ecm:
   viewer.snowbound.enableOCR: false
   #viewer.pdfViewer: value "pdfjs" causes PDF.js to be used.  All other values have no effect.
   viewer.pdfViewer: "default"
-ocr:
-  number.of.files.for.processing: 10
-  purge.attempts: 5
-  provider: "TESSERACT"
-  excludedFileTypes: "user_profile,user_signature,image"
 #################### (alfrescoUpdateMetadata.properties) ####################
 alfresco.metadata.update:
   file: "[{\"http://www.alfresco.org/model/content/1.0}description\": \"description\"}]"
@@ -1383,18 +1378,49 @@ time.plugin:
 ################### Transcribe Configuration (transcribe.properties) ####################
 transcribe:
   enabled: false
-  automatic.enabled: false
-  new.transcribe.for.new.version: false
-  copy.transcribe.for.new.version: true
+  automaticEnabled: false
+  newMediaEngineForNewVersion: false
+  copyMediaEngineForNewVersion: true
   confidence: 80
   cost: 0
-  number.of.files.for.processing: 10
-  word.count.per.item: 20
+  numberOfFilesForProcessing: 10
+  service: "TRANSCRIBE"
+  wordCountPerItem: 20
   provider: "AWS"
   providers: "AWS"
-  provider.purge.attempts: 5
-  allowed.media.duration.in.seconds: 7200
-  silent.between.words.in.seconds: 2
+  providerPurgeAttempts: 5
+  allowedMediaDuration: 7200
+  silentBetweenWords: 2
+  excludedFileTypes:
+  #To achieve cross-platform file paths use "/" for path separator. (Working on windows and *nix)
+  tempPath:
+################### AWS Configuration (aws/config.properties) ####################
+aws.config:
+  bucket: "arkcase-transcribe"
+  region: "us-east-1"
+  host: "https://s3.amazonaws.com"
+  profile: "default"
+################### AWS Credentials (aws/credentials.properties) ####################
+## AccessKeyId and SecretAccessKey must be encrypted. ##
+aws.credentials:
+  awsAccessKeyId:
+  awsSecretAccessKey:
+################### OCR Configuration (ocr.properties) ####################
+ocr:
+  enabled: true
+  automaticEnabled: true
+  newMediaEngineForNewVersion: false
+  copyMediaEngineForNewVersion: true
+  confidence: 0
+  cost: 0
+  numberOfFilesForProcessing: 10
+  service: "OCR"
+  provider: "TESSERACT"
+  providers: "TESSERACT"
+  providerPurgeAttempts: 10
+  excludedFileTypes: "user_profile,user_signature,image"
+  #To achieve cross-platform file paths use "/" for path separator.(Working on windows and *nix)
+  tempPath:
 #################### Username/password notifier properties (usernamePasswordNotifier.properties) ###################
 upcoming:
   password.notification:
