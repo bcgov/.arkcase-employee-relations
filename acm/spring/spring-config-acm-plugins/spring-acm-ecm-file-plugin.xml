@@ -101,6 +101,16 @@
                     <property name="url" value="/api/{version}/service/ecm/upload"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+                <bean id="uploadFileChunksPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/uploadChunks"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="mergeFileChunksPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/mergeChunks"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
                 <bean id="addNewFolder" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"/>
@@ -215,6 +225,16 @@
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/ecm/participants/FOLDER/{objectId}"/>
                     <property name="requiredPrivilege" ref="participantPrivilege"/>
+                </bean>
+                <bean id="ecmFileUploaderManagementGet" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
+                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                </bean>
+                <bean id="emcFileUploaderManagementPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="PUT"/>
+                    <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
+                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
                 </bean>
             </list>
         </property>
