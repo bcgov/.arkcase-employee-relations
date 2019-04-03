@@ -859,7 +859,7 @@ email:
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
-    encryption: "off" 
+    encryption: "off"
     allowAttachments: true
     allowDocuments: true
     host: "internalmail.armedia.com"
@@ -1452,6 +1452,13 @@ objectTitleConfig: "{
     \"COMPLAINT\": {
         \"enableTitleField\": false,
         \"title\": \"objectIdTitle\"
-    } 
+    }
 }"
-
+################### File Uploader Configuration app.properties ################
+fileUploader:
+# ECM file chunks configuration
+  singleChunkFileSizeLimit: 10485760
+  uploadFileSizeLimit: 52428800
+  enableFileChunkUpload: true
+  # ECM file encryption with sha256 hash for distinguishing ArkCase related files on OS level, currently used in file upload impl
+  arkcase.hash.file.identifier: f8fa752546970cb0671f9b465d4c15929e6a38c6b0045a8128a48421d426b06d
