@@ -229,12 +229,12 @@
                 <bean id="ecmFileUploaderManagementGet" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
-                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
                 <bean id="emcFileUploaderManagementPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
-                    <property name="requiredPrivilege" ref="acmEmailConfigurePrivilege"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>
         </property>
