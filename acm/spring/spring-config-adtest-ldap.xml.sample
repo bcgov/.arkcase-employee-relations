@@ -56,7 +56,7 @@
     </beans:bean>
 
      <beans:bean id="adtest_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
-         <!-- ldapUrl: URL of the ldap instance (e.g. ldap://arkcase-ce.local:389) -->
+         <!-- ldapUrl: URL of the ldap instance (e.g. ldaps://arkcase-ce.local:636) -->
         <beans:property name="ldapUrl" ref='ldapUrls' />
         <beans:property name="baseDC" value='${ldapConfig.base}'/>
          <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you

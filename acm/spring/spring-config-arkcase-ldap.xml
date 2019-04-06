@@ -57,7 +57,7 @@
     </beans:bean>
 
     <beans:bean id="arkcase_ldap_config" class="com.armedia.acm.services.users.model.ldap.AcmLdapConfig">
-        <!-- ldapUrl: URL of the ldap instance (e.g. ldap://arkcase.com:389) -->
+        <!-- ldapUrl: URL of the ldap instance (e.g. ldaps://arkcase-ce.local:636) -->
         <beans:property name="ldapUrl" ref='arkcase_ldapUrls'/>
         <beans:property name="baseDC" value='${ldapConfig.base}'/>
         <!-- only specify authUserDn if your LDAP server requires user authentication (do not specify if you
@@ -79,7 +79,7 @@
     </beans:bean>
 
     <beans:bean id="arkcase_sync" class="com.armedia.acm.services.users.model.ldap.AcmLdapSyncConfig" parent="arkcase_ldap_config">
-        <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=arkcase,dc=com). -->
+        <!-- groupSearchBase is the full tree under which groups are found (e.g. ou=groups,dc=arkcase-ce,dc=local). -->
         <beans:property name="groupSearchBase" value='${ldapConfig.groupSearchBase}'/>
         <!-- groupSearchFilter is an LDAP filter to restrict which entries under the groupSearchBase are processsed -->
         <beans:property name="groupSearchFilter" value='${ldapConfig.groupSearchFilter}'/>
@@ -91,6 +91,7 @@
         <beans:property name="allChangedUsersPageFilter" value="${ldapConfig.allChangedUsersPageFilter}"/>
         <beans:property name="userDomain" value='${ldapConfig.userDomain}'/>
         <beans:property name="userPrefix" value="${ldapConfig.userPrefix}"/>
+        <beans:property name="groupPrefix" value="${ldapConfig.groupPrefix}"/>
         <beans:property name="userControlGroup" value="${ldapConfig.userControlGroup}"/>
         <beans:property name="groupControlGroup" value="${ldapConfig.groupControlGroup}"/>
         <beans:property name="userSearchBase" value='${ldapConfig.userSearchBase}'/>

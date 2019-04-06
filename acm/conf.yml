@@ -1,0 +1,9 @@
+application:
+ name: arkcase
+ profile: runtime
+configuration:
+ server:
+  url: http://localhost:9999
+  update.path: "/config"
+  #username: root
+  #password: root

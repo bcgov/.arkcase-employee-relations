@@ -3,12 +3,18 @@ ldapConfig.id=arkcase
 ldapConfig.base=dc=arkcase-ce,dc=local
 ldapConfig.authUserDn=CN=Administrator,CN=Users,DC=arkcase-ce,DC=local
 ldapConfig.authUserPassword=
+
 ldapConfig.userSearchBase=OU=Users,OU=ArkCase
 ldapConfig.groupSearchBase=OU=Groups,OU=ArkCase
+
 ldapConfig.ldapUrl=ldaps://arkcase-ce.local:636
-ldapConfig.userAttributes=cn,userAccountControl,sn,givenName,dn,distinguishedname,memberOf,sAMAccountName,userPrincipalName,uid,uidNumber,c,co,company,department,title,shadowMax,shadowLastChange,msDS-UserPasswordExpiryTimeComputed,modifyTimestamp,description,member
-ldapConfig.userDomain=arkcase-ce.local
+
+ldapConfig.userAttributes=cn,userAccountControl,sn,givenName,dn,distinguishedname,memberOf,sAMAccountName,userPrincipalName,uid,uidNumber,c,co,company,department,title,msDS-UserPasswordExpiryTimeComputed,modifyTimestamp,description,member
+
+ldapConfig.userDomain=arkcase.org
+
 ldapConfig.syncPageSize=500
+
 ldapConfig.enableEditingLdapUsers=true
 ldapConfig.directoryType=activedirectory
 
@@ -25,8 +31,7 @@ ldapConfig.changedGroupSearchFilter=(&(objectclass=group)(modifyTimestamp>=%s))
 ldapConfig.groupSearchPageFilter=(&(objectclass=group)(cn>=%s))
 ldapConfig.changedGroupSearchPageFilter=(&(objectclass=group)(cn>=%s)(modifyTimestamp>=%s))
 ldapConfig.groupsSortingAttribute=cn
-
 ldapConfig.userPrefix=
+ldapConfig.groupPrefix=
 ldapConfig.userControlGroup=
 ldapConfig.groupControlGroup=
-ldapConfig.syncEnabled=true

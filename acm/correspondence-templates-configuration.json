@@ -9,7 +9,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:41:05Z"
 }, {
   "templateId" : "12",
@@ -22,7 +22,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:41:04Z"
 }, {
   "templateId" : "13",
@@ -35,7 +35,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:41:03Z"
 }, {
   "templateId" : "14",
@@ -74,7 +74,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:15Z"
 }, {
   "templateId" : "2",
@@ -87,7 +87,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:41:02Z"
 }, {
   "templateId" : "3",
@@ -100,7 +100,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:13Z"
 }, {
   "templateId" : "4",
@@ -113,7 +113,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:12Z"
 }, {
   "templateId" : "5",
@@ -126,7 +126,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:11Z"
 }, {
   "templateId" : "6",
@@ -139,7 +139,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:40:59Z"
 }, {
   "templateId" : "7",
@@ -152,7 +152,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:11Z"
 }, {
   "templateId" : "8",
@@ -165,7 +165,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:40:57Z"
 }, {
   "templateId" : "9",
@@ -178,7 +178,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-27T09:57:08Z"
 }, {
   "templateId" : "10",
@@ -191,6 +191,6 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "arkcase-admin@arkcase.org",
+  "modifier" : "arkcase-admin",
   "modified" : "2017-02-24T09:40:56Z"
 } ]
