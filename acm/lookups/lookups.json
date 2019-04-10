@@ -2424,7 +2424,7 @@
                     "key": "owning group",
                     "readonly": true
                 },
-				{
+                {
                     "value": "core.lookups.common.collaborator-group",
                     "key": "collaborator group",
                     "readonly": true
@@ -2460,7 +2460,7 @@
                     "key": "owning group",
                     "readonly": true
                 },
-				{
+                {
                     "value": "core.lookups.common.collaborator-group",
                     "key": "collaborator group",
                     "readonly": true
@@ -2511,7 +2511,7 @@
                     "key": "owning group",
                     "readonly": true
                 },
-				{
+                {
                     "value": "core.lookups.common.collaborator-group",
                     "key": "collaborator group",
                     "readonly": true
