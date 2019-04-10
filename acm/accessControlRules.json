@@ -65,6 +65,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -91,6 +92,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -106,6 +108,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -143,6 +146,7 @@
          "userIsParticipantTypeAny":[
             "owner",
             "owning group",
+            "collaborator group",
             "collaborator"
          ],
          "userRolesAny":[
@@ -213,6 +217,7 @@
          "userIsParticipantTypeAny":[
             "owner",
             "owning group",
+            "collaborator group",
             "collaborator",
             "reader"
          ]
@@ -232,6 +237,7 @@
          "userIsParticipantTypeAny":[
             "owner",
             "owning group",
+            "collaborator group",
             "collaborator",
             "reader"
          ]
@@ -251,6 +257,7 @@
          "userIsParticipantTypeAny":[
             "owner",
             "owning group",
+            "collaborator group",
             "collaborator",
             "reader"
          ]
@@ -328,6 +335,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -353,6 +361,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -368,6 +377,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -405,6 +415,7 @@
          "userIsParticipantTypeAny":[
             "owner",
             "owning group",
+            "collaborator group",
             "collaborator"
          ],
          "userRolesAny":[
@@ -515,6 +526,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -573,6 +585,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -650,6 +663,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "approver",
             "collaborator"
@@ -804,6 +818,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
 			"owner",
             "collaborator"
@@ -823,6 +838,7 @@
             "assignee",
             "supervisor",
             "owning group",
+            "collaborator group",
             "co-owner",
             "owner",
             "collaborator"

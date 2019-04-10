@@ -880,7 +880,7 @@ email:
 ecm:
   #participantTypes: "['Assignee','Co-owner','Supervisor','Owning Group','Approver','Collaborator','Follower','Reader','No Access']" 
   documentsParticipantTypes.mappings:
-    group-write: "owning group"
+    group-write: "owning group,collaborator group"
     group-read:
     group-no-access:
     write: "assignee,co-owner,supervisor,collaborator,owner"
