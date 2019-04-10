@@ -2424,6 +2424,11 @@
                     "key": "owning group",
                     "readonly": true
                 },
+				{
+                    "value": "core.lookups.common.collaborator-group",
+                    "key": "collaborator group",
+                    "readonly": true
+                },
                 {
                     "value": "core.lookups.common.collaborator",
                     "key": "collaborator",
@@ -2453,6 +2458,11 @@
                 {
                     "value": "core.lookups.common.owning-group",
                     "key": "owning group",
+                    "readonly": true
+                },
+				{
+                    "value": "core.lookups.common.collaborator-group",
+                    "key": "collaborator group",
                     "readonly": true
                 },
                 {
@@ -2499,6 +2509,11 @@
                 {
                     "value": "core.lookups.common.owning-group",
                     "key": "owning group",
+                    "readonly": true
+                },
+				{
+                    "value": "core.lookups.common.collaborator-group",
+                    "key": "collaborator group",
                     "readonly": true
                 },
                 {
