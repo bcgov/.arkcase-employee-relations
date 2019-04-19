@@ -289,7 +289,7 @@
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.deleted",
-                    "key": "DELETED"
+                    "key": "DELETED"  
                 }
             ],
             "readonly": true
@@ -308,6 +308,10 @@
                 {
                     "value": "core.lookups.timesheet.statuses.approved",
                     "key": "APPROVED"
+                },
+                {
+                    "value": "core.lookups.timesheet.statuses.final",
+                    "key": "FINAL"
                 }
             ],
             "readonly": true
@@ -316,16 +320,20 @@
             "name": "costsheetStatuses",
             "entries": [
                 {
-                    "value": "core.lookups.timesheet.statuses.draft",
+                    "value": "core.lookups.costsheet.statuses.draft",
                     "key": "DRAFT"
                 },
                 {
-                    "value": "core.lookups.timesheet.statuses.inapproval",
+                    "value": "core.lookups.costsheet.statuses.inapproval",
                     "key": "IN_APPROVAL"
                 },
                 {
-                    "value": "core.lookups.timesheet.statuses.approved",
+                    "value": "core.lookups.costsheet.statuses.approved",
                     "key": "APPROVED"
+                },
+                {
+                    "value": "core.lookups.costsheet.statuses.final",
+                    "key": "FINAL"
                 }
             ],
             "readonly": true
