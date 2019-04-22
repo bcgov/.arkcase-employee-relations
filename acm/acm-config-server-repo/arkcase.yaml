@@ -909,6 +909,7 @@ ecm:
   #viewer.snowbound.tabHeader: fileName
   # HDS
   #viewer.snowbound.tabHeader: fileTypeCapitalized
+  viewer.snowbound.tabHeader:
   #Snowbound URL query string encryption key. Leave this property empty if you don't need encryption
   viewer.snowbound.encryptionKey: "ENC(U2FsdGVkX1+/i7RReaawm2OyEcse1DBxZ0+oGE3ZsT5V1ahjvWhorhAZoUB97sHH)"
   viewer.snowbound.forcePDF: true
