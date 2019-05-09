@@ -170,3 +170,8 @@
      background-color: #177bbb;
 }
 */
+
+/* Allows a long list of documents to be scrollable */
+.ui-menu .ui-widget .ui-widget-content .ui-front {
+    top: -1px !important;
+}
