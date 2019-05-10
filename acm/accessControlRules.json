@@ -851,9 +851,8 @@
                 "status": [
                     "DRAFT",
                     "ACTIVE",
-					"IN_APPROVAL",
-                    "INACTIVE",
-			
+                    "IN_APPROVAL",
+                    "INACTIVE"
                 ]
             },
             "userIsParticipantTypeAny": [
@@ -870,7 +869,7 @@
                 "status": [
                     "DRAFT",
                     "ACTIVE",
-					"IN_APPROVAL",
+                    "IN_APPROVAL",
                     "INACTIVE"
                 ]
             },
@@ -880,7 +879,7 @@
             ],
             "userRolesAll": [
             ]
-       },
+       }
 
    ]
 }
