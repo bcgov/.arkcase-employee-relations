@@ -86,6 +86,11 @@
                     <property name="url" value="/api/{version}/service/timesheet/properties"/>
                     <property name="requiredPrivilege" ref="timesheetPrivilege"/>
                 </bean>
+				<bean id="getComplaintByNumber" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/complaint/bynumber"/>
+                    <property name="requiredPrivilege" ref="timesheetPrivilege"/>
+                </bean>
 
             </list>
         </property>
