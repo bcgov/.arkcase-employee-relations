@@ -46,6 +46,11 @@
                     <property name="url" value="/api/{version}/service/transcribe/media/{mediaVersionId}}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+				<bean id="getTranscribeFailureMessageUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/transcribe/mediaFailure/{mediaVersionId}}"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
 				<bean id="compileTranscribeUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/transcribe/{id}/compile"/>
