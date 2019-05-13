@@ -2654,6 +2654,11 @@
                     "value": "core.lookups.businessProcessTypes.notDefinedWorkflow",
                     "key": "notDefinedWorkflow",
                     "readonly": true
+                },
+                {
+                    "value":"core.lookups.businessProcessTypes.arrestWarrant",
+                    "key": "arrestWarrant",
+                    "readonly": true
                 }
             ],
             "readonly": true
