@@ -1506,3 +1506,7 @@ fileUploader:
   enableFileChunkUpload: false
   # ECM file encryption with sha256 hash for distinguishing ArkCase related files on OS level, currently used in file upload impl
   arkcase.hash.file.identifier: f8fa752546970cb0671f9b465d4c15929e6a38c6b0045a8128a48421d426b06d
+document.upload.policy:
+  convertHtmlToPdf: false
+  convertMsgToPdf: false
+  convertEmlToPdf: false
