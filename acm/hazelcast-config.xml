@@ -26,6 +26,7 @@
     <hz:hazelcast id="acmHazelcastInstance">
         <hz:config>
             <hz:instance-name>${acm.hazelcast.instance.name}</hz:instance-name>
+            <hz:group name="${acm.hazelcast.group.name}" password="${acm.hazelcast.group.password}"/>
             <hz:management-center enabled="${acm.hazelcast.management_center.enabled}" url="${acm.hazelcast.management_center.url}"
                 update-interval="${acm.hazelcast.management_center.update_interval}"/>
             <hz:properties>
@@ -37,7 +38,11 @@
             </hz:properties>
             <hz:network port="${acm.hazelcast.network.port}" port-auto-increment="${acm.hazelcast.network.port.auto_increment}">
                 <hz:join>
-                    <hz:multicast enabled="${acm.hazelcast.network.multicast.enabled}">
+                    <hz:multicast enabled="${acm.hazelcast.network.multicast.enabled}"
+                        multicast-port="${acm.hazelcast.network.multicast.port}" multicast-group="${acm.hazelcast.network.multicast.group}"
+                        multicast-time-to-live="${acm.hazelcast.network.multicast.ttl}"
+                        multicast-timeout-seconds="${acm.hazelcast.network.multicast.timeout_second}"
+                        loopback-mode-enabled="${acm.hazelcast.network.multicast.loopback_mode_enabled}">
                     </hz:multicast>
                     <hz:tcp-ip enabled="${acm.hazelcast.network.tcp_ip.enabled}">
                         <hz:members>${acm.hazelcast.network.tcp_ip.members}</hz:members>
