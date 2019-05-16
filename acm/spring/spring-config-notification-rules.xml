@@ -1093,7 +1093,6 @@
             </value>
         </property>
     </bean>
-    
 
     <bean id="billingAddedRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
@@ -1133,27 +1132,6 @@
                   ]]>
             </value>
         </property>
-    </bean>
-
-
-
-    <!-- notificationSenderFactory is defined in spring-library-notification.xml now; do not define it here. -->
-
-    <!-- Task Scheduler -->
-    <task:scheduled-tasks scheduler="notificationTaskScheduler">
-        <task:scheduled ref="notificationService" method="run" fixed-delay="60000"/>
-    </task:scheduled-tasks>
-
-    <!-- Service Definition -->
-    <bean id="notificationService" class="com.armedia.acm.services.notification.service.NotificationServiceImpl">
-        <property name="propertyFileManager" ref="propertyFileManager"/>
-        <property name="notificationPropertyFileLocation" ref="notificationPropertyFileLocation"/>
-        <property name="notificationDao" ref="notificationDao"/>
-        <property name="notificationEventPublisher" ref="notificationEventPublisher"/>
-        <property name="springContextHolder" ref="acmContextHolder"/>
-        <property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <property name="notificationFormatter" ref="notificationFormatter"/>
-        <property name="notificationConfig" ref="notificationConfig"/>
     </bean>
 
 </beans>
