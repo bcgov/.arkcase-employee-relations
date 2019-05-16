@@ -204,10 +204,19 @@ activiti:
   job.executor.activate: true
   workflow.file.pattern: "classpath*:/activiti/acm*.bpmn20.xml,classpath*:/activiti/ArkCase*.bpmn20.xml,classpath*:/activiti/DefaultComplaint*.bpmn20.xml,classpath*:/activiti/Corrective*.bpmn20.xml,classpath*:/activiti/Media*.bpmn20.xml"
 ################### Alfresco Ldap Syncer Service Configuration (alfrescoLdapSyncerService.properties) ####################
-alfresco.admin:
+alfresco:
+  admin:
   baseurl: "https://acm-arkcase/alfresco/s/enterprise/admin/admin-sync"
   username: "admin"
   password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
+  sync:
+    host: "acm-arkcase"
+    port: "443"
+    protocol: "https"
+    contextRoot: "alfresco"
+    username: admin
+    password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
+    enabled: false
 ################### Alfresco RMA Plugin Configuration (alfrescoRmaPlugin.properties) ####################
 alfresco_host: "acm-alfresco"
 #alfresco_port: 8080
@@ -513,9 +522,8 @@ audit.plugin:
     syslog.host: "localhost"
     syslog.port: 514
   #database log configuration
-  batch.run: true
   purge.days: 30
-  batch.frequency: 3600000
+  batch.run: true
   #requests logging configuration
   requests.logging:
     enabled: false
@@ -758,7 +766,6 @@ dashboard.plugin:
 ################### DAC Configuration (dataAccessControl.properties) ###################
 dac:
   batchUpdateBasedOnLastModifiedEnabled: true
-  batchUpdateFrequencyInMilliseconds: 3600000
   batchUpdateBatchSize: 50
   enableDocumentACL: true
   fallbackExpression:
@@ -1284,14 +1291,6 @@ solr:
   #last modified date.  Set to true when database updates 
   #are made outside the application, or if you need to catch up with the database.
   enableBatchUpdateBasedOnLastModified: true
-  #if enableBatchUpdateBasedOnLastModified is true, this 
-  #property says how often to scan for updates.  Since most 
-  #updates should occur through the application (and thus be 
-  #indexed right away via events), the batch update should not run
-  #too often... unless you have active database feeds outside the 
-  #application.  3600000 ms = 1 hour...
-  batchUpdateFrequencyInMilliseconds: 3600000
-  #batchUpdateFrequencyInMilliseconds: 10000
   #how many objects to extract at once during batch update.
   batchUpdateBatchSize: 50
   #whether to index file contents or just store document-related metadata
@@ -1306,8 +1305,6 @@ state_of_arkcase.reports:
 ################### Subscription Plugin Configuration (subsriptionPlugin.properties) ###################
 ##Subscription module : API  return messages, messages included in the AcmObjectNotFoundException etc..
 subscription.plugin:
-  ##check for subscription events every three minutes.
-  batchUpdateFrequencyInMilliseconds: 180000
   removed:
     successful: "Subscription Removed Successfully"
     failed: "Subscription Was not Removed Due To SQL exception"
