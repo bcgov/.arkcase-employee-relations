@@ -1094,25 +1094,44 @@
         </property>
     </bean>
 
-
-    <!-- notificationSenderFactory is defined in spring-library-notification.xml now; do not define it here. -->
-
-    <!-- Task Scheduler -->
-    <task:scheduler id="notificationTaskScheduler" pool-size="1"/>
-    <task:scheduled-tasks scheduler="notificationTaskScheduler">
-        <task:scheduled ref="notificationService" method="run" fixed-delay="60000"/>
-    </task:scheduled-tasks>
-
-    <!-- Service Definition -->
-    <bean id="notificationService" class="com.armedia.acm.services.notification.service.NotificationServiceImpl">
-        <property name="propertyFileManager" ref="propertyFileManager"/>
-        <property name="notificationPropertyFileLocation" ref="notificationPropertyFileLocation"/>
-        <property name="notificationDao" ref="notificationDao"/>
-        <property name="notificationEventPublisher" ref="notificationEventPublisher"/>
-        <property name="springContextHolder" ref="acmContextHolder"/>
-        <property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <property name="notificationFormatter" ref="notificationFormatter"/>
-        <property name="notificationConfig" ref="notificationConfig"/>
+    <bean id="billingAddedRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="acmEntitySendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                         n.created >= :lastRunDate
+                    AND
+                    n.templateModelName = 'billingInvoice'
+                ]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="arrestWarrant" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'arrestWarrant'
+                  ]]>
+            </value>
+        </property>
     </bean>
 
 </beans>

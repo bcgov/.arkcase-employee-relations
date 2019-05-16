@@ -554,6 +554,22 @@
                     <property name="url" value="/api/{version}/service/object-title-config"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/admin/application/version"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/admin/documentUploadPolicy"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/admin/documentUploadPolicy"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
+
             </list>
         </property>
     </bean>

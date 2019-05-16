@@ -843,6 +843,43 @@
             "owner",
             "collaborator"
          ]
-      }
+      },
+	  {
+            "actionName": "createBillingItem",
+            "objectType": "CASE_FILE",
+            "objectProperties": {
+                "status": [
+                    "DRAFT",
+                    "ACTIVE",
+                    "IN_APPROVAL",
+                    "INACTIVE"
+                ]
+            },
+            "userIsParticipantTypeAny": [
+            ],
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ]
+       },
+	   {
+            "actionName": "createBillingItem",
+            "objectType": "COMPLAINT",
+            "objectProperties": {
+                "status": [
+                    "DRAFT",
+                    "ACTIVE",
+                    "IN_APPROVAL",
+                    "INACTIVE"
+                ]
+            },
+            "userIsParticipantTypeAny": [
+            ],
+            "userRolesAny": [
+            ],
+            "userRolesAll": [
+            ]
+       }
+
    ]
 }
