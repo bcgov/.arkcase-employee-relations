@@ -1507,3 +1507,52 @@ document.upload.policy:
   convertHtmlToPdf: false
   convertMsgToPdf: false
   convertEmlToPdf: false
+
+#### HAZELCAST Arkcase CONFIGURATION ####
+acm.hazelcast:
+  instance:
+    #name of the instance. It's used if need to reuse instance outside of spring context, from hazelcast instance registry. Arkcase is using this in web.xml
+    name: acmHazelcastInstance1
+
+
+  #### Management Center configuration ####
+  management_center:
+    enabled: true
+    url: http://arkcase-host:8880/hazelcast-mancenter
+    update_interval: 3
+
+
+  #### NETWORK CONFIGURATION ####
+  network:
+    #on which port to listen
+    port: 5701
+    port.auto_increment: false
+
+    #configuration for multicast
+    multicast:
+      enabled: false
+
+    #configuratoin for tcp ip
+    tcp_ip:
+      enabled: true
+      members: 192.168.56.1, 192.168.56.201, 192.168.56.202
+
+    #configuration for aws
+    aws:
+      enabled: false
+
+    #define network interfaces on which hazelcast should bind
+    interfaces:
+      enabled: true
+      interfaces:
+        interface: 192.168.56.1
+
+
+  #### Various properties for hazelcast configuration. ####
+  diagnostics.enabled: true
+  #From docs: Log cluster debug state periodically
+  log.state: true
+  #which logging should use. Possible values are:jdk, log4j, slf4j, none
+  logging.type: slf4j
+  #From docs: Bind both server-socket and client-sockets to any local interface
+  socket.bind.any: true
