@@ -3,7 +3,7 @@ application:
  profile: runtime
 configuration:
  server:
-  url: http://localhost:8888
+  url: http://localhost:9999
   update.path: "/config"
   #username: root
   #password: root

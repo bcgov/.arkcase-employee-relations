@@ -42,6 +42,12 @@
 							<xsl:value-of select="timesheet/status"/>
 						</fo:block>
                     </fo:block>
+					<fo:block font-size="10pt" space-after="0.15in">
+                       Bureau
+						<fo:block font-weight="bold" border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
+							<xsl:value-of select="timesheet/bureau"/>
+						</fo:block>
+                    </fo:block>
                     <fo:block font-size="10pt" space-after="0.15in" width="100%">
 						<fo:inline font-weight="bold"  border-color="#badeff" border-style="solid" border-width=".4mm" height="12pt" padding="1mm">
 							<xsl:value-of select="timesheet/periodWeek"/>
@@ -71,10 +77,10 @@
 										<fo:block font-weight="bold" text-align="center">Type</fo:block>
 									</fo:table-cell>
 									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-										<fo:block font-weight="bold" text-align="center">Charge Code</fo:block>
+										<fo:block font-weight="bold" text-align="center">AG#</fo:block>
 									</fo:table-cell>
 									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
-										<fo:block font-weight="bold" text-align="center">Charge Role</fo:block>
+										<fo:block font-weight="bold" text-align="center">Billing Code</fo:block>
 									</fo:table-cell>
 									<fo:table-cell border-width="1pt" border-color="#badeff" border-style="solid" padding="1mm">
 										<fo:block font-weight="bold" text-align="center">Date</fo:block>
