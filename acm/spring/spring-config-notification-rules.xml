@@ -1140,7 +1140,6 @@
     <!-- notificationSenderFactory is defined in spring-library-notification.xml now; do not define it here. -->
 
     <!-- Task Scheduler -->
-    <task:scheduler id="notificationTaskScheduler" pool-size="1"/>
     <task:scheduled-tasks scheduler="notificationTaskScheduler">
         <task:scheduled ref="notificationService" method="run" fixed-delay="60000"/>
     </task:scheduled-tasks>
