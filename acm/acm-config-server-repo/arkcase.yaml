@@ -167,8 +167,8 @@ report:
   plugin:
     PENTAHO_SERVER_URL: "https://acm-arkcase"
     PENTAHO_SERVER_PORT: 443
-    PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
-    PENTAHO_SERVER_INTERNAL_PORT: 443
+    PENTAHO_SERVER_INTERNAL_URL: "https://acm-pentaho"
+    PENTAHO_SERVER_INTERNAL_PORT: 2002
     PENTAHO_SERVER_USER: "ann-acm"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
