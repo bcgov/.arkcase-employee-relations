@@ -29,19 +29,9 @@
      <beans:bean id="${id}_ldapSyncPartialJobDescriptor" class="com.armedia.acm.services.users.service.ldap.LdapPartialSyncJobDescriptor" parent="acmJobDescriptor">
         <beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/>
     </beans:bean> 
-
-    <beans:bean id="${id}_ldapSyncJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
-        <beans:property name="jobDetail" ref="${id}_ldapSyncJob"/>
-        <beans:property name="cronExpression" value="0 5 0 1/1 * ? *"/>
-    </beans:bean>
-
-    <beans:bean id="${id}_ldapSyncPartialJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
-        <beans:property name="jobDetail" ref="${id}_ldapPartialSyncJob"/>
-        <beans:property name="cronExpression" value="0 0/30 * 1/1 * ? *"/>
-    </beans:bean>
                             
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
+    <beans:bean id="${id}_ldapSyncService" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
@@ -108,6 +98,8 @@
         <beans:property name="userSyncAttributes" value='${r"${ldapConfig.userAttributes}"}'/>
         <beans:property name="changedGroupSearchFilter" value='${r"${ldapConfig.changedGroupSearchFilter}"}'/>
         <beans:property name="changedGroupSearchPageFilter" value='${r"${ldapConfig.changedGroupSearchPageFilter}"}'/>
+        <beans:property name="partialSyncCron" value='${r"${ldapConfig.partialSyncCron}"}'/>
+        <beans:property name="fullSyncCron" value='${r"${ldapConfig.fullSyncCron}"}'/>
     </beans:bean>
 
      <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig" parent="${id}_ldap_config">
@@ -181,7 +173,7 @@
         <beans:bean id="${id}_ldapSync" 
             class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
             <beans:property name="transactionManager" ref="transactionManager" />
-            <beans:property name="target" ref="${id}_ldapSyncJob" />
+            <beans:property name="target" ref="${id}_ldapSyncService" />
             <beans:property name="transactionAttributes">
                 <beans:props>
                     <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
