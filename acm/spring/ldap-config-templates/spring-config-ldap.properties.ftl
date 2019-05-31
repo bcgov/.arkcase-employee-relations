@@ -36,3 +36,5 @@ ldapConfig.userPrefix=${userPrefix}
 ldapConfig.groupPrefix=${groupPrefix}
 ldapConfig.userControlGroup=${userControlGroup}
 ldapConfig.groupControlGroup=${groupControlGroup}
+ldapConfig.partialSyncCron=${partialSyncCron}
+ldapConfig.fullSyncCron=${fullSyncCron}
