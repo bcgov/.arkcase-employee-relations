@@ -206,9 +206,9 @@ activiti:
 ################### Alfresco Ldap Syncer Service Configuration (alfrescoLdapSyncerService.properties) ####################
 alfresco:
   admin:
-  baseurl: "https://acm-arkcase/alfresco/s/enterprise/admin/admin-sync"
-  username: "admin"
-  password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
+    baseurl: "https://acm-arkcase/alfresco/s/enterprise/admin/admin-sync"
+    username: "admin"
+    password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
   sync:
     host: "acm-arkcase"
     port: "443"
