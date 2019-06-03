@@ -1414,6 +1414,8 @@ aws.config:
   region: "us-east-1"
   host: "https://s3.amazonaws.com"
   profile: "default"
+  maxSpeakerLabels: 10
+  showSpeakerLabels: true
 ################### AWS Credentials (aws/credentials.properties) ####################
 ## AccessKeyId and SecretAccessKey must be encrypted. ##
 aws.credentials:
