@@ -849,6 +849,7 @@ due.tasks.notification.enabled: true
 upcoming.tasks:
   notification:
     subject: "Task soon to become overdue notification."
+    body.template: "The task %1$s with ID %2$s is due on %3$s."
 overdue.tasks.notification:
   subject: "Task overdue notification"
   body.template: "The task %1$s with ID %2$s was due on %3$s."
