@@ -167,8 +167,8 @@ report:
   plugin:
     PENTAHO_SERVER_URL: "https://acm-arkcase"
     PENTAHO_SERVER_PORT: 443
-    PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
-    PENTAHO_SERVER_INTERNAL_PORT: 443
+    PENTAHO_SERVER_INTERNAL_URL: "https://acm-pentaho"
+    PENTAHO_SERVER_INTERNAL_PORT: 2002
     PENTAHO_SERVER_USER: "ann-acm"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
@@ -486,6 +486,12 @@ application:
   \"ROLE_ADMINISTRATOR\": \"acmAdminModulePrivilege,acmAnalyticsAuditModulePrivilege,acmAnalyticsModulePrivilege,acmAuditModulePrivilege,acmCalendarAdminPrivilege,acmCalendarEventsCreatePrivilege,acmCalendarEventsDeletePrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmCaseApprovePrivilege,acmCaseModulePrivilege,acmCategoryManagementPrivilege,acmComplaintApprovePrivilege,acmComplaintCreatePrivilege,acmComplaintListPrivilege,acmComplaintModulePrivilege,acmComplaintSavePrivilege,acmCostModulePrivilege,acmDashboardModulePrivilege,acmDeleteNoteByIdPrivilege,acmEmailConfigurePrivilege,acmGenerateCorrespondencePrivilege,acmGlobalAllowPrivilege,acmListNotesPrivilege,acmNotificationModulePrivilege,acmNotificationPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationListPrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOutlookListObjectsPrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationListPrivilege,acmPersonAssociationSavePrivilege,acmPersonDeletePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonModulePrivilege,acmPersonSavePrivilege,acmPersonTypesPrivilege,acmReportModulePrivilege,acmSaveNotePrivilege,acmSearchModulePrivilege,acmSearchPrivilege,acmSignatureConfirmPrivilege,acmSignatureFindPrivilege,acmSubscriptionModulePrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmTaskCompletePrivilege,acmTaskCreatePrivilege,acmTaskDeletePrivilege,acmTaskListPrivilege,acmTaskModulePrivilege,acmTaskSavePrivilege,acmTimeModulePrivilege,adminPrivilege,auditPrivilege,auditReadEventsForObjectPrivilege,blogPrivilege,caseFileCreatePrivilege,caseFileListPrivilege,costsheetApprovePrivilege,costsheetCreatePrivilege,costsheetPrivilege,dashboardPrivilege,documentRepositoryManagerPrivilege,documentRepositoryModulePrivilege,filePrivilege,generateStateOfArkcasePrivilege,getStateOfArkcasePrivilege,helloWorldPrivilege,listLockedObjectsPrivilege,listLocksDetailsPrivilege,listMilestonesGroupedByDate,listStateOfArkcasePrivilege,objectLockPrivilege,objectUnLockPrivilege,participantPrivilege,profilePrivilege,reportPrivilege,saveCasePrivilege,searchPrivilege,splitCaseFilePrivilege,subscribePrivilege,tagPrivilege,timesheetApprovePrivilege,timesheetCreatePrivilege,timesheetPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmGetSequenceConfigurationPrivilege,acmSaveSequenceConfigurationPrivilege,acmGetSequenceResetPrivilege,acmSaveSequenceResetPrivilege,acmGetSequenceRegistryPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\",
   \"ROLE_EXTERNAL\": \"acmGlobalAllowPrivilege,dashboardPrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,tagPrivilege,acmSearchModulePrivilege,profilePrivilege,acmAuditModulePrivilege,participantPrivilege,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmPersonTypesPrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmSearchPrivilege,acmNotificationPrivilege,acmDashboardModulePrivilege,acmTagModulePrivilege,acmCaseModulePrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
   \"ROLE_CONTRIBUTOR\": \"dashboardPrivilege,acmPersonListPrivilege,subscribePrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,blogPrivilege,acmListNotesPrivilege,tagPrivilege,acmSearchModulePrivilege,acmPersonDeletePrivilege,timesheetCreatePrivilege,acmSignatureFindPrivilege,acmTaskDeletePrivilege,profilePrivilege,acmTaskCreatePrivilege,acmPersonFindPrivilege,acmTaskListPrivilege,acmAuditModulePrivilege,acmComplaintListPrivilege,participantPrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,listMilestonesGroupedByDate,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,costsheetCreatePrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmGlobalAllowPrivilege,acmTaskSavePrivilege,acmPersonTypesPrivilege,splitCaseFilePrivilege,acmGenerateCorrespondencePrivilege,caseFileListPrivilege,acmComplaintSavePrivilege,acmSaveNotePrivilege,acmTaskCompletePrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmPersonSavePrivilege,acmOutlookListObjectsPrivilege,searchPrivilege,auditReadEventsForObjectPrivilege,acmSearchPrivilege,acmDeleteNoteByIdPrivilege,acmNotificationPrivilege,acmSignatureConfirmPrivilege,acmDashboardModulePrivilege,costsheetPrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmCaseModulePrivilege,saveCasePrivilege,objectLockPrivilege,objectUnLockPrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\"}"
+  properties:
+    idleLimit: 600000
+    idlePull: 5000
+    idleConfirm: 15000
+    displayUserName: "userName"
+    historyDays: 30
 ################### Arkcase ActiveMq Configuration (arkcase-activemq.properties) ####################
 # Comma-separated list of package names.  Objects of classes from these
 # packages (and sub-packages under these packages) can be sent to an
@@ -559,14 +565,16 @@ audit.plugin:
 #       eg. if AcmEvent has EcmFile as event source, we can use expressions like 'Document ' + source.fileName
 audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' added.'\",
 \"com.armedia.acm.ecm.file.downloaded\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' downloaded.'\",
-\"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\"}"
+\"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
+\"com.armedia.acm.smtp.event.sent.hyperlink\":\"'[' + source?.fileNames[0] + ']'\",
+\"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
 com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armedia.acm.objectassociation.reference.added,
 com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassociation.reference.updated, com.armedia.acm.file.renamed,
-com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
+com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
 com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted, com.armedia.acm.person.organization.updated, com.armedia.acm.person.created,
 com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted, com.armedia.acm.person.personAlias.updated,
 com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
@@ -580,7 +588,7 @@ com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.chan
 com.armedia.acm.correspondence.file.added, com.armedia.acm.complaint.participant.added, com.armedia.acm.complaint.participant.updated, com.armedia.acm.complaint.participant.deleted, com.armedia.acm.complaint.costsheet.associated,
 com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.activiti.task.create,
 com.armedia.acm.associatedtag.created, com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armed.acm.complaint.location.updated,
-com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
+com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
 com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated, com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted,
 com.armedia.acm.person.organization.updated, com.armedia.acm.person.created, com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted,
 com.armedia.acm.person.personAlias.updated, com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
@@ -590,11 +598,11 @@ com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.ar
 TASK.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.task.added, com.armedia.acm.activiti.task.create, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.app.task.details.changed, com.armedia.acm.app.task.priority.changed, com.armedia.acm.associatedtag.created, com.armedia.acm.app.task.status.changed,
-com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.app.task.reworkdetails.changed, com.armedia.acm.smtp.event.sent, com.armedia.acm.app.signature.signed.task,
+com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.app.task.reworkdetails.changed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.app.signature.signed.task,
 com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined"
 DOC_REPO.history.event.types: "com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced, com.armedia.acm.file.version.set, com.armedia.acm.file.deleted,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.associatedtag.created,
-com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.objectassociation.reference.added,
+com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.objectassociation.reference.added,
 com.armedia.acm.smtp.event.received, com.armedia.acm.documentrepository.created, com.armedia.acm.documentrepository.updated,
 com.armedia.acm.documentrepository.viewed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.folder.created, com.armedia.acm.folder.renamed,
 com.armedia.acm.documentrepository.participant.deleted, com.armedia.acm.documentrepository.participant.added, com.armedia.acm.documentrepository.name.updated,
@@ -854,6 +862,7 @@ due.tasks.notification.enabled: true
 upcoming.tasks:
   notification:
     subject: "Task soon to become overdue notification."
+    body.template: "The task %1$s with ID %2$s is due on %3$s."
 overdue.tasks.notification:
   subject: "Task overdue notification"
   body.template: "The task %1$s with ID %2$s was due on %3$s."
@@ -1074,6 +1083,7 @@ auditEvent:
   ,\"eventType.com.armedia.acm.objectlock.checkin\": \"Checked In\"
   ,\"eventType.com.armedia.acm.objectlock.cancel\": \"Cancel Editing\"
   ,\"eventType.com.armedia.acm.smtp.event.sent\": \"Document Emailed\"
+  ,\"eventType.com.armedia.acm.smtp.event.sent.hyperlink\":\"Document Emailed\"
   ,\"eventType.com.armedia.acm.smtp.event.received\": \"Email Received\"
   ,\"eventType.com.armedia.acm.app.signature.signed.task\": \"Task Signed\"
   ,\"eventType.com.armedia.acm.documentrepository.created\": \"Document Repository Created\"
@@ -1411,6 +1421,8 @@ aws.config:
   region: "us-east-1"
   host: "https://s3.amazonaws.com"
   profile: "default"
+  maxSpeakerLabels: 10
+  showSpeakerLabels: true
 ################### AWS Credentials (aws/credentials.properties) ####################
 ## AccessKeyId and SecretAccessKey must be encrypted. ##
 aws.credentials:
