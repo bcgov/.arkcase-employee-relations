@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="caseSuggestionPrivileges" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivileges">
+        <property name="pluginName" value="Case Suggestion Service"/>
+        <property name="privileges">
+            <list>
+                <ref bean="caseFileCreatePrivilege"/>
+            </list>
+        </property>
+
+        <property name="urlPrivileges">
+            <list>
+                <bean id="findSimilarCases" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/suggestion/{title}"/>
+                    <property name="requiredPrivilege" ref="caseFileCreatePrivilege"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+</beans>
