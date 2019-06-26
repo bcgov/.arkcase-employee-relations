@@ -1522,19 +1522,26 @@ document.upload.policy:
 
 #### HAZELCAST Arkcase CONFIGURATION ####
 acm.hazelcast:
+  ## Instance configuration ##
   instance:
+    #id of the instance. It's used if needed injecting as spring bean
+    id: acmHazelcastInstance
     #name of the instance. It's used if need to reuse instance outside of spring context, from hazelcast instance registry. Arkcase is using this in web.xml
-    name: acmHazelcastInstance1
+    name: acmHazelcastInstance
 
+  ## Group configuration ##
+  group:
+    name: arkcase-cluster
+    password:
 
-  #### Management Center configuration ####
+  ## Management Center configuration ##
   management_center:
     enabled: true
     url: http://arkcase-host:8880/hazelcast-mancenter
     update_interval: 3
 
 
-  #### NETWORK CONFIGURATION ####
+  ## Network configuration ##
   network:
     #on which port to listen
     port: 5701
@@ -1543,11 +1550,17 @@ acm.hazelcast:
     #configuration for multicast
     multicast:
       enabled: false
-
-    #configuratoin for tcp ip
+      port: 54327
+      group: 224.2.2.3
+      timeout_second: 2
+      loopback_mode_enabled: false
+      ttl: 32
+      
+    #configuration for tcp ip
     tcp_ip:
-      enabled: true
-      members: 192.168.56.1, 192.168.56.201, 192.168.56.202
+      enabled: false
+      #Define at least one member which will be active. Accepts comma separated list of ip addresses.
+      members:
 
     #configuration for aws
     aws:
@@ -1555,12 +1568,12 @@ acm.hazelcast:
 
     #define network interfaces on which hazelcast should bind
     interfaces:
-      enabled: true
+      enabled: false
       interfaces:
-        interface: 192.168.56.1
+        interface:
 
 
-  #### Various properties for hazelcast configuration. ####
+  ## Various properties for hazelcast configuration. ##
   diagnostics.enabled: true
   #From docs: Log cluster debug state periodically
   log.state: true
