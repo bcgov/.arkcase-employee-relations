@@ -11,19 +11,27 @@
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
         <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-${id}-ldap.properties"/>
     </beans:bean>
+
+    <beans:bean name="${id}_ldapSyncJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <beans:property name="jobClass" value="com.armedia.acm.services.users.service.ldap.LdapSyncJobDescriptor"/>
+        <beans:property name="durability" value="true"/>
+    </beans:bean>
+
+    <beans:bean name="${id}_ldapPartialSyncJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <beans:property name="jobClass" value="com.armedia.acm.services.users.service.ldap.LdapPartialSyncJobDescriptor"/>
+        <beans:property name="durability" value="true"/>
+    </beans:bean>
+
+    <beans:bean id="${id}_ldapSyncJobDescriptor" class="com.armedia.acm.services.users.service.ldap.LdapSyncJobDescriptor" parent="acmJobDescriptor">
+        <beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/>
+    </beans:bean>    
+
+     <beans:bean id="${id}_ldapSyncPartialJobDescriptor" class="com.armedia.acm.services.users.service.ldap.LdapPartialSyncJobDescriptor" parent="acmJobDescriptor">
+        <beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/>
+    </beans:bean> 
                             
-    <!-- change the ref to match the bean name of your ldap sync job; and change the 
-         cron to the desired cron expression (see JavaDoc for org.springframework.scheduling.support.CronSequenceGenerator).  
-         No other changes are needed. -->
-    <task:scheduled-tasks scheduler="ldapSyncTaskScheduler">
-        <task:scheduled ref="${id}_ldapSyncJob" method="ldapSync" cron="0 5 * * * *"/>
-        <task:scheduled ref="${id}_ldapPartialSyncJob" method="ldapPartialSync" cron="0 0/30 * * * *"/>
-    </task:scheduled-tasks>
-
-    <task:annotation-driven scheduler="ldapSyncTaskScheduler"/>
-
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="${id}_ldapSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
+    <beans:bean id="${id}_ldapSyncService" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
@@ -32,25 +40,10 @@
         <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
         <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
         <beans:property name="syncEnabled" value='${r"${ldapConfig.syncEnabled}"}'/>
-        <beans:property name="propertyFileManager" ref="propertyFileManager"/>
-        <beans:property name="ldapLastSyncPropertyFileLocation" value="${r'${user.home}'}/.arkcase/acm/ldapLastSync.properties"/>
         <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
+        <beans:property name="schedulerService" ref="acmSchedulerService"/>
     </beans:bean>
 	
-	<!-- ensure this bean id is unique across all the partial LDAP sync beans. -->
-    <beans:bean id="${id}_ldapPartialSyncJob" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapPartialSync">
-        <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
-        <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
-        <!-- do not change ldapDao or ldapSyncDatabaseHelper properties. -->
-        <beans:property name="ldapDao" ref="customPagedLdapDao"/>
-        <beans:property name="springLdapUserDao" ref="springLdapUserDao"/>
-        <beans:property name="auditPropertyEntityAdapter" ref="auditPropertyEntityAdapter"/>
-        <beans:property name="syncEnabled" value='${r"${ldapConfig.syncEnabled}"}'/>
-        <beans:property name="propertyFileManager" ref="propertyFileManager"/>
-        <beans:property name="ldapLastSyncPropertyFileLocation" value="${r'${user.home}'}/.arkcase/acm/ldapLastSync.properties"/>
-        <beans:property name="ldapSyncProcessor" ref="ldapSyncProcessor"/>
-    </beans:bean>
-
     <beans:bean id="${id}_ldapUrl" class="java.lang.String">
         <beans:constructor-arg value='${r"${ldapConfig.ldapUrl}"}'/>
     </beans:bean>
@@ -105,6 +98,8 @@
         <beans:property name="userSyncAttributes" value='${r"${ldapConfig.userAttributes}"}'/>
         <beans:property name="changedGroupSearchFilter" value='${r"${ldapConfig.changedGroupSearchFilter}"}'/>
         <beans:property name="changedGroupSearchPageFilter" value='${r"${ldapConfig.changedGroupSearchPageFilter}"}'/>
+        <beans:property name="partialSyncCron" value='${r"${ldapConfig.partialSyncCron}"}'/>
+        <beans:property name="fullSyncCron" value='${r"${ldapConfig.fullSyncCron}"}'/>
     </beans:bean>
 
      <beans:bean id="${id}_authenticate" class="com.armedia.acm.services.users.model.ldap.AcmLdapAuthenticateConfig" parent="${id}_ldap_config">
@@ -178,7 +173,7 @@
         <beans:bean id="${id}_ldapSync" 
             class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
             <beans:property name="transactionManager" ref="transactionManager" />
-            <beans:property name="target" ref="${id}_ldapSyncJob" />
+            <beans:property name="target" ref="${id}_ldapSyncService" />
             <beans:property name="transactionAttributes">
                 <beans:props>
                     <beans:prop key="*">PROPAGATION_REQUIRES_NEW</beans:prop>
