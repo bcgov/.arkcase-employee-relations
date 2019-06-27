@@ -19,3 +19,4 @@ seleniumTests/SeleniumDownload
 .idea/*
 acm/arkcase-instance-identity.properties
 onlyoffice/
+.mule/*
