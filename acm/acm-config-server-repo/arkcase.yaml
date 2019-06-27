@@ -1569,4 +1569,4 @@ acm.hazelcast:
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
-mule.workingDirectory: "${user.home}/.arkcase/mule" 
+mule.workingDirectory: "${user.home}/.arkcase/.mule" 
