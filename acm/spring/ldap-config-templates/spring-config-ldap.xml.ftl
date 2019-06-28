@@ -7,7 +7,9 @@
                             http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
                             http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 
-    <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
+	<#assign directoryType="${directoryType}"/> 
+	
+	<beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
         <beans:property name="location" value="file:${r'${user.home}'}/.arkcase/acm/spring/spring-config-${id}-ldap.properties"/>
     </beans:bean>
@@ -119,41 +121,82 @@
             <beans:constructor-arg index="2" ref="${id}_contextSource" />
         </beans:bean>
         
-        <beans:bean id="${id}_authenticationProvider"
-                class="com.armedia.acm.auth.AcmLdapAuthenticationProvider">
-            <beans:constructor-arg>
-                <beans:bean
-                        class="org.springframework.security.ldap.authentication.BindAuthenticator">
-                    <beans:constructor-arg ref="${id}_contextSource" />
-                    <beans:property name="userSearch" ref="${id}_userSearch"/>
-                </beans:bean>
-            </beans:constructor-arg>
-            <beans:constructor-arg>
-                <beans:bean
-                        class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
-                    <beans:constructor-arg ref="${id}_contextSource" />
-                    <beans:constructor-arg value='${r"${ldapConfig.groupSearchBase}"}'/>
-                    <beans:property name="groupSearchFilter" value="member={0}"/>
-                    <beans:property name="rolePrefix" value=""/>
-                    <beans:property name="searchSubtree" value="true"/>
-                    <beans:property name="convertToUpperCase" value="true"/>
-                    <beans:property name="ignorePartialResultException" value="true"/>
-                </beans:bean>
-            </beans:constructor-arg>
-            <beans:property name="userDao" ref="userJpaDao"/>
-            <beans:property name="ldapSyncService" ref="${id}_ldapSyncJob"/>
-        </beans:bean>
-
-        <beans:bean id="${id}_contextSource"
+		<#if directoryType == "openldap">
+			<beans:bean id="${id}_authenticationProvider"
+					class="com.armedia.acm.auth.AcmLdapAuthenticationProvider">
+				<beans:constructor-arg>
+					<beans:bean
+							class="org.springframework.security.ldap.authentication.BindAuthenticator">
+						<beans:constructor-arg ref="${id}_contextSource" />
+						<beans:property name="userSearch" ref="${id}_userSearch"/>
+					</beans:bean>
+				</beans:constructor-arg>
+				<beans:constructor-arg>
+					<beans:bean
+							class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+						<beans:constructor-arg ref="${id}_contextSource" />
+						<beans:constructor-arg value='${r"${ldapConfig.groupSearchBase}"}'/>
+						<beans:property name="groupSearchFilter" value="member={0}"/>
+						<beans:property name="rolePrefix" value=""/>
+						<beans:property name="searchSubtree" value="true"/>
+						<beans:property name="convertToUpperCase" value="true"/>
+						<beans:property name="ignorePartialResultException" value="true"/>
+					</beans:bean>
+				</beans:constructor-arg>
+				<beans:property name="userDao" ref="userJpaDao"/>
+				<beans:property name="ldapSyncService" ref="${id}_ldapSyncJob"/>
+			</beans:bean>
+			
+			<beans:bean id="${id}_contextSource"
                     class="org.springframework.ldap.core.support.LdapContextSource">
-            <beans:property name="urls" ref='${id}_ldapUrls' />
-            <beans:property name="base" value='${r"${ldapConfig.base}"}' />
-            <beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}' />
-            <beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}' />
-            <beans:property name="pooled" value="true" />
-            <!-- AD Specific Setting for avoiding the partial exception error -->
-            <beans:property name="referral" value="follow" />
-        </beans:bean>
+				<beans:property name="urls" ref='${id}_ldapUrls' />
+				<beans:property name="base" value='${r"${ldapConfig.base}"}' />
+				<beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}' />
+				<beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}' />
+				<beans:property name="pooled" value="true" />
+				<!-- AD Specific Setting for avoiding the partial exception error -->
+				<beans:property name="referral" value="follow" />
+			</beans:bean>
+		<#elseif directoryType == "activedirectory">
+			<beans:bean id="{id}_authenticationProvider" 
+				class="com.armedia.acm.auth.ad.AcmActiveDirectoryAuthenticationProvider">
+				<beans:constructor-arg value=""/>  
+				<beans:constructor-arg type="org.springframework.ldap.core.ContextSource" ref="${id}_contextSource"/>
+				<beans:constructor-arg>
+					<beans:bean class="org.springframework.security.ldap.userdetails.DefaultLdapAuthoritiesPopulator">
+						<beans:constructor-arg ref="${id}_contextSource"/>
+						<beans:constructor-arg value='${r"${ldapConfig.groupSearchBase}"}'/>
+						<beans:property name="groupSearchFilter" value="member={0}"/>
+						<beans:property name="rolePrefix" value=""/>
+						<beans:property name="searchSubtree" value="true"/>
+						<beans:property name="convertToUpperCase" value="true"/>
+						<beans:property name="ignorePartialResultException" value="true"/>
+					</beans:bean>
+				</beans:constructor-arg>
+				<beans:constructor-arg type="com.armedia.acm.auth.ad.ActiveDirectoryLdapSearchConfig"
+					ref="armedia_activeDirectoryLdapSearchConfig" />
+				<beans:property name="userDao" ref="userJpaDao"/>
+				<beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/> 
+			</beans:bean>
+			
+			<beans:bean id="${id}_activeDirectoryLdapSearchConfig"
+				class="com.armedia.acm.auth.ad.ActiveDirectoryLdapSearchConfig">
+				<beans:property name="contextSource" ref="${id}_contextSource"/>
+				<beans:property name="searchBase" value='${r"${ldapConfig.userSearchBase}"}'/> 
+				<beans:property name="searchFilter" value='${r"${ldapConfig.userIdAttributeName}={0}"}'/>
+			</beans:bean>
+			
+			<beans:bean id="${id}_contextSource" class="com.armedia.acm.auth.ad.ActiveDirectoryContextSource">
+				<beans:property name="urls" ref='${id}_ldapUrls'/>
+				<beans:property name="base" value='${r"${ldapConfig.base}"}'/>
+				<beans:property name="userDn" value='${r"${ldapConfig.authUserDn}"}'/>
+				<beans:property name="password" value='${r"${ldapConfig.authUserPassword}"}'/>
+				<beans:property name="pooled" value="true"/>
+				<!-- AD Specific Setting for avoiding the partial exception error -->
+				<beans:property name="referral" value="follow"/>
+			</beans:bean>
+			
+		</#if>
 
         <beans:bean id="${id}_contextSourceProxy" 
             class="org.springframework.ldap.transaction.compensating.manager.TransactionAwareContextSourceProxy">
