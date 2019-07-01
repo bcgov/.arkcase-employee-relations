@@ -492,6 +492,11 @@ application:
     idleConfirm: 15000
     displayUserName: "userName"
     historyDays: 30
+    baseUrl: "https://acm-arkcase/arkcase"
+    applicationName: "arkcase"
+    helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
+    alfrescoUserIdLdapAttribute: "uid"
+    issueCollectorFlag: false
 ################### Arkcase ActiveMq Configuration (arkcase-activemq.properties) ####################
 # Comma-separated list of package names.  Objects of classes from these
 # packages (and sub-packages under these packages) can be sent to an
