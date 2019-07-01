@@ -18,6 +18,16 @@
                 </bean>
                 <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/correspondence/listAllProperties"/>
+                    <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/correspondence/listTemplateModelProviders"/>
+                    <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
+                </bean>
+                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/plugin/admin/templates/activated/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmGenerateCorrespondencePrivilege"/>
                 </bean>
