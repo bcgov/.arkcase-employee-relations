@@ -45,7 +45,7 @@
                         loopback-mode-enabled="${acm.hazelcast.network.multicast.loopback_mode_enabled}">
                     </hz:multicast>
                     <hz:tcp-ip enabled="${acm.hazelcast.network.tcp_ip.enabled}">
-                        <hz:members>${acm.hazelcast.network.tcp_ip.members:''}</hz:members>
+                        <hz:members>${acm.hazelcast.network.tcp_ip.members?acm.hazelcast.network.tcp_ip.members:''}</hz:members>
                     </hz:tcp-ip>
                     <hz:aws enabled="${acm.hazelcast.network.aws.enabled}"/>
                 </hz:join>
