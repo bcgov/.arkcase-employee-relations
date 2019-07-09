@@ -892,7 +892,7 @@ email:
     encryption: "off"
     allowAttachments: true
     allowDocuments: true
-    host: "internalmail.armedia.com"
+    host: "***REMOVED***"
     allowHyperlinks: true
     userFrom: "***REMOVED***"
     port: 25
