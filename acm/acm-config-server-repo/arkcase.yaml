@@ -892,7 +892,7 @@ email:
     encryption: "off"
     allowAttachments: true
     allowDocuments: true
-    host: "internalmail.armedia.com"
+    host: "relay.armedia.com"
     allowHyperlinks: true
     userFrom: "support@armedia.com"
     port: 25
