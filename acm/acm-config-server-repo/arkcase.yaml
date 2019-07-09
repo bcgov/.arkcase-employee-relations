@@ -566,15 +566,16 @@ audit.plugin:
 audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' added.'\",
 \"com.armedia.acm.ecm.file.downloaded\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
-\"com.armedia.acm.smtp.event.sent.hyperlink\":\"'[' + source?.fileNames[0] + ']'\",
-\"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']'\"}"
+\"com.armedia.acm.smtp.event.sent.hyperlink\":\" source?.fileNames?.toString() + ' to ' + source?.emailAddresses?.toString() \",
+\"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + source?.emailAddresses?.toString()\",
+\"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
 com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armedia.acm.objectassociation.reference.added,
 com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassociation.reference.updated, com.armedia.acm.file.renamed,
-com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
+com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
 com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted, com.armedia.acm.person.organization.updated, com.armedia.acm.person.created,
 com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted, com.armedia.acm.person.personAlias.updated,
 com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
@@ -588,7 +589,7 @@ com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.chan
 com.armedia.acm.correspondence.file.added, com.armedia.acm.complaint.participant.added, com.armedia.acm.complaint.participant.updated, com.armedia.acm.complaint.participant.deleted, com.armedia.acm.complaint.costsheet.associated,
 com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.activiti.task.create,
 com.armedia.acm.associatedtag.created, com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armed.acm.complaint.location.updated,
-com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
+com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
 com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated, com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted,
 com.armedia.acm.person.organization.updated, com.armedia.acm.person.created, com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted,
 com.armedia.acm.person.personAlias.updated, com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
@@ -598,11 +599,11 @@ com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.ar
 TASK.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.task.added, com.armedia.acm.activiti.task.create, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.app.task.details.changed, com.armedia.acm.app.task.priority.changed, com.armedia.acm.associatedtag.created, com.armedia.acm.app.task.status.changed,
-com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.app.task.reworkdetails.changed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.app.signature.signed.task,
+com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.app.task.reworkdetails.changed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.app.signature.signed.task,
 com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined"
 DOC_REPO.history.event.types: "com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced, com.armedia.acm.file.version.set, com.armedia.acm.file.deleted,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.associatedtag.created,
-com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.objectassociation.reference.added,
+com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.objectassociation.reference.added,
 com.armedia.acm.smtp.event.received, com.armedia.acm.documentrepository.created, com.armedia.acm.documentrepository.updated,
 com.armedia.acm.documentrepository.viewed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.folder.created, com.armedia.acm.folder.renamed,
 com.armedia.acm.documentrepository.participant.deleted, com.armedia.acm.documentrepository.participant.added, com.armedia.acm.documentrepository.name.updated,
@@ -1084,6 +1085,7 @@ auditEvent:
   ,\"eventType.com.armedia.acm.objectlock.cancel\": \"Cancel Editing\"
   ,\"eventType.com.armedia.acm.smtp.event.sent\": \"Document Emailed\"
   ,\"eventType.com.armedia.acm.smtp.event.sent.hyperlink\":\"Document Emailed\"
+  ,\"eventType.com.armedia.acm.smtp.event.mail.sent\": \"Mail Sent\"
   ,\"eventType.com.armedia.acm.smtp.event.received\": \"Email Received\"
   ,\"eventType.com.armedia.acm.app.signature.signed.task\": \"Task Signed\"
   ,\"eventType.com.armedia.acm.documentrepository.created\": \"Document Repository Created\"
