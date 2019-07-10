@@ -27,8 +27,13 @@
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
                 <bean id="downloadCompressedFilesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="POST"/>
+                    <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/compressor/download/files"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="downloadCompressedFilesPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/compressor/download/files/zip"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>
