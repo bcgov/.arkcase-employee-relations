@@ -8,21 +8,6 @@
                 http://www.hazelcast.com/schema/spring/hazelcast-spring.xsd
                 http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
 
-
-    <bean id="hazelcastPropertyConfigurer"
-        class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
-        <property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-        <property name="ignoreResourceNotFound" value="true"/>
-        <property name="localOverride" value="false"/>
-        <property name="order" value="42"/>
-        <property name="ignoreUnresolvablePlaceholders" value="true"/>
-        <property name="locations">
-            <list>
-                <value>file:${user.home}/.arkcase/acm/hazelcast-config.properties</value>
-            </list>
-        </property>
-    </bean>
-
     <hz:hazelcast id="acmHazelcastInstance">
         <hz:config>
             <hz:instance-name>${acm.hazelcast.instance.name}</hz:instance-name>
