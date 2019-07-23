@@ -1551,12 +1551,12 @@ acm.hazelcast:
   ## Network configuration ##
   network:
     #on which port to listen
-    port: 5701
-    port.auto_increment: false
+    port: 5710
+    port.auto_increment: true
 
     #configuration for multicast
     multicast:
-      enabled: false
+      enabled: true
       port: 54327
       group: 224.2.2.3
       timeout_second: 2
@@ -1576,8 +1576,7 @@ acm.hazelcast:
     #define network interfaces on which hazelcast should bind
     interfaces:
       enabled: false
-      interfaces:
-        interface:
+      interface:
 
 
   ## Various properties for hazelcast configuration. ##
