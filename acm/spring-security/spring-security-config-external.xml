@@ -19,7 +19,7 @@
             <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
-            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
+            <session-management session-fixation-protection="migrateSession"/>
         </http>
 
         <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
@@ -32,7 +32,7 @@
             <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
-            <session-management session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
+            <session-management session-fixation-protection="migrateSession"/>
         </http>
 
         <!-- LDAP entry point authenticates users against some LDAP service -->
@@ -48,7 +48,7 @@
             <logout logout-url="/logout" delete-cookies="JSESSIONID" success-handler-ref="acmLogoutSuccessHandler"
                 invalidate-session="true"/>
             <session-management invalid-session-url="/login?login_error=1"
-                session-authentication-strategy-ref="concurrentSessionControlAuthenticationStrategy"/>
+                session-fixation-protection="migrateSession"/>
         </http>
 
         <beans:bean id="logoutUrl" class="java.lang.String">
