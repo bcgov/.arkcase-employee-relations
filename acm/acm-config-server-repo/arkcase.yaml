@@ -635,6 +635,7 @@ capture:
   #list all object types which are supported
   attachments.supported-object-types: "case_file,complaint"
   #Shared folder where files to be converted to PDF will be copied
+  sendForPdfConversionFolder:
   #sendForPdfConversionFolder: "${user.home}/.arkcase/sendForPdfConversion"
   #files which are processed by ephesoft and ready to be uploaded back to arkcase
   convertedPdfsFolder: "${user.home}/.arkcase/processed"
