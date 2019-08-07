@@ -2,10 +2,8 @@
 <beans:beans xmlns="http://www.springframework.org/schema/security"
         xmlns:beans="http://www.springframework.org/schema/beans"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:task="http://www.springframework.org/schema/task"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
-                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
-                            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+                            http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
     <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
@@ -31,7 +29,7 @@
     </beans:bean> 
                             
     <!-- ensure this bean id is unique across all the LDAP sync beans. -->
-    <beans:bean id="${id}_ldapSyncService" class="com.armedia.acm.services.users.service.ldap.LdapSyncService" init-method="ldapSync">
+    <beans:bean id="${id}_ldapSyncService" class="com.armedia.acm.services.users.service.ldap.LdapSyncService">
         <!-- ldapSyncConfig: ref must match an AcmLdapSyncConfig bean, which should be defined below. -->
         <beans:property name="ldapSyncConfig" ref="${id}_sync"/>
 
