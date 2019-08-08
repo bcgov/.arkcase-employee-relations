@@ -63,7 +63,11 @@
                 backup-count="2" max-size="0"
                 time-to-live-seconds="1800"
                 eviction-policy="NONE"/>
-
+            <hz:serialization>
+                <hz:serializers>
+                    <hz:serializer type-class="microsoft.exchange.webservices.data.core.ExchangeService" class-name="com.armedia.acm.hazelcast.kryo.AcmKryoSerializerImpl"/>
+                </hz:serializers>
+            </hz:serialization>
         </hz:config>
     </hz:hazelcast>
 </beans>
