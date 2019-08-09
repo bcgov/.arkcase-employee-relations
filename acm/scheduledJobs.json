@@ -79,7 +79,7 @@
 		},
 
 		{
-			"name": "overdueTaskNotifierAssigneesNotifierJob",
+			"name": "overdueTaskAssigneesNotifierJob",
 			"class": "com.armedia.acm.plugins.task.service.OverdueTaskNotifierJobDescriptor",
 			"cronExpression": "0 0 0 1/1 * ? *"
 		},
