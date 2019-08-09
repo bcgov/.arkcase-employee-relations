@@ -505,6 +505,7 @@ application:
 # the relevant package to this property.
 ark.activemq:
   trustedPackages: "com.armedia"
+  defaultTrustedPackages: "org.mule,java.lang,javax.security,java.util,org.apache.activemq,org.fusesource.hawtbuf,com.thoughtworks.xstream.mapper"
   #URL of the ActiveMQ broker.
   transportConnectorURI: "ssl://acm-arkcase:61616"
   #Maximum number of connections to ActiveMQ.
@@ -637,6 +638,7 @@ capture:
   #list all object types which are supported
   attachments.supported-object-types: "case_file,complaint"
   #Shared folder where files to be converted to PDF will be copied
+  sendForPdfConversionFolder:
   #sendForPdfConversionFolder: "${user.home}/.arkcase/sendForPdfConversion"
   #files which are processed by ephesoft and ready to be uploaded back to arkcase
   convertedPdfsFolder: "${user.home}/.arkcase/processed"
