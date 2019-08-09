@@ -1592,21 +1592,3 @@ acm.hazelcast:
   socket.bind.any: true
 
 mule.workingDirectory: "${user.home}/.arkcase/.mule"
-
-################### MAIN QUARTZ CONFIGURATION  - quartz.properties#######################
-org.quartz:
-  scheduler:
-    instanceName: "arkcase-scheduler"
-    instanceId: "AUTO"
-    skipUpdateCheck: true
-  jobStore:
-    isClustered: true
-    useProperties: true
-
-################### AUDIT PATTERNS - auditPatterns.properties#######################
-# regular expressions used to mask passwords in log file/console, event viewer and database logs
-audit:
-  substitution: "$1*****$3"
-  patterns: "{\"(?i)(password\\s*=\\s*)(.*?)("|&|,|})\"
-  ,\"(?i)(password"\\s*:\\s*")(.*?)(")\"
-  ,\"(?i)(password' in \[.*\] with type \[String\] and value ')(.*?)(')\" }"
