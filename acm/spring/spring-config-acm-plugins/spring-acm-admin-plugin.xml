@@ -598,6 +598,11 @@
                     <property name="url" value="/api/{version}/plugin/admin/scheduler/jobs/{name}/resume"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/{version}/plugin/admin/configuration/reset"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
