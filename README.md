@@ -24,11 +24,11 @@ Note that the `vagrant` user password is `vagrant`.  Also, ensure that `$JAVA_HO
 
   ```bash
     cd ~
-    scp vagrant@arkcase-ce.local:/etc/ssl/ca/arkcase-ca.crt ~/.arkcase/acm/private/
+    scp vagrant@arkcase-ce.local:/etc/ssl/crt/arkcase-chain.crt ~/.arkcase/acm/private/arkcase-ca.crt
     scp vagrant@arkcase-ce.local:/opt/common/arkcase.ks ~/.arkcase/acm/private/
     scp vagrant@arkcase-ce.local:/opt/common/arkcase.ts ~/.arkcase/acm/private/
-    scp vagrant@arkcase-ce.local:/etc/ssl/private/acm-arkcase.rsa.pem ~/.arkcase/acm/private/
-    scp vagrant@arkcase-ce.local:/etc/ssl/crt/acm-arkcase.crt ~/.arkcase/acm/private/
+    scp vagrant@arkcase-ce.local:/etc/ssl/private/arkcase-server.rsa.pem ~/.arkcase/acm/private/acm-arkcase.rsa.pem
+    scp vagrant@arkcase-ce.local:/etc/ssl/crt/arkcase-server.crt ~/.arkcase/acm/private/acm-arkcase.crt
     scp vagrant@arkcase-ce.local:/opt/common/symmetricKey.encrypted ~/.arkcase/acm/encryption/
     # add all the certs from your JVM to the arkcase trust store
     keytool -importkeystore -srckeystore $JAVA_HOME/jre/lib/security/cacerts -srcstorepass changeit -destkeystore ~/.arkcase/acm/private/arkcase.ts -deststorepass password -noprompt
@@ -42,11 +42,11 @@ Note that the `vagrant` user password is `vagrant`.  Also, ensure that `%JAVA_HO
 
   ```bash
    cd %HOMEPATH%
-   scp vagrant@arkcase-ce.local:/etc/ssl/ca/arkcase-ca.crt %HOMEPATH%/.arkcase/acm/private/
+   scp vagrant@arkcase-ce.local:/etc/ssl/crt/arkcase-chain.crt %HOMEPATH%/.arkcase/acm/private/arkcase-ca.crt
    scp vagrant@arkcase-ce.local:/opt/common/arkcase.ks %HOMEPATH%/.arkcase/acm/private/
    scp vagrant@arkcase-ce.local:/opt/common/arkcase.ts %HOMEPATH%/.arkcase/acm/private/
-   scp vagrant@arkcase-ce.local:/etc/ssl/private/acm-arkcase.rsa.pem %HOMEPATH%/.arkcase/acm/private/
-   scp vagrant@arkcase-ce.local:/etc/ssl/crt/acm-arkcase.crt %HOMEPATH%/.arkcase/acm/private/
+   scp vagrant@arkcase-ce.local:/etc/ssl/private/arkcase-server.rsa.pem %HOMEPATH%/.arkcase/acm/private/acm-arkcase.rsa.pem
+   scp vagrant@arkcase-ce.local:/etc/ssl/crt/arkcase-server.crt %HOMEPATH%/.arkcase/acm/private/acm-arkcase.crt
    scp vagrant@arkcase-ce.local:/opt/common/symmetricKey.encrypted %HOMEPATH%/.arkcase/acm/encryption/
    # add all the certs from your JVM to the arkcase trust store
    keytool -importkeystore -srckeystore $JAVA_HOME/jre/lib/security/cacerts -srcstorepass changeit -destkeystore %HOMEPATH%/.arkcase/acm/private/arkcase.ts -deststorepass password -noprompt
