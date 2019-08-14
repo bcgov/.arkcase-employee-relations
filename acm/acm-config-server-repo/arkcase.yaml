@@ -218,9 +218,9 @@ alfresco:
     password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
     enabled: false
 ################### Alfresco RMA Plugin Configuration (alfrescoRmaPlugin.properties) ####################
-alfresco_host: "acm-alfresco"
+alfresco_host: "acm-arkcase"
 #alfresco_port: 8080
-alfresco_port: 7070
+alfresco_port: 443
 alfresco_user: "admin"
 alfresco_password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
 alfresco_contextRoot: "alfresco"
@@ -1296,8 +1296,8 @@ sessionControl:
   exceptionIfMaximumExceeded: false
 ################### Solr Configuration (solr.properties) ###################
 solr:
-  host: "acm-solr"
-  port: 8983
+  host: "acm-arkcase"
+  port: 443
   contextRoot: "solr"
   quicksearch.core: "acmQuickSearch"
   advancedsearch.core: "acmAdvancedSearch"
