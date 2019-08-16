@@ -1495,7 +1495,7 @@ wopi.plugin:
   tenant:
     protocol: "https"
     domain: "acm-arkcase"
-    port: 8843
+    port: 443
     context: "arkcase"
     accessTokenParamName: "acm_email_ticket"
     fileIdParamName: "ecmFileId"
