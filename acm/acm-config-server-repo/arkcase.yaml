@@ -217,6 +217,7 @@ alfresco:
     username: admin
     password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
     enabled: false
+    ace.enabled: false
 ################### Alfresco RMA Plugin Configuration (alfrescoRmaPlugin.properties) ####################
 alfresco_host: "acm-alfresco"
 #alfresco_port: 8080
