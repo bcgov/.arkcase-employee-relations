@@ -505,6 +505,7 @@ application:
 # the relevant package to this property.
 ark.activemq:
   trustedPackages: "com.armedia"
+  defaultTrustedPackages: "org.mule,java.lang,javax.security,java.util,org.apache.activemq,org.fusesource.hawtbuf,com.thoughtworks.xstream.mapper"
   #URL of the ActiveMQ broker.
   transportConnectorURI: "ssl://acm-arkcase:61616"
   #Maximum number of connections to ActiveMQ.
@@ -514,7 +515,10 @@ ark.activemq:
   #encrypted password for the ActiveMQ user identified by ark.activemq.username
   password: "ENC(U2FsdGVkX1+SMOIdK/h2Cy5ONteYLksBQnHZllFZcKs=)"
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
-
+instance.indentity:
+  identityId: ""
+  dateCreated: ""
+  digest: ""
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
   database.enabled: true
@@ -634,6 +638,7 @@ capture:
   #list all object types which are supported
   attachments.supported-object-types: "case_file,complaint"
   #Shared folder where files to be converted to PDF will be copied
+  sendForPdfConversionFolder:
   #sendForPdfConversionFolder: "${user.home}/.arkcase/sendForPdfConversion"
   #files which are processed by ephesoft and ready to be uploaded back to arkcase
   convertedPdfsFolder: "${user.home}/.arkcase/processed"
@@ -1588,4 +1593,4 @@ acm.hazelcast:
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
-mule.workingDirectory: "${user.home}/.arkcase/.mule" 
+mule.workingDirectory: "${user.home}/.arkcase/.mule"
