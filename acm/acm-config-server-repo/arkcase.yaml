@@ -516,9 +516,9 @@ ark.activemq:
   password: "ENC(U2FsdGVkX1+SMOIdK/h2Cy5ONteYLksBQnHZllFZcKs=)"
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
-  identityId: "9681f3c4-3964-4f3b-aed0-fffcccf01882"
-  dateCreated: "2018-09-18T12\\:34\\:37.35"
-  digest: "0Gb/6Gq3E8I2XCXwcqZ6iLfkW1OPu5M0h1lkvSiG8Og\\="
+  identityId: ""
+  dateCreated: ""
+  digest: ""
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
   database.enabled: true
