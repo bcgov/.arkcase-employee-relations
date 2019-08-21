@@ -167,8 +167,8 @@ report:
   plugin:
     PENTAHO_SERVER_URL: "https://acm-arkcase"
     PENTAHO_SERVER_PORT: 443
-    PENTAHO_SERVER_INTERNAL_URL: "https://acm-pentaho"
-    PENTAHO_SERVER_INTERNAL_PORT: 2002
+    PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
+    PENTAHO_SERVER_INTERNAL_PORT: 443
     PENTAHO_SERVER_USER: "ann-acm"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
@@ -218,9 +218,9 @@ alfresco:
     password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
     enabled: false
 ################### Alfresco RMA Plugin Configuration (alfrescoRmaPlugin.properties) ####################
-alfresco_host: "acm-alfresco"
+alfresco_host: "acm-arkcase"
 #alfresco_port: 8080
-alfresco_port: 7070
+alfresco_port: 443
 alfresco_user: "admin"
 alfresco_password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
 alfresco_contextRoot: "alfresco"
@@ -1301,8 +1301,8 @@ sessionControl:
   exceptionIfMaximumExceeded: false
 ################### Solr Configuration (solr.properties) ###################
 solr:
-  host: "acm-solr"
-  port: 8983
+  host: "acm-arkcase"
+  port: 443
   contextRoot: "solr"
   quicksearch.core: "acmQuickSearch"
   advancedsearch.core: "acmAdvancedSearch"
