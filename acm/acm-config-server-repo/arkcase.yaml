@@ -515,7 +515,10 @@ ark.activemq:
   #encrypted password for the ActiveMQ user identified by ark.activemq.username
   password: "ENC(U2FsdGVkX1+SMOIdK/h2Cy5ONteYLksBQnHZllFZcKs=)"
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
-
+instance.indentity:
+  identityId: ""
+  dateCreated: ""
+  digest: ""
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
   database.enabled: true
@@ -1590,4 +1593,4 @@ acm.hazelcast:
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
-mule.workingDirectory: "${user.home}/.arkcase/.mule" 
+mule.workingDirectory: "${user.home}/.arkcase/.mule"
