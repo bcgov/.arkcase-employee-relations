@@ -6,5 +6,6 @@ configuration:
   url: http://localhost:9999
   update.path: "/config"
   reset.path: "/reset"
+  update.file.path: "/file"
   #username: root
   #password: root
