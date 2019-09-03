@@ -50,6 +50,11 @@
                     <property name="url" value="/api/{version}/service/email/send/withembeddedlinks/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
                 </bean>
+                <bean id="emailSenderUrlPlainEmailPost" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/email/send/plainEmail"/>
+                    <property name="requiredPrivilege" ref="acmGlobalAllowPrivilege"/>
+                </bean>
                 <bean id="emailSenderUrlWithattachmentsandlinksPost" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/service/email/send/withattachmentsandlinks/{objectType}"/>
