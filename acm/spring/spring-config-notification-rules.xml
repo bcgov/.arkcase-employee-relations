@@ -10,7 +10,7 @@
         <property name="globalRule" value="true"/>
         <property name="queryType" value="CREATE"/>
         <property name="executor" ref="notificationSendExecutor"/>
-        <property name="usersNotified" ref="participantsNotified"/>
+        <property name="usersNotified" ref="assigneeNotified"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -25,6 +25,7 @@
                         NULL AS relatedObjectId,
                         NULL AS relatedObjectType,
                         a.created AS actionDate,
+                        a.newAssignee AS sendNotificationTo,
                         'objectAssigned' as templateModelName
                     FROM 
                         AcmAssignment a, AcmUser u 
@@ -45,7 +46,7 @@
         <property name="globalRule" value="true"/>
         <property name="queryType" value="CREATE"/>
         <property name="executor" ref="notificationSendExecutor"/>
-        <property name="usersNotified" ref="participantsNotified"/>
+        <property name="usersNotified" ref="assigneeNotified"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -60,6 +61,7 @@
                         NULL AS relatedObjectId,
                         NULL AS relatedObjectType,
                         a.created AS actionDate,
+                        a.oldAssignee AS sendNotificationTo,
                         'objectUnassigned' AS templateModelName
                     FROM 
                         AcmAssignment a, AcmUser u 
