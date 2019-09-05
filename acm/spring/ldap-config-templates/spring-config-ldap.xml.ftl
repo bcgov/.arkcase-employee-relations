@@ -142,7 +142,7 @@
 					</beans:bean>
 				</beans:constructor-arg>
 				<beans:property name="userDao" ref="userJpaDao"/>
-				<beans:property name="ldapSyncService" ref="${id}_ldapSyncJob"/>
+				<beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/>
 			</beans:bean>
 			
 			<beans:bean id="${id}_contextSource"
