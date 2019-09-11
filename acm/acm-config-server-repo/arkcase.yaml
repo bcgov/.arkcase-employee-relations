@@ -218,6 +218,14 @@ alfresco:
     password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
     enabled: false
     ace.enabled: false
+################### CMIS Repository Configuration ####################
+cmis:  
+  repository:
+    api: "arkcase-cmis://https://acm-arkcase/alfresco/api/-default-/public/cmis/versions/1.1/atom" 
+    username: "admin"
+    password: "ENC(U2FsdGVkX1/xhPRpzw95iNfLBLwieucwbQ0eg9woLOk=)"
+    useAuthHeader: true
+    remoteUserHeader: "X-Alfresco-Remote-User"
 ################### Alfresco RMA Plugin Configuration (alfrescoRmaPlugin.properties) ####################
 alfresco_host: "acm-arkcase"
 #alfresco_port: 8080
