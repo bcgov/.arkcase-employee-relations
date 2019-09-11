@@ -1,6 +1,3 @@
-{
-    "goodbye": {
-        "title": "hi_Goodbye",
-        "message": "hi_"
-    }
-}
+goodbye:
+  title: hi_Goodbye
+  message: hi_
