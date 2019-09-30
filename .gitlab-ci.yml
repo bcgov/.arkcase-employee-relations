@@ -86,6 +86,6 @@ deploy:jdk8:
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config.zip -DrepositoryId=arkcase.snapshot -Durl=https://***REMOVED***/repository/arkcase.snapshot/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config -Dclassifier=core -Dpackaging=zip -Dversion=3.3.3-SNAPSHOT
     - export SSHPASS=$SSHPASS_ARKCASE
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core.zip /from-arkcase/' 
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config.zip /from-arkcase/arkcase-config-core.zip' 
   only:
     - core
