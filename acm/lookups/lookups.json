@@ -356,6 +356,10 @@
                 {
                     "value": "core.lookups.costsheet.titles.food",
                     "key": "Food"
+                },
+				{
+                    "value": "core.lookups.costsheet.titles.postage",
+                    "key": "Postage"
                 }
             ],
             "readonly": true
