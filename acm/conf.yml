@@ -1,10 +1,12 @@
 application:
- name: arkcase
+ name: 
+  active: arkcase-activemq,arkcase
+  default: arkcase
  profile: runtime
 configuration:
  server:
   url: http://localhost:9999
-  update.path: "/config"
+  update.path: "/config/{applicationName}"
   reset.path: "/reset"
   update.file.path: "/file"
   #username: root
