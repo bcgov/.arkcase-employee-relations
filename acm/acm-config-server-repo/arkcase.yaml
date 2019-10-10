@@ -905,6 +905,9 @@ ecm:
     read: "approver,follower,reader"
     no-access: "No Access"
     "*": "*"
+  arkcaseAlfrescoDocumentsParticipantTypes.mappings:
+    read:
+    write:
   defaultBasePath: "/Sites/acm/documentLibrary"
   defaultPath:
     COMPLAINT: "/Complaints"
