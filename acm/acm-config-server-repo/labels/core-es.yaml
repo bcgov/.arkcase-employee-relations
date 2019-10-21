@@ -432,6 +432,7 @@ core:
         hotel: Hotel
         overtime: A través del tiempo
         food: Comida
+        postage: Franqueo
     timesheet:
       statuses:
         draft: Borrador
