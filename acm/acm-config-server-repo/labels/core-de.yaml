@@ -432,6 +432,7 @@ core:
         hotel: Hotel
         overtime: Im Laufe der Zeit
         food: Essen
+        postage: Porto
     timesheet:
       statuses:
         draft: Entwurf
