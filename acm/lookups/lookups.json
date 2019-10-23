@@ -2903,6 +2903,28 @@
                     "readonly": true
                 }
             ]
+        },
+		{
+            "name": "taskParentTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.taskParentTypes.caseFile",
+                    "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.complaint",
+                    "key": "COMPLAINT"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.costsheet",
+                    "key": "COSTSHEET"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.timesheet",
+                    "key": "TIMESHEET"
+                }
+            ],
+            "readonly": true
         }
     ]
 }
