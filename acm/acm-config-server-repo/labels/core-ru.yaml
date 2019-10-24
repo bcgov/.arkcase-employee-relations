@@ -432,6 +432,7 @@ core:
         hotel: Гостиница
         overtime: Со временем
         food: Питание
+        postage: Почтовые расходы
     timesheet:
       statuses:
         draft: Проект
