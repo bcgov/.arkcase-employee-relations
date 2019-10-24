@@ -1583,3 +1583,8 @@ acm.hazelcast:
   socket.bind.any: true
 
 mule.workingDirectory: "${user.home}/.arkcase/.mule"
+
+#### Moved .arkcase/acm/resources/settings.json ####
+language.settings:
+  defaultLocale: en
+  localeCode: en

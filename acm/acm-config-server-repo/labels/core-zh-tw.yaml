@@ -432,6 +432,7 @@ core:
         hotel: 旅館
         overtime: 加班
         food: 食物
+        postage: 郵資
     timesheet:
       statuses:
         draft: 草案
