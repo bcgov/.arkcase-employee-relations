@@ -151,6 +151,11 @@
                     <property name="url" value="/api/{version}/service/ecm/copyToAnotherContainer/{targetObjectType}/{targetObjectId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+                <bean id="copyFileAsLink" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/copyToAnotherContainerAsLink/{targetObjectType}/{targetObjectId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
                 <bean id="deleteFolder" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/{folderId}"/>
@@ -234,6 +239,11 @@
                 <bean id="emcFileUploaderManagementPut" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="PUT"/>
                     <property name="url" value="/api/{version}/service/ecm/upload/configure"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>
+                <bean id="getFileLinks" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/service/ecm/fileLinks/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
             </list>
