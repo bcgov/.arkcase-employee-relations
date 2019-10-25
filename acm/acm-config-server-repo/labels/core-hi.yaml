@@ -496,3 +496,39 @@ core:
     btnCancel.text: रद्द करना
     checkbox_warning.label: मैं इस चेतावनी को स्वीकार करता हूं
   unknown: अनजान
+  menus:
+    usermenu.profile: प्रोफाइल
+    leftnav:
+      cases.main: मामला फ़ाइलें
+      complaints.main: शिकायतें
+      document-repository.main: दस्तावेज़
+      my-documents.main: मेरे दस्तावेज
+      tasks.main: कार्य
+      time-tracking.main: समय ट्रैकिंग
+      organizations.main: संगठन
+      cost-tracking.main: लागत ट्रैकिंग
+      people.main: लोग
+      admin: प्रशासन
+      analytics: डेटा विश्लेषण
+      analytics-audit: लॉग एनालिटिक्स
+      audit: परीक्षा
+      dashboard: डैशबोर्ड
+      notifications: सूचनाएं
+      reports: रिपोर्ट
+      search: खोज
+      subscriptions: सदस्यता
+      tags: टैग
+    topbar:
+      frevvo:
+        new-case: कार्य
+        new-complaint: शिकायत
+        new-costsheet: कॉस्टशीट
+        new-timesheet: टाइम्सशीट
+      newComplaint: शिकायत
+      newTask: कार्य
+      newCostsheet: कॉस्टशीट
+      newPerson: व्यक्ति
+      newTimesheet: टाइम्सशीट
+      newOrganization: संगठन
+      newCase: कार्य
+      new-document-repository: दस्तावेज़ रिपॉजिटरी

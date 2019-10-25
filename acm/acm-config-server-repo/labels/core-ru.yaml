@@ -496,3 +496,39 @@ core:
     btnCancel.text: Отменить
     checkbox_warning.label: Я подтверждаю это предупреждение.
   unknown: Неизвестный
+  menus:
+    usermenu.profile: Профиль
+    leftnav:
+      cases.main: 'Случа Файл '
+      complaints.main: Жалобы
+      document-repository.main: Документы
+      my-documents.main: Мои Документы
+      tasks.main: Задачи
+      time-tracking.main: Отслеживание времени
+      organizations.main: Организации
+      cost-tracking.main: Отслеживание затрат
+      people.main: Люди
+      admin: Администратор
+      analytics: Аналитика данных
+      analytics-audit: Журнал аналитики
+      audit: Аудит
+      dashboard: Обзор
+      notifications: Уведомления
+      reports: Отчеты
+      search: Поиск
+      subscriptions: Подписки
+      tags: Теги
+    topbar:
+      frevvo:
+        new-case: 'Случа '
+        new-complaint: Жалоба
+        new-costsheet: Стоимость лист
+        new-timesheet: Время лист
+      newComplaint: Жалоба
+      newTask: Задача
+      newCostsheet: Стоимость лист
+      newPerson: Человек
+      newTimesheet: Время лист
+      newOrganization: Организация
+      newCase: 'Случа '
+      new-document-repository: Репозиторий Документов

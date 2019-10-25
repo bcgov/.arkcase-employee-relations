@@ -496,3 +496,39 @@ core:
     btnCancel.text: 取消
     checkbox_warning.label: 我承认此警告。
   unknown: 未知
+  menus:
+    usermenu.profile: 用户资料
+    leftnav:
+      cases.main: 案件
+      complaints.main: 投诉
+      document-repository.main: 文档
+      my-documents.main: 我的文档
+      tasks.main: 任务
+      time-tracking.main: 时间跟踪
+      organizations.main: 组织
+      cost-tracking.main: 成本跟踪
+      people.main: 成员
+      admin: 管理
+      analytics: 数据分析
+      analytics-audit: 记录分析
+      audit: 审计
+      dashboard: 板面
+      notifications: 通知
+      reports: 报告
+      search: 搜索
+      subscriptions: 订阅
+      tags: 标签
+    topbar:
+      frevvo:
+        new-case: 案件
+        new-complaint: 投诉
+        new-costsheet: 成本项目
+        new-timesheet: 时间文表
+      newComplaint: 投诉
+      newTask: 任务
+      newCostsheet: 成本项目
+      newPerson: 成员
+      newTimesheet: 时间文表
+      newOrganization: 组织
+      newCase: 案件
+      new-document-repository: 文档
