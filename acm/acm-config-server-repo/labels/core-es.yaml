@@ -496,3 +496,39 @@ core:
     btnCancel.text: Cancelar
     checkbox_warning.label: Reconozco esta advertencia.
   unknown: Desconocido
+  menus:
+    usermenu.profile: Perfil
+    leftnav:
+      cases.main: Expedientes de Caso
+      complaints.main: Reclamaciones
+      document-repository.main: Documentos
+      my-documents.main: Mis Documentos
+      tasks.main: Tareas
+      time-tracking.main: Seguimiento de tiempo
+      organizations.main: Organizaciones
+      cost-tracking.main: Seguimiento de Costos
+      people.main: Gente
+      admin: Administración
+      analytics: es_Data Analytics
+      analytics-audit: Analítica de auditoría
+      audit: Auditoría
+      dashboard: Painel de Controle
+      notifications: Notificaciones
+      reports: Informes
+      search: Búsqueda
+      subscriptions: Suscripciones
+      tags: Etiquetas
+    topbar:
+      frevvo:
+        new-case: Caso
+        new-complaint: Reclamacione
+        new-costsheet: Hoja de costo
+        new-timesheet: Hoja de tiempo
+      newComplaint: Reclamacione
+      newTask: Tarea
+      newCostsheet: Hoja de costo
+      newPerson: Persona
+      newTimesheet: Hoja de tiempo
+      newOrganization: Organización
+      newCase: Caso
+      new-document-repository: Repositorio de Documentos

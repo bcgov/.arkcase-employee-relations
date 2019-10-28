@@ -496,3 +496,39 @@ core:
     btnCancel.text: キャンセル
     checkbox_warning.label: 私はこの警告を認めます。
   unknown: 不明
+  menus:
+    usermenu.profile: 顧客情報
+    leftnav:
+      cases.main: 案件文書
+      complaints.main: 訴状
+      document-repository.main: 文書
+      my-documents.main: 私の文書
+      tasks.main: 任務
+      time-tracking.main: 時間追跡
+      organizations.main: 組織
+      cost-tracking.main: トラック費用
+      people.main: 人物
+      admin: 管理
+      analytics: データ分析
+      analytics-audit: ログ分析
+      audit: 監査
+      dashboard: ダッシュボード
+      notifications: 通知
+      reports: 報告
+      search: 検索
+      subscriptions: 購読
+      tags: 目印を付
+    topbar:
+      frevvo:
+        new-case: 案件
+        new-complaint: 訴状
+        new-costsheet: 費用シート
+        new-timesheet: タイムシート
+      newComplaint: 訴状
+      newTask: 任務
+      newCostsheet: 費用シート
+      newPerson: 人物
+      newTimesheet: タイムシート
+      newOrganization: 組織
+      newCase: 案件
+      new-document-repository: 文書保存

@@ -496,3 +496,39 @@ core:
     btnCancel.text: Cancel
     checkbox_warning.label: I acknowledge this warning.
   unknown: Unknown
+  menus:
+    usermenu.profile: Profile
+    leftnav:
+      cases.main: Case Files
+      complaints.main: Complaints
+      document-repository.main: Documents
+      my-documents.main: My Documents
+      tasks.main: Tasks
+      time-tracking.main: Time Tracking
+      organizations.main: Organizations
+      cost-tracking.main: Cost Tracking
+      people.main: People
+      admin: Admin
+      analytics: Data Analytics
+      analytics-audit: Log Analytics
+      audit: Audit
+      dashboard: Dashboard
+      notifications: Notifications
+      reports: Reports
+      search: Search
+      subscriptions: Subscriptions
+      tags: Tags
+    topbar:
+      frevvo:
+        new-case: Case
+        new-complaint: Complaint
+        new-costsheet: Costsheet
+        new-timesheet: Timesheet
+      newComplaint: Complaint
+      newTask: Task
+      newCostsheet: Costsheet
+      newPerson: Person
+      newTimesheet: Timesheet
+      newOrganization: Organization
+      newCase: Case
+      new-document-repository: Document Repository
