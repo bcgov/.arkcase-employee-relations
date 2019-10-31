@@ -24,12 +24,12 @@
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lockPermission"/>
                     <property name="requiredPrivilege" ref="objectLockPrivilege"/>
                 </bean>
-                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="objectUnLockPOSTUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectUnLockPrivilege"/>
                 </bean>
-                <bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="objectUnLockUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectUnLockPrivilege"/>
