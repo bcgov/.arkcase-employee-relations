@@ -1616,3 +1616,6 @@ mule.workingDirectory: "${user.home}/.arkcase/.mule"
 language.settings:
   defaultLocale: en
   localeCode: en
+  
+camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
+
