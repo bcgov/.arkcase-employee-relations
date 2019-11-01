@@ -23,12 +23,14 @@ common:
   _12: 'निम्नलिखित दिनांक स्वरूपों को चरणबद्ध किया गया है। यदि ग्राहक प्रारूप को अनुकूलित
     करने का अनुरोध करते हैं, तो हमें इसकी आवश्यकता है '
   _13: i18n की चिंताओं के कारण ऐसा करने से बचने के लिए उन्हें शिक्षित करने के लिए
-  defaultDateFormat: एमएम / डीडी / वाई वाई वाई वाई
-  defaultTimeFormat: 'एचएच: मिमी: एसएस'
-  defaultDateTimeFormat: 'एमएम / डीडी / वाई वाई वाई वाई एचएच: मिमी '
-  defaultDatePickerFormat: एमएम / डीडी / वाई वाई वाई वाई
-  defaultDateUIFormat: एमएम / डीडी / वाई वाई वाई वाई
-  defaultDateTimeUIFormat: 'एमएम / डीडी / वाई वाई वाई वाई एचएच: मिमी'
+  defaultDateFormat: MM/DD/YYYY
+  defaultTimeFormat: hh:mm:ss
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: hi_userSearch
   title: hi_User/Group Search
@@ -43,7 +45,7 @@ common.userOrGroupSearch:
     title: hi_Title
     username: hi_Username
 common.frevvo:
-  defaultDateFormat: वाई वाई वाई वाई-एमएम -डीडी
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: अमान्य डेटा
 common.objects:
