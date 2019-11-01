@@ -25,12 +25,14 @@ common:
   _12: 'Os formatos da data subsequente são eliminados. Se os clientes solicitarem
     o formato personalizado, precisamos '
   _13: para educá-los para evitar fazê-lo, por causa de preocupações
-  defaultDateFormat: MM/DD/AAAA
+  defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
-  defaultDateTimeFormat: MM/DD/AAAA hh:mm
-  defaultDatePickerFormat: MM/dd/aaaa
-  defaultDateUIFormat: MM/dd/aaaa
-  defaultDateTimeUIFormat: MM/dd/aaaa HH:mm
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: pt_userSearch
   title: pt_User/Group Search
@@ -45,7 +47,7 @@ common.userOrGroupSearch:
     title: pt_Title
     username: pt_Username
 common.frevvo:
-  defaultDateFormat: AAAA-MM-DD
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Dados inválidos
 common.objects:

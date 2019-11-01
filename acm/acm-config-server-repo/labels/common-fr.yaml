@@ -22,12 +22,14 @@ common:
   _12: 'Les formats de date suivants sont supprimés progressivement. Si les clients
     demandent à avoir un format personnalisé, nous avons besoin '
   _13: pour les éduquer à éviter de le faire, en raison de préoccupations i18n
-  defaultDateFormat: MM/JJ/AAAA
+  defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
-  defaultDateTimeFormat: MM/JJ/AAAA hh:mm
-  defaultDatePickerFormat: MM/jj/aaaa
-  defaultDateUIFormat: MM/jj/aaaa
-  defaultDateTimeUIFormat: MM/jj/aaaa HH:mm
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: fr_userSearch
   title: fr_User/Group Search
@@ -42,7 +44,7 @@ common.userOrGroupSearch:
     title: fr_Title
     username: fr_Username
 common.frevvo:
-  defaultDateFormat: AAAA-MM-JJ
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Données invalides
 common.objects:
@@ -58,20 +60,16 @@ common.directive.docTree:
   btnRefresh: Rafraîchir
   waitUploading: Téléchargement...
   confirmVersion: Êtes-vous sûr de revenir à l'ancienne version?
-  declareSuccessful: Déclarer réussi. Actualisation de l'arborescence de documents
-    ...
+  declareSuccessful: Déclarer réussi. Actualisation de l'arborescence de documents...
   prevItems:  articles ci-dessus ...
   prevItemsTooltip: Réviser les éléments précédents
   moreItems:  plus d'articles ...
   moreItemsTooltip: Charger plus d'articles
   moreItemsBegin: Plus d'articles ...
   email:
-    defaultBodyLinks: Veuillez suivre les liens ci-dessous pour voir le (s) document
-      (s). Les liens expirent dans 3 jours.
-    defaultBodyAttachments: Veuillez trouver ci-joint les documents qui vous ont été
-      envoyés par ArkCase.
-    defaultFooter: Propulsé par ArkCase, la plate-forme Enterprise Case Management,
-      http://www.arkcase.com
+    defaultBodyLinks: Veuillez suivre les liens ci-dessous pour voir le(s) document(s). Les liens expirent dans 3 jours.
+    defaultBodyAttachments: Veuillez trouver ci-joint les documents qui vous ont été envoyés par ArkCase.
+    defaultFooter: Propulsé par ArkCase, la plate-forme Enterprise Case Management, http://www.arkcase.com
     successMessage: L'e-mail a été envoyé avec succès
     noEmailAddress: 'fr_There is no entered email for this '
   menu:
@@ -104,8 +102,7 @@ common.directive.docTree:
     status: Statut
   dndDialog:
     title: Glisser déposer
-    radReplace.text: Remplacer le document (Si plusieurs fichiers sont supprimés,
-      seul le premier est utilisé)
+    radReplace.text: Remplacer le document (Si plusieurs fichiers sont supprimés, seul le premier est utilisé)
     radUploadToParent.text: Créer un document dans le dossier parent
     selFileTypes.label: 'Type de fichier:'
     optFileType.prompt: '[choisissez le type de fichier]'
@@ -121,8 +118,7 @@ common.directive.docTree:
     deliveryMethod.label: 'Méthode de livraison:'
     sendWithAttachments.checkbox: Envoyer un e-mail avec pièce jointe
     sendWithHyperlink.checkbox: Envoyer un email avec un lien hypertexte
-    sendWithAttachmentsAndHyperlink.checkbox: Envoyer en tant que pièce jointe et
-      lien hypertexte
+    sendWithAttachmentsAndHyperlink.checkbox: Envoyer en tant que pièce jointe et lien hypertexte
     btnCancel.text: Annuler
     btnOk.text: Envoyer un email
   participantsDialog:
@@ -179,7 +175,7 @@ common.directive.objectTree:
   noAccessNode.title: (Pas d'accès)
   noAccessNode.toolTip: (Pas d'accès)
 common.directive.simplePager:
-  rowCountLabel: Objets par page
+  rowCountLabel: objets par page
   pagerCountLabel: '{{pageCount}} sur {{pageTotal}} articles'
 common.directive.objectAuthorization:
   choose: Choisir
@@ -437,8 +433,7 @@ common.directive.coreCalendar:
     addAttendees.button: Ajouter des participants
   recurrencePatternDialog:
     title: Récurrence de l'événement
-    durationError.text: La durée de l'événement doit être plus courte que la fréquence
-      à laquelle il se produit.
+    durationError.text: La durée de l'événement doit être plus courte que la fréquence à laquelle il se produit.
     recurrencePattern.label: Modèle de récurrence
     recurrencePattern.placeholder: Choisissez le modèle de récurrence
     cancel.button: Annuler
@@ -491,8 +486,7 @@ common.directive.coreCalendar:
     week.label: La semaine
     month.label: Mois
     _1_: '''sur.l''étiquette'' n''apparaît pas en cours d''utilisation. _à_SUPPRIMER_'
-    _2_: Si nécessaire, reformulez le message pour éviter la grammaire centrée sur
-      l'anglais dans le message
+    _2_: Si nécessaire, reformulez le message pour éviter la grammaire centrée sur l'anglais dans le message
     _on.label: Sur
     day.placeholder: Journée
     year.placeholder: An
@@ -569,10 +563,8 @@ common.directive.coreCalendar:
     deleteWarning.text: Êtes-vous sûr de vouloir supprimer cet événement?
   message:
     error.accessDenied: Accès refusé au service de calendrier.
-    error.serviceConfiguration: La configuration du service de calendrier n'est pas
-      valide.
-    error.serviceCredentials: Les informations d'identification invalides. Veuillez
-      contacter l'administrateur du système.
+    error.serviceConfiguration: La configuration du service de calendrier n'est pas valide.
+    error.serviceCredentials: Les informations d'identification invalides. Veuillez contacter l'administrateur du système.
     error.calendarIntegration: Problème de configuration d'intégration de calendrier.
     error.internalServerError: Erreur interne du serveur.
 common.directive.coreParticipants:
@@ -597,10 +589,8 @@ common.directive.coreParticipants:
     error.owninggroupUnique: Un seul groupe propriétaire est autorisé.
     error.owninggroupDelete: La suppression du groupe propriétaire n'est pas autorisée.
     error.noAccessCombo: La combinaison de No Access et Assignee n'est pas autorisée.
-    error.duplicateUserOrGroup: Participant invalide Entrées en double trouvées pour
-      le participant.
-    error.userOrGroupNotFound: Participant invalide L'entrée du participant est manquante
-      dans le système.
+    error.duplicateUserOrGroup: Participant invalide Entrées en double trouvées pour le participant.
+    error.userOrGroupNotFound: Participant invalide L'entrée du participant est manquante dans le système.
     error.emptyParticipantLdapId: Le nom du participant ne peut pas être vide
     error.emptyParticipantType: Le type de participant ne peut pas être vide
     error.ownerUnique: Un seul propriétaire est autorisé.
@@ -626,8 +616,7 @@ common.directive.downloadAllAsZip:
     containerError: Impossible de trouver le conteneur
     downloadError: Téléchargement du fichier Zip Échec
 common.comp.acmLogin:
-  confirmLogout: Pour votre protection, l'application est sur le point de se déconnecter.
-    Cliquez sur Annuler pour rester connecté.
+  confirmLogout: Pour votre protection, l'application est sur le point de se déconnecter. Cliquez sur Annuler pour rester connecté.
   logoutBtn: Connectez - Out
   cancelBtn: Annuler
 common.objectTypes:
@@ -653,8 +642,7 @@ frevvo.dialogUserPicker:
     type: Type
     title: Titre
     id: Nom d'utilisateur
-common.objects.objectWasCreatedMessage: '{{objectTypeString}} avec l''ID {{objectId}}
-  a été créé.'
+common.objects.objectWasCreatedMessage: '{{objectTypeString}} avec l''ID {{objectId}} a été créé.'
 common.newPerson:
   title: La personne
   addAnother: Ajouter un autre
@@ -775,8 +763,7 @@ common.addOrganization:
   radioYes.text: Oui
   radioNo.text: Non
   duplicateOrganizationRoleErrorMessage: L'organisation a déjà l'association sélectionnée
-  notifyParentOrgWillBeChanged: L'organisation choisie a déjà une organisation parente.
-    Si vous continuez, l'organisation parente sera modifiée.
+  notifyParentOrgWillBeChanged: L'organisation choisie a déjà une organisation parente. Si vous continuez, l'organisation parente sera modifiée.
 common.addObjectAssociation:
   title.add: Ajouter l'association {{objectLabel}}
   title.edit: Modifier l'association {{objectLabel}}
