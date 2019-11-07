@@ -60,6 +60,8 @@ admin:
     changedGroupSearchPageFilter: परिवर्तित समूह खोज पृष्ठ फ़िल्टर
     enableEditingLdapUsers: उपयोगकर्ताओं और समूहों को प्रबंधित करने में सक्षम करें
     syncEnabled: उपयोगकर्ताओं को सिंक्रनाइज़ सक्षम करें
+    fullSync.validationMessage: The Cron expression is invalid.
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: रद्द करना
     ok: ठीक
   menus:

@@ -59,6 +59,8 @@ admin:
     changedGroupSearchPageFilter: Changed Group Search Page Filter
     enableEditingLdapUsers: Enable managing users and groups
     syncEnabled: Enable synchronize users
+    fullSync.validationMessage: The Cron expression is invalid.
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: Cancel
     ok: OK
   menus:

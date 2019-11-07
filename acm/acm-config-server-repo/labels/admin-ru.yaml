@@ -59,6 +59,8 @@ admin:
     changedGroupSearchPageFilter: Измененный фильтр группы поиска
     enableEditingLdapUsers: Включить управление пользователями и группами
     syncEnabled: Включить синхронизацию пользователей
+    fullSync.validationMessage: The Cron expression is invalid.
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: Отмена
     ok: ОК
   menus:
