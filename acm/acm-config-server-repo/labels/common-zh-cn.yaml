@@ -16,12 +16,14 @@ common:
   _11: ' '
   _12: '以下日期格式被删除。 如果客户需要自定义格式，我们需要 '
   _13: 教育他们避免这样做，因为国际上的关注
-  defaultDateFormat: 年月日
+  defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
-  defaultDateTimeFormat: 年月日 hh:mm
-  defaultDatePickerFormat: 年月日
-  defaultDateUIFormat: 年月日
-  defaultDateTimeUIFormat: 年月日 HH:mm
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: zh-cn_userSearch
   title: zh-cn_User/Group Search
@@ -36,7 +38,7 @@ common.userOrGroupSearch:
     title: zh-cn_Title
     username: zh-cn_Username
 common.frevvo:
-  defaultDateFormat: 年月日
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: 不正确数据
 common.objects:
