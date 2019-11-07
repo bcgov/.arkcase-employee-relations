@@ -22,12 +22,14 @@ common:
   _12: 'Последующие форматы даты прекращаются. Если клиенты запросят настроить формат,
     нам нужно '
   _13: просвещать их, чтобы избежать этого, из-за проблем
-  defaultDateFormat: ММ/ДД/ГГГГ
-  defaultTimeFormat: чч:мм:ss
-  defaultDateTimeFormat: ММ/ДД/ГГГГ чч:мм:сс
-  defaultDatePickerFormat: ММ/ДД/ГГГГ
-  defaultDateUIFormat: ММ/ДД/ГГГГ
-  defaultDateTimeUIFormat: 'ММ/ДД/ГГГГ чч:мм:'
+  defaultDateFormat: MM/DD/YYYY
+  defaultTimeFormat: hh:mm:ss
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: ru_userSearch
   title: ru_User/Group Search
@@ -42,7 +44,7 @@ common.userOrGroupSearch:
     title: ru_Title
     username: ru_Username
 common.frevvo:
-  defaultDateFormat: ГГГГ-MM-ДД
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Недопустимые данные
 common.objects:

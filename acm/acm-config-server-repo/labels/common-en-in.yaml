@@ -25,9 +25,11 @@ common:
   defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
   defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
   defaultDatePickerFormat: MM/dd/yyyy
   defaultDateUIFormat: MM/dd/yyyy
   defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: en-in_userSearch
   title: en-in_User/Group Search
