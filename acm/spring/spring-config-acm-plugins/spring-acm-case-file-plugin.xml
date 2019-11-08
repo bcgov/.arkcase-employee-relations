@@ -115,9 +115,9 @@
                     <property name="url" value="/api/{version}/plugin/casefile/change/status/{mode}"/>
                     <property name="requiredPrivilege" ref="acmCaseModulePrivilege"/>
                 </bean>
-
-		<bean id="getCaseFileTasks" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
-                    <property name="httpMethod" value="GET"/>
+				
+				<bean id="queryCaseFileTasks" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/casefile/{caseId}/tasks"/>
                     <property name="requiredPrivilege" ref="acmCaseModulePrivilege"/>
                 </bean>
