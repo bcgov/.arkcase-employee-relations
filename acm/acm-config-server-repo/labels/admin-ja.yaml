@@ -58,6 +58,8 @@ admin:
     changedGroupSearchPageFilter: 変更されたグループ検索ページのフィルタ
     enableEditingLdapUsers: ユーザーとグループの管理を有効にする
     syncEnabled: ユーザーの同期を有​​効にする
+    fullSync.validationMessage: The Cron expression is invalid.
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: キャンセル
     ok: 確認
   menus:
