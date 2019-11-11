@@ -1528,8 +1528,8 @@ responseFolderConversion: false
 ################### (objectTitleConfig.properties) ###################
 objectTitleConfig: "{
     \"CASE_FILE\": {
-        \"enableTitleField\": false,
-        \"title\" : \"objectId\"
+        \"enableTitleField\": true,
+        \"title\" : \"titleTitle\"
     },
     \"COMPLAINT\": {
         \"enableTitleField\": false,
