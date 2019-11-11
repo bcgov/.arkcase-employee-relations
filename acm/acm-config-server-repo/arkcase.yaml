@@ -575,7 +575,7 @@ com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.changed, com.armedia.acm.object.assignee.change, com.armedia.acm.casefile.participant.changed,
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
-com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied"
+com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink"
 COMPLAINT.history.event.types: "com.armedia.acm.complaint.created, com.armedia.acm.complaint.updated, com.armedia.acm.app.task.create, com.armedia.acm.complaint.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.changed, com.armedia.acm.complaint.priority.changed, com.armedia.acm.outlook.calendar.event.added,
@@ -952,6 +952,15 @@ auditEvent:
   ,\"eventType.com.armedia.acm.activiti.task.complete\": \"Activity Task Complete\"
   ,\"eventType.com.armedia.acm.activiti.task.create\": \"Activity Task Created\"
   ,\"eventType.com.armedia.acm.activiti.task.delete\": \"Activity Task Delete\"
+  ,\"eventType.com.armedia.acm.services.ocr.processing\": \"Ocr Service Processed\"
+  ,\"eventType.com.armedia.acm.services.ocr.created\": \"Ocr Service Created\"
+  ,\"eventType.com.armedia.acm.services.ocr.queued\": \"Ocr Service Queued\"
+  ,\"eventType.com.armedia.acm.services.ocr.updated\": \"Ocr Service Updated\"
+  ,\"eventType.com.armedia.acm.services.transcribe.created\": \"Transcribe service Created\"
+  ,\"eventType.com.armedia.acm.services.transcribe.updated\": \"Transcribe service Updated\"
+  ,\"eventType.com.armedia.acm.services.transcribe.queued\": \"Transcribe service Queued\"
+  ,\"eventType.com.armedia.acm.services.transcribe.processing\": \"Transcribe service Processing\"
+  ,\"eventType.com.armedia.acm.folder.participant.changed\": \"Folder participant changed\"       
   ,\"eventType.com.armedia.acm.app.task.complete\": \"Task Complete\"
   ,\"eventType.com.armedia.acm.app.task.create\": \"Task Created\"
   ,\"eventType.com.armedia.acm.app.task.delete\": \"Task Deleted\"
@@ -966,6 +975,8 @@ auditEvent:
   ,\"eventType.com.armedia.acm.casefile\": \"Case File Event\"
   ,\"eventType.com.armedia.acm.casefile.ACTIVE\": \"Case File is Active\"
   ,\"eventType.com.armedia.acm.casefile.DRAFT\": \"Case File is Draft\"
+  ,\"eventType.com.armedia.acm.casefile.CLOSED\": \"Case File is Closed\"
+  ,\"eventType.com.armedia.acm.casefile.In review\": \"Case File is in review\"
   ,\"eventType.com.armedia.acm.casefile.search\": \"Case File Searched\"
   ,\"eventType.com.armedia.acm.casefile.updated\": \"Case File Updated\"
   ,\"eventType.com.armedia.acm.casefile.file.added\": \"Case File Added\"
@@ -992,7 +1003,9 @@ auditEvent:
   ,\"eventType.com.armedia.acm.ecm.file.document.viewed\": \"Document Viewed\"
   ,\"eventType.com.armedia.acm.ecm.file.added\": \"Document Uploaded\"
   ,\"eventType.com.armedia.acm.ecm.file.downloaded\": \"Document Downloaded\"
+  ,\"eventType.com.armedia.acm.ecm.file.updated\": \"Document Updated\"
   ,\"eventType.com.armedia.acm.ecm.file.copied\": \"Document Copied\"
+  ,\"eventType.com.armedia.acm.ecm.file.copiedAsLink\": \"Document Copied As Link\"
   ,\"eventType.com.armedia.acm.ecm.file.replaced\": \"Document Replaced\"
   ,\"eventType.com.armedia.acm.file.version.set\": \"Document Versioned\"
   ,\"eventType.com.armedia.acm.file.deleted\": \"Document Deleted\"
@@ -1064,7 +1077,13 @@ auditEvent:
   ,\"eventType.com.armedia.acm.casefile.participant.deleted\": \"Participant Deleted\"
   ,\"eventType.com.armedia.acm.casefile.participant.changed\": \"Participant Changed\"
   ,\"eventType.com.armedia.acm.casefile.costsheet.associated\": \"Costsheet Associated\"
+  ,\"eventType.com.armedia.acm.costsheet.savefinal\": \"Costsheet saved final\"
+  ,\"eventType.com.armedia.acm.costsheet.submit\": \"Costsheet submitted\"
+  ,\"eventType.com.armedia.acm.costsheet.save\": \"Costsheet saved\"
   ,\"eventType.com.armedia.acm.casefile.timesheet.associated\": \"Timesheet Associated\"
+  ,\"eventType.com.armedia.acm.timesheet.savefinal\": \"Timesheet saved final\"
+  ,\"eventType.com.armedia.acm.timesheet.save\": \"Timesheet saved\"
+  ,\"eventType.com.armedia.acm.timesheet.submit\": \"Timesheet submitted\"
   ,\"eventType.com.armedia.acm.correspondence.file.added\": \"Correspondence Added \"
   ,\"eventType.com.armedia.acm.app.note.added\": \"Note Added\"
   ,\"eventType.com.armedia.acm.app.note.rejectcomment.added\": \"Reject Comment Added\"
@@ -1080,6 +1099,14 @@ auditEvent:
   ,\"eventType.com.armedia.acm.objectlock.checkout\": \"Checked Out\"
   ,\"eventType.com.armedia.acm.objectlock.checkin\": \"Checked In\"
   ,\"eventType.com.armedia.acm.objectlock.cancel\": \"Cancel Editing\"
+  ,\"eventType.com.armedia.acm.objectlock.lock.read\": \"Object Locked read\"
+  ,\"eventType.com.armedia.acm.objectlock.unlock.read\": \"Object Unlocked read\"
+  ,\"eventType.com.armedia.acm.objectlock.lock.write\": \"Object Locked write\"
+  ,\"eventType.com.armedia.acm.objectlock.unlock.write\": \"Object Unlocked write\"
+  ,\"eventType.com.armedia.acm.objectlock.lock.delete\": \"Object Locked delete\"
+  ,\"eventType.com.armedia.acm.objectlock.unlock.delete\": \"Object Unlocked delete\"
+  ,\"eventType.com.armedia.acm.objectlock.lock.object_lock\": \"Object Locked\"
+  ,\"eventType.com.armedia.acm.objectlock.unlock.object_lock\": \"Object Unlocked\"
   ,\"eventType.com.armedia.acm.smtp.event.sent\": \"Document Emailed\"
   ,\"eventType.com.armedia.acm.smtp.event.sent.hyperlink\":\"Document Emailed\"
   ,\"eventType.com.armedia.acm.smtp.event.mail.sent\": \"Mail Sent\"
@@ -1108,6 +1135,7 @@ auditEvent:
   ,\"eventType.com.armedia.acm.transcribe.compiled\": \"Transcription Compiled\"
   ,\"eventType.com.armedia.acm.transcribe.rollback\": \"Transcription Rollback\"
   ,\"eventType.com.armedia.acm.transcribe.provider.failed\": \"Transcription Provider Failed\"
+  ,\"eventType.com.armedia.acm.billing.item.created\": \"Billing Item Created\"
   ,\"eventType.com.armedia.acm.billing.invoice.created\":\"Billing Invoice Created\"}"
 #################### Fiscal Year Configuration (fiscalYear.properties) ####################
 fiscal.year.start:
@@ -1583,3 +1611,11 @@ acm.hazelcast:
   socket.bind.any: true
 
 mule.workingDirectory: "${user.home}/.arkcase/.mule"
+
+#### Moved .arkcase/acm/resources/settings.json ####
+language.settings:
+  defaultLocale: en
+  localeCode: en
+  
+camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
+

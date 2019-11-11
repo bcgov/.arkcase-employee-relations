@@ -19,12 +19,17 @@
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectLockPrivilege"/>
                 </bean>
-                <bean id="objectUnLockUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="objectLockPermissionUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lockPermission"/>
+                    <property name="requiredPrivilege" ref="objectLockPrivilege"/>
+                </bean>
+                <bean id="objectUnLockPostUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectUnLockPrivilege"/>
                 </bean>
-                <bean id="objectUnLockUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                <bean id="objectUnLockDeleteUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="DELETE"/>
                     <property name="url" value="/api/{version}/plugin/{objectType}/{objectId}/lock"/>
                     <property name="requiredPrivilege" ref="objectUnLockPrivilege"/>
@@ -46,43 +51,5 @@
                 </bean>
             </list>
         </property>
-    </bean>
-
-    <bean id="objectLockPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
-        <property name="privilegeName" value="object-lock-privilege"/>
-        <property name="applicationRolesWithPrivilege">
-            <list>
-                <value>ROLE_SUPERVISOR</value>
-                <value>ROLE_CONTRIBUTOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-            </list>
-        </property>
-    </bean>
-    <bean id="objectUnLockPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
-        <property name="privilegeName" value="object-unlock-privilege"/>
-        <property name="applicationRolesWithPrivilege">
-            <list>
-                <value>ROLE_CONTRIBUTOR</value>
-                <value>ROLE_SUPERVISOR</value>
-                <value>ROLE_ADMINISTRATOR</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean id="listLocksDetailsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
-        <property name="privilegeName" value="list-locks-details-privilege"/>
-        <property name="applicationRolesWithPrivilege">
-            <list>
-                <value>ROLE_ADMINISTRATOR</value>
-            </list>
-        </property>
-    </bean>
-    <bean id="listLockedObjectsPrivilege" class="com.armedia.acm.pluginmanager.model.AcmPluginPrivilege">
-        <property name="privilegeName" value="list-locked-objects-privilege"/>
-        <property name="applicationRolesWithPrivilege">
-            <list>
-                <value>ROLE_ADMINISTRATOR</value>
-            </list>
-        </property>
-    </bean>
+    </bean>    
 </beans>
