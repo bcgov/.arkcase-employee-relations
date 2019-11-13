@@ -1,6 +1,6 @@
 application:
  name: 
-  active: arkcase-activemq,arkcase
+  active: arkcase,arkcase-activemq
   default: arkcase
  profile: runtime
 configuration:
