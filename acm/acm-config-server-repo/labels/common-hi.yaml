@@ -54,6 +54,7 @@ common.objects:
   progressError: 'डेटा लोड करने में विफल '
 common.service.messageService:
   authorizationError: आप इस कार्रवाई को करने के लिए अधिकृत नहीं हैं
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: कार्रवाई सफल थी
     error: कार्रवाई त्रुटि

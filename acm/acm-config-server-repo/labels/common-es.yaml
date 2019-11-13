@@ -56,6 +56,7 @@ common.objects:
   progressError: Hubo un error cargando los datos
 common.service.messageService:
   authorizationError: No está autorizado para ejecutar esta acción
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: La acción fue exitosa
     error: Error de acción

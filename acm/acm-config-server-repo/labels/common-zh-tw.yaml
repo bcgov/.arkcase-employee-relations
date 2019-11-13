@@ -46,6 +46,7 @@ common.objects:
   progressError: '無法加載數據 '
 common.service.messageService:
   authorizationError: 您無權採取此行動
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: 操作完成
     error: 操作錯誤

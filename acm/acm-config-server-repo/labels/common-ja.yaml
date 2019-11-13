@@ -47,6 +47,7 @@ common.objects:
   progressError: 'データの読み込みに失敗しました '
 common.service.messageService:
   authorizationError: あなたはこの行動をとる権限がありません
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: アクションは成功しました
     error: アクションエラー
