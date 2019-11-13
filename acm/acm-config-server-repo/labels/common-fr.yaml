@@ -53,6 +53,7 @@ common.objects:
   progressError: 'Impossible de charger des données '
 common.service.messageService:
   authorizationError: Vous n'êtes pas autorisé à prendre cette action
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: L'action a été réussie
     error: Erreur d'action
