@@ -53,6 +53,7 @@ common.objects:
   progressError: 'Не удалось загрузить данные '
 common.service.messageService:
   authorizationError: Вы не уполномочены принимать это действие
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: Действие было успешным
     error: Ошибка действия
