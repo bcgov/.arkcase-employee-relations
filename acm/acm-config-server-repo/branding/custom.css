@@ -175,3 +175,7 @@
 .ui-menu .ui-widget .ui-widget-content .ui-front {
     top: -1px !important;
 }
+
+.h4.font-bold{ 
+    font-weight: bold !important; 
+}
