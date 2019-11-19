@@ -1735,8 +1735,11 @@ solr:
   host: "acm-arkcase"
   port: 443
   contextRoot: "solr"
+  clientType: "HTTP"
+  protocol: "https"
   quicksearch.core: "acmQuickSearch"
   advancedsearch.core: "acmAdvancedSearch"
+  omitHeader: true
   updateHandler: "update"
   contentFileHandler: "update/extract"
   searchHandler: "select"
@@ -1749,6 +1752,10 @@ solr:
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
   suggestHandler: "suggest_handler"
+  parallelUpdates: false
+  zkHosts: 
+  connectionTimeout: 1000
+  socketTimeout: 30000
 ################### State Of Arkcase Configuration (stateOfArkCase.properties) ###################
 state_of_arkcase.reports:
   #specify in which folder reports will be generated and kept there
