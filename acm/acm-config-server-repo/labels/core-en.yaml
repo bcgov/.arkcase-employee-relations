@@ -57,6 +57,7 @@ core:
       duns: DUNS
       cageCode: Cage Code
     organizationTypes:
+      unknown: Unknown
       non-profit: Non-profit
       government: Government
       corporation: Corporation
@@ -69,6 +70,7 @@ core:
       approver: Approver
       follower: Follower
     personOrganizationRelationTypes:
+      unknown: Unknown
       owner: Owner
       owned: Owned
       employee: Employee
