@@ -1824,6 +1824,7 @@ task.plugin:
   ,{\"type\":\"noi\", \"label\":\"Notice of Investigation\"}
   ,{\"type\":\"wir\", \"label\":\"Witness Interview Request\"}
   ,{\"type\":\"other\", \"label\":\"Other\"}]"
+  sendCompleteEmail: true
 ## Dashboard SOLR queries
 solr.task:
   #All tasks assigned to all users

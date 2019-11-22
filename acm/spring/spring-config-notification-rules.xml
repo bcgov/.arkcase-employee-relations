@@ -1017,6 +1017,26 @@
         </property>
     </bean>
     
+    <bean id="taskCompletedNotifyCreator" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="queryType" value="SELECT"/>
+        <property name="executor" ref="acmEntitySendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                        n
+                    FROM
+                        Notification n
+                    WHERE
+                        n.created >= :lastRunDate
+                    AND
+                        n.templateModelName = 'taskCompletedNotifyCreator'
+                ]]>
+            </value>
+        </property>
+    </bean>
+    
     <bean id="mentions" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
         <property name="queryType" value="SELECT"/>
