@@ -316,7 +316,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Doc Repo
     fields.parentObjectType.costsheet%: Costsheet
     fields.parentObjectType.timesheet%: Табель
-    names.personOrganization%: Лицо, тип организации
+    names.subType%: Sub-Type
     names.city%: Город
     names.createDate%: Создать дату
     fields.createDate.previousWeek%: Предыдущая неделя

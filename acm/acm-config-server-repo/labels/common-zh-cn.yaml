@@ -308,7 +308,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: 文档库存
     fields.parentObjectType.costsheet%: 成本单
     fields.parentObjectType.timesheet%: 时间表
-    names.personOrganization%: 人员组织类型
+    names.subType%: Sub-Type
     names.city%: 城市
     names.createDate%: 创建日期
     fields.createDate.previousWeek%: 上周

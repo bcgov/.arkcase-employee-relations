@@ -308,7 +308,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: 文書保存
     fields.parentObjectType.costsheet%: 費用シート
     fields.parentObjectType.timesheet%: 時間シート
-    names.personOrganization%: 人物、組織種類
+    names.subType%: Sub-Type
     names.city%: 街
     names.createDate%: 作成日
     fields.createDate.previousWeek%: 前週
