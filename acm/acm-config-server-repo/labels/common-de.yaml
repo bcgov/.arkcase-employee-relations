@@ -322,7 +322,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Dokument Reposit
     fields.parentObjectType.costsheet%: Kostenblatt
     fields.parentObjectType.timesheet%: Arbeitsblatt
-    names.personOrganization%: Person, Organisationstyp
+    names.subType%: Sub-Type
     names.city%: Stadt
     names.createDate%: Erstellungsdatum
     fields.createDate.previousWeek%: Vorherige Woche

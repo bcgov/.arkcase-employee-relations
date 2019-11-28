@@ -1693,7 +1693,7 @@ search.plugin:
     \"date.modified_date_tdt\": \"Modify Date\",
     \"modifier_full_name_facet\": \"Modify User\",
     \"parent_type_facet\": \"Parent Type\",
-    \"type_facet\": \"Document Type\",
+    \"type_facet\": \"Sub-Type\",
     \"object_type_facet\": \"Object Type\",
     \"location_city_facet\": \"City\",
     \"location_state_facet\": \"State\",

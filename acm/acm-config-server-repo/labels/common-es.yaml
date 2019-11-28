@@ -320,7 +320,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Depósito de documentos
     fields.parentObjectType.costsheet%: Hoja de coste
     fields.parentObjectType.timesheet%: Hoja de tiempos
-    names.personOrganization%: Persona, tipo de organización
+    names.subType%: Sub-Type
     names.city%: Ciudad
     names.createDate%: Crear fecha
     fields.createDate.previousWeek%: Semana anterior
