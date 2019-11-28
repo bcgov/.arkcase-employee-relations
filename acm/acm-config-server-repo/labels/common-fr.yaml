@@ -314,7 +314,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Doc Repo
     fields.parentObjectType.costsheet%: Feuille de coût
     fields.parentObjectType.timesheet%: Emploi du temps
-    names.personOrganization%: Personne, Type d'organisation
+    names.subType%: Sub-Type
     names.city%: Ville
     names.createDate%: Créer un rendez-vous
     fields.createDate.previousWeek%: Semaine précédente

@@ -318,7 +318,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: डॉक्टर रेपो
     fields.parentObjectType.costsheet%: लागत शीट
     fields.parentObjectType.timesheet%: समय पत्र
-    names.personOrganization%: व्यक्ति, संगठन का प्रकार
+    names.subType%: Sub-Type
     names.city%: शहर
     names.createDate%: तारीख बनाना
     fields.createDate.previousWeek%: पिछला सप्ताह
