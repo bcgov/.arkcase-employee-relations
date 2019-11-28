@@ -323,7 +323,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Doc Repo
     fields.parentObjectType.costsheet%: Costsheet
     fields.parentObjectType.timesheet%: Timesheet
-    names.personOrganization%: Person,Organization Type
+    names.subType%: Sub-Type
     names.city%: City
     names.createDate%: Create Date
     fields.createDate.previousWeek%: Previous Week
