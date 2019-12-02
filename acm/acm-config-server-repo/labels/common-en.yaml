@@ -640,6 +640,7 @@ common.objectTypes:
   TIMESHEET: Timesheet
   COSTSHEET: Costsheet
   FILE: File
+  FOLDER: Folder
   DOC_REPO: Document Repository
   ORGANIZATION: Organization
   PERSON: Person
