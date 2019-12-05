@@ -117,6 +117,7 @@ core:
       victim: Victim
       defenseCounsel: Defense Counsel
       forensicScientist: Forensic Scientist
+      unknown: Unknown
     deviceTypes:
       homePhone: Home phone
       workPhone: Work phone
