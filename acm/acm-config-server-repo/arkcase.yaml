@@ -954,11 +954,6 @@ audit.plugin:
     enabled: false
     entity.events.enabled: false
     entity.events.object.enabled: false
-  #mule flows logging configuration
-  mule.flows.logging:
-    enabled: false
-    message.enabled: false
-    message.properties.enabled: false
   #comma separated list of contentTypes that will be logged
   contentTypesToLog: "application/json,application/atom+xml,text/plain,text/csv,text/html"
   AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
@@ -1333,7 +1328,7 @@ ecm:
     DOC_REPO: "/Document Repositories"
     RECYCLE_BIN: "/Recycle Bin"
     BUSINESS_PROCESS: "/Business Processes"
-  #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/mule-config-*.cmis.properties
+  #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/camel-config-*.cmis.properties
   defaultCmisId: "alfresco"
   viewer: "snowbound"
   viewer.js: "$[context]/resources/vendors/ViewerJS/index.html?type=$[type]&title=$[title]#$[context]/api/latest/plugin/ecm/stream/$[fileId]"
@@ -2036,9 +2031,6 @@ acm.hazelcast:
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
-mule.workingDirectory: "${user.home}/.arkcase/.mule"
-
-#### Moved .arkcase/acm/resources/settings.json ####
 language.settings:
   defaultLocale: en
   localeCode: en
