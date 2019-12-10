@@ -1026,6 +1026,9 @@ ORGANIZATION.history.event.types: "com.armedia.acm.organization.created, com.arm
 calendar:
   configured_object_types: "CASE_FILE,COMPLAINT"
   configuration: "{\"CASE_FILE\":{\"integrationEnabled\":\"false\"}, \"COMPLAINT\":{\"integrationEnabled\":\"false\"}}"
+################### Phone Regular expressions ####################
+phone:
+  phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
 ################### Capture Configuration (capture.properties) ####################
 capture:
   #file extensions that are allowed to be captured
