@@ -215,13 +215,24 @@ report:
     # This must be a real user account in the content management system (this account creates folders and documents in a document repository)
     CMIS_STORE_REPORT_USER: "admin"
   config:
-    reports: "{\"CASE_SUMMARY\" : \"/arkcase/pentaho/api/repos/:public:arkcase:caseSummary.prpt/viewer\",
-    \"COMPLAINT_DISPOSITION_COUNT\" : \"/arkcase/pentaho/api/repos/:public:arkcase:ComplaintDispositionCount.prpt/viewer\",
-    \"COMPLAINT_REPORT\" : \"/arkcase/pentaho/api/repos/:public:arkcase:ComplaintReport.prpt/viewer\"}"
+    reports: 
+      CASE_SUMMARY: "/arkcase/pentaho/api/repos/:public:arkcase:caseSummary.prpt/viewer"
+      COMPLAINT_DISPOSITION_COUNT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintDispositionCount.prpt/viewer"
+      COMPLAINT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintReport.prpt/viewer"
     ################### (reportToRolesMap.properties) ###################
-    reportsToRoles: "{\"CASE_SUMMARY\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
-    \"COMPLAINT_DISPOSITION_COUNT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
-    \"COMPLAINT_REPORT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\"}"
+    reportsToRoles: 
+      CASE_SUMMARY: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
+      COMPLAINT_DISPOSITION_COUNT: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
+      COMPLAINT_REPORT: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
 ################### Activiti Configuration (activiti.properties) ####################
 activiti:
   job.executor.activate: true
