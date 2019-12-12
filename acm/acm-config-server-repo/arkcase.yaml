@@ -1781,7 +1781,7 @@ subscription.plugin:
     failed: "Subscription Was not Removed Due To SQL exception"
     event.types: "com.armedia.acm.plugins.search.result"
   ##SOLR predefined queries for subscription module
-  get.object.byId: "id:?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  get.object.byId: "id:? AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED"
   ##Used by UI ##
   search:
     name: "subscription"
