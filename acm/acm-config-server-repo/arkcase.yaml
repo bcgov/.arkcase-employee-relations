@@ -2004,7 +2004,6 @@ acm.hazelcast:
     url: http://arkcase-host:8880/hazelcast-mancenter
     update_interval: 3
 
-
   ## Network configuration ##
   network:
     #on which port to listen
@@ -2042,6 +2041,7 @@ acm.hazelcast:
   log.state: true
   #which logging should use. Possible values are:jdk, log4j, slf4j, none
   logging.type: slf4j
+  log.folder: "${user.dir}/logs/"
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
