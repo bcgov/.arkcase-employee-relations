@@ -414,7 +414,7 @@ organizations.tree:
     iHaveCreatedActive: I've Created - Active
     iHaveCreated: I've Created
     active: Active
-    inActive: In active
+    inActive: Inactive
     noFilter: (No Filter)
   sorters:
     createdDateAsc: Sort Date Created Ascending
