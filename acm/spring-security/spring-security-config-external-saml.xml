@@ -38,7 +38,7 @@
 
         <!-- Saml Entry Point authenticates users against IDP server for Ajax calls -->
         <http entry-point-ref="acmRestAuthenticationEntryPoint" use-expressions="true" request-matcher="regex"
-            pattern="^/api/.*$|^/plugin/.*$" authentication-manager-ref="acmAuthenticationManager">
+            pattern="^/stomp/.*$|^/api/.*$|^/plugin/.*$" authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="isAuthenticated()"/>
             <http-basic/>
             <custom-filter after="SECURITY_CONTEXT_FILTER" ref="acmSamlRestAuthenticationCheckFilter"/>
@@ -226,7 +226,9 @@
         <beans:bean id="hokWebSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl"/>
 
         <!-- SAML 2.0 WebSSO Assertion Consumer -->
-        <beans:bean id="webSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerImpl"></beans:bean>
+	<beans:bean id="webSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerImpl">
+            <beans:property name="maxAuthenticationAge" value="72000"/>
+        </beans:bean>
 
         <!-- SAML 2.0 Holder-of-Key Web SSO profile -->
         <beans:bean id="hokWebSSOProfile" class="org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl"/>
