@@ -71,6 +71,12 @@
                     "inverseKey": "executive",
                     "value": "core.lookups.personOrganizationRelationTypes.executive",
                     "key": "executive"
+                },
+			    {
+                    "inverseValue": "core.lookups.personOrganizationRelationTypes.unknown",
+                    "inverseKey": "unknown",
+                    "value": "core.lookups.personOrganizationRelationTypes.unknown",
+                    "key": "unknown"
                 }
             ],
             "readonly": true
@@ -962,6 +968,10 @@
                 {
                     "value": "core.lookups.caseFilePersonTypes.forensicScientist",
                     "key": "Forensic Scientist"
+                },
+                {
+                    "value": "core.lookups.caseFilePersonTypes.unknown",
+                    "key": "Unknown"
                 }
             ],
             "readonly": true
@@ -2402,6 +2412,10 @@
                 {
                     "value": "core.lookups.organizationTypes.corporation",
                     "key": "Corporation"
+                },
+			    {
+                    "value": "core.lookups.organizationTypes.unknown",
+                    "key": "Unknown"
                 }
             ],
             "readonly": true

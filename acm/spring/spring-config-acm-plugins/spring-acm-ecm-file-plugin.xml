@@ -133,12 +133,17 @@
                 </bean>
                 <bean id="deleteFileTemporary" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
-                    <property name="url" value="/api/{version}/service/ecm/temporary/id/{fileId}"/>
+                    <property name="url" value="/api/{version}/service/ecm/file/deleteTemporary/{fileId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
                 <bean id="deleteFilesPermanent" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="POST"/>
                     <property name="url" value="/api/latest/service/ecm/permanent"/>
+                    <property name="requiredPrivilege" ref="adminPrivilege"/>
+                </bean>                
+				<bean id="deleteRecycleBinItemsPermanent" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="DELETE"/>
+                    <property name="url" value="/api/latest/service/recycleBin"/>
                     <property name="requiredPrivilege" ref="adminPrivilege"/>
                 </bean>
                 <bean id="moveFileUrl" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
@@ -161,6 +166,11 @@
                     <property name="url" value="/api/{version}/service/ecm/folder/{folderId}"/>
                     <property name="requiredPrivilege" ref="filePrivilege"/>
                 </bean>
+				<bean id="deleteFolderTemporary" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/service/ecm/folder/deleteTemporary/{folderId}"/>
+                    <property name="requiredPrivilege" ref="filePrivilege"/>
+                </bean>                
                 <bean id="getDeleteFolderInfo" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
                     <property name="httpMethod" value="GET"/>
                     <property name="url" value="/api/{version}/service/ecm/folder/{folderId}/count"/>

@@ -19,9 +19,11 @@ common:
   defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
   defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
   defaultDatePickerFormat: MM/dd/yyyy
   defaultDateUIFormat: MM/dd/yyyy
   defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: ja_userSearch
   title: ja_User/Group Search
@@ -45,6 +47,7 @@ common.objects:
   progressError: 'データの読み込みに失敗しました '
 common.service.messageService:
   authorizationError: あなたはこの行動をとる権限がありません
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: アクションは成功しました
     error: アクションエラー
@@ -305,7 +308,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: 文書保存
     fields.parentObjectType.costsheet%: 費用シート
     fields.parentObjectType.timesheet%: 時間シート
-    names.personOrganization%: 人物、組織種類
+    names.subType%: Sub-Type
     names.city%: 街
     names.createDate%: 作成日
     fields.createDate.previousWeek%: 前週

@@ -22,12 +22,14 @@ common:
   _12: 'Последующие форматы даты прекращаются. Если клиенты запросят настроить формат,
     нам нужно '
   _13: просвещать их, чтобы избежать этого, из-за проблем
-  defaultDateFormat: ММ/ДД/ГГГГ
-  defaultTimeFormat: чч:мм:ss
-  defaultDateTimeFormat: ММ/ДД/ГГГГ чч:мм:сс
-  defaultDatePickerFormat: ММ/ДД/ГГГГ
-  defaultDateUIFormat: ММ/ДД/ГГГГ
-  defaultDateTimeUIFormat: 'ММ/ДД/ГГГГ чч:мм:'
+  defaultDateFormat: MM/DD/YYYY
+  defaultTimeFormat: hh:mm:ss
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: ru_userSearch
   title: ru_User/Group Search
@@ -42,7 +44,7 @@ common.userOrGroupSearch:
     title: ru_Title
     username: ru_Username
 common.frevvo:
-  defaultDateFormat: ГГГГ-MM-ДД
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Недопустимые данные
 common.objects:
@@ -51,6 +53,7 @@ common.objects:
   progressError: 'Не удалось загрузить данные '
 common.service.messageService:
   authorizationError: Вы не уполномочены принимать это действие
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: Действие было успешным
     error: Ошибка действия
@@ -313,7 +316,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Doc Repo
     fields.parentObjectType.costsheet%: Costsheet
     fields.parentObjectType.timesheet%: Табель
-    names.personOrganization%: Лицо, тип организации
+    names.subType%: Sub-Type
     names.city%: Город
     names.createDate%: Создать дату
     fields.createDate.previousWeek%: Предыдущая неделя

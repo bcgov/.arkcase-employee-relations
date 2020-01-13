@@ -25,12 +25,14 @@ common:
   _12: 'Se eliminan los siguientes formatos de fecha. Si los clientes solicitan personalizar
     el formato, necesitamos '
   _13: Educarlos para evitar esto porque tienen preocupaciones
-  defaultDateFormat: MM/DD/AAAA
+  defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
-  defaultDateTimeFormat: MM/DD/AAAA hh:mm
-  defaultDatePickerFormat: MM/dd/AAAA
-  defaultDateUIFormat: MM/dd/aaaa
-  defaultDateTimeUIFormat: MM/dd/aaaa HH:mm
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: es_userSearch
   title: es_User/Group Search
@@ -45,7 +47,7 @@ common.userOrGroupSearch:
     title: es_Title
     username: es_Username
 common.frevvo:
-  defaultDateFormat: AAAA-MM-DD
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Datos no válidos
 common.objects:
@@ -54,6 +56,7 @@ common.objects:
   progressError: Hubo un error cargando los datos
 common.service.messageService:
   authorizationError: No está autorizado para ejecutar esta acción
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: La acción fue exitosa
     error: Error de acción
@@ -317,7 +320,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Depósito de documentos
     fields.parentObjectType.costsheet%: Hoja de coste
     fields.parentObjectType.timesheet%: Hoja de tiempos
-    names.personOrganization%: Persona, tipo de organización
+    names.subType%: Sub-Type
     names.city%: Ciudad
     names.createDate%: Crear fecha
     fields.createDate.previousWeek%: Semana anterior

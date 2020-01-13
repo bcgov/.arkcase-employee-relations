@@ -22,6 +22,7 @@ common:
   _12: 'Following date formats are phased out. If customers request to have customize
     format, we need '
   _13: to educate them to avoid doing so, because of i18n concerns
+  ## date formats should not be translated in other languages ##
   defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
   defaultDateTimeFormat: MM/DD/YYYY hh:mm
@@ -30,6 +31,7 @@ common:
   defaultDateUIFormat: MM/dd/yyyy
   defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
+  ## date formats should not be translated in other languages ##
 common.userOrGroupSearch:
   id: userSearch
   title: User/Group Search
@@ -53,6 +55,7 @@ common.objects:
   progressError: 'Failed to load data '
 common.service.messageService:
   authorizationError: You are not authorized to take this action
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: Action was successful
     error: Action error
@@ -320,7 +323,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Doc Repo
     fields.parentObjectType.costsheet%: Costsheet
     fields.parentObjectType.timesheet%: Timesheet
-    names.personOrganization%: Person,Organization Type
+    names.subType%: Sub-Type
     names.city%: City
     names.createDate%: Create Date
     fields.createDate.previousWeek%: Previous Week
@@ -637,6 +640,7 @@ common.objectTypes:
   TIMESHEET: Timesheet
   COSTSHEET: Costsheet
   FILE: File
+  FOLDER: Folder
   DOC_REPO: Document Repository
   ORGANIZATION: Organization
   PERSON: Person
@@ -825,6 +829,7 @@ common.newOrganization:
     url.placeholder: Enter URL
     removeContactMethod: Remove
     urlType: URL Type
+    validationMessage: "The Phone Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
   people:
     title: People
     searchExisting.placeholder: Search Existing Person

@@ -150,18 +150,41 @@ plain_configuration:
 # If an object event is for an object with one of these 
 # class names, object types, or parent object types, 
 # the event will be broadcast to the browser over WebSockets
-#comma separated object type names 
+#object type names 
 acm.object.changed.notification.filter.include:
-  object_types: "CASE_FILE,COMPLAINT,FILE,TASK,DOC_REPO,PERSON,ORGANIZATION"
-  #comma separated full path class name, example com.armedia.acm.plugins.casefile.model.CaseFile 
-  classNames: "com.armedia.acm.plugins.casefile.model.CaseFile,com.armedia.acm.plugins.complaint.model.Complaint,com.armedia.acm.plugins.task.model.AcmTask,com.armedia.acm.plugins.ecm.model.EcmFile,
-  com.armedia.acm.plugins.casefile.model.ChangeCaseStatus,com.armedia.acm.plugins.complaint.model.CloseComplaintRequest,com.armedia.acm.services.costsheet.model.AcmCostsheet,
-  com.armedia.acm.services.timesheet.model.AcmTimesheet,com.armedia.acm.plugins.documentrepository.model.DocumentRepository,com.armedia.acm.plugins.person.model.Person,
-  com.armedia.acm.plugins.person.model.Organization"
-  #comma separated parent object type names... if an object has such a parent type, it will be sent over websockets
-  parent_object_types: "CASE_FILE,COMPLAINT,TASK,DOC_REPO"
+  object_types:
+    - CASE_FILE
+    - COMPLAINT
+    - FILE
+    - TASK
+    - DOC_REPO
+    - PERSON
+    - ORGANIZATION
+  #full path class name, example com.armedia.acm.plugins.casefile.model.CaseFile 
+  classNames: 
+    - com.armedia.acm.plugins.casefile.model.CaseFile
+    - com.armedia.acm.plugins.complaint.model.Complaint
+    - com.armedia.acm.plugins.task.model.AcmTask
+    - com.armedia.acm.plugins.ecm.model.EcmFile
+    - com.armedia.acm.plugins.casefile.model.ChangeCaseStatus
+    - com.armedia.acm.plugins.complaint.model.CloseComplaintRequest
+    - com.armedia.acm.services.costsheet.model.AcmCostsheet
+    - com.armedia.acm.services.timesheet.model.AcmTimesheet
+    - com.armedia.acm.plugins.documentrepository.model.DocumentRepository
+    - com.armedia.acm.plugins.person.model.Person
+    - com.armedia.acm.plugins.person.model.Organization
+  #parent object type names... if an object has such a parent type, it will be sent over websockets
+  parent_object_types: 
+    - CASE_FILE 
+    - COMPLAINT
+    - TASK
+    - DOC_REPO
   #this property is not used in the application.
-  root_parent_object_types: "CASE_FILE,COMPLAINT,TASK,DOC_REPO"
+  root_parent_object_types: 
+    - CASE_FILE
+    - COMPLAINT
+    - TASK
+    - DOC_REPO
 ################### AcmReports Server Configuration (acm-reports-server-config.properties) ####################
 report:
   plugin:
@@ -192,13 +215,24 @@ report:
     # This must be a real user account in the content management system (this account creates folders and documents in a document repository)
     CMIS_STORE_REPORT_USER: "admin"
   config:
-    reports: "{\"CASE_SUMMARY\" : \"/arkcase/pentaho/api/repos/:public:arkcase:caseSummary.prpt/viewer\",
-    \"COMPLAINT_DISPOSITION_COUNT\" : \"/arkcase/pentaho/api/repos/:public:arkcase:ComplaintDispositionCount.prpt/viewer\",
-    \"COMPLAINT_REPORT\" : \"/arkcase/pentaho/api/repos/:public:arkcase:ComplaintReport.prpt/viewer\"}"
+    reports: 
+      CASE_SUMMARY: "/arkcase/pentaho/api/repos/:public:arkcase:caseSummary.prpt/viewer"
+      COMPLAINT_DISPOSITION_COUNT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintDispositionCount.prpt/viewer"
+      COMPLAINT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintReport.prpt/viewer"
     ################### (reportToRolesMap.properties) ###################
-    reportsToRoles: "{\"CASE_SUMMARY\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
-    \"COMPLAINT_DISPOSITION_COUNT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\",
-    \"COMPLAINT_REPORT\" : \"ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR\"}"
+    reportsToRoles: 
+      CASE_SUMMARY: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
+      COMPLAINT_DISPOSITION_COUNT: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
+      COMPLAINT_REPORT: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
 ################### Activiti Configuration (activiti.properties) ####################
 activiti:
   job.executor.activate: true
@@ -365,128 +399,521 @@ navigator:
     privilegeName: "acm-analytics-audit-module"
 ################### (applicationRoles.properties) ###################
 application:
-  roles: "ROLE_ADMINISTRATOR,ROLE_SUPERVISOR,ROLE_CONTRIBUTOR,ROLE_CONSUMER,ROLE_EXTERNAL,ROLE_ENTITY_ADMINISTRATOR,ROLE_BILLING_QUEUE"
+  roles:
+    - ROLE_ADMINISTRATOR
+    - ROLE_SUPERVISOR
+    - ROLE_CONTRIBUTOR
+    - ROLE_CONSUMER
+    - ROLE_EXTERNAL
+    - ROLE_ENTITY_ADMINISTRATOR
+    - ROLE_BILLING_QUEUE  
   ################### Application Privileges (applicationPrivileges.properties) ####################
-  privileges: "{\"acmGlobalAllowPrivilege\": \"Global Allow Privilege\",
-\"auditPrivilege\": \"Audit Privilege\",
-\"auditReadEventsForObjectPrivilege\": \"Audit Read Events For Object Privilege\",
-\"acmGenerateCorrespondencePrivilege\": \"Generate Correspondence Privilege\",
-\"dashboardPrivilege\": \"Dashboard Privilege\",
-\"filePrivilege\": \"File Privilege\",
-\"participantPrivilege\": \"Participant Privilege\",
-\"blogPrivilege\": \"Blog Privilege\",
-\"helloWorldPrivilege\": \"Hello World Privilege\",
-\"profilePrivilege\": \"Profile Privilege\",
-\"reportPrivilege\": \"Report Privilege\",
-\"costsheetCreatePrivilege\": \"Costsheet Create Privilege\",
-\"costsheetApprovePrivilege\": \"Costsheet Approve Privilege\",
-\"timesheetApprovePrivilege\": \"Timesheet Approve Privilege\",
-\"acmComplaintListPrivilege\": \"Complaint List Privilege\",
-\"acmComplaintSavePrivilege\": \"Complaint Save Privilege\",
-\"acmComplaintCreatePrivilege\": \"Complaint Create Privilege\",
-\"acmComplaintApprovePrivilege\": \"Complaint Approve Privilege\",
-\"acmSearchPrivilege\": \"Search Privilege\",
-\"searchPrivilege\": \"Search Privilege\",
-\"acmCaseApprovePrivilege\": \"Case Approve Privilege\",
-\"saveCasePrivilege\": \"Save Case Privilege\",
-\"caseFileListPrivilege\": \"Case File List Privilege\",
-\"caseFileCreatePrivilege\": \"Case File Create Privilege\",
-\"acmPersonSavePrivilege\": \"Person Save Privilege\",
-\"acmPersonDeletePrivilege\": \"Person Delete Privilege\",
-\"acmOrganizationSavePrivilege\": \"Organization Save Privilege\",
-\"acmOrganizationListPrivilege\": \"Organization List Privilege\",
-\"acmOrganizationDeletePrivilege\": \"Organization Delete Privilege\",
-\"acmOrganizationDetailsPrivilege\": \"Organization Details Privilege\",
-\"acmOrganizationAssociationListPrivilege\": \"Organization Association List Privilege\",
-\"acmOrganizationAssociationSavePrivilege\": \"Organization Association Save Privilege\",
-\"acmOrganizationAssociationDeletePrivilege\": \"Organization Association Delete Privilege\",
-\"acmPersonAssociationListPrivilege\": \"Person Association List Privilege\",
-\"acmPersonAssociationDeletePrivilege\": \"Person Association Delete Privilege\",
-\"acmPersonAssociationSavePrivilege\": \"Person Association Save Privilege\",
-\"adminPrivilege\": \"Admin Privilege\",
-\"acmDeleteNoteByIdPrivilege\": \"Delete Note By Id Privilege\",
-\"acmListNotesPrivilege\": \"List Notes Privilege\",
-\"costsheetPrivilege\": \"Costsheet Privilege\",
-\"timesheetCreatePrivilege\": \"Timesheet Create Privilege\",
-\"timesheetPrivilege\": \"Timesheet Privilege\",
-\"tagPrivilege\": \"Tag Privilege\",
-\"acmTaskListPrivilege\": \"Task List Privilege\",
-\"acmTaskSavePrivilege\": \"Task Save Privilege\",
-\"acmTaskCreatePrivilege\": \"Task Create Privilege\",
-\"acmTaskCompletePrivilege\": \"Task Complete Privilege\",
-\"acmTaskDeletePrivilege\": \"Task Delete Privilege\",
-\"acmNotificationPrivilege\": \"Notification Privilege\",
-\"subscribePrivilege\": \"Subscribe Privilege\",
-\"listMilestonesGroupedByDate\": \"List Milestones Grouped By Date\",
-\"acmSignatureConfirmPrivilege\": \"Signature Confirm Privilege\",
-\"acmSignatureFindPrivilege\": \"Signature Find Privilege\",
-\"acmPersonFindPrivilege\": \"Person Find Privilege\",
-\"acmPersonListPrivilege\": \"Person List Privilege\",
-\"acmPersonTypesPrivilege\": \"Person Types Privilege\",
-\"acmSaveNotePrivilege\": \"Save Note Privilege\",
-\"acmOutlookListObjectsPrivilege\": \"Outlook List Objects Privilege\",
-\"splitCaseFilePrivilege\": \"Split Case File Privilege\",
-\"objectLockPrivilege\": \"Object Lock Privilege\",
-\"objectUnLockPrivilege\": \"Object Unlock Privilege\",
-\"listLocksDetailsPrivilege\": \"List Lock Details Privilege\",
-\"listLockedObjectsPrivilege\": \"List Locked Objects Privilege\",
-\"analyticsPrivilege\": \"Data Analytics Privilege\",
-\"analyticsAuditPrivilege\": \"Log Analytics Privilege\",
-\"acmAdminModulePrivilege\": \"Admin Module Privilege\",
-\"acmAuditModulePrivilege\": \"Audit Module Privilege\",
-\"acmCaseModulePrivilege\": \"Case Module Privilege\",
-\"acmComplaintModulePrivilege\": \"Complaint Module Privilege\",
-\"acmCostModulePrivilege\": \"Cost Module Privilege\",
-\"acmDashboardModulePrivilege\": \"Dashboard Module Privilege\",
-\"acmNotificationModulePrivilege\": \"Notification Module Privilege\",
-\"acmReportModulePrivilege\": \"Report Module Privilege\",
-\"acmSearchModulePrivilege\": \"Search Module Privilege\",
-\"acmSubscriptionModulePrivilege\": \"Subscription Module Privilege\",
-\"acmTagModulePrivilege\": \"Tag Module Privilege\",
-\"acmTaskModulePrivilege\": \"Task Module Privilege\",
-\"acmTimeModulePrivilege\": \"Time Module Privilege\",
-\"acmCategoryManagementPrivilege\": \"Category Management Privilege\",
-\"acmCalendarAdminPrivilege\": \"Calendar Admin Privilege\",
-\"acmCalendarReadShortenedConfigPrivilege\": \"Read Shortened Calendar Config Privilege\",
-\"acmCalendarEventsListPrivilege\": \"Calendar List Events Privilege\",
-\"acmCalendarEventsSavePrivilege\": \"Calendar Save Events Privilege\",
-\"acmCalendarEventsCreatePrivilege\": \"Calendar Create Events Privilege\",
-\"acmCalendarEventsDeletePrivilege\": \"Calendar Delete Events Privilege\",
-\"acmPersonModulePrivilege\": \"Person Module Privilege\",
-\"acmOrganizationModulePrivilege\": \"Organization Module Privilege\",
-\"documentRepositoryManagerPrivilege\": \"Document Repository Manager Privilege\",
-\"documentRepositoryModulePrivilege\": \"Document Repository Module Privilege\",
-\"acmAnalyticsModulePrivilege\": \"Data Analytics Module Privilege\",
-\"acmAnalyticsAuditModulePrivilege\": \"Log Analytics Module Privilege\",
-\"acmEmailConfigurePrivilege\": \"Configure Email Privilege\",
-\"getStateOfArkcasePrivilege\": \"Get State Of Arkcase Privilege\",
-\"listStateOfArkcasePrivilege\": \"List State Of Arkcase Privilege\",
-\"generateStateOfArkcasePrivilege\": \"Generate State Of Arkcase Privilege\",
-\"acmGetSequenceConfigurationPrivilege\": \"Get Sequence Configuration Privilege\",
-\"acmSaveSequenceConfigurationPrivilege\": \"Save Sequence Configuration Privilege\",
-\"acmGetSequenceResetPrivilege\": \"Get Sequence Reset Privilege\",
-\"acmSaveSequenceResetPrivilege\": \"Save Sequence Reset Privilege\",
-\"acmGetSequenceRegistryPrivilege\": \"Get Sequence Registry Privilege\",
-\"billingQueuePrivilege\":\"Billing Queue Privilege\",
-\"acmCreateBillingItemPrivilege\":\"Create Billing Item Privilege\",
-\"acmListBillingItemsPrivilege\":\"List Billing Items Privilege\",
-\"acmCreateBillingInvoicePrivilege\":\"Create Billing Invoice Privilege\",
-\"acmListBillingInvoicesPrivilege\":\"List Billing Invoices Privilege\"}"
+  privileges:     
+    acmGlobalAllowPrivilege: Global Allow Privilege
+    auditPrivilege: Audit Privilege
+    auditReadEventsForObjectPrivilege: Audit Read Events For Object Privilege
+    acmGenerateCorrespondencePrivilege: Generate Correspondence Privilege
+    dashboardPrivilege: Dashboard Privilege
+    filePrivilege: File Privilege
+    participantPrivilege: Participant Privilege
+    blogPrivilege: Blog Privilege
+    helloWorldPrivilege: Hello World Privilege
+    profilePrivilege: Profile Privilege
+    reportPrivilege: Report Privilege
+    costsheetCreatePrivilege: Costsheet Create Privilege
+    costsheetApprovePrivilege: Costsheet Approve Privilege
+    timesheetApprovePrivilege: Timesheet Approve Privilege
+    acmComplaintListPrivilege: Complaint List Privilege
+    acmComplaintSavePrivilege: Complaint Save Privilege
+    acmComplaintCreatePrivilege: Complaint Create Privilege
+    acmComplaintApprovePrivilege: Complaint Approve Privilege
+    acmSearchPrivilege: Search Privilege
+    searchPrivilege: Search Privileges
+    acmCaseApprovePrivilege: Case Approve Privilege
+    saveCasePrivilege: Save Case Privilege
+    caseFileListPrivilege: Case File List Privilege
+    caseFileCreatePrivilege: Case File Create Privilege
+    acmPersonSavePrivilege: Person Save Privilege
+    acmPersonDeletePrivilege: Person Delete Privilege
+    acmOrganizationSavePrivilege: Organization Save Privilege
+    acmOrganizationListPrivilege: Organization List Privilege
+    acmOrganizationDeletePrivilege: Organization Delete Privilege
+    acmOrganizationDetailsPrivilege: Organization Details Privilege
+    acmOrganizationAssociationListPrivilege: Organization Association List Privilege
+    acmOrganizationAssociationSavePrivilege: Organization Association Save Privilege
+    acmOrganizationAssociationDeletePrivilege: Organization Association Delete Privilege
+    acmPersonAssociationListPrivilege: Person Association List Privilege
+    acmPersonAssociationDeletePrivilege: Person Association Delete Privilege
+    acmPersonAssociationSavePrivilege: Person Association Save Privilege
+    adminPrivilege: Admin Privilege
+    acmDeleteNoteByIdPrivilege: Delete Note By Id Privilege
+    acmListNotesPrivilege: List Notes Privilege
+    costsheetPrivilege: Costsheet Privilege
+    timesheetCreatePrivilege: Timesheet Create Privilege
+    timesheetPrivilege: Timesheet Privilege
+    tagPrivilege: Tag Privilege
+    acmTaskListPrivilege: Task List Privilege
+    acmTaskSavePrivilege: Task Save Privilege
+    acmTaskCreatePrivilege: Task Create Privilege
+    acmTaskCompletePrivilege: Task Complete Privilege
+    acmTaskDeletePrivilege: Task Delete Privilege
+    acmNotificationPrivilege: Notification Privilege
+    subscribePrivilege: Subscribe Privilege
+    listMilestonesGroupedByDate: List Milestones Grouped By Date
+    acmSignatureConfirmPrivilege: Signature Confirm Privilege
+    acmSignatureFindPrivilege: Signature Find Privilege
+    acmPersonFindPrivilege: Person Find Privilege
+    acmPersonListPrivilege: Person List Privilege
+    acmPersonTypesPrivilege: Person Types Privilege
+    acmSaveNotePrivilege: Save Note Privilege
+    acmOutlookListObjectsPrivilege: Outlook List Objects Privilege
+    splitCaseFilePrivilege: Split Case File Privilege
+    objectLockPrivilege: Object Lock Privilege
+    objectUnLockPrivilege: Object Unlock Privilege
+    listLocksDetailsPrivilege: List Lock Details Privilege
+    listLockedObjectsPrivilege: List Locked Objects Privilege
+    analyticsPrivilege: Data Analytics Privilege
+    analyticsAuditPrivilege: Log Analytics Privilege
+    acmAdminModulePrivilege: Admin Module Privilege
+    acmAuditModulePrivilege: Audit Module Privilege
+    acmCaseModulePrivilege: Case Module Privilege
+    acmComplaintModulePrivilege: Complaint Module Privilege
+    acmCostModulePrivilege: Cost Module Privilege
+    acmDashboardModulePrivilege: Dashboard Module Privilege
+    acmNotificationModulePrivilege: Notification Module Privilege
+    acmReportModulePrivilege: Report Module Privilege
+    acmSearchModulePrivilege: Search Module Privilege
+    acmSubscriptionModulePrivilege: Subscription Module Privilege
+    acmTagModulePrivilege: Tag Module Privilege
+    acmTaskModulePrivilege: Task Module Privilege
+    acmTimeModulePrivilege: Time Module Privilege
+    acmCategoryManagementPrivilege: Category Management Privilege
+    acmCalendarAdminPrivilege: Calendar Admin Privilege
+    acmCalendarReadShortenedConfigPrivilege: Read Shortened Calendar Config Privilege
+    acmCalendarEventsListPrivilege: Calendar List Events Privilege
+    acmCalendarEventsSavePrivilege: Calendar Save Events Privilege
+    acmCalendarEventsCreatePrivilege: Calendar Create Events Privilege
+    acmCalendarEventsDeletePrivilege: Calendar Delete Events Privilege
+    acmPersonModulePrivilege: Person Module Privilege
+    acmOrganizationModulePrivilege: Organization Module Privilege
+    documentRepositoryManagerPrivilege: Document Repository Manager Privilege
+    documentRepositoryModulePrivilege: Document Repository Module Privilege
+    acmAnalyticsModulePrivilege: Data Analytics Module Privilege
+    acmAnalyticsAuditModulePrivilege: Log Analytics Module Privilege
+    acmEmailConfigurePrivilege: Configure Email Privilege
+    getStateOfArkcasePrivilege: Get State Of Arkcase Privilege
+    listStateOfArkcasePrivilege: List State Of Arkcase Privilege
+    generateStateOfArkcasePrivilege: Generate State Of Arkcase Privilege
+    acmGetSequenceConfigurationPrivilege: Get Sequence Configuration Privilege
+    acmSaveSequenceConfigurationPrivilege: Save Sequence Configuration Privilege
+    acmGetSequenceResetPrivilege: Get Sequence Reset Privilege
+    acmSaveSequenceResetPrivilege: Save Sequence Reset Privilege
+    acmGetSequenceRegistryPrivilege: Get Sequence Registry Privilege
+    billingQueuePrivilege: Billing Queue Privilege
+    acmCreateBillingItemPrivilege: Create Billing Item Privilege
+    acmListBillingItemsPrivilege: List Billing Items Privilege
+    acmCreateBillingInvoicePrivilege: Create Billing Invoice Privilege
+    acmListBillingInvoicesPrivilege: List Billing Invoices Privilege
   ################### Application Role To User Group (applicationRoleToUserGroup.properties) ####################
-  rolesToGroups: "{\"ROLE_ENTITY_ADMINISTRATOR\": \"ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM\",
-  \"ROLE_CONSUMER\": \"ARKCASE_CONSUMER@ARMEDIA.COM\",
-  \"ROLE_SUPERVISOR\": \"ARKCASE_SUPERVISOR@ARMEDIA.COM,ARKCASE_ADMINISTRATOR@ARMEDIA.COM\",
-  \"ROLE_ADMINISTRATOR\": \"ARKCASE_ADMINISTRATOR@ARMEDIA.COM,ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM\",
-  \"ROLE_EXTERNAL\": \"ARKCASE_EXTERNAL@ARMEDIA.COM\",
-  \"ROLE_CONTRIBUTOR\": \"ARKCASE_CONTRIBUTOR@ARMEDIA.COM\",
-  \"ROLE_BILLING_QUEUE\":\"ARKCASE_ADMINISTRATOR@ARMEDIA.COM,ARKCASE_SUPERVISOR@ARMEDIA.COM,ARKCASE_CONTRIBUTOR@ARMEDIA.COM,ARKCASE_CONSUMER@ARMEDIA.COM,ARKCASE_EXTERNAL@ARMEDIA.COM\"}"
+  rolesToGroups: 
+    ROLE_ENTITY_ADMINISTRATOR: 
+      - ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM
+    ROLE_CONSUMER: 
+      - ARKCASE_CONSUMER@ARMEDIA.COM
+    ROLE_SUPERVISOR: 
+      - ARKCASE_SUPERVISOR@ARMEDIA.COM
+      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM
+    ROLE_ADMINISTRATOR : 
+      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM
+      - ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM
+    ROLE_EXTERNAL : 
+      - ARKCASE_EXTERNAL@ARMEDIA.COM
+    ROLE_CONTRIBUTOR : 
+      - ARKCASE_CONTRIBUTOR@ARMEDIA.COM
+    ROLE_BILLING_QUEUE : 
+      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM 
+      - ARKCASE_SUPERVISOR@ARMEDIA.COM 
+      - ARKCASE_CONTRIBUTOR@ARMEDIA.COM
+      - ARKCASE_CONSUMER@ARMEDIA.COM 
+      - ARKCASE_EXTERNAL@ARMEDIA.COM
   ################### (applicationRolesPrivileges.properties) ###################
-  rolesToPrivileges: "{\"ROLE_ENTITY_ADMINISTRATOR\": \"acmGlobalAllowPrivilege,acmPersonSavePrivilege,acmPersonDeletePrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonTypesPrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\",
-  \"ROLE_CONSUMER\": \"acmGlobalAllowPrivilege,dashboardPrivilege,acmPersonListPrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,blogPrivilege,acmListNotesPrivilege,tagPrivilege,acmSearchModulePrivilege,acmSignatureFindPrivilege,profilePrivilege,acmPersonFindPrivilege,acmTaskListPrivilege,acmAuditModulePrivilege,acmComplaintListPrivilege,participantPrivilege,listMilestonesGroupedByDate,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmPersonTypesPrivilege,caseFileListPrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmOutlookListObjectsPrivilege,searchPrivilege,auditReadEventsForObjectPrivilege,acmSearchPrivilege,acmNotificationPrivilege,acmDashboardModulePrivilege,costsheetPrivilege,acmTagModulePrivilege,acmCaseModulePrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationListPrivilege,acmOrganizationDetailsPrivilege,acmCalendarEventsListPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\",
-  \"ROLE_SUPERVISOR\": \"acmGlobalAllowPrivilege,auditPrivilege,auditReadEventsForObjectPrivilege,acmGenerateCorrespondencePrivilege,dashboardPrivilege,filePrivilege,participantPrivilege,blogPrivilege,helloWorldPrivilege,profilePrivilege,reportPrivilege,costsheetCreatePrivilege,costsheetApprovePrivilege,timesheetApprovePrivilege,acmComplaintListPrivilege,acmComplaintSavePrivilege,acmComplaintCreatePrivilege,acmComplaintApprovePrivilege,acmSearchPrivilege,searchPrivilege,acmCaseApprovePrivilege,saveCasePrivilege,caseFileListPrivilege,caseFileCreatePrivilege,acmPersonSavePrivilege,acmPersonDeletePrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,acmDeleteNoteByIdPrivilege,acmListNotesPrivilege,costsheetPrivilege,timesheetCreatePrivilege,timesheetPrivilege,tagPrivilege,acmTaskListPrivilege,acmTaskSavePrivilege,acmTaskCreatePrivilege,acmTaskCompletePrivilege,acmTaskDeletePrivilege,acmNotificationPrivilege,subscribePrivilege,listMilestonesGroupedByDate,acmSignatureConfirmPrivilege,acmSignatureFindPrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonTypesPrivilege,acmSaveNotePrivilege,acmOutlookListObjectsPrivilege,splitCaseFilePrivilege,acmTaskModulePrivilege,acmComplaintModulePrivilege,acmSearchModulePrivilege,acmDashboardModulePrivilege,acmAuditModulePrivilege,acmReportModulePrivilege,acmSubscriptionModulePrivilege,acmNotificationModulePrivilege,acmTimeModulePrivilege,acmCostModulePrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmCaseModulePrivilege,objectLockPrivilege,objectUnLockPrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,documentRepositoryModulePrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmCalendarEventsCreatePrivilege,acmCalendarEventsDeletePrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\",
-  \"ROLE_ADMINISTRATOR\": \"acmAdminModulePrivilege,acmAnalyticsAuditModulePrivilege,acmAnalyticsModulePrivilege,acmAuditModulePrivilege,acmCalendarAdminPrivilege,acmCalendarEventsCreatePrivilege,acmCalendarEventsDeletePrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmCaseApprovePrivilege,acmCaseModulePrivilege,acmCategoryManagementPrivilege,acmComplaintApprovePrivilege,acmComplaintCreatePrivilege,acmComplaintListPrivilege,acmComplaintModulePrivilege,acmComplaintSavePrivilege,acmCostModulePrivilege,acmDashboardModulePrivilege,acmDeleteNoteByIdPrivilege,acmEmailConfigurePrivilege,acmGenerateCorrespondencePrivilege,acmGlobalAllowPrivilege,acmListNotesPrivilege,acmNotificationModulePrivilege,acmNotificationPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationListPrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOutlookListObjectsPrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationListPrivilege,acmPersonAssociationSavePrivilege,acmPersonDeletePrivilege,acmPersonFindPrivilege,acmPersonListPrivilege,acmPersonModulePrivilege,acmPersonSavePrivilege,acmPersonTypesPrivilege,acmReportModulePrivilege,acmSaveNotePrivilege,acmSearchModulePrivilege,acmSearchPrivilege,acmSignatureConfirmPrivilege,acmSignatureFindPrivilege,acmSubscriptionModulePrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmTaskCompletePrivilege,acmTaskCreatePrivilege,acmTaskDeletePrivilege,acmTaskListPrivilege,acmTaskModulePrivilege,acmTaskSavePrivilege,acmTimeModulePrivilege,adminPrivilege,auditPrivilege,auditReadEventsForObjectPrivilege,blogPrivilege,caseFileCreatePrivilege,caseFileListPrivilege,costsheetApprovePrivilege,costsheetCreatePrivilege,costsheetPrivilege,dashboardPrivilege,documentRepositoryManagerPrivilege,documentRepositoryModulePrivilege,filePrivilege,generateStateOfArkcasePrivilege,getStateOfArkcasePrivilege,helloWorldPrivilege,listLockedObjectsPrivilege,listLocksDetailsPrivilege,listMilestonesGroupedByDate,listStateOfArkcasePrivilege,objectLockPrivilege,objectUnLockPrivilege,participantPrivilege,profilePrivilege,reportPrivilege,saveCasePrivilege,searchPrivilege,splitCaseFilePrivilege,subscribePrivilege,tagPrivilege,timesheetApprovePrivilege,timesheetCreatePrivilege,timesheetPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmGetSequenceConfigurationPrivilege,acmSaveSequenceConfigurationPrivilege,acmGetSequenceResetPrivilege,acmSaveSequenceResetPrivilege,acmGetSequenceRegistryPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\",
-  \"ROLE_EXTERNAL\": \"acmGlobalAllowPrivilege,dashboardPrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,tagPrivilege,acmSearchModulePrivilege,profilePrivilege,acmAuditModulePrivilege,participantPrivilege,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmPersonTypesPrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmSearchPrivilege,acmNotificationPrivilege,acmDashboardModulePrivilege,acmTagModulePrivilege,acmCaseModulePrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationDetailsPrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege\",
-  \"ROLE_CONTRIBUTOR\": \"dashboardPrivilege,acmPersonListPrivilege,subscribePrivilege,acmReportModulePrivilege,acmNotificationModulePrivilege,acmSubscriptionModulePrivilege,blogPrivilege,acmListNotesPrivilege,tagPrivilege,acmSearchModulePrivilege,acmPersonDeletePrivilege,timesheetCreatePrivilege,acmSignatureFindPrivilege,acmTaskDeletePrivilege,profilePrivilege,acmTaskCreatePrivilege,acmPersonFindPrivilege,acmTaskListPrivilege,acmAuditModulePrivilege,acmComplaintListPrivilege,participantPrivilege,acmPersonAssociationDeletePrivilege,acmPersonAssociationSavePrivilege,listMilestonesGroupedByDate,reportPrivilege,auditPrivilege,timesheetPrivilege,helloWorldPrivilege,costsheetCreatePrivilege,acmTimeModulePrivilege,acmTaskModulePrivilege,acmGlobalAllowPrivilege,acmTaskSavePrivilege,acmPersonTypesPrivilege,splitCaseFilePrivilege,acmGenerateCorrespondencePrivilege,caseFileListPrivilege,acmComplaintSavePrivilege,acmSaveNotePrivilege,acmTaskCompletePrivilege,acmComplaintModulePrivilege,filePrivilege,acmCostModulePrivilege,acmPersonSavePrivilege,acmOutlookListObjectsPrivilege,searchPrivilege,auditReadEventsForObjectPrivilege,acmSearchPrivilege,acmDeleteNoteByIdPrivilege,acmNotificationPrivilege,acmSignatureConfirmPrivilege,acmDashboardModulePrivilege,costsheetPrivilege,acmTagModulePrivilege,acmTaskClaimPrivilege,acmCaseModulePrivilege,saveCasePrivilege,objectLockPrivilege,objectUnLockPrivilege,documentRepositoryModulePrivilege,acmPersonModulePrivilege,acmOrganizationModulePrivilege,acmOrganizationSavePrivilege,acmOrganizationListPrivilege,acmOrganizationDeletePrivilege,acmOrganizationDetailsPrivilege,acmCalendarEventsListPrivilege,acmCalendarEventsSavePrivilege,acmOrganizationAssociationListPrivilege,acmOrganizationAssociationSavePrivilege,acmOrganizationAssociationDeletePrivilege,acmCalendarReadShortenedConfigPrivilege,acmCreateBillingItemPrivilege,acmListBillingItemsPrivilege,acmCreateBillingInvoicePrivilege,acmListBillingInvoicesPrivilege\"}"
+  rolesToPrivileges: 
+    ROLE_ENTITY_ADMINISTRATOR:
+      - acmGlobalAllowPrivilege 
+      - acmPersonSavePrivilege 
+      - acmPersonDeletePrivilege 
+      - acmPersonAssociationDeletePrivilege 
+      - acmPersonAssociationSavePrivilege 
+      - acmPersonFindPrivilege 
+      - acmPersonListPrivilege 
+      - acmPersonTypesPrivilege 
+      - acmPersonModulePrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationSavePrivilege 
+      - acmOrganizationListPrivilege 
+      - acmOrganizationDeletePrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege 
+      - acmCreateBillingItemPrivilege 
+      - acmListBillingItemsPrivilege 
+      - acmCreateBillingInvoicePrivilege 
+      - acmListBillingInvoicesPrivilege
+    ROLE_CONSUMER : 
+      - acmGlobalAllowPrivilege 
+      - dashboardPrivilege 
+      - acmPersonListPrivilege 
+      - acmReportModulePrivilege 
+      - acmNotificationModulePrivilege 
+      - acmSubscriptionModulePrivilege 
+      - blogPrivilege 
+      - acmListNotesPrivilege 
+      - tagPrivilege 
+      - acmSearchModulePrivilege 
+      - acmSignatureFindPrivilege 
+      - profilePrivilege 
+      - acmPersonFindPrivilege 
+      - acmTaskListPrivilege 
+      - acmAuditModulePrivilege 
+      - acmComplaintListPrivilege 
+      - participantPrivilege 
+      - listMilestonesGroupedByDate 
+      - reportPrivilege 
+      - auditPrivilege 
+      - timesheetPrivilege 
+      - helloWorldPrivilege 
+      - acmTimeModulePrivilege 
+      - acmTaskModulePrivilege 
+      - acmPersonTypesPrivilege 
+      - caseFileListPrivilege 
+      - acmComplaintModulePrivilege 
+      - filePrivilege 
+      - acmCostModulePrivilege 
+      - acmOutlookListObjectsPrivilege 
+      - searchPrivilege 
+      - auditReadEventsForObjectPrivilege 
+      - acmSearchPrivilege 
+      - acmNotificationPrivilege 
+      - acmDashboardModulePrivilege 
+      - costsheetPrivilege 
+      - acmTagModulePrivilege 
+      - acmCaseModulePrivilege 
+      - documentRepositoryModulePrivilege 
+      - acmPersonModulePrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationListPrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - acmCalendarEventsListPrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege 
+      - acmCreateBillingItemPrivilege 
+      - acmListBillingItemsPrivilege 
+      - acmCreateBillingInvoicePrivilege 
+      - acmListBillingInvoicesPrivilege
+    ROLE_SUPERVISOR: 
+      - acmGlobalAllowPrivilege 
+      - auditPrivilege 
+      - auditReadEventsForObjectPrivilege 
+      - acmGenerateCorrespondencePrivilege 
+      - dashboardPrivilege 
+      - filePrivilege 
+      - participantPrivilege 
+      - blogPrivilege 
+      - helloWorldPrivilege 
+      - profilePrivilege 
+      - reportPrivilege 
+      - costsheetCreatePrivilege 
+      - costsheetApprovePrivilege 
+      - timesheetApprovePrivilege 
+      - acmComplaintListPrivilege 
+      - acmComplaintSavePrivilege 
+      - acmComplaintCreatePrivilege 
+      - acmComplaintApprovePrivilege 
+      - acmSearchPrivilege 
+      - searchPrivilege 
+      - acmCaseApprovePrivilege 
+      - saveCasePrivilege 
+      - caseFileListPrivilege 
+      - caseFileCreatePrivilege 
+      - acmPersonSavePrivilege 
+      - acmPersonDeletePrivilege 
+      - acmPersonAssociationDeletePrivilege 
+      - acmPersonAssociationSavePrivilege 
+      - acmDeleteNoteByIdPrivilege 
+      - acmListNotesPrivilege 
+      - costsheetPrivilege 
+      - timesheetCreatePrivilege 
+      - timesheetPrivilege 
+      - tagPrivilege 
+      - acmTaskListPrivilege 
+      - acmTaskSavePrivilege 
+      - acmTaskCreatePrivilege 
+      - acmTaskCompletePrivilege 
+      - acmTaskDeletePrivilege 
+      - acmNotificationPrivilege 
+      - subscribePrivilege 
+      - listMilestonesGroupedByDate 
+      - acmSignatureConfirmPrivilege 
+      - acmSignatureFindPrivilege 
+      - acmPersonFindPrivilege 
+      - acmPersonListPrivilege 
+      - acmPersonTypesPrivilege 
+      - acmSaveNotePrivilege 
+      - acmOutlookListObjectsPrivilege 
+      - splitCaseFilePrivilege 
+      - acmTaskModulePrivilege 
+      - acmComplaintModulePrivilege 
+      - acmSearchModulePrivilege 
+      - acmDashboardModulePrivilege 
+      - acmAuditModulePrivilege 
+      - acmReportModulePrivilege 
+      - acmSubscriptionModulePrivilege 
+      - acmNotificationModulePrivilege 
+      - acmTimeModulePrivilege 
+      - acmCostModulePrivilege 
+      - acmTagModulePrivilege 
+      - acmTaskClaimPrivilege 
+      - acmCaseModulePrivilege 
+      - objectLockPrivilege 
+      - objectUnLockPrivilege 
+      - acmPersonModulePrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationSavePrivilege 
+      - acmOrganizationListPrivilege 
+      - acmOrganizationDeletePrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - documentRepositoryModulePrivilege 
+      - acmCalendarEventsListPrivilege 
+      - acmCalendarEventsSavePrivilege 
+      - acmCalendarEventsCreatePrivilege 
+      - acmCalendarEventsDeletePrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege 
+      - acmCreateBillingItemPrivilege 
+      - acmListBillingItemsPrivilege 
+      - acmCreateBillingInvoicePrivilege 
+      - acmListBillingInvoicesPrivilege
+    ROLE_ADMINISTRATOR: 
+      - acmAdminModulePrivilege 
+      - acmAnalyticsAuditModulePrivilege 
+      - acmAnalyticsModulePrivilege 
+      - acmAuditModulePrivilege 
+      - acmCalendarAdminPrivilege 
+      - acmCalendarEventsCreatePrivilege 
+      - acmCalendarEventsDeletePrivilege 
+      - acmCalendarEventsListPrivilege 
+      - acmCalendarEventsSavePrivilege 
+      - acmCaseApprovePrivilege 
+      - acmCaseModulePrivilege 
+      - acmCategoryManagementPrivilege 
+      - acmComplaintApprovePrivilege 
+      - acmComplaintCreatePrivilege 
+      - acmComplaintListPrivilege 
+      - acmComplaintModulePrivilege 
+      - acmComplaintSavePrivilege 
+      - acmCostModulePrivilege 
+      - acmDashboardModulePrivilege 
+      - acmDeleteNoteByIdPrivilege 
+      - acmEmailConfigurePrivilege 
+      - acmGenerateCorrespondencePrivilege 
+      - acmGlobalAllowPrivilege 
+      - acmListNotesPrivilege 
+      - acmNotificationModulePrivilege 
+      - acmNotificationPrivilege 
+      - acmOrganizationDeletePrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - acmOrganizationListPrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationSavePrivilege 
+      - acmOutlookListObjectsPrivilege 
+      - acmPersonAssociationDeletePrivilege 
+      - acmPersonAssociationListPrivilege 
+      - acmPersonAssociationSavePrivilege 
+      - acmPersonDeletePrivilege 
+      - acmPersonFindPrivilege 
+      - acmPersonListPrivilege 
+      - acmPersonModulePrivilege 
+      - acmPersonSavePrivilege 
+      - acmPersonTypesPrivilege 
+      - acmReportModulePrivilege 
+      - acmSaveNotePrivilege 
+      - acmSearchModulePrivilege 
+      - acmSearchPrivilege 
+      - acmSignatureConfirmPrivilege 
+      - acmSignatureFindPrivilege 
+      - acmSubscriptionModulePrivilege 
+      - acmTagModulePrivilege 
+      - acmTaskClaimPrivilege 
+      - acmTaskCompletePrivilege 
+      - acmTaskCreatePrivilege 
+      - acmTaskDeletePrivilege 
+      - acmTaskListPrivilege 
+      - acmTaskModulePrivilege 
+      - acmTaskSavePrivilege 
+      - acmTimeModulePrivilege 
+      - adminPrivilege 
+      - auditPrivilege 
+      - auditReadEventsForObjectPrivilege 
+      - blogPrivilege 
+      - caseFileCreatePrivilege 
+      - caseFileListPrivilege 
+      - costsheetApprovePrivilege 
+      - costsheetCreatePrivilege 
+      - costsheetPrivilege 
+      - dashboardPrivilege 
+      - documentRepositoryManagerPrivilege 
+      - documentRepositoryModulePrivilege 
+      - filePrivilege 
+      - generateStateOfArkcasePrivilege 
+      - getStateOfArkcasePrivilege 
+      - helloWorldPrivilege 
+      - listLockedObjectsPrivilege 
+      - listLocksDetailsPrivilege 
+      - listMilestonesGroupedByDate 
+      - listStateOfArkcasePrivilege 
+      - objectLockPrivilege 
+      - objectUnLockPrivilege 
+      - participantPrivilege 
+      - profilePrivilege 
+      - reportPrivilege 
+      - saveCasePrivilege 
+      - searchPrivilege 
+      - splitCaseFilePrivilege 
+      - subscribePrivilege 
+      - tagPrivilege 
+      - timesheetApprovePrivilege 
+      - timesheetCreatePrivilege 
+      - timesheetPrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege 
+      - acmGetSequenceConfigurationPrivilege 
+      - acmSaveSequenceConfigurationPrivilege 
+      - acmGetSequenceResetPrivilege 
+      - acmSaveSequenceResetPrivilege 
+      - acmGetSequenceRegistryPrivilege 
+      - acmCreateBillingItemPrivilege 
+      - acmListBillingItemsPrivilege 
+      - acmCreateBillingInvoicePrivilege 
+      - acmListBillingInvoicesPrivilege
+    ROLE_EXTERNAL:
+      - acmGlobalAllowPrivilege 
+      - dashboardPrivilege 
+      - acmReportModulePrivilege 
+      - acmNotificationModulePrivilege 
+      - acmSubscriptionModulePrivilege 
+      - tagPrivilege 
+      - acmSearchModulePrivilege 
+      - profilePrivilege 
+      - acmAuditModulePrivilege 
+      - participantPrivilege 
+      - reportPrivilege 
+      - auditPrivilege 
+      - timesheetPrivilege 
+      - helloWorldPrivilege 
+      - acmTimeModulePrivilege 
+      - acmTaskModulePrivilege 
+      - acmPersonTypesPrivilege 
+      - acmComplaintModulePrivilege 
+      - filePrivilege 
+      - acmCostModulePrivilege 
+      - acmSearchPrivilege 
+      - acmNotificationPrivilege 
+      - acmDashboardModulePrivilege 
+      - acmTagModulePrivilege 
+      - acmCaseModulePrivilege 
+      - documentRepositoryModulePrivilege 
+      - acmPersonModulePrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege
+    ROLE_CONTRIBUTOR: 
+      - dashboardPrivilege 
+      - acmPersonListPrivilege 
+      - subscribePrivilege 
+      - acmReportModulePrivilege 
+      - acmNotificationModulePrivilege 
+      - acmSubscriptionModulePrivilege 
+      - blogPrivilege 
+      - acmListNotesPrivilege 
+      - tagPrivilege 
+      - acmSearchModulePrivilege 
+      - acmPersonDeletePrivilege 
+      - timesheetCreatePrivilege 
+      - acmSignatureFindPrivilege 
+      - acmTaskDeletePrivilege 
+      - profilePrivilege 
+      - acmTaskCreatePrivilege 
+      - acmPersonFindPrivilege 
+      - acmTaskListPrivilege 
+      - acmAuditModulePrivilege 
+      - acmComplaintListPrivilege 
+      - participantPrivilege 
+      - acmPersonAssociationDeletePrivilege 
+      - acmPersonAssociationSavePrivilege 
+      - listMilestonesGroupedByDate 
+      - reportPrivilege 
+      - auditPrivilege 
+      - timesheetPrivilege 
+      - helloWorldPrivilege 
+      - costsheetCreatePrivilege 
+      - acmTimeModulePrivilege 
+      - acmTaskModulePrivilege 
+      - acmGlobalAllowPrivilege 
+      - acmTaskSavePrivilege 
+      - acmPersonTypesPrivilege 
+      - splitCaseFilePrivilege 
+      - acmGenerateCorrespondencePrivilege 
+      - caseFileListPrivilege 
+      - acmComplaintSavePrivilege 
+      - acmSaveNotePrivilege 
+      - acmTaskCompletePrivilege 
+      - acmComplaintModulePrivilege 
+      - filePrivilege 
+      - acmCostModulePrivilege 
+      - acmPersonSavePrivilege 
+      - acmOutlookListObjectsPrivilege 
+      - searchPrivilege 
+      - auditReadEventsForObjectPrivilege 
+      - acmSearchPrivilege 
+      - acmDeleteNoteByIdPrivilege 
+      - acmNotificationPrivilege 
+      - acmSignatureConfirmPrivilege 
+      - acmDashboardModulePrivilege 
+      - costsheetPrivilege 
+      - acmTagModulePrivilege 
+      - acmTaskClaimPrivilege 
+      - acmCaseModulePrivilege 
+      - saveCasePrivilege 
+      - objectLockPrivilege 
+      - objectUnLockPrivilege 
+      - documentRepositoryModulePrivilege 
+      - acmPersonModulePrivilege 
+      - acmOrganizationModulePrivilege 
+      - acmOrganizationSavePrivilege 
+      - acmOrganizationListPrivilege 
+      - acmOrganizationDeletePrivilege 
+      - acmOrganizationDetailsPrivilege 
+      - acmCalendarEventsListPrivilege 
+      - acmCalendarEventsSavePrivilege 
+      - acmOrganizationAssociationListPrivilege 
+      - acmOrganizationAssociationSavePrivilege 
+      - acmOrganizationAssociationDeletePrivilege 
+      - acmCalendarReadShortenedConfigPrivilege 
+      - acmCreateBillingItemPrivilege 
+      - acmListBillingItemsPrivilege 
+      - acmCreateBillingInvoicePrivilege 
+      - acmListBillingInvoicesPrivilege
   properties:
     idleLimit: 600000
     idlePull: 5000
@@ -538,11 +965,6 @@ audit.plugin:
     enabled: false
     entity.events.enabled: false
     entity.events.object.enabled: false
-  #mule flows logging configuration
-  mule.flows.logging:
-    enabled: false
-    message.enabled: false
-    message.properties.enabled: false
   #comma separated list of contentTypes that will be logged
   contentTypesToLog: "application/json,application/atom+xml,text/plain,text/csv,text/html"
   AUDIT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase-audit:AuditReportWithUrl.prpt/viewer"
@@ -558,6 +980,7 @@ audit.plugin:
 #       eg. if AcmEvent has EcmFile as event source, we can use expressions like 'Document ' + source.fileName
 audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' added.'\",
 \"com.armedia.acm.ecm.file.downloaded\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' downloaded.'\",
+\"com.armedia.acm.ecm.folder.downloaded\": \"'Folder ' + source.name + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
 \"com.armedia.acm.smtp.event.sent.hyperlink\":\" source?.fileNames?.toString() + ' to ' + source?.emailAddresses?.toString() \",
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + source?.emailAddresses?.toString()\",
@@ -567,7 +990,7 @@ com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
 com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armedia.acm.objectassociation.reference.added,
-com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassociation.reference.updated, com.armedia.acm.file.renamed, com.armedia.acm.ecm.file.downloaded,
+com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassociation.reference.updated, com.armedia.acm.file.renamed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.ecm.folder.downloaded,
 com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
 com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted, com.armedia.acm.person.organization.updated, com.armedia.acm.person.created,
 com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted, com.armedia.acm.person.personAlias.updated,
@@ -582,7 +1005,7 @@ com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.chan
 com.armedia.acm.correspondence.file.added, com.armedia.acm.complaint.participant.added, com.armedia.acm.complaint.participant.updated, com.armedia.acm.complaint.participant.deleted, com.armedia.acm.complaint.costsheet.associated,
 com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.complaint.timesheet.associated, com.armedia.acm.activiti.task.create,
 com.armedia.acm.associatedtag.created, com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armed.acm.complaint.location.updated,
-com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
+com.armedia.acm.objectassociation.reference.added, com.armedia.acm.file.renamed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.ecm.folder.downloaded, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added,
 com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated, com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted,
 com.armedia.acm.person.organization.updated, com.armedia.acm.person.created, com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted,
 com.armedia.acm.person.personAlias.updated, com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
@@ -598,7 +1021,7 @@ DOC_REPO.history.event.types: "com.armedia.acm.ecm.file.added, com.armedia.acm.e
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.associatedtag.created,
 com.armedia.acm.app.note.rejectcomment.added, com.armedia.acm.file.renamed, com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.objectassociation.reference.added,
 com.armedia.acm.smtp.event.received, com.armedia.acm.documentrepository.created, com.armedia.acm.documentrepository.updated,
-com.armedia.acm.documentrepository.viewed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.folder.created, com.armedia.acm.folder.renamed,
+com.armedia.acm.documentrepository.viewed, com.armedia.acm.ecm.file.downloaded, com.armedia.acm.ecm.folder.downloaded, com.armedia.acm.folder.created, com.armedia.acm.folder.renamed,
 com.armedia.acm.documentrepository.participant.deleted, com.armedia.acm.documentrepository.participant.added, com.armedia.acm.documentrepository.name.updated,
 com.armedia.acm.documentrepository.participant.updated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
@@ -609,6 +1032,9 @@ ORGANIZATION.history.event.types: "com.armedia.acm.organization.created, com.arm
 calendar:
   configured_object_types: "CASE_FILE,COMPLAINT"
   configuration: "{\"CASE_FILE\":{\"integrationEnabled\":\"false\"}, \"COMPLAINT\":{\"integrationEnabled\":\"false\"}}"
+################### Phone Regular expressions ####################
+phone:
+  phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
 ################### Capture Configuration (capture.properties) ####################
 capture:
   #file extensions that are allowed to be captured
@@ -916,7 +1342,7 @@ ecm:
     DOC_REPO: "/Document Repositories"
     RECYCLE_BIN: "/Recycle Bin"
     BUSINESS_PROCESS: "/Business Processes"
-  #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/mule-config-*.cmis.properties
+  #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/camel-config-*.cmis.properties
   defaultCmisId: "alfresco"
   viewer: "snowbound"
   viewer.js: "$[context]/resources/vendors/ViewerJS/index.html?type=$[type]&title=$[title]#$[context]/api/latest/plugin/ecm/stream/$[fileId]"
@@ -1003,6 +1429,7 @@ auditEvent:
   ,\"eventType.com.armedia.acm.ecm.file.document.viewed\": \"Document Viewed\"
   ,\"eventType.com.armedia.acm.ecm.file.added\": \"Document Uploaded\"
   ,\"eventType.com.armedia.acm.ecm.file.downloaded\": \"Document Downloaded\"
+  ,\"eventType.com.armedia.acm.ecm.folder.downloaded\": \"Folder Downloaded\"
   ,\"eventType.com.armedia.acm.ecm.file.updated\": \"Document Updated\"
   ,\"eventType.com.armedia.acm.ecm.file.copied\": \"Document Copied\"
   ,\"eventType.com.armedia.acm.ecm.file.copiedAsLink\": \"Document Copied As Link\"
@@ -1277,7 +1704,7 @@ search.plugin:
     \"date.modified_date_tdt\": \"Modify Date\",
     \"modifier_full_name_facet\": \"Modify User\",
     \"parent_type_facet\": \"Parent Type\",
-    \"type_facet\": \"Person,Organization Type\",
+    \"type_facet\": \"Sub-Type\",
     \"object_type_facet\": \"Object Type\",
     \"location_city_facet\": \"City\",
     \"location_state_facet\": \"State\",
@@ -1319,8 +1746,11 @@ solr:
   host: "acm-arkcase"
   port: 443
   contextRoot: "solr"
+  clientType: "HTTP"
+  protocol: "https"
   quicksearch.core: "acmQuickSearch"
   advancedsearch.core: "acmAdvancedSearch"
+  omitHeader: true
   updateHandler: "update"
   contentFileHandler: "update/extract"
   searchHandler: "select"
@@ -1333,6 +1763,10 @@ solr:
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
   suggestHandler: "suggest_handler"
+  parallelUpdates: false
+  zkHosts: 
+  connectionTimeout: 1000
+  socketTimeout: 30000
 ################### State Of Arkcase Configuration (stateOfArkCase.properties) ###################
 state_of_arkcase.reports:
   #specify in which folder reports will be generated and kept there
@@ -1401,6 +1835,7 @@ task.plugin:
   ,{\"type\":\"noi\", \"label\":\"Notice of Investigation\"}
   ,{\"type\":\"wir\", \"label\":\"Witness Interview Request\"}
   ,{\"type\":\"other\", \"label\":\"Other\"}]"
+  sendCompleteEmail: true
 ## Dashboard SOLR queries
 solr.task:
   #All tasks assigned to all users
@@ -1528,8 +1963,8 @@ responseFolderConversion: false
 ################### (objectTitleConfig.properties) ###################
 objectTitleConfig: "{
     \"CASE_FILE\": {
-        \"enableTitleField\": false,
-        \"title\" : \"objectId\"
+        \"enableTitleField\": true,
+        \"title\" : \"titleTitle\"
     },
     \"COMPLAINT\": {
         \"enableTitleField\": false,
@@ -1569,7 +2004,6 @@ acm.hazelcast:
     url: http://arkcase-host:8880/hazelcast-mancenter
     update_interval: 3
 
-
   ## Network configuration ##
   network:
     #on which port to listen
@@ -1607,12 +2041,10 @@ acm.hazelcast:
   log.state: true
   #which logging should use. Possible values are:jdk, log4j, slf4j, none
   logging.type: slf4j
+  log.folder: "${user.dir}/logs/"
   #From docs: Bind both server-socket and client-sockets to any local interface
   socket.bind.any: true
 
-mule.workingDirectory: "${user.home}/.arkcase/.mule"
-
-#### Moved .arkcase/acm/resources/settings.json ####
 language.settings:
   defaultLocale: en
   localeCode: en
