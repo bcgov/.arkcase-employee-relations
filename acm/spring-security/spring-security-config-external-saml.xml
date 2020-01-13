@@ -226,8 +226,12 @@
         <beans:bean id="hokWebSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerHoKImpl"/>
 
         <!-- SAML 2.0 WebSSO Assertion Consumer -->
-	<beans:bean id="webSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerImpl">
-            <beans:property name="maxAuthenticationAge" value="72000"/>
+        <beans:bean id="webSSOprofileConsumer" class="org.springframework.security.saml.websso.WebSSOProfileConsumerImpl">
+		    <!-- maxAuthenticationAge of 10 hours, instead of the default 2 hours, since Microsoft returns the last 
+			     authentication time with a successful response, and the SAML library compares the request time with the 
+				 last auth time.  With a 10-hour max age, the user can leave their browser idle a few hours, come back and 
+				 all is still well.  This change resolves the spinning wheel / loading swirl reported by some customers. -->
+            <beans:property name="maxAuthenticationAge" value="36000"/>
         </beans:bean>
 
         <!-- SAML 2.0 Holder-of-Key Web SSO profile -->
