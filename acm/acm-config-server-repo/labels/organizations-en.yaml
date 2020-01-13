@@ -359,6 +359,7 @@ organizations.comp.newOrganization:
     url.placeholder: Enter URL
     removeContactMethod: Remove
     urlType: URL Type
+    validationMessage: "The Phone Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
   people:
     title: People
     searchExisting.placeholder: Search Existing Person
@@ -413,7 +414,7 @@ organizations.tree:
     iHaveCreatedActive: I've Created - Active
     iHaveCreated: I've Created
     active: Active
-    inActive: In active
+    inActive: Inactive
     noFilter: (No Filter)
   sorters:
     createdDateAsc: Sort Date Created Ascending

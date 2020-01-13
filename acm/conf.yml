@@ -1,12 +1,13 @@
 application:
  name: 
-  active: arkcase-activemq,arkcase
+  active: arkcase,arkcase-activemq
   default: arkcase
  profile: runtime
 configuration:
  server:
   url: http://localhost:9999
   update.path: "/config/{applicationName}"
+  remove.path: "/config/remove/{applicationName}"
   reset.path: "/reset"
   update.file.path: "/file"
   modules.path: "/config/modules"

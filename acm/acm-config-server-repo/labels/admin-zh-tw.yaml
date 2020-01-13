@@ -58,6 +58,8 @@ admin:
     changedGroupSearchPageFilter: 更改了群組搜索頁面過濾器
     enableEditingLdapUsers: 啟用管理用戶和組
     syncEnabled: 啟用同步用戶
+    fullSync.validationMessage: The Cron expression is invalid.
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: 取消
     ok: 確認
   menus:

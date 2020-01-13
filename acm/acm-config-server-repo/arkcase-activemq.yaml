@@ -6,7 +6,7 @@
 # the relevant package to this property.
 ark.activemq:
   trustedPackages: "com.armedia"
-  defaultTrustedPackages: "org.mule,java.lang,javax.security,java.util,org.apache.activemq,org.fusesource.hawtbuf,com.thoughtworks.xstream.mapper"
+  defaultTrustedPackages: "java.lang,javax.security,java.util,org.apache.activemq,org.fusesource.hawtbuf,com.thoughtworks.xstream.mapper"
   #URL of the ActiveMQ broker.
   transportConnectorURI: "ssl://acm-arkcase:61616"
   #Maximum number of connections to ActiveMQ.

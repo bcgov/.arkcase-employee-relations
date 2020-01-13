@@ -25,12 +25,14 @@ common:
   _12: 'Die folgenden Datumsformate werden auslaufen. Wenn Kunden ein benutzerdefiniertes
     Format benötigen, brauchen wir das '
   _13: um sie zu erziehen, um dies zu vermeiden, weil sie Bedenken haben
-  defaultDateFormat: MM/TT/JJJJ
-  defaultTimeFormat: uu:mm:ss
-  defaultDateTimeFormat: MM/TT/JJJJ uu:mm
-  defaultDatePickerFormat: MM/tt/jjjj
-  defaultDateUIFormat: MM/tt/jjjj
-  defaultDateTimeUIFormat: MM/tt/jjjj UU:mm
+  defaultDateFormat: MM/DD/YYYY
+  defaultTimeFormat: hh:mm:ss
+  defaultDateTimeFormat: MM/DD/YYYY hh:mm
+  defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
+  defaultDatePickerFormat: MM/dd/yyyy
+  defaultDateUIFormat: MM/dd/yyyy
+  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
 common.userOrGroupSearch:
   id: de_userSearch
   title: de_User/Group Search
@@ -45,7 +47,7 @@ common.userOrGroupSearch:
     title: de_Title
     username: de_Username
 common.frevvo:
-  defaultDateFormat: JJJJ-MM-TT
+  defaultDateFormat: YYYY-MM-DD
 common.service:
   error.invalidData: Ungültige Daten
 common.objects:
@@ -54,6 +56,7 @@ common.objects:
   progressError: Fehler beim Laden der Daten
 common.service.messageService:
   authorizationError: Sie sind nicht berechtigt, diese Aktion auszuführen
+  serverError: An exception prevented us from handling your request. Please contact support for further information on the issue.
   actionMessages:
     success: Aktion war erfolgreich
     error: Aktionsfehler
@@ -319,7 +322,7 @@ common.directive.search:
     fields.parentObjectType.docRepo%: Dokument Reposit
     fields.parentObjectType.costsheet%: Kostenblatt
     fields.parentObjectType.timesheet%: Arbeitsblatt
-    names.personOrganization%: Person, Organisationstyp
+    names.subType%: Sub-Type
     names.city%: Stadt
     names.createDate%: Erstellungsdatum
     fields.createDate.previousWeek%: Vorherige Woche

@@ -57,6 +57,7 @@ core:
       duns: DUNS
       cageCode: Cage Code
     organizationTypes:
+      unknown: Unknown
       non-profit: Non-profit
       government: Government
       corporation: Corporation
@@ -69,6 +70,7 @@ core:
       approver: Approver
       follower: Follower
     personOrganizationRelationTypes:
+      unknown: Unknown
       owner: Owner
       owned: Owned
       employee: Employee
@@ -115,6 +117,7 @@ core:
       victim: Victim
       defenseCounsel: Defense Counsel
       forensicScientist: Forensic Scientist
+      unknown: Unknown
     deviceTypes:
       homePhone: Home phone
       workPhone: Work phone
@@ -464,7 +467,7 @@ core:
       LA: LA
       MA: MA
       MD: MD
-      ME: ME,
+      ME: ME
       MI: MI
       MN: MN
       MO: MO

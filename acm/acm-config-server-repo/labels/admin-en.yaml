@@ -62,7 +62,9 @@ admin:
     enableEditingLdapUsers: Enable managing users and groups
     syncEnabled: Enable synchronize users
     fullSync: Full Sync Cron Expression
+    fullSync.validationMessage: The Cron expression is invalid.
     partialSync: Partial Sync Cron Expression
+    partialSync.validationMessage: The Cron expression is invalid.
     cancel: Cancel
     ok: Save
   security.documentUploadPolicy:
@@ -784,7 +786,7 @@ admin:
     recycleBin:
       title: Recycle Bin
       grid:
-        fileName: File Name
+        objectName: Name
         containerObjectTitle: Original Location (Parent Object Id)
         dateModified: Date Deleted
         fileSizeBytes: Size
