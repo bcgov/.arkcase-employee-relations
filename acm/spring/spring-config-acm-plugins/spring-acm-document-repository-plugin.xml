@@ -37,6 +37,11 @@
                     <property name="url" value="/api/{version}/plugin/documentrepository/{id}"/>
                     <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
                 </bean>
+                <bean id="findDcumentRepositoryTasks" class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="GET"/>
+                    <property name="url" value="/api/{version}/plugin/documentrepository/{id}/tasks"/>
+                    <property name="requiredPrivilege" ref="documentRepositoryModulePrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
