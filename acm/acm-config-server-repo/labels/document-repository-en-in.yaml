@@ -52,6 +52,17 @@ document-repository.comp.participants:
     header: Choose Group
     table.columns:
       name: Name
+document-repository.comp.tasks:
+  title: Tasks
+  table.columns:
+    title: Title
+    assignee: Assignee
+    created: Created
+    priority: Priority
+    due: Due
+    status: Status
+  table.overdue.tooltip: Task is Overdue
+  table.deadline.tooltip: Deadline is Approaching
 document-repository.comp.notes:
   title: Notes
   table.columns:
@@ -164,6 +175,7 @@ document-repository.tree:
     details.label: Details
     documents.label: Documents
     participants.label: Participants
+    tasks.label: Tasks
     tags.label: Tags
     references.label: References
     notes.label: Notes
