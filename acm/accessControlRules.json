@@ -879,7 +879,51 @@
             ],
             "userRolesAll": [
             ]
-       }
-
+       },
+       {
+         "actionName":"addTasksToCase",
+         "objectType":"CASE_FILE",
+         "objectProperties":{},
+         "userIsParticipantTypeAny":[
+            "assignee",
+            "supervisor",
+            "owning group",
+            "co-owner",
+            "owner",
+            "collaborator"
+        ],
+         "userRolesAny":[],
+         "userRolesAll":[]
+      },
+      {
+         "actionName":"addTasksToComplaint",
+         "objectType":"COMPLAINT",
+         "objectProperties":{},
+         "userIsParticipantTypeAny":[
+            "assignee",
+            "supervisor",
+            "owning group",
+            "co-owner",
+            "owner",
+            "collaborator"
+        ],
+         "userRolesAny":[],
+         "userRolesAll":[]
+      },
+      {
+         "actionName":"addTasksToDocRepo",
+         "objectType":"DOC_REPO",
+         "objectProperties":{},
+         "userIsParticipantTypeAny":[
+            "assignee",
+            "supervisor",
+            "owning group",
+            "co-owner",
+            "owner",
+            "collaborator"
+        ],
+         "userRolesAny":[],
+         "userRolesAll":[]
+      }
    ]
 }

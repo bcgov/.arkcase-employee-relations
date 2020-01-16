@@ -51,6 +51,17 @@ document-repository.comp.participants:
     header: グループを選択
     table.columns:
       name: 名
+document-repository.comp.tasks:
+  title: タスク
+  table.columns:
+    title: タイトル
+    assignee: 譲受人
+    created: 作成した
+    priority: 優先
+    due: 支払期日
+    status: 状態
+  table.overdue.tooltip: タスクが期限切れです
+  table.deadline.tooltip: 締め切りは近づいています
 document-repository.comp.notes:
   title: 注解
   table.columns:
@@ -163,6 +174,7 @@ document-repository.tree:
     details.label: 詳細
     documents.label: 文書
     participants.label: 参加者
+    tasks.label: 任務
     tags.label: タグ
     references.label: 参照
     notes.label: 注解
