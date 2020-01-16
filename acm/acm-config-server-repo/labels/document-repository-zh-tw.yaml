@@ -51,6 +51,17 @@ document-repository.comp.participants:
     header: 選擇群組
     table.columns:
       name: 名稱
+document-repository.comp.tasks:
+  title: 任務
+  table.columns:
+    title: 標題
+    assignee: 指定人員
+    created: 創建
+    priority: 優先
+    due: 應有
+    status: 狀態
+  table.overdue.tooltip: 任務已過期
+  table.deadline.tooltip: 截止日期即將到來
 document-repository.comp.notes:
   title: 註釋
   table.columns:
@@ -163,6 +174,7 @@ document-repository.tree:
     details.label: 詳情
     documents.label: 文檔
     participants.label: 參與成員
+    tasks.label: 任務
     tags.label: 標籤
     references.label: 參考
     notes.label: 註釋
