@@ -51,6 +51,17 @@ document-repository.comp.participants:
     header: Выберите группу
     table.columns:
       name: Имя
+document-repository.comp.tasks:
+  title: Задания
+  table.columns:
+    title: Заглавие
+    assignee: Правопреемник
+    created: Созданный
+    priority: Приоритет
+    due: В связи
+    status: Положение дел
+  table.overdue.tooltip: Задача просрочена
+  table.deadline.tooltip: Крайний срок приближается
 document-repository.comp.notes:
   title: Заметки
   table.columns:
@@ -163,6 +174,7 @@ document-repository.tree:
     details.label: Детали
     documents.label: Документы
     participants.label: Участники
+    tasks.label: Задачи
     tags.label: Теги
     references.label: Ссылки
     notes.label: Заметки

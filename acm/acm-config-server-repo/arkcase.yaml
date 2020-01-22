@@ -164,6 +164,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"
       - "/api/{version}/service/config/lookups/{name}"
       - "/api/{version}/functionalaccess/{roleName:.+}/groups"
+      - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
     GET:
       - "/api/{version}/plugin/admin/labelmanagement/resource"
@@ -360,7 +361,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/uploadChunks"
       - "/api/{version}/service/ecm/folder/{objectId}/{newName}"
       - "/api/{version}/service/ecm/file/{objectId}/{newName}/{extension}"
-      - "/api/{version}/service/ecm/temporary/id/{fileId}"
+      - "/api/{version}/service/ecm/file/deleteTemporary/{fileId}"
       - "/api/latest/service/ecm/permanent"
       - "/api/{version}/service/ecm/moveToAnotherContainer/{targetObjectType}/{targetObjectId}"
       - "/api/{version}/service/ecm/copyToAnotherContainer/{targetObjectType}/{targetObjectId}"
@@ -374,6 +375,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/participants/FOLDER/{objectId}"
       - "/api/{version}/service/compressor/download"
       - "/api/{version}/plugin/wopi/files/{id}/contents"
+      - "/api/{version}/service/ecm/folder/deleteTemporary/{folderId}"
     PUT:
       - "/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"
       - "/api/{version}/service/ecm/createFolderByPath"
@@ -490,6 +492,7 @@ acmPluginConfigurationPrivileges:
       - "/modules/document-repository/views/"
       - "/modules/my-documents/views/"
       - "/api/{version}/plugin/documentrepository/{id}"
+      - "/api/{version}/plugin/documentrepository/{id}/tasks"
     POST:
       - "/api/{version}/plugin/documentrepository"
     DELETE:
