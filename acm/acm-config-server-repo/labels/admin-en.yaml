@@ -786,7 +786,7 @@ admin:
     recycleBin:
       title: Recycle Bin
       grid:
-        fileName: File Name
+        objectName: Name
         containerObjectTitle: Original Location (Parent Object Id)
         dateModified: Date Deleted
         fileSizeBytes: Size
