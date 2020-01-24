@@ -52,6 +52,17 @@ document-repository.comp.participants:
     header: समूह चुनें
     table.columns:
       name: नाम
+document-repository.comp.tasks:
+  title: कार्य
+  table.columns:
+    title: शीर्षक
+    assignee: संपत्ति-भागी
+    created: बनाया था
+    priority: प्राथमिकता
+    due: देय
+    status: स्थिति
+  table.overdue.tooltip: कार्य अतिदेय है
+  table.deadline.tooltip: समय सीमा निकट है
 document-repository.comp.notes:
   title: नोट्स
   table.columns:
@@ -164,6 +175,7 @@ document-repository.tree:
     details.label: विवरण
     documents.label: दस्तावेज़
     participants.label: प्रतिभागियों को
+    tasks.label: कार्य
     tags.label: टैग
     references.label: सन्दर्भ
     notes.label: टिप्पणियाँ
