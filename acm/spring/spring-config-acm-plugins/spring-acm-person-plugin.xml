@@ -86,6 +86,11 @@
                     <property name="url" value="/api/{version}/plugin/people/{personId}/associations/{objectType}"/>
                     <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
                 </bean>
+				<bean class="com.armedia.acm.pluginmanager.model.AcmPluginUrlPrivilege">
+                    <property name="httpMethod" value="POST"/>
+                    <property name="url" value="/api/{version}/plugin/people/{personId}/images/changeImageDescription/{imageId}"/>
+                    <property name="requiredPrivilege" ref="acmPersonListPrivilege"/>
+                </bean>
             </list>
         </property>
     </bean>
