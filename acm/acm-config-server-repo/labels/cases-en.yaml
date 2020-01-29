@@ -350,6 +350,7 @@ cases.comp.change.status:
     case.number: Case Number
     status:
       title: Status
+      current: Current Status
       resolution:
         title: Case Resolution
         denied: Denied
