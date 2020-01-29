@@ -156,7 +156,7 @@
 				<beans:property name="referral" value="follow" />
 			</beans:bean>
 		<#elseif directoryType == "activedirectory">
-			<beans:bean id="{id}_authenticationProvider" 
+			<beans:bean id="${id}_authenticationProvider" 
 				class="com.armedia.acm.auth.ad.AcmActiveDirectoryAuthenticationProvider">
 				<beans:constructor-arg value=""/>  
 				<beans:constructor-arg type="org.springframework.ldap.core.ContextSource" ref="${id}_contextSource"/>
@@ -172,7 +172,7 @@
 					</beans:bean>
 				</beans:constructor-arg>
 				<beans:constructor-arg type="com.armedia.acm.auth.ad.ActiveDirectoryLdapSearchConfig"
-					ref="armedia_activeDirectoryLdapSearchConfig" />
+					ref="${id}_activeDirectoryLdapSearchConfig" />
 				<beans:property name="userDao" ref="userJpaDao"/>
 				<beans:property name="ldapSyncService" ref="${id}_ldapSyncService"/> 
 			</beans:bean>
