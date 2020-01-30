@@ -93,6 +93,7 @@ common.directive.docTree:
     copy: Copy
     cut: Cut
     paste: Paste
+    pasteAsLink: Paste as Link
     rename: Rename
     delete: Delete
     replace: Replace
