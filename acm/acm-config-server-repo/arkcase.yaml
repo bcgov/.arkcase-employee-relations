@@ -54,7 +54,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/history"
       - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/file"
       - "/api/{version}/plugin/admin/workflowconfiguration/diagram/{deploymentId}/{key}/{version}"
-      - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
       - "/api/{version}/plugin/admin/queries"
       - "/api/{version}/plugin/admin/queries/{queryType}"
       - "/api/{version}/plugin/admin/queries/query/{queryBeanId}"
@@ -250,6 +249,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/wopi/users/resource/{file_id}"
       - "/plugin/office/{fileId}"
       - "/plugin/office/testapp/{fileId}"
+      - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
     POST:
       - "/api/{version}/ldap/{directory}/partial-sync"
       - "/api/{version}/ldap/{directory}/full-sync"
