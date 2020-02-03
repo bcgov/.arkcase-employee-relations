@@ -240,7 +240,7 @@ release_hotfix:
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
-    - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
+    - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
@@ -248,7 +248,7 @@ release_hotfix:
     # foia
     - git checkout --track origin/foia
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
-    - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
+    - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
