@@ -209,8 +209,10 @@ start_hotfix:
     - git config --global user.email "$GIT_USERMAIL"
     - git remote set-url origin "$GIT_URL"
     # core
+    - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
     - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=core-$RELEASE_VERSION -DfromBranch=support-core/core-$HOTFIX_SUPPORT_VERSION
     # foia
+    - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - git checkout --track origin/foia
     - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=foia-$RELEASE_VERSION -DfromBranch=support-foia/foia-$HOTFIX_SUPPORT_VERSION
 
