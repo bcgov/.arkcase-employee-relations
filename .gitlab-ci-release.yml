@@ -192,10 +192,10 @@ start_support_branch:
     - git config --global user.email "$GIT_USERMAIL"
     - git remote set-url origin "$GIT_URL"
     # core
-    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=$RELEASE_TAG
+    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=core-$RELEASE_TAG
     # foia
     - git checkout --track origin/foia
-    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=$RELEASE_TAG
+    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=foia-$RELEASE_TAG
 
 start_hotfix:
   stage: release
@@ -207,10 +207,10 @@ start_hotfix:
     - git config --global user.email "$GIT_USERMAIL"
     - git remote set-url origin "$GIT_URL"
     # core
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/$HOTFIX_SUPPORT_VERSION
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=core-$RELEASE_VERSION -DfromBranch=support-core/$HOTFIX_SUPPORT_VERSION
     # foia
     - git checkout --track origin/foia
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-foia/$HOTFIX_SUPPORT_VERSION
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=foia-$RELEASE_VERSION -DfromBranch=support-foia/$HOTFIX_SUPPORT_VERSION
 
 release_hotfix:
   stage: release
