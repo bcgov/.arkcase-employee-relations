@@ -73,10 +73,13 @@ cases.comp.actions:
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
 cases.comp.details:
-  title: Details
+  title: Full Case Details
   informSaved: Case details saved
+  caseSummary:
+    title: Case Summary
+    informSaved: Case Summary saved
   table.columns:
-    title: Details
+    title: Full Case Details
     modified: Date Last Modified
     modifier: User Last Modified
 cases.comp.documents:
