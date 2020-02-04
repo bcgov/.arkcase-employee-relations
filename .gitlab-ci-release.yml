@@ -239,6 +239,7 @@ release_hotfix:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
+    - git checkout hotfix-core/support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
     - ls -lh
@@ -246,7 +247,7 @@ release_hotfix:
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
-    - git checkout --track origin/foia
+    - git checkout hotfix-foia/support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - ls -lh
