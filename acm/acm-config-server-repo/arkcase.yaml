@@ -662,6 +662,9 @@ acmPluginConfigurationPrivileges:
     DELETE:
       - "/api/{version}/plugin/report/{reportName:.+}/roles"
       - "/api/{version}/plugin/report/schedule/byId"
+  acmReportModulePrivilege:
+    GET:
+      - "/modules/reports/views/"
   acmGetSequenceConfigurationPrivilege:
     GET:
       - "/api/{version}/plugin/sequence/configuration"
