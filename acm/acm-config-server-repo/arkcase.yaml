@@ -2019,6 +2019,8 @@ cost.plugin:
   ,{\"desc\":\"Sort Costsheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Costsheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
+  workflowProcessName: acmDocumentWorkflow
+  addCostsheetToBilling: true
 ################### Dashbord Plugin Configuration (dashboardPlugin.properties) ###################
 ## Default dashboard JSON String.
 dashboard.plugin:
@@ -2707,6 +2709,8 @@ time.plugin:
   ,{\"desc\":\"Sort Timesheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Timesheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
+  workflowProcessName: acmDocumentWorkflow
+  addTimesheetToBilling: true  
 ################### Timesheet Properties (timesheetProperties.properties) ###################
 ################### Transcribe Configuration (transcribe.properties) ####################
 transcribe:
