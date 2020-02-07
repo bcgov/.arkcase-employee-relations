@@ -431,6 +431,7 @@ admin:
   forms.timesheetConfiguration:
     title: Timesheet Configuration
     chargeRole.title: Charge Roles Configuration
+    timeSheetProperties: Timesheet Properties
     workflow: Approval Workflow Configuration
     chargeRole: Charge Role
     chargeRole.placeholder: Enter Charge Role
@@ -440,13 +441,16 @@ admin:
     active.active: Active
     active.inactive: Inactive
     useWorkflowCheckbox: Use Approval Workflow
+    addTimesheetToBilling: Timesheets should be added to the Billing table when finalized
     modal:
       button.save: Save
       button.cancel: Cancel
   forms.costsheetConfiguration:
     title: Costsheet Configuration
+    costSheetProperties: Costsheet Properties
     workflow: Approval Workflow Configuration
     useWorkflowCheckbox: Use Approval Workflow
+    addCostsheetToBilling: Costsheets should be added to the Billing table when finalized
   portals.portalsConfiguration:
     nodeTitle: Portals Service
     title: Portals Configuration
