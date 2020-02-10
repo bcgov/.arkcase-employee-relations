@@ -350,7 +350,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/wopi/files/{id}/lock"
       - "/api/{version}/plugin/wopi/resources"
     POST:
-      - /api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"
       - "/api/{version}/service/ecm/folder/move/{folderToMoveId}/{dstFolderId}"
       - "/api/{version}/service/ecm/file/{objectId}/rename"
       - "/api/{version}/service/ecm/replace/{fileToBeReplacedId}"
