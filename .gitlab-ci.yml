@@ -27,6 +27,9 @@ stages:
 
 build-snapshot:
   stage: build
+  except:
+    changes:
+      #- .gitlab-ci.yaml
   script:
     - echo '<settings>' > /root/.m2/settings.xml
     - echo '  <servers>' >> /root/.m2/settings.xml
