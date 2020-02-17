@@ -2,26 +2,20 @@ variables:
   # Release new Arkcase version
   # ============================
 
-  # Release RC1 from develop branch (sets the develop branch new snapshot version)
-  # ------------------------------------------------------------------------------
-  # RELEASE_CANDIDATE_1: true
-  # RELEASE_VERSION: 3.3.3-RC1
+  # Start a release branch from develop branch. Sets the develop branch to new snapshot version
+  # --------------------------------------------------------------------------------------------
+  # RELEASE_START: true
+  # RELEASE_VERSION: 3.3.3
   # DEVELOP_NEW_VERSION: 3.3.4-SNAPSHOT
-  
 
-  # Start RC2 to push commits to branch (from master branch) (**** repeat this for all additional release candididates ****)
-  # ------------------------------------------------------------------------------------------------------------------------
-  # START_RELEASE_CANDIDATE_X: true
-  # RELEASE_VERSION: 3.3.3-RC2
-
-  # Release RC2 (merges changes to master branch. Note: hotfix commits should be merged to both the hotfix and develop branches)
-  # ----------------------------------------------------------------------------------------------------------------------------
+  # Release RC1 (X) from release branch
+  # -----------------------------------
   # RELEASE_CANDIDATE_X: true
-  # RELEASE_VERSION: 3.3.3-RC2
+  # RELEASE_VERSION: 3.3.3
+  # RELEASE_CANDIDATE_SUFFIX: RC1
 
-
-  # Release final version in master (after no more release candidates are planned)
-  # ------------------------------------------------------------------------------
+  # Release final version, merges release branch in master (after no more release candidates are planned)
+  # -----------------------------------------------------------------------------------------------------
   # RELEASE: true
   # RELEASE_VERSION: 3.3.3
 
@@ -49,11 +43,11 @@ variables:
   GIT_USERMAIL: 'arkcase-build@armedia.com'
   GIT_URL: 'git@gitlab.armedia.com:arkcase/.arkcase.git'
 
-release_candidate_1:
+release_start:
   stage: release
   only: 
     variables:
-     - $RELEASE_CANDIDATE_1
+     - $RELEASE_START
   script:
     - echo '<settings>' > /root/.m2/settings.xml
     - echo '  <servers>' >> /root/.m2/settings.xml
@@ -73,36 +67,10 @@ release_candidate_1:
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
     - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
-    - git checkout master-core
-    - ls -lh
-    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout --track origin/foia
     - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
-    - git checkout master-foia
-    - ls -lh
-    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
 
-start_release_candidate_X:
-  stage: release
-  only: 
-    variables:
-     - $START_RELEASE_CANDIDATE_X
-  script:
-    - git config --global user.name "$GIT_USERNAME"
-    - git config --global user.email "$GIT_USERMAIL"
-    - git remote set-url origin "$GIT_URL"
-    # core
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION 
-    # foia
-    - git checkout --track origin/foia
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION
 
 release_candidate_X:
   stage: release
@@ -126,23 +94,21 @@ release_candidate_X:
     - apt-get update
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
+    - curl --silent --create-dirs -o /usr/share/maven/lib/ext/pom-manipulation-ext-3.8.1.jar https://repo1.maven.org/maven2/org/commonjava/maven/ext/pom-manipulation-ext/3.8.1/pom-manipulation-ext-3.8.1.jar
     # core
-    - git checkout --track origin/hotfix-core/$RELEASE_VERSION
-    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
-    - git checkout master-core
+    - git checkout --track release-core/$RELEASE_VERSION
+    - git push origin HEAD:refs/tags/core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
-    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
+    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # foia
-    - git checkout --track origin/hotfix-foia/$RELEASE_VERSION
-    - git checkout --track origin/foia
-    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
-    - git checkout master-foia
+    - git checkout --track release-foia/$RELEASE_VERSION
+    - git push origin HEAD:refs/tags/foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
-    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
+    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
 
 release:
   stage: release
@@ -167,7 +133,6 @@ release:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:hotfix-start -DhotfixVersion=$RELEASE_VERSION
     - mvn -B gitflow:hotfix-finish -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - git checkout master-core
     - ls -lh
@@ -176,7 +141,6 @@ release:
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout --track origin/foia
-    - mvn -B gitflow:hotfix-start -DhotfixVersion=$RELEASE_VERSION
     - mvn -B gitflow:hotfix-finish -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - git checkout master-foia
     - ls -lh
