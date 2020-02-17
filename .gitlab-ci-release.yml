@@ -66,10 +66,10 @@ release_start:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
+    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
     # foia
     - git checkout --track origin/foia
-    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
+    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
 
 
 release_candidate_X:
