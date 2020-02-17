@@ -101,14 +101,14 @@ release_candidate_X:
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # foia
     - git checkout --track release-foia/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
 
 release:
   stage: release
