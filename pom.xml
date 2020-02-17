@@ -32,7 +32,8 @@
                 <configuration>
                     <gitFlowConfig>
                         <productionBranch>master-core</productionBranch>
-                        <developmentBranch>core</developmentBranch>                        
+                        <developmentBranch>core</developmentBranch>          
+                        <releaseBranchPrefix>release-core/</releaseBranchPrefix>              
                         <hotfixBranchPrefix>hotfix-core/</hotfixBranchPrefix>
                         <supportBranchPrefix>support-core/</supportBranchPrefix>
                         <versionTagPrefix>core-</versionTagPrefix>
