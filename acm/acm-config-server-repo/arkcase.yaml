@@ -512,8 +512,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/outlook/calendar"
       - "/api/{version}/plugin/outlook/tasks"
       - "/api/{version}/plugin/outlook/contacts"
-    POST:
-      - "/api/{version}/plugin/note"
   acmDeleteNoteByIdPrivilege:
     DELETE:
       - "/api/{version}/plugin/note/{noteId}"
