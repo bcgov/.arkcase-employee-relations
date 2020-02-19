@@ -256,7 +256,7 @@
 
         <!-- Central storage of cryptographic keys -->
         <beans:bean id="keyManager" class="org.springframework.security.saml.key.JKSKeyManager">
-            <beans:constructor-arg value="file:${user.home}/.arkcase/acm/private/keystore"/>
+            <beans:constructor-arg value="file:${user.home}/.arkcase/acm/private/saml-keystore"/>
             <beans:constructor-arg type="java.lang.String" value="password"/>
             <beans:constructor-arg>
                 <beans:map>
