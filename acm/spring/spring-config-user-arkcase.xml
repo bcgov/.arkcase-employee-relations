@@ -9,15 +9,22 @@
 
     <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-group-adtest-ad.properties"/>
+        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-user-arkcase.properties"/>
     </beans:bean>
    
-    <beans:bean id="adtest_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
+    <beans:bean id="adtest_userSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapUserSyncConfig">
         <beans:property name="attributes">
             <beans:map>
                 <beans:entry key="cn" value='${adAddUserConfig.cn}'/>
-                <beans:entry key="objectClass" value='${adAddUserConfig.objectClass}'/>
                 <beans:entry key="sAMAccountName" value='${adAddUserConfig.sAMAccountName}'/>
+                <beans:entry key="userPrincipalName" value='${adAddUserConfig.userPrincipalName}'/>
+                <beans:entry key="givenName" value='${adAddUserConfig.givenName}'/>
+                <beans:entry key="sn" value='${adAddUserConfig.sn}'/>
+                <beans:entry key="mail" value='${adAddUserConfig.mail}'/>
+                <beans:entry key="userAccountControl" value='${adAddUserConfig.userAccountControl}'/>
+                <beans:entry key="unicodePwd" value='${adAddUserConfig.unicodePwd}'/>
+                <beans:entry key="homeDirectory" value='${adAddUserConfig.homeDirectory}'/>
+                <beans:entry key="objectClass" value='${adAddUserConfig.objectClass}'/>
             </beans:map>
         </beans:property>
     </beans:bean>
