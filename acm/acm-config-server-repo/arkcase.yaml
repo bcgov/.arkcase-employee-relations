@@ -1,6 +1,854 @@
 ################### Analytics Configuration (acm-analytics-config.properties) ####################
 # Demo server for testing purposes
 
+################### Plugin Privilege Configuration (spring-config-acm-plugins) ####################
+acmPluginConfigurationPrivileges:
+  acmCaseModulePrivilege:
+    GET:
+      - "/modules/cases/views/"
+    POST:
+      - "/api/{version}/plugin/casefile/change/status/{mode}"
+      - "/api/{version}/plugin/casefile/{caseId}/tasks"
+  caseFileListPrivilege:
+    GET:
+      - "/api/{version}/plugin/casefile/caseTypes"
+      - "/plugin/casefile"
+      - "/plugin/casefile/{caseId}"
+      - "/plugin/casefile/split/{parentCasefileId}"
+      - "/api/{version}/plugin/casefile/byId/{id}"
+      - "/api/{version}/plugin/casefile/byTitle/{title}"
+      - "/api/{version}/plugin/casefile/bynumber"
+      - "/api/{version}/plugin/casebystatus/{timePeriod}"
+      - "/api/{version}/plugin/casefile/forUser/{user:.+}"
+      - "/api/{version}/plugin/casebystatus/summary"
+      - "/api/{version}/plugin/queues"
+      - "/api/{version}/plugin/casefile/number/by/queue"
+      - "/api/{version}/plugin/casefile/nextPossibleQueues/{caseFileId}"
+  saveCasePrivilege:
+    GET:
+      - "/api/{version}/plugin/casefile/enqueue/{caseId}"
+    POST:
+      - "/api/{version}/plugin/merge-casefiles"
+      - "/api/{version}/plugin/casefile"
+  splitCaseFilePrivilege:
+    POST:
+      - "/api/{version}/plugin/copyCaseFile"
+  adminPrivilege:
+    GET:
+      - "/plugin/admin"
+      - "/plugin/admin/locks"
+      - "/plugin/admin/dashboard"
+      - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/template/list"
+      - "/api/{version}/plugin/admin/labelmanagement/admin-resource"
+      - "/api/{version}/plugin/admin/labelmanagement/languages"
+      - "/api/{version}/plugin/admin/labelmanagement/settings"
+      - "/api/{version}/plugin/admin/labelmanagement/namespaces"
+      - "/api/{version}/plugin/admin/ldapconfiguration/directories"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles/{roleName}/privileges"
+      - "/api/{version}/plugin/admin/rolesprivileges/privileges"
+      - "/api/{version}/plugin/admin/{roleName:.+}/privileges"
+      - "/api/{version}/plugin/admin/plainform/targets"
+      - "/api/{version}/plugin/admin/workflowconfiguration/workflows"
+      - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/history"
+      - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/file"
+      - "/api/{version}/plugin/admin/workflowconfiguration/diagram/{deploymentId}/{key}/{version}"
+      - "/api/{version}/plugin/admin/queries"
+      - "/api/{version}/plugin/admin/queries/{queryType}"
+      - "/api/{version}/plugin/admin/queries/query/{queryBeanId}"
+      - "/api/{version}/plugin/admin/templates"
+      - "/api/{version}/plugin/admin/templates/active"
+      - "/api/{version}/plugin/admin/template/{templateId}"
+      - "/api/{version}/plugin/admin/template/versions/{templateId}"
+      - "/api/{version}/plugin/admin/template/{templateId}/{templateFilename:.+}"
+      - "/api/{version}/plugin/admin/mergefields"
+      - "/api/{version}/plugin/admin/mergefields/versions"
+      - "/api/{version}/plugin/admin/mergefields/versions/{objectType}"
+      - "/api/{version}/plugin/admin/mergefields/active/{objectType}"
+      - "/api/{version}/plugin/admin/cmisconfiguration/config"
+      - "/api/{version}/plugin/admin/cmisconfiguration/config/{cmisId}"
+      - "/api/latest/plugin/admin/googleAnalytics"
+      - "/api/{version}/plugin/admin/exchange/configuration"
+      - "/api/{version}/plugin/admin/email/configuration"
+      - "/api/{version}/plugin/admin/email/receiver/configuration"
+      - "/api/{version}/service/recycleBin"
+      - "/api/{version}/plugin/admin/pdfConversion"
+      - "/api/v1/plugin/admin/labelcheck"
+      - "/api/{version}/plugin/admin/application/version"
+      - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/plugin/admin/scheduler/jobs"
+      - "/api/{version}/plugin/admin/configuration/reset"
+      - "/api/{version}/ldap/{directory:.+}/groups"
+      - "/api/{version}/ldap/{directory:.+}/groups/{parentGroupName:.+}"
+      - "/api/{version}/functionalaccess/roles"
+      - "/api/{version}/functionalaccess/appRoles"
+      - "/api/{version}/functionalaccess/rolestogroups"
+      - "/api/{version}/functionalaccess/{roleName:.+}/groups"
+      - "/api/{version}/service/functionalaccess/groups/toplevel"
+    POST:
+      - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/template/timestamp"
+      - "/api/{version}/plugin/admin/labelmanagement/admin-resource/reset"
+      - "/api/{version}/plugin/admin/ldapconfiguration/directories"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles"
+      - "/api/{version}/plugin/admin/workflowconfiguration/files"
+      - "/api/{version}/plugin/admin/branding/customlogos"
+      - "/api/{version}/plugin/admin/cmisconfiguration/config"
+      - "/api/{version}/plugin/admin/config/cmis/validate-url"
+      - "/api/{version}/plugin/admin/transcribe/configuration"
+      - "/api/{version}/plugin/admin/transcribe/configuration"
+      - "/api/{version}/plugin/admin/transcribe/aws/configuration"
+      - "/api/{version}/plugin/admin/ocr/configuration"
+      - "/api/{version}/service/recycleBin"
+      - "/api/{version}/service/holidayConfig"
+      - "/api/{version}/plugin/admin/pdfConversion"
+      - "/api/{version}/service/object-title-config"
+      - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/users/group/{groupId}/members/remove"
+      - "/api/{version}/users/group/save"
+      - "/api/{version}/users/group/save/{subGroupId}/{parentId}"
+      - "/api/{version}/users/group/save/{parentId}"
+      - "/api/{version}/users/group/{parentId}"
+      - "/api/{version}/users/group/{groupId}/members/save"
+      - "/api/{version}/users/group/{groupId}/supervisor/save/{applyToAll}"
+      - "/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/users"
+      - "/api/{version}/ldap/{directory:.+}/users"
+      - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
+      - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"
+      - "/api/{version}/service/config/lookups"
+      - "/api/{version}/functionalaccess/rolestogroups"
+    PUT:
+      - "/api/{version}/plugin/admin/labelmanagement/admin-resource"
+      - "/api/{version}/plugin/admin/app-properties"
+      - "/api/{version}/plugin/admin/labelmanagement/settings"
+      - "/api/{version}/plugin/admin/ldapconfiguration/directories/{directoryId}"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles/{roleName}"
+      - "/api/{version}/plugin/admin/rolesprivileges/{roleName}/privileges"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles/{roleName}/privileges"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles/{rolesNames}/privileges/{privilegesNames}"
+      - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/active"
+      - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
+      - "/api/{version}/plugin/admin/branding/customcss"
+      - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/mergefields"
+      - "/api/{version}/plugin/admin/mergefields/version/active"
+      - "/api/{version}/plugin/admin/mergefields/addMergeField"
+      - "/api/{version}/plugin/admin/cmisconfiguration/config/{cmisId}"
+      - "/api/latest/plugin/admin/googleAnalytics"
+      - "/api/{version}/plugin/admin/exchange/configuration"
+      - "/api/{version}/plugin/admin/email/configuration"
+      - "/api/{version}/plugin/admin/email/configuration/validate"
+      - "/api/{version}/plugin/admin/email/receiver/configuration"
+      - "/api/{version}/plugin/admin/scheduler/jobs/{name}/run"
+      - "/api/{version}/plugin/admin/scheduler/jobs/{name}/pause"
+      - "/api/{version}/plugin/admin/scheduler/jobs/{name}/resume"
+      - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
+      - "/api/{version}/functionalaccess/{roleName:.+}/groups"
+      - "/api/{version}/service/forms/type"
+    DELETE:
+      - "/api/{version}/plugin/admin/ldapconfiguration/directories/{directoryId}"
+      - "/api/{version}/plugin/admin/rolesprivileges/{roleName}/privileges"
+      - "/api/{version}/plugin/admin/rolesprivileges/roles/{rolesNames}/privileges/{privilegesNames}"
+      - "/api/{version}/plugin/admin/plainforms/{key}/{target}"
+      - "/api/{version}/plugin/admin/template/{templateId}"
+      - "/api/{version}/plugin/admin/template/{templateId}/{templateVersion}"
+      - "/api/{version}/plugin/admin/mergefields/{mergeFieldId}"
+      - "/api/{version}/users/group/{groupId}/remove"
+      - "/api/{version}/users/groups/{parentId}"
+      - "/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}/parent/{parentName:.+}"
+      - "/api/{version}/users/group/{groupId}/supervisor/remove/{applyToAll}"
+      - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
+      - "/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"
+      - "/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"
+      - "/api/{version}/service/config/lookups/{name}"
+      - "/api/{version}/functionalaccess/{roleName:.+}/groups"
+      - "/api/latest/service/recycleBin"
+  acmGlobalAllowPrivilege:
+    GET:
+      - "/api/{version}/plugin/admin/labelmanagement/resource"
+      - "/api/{version}/plugin/admin/labelmanagement/resources"
+      - "/api/{version}/plugin/admin/labelmanagement/default-language"
+      - "/api/{version}/plugin/admin/app-properties"
+      - "/api/{version}/plugin/admin/app-properties/{propertyName}"
+      - "/api/{version}/plugin/admin/rolesprivileges/{privilegeName}/roles"
+      - "/api/{version}/plugin/admin/rolesprivileges/privileges/{privilegeName}/roles"
+      - "/api/{version}/plugin/admin/plainforms"
+      - "/api/{version}/plugin/admin/plainforms/{target}"
+      - "/api/{version}/plugin/admin/moduleconfiguration/modules"
+      - "/api/{version}/plugin/admin/moduleconfiguration/modules/paged"
+      - "/api/latest/plugin/admin/googleAnalytics/config.js"
+      - "/api/{version}/plugin/admin/transcribe/configuration"
+      - "/api/{version}/plugin/admin/transcribe/aws/configuration"
+      - "/api/{version}/plugin/admin/ocr/configuration"
+      - "/api/{version}/service/holidayConfig"
+      - "/api/{version}/plugin/admin/getDataAccessControlProperties" 
+      - "/api/{version}/plugin/admin/email/sender/allowdocuments"
+      - "/api/{version}/plugin/admin/email/sender/allowattachments"
+      - "/api/{version}/plugin/admin/email/sender/allowhyperlinks"
+      - "/api/{version}/service/object-title-config"
+      - "/api/{version}/service/dataaccess/rules"
+      - "/api/{version}/users/groups/get"
+      - "/api/{version}/users/groups"
+      - "/api/{version}/users"
+      - "/api/{version}/users/group/{groupId}/get"
+      - "/api/{version}/users/{userId:.+}/groups"
+      - "/api/{version}/users/{groupId:.+}/groups/adhoc"
+      - "/api/{version}/groups"
+      - "/api/{version}/users/group/{groupId}/get/subgroups"
+      - "/api/{version}/users/{directory:.+}/groups"
+      - "/api/{version}/users/groups/adhoc"
+      - "/api/{version}/users/group/get/toplevel"
+      - "/api/{version}/users/group/{groupId}/get/members"
+      - "/api/{version}/users/group/{groupId}/get/supervisor"
+      - "/api/{version}/users/participantTypesForObjectTypeName/{objectTypeName}"
+      - "/api/{version}/users/info"
+      - "/api/{version}/users/lang/{lang}"
+      - "/api/{version}/users/by-group/{group}"
+      - "/api/{version}/ldap/{directory:.+}/editingEnabled"
+      - "/api/{version}/ldap/{directory:.+}/managePasswordEnabled"
+      - "/api/{version}/users/userPrivileges"
+      - "/api/{version}/service/config"
+      - "/api/{version}/service/config/{name}"
+      - "/api/{version}/service/config/lookups"
+      - "/api/{version}/service/config/annotationtags/annotationTypes"
+      - "/api/{version}/authenticationtoken"
+      - "/api/{version}/service/functionalaccess/groups/{privilege}"
+      - "/api/{version}/service/functionalaccess/users/{privilege}"
+      - "/api/{version}/service/functionalaccess/users/{privilege}/{group}"
+      - "/api/{version}/service/functionalaccess/users/{privilege}/{group}/{currentAssignee}"
+      - "/modules/welcome/views/"
+      - "/modules/goodbye/views/"
+      - "/modules/core/views/"
+      - "/modules/frevvo/views/"
+      - "/modules/preference/views/"
+      - "/modules/common/views/"
+      - "/refresh"
+      - "/api/{version}/service/forms/type"
+      - "/api/{version}/service/forms/type/{propertyName}"
+      - "/api/{version}/forms/crud/acm/{formName}/init"
+      - "/api/{version}/forms/crud/acm/{formName}/get/{action}"
+      - "/api/{version}/forms/crud/acm/{formName}/save"
+      - "/api/{version}/service/objectassociations"
+      - "/api/{version}/service/objectassociations/{id}"
+      - "/api/{version}/plugin/okta/factor/enrollment/available"
+      - "/api/{version}/plugin/okta/factor/enrollment"
+      - "/api/{version}/plugin/okta/authprofile"
+      - "/api/{version}/plugin/phone/regex"
+      - "/api/{version}/service/ocr/{id}"
+      - "/api/{version}/service/ocr/media/{mediaVersionId}"
+      - "/api/{version}/service/ocr/file/{fileId}"
+      - "/api/{version}/service/transcribe/{id}"
+      - "/api/{version}/service/transcribe/media/{mediaVersionId}}"
+      - "/api/{version}/service/transcribe/mediaFailure/{mediaVersionId}}"
+      - "/api/{version}/plugin/wopi/users"
+      - "/api/{version}/plugin/wopi/users/resource/{file_id}"
+      - "/plugin/office/{fileId}"
+      - "/plugin/office/testapp/{fileId}"
+      - "/api/{version}/plugin/wopi/users"
+      - "/api/{version}/plugin/wopi/users/resource/{file_id}"
+      - "/plugin/office/{fileId}"
+      - "/plugin/office/testapp/{fileId}"
+      - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
+    POST:
+      - "/api/{version}/ldap/{directory}/partial-sync"
+      - "/api/{version}/ldap/{directory}/full-sync"
+      - "/api/{version}/plugin/audit/event"
+      - "/api/{version}/plugin/audit/generic"
+      - "/api/{version}/forms/crud/acm/{formName}/init"
+      - "/api/{version}/forms/crud/acm/{formName}/get/{action}"
+      - "/api/{version}/forms/crud/acm/{formName}/save"
+      - "/api/{version}/plugin/outlook/calendar"
+      - "/api/{version}/plugin/outlook/tasks"
+      - "/api/{version}/plugin/outlook/contacts"
+      - "/api/{version}/plugin/outlook/email/withattachments"
+      - "/api/{version}/plugin/outlook/email/withembeddedlinks"
+      - "/api/{version}/plugin/outlook/email/withattachmentsandlinks"
+      - "/api/{version}/plugin/notification/mentions"
+      - "/api/{version}/service/objectassociation/reference"
+      - "/api/{version}/service/objectassociations"
+      - "/api/{version}/plugin/okta/factor/enrollment"
+      - "/api/{version}/plugin/okta/factor/enrollment/activate"
+      - "/api/{version}/plugin/okta/factor/enrollment/reset"
+      - "/api/{version}/service/email/send/withattachments/{objectType}"
+      - "/api/{version}/service/email/send/withembeddedlinks/{objectType}"
+      - "/api/{version}/service/email/send/plainEmail"
+      - "/api/{version}/service/email/send/withattachmentsandlinks/{objectType}"
+      - "/api/{version}/service/email/send/mentions"
+      - "/api/{version}/service/transcribe"
+      - "/api/{version}/service/transcribe/{mediaVersionId}/automatic"
+    PUT:
+      - "/api/{version}/service/event"
+      - "/api/{version}/forms/crud/acm/{formName}/init"
+      - "/api/{version}/forms/crud/acm/{formName}/get/{action}"
+      - "/api/{version}/forms/crud/acm/{formName}/save"
+      - "/api/{version}/service/transcribe"
+      - "/api/{version}/service/transcribe/{id}/complete"
+      - "/api/{version}/service/transcribe/{id}/cancel"
+      - "/api/{version}/service/transcribe/{id}/compile"
+    DELETE:
+      - "/api/{version}/forms/crud/acm/{formName}/init"
+      - "/api/{version}/forms/crud/acm/{formName}/get/{action}"
+      - "/api/{version}/forms/crud/acm/{formName}/save"
+      - "/api/{version}/service/objectassociations/{id}"
+      - "/api/{version}/plugin/okta/factor/enrollment"
+  acmAdminModulePrivilege:
+    GET:
+      - "/modules/admin/views/"
+  acmDashboardModulePrivilege:
+    GET:
+      - "/modules/dashboard/views/"
+  dashboardPrivilege:
+    GET: 
+      - "/api/{version}/plugin/dashboard/get"
+      - "/api/{version}/plugin/dashboard/widgets/get"
+      - "/api/{version}/plugin/dashboard/widgets/rolesByWidget/all"
+      - "/api/{version}/plugin/dashboard/widgets/{widgetName:.+}/roles"
+      - "/api/{version}/plugin/dashboard/widgets/preferred/{moduleName}"
+      - "/api/{version}/plugin/dashboard/widgets/site"
+    POST:
+      - "/api/{version}/plugin/dashboard/set/"
+      - "/api/{version}/plugin/dashboard/widgets/set"
+      - "/api/{version}/plugin/dashboard/widgets/site"
+    PUT:
+      - "/api/{version}/plugin/dashboard/widgets/roleGroupToWidget"
+      - "/api/{version}/plugin/dashboard/widgets/preferred"
+  profilePrivilege:
+    GET:
+      - "/plugin/profile"
+      - "/api/{version}/plugin/profile/get/{userId:.+}"
+      - "/api/{version}/plugin/profile/signature"
+      - "/modules/profile/views/"
+    POST:
+      - "/api/{version}/plugin/profile/userOrgInfo/set"
+      - "/api/{version}/plugin/profile/savepassword"
+  filePrivilege:
+    GET:
+      - "/api/{version}/service/ecm/folder/{objectType}/{objectId}"
+      - "/api/{version}/service/ecm/folder/{objectType}/{objectId}/search"
+      - "/api/{version}/service/ecm/folder/{objectType}/{objectId}/searchAdvanced"
+      - "/api/{version}/plugin/ecm/download"
+      - "/api/{version}/service/ecm/folder/counts/{objectType}/{objectId}"
+      - "/api/{version}/service/ecm/file/{fileId}"
+      - "/api/{version}/service/ecm/totalpagecount/{parentObjectType}/{parentObjectId}"
+      - "/plugin/document/{fileId}"
+      - "/api/{version}/service/ecm/container/{objectType}/{objectId}"
+      - "/api/{version}/service/ecm/folder/{folderId}/count"
+      - "/api/{version}/service/ecm/folder/{objectType}/{objectId}/{folderId}"
+      - "/api/{version}/service/ecm/bycategory/{parentObjectType}/{parentObjectId}"
+      - "/modules/document-details/views/"
+      - "/plugin/document/{fileId}"
+      - "/api/{version}/plugin/ecm/stream/{id}"
+      - "/api/{version}/service/ecm/upload/configure"
+      - "/api/{version}/service/ecm/fileLinks/{fileId}"
+      - "/api/{version}/service/compressor/{folderId}"
+      - "/api/{version}/service/compressor/download/{folderId}"
+      - "/api/{version}/service/compressor/download/files"
+      - "/api/{version}/service/compressor/download/files/zip"
+      - "/api/{version}/plugin/wopi/files/{id}"
+      - "/api/{version}/plugin/wopi/files/{id}/contents"
+      - "/api/{version}/plugin/wopi/files/{id}/lock"
+      - "/api/{version}/plugin/wopi/resources"
+    POST:
+      - "/api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/folder/move/{folderToMoveId}/{dstFolderId}"
+      - "/api/{version}/service/ecm/file/{objectId}/rename"
+      - "/api/{version}/service/ecm/replace/{fileToBeReplacedId}"
+      - "/api/{version}/service/ecm/file/{fileId}"
+      - "/api/{version}/service/ecm/file/bulk/type/{fileType}"
+      - "/api/{version}/service/ecm/{fileId}/security-field/{securityFieldValue}"
+      - "/api/{version}/service/ecm/upload"
+      - "/api/{version}/service/ecm/uploadChunks"
+      - "/api/{version}/service/ecm/folder/{objectId}/{newName}"
+      - "/api/{version}/service/ecm/file/{objectId}/{newName}/{extension}"
+      - "/api/{version}/service/ecm/file/deleteTemporary/{fileId}"
+      - "/api/latest/service/ecm/permanent"
+      - "/api/{version}/service/ecm/moveToAnotherContainer/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/copyToAnotherContainer/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/copyToAnotherContainerAsLink/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/declare/{parentObjectType}/{parentObjectId}"
+      - "/api/{version}/service/ecm/file/{fileId}/type/{fileType}"
+      - "/api/{version}/service/ecm/file/metadata/{fileId}"
+      - "/api/{version}/plugin/ecm/temp/upload"
+      - "/api/{version}/plugin/ecm/temp/delete"
+      - "/api/{version}/service/ecm/participants/FILE/{objectId}"
+      - "/api/{version}/service/ecm/participants/FOLDER/{objectId}"
+      - "/api/{version}/service/compressor/download"
+      - "/api/{version}/plugin/wopi/files/{id}/contents"
+      - "/api/{version}/service/ecm/folder/deleteTemporary/{folderId}"
+    PUT:
+      - "/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"
+      - "/api/{version}/service/ecm/createFolderByPath"
+      - "/api/{version}/service/ecm/upload/configure"
+      - "/api/{version}/plugin/wopi/files/{id}/lock"
+      - "/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"
+      - "/api/{version}/plugin/wopi/files/{id}/rename"
+    DELETE:
+      - "/api/{version}/service/ecm/{ecmFileId}"
+      - "/api/{version}/service/ecm/id/{fileId}"
+      - "/api/{version}/service/ecm/folder/{folderId}"
+      - "/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"
+      - "/api/{version}/plugin/wopi/files/{id}"
+  acmSearchModulePrivilege:
+    GET:
+      - "/modules/search/views/"
+  searchPrivilege:
+    GET:
+      - "/plugin/search"
+      - "/api/{version}/plugin/search/quickSearch"
+      - "/api/{version}/plugin/search/advanced/{objectType}"
+      - "/api/{version}/plugin/search/advanced/{objectType}/all"
+      - "/api/{version}/plugin/search/children"
+      - "/api/{version}/plugin/search/{objectType}"
+      - "/api/{version}/plugin/search/complaintsSearch"
+      - "/api/{version}/plugin/search/caseFilesSearch"
+      - "/api/{version}/plugin/search/caseFilesSearch/byTimeInterval"
+      - "/api/{version}/plugin/search/complaintsSearch/byTimeInterval"
+      - "/api/{version}/plugin/search/facetedSearch"
+      - "/api/{version}/plugin/search/personSearch"
+      - "/api/{version}/plugin/search/children/advanced"
+      - "/api/{version}/plugin/search/usersSearch"
+      - "/api/{version}/plugin/search/suggest"
+      - "/api/{version}/plugin/search/advancedSearch"
+      - "/api/{version}/plugin/searchNotifications/advanced"
+    POST:
+      - "/api/{version}/plugin/search/advancedSearch"
+  acmAnalyticsAuditModulePrivilege:
+    GET:
+      - "/modules/analytics-audit/views/"
+  acmAnalyticsModulePrivilege:
+    GET:
+      - "/modules/analytics/views/"
+  auditPrivilege:
+    GET: 
+      - "/plugin/audit"
+      - "/api/{version}/plugin/audit/page"
+  auditReadEventsForObjectPrivilege:
+    GET:
+      - "/api/{version}/plugin/audit/{objectType}/{objectId}"
+  acmAuditModulePrivilege:
+    GET:
+      - "/modules/audit/views/"
+  acmCreateBillingItemPrivilege:
+    POST:
+      - "/api/{version}/plugin/billing/items"
+  acmListBillingItemsPrivilege:
+    GET:
+      - "/api/{version}/plugin/billing/items"
+  acmCreateBillingInvoicePrivilege:
+    POST:
+      - "/api/{version}/plugin/billing/invoices"
+    PUT:
+      - "/api/{version}/plugin/casefile/billing/invoices/document/email"
+      - "/api/{version}/plugin/complaint/billing/invoices/document/email"
+  acmListBillingInvoicesPrivilege:
+    GET:
+      - "/api/{version}/plugin/billing/invoices"
+  acmCategoryManagementPrivilege:
+    GET:
+      - "/api/service/category/{version}"
+      - "/api/service/category/{version}/{categoryId}"
+      - "/api/service/category/{version}/{categoryId}/children"
+    POST:
+      - "/api/service/category/{version}"
+      - "/api/service/category/{version}/{parentCategoryId}"
+    PUT:
+      - "/api/service/category/{version}"
+      - "/api/service/category/{version}/activate"
+      - "/api/service/category/{version}/deactivate"
+    DELETE:
+      - "/api/service/category/{version}/{categoryId}"
+  acmComplaintCreatePrivilege:
+    GET: 
+      - "/plugin/complaint/wizard"
+    POST:
+      - "/api/{version}/plugin/complaint"
+      - "/api/{version}/plugin/complaint/workflow"
+  acmComplaintListPrivilege:
+    GET:
+      - "/api/{version}/plugin/complaint/forUser/{user:.+}"
+      - "/plugin/complaint"
+      - "/plugin/complaint/{complaintId}"
+      - "/api/{version}/plugin/complaint/list/{timePeriod}"
+      - "/api/{version}/plugin/complaint/types"
+      - "/api/{version}/plugin/complaint/priorities"
+      - "/api/{version}/plugin/complaint/byId/{complaintId}"
+  acmComplaintModulePrivilege:
+    GET:
+      - "/modules/complaints/views/"
+    POST:
+      - "/api/{version}/plugin/complaint/close/{mode}"
+  acmGenerateCorrespondencePrivilege:
+    GET:
+      - "/api/{version}/service/correspondence/listTemplates"
+      - "/api/{version}/service/correspondence/listAllProperties"
+      - "/api/{version}/service/correspondence/listTemplateModelProviders"
+      - "/api/{version}/plugin/admin/templates/activated/{objectType}"
+    POST:
+      - "/api/{version}/service/correspondence"
+      - "/api/{version}/service/correspondence/multitemplate"
+  documentRepositoryModulePrivilege:
+    GET:
+      - "/modules/document-repository/views/"
+      - "/modules/my-documents/views/"
+      - "/api/{version}/plugin/documentrepository/{id}"
+      - "/api/{version}/plugin/documentrepository/{id}/tasks"
+    POST:
+      - "/api/{version}/plugin/documentrepository"
+    DELETE:
+      - "/api/{version}/plugin/documentrepository/{id}"
+  acmSignatureConfirmPrivilege:
+    POST:
+      - "/api/{version}/plugin/signature/confirm/{objectType}/{objectId}"
+  acmSignatureFindPrivilege:
+    GET:
+      - "/api/{version}/plugin/signature/find/{objectType}/{objectId}"
+  listMilestonesGroupedByDate:
+    GET:
+      - "/api/{version}/milestonebyname/{objectType}"
+  acmOutlookListObjectsPrivilege:
+    GET:
+      - "/api/{version}/plugin/outlook/inbox"
+      - "/api/{version}/plugin/outlook/calendar"
+      - "/api/{version}/plugin/outlook/tasks"
+      - "/api/{version}/plugin/outlook/contacts"
+    POST:
+      - "/api/{version}/plugin/note"
+  acmDeleteNoteByIdPrivilege:
+    DELETE:
+      - "/api/{version}/plugin/note/{noteId}"
+  acmListNotesPrivilege:
+    GET:
+      - "/api/{version}/plugin/note/{parentType}/{parentId}"
+      - "/api/{version}/plugin/note/{parentType}/{parentId}/page"
+  acmSaveNotePrivilege:
+    POST:
+      - "/api/{version}/plugin/note"
+  acmNotificationPrivilege:
+    GET:
+      - "/api/{version}/plugin/notification/{user:.+}"
+      - "/plugin/notification"
+      - "/api/{version}/plugin/notification/{user}/popup"
+      - "/api/{version}/plugin/task/task/sendDueTaskEmailNotification"
+    POST:
+      - "/api/{version}/plugin/notification"
+      - "/api/{version}/service/notification/email/withattachments"
+      - "/api/{version}/service/notification/email/withembeddedlinks"
+    DELETE:
+      - "/api/{version}/plugin/notification/{notificationId}"
+  acmNotificationModulePrivilege:
+    GET: 
+      - "/modules/notifications/views/"
+  objectLockPrivilege:
+    GET:
+      - "/api/{version}/plugin/{objectType}/{objectId}/lockPermission"
+    PUT:
+      - "/api/{version}/plugin/{objectType}/{objectId}/lock"
+  objectUnLockPrivilege:
+    POST:
+      - "/api/{version}/plugin/{objectType}/{objectId}/lock"
+    DELETE:
+      - "/api/{version}/plugin/{objectType}/{objectId}/lock"
+      - "/api/{version}/plugin/locks/{objectType}/lock"
+  listLockedObjectsPrivilege:
+    GET:
+      - "/api/{version}/plugin/objects/{objectType}/locked"
+  listLocksDetailsPrivilege:
+    GET: 
+      - "/api/{version}/plugin/locks/{objectType}"
+  participantPrivilege:
+    GET:
+      - "/api/{version}/service/participant/{objectType}/{objectId}"
+    PUT:
+      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}" 
+    DELETE:
+      - "/api/{version}/service/participant/{participantId}/{participantType}"
+      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}"
+  acmPersonSavePrivilege:
+    POST:
+      - "/api/{version}/plugin/person"
+      - "/api/{version}/plugin/people"
+      - "/api/{version}/plugin/people/{id}/images"
+    PUT: 
+      - "/api/{version}/plugin/people/{id}/images"
+    DELETE:
+      - "/api/{version}/plugin/people/{id}/images/{imageId}"
+  acmPersonFindPrivilege:
+    GET:
+      - "/api/{version}/plugin/person/find"
+      - "/api/{version}/plugin/people/{id}"
+      - "/api/{version}/plugin/people/{id}/images"
+  acmPersonDeletePrivilege:
+    DELETE:
+      - "/api/{version}/plugin/person/delete/{personId}"
+      - "/api/{version}/plugin/people/{personId}"
+  acmPersonListPrivilege:
+    GET:
+      - "/api/{version}/plugin/person/list/{parentType}/{parentId}"
+      - "/api/{version}/plugin/people/{personId}/associations/{objectType}"
+    POST:
+      - "/api/{version}/plugin/people/{personId}/images/changeImageDescription/{imageId}"
+  acmPersonTypesPrivilege:
+    GET:
+      - "/api/{version}/plugin/person/types"
+  acmPersonModulePrivilege:
+    GET:
+      - "/modules/people/views"
+  acmPersonAssociationSavePrivilege:
+    POST:
+      - "/api/{version}/plugin/personAssociation"
+      - "/api/{version}/plugin/person-associations"
+  acmPersonAssociationDeletePrivilege:
+    DELETE:
+      - "/api/{version}/plugin/personAssociation/delete/{personAssocId}"
+      - "/api/{version}/plugin/person-associations/{personAssocId}"
+  acmPersonAssociationListPrivilege:
+    GET:
+      - "/api/{version}/plugin/personAssociation"
+      - "/api/{version}/plugin/person-associations"
+      - "/api/{version}/plugin/personAssociation/{id}"
+      - "/api/{version}/plugin/person-associations/{id}"
+  acmOrganizationSavePrivilege:
+    POST:
+      - "/api/{version}/plugin/organizations"
+    PUT:
+      - "/api/{version}/plugin/organizations"
+  acmOrganizationListPrivilege:
+    GET:
+      - "/api/{version}/plugin/organizations"
+      - "/api/{version}/plugin/organizations/{organizationId}/associations/{objectType}"
+      - "/api/{version}/plugin/organizations/search/{organizationId}"
+  acmOrganizationDeletePrivilege:
+    DELETE:
+      - "/api/{version}/plugin/organizations/{organizationId}"
+  acmOrganizationDetailsPrivilege:
+    GET:
+      - "/api/{version}/plugin/organizations/{organizationId}"
+  acmOrganizationModulePrivilege:
+    GET:
+      - "/modules/organizations/views"
+  acmOrganizationAssociationDeletePrivilege:
+    DELETE:
+      - "/api/{version}/plugin/organizationAssociation/delete/{organizationAssocId}"
+      - "/api/{version}/plugin/organization-associations/{organizationAssocId}"
+  acmOrganizationAssociationSavePrivilege:
+    POST:
+      - "/api/{version}/plugin/organizationAssociation"
+      - "/api/{version}/plugin/organization-associations"
+  acmOrganizationAssociationListPrivilege:
+    GET:
+      - "/api/{version}/plugin/organization-associations"
+      - "/api/{version}/plugin/organization-associations/{id}"
+  helloWorldPrivilege:
+    GET:
+      - "/plugin/sample/helloWorld"
+  reportPrivilege:
+    GET:
+      - "/plugin/report"
+      - "/api/{version}/plugin/report/get/pentaho"
+      - "/api/{version}/plugin/report/pentaho"
+      - "/api/{version}/plugin/report/reporttorolesmap"
+      - "/api/{version}/plugin/report/reportstoroles"
+      - "/api/{version}/plugin/report/{reportId:.+}/roles"
+      - "/api/{version}/plugin/report/authorized"
+      - "/api/{version}/plugin/report/schedule"
+    POST:
+      - "/api/{version}/plugin/report/save"
+      - "/api/{version}/plugin/report/reporttorolesmap"
+      - "/api/{version}/plugin/report/schedule"
+    PUT:
+      - "/api/{version}/plugin/report/{reportName:.+}/roles"
+      - "/api/{version}/plugin/report/sync"
+    DELETE:
+      - "/api/{version}/plugin/report/{reportName:.+}/roles"
+      - "/api/{version}/plugin/report/schedule/byId"
+  acmReportModulePrivilege:
+    GET:
+      - "/modules/reports/views/"
+  acmGetSequenceConfigurationPrivilege:
+    GET:
+      - "/api/{version}/plugin/sequence/configuration"
+      - "/api/{version}/plugin/sequence/configuration/getSequence"
+  acmSaveSequenceConfigurationPrivilege:
+    POST:
+      - "/api/{version}/plugin/sequence/configuration"
+    PUT:
+      - "/api/{version}/plugin/sequence/configuration"
+      - "/api/{version}/plugin/sequence/configuration/updateSequenceNumber"
+  acmGetSequenceResetPrivilege:
+    GET:
+      - "/api/{version}/plugin/sequence/reset"
+  acmSaveSequenceResetPrivilege:
+    POST:
+      - "/api/{version}/plugin/sequence/reset"
+    PUT:
+      - "/api/{version}/plugin/sequence/reset"
+    DELETE:
+      - "/api/{version}/plugin/sequence/reset"
+  acmGetSequenceRegistryPrivilege:
+    GET:
+      - "/api/{version}/plugin/sequence/registry"
+  acmCalendarAdminPrivilege:
+    GET:
+      - "/api/{version}/service/calendar/exchange/configure/credentials/invalid"
+    PUT:
+      - "/api/{version}/service/calendar/exchange/configure"
+      - "/api/{version}/service/calendar/configure"
+      - "/api/{version}/service/calendar/configure/validate"
+  acmCalendarReadShortenedConfigPrivilege:
+    GET:
+      - "/api/{version}/service/calendar/configure"
+  acmCalendarEventsListPrivilege:
+    GET:
+      - "/api/{version}/service/calendar/calendars"
+      - "/api/{version}/service/calendar/calendars/{objectType}"
+      - "/api/{version}/service/calendar/calendars/{objectType}/{objectId}"
+      - "/api/{version}/service/calendar/calendarevents/info/{objectType}/{objectId}"
+      - "/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"
+      - "/api/{version}/service/calendar/calendarevents/event/{objectType}/{objectId}"
+      - "/api/{version}/service/calendar/calendarevents/attachment/{objectType}/{objectId}"
+      - "/api/{version}/service/calendar/{objectType}/integration"
+    PUT:
+      - "/api/{version}/service/calendar/exchange/folders/recreated"
+  acmCalendarEventsCreatePrivilege:
+    POST:
+      - "/api/{version}/service/calendar"
+  acmCalendarEventsSavePrivilege:
+    PUT:
+      - "/api/{version}/service/calendar"
+  acmCalendarEventsDeletePrivilege:
+    DELETE:
+      - "/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"
+  caseFileCreatePrivilege:
+    GET:
+      - "/api/{version}/service/suggestion/{title}"
+  costsheetPrivilege:
+    GET:
+      - "/plugin/costsheet"
+      - "/api/{version}/service/costsheet/{id}"
+      - "/api/{version}/service/costsheet"
+      - "/api/{version}/service/costsheet/user/{userId:.+}"
+      - "/api/{version}/service/costsheet/objectId/{objectId}/objectType/{objectType}"
+      - "/plugin/costsheet/{costsheetId}"
+      - "/api/{version}/service/costsheet/properties"
+    POST:
+      - "/api/{version}/service/costsheet/{submissionName}"
+      - "/api/{version}/service/costsheet/properties"
+  costsheetCreatePrivilege:
+    GET:
+      - "/plugin/costsheet/wizard"
+  acmCostModulePrivilege:
+    GET:
+      - "/modules/cost-tracking/views/"
+  acmEmailConfigurePrivilege:
+    GET:
+      - "/api/{version}/service/email/configure/template"
+      - "/api/{version}/service/email/configure/template/{templateName}"
+    PUT:
+      - "/api/{version}/service/email/configure/template"
+      - "/api/{version}/service/email/configure/template/validate"
+    DELETE:
+      - "/api/{version}/service/email/configure/template/{templateName}"
+  timesheetPrivilege:
+    GET:
+      - "/plugin/timesheet"
+      - "/api/{version}/service/timesheet/{id}"
+      - "/api/{version}/service/timesheet"
+      - "/api/{version}/service/timesheet/user/{userId:.+}"
+      - "/api/{version}/service/timesheet/objectId/{objectId}/objectType/{objectType}"
+      - "/plugin/timesheet/{timesheetId}"
+      - "/api/{version}/service/timesheet/config"
+      - "/api/{version}/service/timesheet/properties"
+      - "/api/{version}/plugin/complaint/bynumber"
+    POST: 
+      - "/api/{version}/service/timesheet/config"
+      - "/api/{version}/service/timesheet/properties" 
+      - "/api/{version}/service/timesheet/{submissionName}"
+  timesheetCreatePrivilege:
+    GET:
+      - "/plugin/timesheet/wizard"
+  acmTimeModulePrivilege:
+    GET:
+      - "/modules/time-tracking/views/"
+  generateStateOfArkcasePrivilege:
+    GET:
+      - "/api/{version}/plugin/state-of-arkcase/generate"
+  acmSubscriptionModulePrivilege:
+    GET:
+      - "/modules/subscriptions/views/"
+  subscribePrivilege:
+    GET:
+      - "/api/{version}/service/subscription/{userId:.+}"
+      - "/api/{version}/service/subscription/{userId}/{objType}/{objId}"
+      - "/plugin/subscription"
+      - "/modules/subscriptions/views/"
+    PUT:
+      - "/api/{version}/service/subscription/{userId}/{objType}/{objId}"
+    DELETE:
+      - "/api/{version}/service/subscription/{userId}/{objType}/{objId}"
+  tagPrivilege:
+    GET:
+      - "/plugin/tag"
+      - "/api/{version}/service/tag"
+      - "/api/{version}/service/tag/{objectType}/{objectId}"
+    POST:
+      - "/api/{version}/service/tag"
+    PUT:
+      - "/api/{version}/service/tag"
+      - "/api/{version}/service/tag/{objectId}/{objectType}/{objectTitle}/{tagId}"
+    DELETE:
+      - "/api/{version}/service/tag/{tagId}"
+      - "/api/{version}/service/tag/{objectId}/{objectType}/{tagId}"
+  acmTagModulePrivilege:
+    GET:
+      - "/modules/tags/views/"
+  acmTaskListPrivilege:
+    GET:
+      - "/plugin/task"
+      - "/plugin/task/{taskId}"
+      - "/api/{version}/plugin/task/forUser/{user:.+}"
+      - "/api/{version}/plugin/task/list/{due}"
+      - "/api/{version}/plugin/task/getListByDueDate/{due}"
+      - "/api/{version}/plugin/task/businessProcessTasks"
+      - "/api/{version}/plugin/task/byId/{taskId}"
+      - "/api/{version}/plugin/task/history/{id}/{adhoc}"
+      - "/api/{version}/plugin/task/businessProcess/{id}/pastTasks"
+      - "/api/{version}/plugin/task/objectType/{type}/objectId/{id}/buckslipProcessesForChildren"
+      - "/api/{version}/plugin/task/businessProcess/{id}/initiatable"
+      - "/api/{version}/plugin/task/businessProcess/{id}/withdrawable"
+      - "/api/{version}/plugin/task/businessProcess/{objectType}/{objectId}/pastTasks"
+      - "/api/{version}/plugin/task/businessProcess/{objectType}/{objectId}/{processVariable}/businessProcessVariable"
+  acmTaskCompletePrivilege:
+    POST:
+      - "/api/{version}/plugin/task/completeTask/{taskId}"
+      - "/api/{version}/plugin/task/completeTask"
+  acmTaskDeletePrivilege:
+    POST:
+      - "/api/{version}/plugin/task/deleteTask/{taskId}"
+      - "/api/{version}/plugin/task/deleteProcessInstance/{parentObjectId}/{processInstanceId}"
+  acmTaskCreatePrivilege:
+    GET:
+      - "/plugin/task/wizard"
+    POST:
+      - "/api/{version}/plugin/task/adHocTask"
+      - "/api/{version}/plugin/tasks/documents/review"
+      - "/api/{version}/plugin/tasks/newdocuments/review"
+      - "/api/{version}/plugin/task/save/{taskId}"
+      - "/api/{version}/plugin/task/saveReference"
+  acmTaskClaimPrivilege:
+    POST:
+      - "/api/{version}/plugin/task/claim/{taskId}"
+      - "/api/{version}/plugin/task/unclaim/{taskId}"
+  acmTaskModulePrivilege:
+    GET:
+      - "/modules/tasks/views/"
+      - "/api/{latest}/plugin/task/diagram/{taskId}"
+      - "/api/{latest}/plugin/task/diagram/process/{processId}"
+  acmTaskSavePrivilege:
+    POST:
+      - "/api/{version}/plugin/task/businessProcess/{id}/initiate"
+      - "/api/{version}/plugin/task/{taskId}/withdraw"
+      - "/api/{version}/plugin/task/buckslipProcesses"
 elk:
   server:
     url: "http://acm-arkcase/arkcase/acm-elastic"
@@ -1171,6 +2019,8 @@ cost.plugin:
   ,{\"desc\":\"Sort Costsheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Costsheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
+  workflowProcessName: acmDocumentWorkflow
+  addCostsheetToBilling: true
 ################### Dashbord Plugin Configuration (dashboardPlugin.properties) ###################
 ## Default dashboard JSON String.
 dashboard.plugin:
@@ -1859,6 +2709,8 @@ time.plugin:
   ,{\"desc\":\"Sort Timesheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Timesheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
+  workflowProcessName: acmDocumentWorkflow
+  addTimesheetToBilling: true  
 ################### Timesheet Properties (timesheetProperties.properties) ###################
 ################### Transcribe Configuration (transcribe.properties) ####################
 transcribe:

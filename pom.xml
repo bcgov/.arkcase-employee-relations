@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.armedia.arkcase</groupId>
     <artifactId>arkcase-config</artifactId>
-    <version>3.3.3</version>
+    <version>3.3.4</version>
     <packaging>pom</packaging>
     <name>ArkCase Configuration</name>
     <description>Arkcase Configuration</description>
@@ -32,7 +32,8 @@
                 <configuration>
                     <gitFlowConfig>
                         <productionBranch>master-core</productionBranch>
-                        <developmentBranch>core</developmentBranch>                        
+                        <developmentBranch>core</developmentBranch>          
+                        <releaseBranchPrefix>release-core/</releaseBranchPrefix>              
                         <hotfixBranchPrefix>hotfix-core/</hotfixBranchPrefix>
                         <supportBranchPrefix>support-core/</supportBranchPrefix>
                         <versionTagPrefix>core-</versionTagPrefix>
