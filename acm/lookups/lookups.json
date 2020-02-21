@@ -2936,6 +2936,10 @@
                 {
                     "value": "core.lookups.taskParentTypes.timesheet",
                     "key": "TIMESHEET"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.doc_repo",
+                    "key": "DOC_REPO"
                 }
             ],
             "readonly": true

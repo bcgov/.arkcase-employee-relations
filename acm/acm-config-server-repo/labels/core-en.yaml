@@ -588,6 +588,7 @@ core:
       complaint: Complaint
       costsheet: Cost Tracking
       timesheet: Timesheet
+      doc_repo: Document Repository
   userInfo:
     addedMenu:
       help: Help
