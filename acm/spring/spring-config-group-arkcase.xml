@@ -12,7 +12,7 @@
         <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-group-arkcase.properties"/>
     </beans:bean>
    
-    <beans:bean id="adtest_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
+    <beans:bean id="arkcase_groupSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapGroupSyncConfig">
         <beans:property name="attributes">
             <beans:map>
                 <beans:entry key="cn" value='${adAddUserConfig.cn}'/>

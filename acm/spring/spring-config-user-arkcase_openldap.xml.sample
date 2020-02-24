@@ -8,7 +8,7 @@
         <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-user-armedia-openldap.properties"/>
     </beans:bean>
 
-    <beans:bean id="armedia_userSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapUserSyncConfig">
+    <beans:bean id="arkcase_openldap_userSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapUserSyncConfig">
         <beans:property name="attributes">
             <beans:map>
                 <beans:entry key="cn" value='${openLdapAddUserConfig.cn}'/>
