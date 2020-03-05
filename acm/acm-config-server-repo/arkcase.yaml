@@ -1796,6 +1796,7 @@ audit.plugin:
     syslog.port: 514
   #database log configuration
   purge.days: 30
+  quartz.purge.days: 7
   batch.run: true
   #requests logging configuration
   requests.logging:
