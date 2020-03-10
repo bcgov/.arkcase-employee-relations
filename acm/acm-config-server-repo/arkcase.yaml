@@ -1834,7 +1834,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.ecm.folder.downloaded\": \"'Folder ' + source.name + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
 \"com.armedia.acm.smtp.event.sent.hyperlink\":\" source?.fileNames?.toString() + ' to ' + source?.emailAddresses?.toString() \",
-\"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + source?.emailAddresses?.toString()\",
+\"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
@@ -1911,6 +1911,8 @@ capture:
   fileFormatsToMerge: "pdf"
   #the folder where OXM file is located. Specify the path relative to $HOME/.arkcase/acm
   oxm.file.path: "/ephesoft/oxm/ephesoft_complaint_oxm.xml"
+  #tracking outgoing emails folder name
+  outgoingEmail.folderName: "Outgoing Email"
 ################### Case Plugin Configuration (caseFilePlugin.properties) ###################
 casefile.plugin:
   #case file email folder
