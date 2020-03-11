@@ -100,7 +100,7 @@ people.comp.addresses:
     streetAddress2.placeholder: Enter Address 2
     city.label: City
     city.placeholder: Enter City
-    zip.label: Zip
+    zip.label: Zip/Postal
     zip.placeholder: Enter Zip
     state.label: State
     state.placeholder: Enter State
