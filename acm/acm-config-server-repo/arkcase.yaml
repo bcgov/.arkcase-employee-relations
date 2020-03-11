@@ -1911,8 +1911,6 @@ capture:
   fileFormatsToMerge: "pdf"
   #the folder where OXM file is located. Specify the path relative to $HOME/.arkcase/acm
   oxm.file.path: "/ephesoft/oxm/ephesoft_complaint_oxm.xml"
-  #tracking outgoing emails folder name
-  outgoingEmail.folderName: "Outgoing Email"
 ################### Case Plugin Configuration (caseFilePlugin.properties) ###################
 casefile.plugin:
   #case file email folder
@@ -2175,6 +2173,7 @@ email:
     username: "ann-acm"
     password: "AcMd3v$"
     convertDocumentsToPdf: false
+    outgoingEmail.folderName: "Outgoing Email"
 #################### EcmFile Service Configuration (ecmFileService.properties) ####################
 ecm:
   #participantTypes: "['Assignee','Co-owner','Supervisor','Owning Group','Approver','Collaborator','Follower','Reader','No Access']" 
