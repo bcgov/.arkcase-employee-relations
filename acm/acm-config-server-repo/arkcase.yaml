@@ -78,7 +78,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/application/version"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
       - "/api/{version}/plugin/admin/scheduler/jobs"
-      - "/api/{version}/plugin/admin/configuration/reset"
       - "/api/{version}/ldap/{directory:.+}/groups"
       - "/api/{version}/ldap/{directory:.+}/groups/{parentGroupName:.+}"
       - "/api/{version}/functionalaccess/roles"
@@ -153,6 +152,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/plainforms/{key}/{target}"
       - "/api/{version}/plugin/admin/template/{templateId}"
       - "/api/{version}/plugin/admin/template/{templateId}/{templateVersion}"
+      - "/api/{version}/plugin/admin/configuration/reset"
       - "/api/{version}/plugin/admin/mergefields/{mergeFieldId}"
       - "/api/{version}/users/group/{groupId}/remove"
       - "/api/{version}/users/groups/{parentId}"
@@ -351,6 +351,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/wopi/resources"
     POST:
       - "/api/{version}/service/ecm/folder/copy/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"
+      - "/api/{version}/service/ecm/folder/copyAsLink/{folderId}/{dstFolderId}/{targetObjectType}/{targetObjectId}"
       - "/api/{version}/service/ecm/folder/move/{folderToMoveId}/{dstFolderId}"
       - "/api/{version}/service/ecm/file/{objectId}/rename"
       - "/api/{version}/service/ecm/replace/{fileToBeReplacedId}"
@@ -512,8 +513,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/outlook/calendar"
       - "/api/{version}/plugin/outlook/tasks"
       - "/api/{version}/plugin/outlook/contacts"
-    POST:
-      - "/api/{version}/plugin/note"
   acmDeleteNoteByIdPrivilege:
     DELETE:
       - "/api/{version}/plugin/note/{noteId}"
@@ -859,7 +858,7 @@ elk:
     password:
   dashboard.url: "/app/kibana#/dashboard/693034a0-6ca5-11e7-8049-858c370356cc"
 slk.server:
-  internal.url: "https://acm-solr"
+  internal.url: "https://acm-arkcase"
   internal.port: 8983
   external.url: "https://acm-arkcase/arkcase"
   dashboard.url: "/solr/banana/src/index.html"
@@ -867,7 +866,7 @@ slk.server:
 ################### External Integration (acmExternalIntegration.properties) ####################
 external.integration:
   enable: true
-  userId: "arkcase-administrator@armedia.com"
+  userId: "arkcase-administrator@.arkcase.org"
 ################### Plain Forms Configuraion (acm-forms-plain.properties) ####################
 # Frevvo server informatoin
 frevvo:
@@ -1040,7 +1039,7 @@ report:
     PENTAHO_SERVER_PORT: 443
     PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
     PENTAHO_SERVER_INTERNAL_PORT: 443
-    PENTAHO_SERVER_USER: "ann-acm"
+    PENTAHO_SERVER_USER: "arkcase-admin"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
     PENTAHO_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
@@ -1365,25 +1364,25 @@ application:
   ################### Application Role To User Group (applicationRoleToUserGroup.properties) ####################
   rolesToGroups: 
     ROLE_ENTITY_ADMINISTRATOR: 
-      - ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM
+      - ARKCASE_ENTITY_ADMINISTRATOR@ARKCASE.ORG
     ROLE_CONSUMER: 
-      - ARKCASE_CONSUMER@ARMEDIA.COM
+      - ARKCASE_CONSUMER@ARKCASE.ORG
     ROLE_SUPERVISOR: 
-      - ARKCASE_SUPERVISOR@ARMEDIA.COM
-      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM
+      - ARKCASE_SUPERVISOR@ARKCASE.ORG
+      - ARKCASE_ADMINISTRATOR@ARKCASE.ORG
     ROLE_ADMINISTRATOR : 
-      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM
-      - ARKCASE_ENTITY_ADMINISTRATOR@ARMEDIA.COM
+      - ARKCASE_ADMINISTRATOR@ARKCASE.ORG
+      - ARKCASE_ENTITY_ADMINISTRATOR@ARKCASE.ORG
     ROLE_EXTERNAL : 
-      - ARKCASE_EXTERNAL@ARMEDIA.COM
+      - ARKCASE_EXTERNAL@ARKCASE.ORG
     ROLE_CONTRIBUTOR : 
-      - ARKCASE_CONTRIBUTOR@ARMEDIA.COM
+      - ARKCASE_CONTRIBUTOR@ARKCASE.ORG
     ROLE_BILLING_QUEUE : 
-      - ARKCASE_ADMINISTRATOR@ARMEDIA.COM 
-      - ARKCASE_SUPERVISOR@ARMEDIA.COM 
-      - ARKCASE_CONTRIBUTOR@ARMEDIA.COM
-      - ARKCASE_CONSUMER@ARMEDIA.COM 
-      - ARKCASE_EXTERNAL@ARMEDIA.COM
+      - ARKCASE_ADMINISTRATOR@ARKCASE.ORG 
+      - ARKCASE_SUPERVISOR@ARKCASE.ORG 
+      - ARKCASE_CONTRIBUTOR@ARKCASE.ORG
+      - ARKCASE_CONSUMER@ARKCASE.ORG 
+      - ARKCASE_EXTERNAL@ARKCASE.ORG
   ################### (applicationRolesPrivileges.properties) ###################
   rolesToPrivileges: 
     ROLE_ENTITY_ADMINISTRATOR:
@@ -1771,7 +1770,7 @@ application:
     baseUrl: "https://acm-arkcase/arkcase"
     applicationName: "arkcase"
     helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
-    alfrescoUserIdLdapAttribute: "uid"
+    alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
@@ -1834,7 +1833,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + source?.emailAddresses?.toString()\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
-com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
+com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
 com.armedia.acm.personAssociation.created, com.armedia.acm.personAssociation.deleted, com.armedia.acm.objectassociation.reference.added,
@@ -1846,7 +1845,7 @@ com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.changed, com.armedia.acm.object.assignee.change, com.armedia.acm.casefile.participant.changed,
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
-com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink"
+com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink, com.armedia.acm.folder.copied, com.armedia.acm.folder.copiedAsLink"
 COMPLAINT.history.event.types: "com.armedia.acm.complaint.created, com.armedia.acm.complaint.updated, com.armedia.acm.app.task.create, com.armedia.acm.complaint.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.changed, com.armedia.acm.complaint.priority.changed, com.armedia.acm.outlook.calendar.event.added,
@@ -2085,13 +2084,13 @@ eclipselink.logging:
 jpa.model.packages: "com.armedia.**"
 ##postgresql
 acm:
-  driverClassName: "com.mysql.jdbc.Driver"
+  driverClassName: "org.mariadb.jdbc.Driver"
   #driverClassName: "org.postgresql.Driver"
-  url: "jdbc:mysql://acm-mysql:3306/arkcase?verifyServerCertificate=true&requireSSL=true&useSSL=true&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/truststore&trustCertificateKeyStorePassword=AcMd3v$"
+  url: "jdbc:mysql://acm-arkcase:3306/arkcase?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&useSsl=true&requireSsl=true&enabledSslProtocolSuites=TLSv1.2&trustCertificateKeyStoreUrl=file:${user.home}/.arkcase/acm/private/arkcase.ts&trustCertificateKeyStorePassword=password"
   #url: "jdbc:postgresql://acm-postgres:5432/arkcase?ssl=true"
   schema: "arkcase"
   username: "arkcase"
-  password: "ENC(U2FsdGVkX1/Byxn9VvOcopumBXAHXig+63j4n4SAJ3w=)"
+  password: "@rM3d1A!"
   initialSize: 10
   maxActive: 20
   minIdle: 5
@@ -2208,7 +2207,7 @@ ecm:
   #viewer.snowbound.tabHeader: fileTypeCapitalized
   viewer.snowbound.tabHeader:
   #Snowbound URL query string encryption key. Leave this property empty if you don't need encryption
-  viewer.snowbound.encryptionKey: "ENC(U2FsdGVkX1+/i7RReaawm2OyEcse1DBxZ0+oGE3ZsT5V1ahjvWhorhAZoUB97sHH)"
+  viewer.snowbound.encryptionKey:
   viewer.snowbound.forcePDF: true
   viewer.snowbound.enableOCR: true
   #viewer.pdfViewer: value "pdfjs" causes PDF.js to be used.  All other values have no effect.
@@ -2350,6 +2349,7 @@ auditEvent:
   ,\"eventType.com.armedia.acm.casefile.details.changed\": \"Case File Details Changed\"
   ,\"eventType.com.armedia.acm.casefile.title.changed\": \"Case File Title Changed\"
   ,\"eventType.com.armedia.acm.casefile.status.changed\": \"Case File Status Changed\"
+  ,\"eventType.com.armedia.acm.casefile.queue.changed\": \"Case File Queue Changed\"
   ,\"eventType.com.armedia.acm.casefile.participant.added\": \"Participant Added\"
   ,\"eventType.com.armedia.acm.casefile.participant.deleted\": \"Participant Deleted\"
   ,\"eventType.com.armedia.acm.casefile.participant.changed\": \"Participant Changed\"
@@ -2398,6 +2398,8 @@ auditEvent:
   ,\"eventType.com.armedia.acm.documentrepository.participant.updated\": \"Participant Changed\"
   ,\"eventType.com.armedia.acm.folder.created\": \"Folder Created\"
   ,\"eventType.com.armedia.acm.folder.renamed\": \"Folder Renamed\"
+  ,\"eventType.com.armedia.acm.folder.copied\": \"Folder Copied\"
+  ,\"eventType.com.armedia.acm.folder.copiedAsLink\": \"Link to Folder Created\"
   ,\"eventType.com.armedia.acm.ldapUser.created\": \"LDAP User Created\"
   ,\"eventType.com.armedia.acm.ldapUser.updated\": \"LDAP User Updated\"
   ,\"eventType.com.armedia.acm.ldapUser.deleted\": \"LDAP User Deleted\"
@@ -2779,12 +2781,12 @@ acm.websockets:
   stomp_broker_relay.relay_protocol: "ssl"
   #Required values for ssl relay protocol only
   #keystore type must be JKS
-  stomp_broker_relay.keystore: "${user.home}/.arkcase/acm/private/keystore.old"
-  stomp_broker_relay.keystore_pass: "password"
-  stomp_broker_relay.truststore: "${user.home}/.arkcase/acm/private/truststore"
-  stomp_broker_relay.truststore_pass: "AcMd3v$"
+  stomp_broker_relay.keystore: "${user.home}/.arkcase/acm/private/arkcase.ks"
+  stomp_broker_relay.keystore_pass: "AcMd3v$"
+  stomp_broker_relay.truststore: "${user.home}/.arkcase/acm/private/arkcase.ts"
+  stomp_broker_relay.truststore_pass: "password"
   stomp_broker_relay.truststore_type: "JKS"
-  stomp_broker_relay.relay_host: "acm-activemq"
+  stomp_broker_relay.relay_host: "acm-arkcase"
   stomp_broker_relay.relay_port: 61613
   stomp_broker_relay.heartbeat_send_interval: 20000
   stomp_broker_relay.heartbeat_receive_interval: 20000
@@ -2902,4 +2904,3 @@ language.settings:
   localeCode: en
   
 camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
-

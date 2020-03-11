@@ -16,3 +16,19 @@ notifications:
         parentNumber: Parent Number
         objType: Object Type
         modified: Modified
+  username:
+    forgot: Forgot Username
+  task:
+    completed: Task has been completed
+    upcoming: Task upcoming notification
+    overdue: Task overdue notification
+  password:
+    reset: Reset password
+    request: Request password reset
+  status:
+    transcription: Transcription status
+  complaint:
+    invoice: "Complaint %s invoice"
+  arrest.warrant: "%s - Arrest Warrant" 
+  email:
+    mentions: "%s mentioned you in %s %d"

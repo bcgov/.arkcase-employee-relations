@@ -1,4 +1,4 @@
-openLdapAddUserConfig.id=armedia
+openLdapAddUserConfig.id=arkcase_openldap
 openLdapAddUserConfig.cn=fullName
 openLdapAddUserConfig.givenName=firstName
 openLdapAddUserConfig.sn=lastName
