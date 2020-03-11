@@ -2383,311 +2383,311 @@
         {
             "name": "canadaStates",
             "entries": [
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.AB",
-            "key": "AB"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.BC",
-            "key": "BC"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.MB",
-            "key": "MB"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.NB",
-            "key": "NB"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.NL",
-            "key": "NL"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.NT",
-            "key": "NT"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.NS",
-            "key": "NS"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.NU",
-            "key": "NU"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.ON",
-            "key": "ON"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.PE",
-            "key": "PE"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.QC",
-            "key": "QC"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.SK",
-            "key": "SK"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.canadaStates.YT",
-            "key": "YT"
-        }
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.AB",
+                    "key": "AB"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.BC",
+                    "key": "BC"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.MB",
+                    "key": "MB"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.NB",
+                    "key": "NB"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.NL",
+                    "key": "NL"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.NT",
+                    "key": "NT"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.NS",
+                    "key": "NS"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.NU",
+                    "key": "NU"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.ON",
+                    "key": "ON"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.PE",
+                    "key": "PE"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.QC",
+                    "key": "QC"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.SK",
+                    "key": "SK"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.canadaStates.YT",
+                    "key": "YT"
+                }
             ]
         },
         {
             "name": "japanStates",
             "entries": [
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.AI",
-            "key": "Aichi"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.AK",
-            "key": "Akita"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.AO",
-            "key": "Aomori"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.CH",
-            "key": "Chiba"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.EH",
-            "key": "Ehime"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.FU",
-            "key": "Fukui"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.FK",
-            "key": "Fukuoka"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.FS",
-            "key": "Fukushima"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.GI",
-            "key": "Gifu"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.GU",
-            "key": "Gunma"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.HI",
-            "key": "Hiroshima"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.HK",
-            "key": "Hokkaido"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.HY",
-            "key": "Hyōgo"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.IB",
-            "key": "Ibaraki"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.IS",
-            "key": "Ishikawa"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.IW",
-            "key": "Iwate"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KA",
-            "key": "Kagawa"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KG",
-            "key": "Kagoshima"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KN",
-            "key": "Kanagawa"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KO",
-            "key": "Kōchi"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KU",
-            "key": "Kumamoto"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.KY",
-            "key": "Kyoto"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.MI",
-            "key": "Mie"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.MY",
-            "key": "Miyagi"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.MZ",
-            "key": "Miyazaki"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.NA",
-            "key": "Nagano"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.NG",
-            "key": "Nagasaki"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.NR",
-            "key": "Nara"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.NI",
-            "key": "Niigata"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.OI",
-            "key": "Ōita"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.OK",
-            "key": "Okayama"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.ON",
-            "key": "Okinawa"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.OS",
-            "key": "Osaka"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.SA",
-            "key": "Saga"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.ST",
-            "key": "Saitama"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.SH",
-            "key": "Shiga"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.SM",
-            "key": "Shimane"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.SZ",
-            "key": "Shizuoka"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.TO",
-            "key": "Tochigi"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.TK",
-            "key": "Tokushima"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.TY",
-            "key": "Tokyo"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.TR",
-            "key": "Tottori"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.TM",
-            "key": "Toyama"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.WA",
-            "key": "Wakayama"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.YA",
-            "key": "Yamagata"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.YG",
-            "key": "Yamaguchi"
-        },
-        {
-            "readonly": false,
-            "value": "core.lookups.japanStates.YM",
-            "key": "Yamanashi"
-        }
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.AI",
+                    "key": "Aichi"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.AK",
+                    "key": "Akita"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.AO",
+                    "key": "Aomori"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.CH",
+                    "key": "Chiba"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.EH",
+                    "key": "Ehime"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.FU",
+                    "key": "Fukui"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.FK",
+                    "key": "Fukuoka"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.FS",
+                    "key": "Fukushima"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.GI",
+                    "key": "Gifu"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.GU",
+                    "key": "Gunma"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.HI",
+                    "key": "Hiroshima"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.HK",
+                    "key": "Hokkaido"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.HY",
+                    "key": "Hyōgo"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.IB",
+                    "key": "Ibaraki"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.IS",
+                    "key": "Ishikawa"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.IW",
+                    "key": "Iwate"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KA",
+                    "key": "Kagawa"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KG",
+                    "key": "Kagoshima"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KN",
+                    "key": "Kanagawa"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KO",
+                    "key": "Kōchi"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KU",
+                    "key": "Kumamoto"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.KY",
+                    "key": "Kyoto"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.MI",
+                    "key": "Mie"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.MY",
+                    "key": "Miyagi"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.MZ",
+                    "key": "Miyazaki"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.NA",
+                    "key": "Nagano"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.NG",
+                    "key": "Nagasaki"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.NR",
+                    "key": "Nara"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.NI",
+                    "key": "Niigata"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.OI",
+                    "key": "Ōita"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.OK",
+                    "key": "Okayama"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.ON",
+                    "key": "Okinawa"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.OS",
+                    "key": "Osaka"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.SA",
+                    "key": "Saga"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.ST",
+                    "key": "Saitama"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.SH",
+                    "key": "Shiga"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.SM",
+                    "key": "Shimane"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.SZ",
+                    "key": "Shizuoka"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.TO",
+                    "key": "Tochigi"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.TK",
+                    "key": "Tokushima"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.TY",
+                    "key": "Tokyo"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.TR",
+                    "key": "Tottori"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.TM",
+                    "key": "Toyama"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.WA",
+                    "key": "Wakayama"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.YA",
+                    "key": "Yamagata"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.YG",
+                    "key": "Yamaguchi"
+                },
+                {
+                    "readonly": false,
+                    "value": "core.lookups.japanStates.YM",
+                    "key": "Yamanashi"
+                }
             ]
         },
         {
