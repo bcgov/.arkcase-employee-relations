@@ -9,10 +9,10 @@
 
     <beans:bean class="com.armedia.acm.crypto.properties.AcmEncryptablePropertySourcesPlaceholderConfigurer">
         <beans:property name="encryptablePropertyUtils" ref="acmEncryptablePropertyUtils"/>
-        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-user-adtest-ad.properties"/>
+        <beans:property name="location" value="file:${user.home}/.arkcase/acm/spring/spring-config-user-arkcase.properties"/>
     </beans:bean>
    
-    <beans:bean id="adtest_userSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapUserSyncConfig">
+    <beans:bean id="arkcase_userSync" class="com.armedia.acm.services.users.service.ldap.AcmLdapUserSyncConfig">
         <beans:property name="attributes">
             <beans:map>
                 <beans:entry key="cn" value='${adAddUserConfig.cn}'/>

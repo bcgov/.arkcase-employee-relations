@@ -68,7 +68,7 @@ release_start:
     # core
     - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
     # foia
-    - git checkout --track origin/foia
+    - git checkout foia
     - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
 
 
@@ -96,14 +96,14 @@ release_candidate_X:
     - export SSHPASS=$SSHPASS_ARKCASE
     - curl --silent --create-dirs -o /usr/share/maven/lib/ext/pom-manipulation-ext-3.8.1.jar https://repo1.maven.org/maven2/org/commonjava/maven/ext/pom-manipulation-ext/3.8.1/pom-manipulation-ext-3.8.1.jar
     # core
-    - git checkout --track release-core/$RELEASE_VERSION
+    - git checkout release-core/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # foia
-    - git checkout --track release-foia/$RELEASE_VERSION
+    - git checkout release-foia/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
@@ -133,15 +133,15 @@ release:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:hotfix-finish -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
     - git checkout master-core
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://project.armedia.com/nexus/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
-    - git checkout --track origin/foia
-    - mvn -B gitflow:hotfix-finish -DhotfixVersion=$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
+    - git checkout foia
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
     - git checkout master-foia
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
@@ -160,7 +160,7 @@ start_support_branch:
     # core
     - mvn -B gitflow:support-start -DpushRemote=true -DtagName=core-$RELEASE_TAG
     # foia
-    - git checkout --track origin/foia
+    - git checkout foia
     - mvn -B gitflow:support-start -DpushRemote=true -DtagName=foia-$RELEASE_TAG
 
 start_hotfix:
@@ -177,7 +177,7 @@ start_hotfix:
     - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/core-$HOTFIX_SUPPORT_VERSION
     # foia
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
-    - git checkout --track origin/foia
+    - git checkout foia
     - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-foia/foia-$HOTFIX_SUPPORT_VERSION
 
 release_hotfix:
