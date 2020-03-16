@@ -44,7 +44,7 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-07-01T12:07:59.263Z"
 }, {
-  "@id" : "4",
+  "@id" : "5",
   "templateId" : "14",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -59,7 +59,7 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-07-01T12:07:59.977Z"
 }, {
-  "@id" : "5",
+  "@id" : "6",
   "templateId" : "15",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -74,7 +74,7 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-06-29T11:50:22.237Z"
 }, {
-  "@id" : "6",
+  "@id" : "7",
   "templateId" : "1",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -89,7 +89,7 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-06-29T11:50:22.685Z"
 }, {
-  "@id" : "7",
+  "@id" : "8",
   "templateId" : "2",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -104,7 +104,7 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-06-29T11:50:23.717Z"
 }, {
-  "@id" : "8",
+  "@id" : "9",
   "templateId" : "3",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -119,10 +119,10 @@
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-07-01T12:05:25.736Z"
 }, {
-  "@id" : "9",
+  "@id" : "10",
   "templateId" : "4",
   "templateVersion" : "1.0",
-  "templateVersionActive" : false,
+  "templateVersionActive" : true,
   "label" : "Medical Release",
   "documentType" : "Medical Release",
   "templateFilename" : "MedicalRelease.docx",
@@ -133,21 +133,6 @@
   "activated" : false,
   "modifier" : "bthomas@armedia.com",
   "modified" : "2019-06-29T11:50:24.584Z"
-}, {
-  "@id" : "10",
-  "templateId" : "4",
-  "templateVersion" : "2.0",
-  "templateVersionActive" : true,
-  "label" : "Medical Release",
-  "documentType" : "Medical Release",
-  "templateFilename" : "20200313113108_MedicalRelease.docx",
-  "objectType" : "CASE_FILE",
-  "templateModelProvider" : "com.armedia.acm.plugins.casefile.model.provider.CaseFileTemplateModelProvider",
-  "dateFormatString" : "MM/dd/yyyy",
-  "numberFormatString" : "###,###,###",
-  "activated" : true,
-  "modifier" : "ann-acm@arkcase.org",
-  "modified" : "2020-03-13T11:31:09.041Z"
 }, {
   "@id" : "11",
   "templateId" : "5",
