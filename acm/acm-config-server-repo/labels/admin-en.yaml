@@ -175,6 +175,7 @@ admin:
         email: Enter email
         password: Enter password
         confirmation: Enter your password again
+        samlMaxUsernameLengthError: Username cannot have more than 20 characters
         _1_: Numeric values are not valid in resource file. _TO_BE_REMOVED_
         _2_: If 'minLengthForPassword' is needed, please move it to config.json
         _minLengthForPassword: "7"
