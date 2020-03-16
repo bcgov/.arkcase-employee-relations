@@ -1,65 +1,67 @@
-[
-    {
-        "@id": "1",
-        "fieldId": "initiatorGivenName",
-        "fieldValue": "personAssociations.?[personType == 'Initiator'][0].person.givenName",
-        "fieldDescription": "Initiator First Name",
-        "fieldObjectType": "CASE_FILE"
-    },
-    {
-        "@id": "2",
-        "fieldId": "personFirstName",
-        "fieldValue": "personAssociations[0].person.givenName",
-        "fieldDescription": "Person First Name",
-        "fieldObjectType": "CASE_FILE"
-    },
-    {
-        "@id": "3",
-        "fieldId": "personId",
-        "fieldValue": "personAssociations[0].person.id",
-        "fieldDescription": "Person Id",
-        "fieldObjectType": "CASE_FILE"
-    },
-    {
-        "@id": "4",
-        "fieldId": "caseNumber",
-        "fieldValue": "caseNumber",
-        "fieldDescription": "Case Number",
-        "fieldObjectType": "CASE_FILE"
-    },
-    {
-        "@id": "5",
-        "fieldId": "caseTitle",
-        "fieldValue": "title",
-        "fieldDescription": "Case Title",
-        "fieldObjectType": "CASE_FILE"
-    },
-    {
-        "@id": "6",
-        "fieldId": "personFirstName",
-        "fieldValue": "personAssociations[0].person.givenName",
-        "fieldDescription": "Person First Name",
-        "fieldObjectType": "COMPLAINT"
-    },
-    {
-        "@id": "7",
-        "fieldId": "personId",
-        "fieldValue": "personAssociations[0].person.id",
-        "fieldDescription": "Person Id",
-        "fieldObjectType": "COMPLAINT"
-    },
-    {
-        "@id": "8",
-        "fieldId": "caseNumber",
-        "fieldValue": "caseNumber",
-        "fieldDescription": "Case Number",
-        "fieldObjectType": "COMPLAINT"
-    },
-    {
-        "@id": "9",
-        "fieldId": "caseTitle",
-        "fieldValue": "title",
-        "fieldDescription": "Case Title",
-        "fieldObjectType": "COMPLAINT"
-    }
-]
+[ {
+  "@id" : "1",
+  "fieldId" : "personFirstName",
+  "fieldValue" : "personAssociations[0].person.givenName",
+  "fieldDescription" : "Person First Name",
+  "fieldObjectType" : "COMPLAINT"
+}, {
+  "@id" : "2",
+  "fieldId" : "personId",
+  "fieldValue" : "personAssociations[0].person.id",
+  "fieldDescription" : "Person Id",
+  "fieldObjectType" : "COMPLAINT"
+}, {
+  "@id" : "3",
+  "fieldId" : "caseNumber",
+  "fieldValue" : "caseNumber",
+  "fieldDescription" : "Case Number",
+  "fieldObjectType" : "COMPLAINT"
+}, {
+  "@id" : "4",
+  "fieldId" : "caseTitle",
+  "fieldValue" : "title",
+  "fieldDescription" : "Case Title",
+  "fieldObjectType" : "COMPLAINT"
+}, {
+  "@id" : "5",
+  "fieldId" : "initiatorGivenName",
+  "fieldValue" : "personAssociations.?[personType == 'Initiator'][0].person.givenName",
+  "fieldDescription" : "Initiator First Name",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "6",
+  "fieldId" : "personFirstName",
+  "fieldValue" : "personAssociations[0].person.givenName",
+  "fieldDescription" : "Person First Name",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "7",
+  "fieldId" : "personId",
+  "fieldValue" : "personAssociations[0].person.id",
+  "fieldDescription" : "Person Id",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "8",
+  "fieldId" : "caseNumber",
+  "fieldValue" : "caseNumber",
+  "fieldDescription" : "Case Number",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "9",
+  "fieldId" : "caseTitle",
+  "fieldValue" : "title",
+  "fieldDescription" : "Case Title",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "10",
+  "fieldId" : "caseDetailsSummary",
+  "fieldValue" : "caseDetailsSummary",
+  "fieldDescription" : "Case Details Summary",
+  "fieldObjectType" : "CASE_FILE"
+}, {
+  "@id" : "11",
+  "fieldId" : "details",
+  "fieldValue" : "details",
+  "fieldDescription" : "Details",
+  "fieldObjectType" : "CASE_FILE"
+} ]
