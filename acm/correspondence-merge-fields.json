@@ -61,5 +61,19 @@
         "fieldValue": "title",
         "fieldDescription": "Case Title",
         "fieldObjectType": "COMPLAINT"
+    },
+    {
+        "@id" : "10",
+        "fieldId" : "caseDetailsSummary",
+        "fieldValue" : "caseDetailsSummary",
+        "fieldDescription" : "Case Details Summary",
+        "fieldObjectType" : "CASE_FILE"
+    },
+    {
+        "@id" : "11",
+        "fieldId" : "details",
+        "fieldValue" : "details",
+        "fieldDescription" : "Details",
+        "fieldObjectType" : "CASE_FILE"
     }
 ]
