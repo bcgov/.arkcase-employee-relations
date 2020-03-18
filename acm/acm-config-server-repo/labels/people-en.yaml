@@ -79,8 +79,8 @@ people.comp.addresses:
     streetAddress: Address 1
     streetAddress2: Address 2
     city: City
-    state: State
-    zip: Zip
+    state: State/Province
+    zip: Zip/Postal
     country: Country
     created: Date Added
     creator: Added By
@@ -102,7 +102,7 @@ people.comp.addresses:
     city.placeholder: Enter City
     zip.label: Zip/Postal
     zip.placeholder: Enter Zip
-    state.label: State
+    state.label: State/Province
     state.placeholder: Enter State
     country.label: Country
     country.placeholder: Enter Country
@@ -378,9 +378,9 @@ people.comp.editPerson:
     title: Locations
     country: Country
     country.placeholder: Select Country
-    state: State
+    state: State/Province
     state.placeholder: Enter State
-    zip: Zip
+    zip: Zip/Postal
     zip.placeholder: Enter Zip
     city: City
     city.placeholder: Enter City
