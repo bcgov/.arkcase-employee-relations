@@ -386,10 +386,10 @@ people.comp.editPerson:
     city.placeholder: Enter City
     type: Address Type
     type.placeholder: Select Address Type
-    streetAddress: Street Address
-    streetAddress.placeholder: Enter Street Address
-    streetAddress2: Street Address2
-    streetAddress2.placeholder: Enter Street Address2
+    streetAddress: Address
+    streetAddress.placeholder: Enter Address
+    streetAddress2: Address2
+    streetAddress2.placeholder: Enter Address2
   identification:
     title: Identifications
     identificationID: Identification ID
