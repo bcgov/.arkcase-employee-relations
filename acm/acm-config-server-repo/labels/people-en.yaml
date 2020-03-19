@@ -101,9 +101,9 @@ people.comp.addresses:
     city.label: City
     city.placeholder: Enter City
     zip.label: Zip/Postal
-    zip.placeholder: Enter Zip
+    zip.placeholder: Enter Zip/Postal
     state.label: State/Province
-    state.placeholder: Enter State
+    state.placeholder: Enter State/Province
     country.label: Country
     country.placeholder: Enter Country
     btnCancel.text: Cancel
@@ -379,9 +379,9 @@ people.comp.editPerson:
     country: Country
     country.placeholder: Select Country
     state: State/Province
-    state.placeholder: Enter State
+    state.placeholder: Enter State/Province
     zip: Zip/Postal
-    zip.placeholder: Enter Zip
+    zip.placeholder: Enter Zip/Postal
     city: City
     city.placeholder: Enter City
     type: Address Type

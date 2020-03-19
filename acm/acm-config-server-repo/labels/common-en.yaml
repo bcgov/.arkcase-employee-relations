@@ -702,9 +702,9 @@ common.newPerson:
     country: Country
     country.placeholder: Select Country
     state: State/Province
-    state.placeholder: Enter State
+    state.placeholder: Enter State/Province
     zip: Zip/Postal
-    zip.placeholder: Enter Zip
+    zip.placeholder: Enter Zip/Postal
     city: City
     city.placeholder: Enter City
     type: Address Type
@@ -841,9 +841,9 @@ common.newOrganization:
     country: Country
     country.placeholder: Select Country
     state: State/Province
-    state.placeholder: Enter State
+    state.placeholder: Enter State/Province
     zip: Zip/Postal
-    zip.placeholder: Enter Zip
+    zip.placeholder: Enter Zip/Postal
     city: City
     city.placeholder: Enter City
     type: Address Type
