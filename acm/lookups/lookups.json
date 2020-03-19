@@ -2381,7 +2381,7 @@
             "name": "states"
         },
         {
-            "name": "canadaStates",
+            "name": "canadaProvinces",
             "entries": [
                 {
                     "readonly": false,
