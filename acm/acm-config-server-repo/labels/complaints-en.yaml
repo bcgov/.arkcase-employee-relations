@@ -383,11 +383,11 @@ complaints.comp.newComplaint:
     city: City
     city.placeholder: Enter City
     state: State/Province
-    state.placeholder: Enter State
+    state.placeholder: Enter State/Province
     country: Country
     country.placeholder: Select Country
     zip: Zip/Postal
-    zip.placeholder: Enter Zip
+    zip.placeholder: Enter Zip/Postal
     dateCreated: Date added
     creator: Added By
     creator.placeholder: Enter Creator
