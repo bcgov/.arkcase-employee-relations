@@ -709,10 +709,10 @@ common.newPerson:
     city.placeholder: Enter City
     type: Address Type
     type.placeholder: Select Address Type
-    streetAddress: Address
-    streetAddress.placeholder: Enter Address
-    streetAddress2: Address2
-    streetAddress2.placeholder: Enter Address2
+    streetAddress: Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
   identification:
     title: Identifications
     identificationID: Identification ID
@@ -848,10 +848,10 @@ common.newOrganization:
     city.placeholder: Enter City
     type: Address Type
     type.placeholder: Select Address Type
-    streetAddress: Address
-    streetAddress.placeholder: Enter Address
-    streetAddress2: Address2
-    streetAddress2.placeholder: Enter Address2
+    streetAddress: Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
   identification:
     title: Identifications
     identificationID: Identification ID
