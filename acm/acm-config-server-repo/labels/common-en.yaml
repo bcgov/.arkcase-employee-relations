@@ -896,10 +896,3 @@ common.multicorrespondence:
     buttons:
       ok: Create
       cancel: Cancel
-################### Zip Code Regular expressions - start and end slashes must be used to because of yaml format requirement ####################
-common.zipUSAPattern: "/^\\d{5}$/"
-common.zipUSAPatternValidationMsg: "Please match the required format XXXXX where X is a digit."
-common.zipCanadaPattern: "/^[A-Za-z]\\d[A-Za-z][ -]?\\d[A-Za-z]\\d$/"
-common.zipCanadaPatternValidationMsg: "Please match the required format X1X 1X1, where X is a letter and 1 is a digit, a space separating the third and fourth characters."
-common.zipJapanPattern: "/^\\d{3}[ -]?\\d{4}$/"
-common.zipJapanPatternValidationMsg: "Please match the required format XXX-XXXX, where X is a digit."
