@@ -123,9 +123,9 @@ complaints.comp.addresses:
     streetAddress2.placeholder: Enter Address 2
     city.label: City
     city.placeholder: Enter City
-    zip.label: Zip
+    zip.label: Zip/State
     zip.placeholder: Enter Zip
-    state.label: State
+    state.label: State/Province
     state.placeholder: Enter State
     country.label: Country
     country.placeholder: Enter Country
@@ -376,10 +376,10 @@ complaints.comp.newComplaint:
   location:
     title: Location
     addressType: Type
-    streetAddress: Address
-    streetAddress.placeholder: Enter Address
-    streetAddress2: Address2
-    streetAddress2.placeholder: Enter Address2
+    streetAddress: Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
     city: City
     city.placeholder: Enter City
     state: State/Province
