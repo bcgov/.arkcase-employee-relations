@@ -3137,7 +3137,7 @@
                     "readonly": false
                 },
 				{
-                    "value": "core.lookups.sequenceParts.arbitaryText",
+                    "value": "core.lookups.sequenceParts.arbitraryText",
                     "key": "ARBITRARY_TEXT",
                     "readonly": false
                 }

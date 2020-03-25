@@ -584,6 +584,7 @@ core:
       types:
         case_file: Case
         complaint: Complaint
+        task: Task
       chargeCodes:
         investigator: Investigator
         analyst: Analyst
