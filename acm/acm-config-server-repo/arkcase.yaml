@@ -277,6 +277,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/email/send/mentions"
       - "/api/{version}/service/transcribe"
       - "/api/{version}/service/transcribe/{mediaVersionId}/automatic"
+      - "/api/{version}/users/lang/{lang}"
     PUT:
       - "/api/{version}/service/event"
       - "/api/{version}/forms/crud/acm/{formName}/init"
