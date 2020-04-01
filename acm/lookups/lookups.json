@@ -419,6 +419,10 @@
                     "value": "core.lookups.complaintPersonTypes.wrongdoer",
                     "key": "Wrongdoer"
                 },
+				{
+                    "value": "core.lookups.complaintPersonTypes.externalReferal",
+                    "key": "ExternalReferal"
+                },
                 {
                     "value": "core.lookups.common.other",
                     "key": "Other"
