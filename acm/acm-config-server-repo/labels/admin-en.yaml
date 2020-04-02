@@ -505,7 +505,7 @@ admin:
     config: Reports Configuration
     btn:
       reportDesigner: Report Designer
-      sync: Synchronise
+      sync: Synchronize
     schedule:
       title: Reports Scheduling
       selectReportType: Select Report Type
