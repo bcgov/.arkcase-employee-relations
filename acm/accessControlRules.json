@@ -932,19 +932,8 @@
                 "status": [
                     "DRAFT",
                     "ACTIVE",
-                    "INACTIVE",
-                    "Suspended",
-                    "Appealed",
-                    "In Review",
-                    "Hold",
-                    "Unperfected",
-                    "Tolling",
-                    "Fee Assessment",
-                    "GC Review",
-                    "In Fulfillment",
-                    "Deleted",
-                    "Billing",
-                    "In Approval"
+                    "IN_APPROVAL",
+                    "INACTIVE"
                 ]
             },
             "userIsParticipantTypeAny": [
