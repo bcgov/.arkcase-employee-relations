@@ -2920,3 +2920,8 @@ language.settings:
   localeCode: en
   
 camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
+
+### Password configuration ###
+password:
+  length: 7
+  lengthMessage: "Password must be of minimum length of"
