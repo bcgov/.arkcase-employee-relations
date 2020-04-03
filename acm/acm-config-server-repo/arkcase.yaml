@@ -14,7 +14,7 @@ acmPluginConfigurationPrivileges:
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
-     - "/api/{version}/service/exemption/statute"
+      - "/api/{version}/service/exemption/statute"
   caseFileListPrivilege:
     GET:
       - "/api/{version}/plugin/casefile/caseTypes"
