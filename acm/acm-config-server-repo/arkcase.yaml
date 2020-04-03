@@ -14,7 +14,7 @@ acmPluginConfigurationPrivileges:
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
-     - "/api/{version}/service/exemption/statute"
+      - "/api/{version}/service/exemption/statute"
   caseFileListPrivilege:
     GET:
       - "/api/{version}/plugin/casefile/caseTypes"
@@ -2920,3 +2920,8 @@ language.settings:
   localeCode: en
   
 camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
+
+### Password configuration ###
+password:
+  length: 7
+  lengthMessage: "Password must be of minimum length of"
