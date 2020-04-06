@@ -420,6 +420,10 @@
                     "key": "Wrongdoer"
                 },
                 {
+                    "value": "core.lookups.complaintPersonTypes.externalReferal",
+                    "key": "ExternalReferal"
+                },
+                {
                     "value": "core.lookups.common.other",
                     "key": "Other"
                 }
