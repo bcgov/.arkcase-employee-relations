@@ -701,6 +701,8 @@ admin:
           sequencePartValue: Sequence Number
     sequenceManagementParts.config:
       title: Sequence Part
+      footer:
+        cancelBtn: OK
       grid:
         sequenceName: Name
         sequenceDescription: Type
@@ -720,6 +722,7 @@ admin:
         title: Add/Edit Sequence Part
         sequencePartName: Sequence Part Name
         sequencePartType: Sequence Part Type
+        sequenceCondition: Execution Condition (SPEL expression)
         cancel: Cancel
         save: Save
         placeholders:
@@ -732,6 +735,7 @@ admin:
           date: 'Enter Date Format (ex: ddMMyyyyHHmmssSSS)'
           sequencePartName: Enter sequence part name
           sequencePartType: Select part type
+          sequenceCondition: Enter Execution Condition
     sequenceManagementReset:
       title: Reset List
       editBtn: Edit
@@ -813,6 +817,7 @@ admin:
       titleTitle: Use the 'Title' as a Title
       titleObjectId: Use the 'Title - Object ID' as a Title
       objectIdTitle: Use the 'Object ID - Title' as a Title
+      numberTitle: Use the 'Object Number - Title' as a Title
       objectType: Object Type
       titleOption: Title
       caseFile: Case File

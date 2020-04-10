@@ -277,6 +277,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/email/send/mentions"
       - "/api/{version}/service/transcribe"
       - "/api/{version}/service/transcribe/{mediaVersionId}/automatic"
+      - "/api/{version}/users/lang/{lang}"
     PUT:
       - "/api/{version}/service/event"
       - "/api/{version}/forms/crud/acm/{formName}/init"
@@ -1796,6 +1797,10 @@ audit.plugin:
     syslog.port: 514
   #database log configuration
   purge.days: 30
+  quartz:
+    purge:
+      days: 7
+      number: 100000
   batch.run: true
   #requests logging configuration
   requests.logging:
@@ -1830,7 +1835,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.ecm.folder.downloaded\": \"'Folder ' + source.name + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
 \"com.armedia.acm.smtp.event.sent.hyperlink\":\" source?.fileNames?.toString() + ' to ' + source?.emailAddresses?.toString() \",
-\"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + source?.emailAddresses?.toString()\",
+\"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
@@ -2169,6 +2174,7 @@ email:
     username: "ann-acm"
     password: "AcMd3v$"
     convertDocumentsToPdf: false
+    outgoingEmail.folderName: "Outgoing Email"
 #################### EcmFile Service Configuration (ecmFileService.properties) ####################
 ecm:
   #participantTypes: "['Assignee','Co-owner','Supervisor','Owning Group','Approver','Collaborator','Follower','Reader','No Access']" 
