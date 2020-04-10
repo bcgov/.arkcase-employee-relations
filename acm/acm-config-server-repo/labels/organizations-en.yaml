@@ -42,8 +42,8 @@ organizations.comp.addresses:
     streetAddress: Address 1
     streetAddress2: Address 2
     city: City
-    state: State
-    zip: Zip
+    state: State/Province
+    zip: Zip/Postal
     country: Country
     created: Date Added
     creator: Added By
@@ -66,10 +66,10 @@ organizations.comp.addresses:
     streetAddress2.placeholder: Enter Address 2
     city.label: City
     city.placeholder: Enter City
-    zip.label: Zip
-    zip.placeholder: Enter Zip
-    state.label: State
-    state.placeholder: Enter State
+    zip.label: Zip/Postal
+    zip.placeholder: Enter Zip/Postal
+    state.label: State/Province
+    state.placeholder: Enter State/Province
     country.label: Country
     country.placeholder: Enter Country
     btnCancel.text: Cancel
@@ -368,18 +368,18 @@ organizations.comp.newOrganization:
     title: Locations
     country: Country
     country.placeholder: Select Country
-    state: State
-    state.placeholder: Enter State
-    zip: Zip
-    zip.placeholder: Enter Zip
+    state: State/Province
+    state.placeholder: Enter State/Province
+    zip: Zip/Postal
+    zip.placeholder: Enter Zip/Postal
     city: City
     city.placeholder: Enter City
     type: Address Type
     type.placeholder: Select Address Type
-    streetAddress: Street Address
-    streetAddress.placeholder: Enter Street Address
-    streetAddress2: Street Address2
-    streetAddress2.placeholder: Enter Street Address2
+    streetAddress: Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
   identification:
     title: Identifications
     identificationID: Identification ID

@@ -102,8 +102,8 @@ complaints.comp.addresses:
     streetAddress: Address 1
     streetAddress2: Address 2
     city: City
-    state: State
-    zip: Zip
+    state: State/Province
+    zip: Zip/Postal
     country: Country
     created: Date Added
     creator: Added By
@@ -123,9 +123,9 @@ complaints.comp.addresses:
     streetAddress2.placeholder: Enter Address 2
     city.label: City
     city.placeholder: Enter City
-    zip.label: Zip
+    zip.label: Zip/State
     zip.placeholder: Enter Zip
-    state.label: State
+    state.label: State/Province
     state.placeholder: Enter State
     country.label: Country
     country.placeholder: Enter Country
@@ -355,6 +355,8 @@ complaints.comp.closeComplaint:
   saveButton: Save Complaint
 complaints.comp.newComplaint:
   title: New Complaint
+  addAnother: Add Another
+  remove: Remove
   info: Incident Information
   infoMessage: Enter in your overall concern and complaint. Please be very specific
     as to names, places, times, dates, reasons and outcomes.
@@ -374,15 +376,18 @@ complaints.comp.newComplaint:
   location:
     title: Location
     addressType: Type
-    streetAddress: Address
-    streetAddress.placeholder: Enter Street Address
+    streetAddress: Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
     city: City
     city.placeholder: Enter City
-    state: State
-    state.placeholder: Enter State
+    state: State/Province
+    state.placeholder: Enter State/Province
     country: Country
-    zip: Zip Code
-    zip.placeholder: Enter Zip Code
+    country.placeholder: Select Country
+    zip: Zip/Postal
+    zip.placeholder: Enter Zip/Postal
     dateCreated: Date added
     creator: Added By
     creator.placeholder: Enter Creator

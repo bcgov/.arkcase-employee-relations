@@ -497,6 +497,68 @@ core:
       WI: WI
       WV: WV
       WY: WY
+    canadaStates:
+      AB: Alberta
+      BC: British Columbia
+      MB: Manitoba
+      NB: New Brunswick
+      NL: Newfoundland and Labrador
+      NT: Northwest Territories
+      NS: Nova Scotia
+      NU: Nunavut
+      "ON": Ontario
+      PE: Prince Edward Island
+      QC: Quebec
+      SK: Saskatchewan
+      YT: Yukon
+    japanStates:
+      AI: Aichi
+      AK: Akita
+      AO: Aomori
+      CH: Chiba
+      EH: Ehime
+      FU: Fukui
+      FK: Fukuoka
+      FS: Fukushima
+      GI: Gifu
+      GU: Gunma
+      HI: Hiroshima
+      HK: Hokkaido
+      HY: Hyōgo
+      IB: Ibaraki
+      IS: Ishikawa
+      IW: Iwate
+      KA: Kagawa
+      KG: Kagoshima
+      KN: Kangawa
+      KO: Kōchi
+      KU: Kumamoto
+      KY: Kyoto
+      MI: Mie
+      MY: Miyagi
+      MZ: Miyazaki
+      NA: Nagano
+      NG: Nagasaki
+      NR: Nara
+      NI: Niigata
+      OI: Ōita
+      OK: Okayama
+      ON: Okinawa
+      OS: Osaka
+      SA: Saga
+      ST: Saitama
+      SH: Shiga
+      SM: Shimane
+      SZ: Shizuoka
+      TO: Tochigi
+      TK: Tokushima
+      TY: Tokyo
+      TR: Tottori
+      TM: Toyama
+      WA: Wakayama
+      YA: Yamagata
+      YG: Yamaguchi
+      YM: Yamanashi
     costsheet:
       titles:
         taxi: Taxi
