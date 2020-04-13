@@ -924,24 +924,6 @@
         ],
          "userRolesAny":[],
          "userRolesAll":[]
-      },
-	  {
-            "actionName": "addExemptionCode",
-            "objectType": "CASE_FILE",
-            "objectProperties": {
-                "status": [
-                    "DRAFT",
-                    "ACTIVE",
-                    "IN_APPROVAL",
-                    "INACTIVE"
-                ]
-            },
-            "userIsParticipantTypeAny": [
-            ],
-            "userRolesAny": [
-            ],
-            "userRolesAll": [
-            ]
-        }
+      }
    ]
 }
