@@ -337,6 +337,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/ecm/download"
       - "/api/{version}/service/ecm/folder/counts/{objectType}/{objectId}"
       - "/api/{version}/service/ecm/file/{fileId}"
+      - "/api/{version}/service/ecm/file/{fileId}/targetLink"
       - "/api/{version}/service/ecm/totalpagecount/{parentObjectType}/{parentObjectId}"
       - "/plugin/document/{fileId}"
       - "/api/{version}/service/ecm/container/{objectType}/{objectId}"
