@@ -1035,6 +1035,10 @@
             "name": "addressTypes",
             "entries": [
                 {
+                    "value": "core.lookups.addressTypes.selectAddressType",
+                    "key": null
+                },
+                {
                     "value": "core.lookups.addressTypes.business",
                     "key": "Business"
                 },
@@ -1132,6 +1136,10 @@
         {
             "name": "countries",
             "entries": [
+                {
+                    "value": "core.lookups.countries.selectCountry",
+                    "key": null
+                },
                 {
                     "value": "core.lookups.countries.AF",
                     "key": "AF"
