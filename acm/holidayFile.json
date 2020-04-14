@@ -30,23 +30,5 @@
   }, {
     "holidayName" : "Christmas Day",
     "holidayDate" : "2020-12-25"
-  }, {
-    "holidayName" : "Independence Day",
-    "holidayDate" : "2019-07-04"
-  }, {
-    "holidayName" : "Labor Day",
-    "holidayDate" : "2019-09-02"
-  }, {
-    "holidayName" : "Columbus Day",
-    "holidayDate" : "2019-10-14"
-  }, {
-    "holidayName" : "Veterans Day",
-    "holidayDate" : "2019-11-11"
-  }, {
-    "holidayName" : "Thanksgiving Day",
-    "holidayDate" : "2019-11-28"
-  }, {
-    "holidayName" : "Christmas Day",
-    "holidayDate" : "2019-12-25"
   } ]
 }
