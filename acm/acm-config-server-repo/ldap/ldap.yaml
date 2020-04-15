@@ -41,11 +41,10 @@ springConfigLdapProperties:
         unicodePwd: unicodePwd
         givenName: givenName
         objectClass: top,person,user,organizationalPerson
-        id: arkcase
         cn: cn
         sn: sn
         userPrincipalName: userPrincipalName
-        userAccountControl: userAccountControl
+        userAccountControl: 512
       ldapAddGroupConfig:
         sAMAccountName: sAMAccountName
         objectClass: top,group
@@ -84,7 +83,6 @@ springConfigLdapProperties:
 
 #Open Ldap directory sample configuration
 # springConfigLdapProperties:
-#   ldapDirectoryConfig:
 #     arkcase_openldap:
 #       changedGroupSearchPageFilter: (&(objectclass=groupOfNames)(cn>=%s)(modifyTimestamp>=%s))
 #       authUserDn: uid=admin,ou=system
@@ -118,10 +116,30 @@ springConfigLdapProperties:
 #       fullSyncCron: 0 5 0 1/1 * ? * 
 #       allChangedUsersPageFilter: (&(objectClass=person)(uid>=%s)(modifyTimestamp>=%s))
 #       base: dc=arkcase,dc=org
+#       ldapAddGroupConfig:
+#         member: member
+#         objectClass: top,groupOfNames,sortableGroupofnames
+#         cn: cn
+#         gidNumber: gidNumber
+#       ldapAddUserConfig:
+#         userPassword: userPassword
+#         homeDirectory: homeDirectory
+#         mail: mail
+#         givenName: givenName
+#         objectClass: top,person,inetOrgPerson,organizationalPerson,posixAccount,uacPerson,shadowAccount
+#         shadowMax: 99999
+#         shadowWarning: 7
+#         cn: cn
+#         shadowLastChange: 12994
+#         uid: uid
+#         uidNumber: uidNumber
+#         sn: sn
+#         gidNumber: gidNumber
+#         userAccountControl: 1
+
 
 #Active directory/samba sample configuration
 # springConfigLdapProperties:
-#   ldapDirectoryConfig:
 #     arkcase:
 #       base: dc=arkcase-ce
 #       authUserDn: CN=Administrator,CN=Users,DC=arkcase-ce
@@ -154,50 +172,18 @@ springConfigLdapProperties:
 #       syncEnabled: true
 #       partialSyncCron: 0 0/30 * 1/1 * ? *
 #       fullSyncCron: 0 5 0 1/1 * ? *
-
-#Active directory(add group and user settings) sample configuration
-#springConfigLdapProperties:
-# ldapAddGroupConfig:
-#   arkcase:
-#     cn: cn
-#     sAMAccountName: sAMAccountName
-#     objectClass: top,group
-# ldapAddUserConfig:
-#   arkcase:
-#     id: arkcase
-#     cn: cn
-#     sAMAccountName: sAMAccountName
-#     userPrincipalName: userPrincipalName
-#     givenName: givenName
-#     sn: sn
-#     mail: mail
-#     userAccountControl: 512
-#     unicodePwd: unicodePwd
-#     homeDirectory: homeDirectory
-#     objectClass: top,person,user,organizationalPerson
-
-#Open ldap directory(add group and user settings) sample configuration
-#springConfigLdapProperties:
-# ldapAddGroupConfig:
-#   arkcase:
-#     member: member
-#     objectClass: top,groupOfNames,sortableGroupofnames
-#     cn: cn
-#     gidNumber: gidNumber
-# ldapAddUserConfig:
-#   arkcase:
-#     userPassword: userPassword
-#     homeDirectory: homeDirectory
-#     mail: mail
-#     givenName: givenName
-#     objectClass: top,person,inetOrgPerson,organizationalPerson,posixAccount,uacPerson,shadowAccount
-#     shadowMax: 99999
-#     shadowWarning: 7
-#     cn: cn
-#     shadowLastChange: 12994
-#     uid: uid
-#     uidNumber: uidNumber
-#     id: arkcase
-#     sn: sn
-#     gidNumber: gidNumber
-#     userAccountControl: userAccountControl
+#       ldapAddGroupConfig:
+#         cn: cn
+#         sAMAccountName: sAMAccountName
+#         objectClass: top,group
+#       ldapAddUserConfig:
+#         cn: cn
+#         sAMAccountName: sAMAccountName
+#         userPrincipalName: userPrincipalName
+#         givenName: givenName
+#         sn: sn
+#         mail: mail
+#         userAccountControl: 512
+#         unicodePwd: unicodePwd
+#         homeDirectory: homeDirectory
+#         objectClass: top,person,user,organizationalPerson
