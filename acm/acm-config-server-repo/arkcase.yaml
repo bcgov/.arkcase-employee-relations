@@ -6,9 +6,15 @@ acmPluginConfigurationPrivileges:
   acmCaseModulePrivilege:
     GET:
       - "/modules/cases/views/"
+      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
     POST:
       - "/api/{version}/plugin/casefile/change/status/{mode}"
       - "/api/{version}/plugin/casefile/{caseId}/tasks"
+      - "/api/{version}/service/exemption/tags"
+    DELETE:
+      - "/api/{version}/service/exemption/{tagId}"
+    PUT:
+      - "/api/{version}/service/exemption/statute"
   caseFileListPrivilege:
     GET:
       - "/api/{version}/plugin/casefile/caseTypes"
@@ -1835,6 +1841,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.ecm.folder.downloaded\": \"'Folder ' + source.name + ' downloaded.'\",
 \"com.armedia.acm.ecm.file.updated\": \"'File ' + source.fileName + source.fileActiveVersionNameExtension + ' updated'\",
 \"com.armedia.acm.smtp.event.sent.hyperlink\":\" source?.fileNames?.toString() + ' to ' + source?.emailAddresses?.toString() \",
+\"com.armedia.acm.smtp.event.received\":\"' from ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
 CASE_FILE.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
@@ -1850,7 +1857,8 @@ com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.changed, com.armedia.acm.object.assignee.change, com.armedia.acm.casefile.participant.changed,
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
-com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink, com.armedia.acm.folder.copied, com.armedia.acm.folder.copiedAsLink"
+com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink, com.armedia.acm.folder.copied, com.armedia.acm.folder.copiedAsLink,
+com.armedia.acm.exemption.code.created, com.armedia.acm.exemption.code.deleted, com.armedia.acm.exemption.code.updated"
 COMPLAINT.history.event.types: "com.armedia.acm.complaint.created, com.armedia.acm.complaint.updated, com.armedia.acm.app.task.create, com.armedia.acm.complaint.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.changed, com.armedia.acm.complaint.priority.changed, com.armedia.acm.outlook.calendar.event.added,
@@ -1915,7 +1923,7 @@ capture:
 ################### Case Plugin Configuration (caseFilePlugin.properties) ###################
 casefile.plugin:
   #case file email folder
-  email.folder.relative.path: "emails-received"
+  email.folder.relative.path: "Incoming Email"
   #case file email regex to match case number
   email.regex.case_number: "[\\d]{4}[\\d]{2}[\\d]{2}_[\\d]*"
   #case file email regex for type
@@ -1965,7 +1973,7 @@ casefile.plugin:
 complaint.plugin:
   email:
     #complaint email folder
-    folder.relative.path: "emails-received"
+    folder.relative.path: "Incoming Email"
     #complaint email regex to match case number
     regex.complaint_number: "[\\d]{4}[\\d]{2}[\\d]{2}_[\\d]*"
     #complaint email regex for type
@@ -2161,6 +2169,7 @@ email:
   create:
     case.enabled: false
     complaint.enabled: false
+  enableBurstingAttachments: false
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
@@ -2421,7 +2430,9 @@ auditEvent:
   ,\"eventType.com.armedia.acm.transcribe.rollback\": \"Transcription Rollback\"
   ,\"eventType.com.armedia.acm.transcribe.provider.failed\": \"Transcription Provider Failed\"
   ,\"eventType.com.armedia.acm.billing.item.created\": \"Billing Item Created\"
-  ,\"eventType.com.armedia.acm.billing.invoice.created\":\"Billing Invoice Created\"}"
+  ,\"eventType.com.armedia.acm.exemption.code.created\":\"Exemption Code Added\"
+  ,\"eventType.com.armedia.acm.exemption.code.deleted\":\"Exemption Code Deleted\"
+  ,\"eventType.com.armedia.acm.exemption.code.updated\":\"Exemption Code Updated\"}"
 #################### Fiscal Year Configuration (fiscalYear.properties) ####################
 fiscal.year.start:
   day: 1
@@ -2910,3 +2921,8 @@ language.settings:
   localeCode: en
   
 camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
+
+### Password configuration ###
+password:
+  length: 7
+  lengthMessage: "Password must be of minimum length of"

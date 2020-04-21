@@ -111,6 +111,7 @@ core:
       subject: Subject
       witness: Witness
       wrongdoer: Wrongdoer
+      externalReferal: External Referal
     caseFilePersonTypes:
       defendant: Defendant
       was-officer: WAS Officer
@@ -584,6 +585,7 @@ core:
       types:
         case_file: Case
         complaint: Complaint
+        task: Task
       chargeCodes:
         investigator: Investigator
         analyst: Analyst
