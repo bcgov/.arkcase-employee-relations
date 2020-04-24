@@ -169,6 +169,7 @@ people.comp.emails:
     type.placeholder: Enter Email Type
     value.label: Email Address
     value.placeholder: Enter Email Address
+    validation.emailTaken: The email is already in use
 people.comp.urls:
   title: URLs
   table.columns:
