@@ -584,6 +584,7 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/api/{version}/plugin/person/find"
       - "/api/{version}/plugin/people/{id}"
+      - "/api/{version}/plugin/people/queryByEmail"
       - "/api/{version}/plugin/people/{id}/images"
   acmPersonDeletePrivilege:
     DELETE:
