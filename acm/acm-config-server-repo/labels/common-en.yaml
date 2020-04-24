@@ -751,6 +751,20 @@ common.dialogPersonPicker:
     id: ID
     organization: Organization
     phone: Phone
+    email: Email
+    location: Location
+common.duplicatePersonPicker:
+  headerPick: This email address is already in use. Pick an existing person or go back to change the email address.
+  headerRedirect: This email address is already in use. Pick an existing person if you would like to review.
+  btn.cancel: Back
+  btn.pickPerson: Pick Person
+  btn.goToPerson: Checkout Person
+  table.columns:
+    givenName: First Name
+    familyName: Last Name
+    id: ID
+    organization: Organization
+    phone: Phone
     location: Location
 common.dialogOrganizationPicker:
   header: Choose Organization
