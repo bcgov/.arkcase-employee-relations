@@ -1557,8 +1557,6 @@ application:
       - acmListBillingInvoicesPrivilege
     ROLE_ADMINISTRATOR: 
       - acmAdminModulePrivilege 
-      - acmAnalyticsAuditModulePrivilege 
-      - acmAnalyticsModulePrivilege 
       - acmAuditModulePrivilege 
       - acmCalendarAdminPrivilege 
       - acmCalendarEventsCreatePrivilege 
