@@ -473,7 +473,7 @@ admin:
       portalUser: Select Portal User
       groupName: Select Group
     message:
-      edit: Portal is successfully edited
+      edit: Portal users being moved to a newly configured group...
       add: Portal is successfully added
       delete: Portal is successfully deleted
   userSearch:
