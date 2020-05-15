@@ -645,6 +645,9 @@ admin:
         inversevalue.placeholder: Enter entry inverse value as label key
         btnCancel.text: Cancel
         btnOk.text: Save entry
+        setPrimary: Set Primary
+        "yes": "Yes"
+        "no": "No"
       addLookup: Add Lookup
       label: Lookup Type
       lookupName: Lookup Name
