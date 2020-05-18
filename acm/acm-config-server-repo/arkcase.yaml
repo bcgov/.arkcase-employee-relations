@@ -2291,6 +2291,7 @@ notification:
   NOTE.label: "Note"
   PERSON-ASSOCIATION.label: "Person"
   PARTICIPANT.label: "Participant"
+  DOC_REPO.label: "Document Repository"
   purge.days: 30
   #If variable is true message will be sent as system user, otherwise message will be send as logged-in user
   user.batch:
