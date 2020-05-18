@@ -42,6 +42,9 @@ documentDetails:
   comp.ocr:
     readyForOCR: Ready for OCR
     ocrStatus: OCR Status
+  comp.comprehendMedical:
+    status: NLP Process Status
+    readyStatus: Ready for NLP Process
   comp.eventHistory:
     title: History
     table.columns:

@@ -254,6 +254,10 @@ acmPluginConfigurationPrivileges:
       - "/plugin/office/{fileId}"
       - "/plugin/office/testapp/{fileId}"
       - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
+      - "/api/{version}/service/comprehendmedical/{id}"
+      - "/api/{version}/service/comprehendmedical/media/{mediaVersionId}}"
+      - "/api/{version}/service/comprehendmedical/mediaFailure/{mediaVersionId}}"
+      - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
     POST:
       - "/api/{version}/ldap/{directory}/partial-sync"
       - "/api/{version}/ldap/{directory}/full-sync"
@@ -282,6 +286,8 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/transcribe"
       - "/api/{version}/service/transcribe/{mediaVersionId}/automatic"
       - "/api/{version}/users/lang/{lang}"
+      - "/api/{version}/service/comprehendmedical"
+      - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
     PUT:
       - "/api/{version}/service/event"
       - "/api/{version}/forms/crud/acm/{formName}/init"
@@ -1871,7 +1877,8 @@ com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.cha
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
 com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink, com.armedia.acm.folder.copied, com.armedia.acm.folder.copiedAsLink,
-com.armedia.acm.exemption.code.created, com.armedia.acm.exemption.code.deleted, com.armedia.acm.exemption.code.updated"
+com.armedia.acm.exemption.code.created, com.armedia.acm.exemption.code.deleted, com.armedia.acm.exemption.code.updated, com.armedia.acm.comprehend_medical.created, com.armedia.acm.comprehend_medical.updated,
+com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback"
 COMPLAINT.history.event.types: "com.armedia.acm.complaint.created, com.armedia.acm.complaint.updated, com.armedia.acm.app.task.create, com.armedia.acm.complaint.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.changed, com.armedia.acm.complaint.priority.changed, com.armedia.acm.outlook.calendar.event.added,
@@ -1884,7 +1891,8 @@ com.armedia.acm.person.organization.updated, com.armedia.acm.person.created, com
 com.armedia.acm.person.personAlias.updated, com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
-com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined"
+com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.comprehend_medical.created, com.armedia.acm.comprehend_medical.updated,
+com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback"
 TASK.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.task.added, com.armedia.acm.activiti.task.create, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced, 
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.app.task.details.changed, com.armedia.acm.app.task.priority.changed, com.armedia.acm.associatedtag.created, com.armedia.acm.app.task.status.changed,
@@ -1898,7 +1906,8 @@ com.armedia.acm.documentrepository.viewed, com.armedia.acm.ecm.file.downloaded, 
 com.armedia.acm.documentrepository.participant.deleted, com.armedia.acm.documentrepository.participant.added, com.armedia.acm.documentrepository.name.updated,
 com.armedia.acm.documentrepository.participant.updated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
-com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined"
+com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.comprehend_medical.created, com.armedia.acm.comprehend_medical.updated,
+com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback"
 PERSON.history.event.types: "com.armedia.acm.person.created, com.armedia.acm.person.updated, com.armedia.acm.person.image.uploaded"
 ORGANIZATION.history.event.types: "com.armedia.acm.organization.created, com.armedia.acm.organization.updated"
 ################### Calendar Configured Object Types (calendarConfiguredObjectTypes.properties) ####################
@@ -2569,6 +2578,9 @@ aws.config:
   profile: "default"
   maxSpeakerLabels: 10
   showSpeakerLabels: true
+aws.comprehendmedical.config:
+  bucket:
+  arn:
 ################### AWS Credentials (aws/credentials.properties) ####################
 ## AccessKeyId and SecretAccessKey must be encrypted. ##
 aws.credentials:
@@ -2589,6 +2601,21 @@ ocr:
   providerPurgeAttempts: 10
   excludedFileTypes: "user_profile,user_signature,image,billing_invoice_document"
   #To achieve cross-platform file paths use "/" for path separator.(Working on windows and *nix)
+  tempPath:
+################### Comprehend Medical Configuration ####################
+comprehendmedical:
+  enabled: true
+  automaticEnabled: false
+  newMediaEngineForNewVersion: false
+  copyMediaEngineForNewVersion: true
+  cost: 0
+  numberOfFilesForProcessing: 10
+  service: "COMPREHEND_MEDICAL"
+  provider: "AWS"
+  providers: "AWS"
+  providerPurgeAttempts: 5
+  excludedFileTypes:
+  #To achieve cross-platform file paths use "/" for path separator. (Working on windows and *nix)
   tempPath:
 #################### Username/password notifier properties (usernamePasswordNotifier.properties) ###################
 upcoming:
