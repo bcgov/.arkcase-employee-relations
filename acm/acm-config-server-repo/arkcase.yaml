@@ -108,7 +108,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/recycleBin"
       - "/api/{version}/service/holidayConfig"
       - "/api/{version}/plugin/admin/pdfConversion"
-      - "/api/{version}/service/object-title-config"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
       - "/api/{version}/users/group/{groupId}/members/remove"
       - "/api/{version}/users/group/save"
@@ -192,7 +191,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/email/sender/allowdocuments"
       - "/api/{version}/plugin/admin/email/sender/allowattachments"
       - "/api/{version}/plugin/admin/email/sender/allowhyperlinks"
-      - "/api/{version}/service/object-title-config"
       - "/api/{version}/service/dataaccess/rules"
       - "/api/{version}/users/groups/get"
       - "/api/{version}/users/groups"
@@ -857,6 +855,12 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/task/businessProcess/{id}/initiate"
       - "/api/{version}/plugin/task/{taskId}/withdraw"
       - "/api/{version}/plugin/task/buckslipProcesses"
+  acmObjectTitleGetPrivilege:
+    GET:
+      - "/api/{version}/service/object-title-config"
+  acmObjectTitleSavePrivilege:
+    POST:
+      - "/api/{version}/service/object-title-config"
 elk:
   server:
     url: "http://acm-arkcase/arkcase/acm-elastic"
@@ -1370,6 +1374,8 @@ application:
     acmListBillingItemsPrivilege: List Billing Items Privilege
     acmCreateBillingInvoicePrivilege: Create Billing Invoice Privilege
     acmListBillingInvoicesPrivilege: List Billing Invoices Privilege
+    acmObjectTitleGetPrivilege: Get Object Title Privilege
+    acmObjectTitleSavePrivilege: Save Object Title Privilege
   ################### Application Role To User Group (applicationRoleToUserGroup.properties) ####################
   rolesToGroups: 
     ROLE_ENTITY_ADMINISTRATOR: 
@@ -1417,6 +1423,7 @@ application:
       - acmListBillingItemsPrivilege 
       - acmCreateBillingInvoicePrivilege 
       - acmListBillingInvoicesPrivilege
+      - acmObjectTitleGetPrivilege
     ROLE_CONSUMER : 
       - acmGlobalAllowPrivilege 
       - dashboardPrivilege 
@@ -1470,6 +1477,7 @@ application:
       - acmListBillingItemsPrivilege 
       - acmCreateBillingInvoicePrivilege 
       - acmListBillingInvoicesPrivilege
+      - acmObjectTitleGetPrivilege
     ROLE_SUPERVISOR: 
       - acmGlobalAllowPrivilege 
       - auditPrivilege 
@@ -1555,10 +1563,9 @@ application:
       - acmListBillingItemsPrivilege 
       - acmCreateBillingInvoicePrivilege 
       - acmListBillingInvoicesPrivilege
+      - acmObjectTitleGetPrivilege
     ROLE_ADMINISTRATOR: 
       - acmAdminModulePrivilege 
-      - acmAnalyticsAuditModulePrivilege 
-      - acmAnalyticsModulePrivilege 
       - acmAuditModulePrivilege 
       - acmCalendarAdminPrivilege 
       - acmCalendarEventsCreatePrivilege 
@@ -1659,6 +1666,8 @@ application:
       - acmListBillingItemsPrivilege 
       - acmCreateBillingInvoicePrivilege 
       - acmListBillingInvoicesPrivilege
+      - acmObjectTitleGetPrivilege
+      - acmObjectTitleSavePrivilege
     ROLE_EXTERNAL:
       - acmGlobalAllowPrivilege 
       - dashboardPrivilege 
@@ -1693,6 +1702,7 @@ application:
       - acmOrganizationAssociationSavePrivilege 
       - acmOrganizationAssociationDeletePrivilege 
       - acmCalendarReadShortenedConfigPrivilege
+      - acmObjectTitleGetPrivilege
     ROLE_CONTRIBUTOR: 
       - dashboardPrivilege 
       - acmPersonListPrivilege 
@@ -1770,6 +1780,7 @@ application:
       - acmListBillingItemsPrivilege 
       - acmCreateBillingInvoicePrivilege 
       - acmListBillingInvoicesPrivilege
+      - acmObjectTitleGetPrivilege
   properties:
     idleLimit: 600000
     idlePull: 5000

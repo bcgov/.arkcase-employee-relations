@@ -44,7 +44,8 @@ build-snapshot:
     - apt-get install -y zip sshpass
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config.zip -DrepositoryId=arkcase.snapshot -Durl=https://project.armedia.com/nexus/repository/arkcase.snapshot/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config -Dclassifier=core -Dpackaging=zip -Dversion=3.3.3-SNAPSHOT
+    - export VERSION=$(sed -n 's/^[[:space:]][[:space:]][[:space:]][[:space:]]<version>\(.*\)<\/version>/\1/p' < pom.xml)
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config.zip -DrepositoryId=arkcase.snapshot -Durl=https://project.armedia.com/nexus/repository/arkcase.snapshot/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config -Dclassifier=core -Dpackaging=zip -Dversion=$VERSION
     - export SSHPASS=$SSHPASS_ARKCASE
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config.zip /from-arkcase/arkcase-config-core.zip' 
   only:

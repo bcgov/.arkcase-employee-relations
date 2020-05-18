@@ -473,7 +473,7 @@ admin:
       portalUser: Select Portal User
       groupName: Select Group
     message:
-      edit: Portal is successfully edited
+      edit: Portal users being moved to a newly configured group...
       add: Portal is successfully added
       delete: Portal is successfully deleted
   userSearch:
@@ -645,6 +645,9 @@ admin:
         inversevalue.placeholder: Enter entry inverse value as label key
         btnCancel.text: Cancel
         btnOk.text: Save entry
+        setPrimary: Set Primary
+        "yes": "Yes"
+        "no": "No"
       addLookup: Add Lookup
       label: Lookup Type
       lookupName: Lookup Name
