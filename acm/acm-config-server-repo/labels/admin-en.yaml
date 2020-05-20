@@ -357,7 +357,7 @@ admin:
       enableComplaint: Enable creating Complaints from incoming mail
     bursting.configuration:
       header: Email Bursting Configuration
-      label: Enable bursting attachemtns from incoming mail
+      label: Enable bursting attachments from incoming mail
     table.columns:
       templateName: Template Name
       emailPattern: Email Pattern
@@ -473,7 +473,7 @@ admin:
       portalUser: Select Portal User
       groupName: Select Group
     message:
-      edit: Portal is successfully edited
+      edit: Portal users being moved to a newly configured group...
       add: Portal is successfully added
       delete: Portal is successfully deleted
   userSearch:
