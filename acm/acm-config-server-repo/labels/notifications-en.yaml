@@ -18,17 +18,34 @@ notifications:
         modified: Modified
   username:
     forgot: Forgot Username
-  task:
-    completed: Task has been completed
-    upcoming: Task upcoming notification
-    overdue: Task overdue notification
   password:
     reset: Reset password
     request: Request password reset
   status:
     transcription: Transcription status
+  task:
+    completed: Task has been completed
+    upcoming: Task upcoming notification
+    overdue: Task overdue notification
+    status.changed: "Task '${nameLabel}' status changed"
+    priority.changed: "Task '${nameLabel}' priority changed"
+    concur.nonconcur: "Task '${nameLabel}' completed"
+    concur.note: "Task '${nameLabel}' completed with CONCUR action by ${userLabel}"
+    nonconcur.note: "Task '${nameLabel}' completed with NON_CONCUR action by ${userLabel}" 
   complaint:
     invoice: "Complaint %s invoice"
+    status.changed: "Complaint '${nameLabel}' status changed"
+    priority.changed: "Complaint '${nameLabel}' priority changed"
+  case:
+    status.changed: "Case '${nameLabel}' status changed"
+    priority.changed: "Case '${nameLabel}' priority changed"
+  note.added: "Note added in ${typeLabel}: ${nameLabel}"
+  participants:
+    added: "Participants added in ${typeLabel}: ${nameLabel}"
+    deleted: "Participants deleted from ${typeLabel}: ${nameLabel}"
   arrest.warrant: "%s - Arrest Warrant" 
   email:
     mentions: "%s mentioned you in %s %d"
+  calendar.event.added: "Calendar event added"
+  object.assigned: "${typeLabel}: '${nameLabel}', assigned to ${userLabel}"
+  object.unassigned: "${typeLabel}: '${nameLabel}', unassigned from ${userLabel}"
