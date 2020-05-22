@@ -350,7 +350,7 @@
     
     <bean id="mentions" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -369,7 +369,7 @@
 
     <bean id="transcribeStatus" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -388,7 +388,7 @@
     
     <bean id="transcribeQueue" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -400,25 +400,6 @@
                           n.created >= :lastRunDate
                       AND
                         n.templateModelName = 'transcribeQueued'
-                  ]]>
-            </value>
-        </property>
-    </bean>
-
-    <bean id="zipFileCreation" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
-        <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-                    SELECT
-                          n
-                    FROM
-                          Notification n
-                    WHERE
-                          n.created >= :lastRunDate
-                      AND
-                        n.templateModelName = 'ArkCaseEmailZipDownloadTemplate'
                   ]]>
             </value>
         </property>
@@ -445,7 +426,7 @@
     
     <bean id="arrestWarrant" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
+        <property name="executor" ref="notificationSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
