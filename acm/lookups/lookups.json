@@ -365,7 +365,8 @@
                 },
 				{
                     "value": "core.lookups.costsheet.titles.postage",
-                    "key": "Postage"
+                    "key": "Postage",
+					"primary": true
                 }
             ],
             "readonly": true
