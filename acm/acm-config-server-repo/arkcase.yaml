@@ -1798,6 +1798,9 @@ application:
     helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
+    # for saml environment override logoutUrl with '/sso/loggedout'
+    logoutUrl: "/logout"
+     
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
   identityId: ""
