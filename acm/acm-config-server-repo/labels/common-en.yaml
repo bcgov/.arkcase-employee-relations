@@ -89,6 +89,7 @@ common.directive.docTree:
     open: Open
     email: Email
     newTask: New Task
+    nlpProcess: NLP Process
     download: Download
     copy: Copy
     cut: Cut
@@ -102,6 +103,11 @@ common.directive.docTree:
     declareRecord: Declare As Record(s)
     editWithOfficeOnline: Open in Microsoft Office Online
     searchDocument: Search Document(s)
+  nlpProcess.messages:
+    queued: The NLP Proccess for this file has already been queued
+    processing: The NLP Proccess for this file has started
+    completed: The NLP Proccess for this file has been completed
+    failed: The NLP Proccess for this file has failed
   table.columns:
     title: Title
     type: Type
