@@ -635,6 +635,7 @@ admin:
         value: Value
         inverseKey: Inverse key
         inverseValue: Inverse value
+        description: Description
       modal:
         title: Search Label
         editEntry: Edit lookup entry
@@ -643,8 +644,12 @@ admin:
         value.placeholder: Enter entry value as label key
         inversekey.placeholder: Enter entry inverse key
         inversevalue.placeholder: Enter entry inverse value as label key
+        description.placeholder: Enter entry description 
         btnCancel.text: Cancel
         btnOk.text: Save entry
+        setPrimary: Set Primary
+        "yes": "Yes"
+        "no": "No"
       addLookup: Add Lookup
       label: Lookup Type
       lookupName: Lookup Name

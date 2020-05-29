@@ -290,6 +290,22 @@ dashboard:
       title: Genehmiger
       description: Zeigt Genehmiger an
       noDataMessage: Zurzeit sind keine Genehmigenden zum Anzeigen vorhanden
+    userWebsites:
+      title: Webseiten Widget
+      description: Zeigt Benutzerwebsites an
+      noDataMessage: Derzeit gibt es keine Website Informationen
+      table:
+        header:
+          name: Site Name
+          url: URL
+      modal:
+        addWebsite: Website hinzufügen
+        editWebsite: Website bearbeiten
+        save: Speichern
+        cancel: Stornieren
+        name: Site Name
+        url: URL
+      url.title: URL muss gültig sein.
     savePromptModal:
       title: de_Save dashboard
       info: de_You are in edit mode. Do you want to save the changes?

@@ -198,7 +198,7 @@ core:
       draft: Draft
       inapproval: In Approval
       closed: Closed
-      Deleted: Deleted
+      deleted: Deleted
     countries:
       selectCountry: Select Country
       AF: Afghanistan
