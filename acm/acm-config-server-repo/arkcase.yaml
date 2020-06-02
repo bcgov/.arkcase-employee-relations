@@ -2831,3 +2831,7 @@ allowedUploadFileTypes:
     - application/octet-stream          
   application/rtf:
     - application/msword
+##### For retrieving extension version from the jar files #####
+extension:
+  groupId: ''
+  artifactId: ''    
