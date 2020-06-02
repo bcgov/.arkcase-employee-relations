@@ -144,6 +144,14 @@
         <property name="requiredPrivilege" value="acm-case-module"/>
     </bean>
 
+    <bean id="consultationNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Consultation"/>
+        <property name="actionResourceName" value="common:navigation.label.consultation"/>
+        <property name="iconName" value="i i-folder"/>
+        <property name="url" value="/plugin/consultation"/>
+        <property name="requiredPrivilege" value="acm-consultation-module"/>
+    </bean>
+
     <bean id="dashboardNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
         <property name="actionName" value="Dashboard"/>
         <property name="actionResourceName" value="common:navigation.label.dashboard"/>
