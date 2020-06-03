@@ -41,7 +41,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/copyCaseFile"
   acmConsultationModulePrivilege:
     GET:
-      - "/modules/consultation/views/"
+      - "/modules/consultations/views/"
     #      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
     POST:
       - "/api/{version}/plugin/consultation/change/status/{mode}"
