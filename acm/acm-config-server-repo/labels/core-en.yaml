@@ -656,6 +656,18 @@ core:
       costsheet: Cost Tracking
       timesheet: Timesheet
       doc_repo: Document Repository
+    consultationPersonInitiatorTypes.initiator: Initiator
+    consultationPersonTypes:
+      complaintant: Complaintant
+      subject: Subject
+      witness: Witness
+      wrongdoer: Wrongdoer
+      defendant: Defendant
+      was-officer: WAS-officer
+      victim: Victim
+      defenseCounsel: Defense Counsel
+      forensicScientist: Forensic Scientist
+      unknown: Unknown
   userInfo:
     addedMenu:
       help: Help
@@ -689,6 +701,7 @@ core:
     usermenu.profile: Profile
     leftnav:
       cases.main: Case Files
+      consultations.main: Consultations
       complaints.main: Complaints
       document-repository.main: Documents
       my-documents.main: My Documents
@@ -720,4 +733,5 @@ core:
       newTimesheet: Timesheet
       newOrganization: Organization
       newCase: Case
+      newConsultation: Consultation
       new-document-repository: Document Repository

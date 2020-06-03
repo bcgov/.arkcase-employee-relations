@@ -268,6 +268,17 @@
             "readonly": true
         },
         {
+            "name": "consultationPersonInitiatorTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.consultationPersonInitiatorTypes.initiator",
+                    "key": "Initiator",
+                    "readonly": true
+                }
+            ],
+            "readonly": true
+        },
+        {
             "name": "complaintPersonInitiatorTypes",
             "entries": [
                 {
@@ -976,6 +987,56 @@
                 },
                 {
                     "value": "core.lookups.caseFilePersonTypes.unknown",
+                    "key": "Unknown"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "consultationPersonTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.consultationPersonTypes.complaintant",
+                    "key": "Complaintant"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.subject",
+                    "key": "Subject"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.witness",
+                    "key": "Witness"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.wrongdoer",
+                    "key": "Wrongdoer"
+                },
+                {
+                    "value": "core.lookups.common.other",
+                    "key": "Other"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.defendant",
+                    "key": "Defendant"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.was-officer",
+                    "key": "WAS Officer"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.victim",
+                    "key": "Victim"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.defenseCounsel",
+                    "key": "Defense Counsel"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.forensicScientist",
+                    "key": "Forensic Scientist"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.unknown",
                     "key": "Unknown"
                 }
             ],
@@ -3266,6 +3327,28 @@
                 }
             ],
             "readonly": true
+        },
+        {
+            "entries": [
+                {
+                    "readonly": false,
+                    "value": "Select Prefix",
+                    "key": null
+                },
+                {
+                    "readonly": false,
+                    "value": "Mr.",
+                    "key": "Mr."
+                },
+                {
+                    "readonly": false,
+                    "value": "Ms.",
+                    "key": "Ms."
+                }
+            ],
+            "readonly": false,
+            "name": "prefixNewObject"
         }
+
     ]
 }
