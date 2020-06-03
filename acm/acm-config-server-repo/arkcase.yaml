@@ -2084,8 +2084,8 @@ consultation.plugin:
   ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-consultations\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
   ,{\"desc\": \"All Closed\", \"name\":\"all-closed-consultations\", \"value\":\"fq=status_s:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
-  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Consultation ID Asc\", \"name\":\"sort-consultation-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Consultation ID Desc\", \"name\":\"sort-consultation-id-desc\", \"value\":\"object_id_s DESC\"}
   ,{\"desc\":\"Sort By Consultation Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2197,7 +2197,7 @@ dashboard.plugin:
   ,{\"role\":\"ROLE_ENTITY_ADMINISTRATOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}
   ,{\"role\":\"ROLE_SUPERVISOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}]"
   ##modules where Dashboard will be used
-  modules: "DASHBOARD,CASE,TIME,COST,TASK,COMPLAINT,DOC_REPO,PERSON,ORGANIZATION,MY_DOC_REPO"
+  modules: "DASHBOARD,CASE,CONSULTATION,TIME,COST,TASK,COMPLAINT,DOC_REPO,PERSON,ORGANIZATION,MY_DOC_REPO"
   modules.dashboard.widgets: "casesByQueue,casesByStatus,myCases,myComplaints,myTasks,newComplaints,teamWorkload,news,newCases,workflowReport,userWebsites"
 ################### DAC Configuration (dataAccessControl.properties) ###################
 dac:
