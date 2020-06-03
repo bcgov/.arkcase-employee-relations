@@ -306,7 +306,29 @@
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.deleted",
-                    "key": "DELETED"  
+                    "key": "DELETED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "changeConsultationStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.changeConsultation.statuses.active",
+                    "key": "ACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.inactive",
+                    "key": "INACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.closed",
+                    "key": "CLOSED"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.deleted",
+                    "key": "DELETED"
                 }
             ],
             "readonly": true

@@ -57,11 +57,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/consultation/bystatus/{timePeriod}"
       - "/api/{version}/plugin/consultation/forUser/{user:.+}"
       - "/api/{version}/plugin/consultation/bystatus/summary"
-      - "/api/{version}/plugin/consultation/number/by/queue"
-      - "/api/{version}/plugin/consultation/nextPossibleQueues/{caseFileId}"
   acmConsultationSavePrivilege:
-    GET:
-      - "/api/{version}/plugin/consultation/enqueue/{caseId}"
     POST:
       - "/api/{version}/plugin/consultation"
   adminPrivilege:
