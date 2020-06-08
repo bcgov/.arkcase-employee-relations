@@ -592,6 +592,12 @@ core:
       chargeCodes:
         investigator: Investigator
         analyst: Analyst
+    changeConsultation:
+      statuses:
+        active: Active
+        inactive: Inactive
+        closed: Closed
+        deleted: Deleted
     changeCase:
       statuses:
         active: Active
