@@ -1,6 +1,6 @@
 consultations:
   title: Consultations
-  progressNoCase: '[ No consultation data ]'
+  progressNoConsultation: '[ No consultation data ]'
   progressLoading: 'Loading consultation '
   progressError: Failed to load consultation
 consultations.menus:
@@ -65,10 +65,8 @@ consultations.comp.actions:
   reinvestigate.button: Reinvestigate
   subscribe.button: Subscribe
   unsubscribe.button: Unsubscribe
-  merge.button: Merge
   claim.button: Claim
   unclaim.button: Unclaim
-  split.button: Split
   buckslip.add.cancel: Cancel
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
@@ -212,39 +210,14 @@ consultations.comp.tags:
 consultations.comp.calendar:
   title: Calendar
   message: Calendar Integration Configuration Not Enabled
-consultations.comp.merge:
-  title: Merge
-  cancel.btn: Cancel
-  merge.btn: Merge
-  search.placeholder: Search for case file.
-  search.btn: Search
-  table.columns:
-    incident: Type
-    name: Name
-    assignee: Assignee
-    title: Title
-    parent: Parent
-    modified: Modified
-  objectPicker:
-    title: Search for object
-    table.columns:
-      name: Name
-      type: Type
-      title: Title
-      id: ID
-      username: Username
 consultations.comp.referenceSearchGrid:
   title: Reference Search
-consultations.comp.split:
-  title: Split
-  cancel: Cancel
-  split: Split
 consultations.comp.addreference:
   title: Add Reference
   cancelButton: Cancel
   confirmButton: Add
   search:
-    placeholder: Search for case, complaint, file, task
+    placeholder: Search for case, consultation,complaint, file, task
     btn: Search
   grid:
     columns:
@@ -267,56 +240,6 @@ consultations.comp.groupPickerModal:
   btnCancelText: Cancel
   btnSaveText: Save
   searchGroupHeader: Search Group
-consultations.comp.approvalRouting:
-  title: Approvers
-  addNewTooltip: Add new approver
-  noBuckslipMessage: No Data
-  processInitialize.successfull: Process Initialized
-  processInitialize.fail: Process Not Initialized
-  processWithdraw.successfull: Process Withdrawn
-  processWithdraw.fail: Process Not Withdrawn
-  businessProcessUpdate.successfull: Approval Routing Updated
-  businessProcessUpdate.fail: Approval Routing Not Updated
-  button:
-    save.tooltip: Save Changes
-    initiate: Initiate
-    withdraw: Withdraw
-    initiate.tooltip: Initiate Task
-    withdraw.tooltip: Withdraw Task
-  checkbox:
-    nonConcurEndsApprovalCycle: Non-concur ends the approval cycle
-  table.columns:
-    assignee: Assignee
-    owningGroup: Owning Group
-    subject: Subject
-    details: Details
-    dueDate: Due Date
-    status: Status
-    addedBy: Added By
-  assigne.none: None
-  assignee.label: Assignee
-  owningGroup.label: Owning Group
-  priority.label: Priority
-  startDate.label: Start Date
-  dueDate.label: Due Date
-  state.label: State
-  future.task.modal:
-    title: New Future Task
-    assignee: Assignee
-    owningGroup: Owning Group
-    subject.label: Subject
-    subject.placeholder: Enter future case subject
-    details.label: Details
-    cancel.button: Cancel
-    save.button: Save
-consultations.comp.pastApprovals:
-  title: Past Approvers
-  noBuckslipMessage: No Data
-  table.columns:
-    approvalDate: Approval Date
-    approverId: Approver
-    approverFullName: Approver
-    approverDecision: Approver Decision
 consultations.comp.billing:
   title: Billing
   table.columns:
@@ -345,17 +268,17 @@ consultations.comp.billing:
   amount.title: Please enter billing amount
   description.title: Please enter billing description
 consultations.comp.change.status:
-  title: Change Case Status
+  title: Change Consultation Status
   description.label: Description
   information:
-    title: Change Case Status Information
+    title: Change Consultation Status Information
     date: Change Date
-    case.number: Case Number
+    consultation.number: Consultation Number
     status:
       title: Status
       current: Current Status
       resolution:
-        title: Case Resolution
+        title: Consultation Resolution
         denied: Denied
         full: Full
         partial: Partial
@@ -412,9 +335,8 @@ consultations.tree:
     cost.label: Cost
     tags.label: Tags
     calendar.label: Calendar
-    approvalRouting.label: Approval Routing
     billing.label: Billing
-    suggestedconsultations.label: Suggested consultations
+    suggestedConsultations.label: Suggested consultations
   filters:
     opened: All Open consultations
     iHaveCreated: All I've Created
