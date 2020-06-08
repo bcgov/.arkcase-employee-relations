@@ -369,7 +369,7 @@ consultations.comp.change.status:
   button:
     cancel: Cancel
     save: Save
-consultations.comp.suggestedconsultations:
+consultations.comp.suggestedConsultations:
   title: Suggested consultations
   table.columns:
     number: Number
