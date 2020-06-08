@@ -75,7 +75,7 @@ consultations.comp.actions:
 consultations.comp.details:
   title: Full Consultation Details
   informSaved: Consultation details saved
-  consultationsummary:
+  consultationSummary:
     title: Consultation Summary
     informSaved: Consultation Summary saved
   table.columns:
