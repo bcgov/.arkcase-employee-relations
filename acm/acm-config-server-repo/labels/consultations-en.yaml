@@ -19,6 +19,7 @@ consultations.comp.info:
   created.label: Created Date
   priority.label: Priority
   assignee.label: Assigned To
+  assignee.none: None
   owningGroup.label: Owning Group
   dueDate.label: Due Date
   alertMessage: 'Due date must be after the create date '
