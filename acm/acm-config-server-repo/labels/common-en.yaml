@@ -964,6 +964,22 @@ eventType.com.armedia.acm.consultation: Consultation Event
 eventType.com.armedia.acm.consultation.ACTIVE: Consultation is Active
 eventType.com.armedia.acm.consultation.DRAFT: Consultation is Draft
 eventType.com.armedia.acm.consultation.CLOSED: Consultation is Closed
+eventType.com.armedia.acm.consultation.INACTIVE: Consultation is Inactive
+eventType.com.armedia.acm.consultation.In review: Consultation is in review
+eventType.com.armedia.acm.consultation.search: Consultation Searched
+eventType.com.armedia.acm.consultation.file.added: Consultation  Added
+eventType.com.armedia.acm.consultation.created: Consultation Created
+eventType.com.armedia.acm.consultation.createdFromComplaint: Consultation Created From Complaint
+eventType.com.armedia.acm.consultation.updatedFromComplaint: Consultation Updated From Complaint
+eventType.com.armedia.acm.consultation.priority.changed: Consultation Priority Changed
+eventType.com.armedia.acm.consultation.details.changed: Consultation Details Changed
+eventType.com.armedia.acm.consultation.title.changed: Consultation Title Changed
+eventType.com.armedia.acm.consultation.status.changed: Consultation Status Changed
+eventType.com.armedia.acm.consultation.queue.changed: Consultation Queue Changed
+eventType.com.armedia.acm.consultation.participant.added: Participant Added
+eventType.com.armedia.acm.consultation.participant.deleted: Participant Deleted
+eventType.com.armedia.acm.consultation.participant.changed: Participant Changed
+eventType.com.armedia.acm.consultation.costsheet.associated: Costsheet Associated
 eventType.com.armedia.acm.complaint.closed: Complaint Closed
 eventType.com.armedia.acm.complaint.created: Complaint Created
 eventType.com.armedia.acm.complaint.file.added: New File Added to Complaint
