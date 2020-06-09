@@ -2067,17 +2067,6 @@ casefile.plugin:
   folder.structure:
 ################### Consultation Plugin Configuration ###################
 consultation.plugin:
-  #consultation email folder
-  email.folder.relative.path: "Incoming Email"
-  #consultation email regex to match consultation number
-  email.regex.consultation_number: "[\\d]{4}[\\d]{2}[\\d]{2}_[\\d]*"
-  #consultation email regex for type
-  email.regex.object_type: "Consultation"
-  #consultation email handler is enabled
-  email.handler.enabled: true
-  #types available for copy are: history, people, participants, tasks
-  split.typesToCopy: "history,people,participants"
-  merge.exclude_document_types: "consultation_xml,consultation"
   search.tree.filter: "[{\"desc\":\"All Open Consultations\", \"name\":\"all-open-consultations\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
   ,{\"desc\": \"All I've Created\", \"name\":\"my-created-consultations\", \"value\":\"fq=author_s:$[user]\"}
   ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-consultations\", \"value\":\"fq=assignee_s:$[user]\"}
