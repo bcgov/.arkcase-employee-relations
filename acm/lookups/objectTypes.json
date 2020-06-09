@@ -20,8 +20,8 @@
         "key": "CONSULTATION",
         "description": "Consultation",
         "iconName": "i i-folder",
-        "state": "consultation.main",
-        "url": "#!/consultation/:id/main"
+        "state": "consultations.main",
+        "url": "#!/consultations/:id/main"
     },
     {
         "type": "TASK",
