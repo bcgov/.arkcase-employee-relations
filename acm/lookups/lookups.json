@@ -3349,27 +3349,6 @@
                 }
             ],
             "readonly": true
-        },
-        {
-            "entries": [
-                {
-                    "readonly": false,
-                    "value": "Select Prefix",
-                    "key": null
-                },
-                {
-                    "readonly": false,
-                    "value": "Mr.",
-                    "key": "Mr."
-                },
-                {
-                    "readonly": false,
-                    "value": "Ms.",
-                    "key": "Ms."
-                }
-            ],
-            "readonly": false,
-            "name": "prefixNewObject"
         }
 
     ]
