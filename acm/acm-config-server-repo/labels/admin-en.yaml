@@ -562,6 +562,9 @@ admin:
   workflows.config.activate:
     error: Cant make this process active!
     success: Process succesfully activated.
+  workflows.config.deactivate:
+    error: Cant make this process inactive!
+    success: Process succesfully deactivated.
   workflows.config.showHistory.dialog:
     title: History
     body: Below is a history of previous BPMN files. To reinstate a previous workflow,
@@ -572,12 +575,20 @@ admin:
   workflows.config.grid:
     businessProcess: Business Process
     description: Description
-    active: Active
+    actions: Actions
     modified: Modified
     creator: Author
+    version: Version
+    status: Status
+    activated: Activated
+    deactivated: Deactivated
   workflows.config.btn:
+    showDeactivated: Show Deactivated
     createNew: Create New Model
     uploadNew: Upload New BPMN
+  workflows.config.deactivated:
+     title: Deactivated Workflows
+     close.btn: Close
   workflows.config.links:
     download: Download
     replaceFile: Replace File
