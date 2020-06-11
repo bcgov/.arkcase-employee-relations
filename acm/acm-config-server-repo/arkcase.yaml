@@ -2296,14 +2296,6 @@ notification:
   arkcase.port:
   arkcase.url: "https://acm-arkcase"
   arkcase.url.base: "https://acm-arkcase/arkcase"
-  CASE_FILE.label: "Case File"
-  COMPLAINT.label: "Complaint"
-  FILE.label: "File"
-  TASK.label: "Task"
-  NOTE.label: "Note"
-  PERSON-ASSOCIATION.label: "Person"
-  PARTICIPANT.label: "Participant"
-  DOC_REPO.label: "Document Repository"
   purge.days: 30
   #If variable is true message will be sent as system user, otherwise message will be send as logged-in user
   user.batch:
@@ -2315,6 +2307,16 @@ notification:
   search:
     filters: "[{\"key\":\"Object Type\", \"values\":\"['NOTIFICATION']\"} ,{\"key\":\"Owner\", \"values\":\"['$user']\"}]"
     name: "notification"
+################### Object to labels mapping ###################    
+object:    
+  CASE_FILE.label: "Case File"
+  COMPLAINT.label: "Complaint"
+  FILE.label: "File"
+  TASK.label: "Task"
+  NOTE.label: "Note"
+  PERSON-ASSOCIATION.label: "Person"
+  PARTICIPANT.label: "Participant"
+  DOC_REPO.label: "Document Repository"
 ################### OKTA MFA Properties (okta.properties) #################### 
 okta:
   idpUrl:
