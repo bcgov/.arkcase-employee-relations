@@ -1104,7 +1104,7 @@ report:
     PENTAHO_RETRIEVE_SCHEDULES_API: "/pentaho/api/scheduler/jobs"
     PENTAHO_DELETE_SCHEDULE_API: "/pentaho/api/scheduler/removeJob"
     PENTAHO_REPORT_DOCUMENT_REPOSITORY_NAME: "Scheduled Reports"
-    REPORT_TYPES: "caseSummary.prpt-Case Summary,ComplaintReport.prpt-Complaint Report"
+    REPORT_TYPES: "caseSummary.prpt-Case Summary,ComplaintReport.prpt-Complaint Report,consultationSummary.prpt-Consultation Summary"
     REPORT_RECURRENCE: "DAILY-Daily,WEEKLY-Weekly,MONTHLY-Monthly"
     REPORT_OUTPUT_TYPES: "Excel/CSV-Excel/CSV"
     # This must be a real user account in the content management system (this account creates folders and documents in a document repository)
@@ -1114,6 +1114,7 @@ report:
       CASE_SUMMARY: "/arkcase/pentaho/api/repos/:public:arkcase:caseSummary.prpt/viewer"
       COMPLAINT_DISPOSITION_COUNT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintDispositionCount.prpt/viewer"
       COMPLAINT_REPORT: "/arkcase/pentaho/api/repos/:public:arkcase:ComplaintReport.prpt/viewer"
+      CONSULTATION_SUMMARY: "/arkcase/pentaho/api/repos/:public:arkcase:consultationSummary.prpt/viewer"
     ################### (reportToRolesMap.properties) ###################
     reportsToRoles: 
       CASE_SUMMARY: 
@@ -1125,6 +1126,10 @@ report:
         - ROLE_SUPERVISOR
         - ROLE_CONTRIBUTOR
       COMPLAINT_REPORT: 
+        - ROLE_ADMINISTRATOR
+        - ROLE_SUPERVISOR
+        - ROLE_CONTRIBUTOR
+      CONSULTATION_SUMMARY: 
         - ROLE_ADMINISTRATOR
         - ROLE_SUPERVISOR
         - ROLE_CONTRIBUTOR
