@@ -60,6 +60,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/history"
       - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/file"
       - "/api/{version}/plugin/admin/workflowconfiguration/diagram/{deploymentId}/{key}/{version}"
+      - "/api/{version}/plugin/admin/workflowconfiguration/deactivated/workflows"
       - "/api/{version}/plugin/admin/queries"
       - "/api/{version}/plugin/admin/queries/{queryType}"
       - "/api/{version}/plugin/admin/queries/query/{queryBeanId}"
@@ -132,6 +133,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/rolesprivileges/roles/{roleName}/privileges"
       - "/api/{version}/plugin/admin/rolesprivileges/roles/{rolesNames}/privileges/{privilegesNames}"
       - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/active"
+      - "/api/{version}/plugin/admin/workflowconfiguration/workflows/{key}/versions/{version}/inactive"
       - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
       - "/api/{version}/plugin/admin/branding/customcss"
       - "/api/{version}/plugin/admin/template"
@@ -1798,6 +1800,9 @@ application:
     helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
+    # for saml environment override logoutUrl with '/sso/loggedout'
+    logoutUrl: "/logout"
+     
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
   identityId: ""
@@ -2293,14 +2298,6 @@ notification:
   arkcase.port:
   arkcase.url: "https://acm-arkcase"
   arkcase.url.base: "https://acm-arkcase/arkcase"
-  CASE_FILE.label: "Case File"
-  COMPLAINT.label: "Complaint"
-  FILE.label: "File"
-  TASK.label: "Task"
-  NOTE.label: "Note"
-  PERSON-ASSOCIATION.label: "Person"
-  PARTICIPANT.label: "Participant"
-  DOC_REPO.label: "Document Repository"
   purge.days: 30
   #If variable is true message will be sent as system user, otherwise message will be send as logged-in user
   user.batch:
@@ -2312,6 +2309,16 @@ notification:
   search:
     filters: "[{\"key\":\"Object Type\", \"values\":\"['NOTIFICATION']\"} ,{\"key\":\"Owner\", \"values\":\"['$user']\"}]"
     name: "notification"
+################### Object to labels mapping ###################    
+object:    
+  CASE_FILE.label: "Case File"
+  COMPLAINT.label: "Complaint"
+  FILE.label: "File"
+  TASK.label: "Task"
+  NOTE.label: "Note"
+  PERSON-ASSOCIATION.label: "Person"
+  PARTICIPANT.label: "Participant"
+  DOC_REPO.label: "Document Repository"
 ################### OKTA MFA Properties (okta.properties) #################### 
 okta:
   idpUrl:
@@ -2765,3 +2772,70 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 password:
   length: 7
   lengthMessage: "Password must be of minimum length of"
+
+allowedUploadFileTypes:
+  text/plain: 
+    - application/octet-stream
+    - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    - application/pdf
+  application/xml:
+    - text/xml
+    - application/octet-stream
+  application/xslt+xml:
+    - text/xml
+  application/x-dosexec:
+    - application/x-msdownload
+    - application/octet-stream  
+  video/x-msvideo:
+    - video/avi  
+  video/x-m4v:
+    - video/mp4 
+  model/vnd.mts:
+    - video/vnd.dlna.mpeg-tts
+  audio/mpeg:
+    - audio/mp3 
+  audio/mp3:
+    - audio/mpeg           
+  audio/mpga:
+    - audio/mp3
+  audio/x-aac:
+    - audio/vnd.dlna.adts            
+  audio/x-flac:
+    - audio/flac
+  audio/midi:
+    - audio/mid
+  application/octet-stream:
+    - audio/vnd.dolby.dd-raw     
+  audio/x-oggflac:
+    - audio/ogg    
+  audio/vorbis:
+    - audio/ogg          
+  video/theora:
+    - video/ogg     
+  audio/mp4:
+    - audio/x-m4a     
+  audio/amr-wb:
+    - application/octet-stream         
+  audio/x-aiff:
+    - audio/aiff  
+  application/vnd.rn-realmedia:
+    - application/octet-stream   
+  application/xhtml+xml:
+    - text/html               
+  application/vnd.ms-outlook:
+    - application/octet-stream             
+  text/csv:
+    - application/vnd.ms-excel
+  application/zip:
+    - application/x-zip-compressed      
+  application/json:
+    - application/octet-stream          
+  application/vnd.wordperfect:
+    - application/octet-stream          
+  application/rtf:
+    - application/msword
+##### For retrieving extension version from the jar files #####
+extension:
+  groupId: ''
+  artifactId: ''    
