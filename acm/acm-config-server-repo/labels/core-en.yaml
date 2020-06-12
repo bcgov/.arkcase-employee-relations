@@ -612,7 +612,7 @@ core:
     businessProcessTypes:
       acmDocumentWorkflow: ACM Document Workflow
       notDefinedWorkflow: Ad-Hoc Task
-      arrestWarrant: Arrest Warrant
+      arrestWarrant: ACM Document Workflow - Single Task 
     reportStates:
       draft: Draft
       inApproval: In Approval
