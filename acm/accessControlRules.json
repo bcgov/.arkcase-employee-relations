@@ -73,8 +73,7 @@
             "status": [
                "DRAFT",
                "ACTIVE",
-               "INACTIVE",
-               "CLOSED"
+               "INACTIVE"
             ]
          },
          "userRolesAny": [
