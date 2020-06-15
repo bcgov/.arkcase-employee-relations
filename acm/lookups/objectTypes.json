@@ -16,6 +16,14 @@
         "url": "#!/cases/:id/main"
     },
     {
+        "type": "CONSULTATION",
+        "key": "CONSULTATION",
+        "description": "Consultation",
+        "iconName": "i i-folder",
+        "state": "consultations.main",
+        "url": "#!/consultations/:id/main"
+    },
+    {
         "type": "TASK",
         "key": "TASK",
         "description": "Task",
