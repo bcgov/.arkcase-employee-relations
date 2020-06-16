@@ -408,3 +408,4 @@ consultations.newConsultation:
   duplicateFilesName.error: The same document was upload more than once, please upload different documents
   cancelButton: Cancel
   saveButton: Save Consultation
+  remove: Remove
