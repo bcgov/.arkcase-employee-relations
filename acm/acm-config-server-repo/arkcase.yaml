@@ -430,7 +430,6 @@ acmPluginConfigurationPrivileges:
   searchPrivilege:
     GET:
       - "/plugin/search"
-      - "/api/{version}/service/suggestion/{title}"
       - "/api/{version}/plugin/search/quickSearch"
       - "/api/{version}/plugin/search/advanced/{objectType}"
       - "/api/{version}/plugin/search/advanced/{objectType}/all"
@@ -755,6 +754,9 @@ acmPluginConfigurationPrivileges:
   acmCalendarEventsDeletePrivilege:
     DELETE:
       - "/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"
+  objectSuggestionPrivilege:
+    GET:
+      - "/api/{version}/service/suggestion/{title}"
   costsheetPrivilege:
     GET:
       - "/plugin/costsheet"
@@ -1333,6 +1335,7 @@ application:
     acmComplaintApprovePrivilege: Complaint Approve Privilege
     acmSearchPrivilege: Search Privilege
     searchPrivilege: Search Privileges
+    objectSuggestionPrivilege: Object Suggestion Privilege
     acmCaseApprovePrivilege: Case Approve Privilege
     saveCasePrivilege: Save Case Privilege
     caseFileListPrivilege: Case File List Privilege
@@ -1508,6 +1511,7 @@ application:
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
       - costsheetPrivilege
@@ -1550,6 +1554,7 @@ application:
       - acmComplaintApprovePrivilege
       - acmSearchPrivilege
       - searchPrivilege
+      - objectSuggestionPrivilege
       - acmCaseApprovePrivilege
       - saveCasePrivilege
       - caseFileListPrivilege
@@ -1664,6 +1669,7 @@ application:
       - acmSaveNotePrivilege
       - acmSearchModulePrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmSignatureConfirmPrivilege
       - acmSignatureFindPrivilege
       - acmSubscriptionModulePrivilege
@@ -1749,6 +1755,7 @@ application:
       - filePrivilege
       - acmCostModulePrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
       - acmTagModulePrivilege
@@ -1814,6 +1821,7 @@ application:
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmDeleteNoteByIdPrivilege
       - acmNotificationPrivilege
       - acmSignatureConfirmPrivilege
