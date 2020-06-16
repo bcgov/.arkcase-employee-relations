@@ -430,6 +430,7 @@ acmPluginConfigurationPrivileges:
   searchPrivilege:
     GET:
       - "/plugin/search"
+      - "/api/{version}/service/suggestion/{title}"
       - "/api/{version}/plugin/search/quickSearch"
       - "/api/{version}/plugin/search/advanced/{objectType}"
       - "/api/{version}/plugin/search/advanced/{objectType}/all"
@@ -754,9 +755,6 @@ acmPluginConfigurationPrivileges:
   acmCalendarEventsDeletePrivilege:
     DELETE:
       - "/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"
-  caseFileCreatePrivilege:
-    GET:
-      - "/api/{version}/service/suggestion/{title}"
   costsheetPrivilege:
     GET:
       - "/plugin/costsheet"
