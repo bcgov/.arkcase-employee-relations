@@ -754,7 +754,7 @@ acmPluginConfigurationPrivileges:
   acmCalendarEventsDeletePrivilege:
     DELETE:
       - "/api/{version}/service/calendar/calendarevents/{objectType}/{objectId}"
-  caseFileCreatePrivilege:
+  objectSuggestionPrivilege:
     GET:
       - "/api/{version}/service/suggestion/{title}"
   costsheetPrivilege:
@@ -1335,6 +1335,7 @@ application:
     acmComplaintApprovePrivilege: Complaint Approve Privilege
     acmSearchPrivilege: Search Privilege
     searchPrivilege: Search Privileges
+    objectSuggestionPrivilege: Object Suggestion Privilege
     acmCaseApprovePrivilege: Case Approve Privilege
     saveCasePrivilege: Save Case Privilege
     caseFileListPrivilege: Case File List Privilege
@@ -1510,6 +1511,7 @@ application:
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
       - costsheetPrivilege
@@ -1552,6 +1554,7 @@ application:
       - acmComplaintApprovePrivilege
       - acmSearchPrivilege
       - searchPrivilege
+      - objectSuggestionPrivilege
       - acmCaseApprovePrivilege
       - saveCasePrivilege
       - caseFileListPrivilege
@@ -1666,6 +1669,7 @@ application:
       - acmSaveNotePrivilege
       - acmSearchModulePrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmSignatureConfirmPrivilege
       - acmSignatureFindPrivilege
       - acmSubscriptionModulePrivilege
@@ -1751,6 +1755,7 @@ application:
       - filePrivilege
       - acmCostModulePrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
       - acmTagModulePrivilege
@@ -1816,6 +1821,7 @@ application:
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
       - acmSearchPrivilege
+      - objectSuggestionPrivilege
       - acmDeleteNoteByIdPrivilege
       - acmNotificationPrivilege
       - acmSignatureConfirmPrivilege
