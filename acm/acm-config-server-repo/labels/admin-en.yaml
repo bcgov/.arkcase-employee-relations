@@ -390,6 +390,7 @@ admin:
     objectTypes:
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       task: Task
       document: Document
     actions:
@@ -842,6 +843,7 @@ admin:
       titleOption: Title
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       message:
         success: Object Title Configuration is successfully saved
         error: Error. Object Title Configuration is not saved.
