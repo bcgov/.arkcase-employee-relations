@@ -53,7 +53,7 @@ dashboard:
       noDataMessage: Currently there are no consultations info
       table:
         header:
-          caseId: ID
+          consultationId: ID
           title: Title
           priority: Priority
           created: Created
