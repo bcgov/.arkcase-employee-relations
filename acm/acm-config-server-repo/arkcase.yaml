@@ -2188,7 +2188,7 @@ dashboard.plugin:
   ##New widgets
   new.widgets: "casesByQueue,myCases,casesByStatus,news,myComplaints,myTasks,teamWorkload,newComplaints,details,calendar,cost,docsUnderReview,documents,expenses,history,hoursSummary,
   locations,notes,participants,people,person,references,reworkDetails,signature,tasks,time,workflow,newCases,workflowReport,approvalRouting,tags,organizations,parentDocs,phones,faxes,
-  emails,urls,dbas,ids,relOrganizations,complaints,cases,pictures,aliases,related,approvers,userWebsites"
+  emails,urls,dbas,ids,relOrganizations,complaints,cases,pictures,aliases,related,approvers,userWebsites,myConsultations"
   role.widgets: "[{\"role\":\"ROLE_CONTRIBUTOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}
   ,{\"role\":\"ROLE_ADMINISTRATOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}
   ,{\"role\":\"ROLE_CONSUMER\", \"widgetList\":\"news,myTasks,casesByQueue,userWebsites\"}
@@ -2197,7 +2197,7 @@ dashboard.plugin:
   ,{\"role\":\"ROLE_SUPERVISOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}]"
   ##modules where Dashboard will be used
   modules: "DASHBOARD,CASE,CONSULTATION,TIME,COST,TASK,COMPLAINT,DOC_REPO,PERSON,ORGANIZATION,MY_DOC_REPO"
-  modules.dashboard.widgets: "casesByQueue,casesByStatus,myCases,myComplaints,myTasks,newComplaints,teamWorkload,news,newCases,workflowReport,userWebsites"
+  modules.dashboard.widgets: "casesByQueue,casesByStatus,myCases,myComplaints,myTasks,newComplaints,teamWorkload,news,newCases,workflowReport,userWebsites,myConsultations"
 ################### DAC Configuration (dataAccessControl.properties) ###################
 dac:
   batchUpdateBasedOnLastModifiedEnabled: true
