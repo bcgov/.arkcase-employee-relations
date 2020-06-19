@@ -588,6 +588,7 @@ core:
       types:
         case_file: Case
         complaint: Complaint
+        consultation: Consultation
         task: Task
       chargeCodes:
         investigator: Investigator
@@ -629,6 +630,7 @@ core:
       all: All
       case_file: Case
       complaint: Complaint
+      consultation: Consultation
       task: Task
       file: File
       document: Document
@@ -648,6 +650,7 @@ core:
     sequenceName:
       caseNumberSequence: Case Number Sequence
       complaintNumberSequence: Complaint Number Sequence
+      consultationNumberSequence: Consultation Number Sequence
     sequenceObjectProperty:
       id: id
       caseType: case type
@@ -655,10 +658,12 @@ core:
       priority: priority
     objectTitleTypes:
       caseFile: Case File
+      consultation: Consultation
       complaint: Complaint
     taskParentTypes:
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       costsheet: Cost Tracking
       timesheet: Timesheet
       doc_repo: Document Repository
