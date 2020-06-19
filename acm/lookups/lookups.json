@@ -926,6 +926,10 @@
                     "key": "CASE_FILE"
                 },
                 {
+                    "value": "core.lookups.timesheet.types.consultation",
+                    "key": "CONSULTATION"
+                },
+                {
                     "value": "core.lookups.timesheet.types.complaint",
                     "key": "COMPLAINT"
                 },
@@ -956,6 +960,10 @@
                 {
                     "value": "core.lookups.timesheet.types.case_file",
                     "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.consultation",
+                    "key": "CONSULTATION"
                 },
                 {
                     "value": "core.lookups.timesheet.types.complaint",
@@ -3044,6 +3052,10 @@
                     "key": "CASE_FILE"
                 },
                 {
+                    "value": "core.lookups.auditReportNames.consultation",
+                    "key": "CONSULTATION"
+                },
+                {
                     "value": "core.lookups.auditReportNames.complaint",
                     "key": "COMPLAINT"
                 },
@@ -3269,10 +3281,15 @@
         },
         {
             "name": "sequenceName",
-            "entries":[
+            "entries": [
                 {
                     "value": "core.lookups.sequenceName.caseNumberSequence",
                     "key": "caseNumberSequence",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceName.consultationNumberSequence",
+                    "key": "consultationNumberSequence",
                     "readonly": false
                 },
                 {
@@ -3311,10 +3328,15 @@
         },
         {
             "name":"objectTitleTypes",
-            "entries":[
+            "entries": [
                 {
                     "value": "core.lookups.objectTitleTypes.caseFile",
                     "key": "CASE_FILE",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.objectTitleTypes.consultation",
+                    "key": "CONSULTATION",
                     "readonly": true
                 },
                 {
@@ -3330,6 +3352,10 @@
                 {
                     "value": "core.lookups.taskParentTypes.caseFile",
                     "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.consultation",
+                    "key": "CONSULTATION"
                 },
                 {
                     "value": "core.lookups.taskParentTypes.complaint",
