@@ -588,10 +588,17 @@ core:
       types:
         case_file: Case
         complaint: Complaint
+        consultation: Consultation
         task: Task
       chargeCodes:
         investigator: Investigator
         analyst: Analyst
+    changeConsultation:
+      statuses:
+        active: Active
+        inactive: Inactive
+        closed: Closed
+        deleted: Deleted
     changeCase:
       statuses:
         active: Active
@@ -623,6 +630,7 @@ core:
       all: All
       case_file: Case
       complaint: Complaint
+      consultation: Consultation
       task: Task
       file: File
       document: Document
@@ -642,6 +650,7 @@ core:
     sequenceName:
       caseNumberSequence: Case Number Sequence
       complaintNumberSequence: Complaint Number Sequence
+      consultationNumberSequence: Consultation Number Sequence
     sequenceObjectProperty:
       id: id
       caseType: case type
@@ -649,13 +658,27 @@ core:
       priority: priority
     objectTitleTypes:
       caseFile: Case File
+      consultation: Consultation
       complaint: Complaint
     taskParentTypes:
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       costsheet: Cost Tracking
       timesheet: Timesheet
       doc_repo: Document Repository
+    consultationPersonInitiatorTypes.initiator: Initiator
+    consultationPersonTypes:
+      complaintant: Complaintant
+      subject: Subject
+      witness: Witness
+      wrongdoer: Wrongdoer
+      defendant: Defendant
+      was-officer: WAS-officer
+      victim: Victim
+      defenseCounsel: Defense Counsel
+      forensicScientist: Forensic Scientist
+      unknown: Unknown
   userInfo:
     addedMenu:
       help: Help
@@ -689,6 +712,7 @@ core:
     usermenu.profile: Profile
     leftnav:
       cases.main: Case Files
+      consultations.main: Consultations
       complaints.main: Complaints
       document-repository.main: Documents
       my-documents.main: My Documents
@@ -720,4 +744,5 @@ core:
       newTimesheet: Timesheet
       newOrganization: Organization
       newCase: Case
+      newConsultation: Consultation
       new-document-repository: Document Repository

@@ -228,6 +228,12 @@
         <property name="iconName" value="i i-notice"/>
         <property name="url" value="/plugin/complaint/"/>
     </bean>
+    <bean id="consultationType" class="com.armedia.acm.core.AcmObjectType">
+        <property name="name" value="CONSULTATION"/>
+        <property name="description" value="Consultation"/>
+        <property name="iconName" value="i i-folder"/>
+        <property name="url" value="/plugin/consultation/"/>
+    </bean>
     <bean id="caseFileType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="CASE_FILE"/>
         <property name="description" value="Case File"/>
