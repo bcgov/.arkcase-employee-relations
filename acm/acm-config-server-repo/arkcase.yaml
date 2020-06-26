@@ -2907,7 +2907,7 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 password:
   length: 7
   lengthMessage: "Password must be of minimum length of"
-
+#### File formats. To work proper, use "-dot-" instead of "." #####
 allowedUploadFileTypes:
   text/plain:
     - application/octet-stream
@@ -2926,7 +2926,7 @@ allowedUploadFileTypes:
     - video/avi
   video/x-m4v:
     - video/mp4
-  model/vnd.mts:
+  model/vnd-dot-mts:
     - video/vnd.dlna.mpeg-tts
   audio/mpeg:
     - audio/mp3
@@ -2954,19 +2954,21 @@ allowedUploadFileTypes:
     - application/octet-stream
   audio/x-aiff:
     - audio/aiff
-  application/vnd.rn-realmedia:
+  application/vnd-dot-rn-realmedia:
     - application/octet-stream
   application/xhtml+xml:
     - text/html
-  application/vnd.ms-outlook:
+  application/vnd-dot-ms-outlook:
     - application/octet-stream
+  application/vnd-dot-ms-outlook-pst:
+    - application/octet-stream  
   text/csv:
     - application/vnd.ms-excel
   application/zip:
     - application/x-zip-compressed
   application/json:
     - application/octet-stream
-  application/vnd.wordperfect:
+  application/vnd-dot-wordperfect:
     - application/octet-stream
   application/rtf:
     - application/msword
