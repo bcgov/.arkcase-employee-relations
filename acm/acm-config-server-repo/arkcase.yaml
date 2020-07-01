@@ -7,10 +7,14 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/modules/cases/views/"
       - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
+      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
     POST:
       - "/api/{version}/plugin/casefile/change/status/{mode}"
       - "/api/{version}/plugin/casefile/{caseId}/tasks"
       - "/api/{version}/service/exemption/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
