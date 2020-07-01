@@ -268,6 +268,17 @@
             "readonly": true
         },
         {
+            "name": "consultationPersonInitiatorTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.consultationPersonInitiatorTypes.initiator",
+                    "key": "Initiator",
+                    "readonly": true
+                }
+            ],
+            "readonly": true
+        },
+        {
             "name": "complaintPersonInitiatorTypes",
             "entries": [
                 {
@@ -295,7 +306,29 @@
                 },
                 {
                     "value": "core.lookups.changeCase.statuses.deleted",
-                    "key": "DELETED"  
+                    "key": "DELETED"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "changeConsultationStatuses",
+            "entries": [
+                {
+                    "value": "core.lookups.changeConsultation.statuses.active",
+                    "key": "ACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.inactive",
+                    "key": "INACTIVE"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.closed",
+                    "key": "CLOSED"
+                },
+                {
+                    "value": "core.lookups.changeConsultation.statuses.deleted",
+                    "key": "DELETED"
                 }
             ],
             "readonly": true
@@ -893,6 +926,10 @@
                     "key": "CASE_FILE"
                 },
                 {
+                    "value": "core.lookups.timesheet.types.consultation",
+                    "key": "CONSULTATION"
+                },
+                {
                     "value": "core.lookups.timesheet.types.complaint",
                     "key": "COMPLAINT"
                 },
@@ -923,6 +960,10 @@
                 {
                     "value": "core.lookups.timesheet.types.case_file",
                     "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.timesheet.types.consultation",
+                    "key": "CONSULTATION"
                 },
                 {
                     "value": "core.lookups.timesheet.types.complaint",
@@ -976,6 +1017,56 @@
                 },
                 {
                     "value": "core.lookups.caseFilePersonTypes.unknown",
+                    "key": "Unknown"
+                }
+            ],
+            "readonly": true
+        },
+        {
+            "name": "consultationPersonTypes",
+            "entries": [
+                {
+                    "value": "core.lookups.consultationPersonTypes.complaintant",
+                    "key": "Complaintant"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.subject",
+                    "key": "Subject"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.witness",
+                    "key": "Witness"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.wrongdoer",
+                    "key": "Wrongdoer"
+                },
+                {
+                    "value": "core.lookups.common.other",
+                    "key": "Other"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.defendant",
+                    "key": "Defendant"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.was-officer",
+                    "key": "WAS Officer"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.victim",
+                    "key": "Victim"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.defenseCounsel",
+                    "key": "Defense Counsel"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.forensicScientist",
+                    "key": "Forensic Scientist"
+                },
+                {
+                    "value": "core.lookups.consultationPersonTypes.unknown",
                     "key": "Unknown"
                 }
             ],
@@ -2961,6 +3052,10 @@
                     "key": "CASE_FILE"
                 },
                 {
+                    "value": "core.lookups.auditReportNames.consultation",
+                    "key": "CONSULTATION"
+                },
+                {
                     "value": "core.lookups.auditReportNames.complaint",
                     "key": "COMPLAINT"
                 },
@@ -3186,10 +3281,15 @@
         },
         {
             "name": "sequenceName",
-            "entries":[
+            "entries": [
                 {
                     "value": "core.lookups.sequenceName.caseNumberSequence",
                     "key": "caseNumberSequence",
+                    "readonly": false
+                },
+                {
+                    "value": "core.lookups.sequenceName.consultationNumberSequence",
+                    "key": "consultationNumberSequence",
                     "readonly": false
                 },
                 {
@@ -3228,10 +3328,15 @@
         },
         {
             "name":"objectTitleTypes",
-            "entries":[
+            "entries": [
                 {
                     "value": "core.lookups.objectTitleTypes.caseFile",
                     "key": "CASE_FILE",
+                    "readonly": true
+                },
+                {
+                    "value": "core.lookups.objectTitleTypes.consultation",
+                    "key": "CONSULTATION",
                     "readonly": true
                 },
                 {
@@ -3247,6 +3352,10 @@
                 {
                     "value": "core.lookups.taskParentTypes.caseFile",
                     "key": "CASE_FILE"
+                },
+                {
+                    "value": "core.lookups.taskParentTypes.consultation",
+                    "key": "CONSULTATION"
                 },
                 {
                     "value": "core.lookups.taskParentTypes.complaint",
@@ -3267,5 +3376,6 @@
             ],
             "readonly": true
         }
+
     ]
 }

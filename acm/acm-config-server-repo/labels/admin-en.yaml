@@ -390,6 +390,7 @@ admin:
     objectTypes:
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       task: Task
       document: Document
     actions:
@@ -562,6 +563,9 @@ admin:
   workflows.config.activate:
     error: Cant make this process active!
     success: Process succesfully activated.
+  workflows.config.deactivate:
+    error: Cant make this process inactive!
+    success: Process succesfully deactivated.
   workflows.config.showHistory.dialog:
     title: History
     body: Below is a history of previous BPMN files. To reinstate a previous workflow,
@@ -572,12 +576,20 @@ admin:
   workflows.config.grid:
     businessProcess: Business Process
     description: Description
-    active: Active
+    actions: Actions
     modified: Modified
     creator: Author
+    version: Version
+    status: Status
+    activated: Activated
+    deactivated: Deactivated
   workflows.config.btn:
+    showDeactivated: Show Deactivated
     createNew: Create New Model
     uploadNew: Upload New BPMN
+  workflows.config.deactivated:
+     title: Deactivated Workflows
+     close.btn: Close
   workflows.config.links:
     download: Download
     replaceFile: Replace File
@@ -831,6 +843,7 @@ admin:
       titleOption: Title
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       message:
         success: Object Title Configuration is successfully saved
         error: Error. Object Title Configuration is not saved.

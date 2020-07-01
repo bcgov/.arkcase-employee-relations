@@ -38,6 +38,7 @@
         <property name="objectTypes">
             <list>
                 <ref bean="complaintType"/>
+                <ref bean="consultationType"/>
                 <ref bean="caseFileType"/>
                 <ref bean="taskType"/>
                 <ref bean="documentType"/>
@@ -142,6 +143,14 @@
         <property name="iconName" value="i i-folder"/>
         <property name="url" value="/plugin/casefile"/>
         <property name="requiredPrivilege" value="acm-case-module"/>
+    </bean>
+
+    <bean id="consultationNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Consultation"/>
+        <property name="actionResourceName" value="common:navigation.label.consultation"/>
+        <property name="iconName" value="i i-folder"/>
+        <property name="url" value="/plugin/consultation"/>
+        <property name="requiredPrivilege" value="acm-consultation-module"/>
     </bean>
 
     <bean id="dashboardNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
@@ -269,6 +278,17 @@
             </map>
         </property>
     </bean>
+    <bean id="consultationType" class="com.armedia.acm.core.AcmObjectType">
+        <property name="name" value="CONSULTATION"/>
+        <property name="description" value="Consultation"/>
+        <property name="iconName" value="i i-folder"/>
+        <property name="url">
+            <map>
+                <entry key="CONSULTATION" value="/home.html#!/consultations/%d/main"/>
+                <entry key="DETAILS" value="/home.html#!/consultations/%d/details"/>
+            </map>
+        </property>
+    </bean>
     <bean id="caseFileType" class="com.armedia.acm.core.AcmObjectType">
         <property name="name" value="CASE_FILE"/>
         <property name="description" value="Case File"/>
@@ -319,6 +339,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/documents"/>
+                <entry key="CONSULTATION" value="/home.html#!/consultations/%d/documents"/>
                 <entry key="COMPLAINT" value="/home.html#!/complaints/%d/documents"/>
                 <entry key="TASK" value="/home.html#!/tasks/TASK/%d/attachments"/>
             </map>
@@ -339,6 +360,7 @@
                 <entry key="ALIAS" value="/home.html#!/people/%d/aliases"/>
                 <entry key="COMPLAINT" value="/home.html#!/people/%d/complaints"/>
                 <entry key="CASE_FILE" value="/home.html#!/people/%d/cases"/>
+                <entry key="CONSULTATION" value="/home.html#!/people/%d/consultations"/>
             </map>
         </property>
     </bean>
@@ -349,6 +371,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/people"/>
+                <entry key="CONSULTATION" value="/home.html#!/consultations/%d/people"/>
                 <entry key="COMPLAINT" value="/home.html#!/complaints/%d/people"/>
             </map>
         </property>
@@ -360,6 +383,7 @@
         <property name="url">
             <map>
                 <entry key="CASE_FILE" value="/home.html#!/cases/%d/participants"/>
+                <entry key="CONSULTATION" value="/home.html#!/consultations/%d/participants"/>
                 <entry key="COMPLAINT" value="/home.html#!/complaints/%d/participants"/>
             </map>
         </property>
