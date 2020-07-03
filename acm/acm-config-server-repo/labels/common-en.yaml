@@ -821,6 +821,21 @@ common.addObjectAssociation:
   setPrimary.label: Set As Primary?
   radioYes.text: "Yes"
   radioNo.text: "No"
+common.duplicates:
+  header: Duplicates
+  columnDefs: 
+    case_file : Case File
+    name : Name
+    folder : Folder
+    ext: ext
+    type: Type
+    created : Created
+    modified : Modified
+    modifier : Modified By
+    version : Version
+    status : Status
+    
+    
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization
