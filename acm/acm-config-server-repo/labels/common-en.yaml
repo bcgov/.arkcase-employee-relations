@@ -834,7 +834,7 @@ common.duplicates:
     modifier : Modified By
     version : Version
     status : Status
-  btnCancel: Cancel   
+  btnCancel: Close
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization
