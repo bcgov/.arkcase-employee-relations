@@ -834,7 +834,6 @@ common.duplicates:
     modifier : Modified By
     version : Version
     status : Status
-  btnOK: OK
   btnCancel: Cancel   
 common.editOrganization:
   title: Edit Organization
