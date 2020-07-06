@@ -379,6 +379,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/ecm/stream/{id}"
       - "/api/{version}/service/ecm/upload/configure"
       - "/api/{version}/service/ecm/fileLinks/{fileId}"
+      - "/api/{version}/service/ecm/fileDuplicates/{fileId}"
       - "/api/{version}/service/compressor/{folderId}"
       - "/api/{version}/service/compressor/download/{folderId}"
       - "/api/{version}/service/compressor/download/files"
