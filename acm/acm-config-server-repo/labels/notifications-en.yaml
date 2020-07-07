@@ -45,7 +45,7 @@ notifications:
     deleted: "Participants deleted from ${typeLabel}: ${nameLabel}"
   arrest.warrant: "%s - Arrest Warrant" 
   email:
-    mentions: "%s mentioned you in %s %d"
+    mentions: "${userLabel} mentioned you in ${typeLabel}: ${nameLabel}"
   calendar.event.added: "Calendar event added"
   object.assigned: "${typeLabel}: '${nameLabel}', assigned to ${userLabel}"
   object.unassigned: "${typeLabel}: '${nameLabel}', unassigned from ${userLabel}"
