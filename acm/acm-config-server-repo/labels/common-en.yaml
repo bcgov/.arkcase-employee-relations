@@ -60,6 +60,7 @@ common.service.messageService:
     success: Action was successful
     error: Action error
 common.directive.docTree:
+  moveFileError: Record can't be edited or moved to different folder
   btnRefresh: Refresh
   waitUploading: Uploading...
   confirmFileDeletion: Are you sure you want to delete this file? 
@@ -644,6 +645,7 @@ common.comp.acmLogin:
 common.objectTypes:
   CASE_FILE: Case File
   COMPLAINT: Complaint
+  CONSULTATION: Consultation
   TASK: Task
   TIMESHEET: Timesheet
   COSTSHEET: Costsheet
@@ -820,6 +822,20 @@ common.addObjectAssociation:
   setPrimary.label: Set As Primary?
   radioYes.text: "Yes"
   radioNo.text: "No"
+common.duplicates:
+  header: Duplicates
+  columnDefs: 
+    case_file : Case File
+    name : Name
+    folder : Folder
+    ext: ext
+    type: Type
+    created : Created
+    modified : Modified
+    modifier : Modified By
+    version : Version
+    status : Status
+  btnCancel: Close
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization
@@ -957,6 +973,28 @@ eventType.com.armedia.acm.casefile.file.lodged: Document Lodged
 eventType.com.armedia.acm.ecm.file.file.lodged: Document Lodged
 eventType.com.armedia.acm.changeCaseStatus.created: Change Case Status Created
 eventType.com.armedia.acm.closeComplaintRequest.created: Request for Closing Complaint Created
+eventType.com.armedia.acm.consultation.viewed: Consultation Viewed
+eventType.com.armedia.acm.consultation.updated: Consultation Updated
+eventType.com.armedia.acm.consultation: Consultation Event
+eventType.com.armedia.acm.consultation.ACTIVE: Consultation is Active
+eventType.com.armedia.acm.consultation.DRAFT: Consultation is Draft
+eventType.com.armedia.acm.consultation.CLOSED: Consultation is Closed
+eventType.com.armedia.acm.consultation.INACTIVE: Consultation is Inactive
+eventType.com.armedia.acm.consultation.In review: Consultation is in review
+eventType.com.armedia.acm.consultation.search: Consultation Searched
+eventType.com.armedia.acm.consultation.file.added: Consultation  Added
+eventType.com.armedia.acm.consultation.created: Consultation Created
+eventType.com.armedia.acm.consultation.createdFromComplaint: Consultation Created From Complaint
+eventType.com.armedia.acm.consultation.updatedFromComplaint: Consultation Updated From Complaint
+eventType.com.armedia.acm.consultation.priority.changed: Consultation Priority Changed
+eventType.com.armedia.acm.consultation.details.changed: Consultation Details Changed
+eventType.com.armedia.acm.consultation.title.changed: Consultation Title Changed
+eventType.com.armedia.acm.consultation.status.changed: Consultation Status Changed
+eventType.com.armedia.acm.consultation.queue.changed: Consultation Queue Changed
+eventType.com.armedia.acm.consultation.participant.added: Participant Added
+eventType.com.armedia.acm.consultation.participant.deleted: Participant Deleted
+eventType.com.armedia.acm.consultation.participant.changed: Participant Changed
+eventType.com.armedia.acm.consultation.costsheet.associated: Costsheet Associated
 eventType.com.armedia.acm.complaint.closed: Complaint Closed
 eventType.com.armedia.acm.complaint.created: Complaint Created
 eventType.com.armedia.acm.complaint.file.added: New File Added to Complaint
@@ -964,8 +1002,8 @@ eventType.com.armedia.acm.complaint.findById: Find Complaint
 eventType.com.armedia.acm.complaint.search.result: Complaint Search Result
 eventType.com.armedia.acm.complaint.submittedForReview: Compliant Submited For Review
 eventType.com.armedia.acm.complaint.updated: Complaint Updated
-eventType.com.armedia.acm.dashboard.created: Default Dashboard Created For the First Time 
-eventType.com.armedia.acm.dashboard.getByUserId: Dashboard Retrived 
+eventType.com.armedia.acm.dashboard.created: Default Dashboard Created For the First Time
+eventType.com.armedia.acm.dashboard.getByUserId: Dashboard Retrived
 eventType.com.armedia.acm.dashboard.updated: Dashboard Configuration Updated
 eventType.com.armedia.acm.dashboard.widget.getByUserRoles: Widget retrived by User Roles
 eventType.com.armedia.acm.dashboard.widget.getRolesByWidgets: Roles retrived by Widgets

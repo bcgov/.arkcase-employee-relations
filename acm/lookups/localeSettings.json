@@ -76,6 +76,13 @@
             "desc": "Chinese (Traditional)",
             "native": "中文（繁體）",
             "currencySymbol": "美元"
+        },
+        {
+            "code": "ar",
+            "iso": "ar",
+            "desc": "Arabic",
+            "native": "عربى",
+            "currencySymbol": "د.إ"
         }
     ]
 }
