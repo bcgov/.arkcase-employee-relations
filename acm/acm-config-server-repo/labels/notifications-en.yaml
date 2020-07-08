@@ -43,7 +43,7 @@ notifications:
   participants:
     added: "Participants added in ${typeLabel}: ${nameLabel}"
     deleted: "Participants deleted from ${typeLabel}: ${nameLabel}"
-  arrest.warrant: "%s - Arrest Warrant" 
+  acmdocumentsingletask.workflow: "%s - ACM Document Workflow - Single Task" 
   email:
     mentions: "${userLabel} mentioned you in ${typeLabel}: ${nameLabel}"
   calendar.event.added: "Calendar event added"
