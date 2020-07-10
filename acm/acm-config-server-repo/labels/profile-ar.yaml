@@ -67,7 +67,7 @@ profile.mfa:
       label: Shared Secret (أدخل هذا في Authy لإنشاء رمز التفعيل)
     activationCode:
       label: رمز التفعيل
-      placeholder: Enter activation code
+      placeholder: أدخل رمز التفعيل
   deleteModal:
     title: تأكيد حذف عامل
     cancel: إلغاء
