@@ -22,7 +22,7 @@ core:
     personTitles:
       mr: مستر
       mrs: مدام
-      ms: Ms
+      ms: آنسة
       miss: آنسة
     contactMethodTypes:
       phone: هاتف
@@ -592,6 +592,12 @@ core:
       chargeCodes:
         investigator: محقق
         analyst: المحلل
+    changeConsultation:
+      statuses:
+        active: نشيط
+        inactive: غير نشط
+        closed: مغلق
+        deleted: تم الحذف    
     changeCase:
       statuses:
         active: نشيط
@@ -623,17 +629,18 @@ core:
       all: الكل
       case_file: قضية
       complaint: شكوى
+      consultation: التشاور
       task: مهمة
       file: ملف
       document: المستند
       person: شخص
       organization: منظمة
     sequenceParts:
-      autoincrement: AUTOINCREMENT
-      objectProperty: OBJECT_PROPERTY
+      autoincrement: زيادة تلقائية
+      objectProperty: الملكية الكائن
       uuid: UUID
-      date: DATE
-      arbitraryText: ARBITRARY_TEXT
+      date: بلح
+      arbitraryText: نص التحكيم
     sequenceResetPeriod:
       daily: اليومي
       weekly: أسبوعي
@@ -648,14 +655,28 @@ core:
       status: الحالة
       priority: أفضلية
     objectTitleTypes:
-      caseFile: ملف القضية
+      caseFile: ملف 
+      consultation: التشاور
       complaint: شكوى
     taskParentTypes:
       caseFile: ملف القضية
       complaint: شكوى
+      consultation: التشاور
       costsheet: تتبع التكلفة
       timesheet: ورقة التوقيت
       doc_repo: مستودع المستندات
+    consultationPersonInitiatorTypes.initiator: البادئ
+    consultationPersonTypes:
+      complaintant: المشتكي
+      subject: موضوع
+      witness: الشاهد
+      wrongdoer: مخطئ
+      defendant: المدعى عليه
+      was-officer: ضابط WAS
+      victim: ضحية
+      defenseCounsel: محامي الدفاع
+      forensicScientist: عالم في الطب الشرعي
+      unknown: مجهول  
   userInfo:
     addedMenu:
       help: مساعدة

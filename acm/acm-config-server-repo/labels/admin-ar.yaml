@@ -380,8 +380,9 @@ admin:
       validationResponse: قالب البريد الإلكتروني موجود بالفعل مع المعلمات المحددة
       uploadError: تم إلغاء تحميل الملف بسبب نوع الملف غير الصحيح. يمكنك فقط تحميل ملف html.
     objectTypes:
-      caseFile: Case File
+      caseFile: ملف القضية
       complaint: شكوى
+      consultation: التشاور
       task: مهمة
       document: دعم بالوثائق
     actions:
@@ -394,7 +395,7 @@ admin:
       save.button: حفظ
       enableExchangeIntegration.checkbox: تمكين تكامل Microsoft Exchange
       exchangeServerVersion.label: إصدار الخادم تبادل
-      exchangeServerVersion.placeholder: Choose Server Version
+      exchangeServerVersion.placeholder: اختر إصدار الخادم
       exchangeServerVersionOptions:
         Exchange2007: Exchange2007
         Exchange2007_SP1: Exchange2007_SP1
@@ -562,12 +563,20 @@ admin:
   workflows.config.grid:
     businessProcess: طريقة العمل
     description: وصف
-    active: نشيط
+    actions: أجراءات
     modified: تم التعديل
     creator: مؤلف
+    version: الإصدار
+    status: الحالة
+    activated: مفعل
+    deactivated: معطل
   workflows.config.btn:
+    showDeactivated: إظهار غير نشط
     createNew: إنشاء نموذج جديد
     uploadNew: BPMN رفع جديد
+  workflows.config.deactivated:
+     title: سير العمل المعطل
+     close.btn: قريب    
   workflows.config.links:
     download: تحميل
     replaceFile: استبدل الملف
@@ -819,6 +828,7 @@ admin:
       titleOption: عنوان
       caseFile: ملف القضية
       complaint: شكوى
+      consultation: التشاور
       message:
         success: تم حفظ تكوين عنوان الكائن بنجاح
         error: خطأ. لم يتم حفظ تكوين عنوان الكائن.
@@ -1078,21 +1088,21 @@ admin:
     securityLdapConfig:
       title: الأمان - شبكة تكوين Ldap
     correspondenceManagementMergeFields:
-      title: Correspondence Management Merge Fields grid
+      title: شبكة حقول إدارة المراسلات
     correspondenceManagementMergeFieldsVersions:
-      title: Correspondence Management Merge Fields version grid
+      title: شبكة إصدار حقول إدارة المراسلات
     correspondenceManagementTemplates:
-      title: Correspondence Management Templates grid
+      title: شبكة قوالب إدارة المراسلات
     correspondenceManagementTemplateVersions:
-      title: Correspondance Management Template Versions grid
+      title: شبكة إصدارات قالب إدارة المراسلات
     labelsConfig:
       title: التطبيق - شبكة تكوين التسمية
     plainFormsConfig:
-      title: Forms - Forms Config grid
+      title: نماذج - شبكة تكوين النماذج
     workflowsConfig:
-      title: Workflows - Workflows Config grid
+      title: مهام سير العمل - شبكة تكوين مهام سير العمل
     workflowsHistoryDialogConfig:
-      title: Workflows - Workflows Config history dialog grid
+      title: مهام سير العمل - شبكة حوار محفوظات تكوين سير العمل
     usersPicker:
       title: حدد المستخدمين
     orgHierarchy:

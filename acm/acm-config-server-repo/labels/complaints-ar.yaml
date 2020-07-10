@@ -1,6 +1,6 @@
 complaints:
   title: شكاوي
-  progressNoComplaint: '[ No complaint data ]'
+  progressNoComplaint: '[ لا توجد بيانات شكوى ]'
   progressLoading: ' تحميل شكوى'
   progressError: ' فشل تحميل الشكوى'
 complaints.menus:
@@ -131,7 +131,7 @@ complaints.comp.addresses:
     country.placeholder: أدخل البلد
     btnCancel.text: إلغاء
     btnOk.text: حفظ الموقع
-    setPrimary: Set as Primary?
+    setPrimary: هل تريد التعيين على أنه أساسي؟
     yes: "نعم"
     no: "لا"
 complaints.comp.notes:

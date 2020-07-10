@@ -308,7 +308,7 @@ organizations.comp.complaints:
     modified: تم التعديل
 organizations.comp.related:
   title: منظمة ذات صلة
-  linkTitle: Rel Org
+  linkTitle: منظمة ذات صلة
   table.columns:
     associationType: صلة
     type: نوع
