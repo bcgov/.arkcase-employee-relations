@@ -18,9 +18,8 @@ common:
     PM)'
   _10: '''shortTime'' - equivalent to ''h:mm a'' for en_US locale (e.g. 12:05 PM)'
   _11: ' '
-  _12: 'Following date formats are phased out. If customers request to have customize
-    format, we need '
-  _13: to educate them to avoid doing so, because of i18n concerns
+  _12: 'يتم التخلص من تنسيقات التاريخ التالية. إذا طلب العملاء تخصيص تنسيق ، فنحن بحاجة '
+  _13: لتثقيفهم لتجنب القيام بذلك ، بسبب مخاوف i18n
   ## date formats should not be translated in other languages ##
   defaultDateFormat: MM/DD/YYYY
   defaultTimeFormat: hh:mm:ss
@@ -633,6 +632,7 @@ common.comp.acmLogin:
 common.objectTypes:
   CASE_FILE: ملف القضية
   COMPLAINT: شكوى
+  CONSULTATION: التشاور
   TASK: مهمة
   TIMESHEET: ورقة التوقيت
   COSTSHEET: ورقة التكلفة
@@ -657,8 +657,8 @@ frevvo.dialogUserPicker:
     type: نوع
     title: عنوان
     id: اسم المستخدم
-common.objects.objectWasCreatedMessage: '{{objectTypeString}} with id {{objectId}}
-  was created.'
+common.objects.objectWasCreatedMessage: '{{objectTypeString}} بمعرف {{objectId}}
+  تم انشائه.'
 common.newPerson:
   title: شخص
   addAnother: أضف آخر
@@ -807,6 +807,20 @@ common.addObjectAssociation:
   setPrimary.label: هل تريد تعيينه أساسي؟
   radioYes.text: "نعم"
   radioNo.text: "لا"
+common.duplicates:
+  header: مكرر
+  columnDefs: 
+    case_file : ملف القضية
+    name : اسم
+    folder : مجلد
+    ext: تمديد
+    type: نوع
+    created : خلقت
+    modified : تم التعديل
+    modifier : تم التعديل بواسطة
+    version : الإصدار
+    status : الحالة
+  btnCancel: قريب  
 common.editOrganization:
   title: تحرير المنظمة
   parentTitle: تحرير المنظمة الأم
@@ -873,7 +887,7 @@ common.newOrganization:
     identificationYearIssued.placeholder: حدد التعريف الصادر
     identificationYearIssued.close.button: قريب
 common.labels:
-  primary: ' [Primary]'
+  primary: ' [ابتدائي]'
 common.objectHistory:
   modal:
     title: تفاصيل التاريخ
@@ -944,6 +958,28 @@ eventType.com.armedia.acm.casefile.file.lodged: تم حفظ المستند
 eventType.com.armedia.acm.ecm.file.file.lodged: تم حفظ المستند
 eventType.com.armedia.acm.changeCaseStatus.created: تغيير حالة الحالة
 eventType.com.armedia.acm.closeComplaintRequest.created: تم إنشاء طلب إغلاق الشكوى
+eventType.com.armedia.acm.consultation.viewed: تم عرض الاستشارة
+eventType.com.armedia.acm.consultation.updated: ينظر التشاور
+eventType.com.armedia.acm.consultation: حدث استشاري
+eventType.com.armedia.acm.consultation.ACTIVE: التشاور نشط
+eventType.com.armedia.acm.consultation.DRAFT: التشاور هو مشروع
+eventType.com.armedia.acm.consultation.CLOSED: تم إغلاق الاستشارة
+eventType.com.armedia.acm.consultation.INACTIVE: الاستشارة غير نشطة
+eventType.com.armedia.acm.consultation.In review: التشاور قيد المراجعة
+eventType.com.armedia.acm.consultation.search: البحث عن المشاورة
+eventType.com.armedia.acm.consultation.file.added: تمت إضافة الاستشارة
+eventType.com.armedia.acm.consultation.created: تم إنشاء الاستشارة
+eventType.com.armedia.acm.consultation.createdFromComplaint: تم إنشاء الاستشارة من الشكوى
+eventType.com.armedia.acm.consultation.updatedFromComplaint: تم تحديث الاستشارة من الشكوى
+eventType.com.armedia.acm.consultation.priority.changed: تم تغيير أولوية التشاور
+eventType.com.armedia.acm.consultation.details.changed: تم تغيير تفاصيل الاستشارة
+eventType.com.armedia.acm.consultation.title.changed: تم تغيير عنوان الاستشارة
+eventType.com.armedia.acm.consultation.status.changed: تم تغيير وضع الاستشارة
+eventType.com.armedia.acm.consultation.queue.changed: تم تغيير قائمة انتظار الاستشارة
+eventType.com.armedia.acm.consultation.participant.added: تمت إضافة مشارك
+eventType.com.armedia.acm.consultation.participant.deleted: تم حذف مشارك
+eventType.com.armedia.acm.consultation.participant.changed: تم تغيير المشارك
+eventType.com.armedia.acm.consultation.costsheet.associated: ورقة التكاليف المرتبطة
 eventType.com.armedia.acm.complaint.closed: تم إغلاق الشكوى
 eventType.com.armedia.acm.complaint.created: تم إنشاء الشكوى
 eventType.com.armedia.acm.complaint.file.added: تمت إضافة ملف جديد إلى الشكوى
