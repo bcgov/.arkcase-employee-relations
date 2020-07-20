@@ -7,10 +7,14 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/modules/cases/views/"
       - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
+      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
     POST:
       - "/api/{version}/plugin/casefile/change/status/{mode}"
       - "/api/{version}/plugin/casefile/{caseId}/tasks"
       - "/api/{version}/service/exemption/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
@@ -375,6 +379,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/ecm/stream/{id}"
       - "/api/{version}/service/ecm/upload/configure"
       - "/api/{version}/service/ecm/fileLinks/{fileId}"
+      - "/api/{version}/service/ecm/fileDuplicates/{fileId}"
       - "/api/{version}/service/compressor/{folderId}"
       - "/api/{version}/service/compressor/download/{folderId}"
       - "/api/{version}/service/compressor/download/files"
@@ -2188,7 +2193,7 @@ dashboard.plugin:
   ##New widgets
   new.widgets: "casesByQueue,myCases,casesByStatus,news,myComplaints,myTasks,teamWorkload,newComplaints,details,calendar,cost,docsUnderReview,documents,expenses,history,hoursSummary,
   locations,notes,participants,people,person,references,reworkDetails,signature,tasks,time,workflow,newCases,workflowReport,approvalRouting,tags,organizations,parentDocs,phones,faxes,
-  emails,urls,dbas,ids,relOrganizations,complaints,cases,pictures,aliases,related,approvers,userWebsites"
+  emails,urls,dbas,ids,relOrganizations,complaints,cases,pictures,aliases,related,approvers,userWebsites,myConsultations"
   role.widgets: "[{\"role\":\"ROLE_CONTRIBUTOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}
   ,{\"role\":\"ROLE_ADMINISTRATOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}
   ,{\"role\":\"ROLE_CONSUMER\", \"widgetList\":\"news,myTasks,casesByQueue,userWebsites\"}
@@ -2197,7 +2202,7 @@ dashboard.plugin:
   ,{\"role\":\"ROLE_SUPERVISOR\", \"widgetList\":\"news,teamWorkload,myTasks,myComplaints,newComplaints,casesByQueue,userWebsites\"}]"
   ##modules where Dashboard will be used
   modules: "DASHBOARD,CASE,CONSULTATION,TIME,COST,TASK,COMPLAINT,DOC_REPO,PERSON,ORGANIZATION,MY_DOC_REPO"
-  modules.dashboard.widgets: "casesByQueue,casesByStatus,myCases,myComplaints,myTasks,newComplaints,teamWorkload,news,newCases,workflowReport,userWebsites"
+  modules.dashboard.widgets: "casesByQueue,casesByStatus,myCases,myComplaints,myTasks,newComplaints,teamWorkload,news,newCases,workflowReport,userWebsites,myConsultations"
 ################### DAC Configuration (dataAccessControl.properties) ###################
 dac:
   batchUpdateBasedOnLastModifiedEnabled: true
@@ -2907,7 +2912,7 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 password:
   length: 7
   lengthMessage: "Password must be of minimum length of"
-
+#### File formats. To work proper, use "-dot-" instead of "." #####
 allowedUploadFileTypes:
   text/plain:
     - application/octet-stream
@@ -2926,7 +2931,7 @@ allowedUploadFileTypes:
     - video/avi
   video/x-m4v:
     - video/mp4
-  model/vnd.mts:
+  model/vnd-dot-mts:
     - video/vnd.dlna.mpeg-tts
   audio/mpeg:
     - audio/mp3
@@ -2954,19 +2959,21 @@ allowedUploadFileTypes:
     - application/octet-stream
   audio/x-aiff:
     - audio/aiff
-  application/vnd.rn-realmedia:
+  application/vnd-dot-rn-realmedia:
     - application/octet-stream
   application/xhtml+xml:
     - text/html
-  application/vnd.ms-outlook:
+  application/vnd-dot-ms-outlook:
     - application/octet-stream
+  application/vnd-dot-ms-outlook-pst:
+    - application/octet-stream  
   text/csv:
     - application/vnd.ms-excel
   application/zip:
     - application/x-zip-compressed
   application/json:
     - application/octet-stream
-  application/vnd.wordperfect:
+  application/vnd-dot-wordperfect:
     - application/octet-stream
   application/rtf:
     - application/msword
