@@ -21,6 +21,7 @@
                 <ref bean="taskNavigatorAction"/>
                 <ref bean="searchNavigatorAction"/>
                 <ref bean="reportNavigatorAction"/>
+                <ref bean="adhocReportNavigatorAction"/>
                 <ref bean="notificationNavigatorAction"/>
                 <ref bean="subscriptionNavigatorAction"/>
                 <ref bean="auditNavigatorAction"/>
@@ -183,6 +184,14 @@
         <property name="iconName" value="i i-stats"/>
         <property name="url" value="/plugin/report"/>
         <property name="requiredPrivilege" value="acm-report-module"/>
+    </bean>
+
+    <bean id="adhocReportNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
+        <property name="actionName" value="Reports"/>
+        <property name="actionResourceName" value="common:navigation.label.adhoc-reports"/>
+        <property name="iconName" value="fa fa-pie-chart"/>
+        <property name="url" value="/plugin/adhoc-report"/>
+        <property name="requiredPrivilege" value="acm-adhoc-report-module"/>
     </bean>
 
     <bean id="subscriptionNavigatorAction" class="com.armedia.acm.core.AcmUserAction">
