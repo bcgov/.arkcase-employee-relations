@@ -728,6 +728,7 @@ core:
       dashboard: Dashboard
       notifications: Notifications
       reports: Reports
+      adhoc-reports: Adhoc Reports
       search: Search
       subscriptions: Subscriptions
       tags: Tags
