@@ -390,6 +390,7 @@ admin:
     objectTypes:
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       task: Task
       document: Document
     actions:
@@ -473,7 +474,7 @@ admin:
       portalUser: Select Portal User
       groupName: Select Group
     message:
-      edit: Portal is successfully edited
+      edit: Portal users being moved to a newly configured group...
       add: Portal is successfully added
       delete: Portal is successfully deleted
   userSearch:
@@ -562,6 +563,9 @@ admin:
   workflows.config.activate:
     error: Cant make this process active!
     success: Process succesfully activated.
+  workflows.config.deactivate:
+    error: Cant make this process inactive!
+    success: Process succesfully deactivated.
   workflows.config.showHistory.dialog:
     title: History
     body: Below is a history of previous BPMN files. To reinstate a previous workflow,
@@ -572,12 +576,20 @@ admin:
   workflows.config.grid:
     businessProcess: Business Process
     description: Description
-    active: Active
+    actions: Actions
     modified: Modified
     creator: Author
+    version: Version
+    status: Status
+    activated: Activated
+    deactivated: Deactivated
   workflows.config.btn:
+    showDeactivated: Show Deactivated
     createNew: Create New Model
     uploadNew: Upload New BPMN
+  workflows.config.deactivated:
+     title: Deactivated Workflows
+     close.btn: Close
   workflows.config.links:
     download: Download
     replaceFile: Replace File
@@ -635,6 +647,7 @@ admin:
         value: Value
         inverseKey: Inverse key
         inverseValue: Inverse value
+        description: Description
       modal:
         title: Search Label
         editEntry: Edit lookup entry
@@ -643,8 +656,12 @@ admin:
         value.placeholder: Enter entry value as label key
         inversekey.placeholder: Enter entry inverse key
         inversevalue.placeholder: Enter entry inverse value as label key
+        description.placeholder: Enter entry description 
         btnCancel.text: Cancel
         btnOk.text: Save entry
+        setPrimary: Set Primary
+        "yes": "Yes"
+        "no": "No"
       addLookup: Add Lookup
       label: Lookup Type
       lookupName: Lookup Name
@@ -826,6 +843,7 @@ admin:
       titleOption: Title
       caseFile: Case File
       complaint: Complaint
+      consultation: Consultation
       message:
         success: Object Title Configuration is successfully saved
         error: Error. Object Title Configuration is not saved.
