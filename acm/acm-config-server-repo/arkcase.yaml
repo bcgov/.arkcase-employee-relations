@@ -146,6 +146,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"
       - "/api/{version}/service/config/lookups"
+      - "/api/{version}/service/config/lookups/{subLookupName:.+}/{parentName}/sublookup"
       - "/api/{version}/functionalaccess/rolestogroups"
     PUT:
       - "/api/{version}/plugin/admin/labelmanagement/admin-resource"
@@ -192,7 +193,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"
       - "/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"
-      - "/api/{version}/service/config/lookups/{name}"
+      - "/api/{version}/service/config/lookups/{name}/{lookupType}"
       - "/api/{version}/functionalaccess/{roleName:.+}/groups"
       - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
