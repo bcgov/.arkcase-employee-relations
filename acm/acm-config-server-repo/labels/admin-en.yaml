@@ -137,7 +137,7 @@ admin:
         title: Add LDAP Group
       adHocGroup:
         title: Add Ad-Hoc Group
-      selectDirectory: --Choose Directory Config--
+      selectDirectory: Directory Config
       disabledGroupWarning: Adding new LDAP groups is not allowed for this directory!
       name: Name
       namePlaceholder: Enter group name
