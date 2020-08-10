@@ -57,6 +57,11 @@ consultations.comp.info:
     pollution%: التلوث
     productTampering%: المنتج العبث
     assetTheftMisuse%: سرقة الأصول أو إساءة استخدامها
+  receivedDate.label: تاريخ ووقت الاستلام
+  status.label: الحالة
+  modifier: التعديل الأخير من قبل
+  componentAgency: مكون
+  modified: تاريخ ووقت التعديل الأخير
 consultations.comp.actions:
   title: أجراءات
   restrict: بتقييد؟
@@ -99,7 +104,7 @@ consultations.comp.documents:
       clearanceGranted%: منح التخليص
       clearanceDenied%: تم رفض التخليص
       noticeInvestigation%: إشعار التحقيق
-      witnessInterview%: Witness Interview Request
+      witnessInterview%: مقابلة طلب شاهد
       witnessInterview2%: طلب مقابلة الشاهد - 2.0
   newTask: مهمة جديدة
 consultations.comp.people:

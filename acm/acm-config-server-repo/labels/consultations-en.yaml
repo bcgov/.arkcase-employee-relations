@@ -369,7 +369,7 @@ consultations.newConsultation:
     validation.errorInvalid: 'Please enter Email The Email you entered is invalid. Should be in this format: xxxx@xxxx.xxx'
   confirmationEmail:
     label: Confirm Email
-    placeholder: Confirma Email
+    placeholder: Confirm Email
     validation.error: Email and Confirm Email do not match Please confirm the Email
     validation.errorInvalid: Please confirm the Email
   country:

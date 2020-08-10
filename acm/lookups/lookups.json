@@ -3092,8 +3092,8 @@
                     "readonly": true
                 },
                 {
-                    "value":"core.lookups.businessProcessTypes.arrestWarrant",
-                    "key": "arrestWarrant",
+                    "value":"core.lookups.businessProcessTypes.acmDocumentSingleTaskWorkflow",
+                    "key": "acmDocumentSingleTaskWorkflow",
                     "readonly": true
                 }
             ],
