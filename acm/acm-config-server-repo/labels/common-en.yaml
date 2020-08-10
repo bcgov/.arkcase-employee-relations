@@ -29,7 +29,9 @@ common:
   defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
   defaultDatePickerFormat: MM/dd/yyyy
   defaultDateUIFormat: MM/dd/yyyy
-  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeUIFormat: MM/dd/yyyy h:mm a
+  defaultDateTimePickerFormat: MM/DD/YYYY h:mm A
+  defaultDateTimeUTCFormat: YYYY-MM-DDTHH:mm:ssZZ
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
   ## date formats should not be translated in other languages ##
 common.userOrGroupSearch:
@@ -836,6 +838,7 @@ common.duplicates:
     version : Version
     status : Status
   btnCancel: Close
+  btnDelete: Delete
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization

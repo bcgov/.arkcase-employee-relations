@@ -47,6 +47,24 @@ dashboard:
         deadline.tooltip: الموعد النهائي يقترب
       configDescription: وصف
       configDescriptionPlaceholder: أدخل وصف القطعة
+    myConsultations:
+      title: استشاراتي
+      description: يعرض استشاراتي
+      noDataMessage: حاليا لا توجد معلومات استشارية
+      table:
+        header:
+          consultationId: هوية شخصية
+          title: عنوان
+          priority: أفضلية
+          created: خلقت
+          modified: تم التعديل
+          dueDate: تاريخ الاستحقاق
+          status: الحالة
+          assignee: المحال إليه
+        overdue.tooltip: المشاورات متأخرة
+        deadline.tooltip: الموعد النهائي يقترب
+      configDescription: وصف
+      configDescriptionPlaceholder: أدخل وصف القطعة  
     myComplaints:
       title: شكاوي
       description: يعرض شكاوي
@@ -317,6 +335,8 @@ dashboard.comp.news:
   title: أخبار القطعة
 dashboard.comp.myCases:
   title: القطعة حالاتي
+dashboard.comp.myConsultations:
+  title: القطعة الاستشارات بلدي
 dashboard.comp.myTasks:
   title: القطعة المهام الخاصة بي
 dashboard.comp.myComplaints:
