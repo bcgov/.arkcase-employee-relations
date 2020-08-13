@@ -1653,10 +1653,16 @@ lookupsConfiguration:
           value: "core.lookups.taskParentTypes.timesheet"
         DOC_REPO:
           value: "core.lookups.taskParentTypes.doc_repo"
-      readonly: true             
-
-
-         
+      readonly: true
+    reportExportTypes:
+      entries:
+        pdf:
+          value: "core.lookups.reportExportTypes.pdf"
+        xlsx:
+          value: "core.lookups.reportExportTypes.excel"
+        xml:
+          value: "core.lookups.reportExportTypes.xml"
+      readonly: true
 
 
 
