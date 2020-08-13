@@ -381,6 +381,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/upload/configure"
       - "/api/{version}/service/ecm/fileLinks/{fileId}"
       - "/api/{version}/service/ecm/fileDuplicates/{fileId}"
+      - "/api/{version}/service/ecm/deDuplication/getConfig"
       - "/api/{version}/service/compressor/{folderId}"
       - "/api/{version}/service/compressor/download/{folderId}"
       - "/api/{version}/service/compressor/download/files"
@@ -421,6 +422,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"
       - "/api/{version}/service/ecm/createFolderByPath"
       - "/api/{version}/service/ecm/upload/configure"
+      - "/api/{version}/service/ecm/deDuplication/updateConfig"
       - "/api/{version}/plugin/wopi/files/{id}/lock"
       - "/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"
       - "/api/{version}/plugin/wopi/files/{id}/rename"
@@ -2841,7 +2843,8 @@ document.upload.policy:
   convertHtmlToPdf: false
   convertMsgToPdf: false
   convertEmlToPdf: false
-
+################### De Duplication Configuration app.properties ################
+enableDeDuplication: true
 #### HAZELCAST Arkcase CONFIGURATION ####
 acm.hazelcast:
   ## Instance configuration ##
