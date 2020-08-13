@@ -679,6 +679,10 @@ core:
       defenseCounsel: Defense Counsel
       forensicScientist: Forensic Scientist
       unknown: Unknown
+    reportExportTypes:
+      pdf: PDF
+      excel: Excel
+      xml: XML
   userInfo:
     addedMenu:
       help: Help
