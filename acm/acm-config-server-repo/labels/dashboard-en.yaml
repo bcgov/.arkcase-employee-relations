@@ -47,6 +47,24 @@ dashboard:
         deadline.tooltip: Deadline is Approaching
       configDescription: Description
       configDescriptionPlaceholder: Enter widget description
+    myConsultations:
+      title: My Consultations
+      description: Displays my Consultations
+      noDataMessage: Currently there are no consultations info
+      table:
+        header:
+          consultationId: ID
+          title: Title
+          priority: Priority
+          created: Created
+          modified: Modified
+          dueDate: Due Date
+          status: Status
+          assignee: Assignee
+        overdue.tooltip: Consultations is Overdue
+        deadline.tooltip: Deadline is Approaching
+      configDescription: Description
+      configDescriptionPlaceholder: Enter widget description
     myComplaints:
       title: My Complaints
       description: Displays my complaints
@@ -317,6 +335,8 @@ dashboard.comp.news:
   title: News Widget
 dashboard.comp.myCases:
   title: My Cases Widget
+dashboard.comp.myConsultations:
+  title: My Consultations Widget
 dashboard.comp.myTasks:
   title: My Tasks Widget
 dashboard.comp.myComplaints:
