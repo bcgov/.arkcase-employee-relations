@@ -1050,7 +1050,11 @@ admin:
       inform: Settings will take effect for all new files
       apply.label: Apply
       dialog:
-        OKBtn: Confirm
+        OKBtn: Confirm 
+    deDuplication:
+      title: De Duplication Settings
+      enableDeDuplication: Enable de-duplication
+      apply: Apply
   mediaServices:
     title: Media Services
     transcriptionManagement: Transcription Management
