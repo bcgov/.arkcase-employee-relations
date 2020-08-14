@@ -1658,8 +1658,6 @@ lookupsConfiguration:
       entries:
         pdf:
           value: "core.lookups.reportExportTypes.pdf"
-        xlsx:
-          value: "core.lookups.reportExportTypes.excel"
         xml:
           value: "core.lookups.reportExportTypes.xml"
       readonly: true
