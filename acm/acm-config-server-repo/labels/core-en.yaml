@@ -681,7 +681,6 @@ core:
       unknown: Unknown
     reportExportTypes:
       pdf: PDF
-      excel: Excel
       xml: XML
   userInfo:
     addedMenu:
