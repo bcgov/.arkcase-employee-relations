@@ -2843,7 +2843,7 @@ document.upload.policy:
   convertHtmlToPdf: false
   convertMsgToPdf: false
   convertEmlToPdf: false
-################### De Duplication Configuration app.properties ################
+  
 enableDeDuplication: true
 #### HAZELCAST Arkcase CONFIGURATION ####
 acm.hazelcast:
