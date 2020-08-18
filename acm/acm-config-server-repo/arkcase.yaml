@@ -146,6 +146,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}/password"
       - "/api/{version}/service/config/lookups"
+      - "/api/{version}/service/config/lookups/{subLookupName:.+}/{parentName}/sublookup"
       - "/api/{version}/functionalaccess/rolestogroups"
     PUT:
       - "/api/{version}/plugin/admin/labelmanagement/admin-resource"
@@ -192,7 +193,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/ldap/{directory:.+}/groups/{groupName:.+}"
       - "/api/{version}/users/group/{groupId:.+}/parent/{parentId:.+}"
-      - "/api/{version}/service/config/lookups/{name}"
+      - "/api/{version}/service/config/lookups/{name}/{lookupType}"
       - "/api/{version}/functionalaccess/{roleName:.+}/groups"
       - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
@@ -380,6 +381,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/upload/configure"
       - "/api/{version}/service/ecm/fileLinks/{fileId}"
       - "/api/{version}/service/ecm/fileDuplicates/{fileId}"
+      - "/api/{version}/service/ecm/deDuplication/getConfig"
       - "/api/{version}/service/compressor/{folderId}"
       - "/api/{version}/service/compressor/download/{folderId}"
       - "/api/{version}/service/compressor/download/files"
@@ -420,6 +422,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"
       - "/api/{version}/service/ecm/createFolderByPath"
       - "/api/{version}/service/ecm/upload/configure"
+      - "/api/{version}/service/ecm/deDuplication/updateConfig"
       - "/api/{version}/plugin/wopi/files/{id}/lock"
       - "/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"
       - "/api/{version}/plugin/wopi/files/{id}/rename"
@@ -1097,6 +1100,7 @@ report:
     PENTAHO_SERVER_USER: "arkcase-admin"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
+    PENTAHO_REPORT_URL: "/pentaho/api/repos/:public:foia:"
     PENTAHO_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
     PENTAHO_VIEW_REPORT_URL_PRPTI_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/prpti.view"
     PENTAHO_VIEW_DASHBOARD_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer?ts={timestamp}"
@@ -2856,7 +2860,8 @@ document.upload.policy:
   convertHtmlToPdf: false
   convertMsgToPdf: false
   convertEmlToPdf: false
-
+  
+enableDeDuplication: true
 #### HAZELCAST Arkcase CONFIGURATION ####
 acm.hazelcast:
   ## Instance configuration ##
