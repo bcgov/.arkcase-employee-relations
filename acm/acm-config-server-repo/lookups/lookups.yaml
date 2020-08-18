@@ -120,7 +120,7 @@ lookupsConfiguration:
   nestedLookup:
     contactMethodTypes:
       entries:
-        Phone:
+        phone:
           subLookup:
             Home: 
               value: core.lookups.common.home    
@@ -138,7 +138,7 @@ lookupsConfiguration:
           value: core.lookups.contactMethodTypes.fax  
           readonly: true
           order: 2
-        Email:
+        email:
           subLookup: 
             Personal: 
               value: core.lookups.contactMethodTypes.personal    
@@ -147,7 +147,7 @@ lookupsConfiguration:
           value: core.lookups.contactMethodTypes.email
           readonly: true
           order: 3
-        Url:
+        url:
           subLookup:
             WebSite: 
               value: core.lookups.contactMethodTypes.website    
