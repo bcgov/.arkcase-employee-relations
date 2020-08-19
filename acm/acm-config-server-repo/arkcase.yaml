@@ -1106,6 +1106,7 @@ report:
     PENTAHO_VIEW_DASHBOARD_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer?ts={timestamp}"
     PENTAHO_VIEW_ANALYSIS_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
     PENTAHO_ADHOC_REPORTS_CONTEXT: "/arkcase/pentaho/Home"
+    PENTAHO_ADHOC_REPORTS_LOGOUT: "/arkcase/pentaho/Logout"
     #Configuration for the Reports Scheduling tool in the admin module
     PENTAHO_SCHEDULE_INPUT_FOLDER: "/public/arkcase"
     PENTAHO_SCHEDULE_OUTPUT_FOLDER: "/public/generated-reports"
