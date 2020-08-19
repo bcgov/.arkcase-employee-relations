@@ -1052,7 +1052,7 @@ admin:
       dialog:
         OKBtn: Confirm 
     deDuplication:
-      title: De Duplication Settings
+      title: De-duplication Settings
       enableDeDuplication: Enable de-duplication
       apply: Apply
   mediaServices:
