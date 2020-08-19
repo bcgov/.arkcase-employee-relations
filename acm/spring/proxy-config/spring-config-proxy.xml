@@ -41,6 +41,9 @@
                 <prop key="skipResponseContentTypes">application/x-font-(woff|ttf).*$,
                     application/(pdf|excel|x-shockwave-flash|vnd\.ms-excel|vnd\.openxmlformats-officedocument\.spreadsheetml\.sheet).*$, image/.*$
                 </prop>
+                <!-- Matches and updates the content of requests before they are sent to Pentaho -->
+                <prop key="requestUrlMatchers">.*gwtrpc.*</prop>
+                <prop key="requestContentRewritePairs">/arkcase/pentaho:/pentaho</prop>
                 <!-- comma delimited pair of pattern which match url, and parameter which need to be appended-->
                 <!--<prop key="appendUrlParams">^.*prpt/viewer$:userid=${PENTAHO_SERVER_USER}&amp;password=${PENTAHO_SERVER_PASSWORD}</prop>-->
                 <!-- comma delimited pair of pattern which match url, and header values that need to be added. Use var(VARIABLE_NAME) to use runtime variables for values. 
