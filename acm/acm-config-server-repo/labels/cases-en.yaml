@@ -324,6 +324,7 @@ cases.comp.billing:
     description: Description
     amount: Amount
     type: Type
+    object: Object
     total: 'Total: '
     buttons:
       listInvoices: List Invoices
