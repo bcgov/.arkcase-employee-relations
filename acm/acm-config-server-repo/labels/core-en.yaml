@@ -679,6 +679,9 @@ core:
       defenseCounsel: Defense Counsel
       forensicScientist: Forensic Scientist
       unknown: Unknown
+    reportExportTypes:
+      pdf: PDF
+      xml: XML
   userInfo:
     addedMenu:
       help: Help
@@ -728,6 +731,7 @@ core:
       dashboard: Dashboard
       notifications: Notifications
       reports: Reports
+      adhoc-reports: Adhoc Reports
       search: Search
       subscriptions: Subscriptions
       tags: Tags

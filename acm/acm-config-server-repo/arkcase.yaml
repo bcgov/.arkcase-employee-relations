@@ -381,6 +381,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/upload/configure"
       - "/api/{version}/service/ecm/fileLinks/{fileId}"
       - "/api/{version}/service/ecm/fileDuplicates/{fileId}"
+      - "/api/{version}/service/ecm/deDuplication/getConfig"
       - "/api/{version}/service/compressor/{folderId}"
       - "/api/{version}/service/compressor/download/{folderId}"
       - "/api/{version}/service/compressor/download/files"
@@ -421,6 +422,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/folder/{parentFolderId}/{newFolderName}"
       - "/api/{version}/service/ecm/createFolderByPath"
       - "/api/{version}/service/ecm/upload/configure"
+      - "/api/{version}/service/ecm/deDuplication/updateConfig"
       - "/api/{version}/plugin/wopi/files/{id}/lock"
       - "/api/{version}/plugin/wopi/files/{id}/lock/{lockId}"
       - "/api/{version}/plugin/wopi/files/{id}/rename"
@@ -706,6 +708,9 @@ acmPluginConfigurationPrivileges:
   acmReportModulePrivilege:
     GET:
       - "/modules/reports/views/"
+  acmAdhocReportModulePrivilege:
+    GET:
+      - "/modules/adhoc-reports/views/"
   acmGetSequenceConfigurationPrivilege:
     GET:
       - "/api/{version}/plugin/sequence/configuration"
@@ -1095,10 +1100,13 @@ report:
     PENTAHO_SERVER_USER: "arkcase-admin"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
+    PENTAHO_REPORT_URL: "/pentaho/api/repos/:public:foia:"
     PENTAHO_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
     PENTAHO_VIEW_REPORT_URL_PRPTI_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/prpti.view"
     PENTAHO_VIEW_DASHBOARD_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer?ts={timestamp}"
     PENTAHO_VIEW_ANALYSIS_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
+    PENTAHO_ADHOC_REPORTS_CONTEXT: "/arkcase/pentaho/Home"
+    PENTAHO_ADHOC_REPORTS_LOGOUT: "/arkcase/pentaho/Logout"
     #Configuration for the Reports Scheduling tool in the admin module
     PENTAHO_SCHEDULE_INPUT_FOLDER: "/public/arkcase"
     PENTAHO_SCHEDULE_OUTPUT_FOLDER: "/public/generated-reports"
@@ -1243,6 +1251,12 @@ navigator:
     iconName: "i i-stats"
     privilege: "acmReportModulePrivilege"
     privilegeName: "acm-report-module"
+  adhoc-report:
+    name: "Adhoc Reports"
+    resourceName: "common:navigation.label.adhoc-reports"
+    iconName: "fa fa-pie-chart"
+    privilege: "acmAdhocReportModulePrivilege"
+    privilegeName: "acm-adhoc-report-module"
   subscription:
     name: "Subscriptions"
     resourceName: "common:navigation.label.subscriptions"
@@ -1400,6 +1414,7 @@ application:
     acmDashboardModulePrivilege: Dashboard Module Privilege
     acmNotificationModulePrivilege: Notification Module Privilege
     acmReportModulePrivilege: Report Module Privilege
+    acmAdhocReportModulePrivilege: Adhoc Report Module Privilege
     acmSearchModulePrivilege: Search Module Privilege
     acmSubscriptionModulePrivilege: Subscription Module Privilege
     acmTagModulePrivilege: Tag Module Privilege
@@ -1487,6 +1502,7 @@ application:
       - dashboardPrivilege
       - acmPersonListPrivilege
       - acmReportModulePrivilege
+      - acmAdhocReportModulePrivilege
       - acmNotificationModulePrivilege
       - acmSubscriptionModulePrivilege
       - blogPrivilege
@@ -1600,6 +1616,7 @@ application:
       - acmDashboardModulePrivilege
       - acmAuditModulePrivilege
       - acmReportModulePrivilege
+      - acmAdhocReportModulePrivilege
       - acmSubscriptionModulePrivilege
       - acmNotificationModulePrivilege
       - acmTimeModulePrivilege
@@ -1672,6 +1689,7 @@ application:
       - acmPersonSavePrivilege
       - acmPersonTypesPrivilege
       - acmReportModulePrivilege
+      - acmAdhocReportModulePrivilege
       - acmSaveNotePrivilege
       - acmSearchModulePrivilege
       - acmSearchPrivilege
@@ -1743,6 +1761,7 @@ application:
       - acmGlobalAllowPrivilege
       - dashboardPrivilege
       - acmReportModulePrivilege
+      - acmAdhocReportModulePrivilege
       - acmNotificationModulePrivilege
       - acmSubscriptionModulePrivilege
       - tagPrivilege
@@ -1781,6 +1800,7 @@ application:
       - acmPersonListPrivilege
       - subscribePrivilege
       - acmReportModulePrivilege
+      - acmAdhocReportModulePrivilege
       - acmNotificationModulePrivilege
       - acmSubscriptionModulePrivilege
       - blogPrivilege
@@ -2841,7 +2861,8 @@ document.upload.policy:
   convertHtmlToPdf: false
   convertMsgToPdf: false
   convertEmlToPdf: false
-
+  
+enableDeDuplication: true
 #### HAZELCAST Arkcase CONFIGURATION ####
 acm.hazelcast:
   ## Instance configuration ##

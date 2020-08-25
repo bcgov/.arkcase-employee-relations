@@ -81,6 +81,7 @@ common.directive.docTree:
     successMessage: The email was sent successfully
     unsuccessMessage: The email was not sent
     noEmailAddress: 'There is no entered email for this '
+    defaultBodyAttachmentsAndLinks: Please find the attached document(s) for your review or click the 'Open Document(s)' button to browse to the link. Links expire in 3 days.
   menu:
     noop: (Select Item)
     editWithWebDAV: Edit

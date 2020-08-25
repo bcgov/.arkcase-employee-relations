@@ -510,6 +510,7 @@ admin:
     btn:
       reportDesigner: Report Designer
       sync: Synchronize
+      export: Run Report
     schedule:
       title: Reports Scheduling
       selectReportType: Select Report Type
@@ -549,6 +550,9 @@ admin:
       outputFormat: Select Output Format
       submit: Submit
       cancel: Cancel
+    export:
+      title: Report Exporting Options
+      label: Export format
   forms.title: Forms
   forms.config: Form Configuration
   workflows.title: Workflows
@@ -1046,7 +1050,11 @@ admin:
       inform: Settings will take effect for all new files
       apply.label: Apply
       dialog:
-        OKBtn: Confirm
+        OKBtn: Confirm 
+    deDuplication:
+      title: De-duplication Settings
+      enableDeDuplication: Enable de-duplication
+      apply: Apply
   mediaServices:
     title: Media Services
     transcriptionManagement: Transcription Management
