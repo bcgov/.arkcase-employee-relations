@@ -793,6 +793,7 @@ common.dialogObjectPicker:
     title: Document Title
     parentId: Parent Object ID
     parentTitle: Parent Object Title
+    parentNumber: Parent Object Number
   addDocument: Choose document to add
 common.addOrganization:
   title: Add Organization
