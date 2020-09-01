@@ -63,43 +63,6 @@ lookupsConfiguration:
           inverseKey: unknown
           value: core.lookups.personOrganizationRelationTypes.unknown
           order: 8
-    organizationPersonRelationTypes:
-      entries:
-        owned:
-          inverseValue: core.lookups.personOrganizationRelationTypes.owner
-          inverseKey: owner
-          value: core.lookups.personOrganizationRelationTypes.owned
-          order: 1
-        employer:
-          inverseValue: core.lookups.personOrganizationRelationTypes.employee
-          inverseKey: employee
-          value: core.lookups.personOrganizationRelationTypes.employer
-          order: 2
-        partner:
-          inverseValue: core.lookups.personOrganizationRelationTypes.partner
-          inverseKey: partner
-          value: core.lookups.personOrganizationRelationTypes.partner
-          order: 3
-        director-president-ceo:
-          inverseValue: core.lookups.personOrganizationRelationTypes.director-president-ceo
-          inverseKey: director-president-ceo
-          value: core.lookups.personOrganizationRelationTypes.director-president-ceo
-          order: 4
-        manager:
-          inverseValue: core.lookups.personOrganizationRelationTypes.manager
-          inverseKey: manager
-          value: core.lookups.personOrganizationRelationTypes.manager
-          order: 5
-        general-counsel:
-          inverseValue: core.lookups.personOrganizationRelationTypes.general-counsel
-          inverseKey: general-counsel
-          value: core.lookups.personOrganizationRelationTypes.general-counsel
-          order: 6
-        executive:
-          inverseValue: core.lookups.personOrganizationRelationTypes.executive
-          inverseKey: executive
-          value: core.lookups.personOrganizationRelationTypes.executive
-          order: 7
     personRelationTypes:
       entries:
         sibling:
@@ -1971,14 +1934,14 @@ lookupsConfiguration:
         mr:
           value: "core.lookups.personTitles.mr"
           order: 1
-        mrs:
-          value: "core.lookups.personTitles.mrs"
-          order: 2
         ms:
           value: "core.lookups.personTitles.ms"
+          order: 2
+        mrs:
+          value: "core.lookups.personTitles.mrs"
           order: 3
         miss:
-          value: "core.lookups.personTitles.miss"  
+          value: "core.lookups.personTitles.miss"
           order: 4
       readonly: true    
     documentParticipantTypes:
