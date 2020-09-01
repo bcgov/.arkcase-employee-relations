@@ -20,10 +20,12 @@ core:
       fka: FKA
       married: Married
     personTitles:
-      mr: Mr
-      mrs: Mrs
-      ms: Ms
-      miss: Miss
+      selectTitle: Select Title
+      selectPrefix: Select Prefix
+      mr: Mr.
+      mrs: Mrs.
+      ms: Ms.
+      miss: Miss.
     contactMethodTypes:
       phone: Phone
       work: Work
@@ -731,6 +733,7 @@ core:
       dashboard: Dashboard
       notifications: Notifications
       reports: Reports
+      adhoc-reports: Adhoc Reports
       search: Search
       subscriptions: Subscriptions
       tags: Tags
