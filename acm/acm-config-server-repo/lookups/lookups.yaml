@@ -1934,14 +1934,14 @@ lookupsConfiguration:
         mr:
           value: "core.lookups.personTitles.mr"
           order: 1
-        mrs:
-          value: "core.lookups.personTitles.mrs"
-          order: 2
         ms:
           value: "core.lookups.personTitles.ms"
+          order: 2
+        mrs:
+          value: "core.lookups.personTitles.mrs"
           order: 3
         miss:
-          value: "core.lookups.personTitles.miss"  
+          value: "core.lookups.personTitles.miss"
           order: 4
       readonly: true    
     documentParticipantTypes:
