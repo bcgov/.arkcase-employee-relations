@@ -682,6 +682,7 @@ core:
       forensicScientist: Forensic Scientist
       unknown: Unknown
     reportExportTypes:
+      selectLabel: Select Export Format
       pdf: PDF
       xml: XML
   userInfo:
