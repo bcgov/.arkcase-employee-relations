@@ -20,10 +20,12 @@ core:
       fka: FKA
       married: Married
     personTitles:
-      mr: Mr
-      mrs: Mrs
-      ms: Ms
-      miss: Miss
+      selectTitle: Select Title
+      selectPrefix: Select Prefix
+      mr: Mr.
+      mrs: Mrs.
+      ms: Ms.
+      miss: Miss.
     contactMethodTypes:
       phone: Phone
       work: Work
@@ -679,6 +681,10 @@ core:
       defenseCounsel: Defense Counsel
       forensicScientist: Forensic Scientist
       unknown: Unknown
+    reportExportTypes:
+      selectLabel: Select Export Format
+      pdf: PDF
+      xml: XML
   userInfo:
     addedMenu:
       help: Help
@@ -728,6 +734,7 @@ core:
       dashboard: Dashboard
       notifications: Notifications
       reports: Reports
+      adhoc-reports: Adhoc Reports
       search: Search
       subscriptions: Subscriptions
       tags: Tags
