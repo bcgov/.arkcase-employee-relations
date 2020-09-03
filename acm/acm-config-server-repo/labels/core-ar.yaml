@@ -20,6 +20,8 @@ core:
       fka: FKA
       married: متزوج
     personTitles:
+      selectTitle: حدد العنوان
+      selectPrefix: حدد بادئة
       mr: مستر
       mrs: مدام
       ms: آنسة
@@ -677,6 +679,10 @@ core:
       defenseCounsel: محامي الدفاع
       forensicScientist: عالم في الطب الشرعي
       unknown: مجهول  
+    reportExportTypes:
+      selectLabel: حدد تنسيق التصدير
+      pdf: PDF
+      xml: XML
   userInfo:
     addedMenu:
       help: مساعدة
@@ -726,6 +732,7 @@ core:
       dashboard: لوحة القيادة
       notifications: إشعارات
       reports: التقارير
+      adhoc-reports: تقارير مخصصة
       search: بحث
       subscriptions: الاشتراكات
       tags: العلامات

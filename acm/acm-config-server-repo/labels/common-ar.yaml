@@ -27,7 +27,9 @@ common:
   defaultDateLongTimeFormat: MM/DD/YYYY HH:mm
   defaultDatePickerFormat: MM/dd/yyyy
   defaultDateUIFormat: MM/dd/yyyy
-  defaultDateTimeUIFormat: MM/dd/yyyy HH:mm
+  defaultDateTimeUIFormat: MM/dd/yyyy h:mm a
+  defaultDateTimePickerFormat: MM/DD/YYYY h:mm A
+  defaultDateTimeUTCFormat: YYYY-MM-DDTHH:mm:ssZZ
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
   ## date formats should not be translated in other languages ##
 common.userOrGroupSearch:
@@ -75,6 +77,7 @@ common.directive.docTree:
     successMessage: تم ارسال البريد الالكتروني بنجاح
     unsuccessMessage: لم يتم إرسال البريد الإلكتروني
     noEmailAddress: ' لم يتم إدخال بريد إلكتروني لهذا'
+    defaultBodyAttachmentsAndLinks: يرجى العثور على المستند (المستندات) المرفق لمراجعتك أو النقر فوق الزر "فتح المستند (المستندات)" للاستعراض وصولاً إلى الارتباط. تنتهي صلاحية الروابط في 3 أيام.
   menu:
     noop: (اختر البند)
     editWithWebDAV: تعديل
