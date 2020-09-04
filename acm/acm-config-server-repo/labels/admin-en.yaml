@@ -552,7 +552,7 @@ admin:
       cancel: Cancel
     export:
       title: Report Exporting Options
-      label: Export format
+      label: Export Format
   forms.title: Forms
   forms.config: Form Configuration
   workflows.title: Workflows
