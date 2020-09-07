@@ -311,6 +311,17 @@ people.comp.cases:
     status: Status
     assignee: Assignee
     modified: Modified
+people.comp.consultations:
+  title: Consultations
+  objectType.label: Consultation
+  table.columns:
+    role: Role
+    priority: Priority
+    id: ID
+    title: Title
+    status: Status
+    assignee: Assignee
+    modified: Modified
 people.comp.complaints:
   title: Complaints
   objectType.label: Complaint
@@ -418,6 +429,7 @@ people.tree:
     ids.label: IDs
     complaints.label: Complaints
     cases.label: Cases
+    consultations.label: Consultations
     related.label: Related People
     history.label: History
   filters:
