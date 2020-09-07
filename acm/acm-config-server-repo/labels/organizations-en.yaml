@@ -295,6 +295,17 @@ organizations.comp.cases:
     status: Status
     assignee: Assignee
     modified: Modified
+organizations.comp.consultations:
+  title: Consultations
+  objectType.label: Consultation
+  table.columns:
+    role: Role
+    priority: Priority
+    id: ID
+    title: Title
+    status: Status
+    assignee: Assignee
+    modified: Modified
 organizations.comp.complaints:
   title: Complaints
   objectType.label: Complaint
@@ -408,6 +419,7 @@ organizations.tree:
     ids.label: IDs
     complaints.label: Complaints
     cases.label: Cases
+    consultations.label: Consultations
     related.label: Related Organizations
     history.label: History
   filters:
