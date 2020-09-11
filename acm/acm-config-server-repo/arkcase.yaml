@@ -1094,6 +1094,7 @@ acm.object.changed.notification.filter.include:
 report:
   plugin:
     PENTAHO_SERVER_URL: "https://acm-arkcase"
+    PENTAHO_DESIGNER_CONTEXT: "/arkcase/pentaho"
     PENTAHO_SERVER_PORT: 443
     PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
     PENTAHO_SERVER_INTERNAL_PORT: 443
