@@ -999,6 +999,23 @@
         ],
          "userRolesAny":[],
          "userRolesAll":[]
-      }
+      },
+      {
+            "actionName": "viewCaseDetailsPage",
+            "objectType": "CASE_FILE",
+            "objectProperties": {},
+            "userIsParticipantTypeAny": [
+                "assignee",
+                "supervisor",
+                "owning group",
+                "collaborator group",
+                "co-owner",
+                "approver",
+                "collaborator",
+                "reader"
+            ],
+            "userRolesAny": [],
+            "userRolesAll": []
+        } 
    ]
 }
