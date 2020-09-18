@@ -295,6 +295,17 @@ organizations.comp.cases:
     status: الحالة
     assignee: المحال إليه
     modified: تم التعديل
+organizations.comp.consultations:
+  title: استشارات
+  objectType.label: التشاور
+  table.columns:
+    role: وظيفة
+    priority: أفضلية
+    id: هوية شخصية
+    title: عنوان
+    status: الحالة
+    assignee: الوكيل
+    modified: تم التعديل    
 organizations.comp.complaints:
   title: شكاوي
   objectType.label: شكوى
@@ -408,6 +419,7 @@ organizations.tree:
     ids.label: معرفات
     complaints.label: شكاوي
     cases.label: الحالات
+    consultations.label: استشارات
     related.label: المنظمات ذات الصلة
     history.label: التاريخ
   filters:
