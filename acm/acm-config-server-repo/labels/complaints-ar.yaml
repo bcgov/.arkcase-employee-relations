@@ -294,6 +294,7 @@ complaints.comp.billing:
     item: 'بند #'
     description: وصف
     type: نوع
+    object: موضوع
     amount: كمية
     total: ' مجموع:'
     buttons:
