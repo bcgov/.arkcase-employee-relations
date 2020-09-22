@@ -49,3 +49,14 @@ notifications:
   calendar.event.added: "تمت إضافة حدث التقويم"
   object.assigned: "${typeLabel}: '${nameLabel}', مخصص ل ${userLabel}"
   object.unassigned: "${typeLabel}: '${nameLabel}', لم يتم تعيينه من ${userLabel}"
+  type:
+    label:
+      casefile: ملف القضية
+      complaint: شكوى
+      consultation: التشاور
+      task: مهمة
+      note: ملحوظة
+      file: ملف
+      doc-repo: مستودع المستندات
+      person-association: شخص
+      participant: مشارك
