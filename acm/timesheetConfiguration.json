@@ -1,1 +1,1 @@
-{"chargeRoleItems":[{"chargeRole":"ANALYST","rate":100,"active":"ACTIVE"},{"chargeRole":"INVESTIGATOR","rate":200,"active":"INACTIVE"},{"chargeRole":"INVESTIGATOR","rate":300,"active":"ACTIVE"}]}
+{"chargeRoleItems":[{"chargeRole":"ANALYST","rate":50,"active":"ACTIVE"},{"chargeRole":"INVESTIGATOR","rate":75,"active":"ACTIVE"},{"chargeRole":"Litigation","rate":105,"active":"ACTIVE"}]}
