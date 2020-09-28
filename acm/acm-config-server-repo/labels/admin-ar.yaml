@@ -502,6 +502,7 @@ admin:
     btn:
       reportDesigner: مصمم تقرير
       sync: تزامن
+      export: تشغيل التقرير
     schedule:
       title: جدولة التقارير
       selectReportType: حدد نوع التقرير
@@ -540,6 +541,9 @@ admin:
       outputFormat: حدد تنسيق الإخراج
       submit: إرسال
       cancel: إلغاء
+    export:
+      title: تقرير خيارات التصدير
+      label: تنسيق التصدير  
   forms.title: نماذج
   forms.config: تكوين النموذج
   workflows.title: سير العمل
@@ -554,6 +558,9 @@ admin:
   workflows.config.activate:
     error: غير قادر على تنشيط هذه العملية!
     success: .تم تنشيط العملية بنجاح
+  workflows.config.deactivate:
+    error: لا يمكن جعل هذه العملية غير نشطة!
+    success: تم إلغاء تنشيط العملية بنجاح.
   workflows.config.showHistory.dialog:
     title: التاريخ
     body: .فيما يلي سجل ملفات BPMN السابقة. لاستعادة سير عمل سابق ، حدد سير العمل وانقر فوق نشط
@@ -1030,6 +1037,10 @@ admin:
       apply.label: تطبيق
       dialog:
         OKBtn: تؤكد
+    deDuplication:
+      title: إعدادات إزالة الازدواجية
+      enableDeDuplication: تمكين إلغاء الازدواجية
+      apply: تطبيق
   mediaServices:
     title: خدمات وسائل الإعلام
     transcriptionManagement: إدارة النسخ

@@ -324,6 +324,7 @@ cases.comp.billing:
     description: وصف
     amount: كمية
     type: نوع
+    object: موضوع
     total: 'مجموع:'
     buttons:
       listInvoices: إدراج الفواتير

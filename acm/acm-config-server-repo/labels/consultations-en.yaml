@@ -60,7 +60,7 @@ consultations.comp.info:
   receivedDate.label: Received Date and Time
   status.label: Status
   modifier: Last Modified By
-  componentAgency: Component
+  componentAgency: Requesting Agency
   modified: Last Modified Date and Time
 consultations.comp.actions:
   title: Actions
