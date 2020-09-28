@@ -294,6 +294,7 @@ complaints.comp.billing:
     item: 'Item #'
     description: Description
     type: Type
+    object: Object
     amount: Amount
     total: 'Total: '
     buttons:

@@ -1094,6 +1094,7 @@ acm.object.changed.notification.filter.include:
 report:
   plugin:
     PENTAHO_SERVER_URL: "https://acm-arkcase"
+    PENTAHO_DESIGNER_CONTEXT: "/arkcase/pentaho/Home"
     PENTAHO_SERVER_PORT: 443
     PENTAHO_SERVER_INTERNAL_URL: "https://acm-arkcase"
     PENTAHO_SERVER_INTERNAL_PORT: 443
@@ -2467,15 +2468,16 @@ notification:
     name: "notification"
 ################### Object to labels mapping ###################
 object:
-  CASE_FILE.label: "Case File"
-  COMPLAINT.label: "Complaint"
-  CONSULTATION.label: "Consultation"
-  FILE.label: "File"
-  TASK.label: "Task"
-  NOTE.label: "Note"
-  PERSON-ASSOCIATION.label: "Person"
-  PARTICIPANT.label: "Participant"
-  DOC_REPO.label: "Document Repository"
+  label:
+    CASE_FILE: notifications.type.label.casefile
+    COMPLAINT: notifications.type.label.complaint
+    CONSULTATION: notifications.type.label.consultation
+    FILE: notifications.type.label.file
+    TASK: notifications.type.label.task
+    NOTE: notifications.type.label.note
+    PERSON-ASSOCIATION: notifications.type.label.person-association
+    PARTICIPANT: notifications.type.label.participant
+    DOC_REPO: notifications.type.label.doc-repo
 ################### OKTA MFA Properties (okta.properties) ####################
 okta:
   idpUrl:

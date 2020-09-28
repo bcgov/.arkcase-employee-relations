@@ -20,6 +20,8 @@ core:
       fka: FKA
       married: متزوج
     personTitles:
+      selectTitle: حدد العنوان
+      selectPrefix: حدد بادئة
       mr: مستر
       mrs: مدام
       ms: آنسة
@@ -588,6 +590,7 @@ core:
       types:
         case_file: قضية
         complaint: شكوى
+        consultation: التشاور
         task: مهمة
       chargeCodes:
         investigator: محقق
@@ -649,6 +652,7 @@ core:
     sequenceName:
       caseNumberSequence: تسلسل رقم القضية
       complaintNumberSequence: تسلسل رقم الشكوى
+      consultationNumberSequence: تسلسل رقم الاستشارة
     sequenceObjectProperty:
       id: هوية شخصية
       caseType: نوع القضية
@@ -677,6 +681,10 @@ core:
       defenseCounsel: محامي الدفاع
       forensicScientist: عالم في الطب الشرعي
       unknown: مجهول  
+    reportExportTypes:
+      selectLabel: حدد تنسيق التصدير
+      pdf: PDF
+      xml: XML
   userInfo:
     addedMenu:
       help: مساعدة
@@ -726,6 +734,7 @@ core:
       dashboard: لوحة القيادة
       notifications: إشعارات
       reports: التقارير
+      adhoc-reports: تقارير مخصصة
       search: بحث
       subscriptions: الاشتراكات
       tags: العلامات
