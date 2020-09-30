@@ -9,12 +9,22 @@ dashboard:
         fiveRows: "5"
         tenRows: "10"
         twentyFiveRows: "25"
-    casesByQueue:
-      title: Active Case Files by Queue
-      description: Displays active case files by queue
-      xAxis: Queues
-      yAxis: Number of Case Files
+    activeCaseFiles:
+      title: Active Case Files
+      description: Displays active case files
       noDataMessage: Currently there are no cases info
+      table:
+        header:
+          caseId: ID
+          title: Title
+          priority: Priority
+          created: Created
+          modified: Modified
+          dueDate: Due Date
+          status: Status
+          assignee: Assignee
+        overdue.tooltip: Case is Overdue
+        deadline.tooltip: Deadline is Approaching
       configDescription: Description
       configDescriptionPlaceholder: Enter widget description
     casesByStatus:
