@@ -619,6 +619,9 @@ admin:
   formWorkflows.link.editRole.save.error: Can't save Link Forms/Workflows configuration
   application:
     title: Application
+    productVersion: Product Version
+    extensionVersion: Extension Version
+    dateLastInstalled: Date Last Installed
     locale.config:
       title: Locale Configuration
       defaultLabel: 'Default Locale:'
