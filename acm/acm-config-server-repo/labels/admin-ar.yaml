@@ -20,6 +20,9 @@ admin:
   security.ldapConfig.table.directoryName: اسم الدليل
   security.ldapConfig.table.userAttributesConfig: تكوين مستخدم LDAP
   security.ldapConfig.table.groupAttributesConfig: تكوين مجموعة LDAP
+  security.ldapConfig.table.editRecord: تحرير سجل LDAP
+  security.ldapConfig.table.editPassword: تحرير كلمة المرور
+  security.ldapConfig.table.deleteRecord: حذف سجل LDAP
   security.ldapConfig.table.action.partialSync: ابدأ مزامنة LDAP الجزئية
   security.ldapConfig.data:
     sync.dialog.header: قم بتشغيل المزامنة
@@ -316,7 +319,7 @@ admin:
       serverTypeOptions:
         smtp: SMTP
         outlook: تبادل مايكروسوفت
-      serverType.configuredExchange.label: للحصول على التفاصيل ، راجع تكوين Microsoft Exchange
+      serverType.configuredExchange.label: للحصول على تفاصيل الرجوع إلى تبادل مايكروسوفت
       server.label: الخادم عنون
       server.placeholder: أدخل عنوان الخادم
       port.label: بورت خمرة
@@ -351,8 +354,8 @@ admin:
       enableCase: تفعيل إنشاء CaseFiles من بريد الدخل
       enableComplaint: تمكين إنشاء الشكاوى من بريد الدخل
     bursting.configuration:
-      header: تكوين البريد الإلكتروني BURST
-      label: تمكين مرفقات BURSTING من بريد الدخل
+      header: تكوين انفجار البريد الإلكتروني
+      label: تمكين انفجار المرفقات من البريد الوارد
     table.columns:
       templateName: اسم القالب
       emailPattern: نموذج البريد الإلكتروني
@@ -366,7 +369,7 @@ admin:
       templateName.label: اسم القالب
       templateName.placeholder: أدخل اسم القالب
       emailPattern.label: نمط البريد الإلكتروني
-      emailPattern.description: استخدم ". *" لجميع المستلمين ' استخدم '.+@armedia.com' لمستلمي armia.com أو بعض التعبير العادي. يرجى ملاحظة أنه يجب الهروب من النقطة (.) بخط مائل!
+      emailPattern.description: استخدم ". *" لجميع المستلمين ' استخدم '.+@armedia.com' لمستلمي armedia.com أو بعض التعبير العادي. يرجى ملاحظة أنه يجب الهروب من النقطة (.) بخط مائل!
       emailPattern.placeholder: أدخل نمط البريد الإلكتروني
       source.label: مصدر
       objectTypes.label: أنواع الكائنات
@@ -390,10 +393,10 @@ admin:
       sendAsLinks: إرسال كروابط
       sendAsAttachmentsAndLinks: إرسال كمرفقات وروابط
   security.exchangeConfiguration:
-    title: Microsoft Exchange Configuration
+    title: تكوين تبادل مايكروسوفت
     exchangeConfigForm:
       save.button: حفظ
-      enableExchangeIntegration.checkbox: تمكين تكامل Microsoft Exchange
+      enableExchangeIntegration.checkbox: تفعيل تكامل تبادل مايكروسوفت
       exchangeServerVersion.label: إصدار الخادم تبادل
       exchangeServerVersion.placeholder: اختر إصدار الخادم
       exchangeServerVersionOptions:
@@ -605,6 +608,9 @@ admin:
   formWorkflows.link.editRole.save.error: لا يمكن حفظ نماذج الارتباط/تكوين سير العمل
   application:
     title: تطبيق
+    productVersion: إصدار المنتج
+    extensionVersion: نسخة التمديد
+    dateLastInstalled: تاريخ آخر تثبيت
     locale.config:
       title: تكوين الإعدادات المحلية
       defaultLabel: 'اللغة الافتراضية:'

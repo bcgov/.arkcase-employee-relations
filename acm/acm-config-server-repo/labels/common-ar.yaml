@@ -192,7 +192,7 @@ common.directive.objectTree:
   noAccessNode.toolTip: (ممنوع الدخول)
 common.directive.simplePager:
   rowCountLabel: مواد لكل صفحة
-  pagerCountLabel: '{{pageCount}} of {{pageTotal}} items'
+  pagerCountLabel: '{{pageCount}} من {{pageTotal}} العناصر'
 common.directive.objectAuthorization:
   choose: أختر
   not_authorized: غير مخول
@@ -203,6 +203,7 @@ common.directive.objectAuthorization:
   member: عضو
 common.directive.objectAuthorizationRolesFilter:
   pattern.title: خطأ ، مطلوب حرفان.
+  search.placeHolder: بحث
 common.directive.searchModal:
   header: بحث
   btnSearch.text: بحث
@@ -824,6 +825,7 @@ common.duplicates:
     version : الإصدار
     status : الحالة
   btnCancel: قريب  
+  btnDelete: حذف
 common.editOrganization:
   title: تحرير المنظمة
   parentTitle: تحرير المنظمة الأم
