@@ -208,6 +208,7 @@ common.directive.objectAuthorization:
   member: Member
 common.directive.objectAuthorizationRolesFilter:
   pattern.title: Error, 2 characters required.
+  search.placeHolder: Search
 common.directive.searchModal:
   header: Search
   btnSearch.text: Search
