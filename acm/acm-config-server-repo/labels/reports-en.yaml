@@ -13,7 +13,7 @@ reports:
   endDate:
     label: To
   fiscalYear:
-    label: Fiscal year
+    label: Fiscal Year
     selectLabel: Select Fiscal Year
   dropdown:
     __comment__: __ This 'dropdown' seems not in use, do we still need this? __
