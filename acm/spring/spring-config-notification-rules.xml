@@ -404,25 +404,6 @@
             </value>
         </property>
     </bean>
-
-    <bean id="billingAddedRule" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
-        <property name="globalRule" value="true"/>
-        <property name="executor" ref="noopExecutor"/>
-        <property name="jpaQuery">
-            <value>
-                <![CDATA[
-                    SELECT
-                          n
-                    FROM
-                          Notification n
-                    WHERE
-                         n.created >= :lastRunDate
-                    AND
-                    n.templateModelName = 'billingInvoice'
-                ]]>
-            </value>
-        </property>
-    </bean>
     
     <bean id="acmDocumentSingleTaskWorkflow" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
