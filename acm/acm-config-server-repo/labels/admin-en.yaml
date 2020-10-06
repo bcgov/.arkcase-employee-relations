@@ -913,6 +913,8 @@ admin:
       version: Version
       templateVersionActive: Active
       templateModelProvider: Template Model Provider
+      statusDisabled: Disabled
+      statusEnabled: Enabled
     templates.fieldNames.label: Map fields to values from the template
     templates.querySelect:
       header.text: Select Query
@@ -962,6 +964,7 @@ admin:
       fieldId: Enter Merge Field Id
       fieldValue: Enter Merge Field Value
       fieldDescription: Enter Merge Field Description
+    email.templates: Email Templates
   forms.defaultValue: Select Target
   forms.addForm: Add Plain Form
   forms.data:
@@ -1122,6 +1125,10 @@ admin:
       title: Correspondence Management Templates grid
     correspondenceManagementTemplateVersions:
       title: Correspondance Management Template Versions grid
+    correspondenceManagementEmailTemplates:
+      title: Correspondence Management Email Templates grid
+    correspondenceManagementEmailTemplateVersions:
+      title: Correspondance Management Email Template Versions grid
     labelsConfig:
       title: Application - Labels Config grid
     plainFormsConfig:

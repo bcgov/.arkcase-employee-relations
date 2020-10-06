@@ -59,6 +59,7 @@ tasks.comp.actions:
     errorHeaderText: Error
     btnOk.text: OK
     btnClose.text: Close
+  sendEmail.button: Send Email
 tasks.comp.details:
   title: Task Details
   informSaved: Task details saved
