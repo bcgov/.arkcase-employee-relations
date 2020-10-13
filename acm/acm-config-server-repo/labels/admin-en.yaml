@@ -915,6 +915,7 @@ admin:
       templateModelProvider: Template Model Provider
       statusDisabled: Disabled
       statusEnabled: Enabled
+      enabled: Sending Status
     templates.fieldNames.label: Map fields to values from the template
     templates.querySelect:
       header.text: Select Query
