@@ -30,6 +30,12 @@ tasks.comp.parentinfo:
     priority.label: Priority
     assignee.label: Assigned To
     owningGroup.label: Owning Group
+  consultation:
+    subjectType.label: Subject Type
+    incidentDate.label: Created Date
+    priority.label: Priority
+    assignee.label: Assigned To
+    owningGroup.label: Owning Group
   complaint:
     subjectType.label: Subject Type
     incidentDate.label: Incident Date
