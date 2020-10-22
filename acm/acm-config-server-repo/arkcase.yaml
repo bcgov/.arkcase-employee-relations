@@ -2329,7 +2329,7 @@ email:
   #set some existing email here for testing 
   CASE_FILE.user: "no-such-mailbox%40arkcase.org"
   CASE_FILE.password:
-  COMPLAINT.user: "no-such-mailbox%40arkcase.org
+  COMPLAINT.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.password:
   protocol: "imap"
