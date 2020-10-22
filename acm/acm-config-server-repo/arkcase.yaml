@@ -2327,11 +2327,10 @@ email:
   max-messages-per-poll: 1
   fixed-rate: 120000
   #set some existing email here for testing 
-  CASE_FILE.user: "no-such-mailbox%40armedia.com"
+  CASE_FILE.user: "no-such-mailbox%40arkcase.org"
   CASE_FILE.password:
-  COMPLAINT.user: "no-such-mailbox%40armedia.com"
-  COMPLAINT.password:
-  CONSULTATION.user: "no-such-mailbox%40armedia.com"
+  COMPLAINT.user: "no-such-mailbox%40arkcase.org
+  CONSULTATION.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.password:
   protocol: "imap"
   fetch.folder: "inbox"
@@ -2350,9 +2349,9 @@ email:
     encryption: "off"
     allowAttachments: true
     allowDocuments: true
-    host: "***REMOVED***"
+    host: ""
     allowHyperlinks: true
-    userFrom: "***REMOVED***"
+    userFrom: "no-such-mailbox@arkcase.org"
     port: 25
     username: "ann-acm"
     password: "AcMd3v$"
@@ -2426,10 +2425,10 @@ login.warning:
 outlook.exchange.integration:
   enable.autodiscovery: false
   enabled: false
-  system_user_email: "***REMOVED***"
-  system_user_email_password: "AcMd3v$"
-  client-access-server: "***REMOVED***"
-  system_user_id: "***REMOVED***"
+  system_user_email: ""
+  system_user_email_password: ""
+  client-access-server: ""
+  system_user_id: ""
   server.version: "Exchange2010_SP2"
   send.notification.from.system.user: true
   ################### MsOutlook Plugin Configuration (msOutlookPlugin.properties) ####################
