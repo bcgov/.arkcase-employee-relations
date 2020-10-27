@@ -2330,6 +2330,7 @@ email:
   CASE_FILE.user: "no-such-mailbox%40arkcase.org"
   CASE_FILE.password:
   COMPLAINT.user: "no-such-mailbox%40arkcase.org"
+  COMPLAINT.password:
   CONSULTATION.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.password:
   protocol: "imap"
