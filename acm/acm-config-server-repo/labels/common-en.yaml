@@ -1017,7 +1017,7 @@ eventType.com.armedia.acm.dashboard.widget.setAuthorizedRoles: Dashboard Widget 
 eventType.com.armedia.acm.ecm.file.document.viewed: Document Viewed
 eventType.com.armedia.acm.ecm.file.added: Document Uploaded
 eventType.com.armedia.acm.ecm.file.downloaded: Document Downloaded
-eventType.com.armedia.acm.file.deleted.recyclebin: Document Deleted
+eventType.com.armedia.acm.ecm.file.moved.recyclebin: Document Moved To Recycle Bin
 eventType.com.armedia.acm.ecm.folder.downloaded: Folder Downloaded
 eventType.com.armedia.acm.ecm.file.updated: Document Updated
 eventType.com.armedia.acm.ecm.file.copied: Document Copied
