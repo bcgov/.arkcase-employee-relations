@@ -39,9 +39,7 @@ variables:
   # RELEASE_HOTFIX: true
   # HOTFIX_SUPPORT_VERSION: 3.3.2
   # RELEASE_VERSION: 3.3.2.1
-  GIT_USERNAME: 'Arkcase Build'
-  GIT_USERMAIL: 'arkcase-build@armedia.com'
-  GIT_URL: 'git@***REMOVED***:arkcase/.arkcase.git'
+  GIT_URL: 'git@$GITLAB_SEVER:arkcase/.arkcase.git'
 
 release_start:
   stage: release
@@ -103,22 +101,22 @@ release_candidate_X:
     - git push origin HEAD:refs/tags/core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # foia
     - git checkout release-foia/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # privacy
     - git checkout release-privacy/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
 
 release:
   stage: release
@@ -147,24 +145,24 @@ release:
     - git checkout master-core
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout foia
     - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
     - git checkout master-foia
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
     # privacy
     - git checkout privacy
     - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
     - git checkout master-privacy
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
 
 start_support_branch:
   stage: release
@@ -233,21 +231,21 @@ release_hotfix:
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout hotfix-foia/support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
     # privacy
     - git checkout hotfix-privacy/support-privacy/privacy-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - git checkout support-privacy/privacy-$HOTFIX_SUPPORT_VERSION
     - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-privacy/privacy-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=https://***REMOVED***/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ***REMOVED*** <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
