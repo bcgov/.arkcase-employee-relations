@@ -2067,7 +2067,7 @@ casefile.plugin:
   split.typesToCopy: "history,people,participants"
   merge.exclude_document_types: "case_file_xml,case_file"
   search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
-  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author_s:$[user]\"}
+  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author:$[user]\"}
   ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_s:$[user]\"}
   ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
   ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_s:CLOSED\"}
