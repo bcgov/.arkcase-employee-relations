@@ -7,7 +7,7 @@ documentDetails:
   status: Status
   name: Name
   enableEditing: Enable editing
-  poweredBySnowbound: "Powered by Snowbound for ArkCase CE”.
+  poweredBySnowbound: Powered by Snowbound for ArkCase CE
   fileChangedAlert: The file you are viewing has changed and will be reloaded!
   comp.transcription:
     title: Transcript
