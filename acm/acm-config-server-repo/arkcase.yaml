@@ -218,6 +218,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/email/sender/allowdocuments"
       - "/api/{version}/plugin/admin/email/sender/allowattachments"
       - "/api/{version}/plugin/admin/email/sender/allowhyperlinks"
+      - "/api/{version}/service/ecm/file/isEditingEnabled"
       - "/api/{version}/service/dataaccess/rules"
       - "/api/{version}/users/groups/get"
       - "/api/{version}/users/groups"
@@ -2028,6 +2029,8 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
+########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
+fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
 capture:
   #file extensions that are allowed to be captured
