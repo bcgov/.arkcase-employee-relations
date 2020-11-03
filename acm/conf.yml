@@ -4,6 +4,9 @@ application:
   default: arkcase
  profile: runtime
 configuration:
+ client:
+  rules.path: "rules"
+  stylesheets.path: "pdf-stylesheets"
  server:
   url: http://localhost:9999
   update.path: "/config/{applicationName}"
