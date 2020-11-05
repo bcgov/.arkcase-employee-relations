@@ -1888,7 +1888,7 @@ application:
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
     applicationName: "arkcase"
-    helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
+    helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
