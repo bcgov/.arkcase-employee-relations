@@ -5,8 +5,13 @@ application:
  profile: runtime
 configuration:
  client:
-  rules.path: "rules"
+  branding.path: "branding"
+  labels.path: "labels"
+  ldap.path: "ldap"
+  lookups.path: "lookups"
   stylesheets.path: "pdf-stylesheets"
+  rules.path: "rules"
+  spring.path: "spring"
  server:
   url: http://localhost:9999
   update.path: "/config/{applicationName}"
