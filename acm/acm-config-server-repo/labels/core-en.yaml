@@ -588,6 +588,7 @@ core:
         training: Training
         conference: Conference
       types:
+        select_type: Select Type
         case_file: Case
         complaint: Complaint
         consultation: Consultation
