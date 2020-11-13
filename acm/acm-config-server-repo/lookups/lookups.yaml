@@ -1565,7 +1565,37 @@ lookupsConfiguration:
           order: 246
         ZW:
           value: "core.lookups.countries.ZW"   
-          order: 247                                                                     
+          order: 247
+        IODG:
+          value: "core.lookups.countries.IODG"
+          order: 248
+        CIS:
+          value: "core.lookups.countries.CIS"
+          order: 249
+        CNS:
+          value: "core.lookups.countries.CNS"
+          order: 250
+        CAM:
+          value: "core.lookups.countries.CAM"
+          order: 251
+        CPI:
+          value: "core.lookups.countries.CPI"
+          order: 252
+        MKD:
+          value: "core.lookups.countries.MKD"
+          order: 253
+        STP:
+          value: "core.lookups.countries.STP"
+          order: 254
+        SZW:
+          value: "core.lookups.countries.SZW"
+          order: 255
+        UMOO:
+          value: "core.lookups.countries.UMOO"
+          order: 256
+        XK:
+          value: "core.lookups.countries.XK"
+          order: 257
       readonly: true
     states:
       entries:

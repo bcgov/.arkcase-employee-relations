@@ -450,6 +450,16 @@ core:
       YE: Yemen
       ZM: Zambia
       ZW: Zimbabwe
+      IODG: Diego Garcia
+      CIS: Canary Islands
+      CNS: Carribbean Netherlands
+      CAM: Ceuta & Melilla
+      CPI: Clipperton Island
+      MKD: North Macedonia
+      STP: São Tomé & Príncipe
+      SZW: Eswatini
+      UMOO: Outlying Oceania
+      XK: Kosovo
     states:
       selectState: Select State
       AK: AK
