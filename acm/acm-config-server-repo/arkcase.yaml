@@ -93,6 +93,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/template/{templateId}"
       - "/api/{version}/plugin/admin/template/versions/{templateId}"
       - "/api/{version}/plugin/admin/template/{templateId}/{templateFilename:.+}"
+      - "/api/{version}/plugin/admin/templateContent/{templateName}"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/versions"
       - "/api/{version}/plugin/admin/mergefields/versions/{objectType}"

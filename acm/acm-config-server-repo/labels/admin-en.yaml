@@ -894,6 +894,7 @@ admin:
     templates: Correspondence Templates
     templates.addNewTemplate: Upload Template
     templates.addTemplate: Upload
+    templates.previewTemplate: Preview
     templates.versionTemplate: Versions
     templates.deleteTemplate: Delete
     templates.editTemplate: Edit Template
@@ -916,6 +917,9 @@ admin:
       statusDisabled: Disabled
       statusEnabled: Enabled
       enabled: Sending Status
+    templates.preview:
+      title: Template Preview
+      btnClose: Close
     templates.fieldNames.label: Map fields to values from the template
     templates.querySelect:
       header.text: Select Query
