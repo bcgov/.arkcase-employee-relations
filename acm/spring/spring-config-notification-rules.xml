@@ -464,7 +464,7 @@
     
     <bean id="documentAttachedLinked" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="executor" ref="documentLinkedSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
