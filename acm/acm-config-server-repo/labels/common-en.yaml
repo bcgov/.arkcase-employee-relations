@@ -1033,7 +1033,7 @@ eventType.com.armedia.acm.file.co_edit.document.saved: Document saved co-editing
 eventType.com.armedia.acm.functionalaccess.updated: Access Updated
 eventType.com.armedia.acm.login: User Login
 eventType.com.armedia.acm.logout: User Logout
-eventType.com.armedia.acm.object.assignee.change: Asignee Changed
+eventType.com.armedia.acm.object.assignee.change: Assignee Changed
 eventType.com.armedia.acm.object.participants.change: Participant Changed
 eventType.com.armedia.acm.objecthistory.created: Object History Created
 eventType.com.armedia.acm.personAssociation.created: Person Associated
