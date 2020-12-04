@@ -10,7 +10,7 @@
 
         <!--
             Set "issueCollectorFlag" flag as "true" only if ArkCase instance is inside Armedia network or on the Armedia VPN or
-            ArkCase instance can connect to Armedia's internal JIRA server (***REMOVED***).
+            ArkCase instance can connect to Armedia's internal JIRA server.
             JIRA issue collector can be utilized only if above criteria are met. If those criteria cannot be met,
             set "issueCollectorFlag" flag as "false".
         -->

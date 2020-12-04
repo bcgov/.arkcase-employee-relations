@@ -49,3 +49,14 @@ notifications:
   calendar.event.added: "Calendar event added"
   object.assigned: "${typeLabel}: '${nameLabel}', assigned to ${userLabel}"
   object.unassigned: "${typeLabel}: '${nameLabel}', unassigned from ${userLabel}"
+  type:
+    label:
+      casefile: Case File
+      complaint: Complaint
+      consultation: Consultation
+      task: Task
+      note: Note
+      file: File
+      doc-repo: Document Repository
+      person-association: Person
+      participant: Participant
