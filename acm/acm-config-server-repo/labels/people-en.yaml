@@ -311,6 +311,7 @@ people.comp.cases:
     status: Status
     assignee: Assignee
     modified: Modified
+    caseNumber: Case Number
 people.comp.consultations:
   title: Consultations
   objectType.label: Consultation
