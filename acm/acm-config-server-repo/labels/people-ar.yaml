@@ -310,6 +310,17 @@ people.comp.cases:
     status: الحالة
     assignee: المحال إليه
     modified: تم التعديل
+people.comp.consultations:
+  title: استشارة
+  objectType.label: استشارة
+  table.columns:
+    role: وظيفة
+    priority: أفضلية
+    id: هوية شخصية
+    title: عنوان
+    status: الحالة
+    assignee: الوكيل
+    modified: تم التعديل    
 people.comp.complaints:
   title: شكاوي
   objectType.label: شكوى
@@ -416,6 +427,7 @@ people.tree:
     ids.label: معرفات
     complaints.label: شكاوي
     cases.label: الحالات
+    consultations.label: التشاور
     related.label: الناس ذات الصلة
     history.label: التاريخ
   filters:

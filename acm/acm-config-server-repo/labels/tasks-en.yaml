@@ -30,6 +30,12 @@ tasks.comp.parentinfo:
     priority.label: Priority
     assignee.label: Assigned To
     owningGroup.label: Owning Group
+  consultation:
+    subjectType.label: Subject Type
+    incidentDate.label: Created Date
+    priority.label: Priority
+    assignee.label: Assigned To
+    owningGroup.label: Owning Group
   complaint:
     subjectType.label: Subject Type
     incidentDate.label: Incident Date
@@ -183,6 +189,7 @@ tasks.newTask:
   cancelButton: Cancel
   overdue.tooltip: Task is Overdue
   deadline.tooltip: Deadline is Approaching
+  informCreated: Task was created.
   groupToggle.label: Group Task?
   group.placeholder: Please select a group.
   documentsToReview.label: Documents to Review

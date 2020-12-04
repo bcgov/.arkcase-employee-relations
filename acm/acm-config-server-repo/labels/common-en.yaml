@@ -209,6 +209,7 @@ common.directive.objectAuthorization:
   member: Member
 common.directive.objectAuthorizationRolesFilter:
   pattern.title: Error, 2 characters required.
+  search.placeHolder: Search
 common.directive.searchModal:
   header: Search
   btnSearch.text: Search
@@ -1017,6 +1018,7 @@ eventType.com.armedia.acm.dashboard.widget.setAuthorizedRoles: Dashboard Widget 
 eventType.com.armedia.acm.ecm.file.document.viewed: Document Viewed
 eventType.com.armedia.acm.ecm.file.added: Document Uploaded
 eventType.com.armedia.acm.ecm.file.downloaded: Document Downloaded
+eventType.com.armedia.acm.ecm.file.moved.recyclebin: Document Moved To Recycle Bin
 eventType.com.armedia.acm.ecm.folder.downloaded: Folder Downloaded
 eventType.com.armedia.acm.ecm.file.updated: Document Updated
 eventType.com.armedia.acm.ecm.file.copied: Document Copied
@@ -1032,7 +1034,7 @@ eventType.com.armedia.acm.file.co_edit.document.saved: Document saved co-editing
 eventType.com.armedia.acm.functionalaccess.updated: Access Updated
 eventType.com.armedia.acm.login: User Login
 eventType.com.armedia.acm.logout: User Logout
-eventType.com.armedia.acm.object.assignee.change: Asignee Changed
+eventType.com.armedia.acm.object.assignee.change: Assignee Changed
 eventType.com.armedia.acm.object.participants.change: Participant Changed
 eventType.com.armedia.acm.objecthistory.created: Object History Created
 eventType.com.armedia.acm.personAssociation.created: Person Associated
