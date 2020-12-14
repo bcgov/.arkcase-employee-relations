@@ -218,6 +218,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/email/sender/allowdocuments"
       - "/api/{version}/plugin/admin/email/sender/allowattachments"
       - "/api/{version}/plugin/admin/email/sender/allowhyperlinks"
+      - "/api/{version}/service/ecm/file/isEditingEnabled"
       - "/api/{version}/service/dataaccess/rules"
       - "/api/{version}/users/groups/get"
       - "/api/{version}/users/groups"
@@ -1887,7 +1888,7 @@ application:
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
     applicationName: "arkcase"
-    helpUrl: "https://support.arkcase.com/hc/en-us/sections/360001477151-User-Guide"
+    helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
@@ -2028,6 +2029,8 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
+########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
+fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
 capture:
   #file extensions that are allowed to be captured
@@ -2067,7 +2070,7 @@ casefile.plugin:
   split.typesToCopy: "history,people,participants"
   merge.exclude_document_types: "case_file_xml,case_file"
   search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
-  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author_s:$[user]\"}
+  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author:$[user]\"}
   ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_s:$[user]\"}
   ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
   ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_s:CLOSED\"}
@@ -2327,11 +2330,11 @@ email:
   max-messages-per-poll: 1
   fixed-rate: 120000
   #set some existing email here for testing 
-  CASE_FILE.user: "no-such-mailbox%40armedia.com"
+  CASE_FILE.user: "no-such-mailbox%40arkcase.org"
   CASE_FILE.password:
-  COMPLAINT.user: "no-such-mailbox%40armedia.com"
+  COMPLAINT.user: "no-such-mailbox%40arkcase.org"
   COMPLAINT.password:
-  CONSULTATION.user: "no-such-mailbox%40armedia.com"
+  CONSULTATION.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.password:
   protocol: "imap"
   fetch.folder: "inbox"
@@ -2350,9 +2353,9 @@ email:
     encryption: "off"
     allowAttachments: true
     allowDocuments: true
-    host: "***REMOVED***"
+    host: ""
     allowHyperlinks: true
-    userFrom: "***REMOVED***"
+    userFrom: "no-such-mailbox@arkcase.org"
     port: 25
     username: "ann-acm"
     password: "AcMd3v$"
@@ -2426,10 +2429,10 @@ login.warning:
 outlook.exchange.integration:
   enable.autodiscovery: false
   enabled: false
-  system_user_email: "***REMOVED***"
-  system_user_email_password: "AcMd3v$"
-  client-access-server: "***REMOVED***"
-  system_user_id: "***REMOVED***"
+  system_user_email: ""
+  system_user_email_password: ""
+  client-access-server: ""
+  system_user_id: ""
   server.version: "Exchange2010_SP2"
   send.notification.from.system.user: true
   ################### MsOutlook Plugin Configuration (msOutlookPlugin.properties) ####################

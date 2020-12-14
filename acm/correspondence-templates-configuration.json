@@ -11,7 +11,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T13:32:46.701Z"
 }, {
   "@id" : "2",
@@ -26,7 +26,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:20.557Z"
 }, {
   "@id" : "3",
@@ -41,7 +41,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-07-01T12:07:59.263Z"
 }, {
   "@id" : "5",
@@ -56,7 +56,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-07-01T12:07:59.977Z"
 }, {
   "@id" : "6",
@@ -71,7 +71,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:22.237Z"
 }, {
   "@id" : "7",
@@ -86,7 +86,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:22.685Z"
 }, {
   "@id" : "8",
@@ -101,7 +101,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:23.717Z"
 }, {
   "@id" : "9",
@@ -116,7 +116,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-07-01T12:05:25.736Z"
 }, {
   "@id" : "10",
@@ -131,7 +131,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:24.584Z"
 }, {
   "@id" : "11",
@@ -146,7 +146,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:24.975Z"
 }, {
   "@id" : "12",
@@ -161,7 +161,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:25.737Z"
 }, {
   "@id" : "13",
@@ -176,7 +176,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:26.171Z"
 }, {
   "@id" : "14",
@@ -191,7 +191,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : false,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T11:50:26.549Z"
 }, {
   "@id" : "15",
@@ -206,7 +206,7 @@
   "dateFormatString" : "MM/dd/yyyy",
   "numberFormatString" : "###,###,###",
   "activated" : true,
-  "modifier" : "bthomas@armedia.com",
+  "modifier" : "bthomas@arkcase.org",
   "modified" : "2019-06-29T13:33:26.042Z"
 }, {
   "@id" : "16",
