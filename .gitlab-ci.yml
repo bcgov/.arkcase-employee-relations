@@ -50,18 +50,3 @@ build-snapshot:
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config.zip /from-arkcase/arkcase-config-core.zip' 
   only:
     - core
-    
-build-feature:
-  stage: build
-  except:
-    changes:
-      #- .gitlab-ci.yaml
-  script:
-    - apt-get update
-    - apt-get install -y zip sshpass
-    - ls -lh
-    - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config.zip .
-    - export SSHPASS=$SSHPASS_ARKCASE
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null arkcase@fileshare.armedia.com <<< $'put /root/arkcase-config.zip /from-arkcase/arkcase-config-core-email-feature.zip' 
-  only:
-    - email-templates-feature
