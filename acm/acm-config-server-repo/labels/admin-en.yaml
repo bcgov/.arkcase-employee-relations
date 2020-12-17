@@ -627,6 +627,14 @@ admin:
       defaultLabel: 'Default Locale:'
     applicationConfiguration:
       title: Application Configuration
+      organizationName.label: Organization Name
+      organizationAddress1.label: Organization Address1
+      organizationAddress2.label: Organization Address2
+      organizationCity.label: Organization City
+      organizationState.label: Organization State
+      organizationZip.label: Organization ZIP
+      organizationPhone.label: Organization Phone
+      organizationFax.label: Organization Fax
       defaultTimezone:
         label: Default timezone for the application (Use TZ database timezones)
         error: Not a valid timezone. Please use a timezone defined in the TZ database.
