@@ -625,6 +625,19 @@ admin:
     locale.config:
       title: Locale Configuration
       defaultLabel: 'Default Locale:'
+    applicationConfiguration:
+      title: Application Configuration
+      defaultTimezone:
+        label: Default timezone for the application (Use TZ database timezones)
+        error: Not a valid timezone. Please use a timezone defined in the TZ database.
+      apply.label: Apply
+    businessHours:
+      title: Business Hours Configuration
+      config:
+        labels:
+          endOfBusinessDayEnabled: Enable End of Business Day For Due Date Calculation
+          endOfBusinessDayTime: "Time of Day (format: HH:MM)"
+      apply.label: Apply
     version.config:
       title: Application Version
     labels.config:
