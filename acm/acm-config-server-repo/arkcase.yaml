@@ -1896,6 +1896,14 @@ application:
     # for saml environment override logoutUrl with '/sso/loggedout'
     logoutUrl: "/logout"
     defaultTimezone: "America/New_York"
+    organizationName: "Organization_Name"
+    organizationAddress1: "Organization_Address1"
+    organizationAddress2: "Organization_Address2"
+    organizationCity: "Organization_City"
+    organizationState: "Organization_State"
+    organizationZip: "Organization_Zip"
+    organizationPhone: "Organization_Phone"
+    organizationFax: "Organization_Fax"
 
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
