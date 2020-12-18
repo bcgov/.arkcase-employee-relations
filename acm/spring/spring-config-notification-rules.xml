@@ -442,5 +442,62 @@
             </value>
         </property>
     </bean>
+    
+    <bean id="documentAttached" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'documentAttached'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="documentAttachedLinked" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="executor" ref="documentLinkedSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'documentAttachedLinked'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="documentLinked" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="executor" ref="documentLinkedSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                          n.created >= :lastRunDate
+                      AND
+                        n.templateModelName = 'documentLinked'
+                  ]]>
+            </value>
+        </property>
+    </bean>
 
 </beans>

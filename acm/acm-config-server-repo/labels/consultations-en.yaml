@@ -76,6 +76,7 @@ consultations.comp.actions:
   buckslip.add.cancel: Cancel
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
+  sendEmail.button: Send Email
 consultations.comp.details:
   title: Full Consultation Details
   informSaved: Consultation details saved
