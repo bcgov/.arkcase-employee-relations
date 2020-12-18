@@ -72,6 +72,7 @@ cases.comp.actions:
   buckslip.add.cancel: Cancel
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
+  sendEmail.button: Send Email
 cases.comp.details:
   title: Full Case Details
   informSaved: Case details saved

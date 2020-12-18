@@ -696,6 +696,14 @@ core:
       selectLabel: Select Export Format
       pdf: PDF
       xml: XML
+    emailTemplates:
+      objectTypes:
+        all: "*(all types)"
+        casefile: Case File
+        complaint: Complaint
+        consultation: Consultation
+        file: File
+        task: Task
   userInfo:
     addedMenu:
       help: Help

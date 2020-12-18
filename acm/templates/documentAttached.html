@@ -284,10 +284,10 @@ body .grow269 img:hover {
                         <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="text-align: center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                           <tbody>
                             <tr>
-                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 16px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#000000;">You have received document(s) for ${documentAttached.parentType}:</span></td>
+                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 16px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#000000;">You have received document(s) for ${documentAttached.relatedObjectType?lower_case?cap_first}:</span></td>
                             </tr>
                             <tr>
-                              <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 25px; color: #ffffff; line-height: 40px; font-weight: 500; word-break: break-all;=" class="fontSmall2"><span style="color:#000000;">${documentAttached.parentNumber}</span></td>
+                              <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 25px; color: #ffffff; line-height: 40px; font-weight: 500; word-break: break-all;=" class="fontSmall2"><span style="color:#000000;">${documentAttached.relatedObjectNumber}</span></td>
                             </tr><tr>
                               <td width="100%" height="10"></td>
                             </tr>

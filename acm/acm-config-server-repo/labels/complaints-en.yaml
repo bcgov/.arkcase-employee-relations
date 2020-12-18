@@ -29,6 +29,7 @@ complaints.comp.actions:
   unsubscribe.button: Unsubscribe
   claim.button: Claim
   unclaim.button: Unclaim
+  sendEmail.button: Send Email
 complaints.comp.details:
   title: Details
   informSaved: Complaint details saved
