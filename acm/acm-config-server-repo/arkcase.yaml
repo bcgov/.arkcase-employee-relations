@@ -3025,3 +3025,6 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
+###################### formsType.json ######################
+formsTypeConfiguration:
+  formsType: "angular"
