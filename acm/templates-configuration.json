@@ -1,5 +1,4 @@
 [ {
-  "@id" : "1",
   "templateId" : "11",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -16,7 +15,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:08.927Z"
 }, {
-  "@id" : "2",
   "templateId" : "12",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -33,7 +31,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:12.089Z"
 }, {
-  "@id" : "3",
   "templateId" : "13",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -50,7 +47,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:12.515Z"
 }, {
-  "@id" : "4",
   "templateId" : "14",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -67,7 +63,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:13.492Z"
 }, {
-  "@id" : "5",
   "templateId" : "15",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -84,7 +79,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:06:33.511Z"
 }, {
-  "@id" : "6",
   "templateId" : "16",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -101,7 +95,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:10:15.486Z"
 }, {
-  "@id" : "7",
   "templateId" : "1",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -118,7 +111,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T15:57:55.914Z"
 }, {
-  "@id" : "8",
   "templateId" : "2",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -135,7 +127,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:16.310Z"
 }, {
-  "@id" : "9",
   "templateId" : "4",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -152,7 +143,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:17.314Z"
 }, {
-  "@id" : "10",
   "templateId" : "6",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -169,7 +159,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:09.524Z"
 }, {
-  "@id" : "11",
   "templateId" : "7",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -186,7 +175,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:33.005Z"
 }, {
-  "@id" : "12",
   "templateId" : "8",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -203,7 +191,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:10.634Z"
 }, {
-  "@id" : "13",
   "templateId" : "9",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -220,7 +207,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:07:11.178Z"
 }, {
-  "@id" : "14",
   "templateId" : "10",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
@@ -269,7 +255,6 @@
   "modifier" : "arkcase-admin@arkcase.org",
   "modified" : "2020-12-18T16:10:15.486Z"
 }, {
-  "@id" : "6",
   "templateId" : "19",
   "templateVersion" : "1.0",
   "templateVersionActive" : true,
