@@ -629,10 +629,56 @@ core:
       cancel: Cancel Document
       concur: Concur
       nonConcur: Non-Concur
+    taskPersonTypes:
+      contactPerson: Contact Person
+    caseTaskTypes:
+      ackLetter: Ack Letter
+      additionalExtensionReminder: Additional Extension Reminder
+      appealReceived: Appeal Received
+      appealUpheld: Appeal Upheld
+      appealGrantNew: Appeal Grant New
+      appealAssignInternally: Appeal Assign Internally
+      appealAssignToPresident'sOffice: Appeal Assign to President's Office
+      extension: Extension
+      caseClosed: Case Closed
+      clarificationNotification: Clarification Notification
+      clarificationReceived: Clarification Received
+      clarificationRequester: Clarification Requester
+      commercialList: Commercial List
+      commercialListA: Commercial List A
+      commercialListB: Commercial List B
+      commercialLists: Commercial Lists
+      consult: Consult
+      crossReference: Cross reference
+      depositNeeded: Deposit Needed
+      dodSearch: DOD Search
+      extensionReminder: Extension Reminder
+      headsUpNotification: Heads Up Notification
+      invoice: Invoice
+      noteToFile: Note to File
+      partialResponse: Partial Response
+      reqPhoneMemo: Req Phone Memo
+      resolvedByMediaRelations: Resolved by Media Relations
+      scanDocuments: Scan Documents
+      searchExtension: Search Extension
+      searchInternal: Search Internal
+      searchDelinquency: Search Delinquency
+      searchRecords: Search Records
+      searchReminder: Search Reminder
+      secondInvoice: Second Invoice
+      snapshotRequest: Snapshot Request
+      stagedReleaseExemptions: Staged Release Exemptions
+      stagedReleaseNoAdditionalRecord: Staged Release No Additional Record
+      stagedReleaseRedactions: Staged Release Redactions
+      stagedReleaseRedactions/exemptions: Staged Release Redactions/Exemptions
+      stagedReleaseWhollyReleased: Staged Release Wholly Released
+      thirdPartyNotification: Third Party Notification
+      thirdPartyExtension: Third Party Extension
+      thirdPartyObjection: Third Party Objection
     businessProcessTypes:
       acmDocumentWorkflow: ACM Document Workflow
       notDefinedWorkflow: Ad-Hoc Task
-      acmDocumentSingleTaskWorkflow: ACM Document Workflow - Single Task 
+      acmDocumentSingleTaskWorkflow: ACM Document Workflow - Single Task
     reportStates:
       draft: Draft
       inApproval: In Approval
