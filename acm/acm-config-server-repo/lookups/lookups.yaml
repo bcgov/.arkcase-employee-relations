@@ -744,6 +744,9 @@ lookupsConfiguration:
         COMPLAINT:
           value: "core.lookups.correspondence.complaint"
           order: 2
+        TASK:
+          value: "core.lookups.correspondence.task"
+          order: 3
       readonly: true
     emailTemplatesObjectTypes:
       entries:

@@ -108,6 +108,7 @@ core:
     correspondence:
       casefile: Case File
       complaint: Complaint
+      task: Task
     complaintPersonTypes:
       initiator: Initiator
       complaintant: Complaintant
