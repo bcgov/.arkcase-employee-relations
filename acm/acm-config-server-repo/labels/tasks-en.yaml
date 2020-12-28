@@ -195,6 +195,10 @@ tasks.newTask:
   documentsToReview.label: Documents to Review
   documentsToReview.uploadDocuments: Upload Documents
   businessProcessTypes.label: Business Process Type
+  caseTaskType.label: Task Type
+  caseTaskType.placeholder: Select Task Type
+  contactPersonAssociation.label: Contact Person
+  contactPersonAssociation.placeholder: Select Contact Person
   noSelectedReviewDocsErrorMsg: Please select at least one document in order to use
     the selected business process type.
   noSelectedReviewDocsWorkflowErrorMsg: Please select a business process in order
