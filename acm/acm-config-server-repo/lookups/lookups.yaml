@@ -2394,8 +2394,8 @@ lookupsConfiguration:
           value: core.lookups.caseTaskTypes.appealAssignInternally
           description: Appea to be handled internally
           order: 6
-        Appeal Assign to President's Office:
-          value: core.lookups.caseTaskTypes.appealAssignToPresident'sOffice
+        Appeal Assign to Presidents Office:
+          value: core.lookups.caseTaskTypes.appealAssignToPresidentsOffice
           description: Appeal assigned to President's Office
           order: 7
         Extension:
@@ -2518,8 +2518,8 @@ lookupsConfiguration:
           value: core.lookups.caseTaskTypes.stagedReleaseRedactions
           description: Staged Release with Redactions
           order: 38
-        Staged Release Redactions/Exemptions:
-          value: core.lookups.caseTaskTypes.stagedReleaseRedactions/exemptions
+        Staged Release Redactions or Exemptions:
+          value: core.lookups.caseTaskTypes.stagedReleaseRedactionsOrExemptions
           description: Staged Release with Redactions/Exemptions
           order: 39
         Staged Release Wholly Released:
