@@ -2355,7 +2355,7 @@ lookupsConfiguration:
         DOC_REPO:
           value: "core.lookups.taskParentTypes.doc_repo"
           order: 6
-      readonly: true   
+      readonly: true
     reportExportTypes:
       entries:
         pdf:
@@ -2365,7 +2365,182 @@ lookupsConfiguration:
           value: "core.lookups.reportExportTypes.xml"
           order: 2
       readonly: true
-          
+    taskPersonTypes:
+      entries:
+        Contact Person:
+          value: core.lookups.taskPersonTypes.contactPerson
+          order: 1
+      readonly: true
+    caseTaskTypes:
+      entries:
+        Ack Letter:
+          value: core.lookups.caseTaskTypes.ackLetter
+          description: Ack Letter sent to requester (default or special)
+          order: 1
+        Additional Extension Reminder:
+          value: core.lookups.caseTaskTypes.additionalExtensionReminder
+          description: Additional Extension Reminder action
+          order: 2
+        Appeal Received:
+          value: core.lookups.caseTaskTypes.appealReceived
+          description: Appeal Received
+          order: 3
+        Appeal Upheld:
+          value: core.lookups.caseTaskTypes.appealUpheld
+          description: Original Determination Upheld
+          order: 4
+        Appeal Grant New:
+          value: core.lookups.caseTaskTypes.appealGrantNew
+          description: Info not previously retrieved for request now granted
+          order: 5
+        Appeal Assign Internally:
+          value: core.lookups.caseTaskTypes.appealAssignInternally
+          description: Appea to be handled internally
+          order: 6
+        Appeal Assign to Presidents Office:
+          value: core.lookups.caseTaskTypes.appealAssignToPresidentsOffice
+          description: Appeal assigned to President's Office
+          order: 7
+        Extension:
+          value: core.lookups.caseTaskTypes.extension
+          order: 8
+        Case Closed:
+          value: core.lookups.caseTaskTypes.caseClosed
+          order: 9
+        Clarification Notification:
+          value: core.lookups.caseTaskTypes.clarificationNotification
+          description: Requester's clarification conveyed to Departments
+          order: 10
+        Clarification Received:
+          value: core.lookups.caseTaskTypes.clarificationReceived
+          description: Clarification received from requester - email to Department
+          order: 11
+        Clarification Requester:
+          value: core.lookups.caseTaskTypes.clarificationRequester
+          description: Need clarification from requester
+          order: 12
+        Commercial List:
+          value: core.lookups.caseTaskTypes.commercialList
+          order: 13
+        Commercial List A:
+          value: core.lookups.caseTaskTypes.commercialListA
+          description: Commercial List Letter A
+          order: 14
+        Commercial List B:
+          value: core.lookups.caseTaskTypes.commercialListB
+          description: Commercial List Letter B
+          order: 15
+        Commercial Lists:
+          value: core.lookups.caseTaskTypes.commercialLists
+          description: Letter to Requester re Commercial Lists Affidavit
+          order: 16
+        Consult:
+          value: core.lookups.caseTaskTypes.consult
+          order: 17
+        Cross reference:
+          value: core.lookups.caseTaskTypes.crossReference
+          description: Info that was previously denied now granted
+          order: 18
+        Deposit Needed:
+          value: core.lookups.caseTaskTypes.depositNeeded
+          description: Deposit needed upfront from requester
+          order: 19
+        DOD Search:
+          value: core.lookups.caseTaskTypes.dodSearch
+          description: Search E-mail for DOD Request
+          order: 20
+        Extension Reminder:
+          value: core.lookups.caseTaskTypes.extensionReminder
+          description: Extension reminder for 15 day deadline
+          order: 21
+        Heads Up Notification:
+          value: core.lookups.caseTaskTypes.headsUpNotification
+          description: Heads Up Notice of request for records (Media usually)
+          order: 22
+        Invoice:
+          value: core.lookups.caseTaskTypes.invoice
+          description: Fee Invoice sent to requestor
+          order: 23
+        Note to File:
+          value: core.lookups.caseTaskTypes.noteToFile
+          description: Note to File
+          order: 24
+        Partial Response:
+          value: core.lookups.caseTaskTypes.partialResponse
+          description: Partial response received for search assignment
+          order: 25
+        Req Phone Memo:
+          value: core.lookups.caseTaskTypes.reqPhoneMemo
+          description: Requester phone call memorialization
+          order: 26
+        Resolved by Media Relations:
+          value: core.lookups.caseTaskTypes.resolvedByMediaRelations
+          description: Request resolved my Media Relations directly
+          order: 27
+        Scan Documents:
+          value: core.lookups.caseTaskTypes.scanDocuments
+          description: Scan Records
+          order: 28
+        Search Extension:
+          value: core.lookups.caseTaskTypes.searchExtension
+          description: Extension granted to search office
+          order: 29
+        Search Internal:
+          value: core.lookups.caseTaskTypes.searchInternal
+          description: Where In-house files (coaching contract etc) Kept
+          order: 30
+        Search Delinquency:
+          value: core.lookups.caseTaskTypes.searchDelinquency
+          description: Search offices delinquent, refer to OPR Dir.
+          order: 31
+        Search Records:
+          value: core.lookups.caseTaskTypes.searchRecords
+          description: Department letter sent for record search
+          order: 32
+        Search Reminder:
+          value: core.lookups.caseTaskTypes.searchReminder
+          description: Reminder to division for record search
+          order: 33
+        Second Invoice:
+          value: core.lookups.caseTaskTypes.secondInvoice
+          description: Second attempt to invoice requester
+          order: 34
+        Snapshot Request:
+          value: core.lookups.caseTaskTypes.snapshotRequest
+          description: Department requests snapshot
+          order: 35
+        Staged Release Exemptions:
+          value: core.lookups.caseTaskTypes.stagedReleaseExemptions
+          description: Staged Release with Exemptions
+          order: 36
+        Staged Release No Additional Record:
+          value: core.lookups.caseTaskTypes.stagedReleaseNoAdditionalRecord
+          description: Staged Release - No Additional Records
+          order: 37
+        Staged Release Redactions:
+          value: core.lookups.caseTaskTypes.stagedReleaseRedactions
+          description: Staged Release with Redactions
+          order: 38
+        Staged Release Redactions or Exemptions:
+          value: core.lookups.caseTaskTypes.stagedReleaseRedactionsOrExemptions
+          description: Staged Release with Redactions/Exemptions
+          order: 39
+        Staged Release Wholly Released:
+          value: core.lookups.caseTaskTypes.stagedReleaseWhollyReleased
+          description: Staged Release - Wholly Release
+          order: 40
+        Third Party Notification:
+          value: core.lookups.caseTaskTypes.thirdPartyNotification
+          description: Courtesy Notification to Third Parties
+          order: 41
+        Third Party Extension:
+          value: core.lookups.caseTaskTypes.thirdPartyExtension
+          description: 3rd Party Needs More Time to Review
+          order: 42
+        Third Party Objection:
+          value: core.lookups.caseTaskTypes.thirdPartyObjection
+          description: Legal Notification to Third Party
+          order: 43
 
 
          

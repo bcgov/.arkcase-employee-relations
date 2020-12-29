@@ -954,7 +954,7 @@ eventType.com.armedia.acm.services.transcribe.updated: Transcribe service Update
 eventType.com.armedia.acm.services.transcribe.queued: Transcribe service Queued
 eventType.com.armedia.acm.services.transcribe.processing: Transcribe service Processing
 eventType.com.armedia.acm.folder.participant.changed: Folder participant changed       
-eventType.com.armedia.acm.app.task.complete: Task Complete
+eventType.com.armedia.acm.app.task.complete: Task Completed
 eventType.com.armedia.acm.app.task.create: Task Created
 eventType.com.armedia.acm.app.task.delete: Task Deleted
 eventType.com.armedia.acm.app.task.findById: Find Task By Id
