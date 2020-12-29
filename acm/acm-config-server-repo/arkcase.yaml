@@ -1152,6 +1152,15 @@ report:
         - ROLE_ADMINISTRATOR
         - ROLE_SUPERVISOR
         - ROLE_CONTRIBUTOR
+    ################### (acm-reports-parameters.json) ###################
+    reportsParametersConfiguration:
+      description: >-
+        The 'dateSearchType' property accepts values: 'FISCAL_YEAR' and 'DATE_RANGE'.
+        If none is specified 'DATE_RANGE' is used as default.
+      dateSearchTypes:
+        CASE_SUMMARY: DATE_RANGE
+        COMPLAINT_DISPOSITION_COUNT: DATE_RANGE
+        COMPLAINT_REPORT: DATE_RANGE
 ################### Activiti Configuration (activiti.properties) ####################
 activiti:
   job.executor.activate: true
@@ -3025,7 +3034,7 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
-###################### formsType.json ######################
+##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
 #################### (holidayFile.json) ####################
