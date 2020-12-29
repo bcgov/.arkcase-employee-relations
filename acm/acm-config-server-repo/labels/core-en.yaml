@@ -638,7 +638,7 @@ core:
       appealUpheld: Appeal Upheld
       appealGrantNew: Appeal Grant New
       appealAssignInternally: Appeal Assign Internally
-      appealAssignToPresident'sOffice: Appeal Assign to President's Office
+      appealAssignToPresidentsOffice: Appeal Assign to President's Office
       extension: Extension
       caseClosed: Case Closed
       clarificationNotification: Clarification Notification
@@ -670,7 +670,7 @@ core:
       stagedReleaseExemptions: Staged Release Exemptions
       stagedReleaseNoAdditionalRecord: Staged Release No Additional Record
       stagedReleaseRedactions: Staged Release Redactions
-      stagedReleaseRedactions/exemptions: Staged Release Redactions/Exemptions
+      stagedReleaseRedactionsOrExemptions: Staged Release Redactions/Exemptions
       stagedReleaseWhollyReleased: Staged Release Wholly Released
       thirdPartyNotification: Third Party Notification
       thirdPartyExtension: Third Party Extension
