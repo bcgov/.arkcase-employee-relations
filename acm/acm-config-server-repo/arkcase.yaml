@@ -1976,7 +1976,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.smtp.event.received\":\"' from ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
-CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.due.date.changed, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
+CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.dueDateChanged, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
