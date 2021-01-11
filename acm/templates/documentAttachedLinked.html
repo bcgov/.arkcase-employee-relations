@@ -284,10 +284,10 @@ body .grow269 img:hover {
                         <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="text-align: center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                           <tbody>
                             <tr>
-                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 16px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#000000;">You have received document(s) for ${documentAttachedLinked.parentType?lower_case?cap_first}:</span></td>
+                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 16px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#000000;">You have received document(s) for ${documentAttachedLinked.objectType?lower_case?cap_first}:</span></td>
                             </tr>
                             <tr>
-                              <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 25px; color: #ffffff; line-height: 40px; font-weight: 500; word-break: break-all;=" class="fontSmall2"><span style="color:#000000;">${documentAttachedLinked.parentNumber}</span></td>
+                              <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 25px; color: #ffffff; line-height: 40px; font-weight: 500; word-break: break-all;=" class="fontSmall2"><span style="color:#000000;">${documentAttachedLinked.objectNumber}</span></td>
                             </tr><tr>
                               <td width="100%" height="10"></td>
                             </tr>
@@ -299,15 +299,17 @@ body .grow269 img:hover {
                               <td align="center"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder">
                                 <table border="0" cellpadding="0" cellspacing="0" align="center" class="">
                                   <tbody>
-                                    <#list documentAttachedLinked.fileIds as fileId>
+                                    <#list documentAttachedLinked.links as url>
                                     <tr>
                                       <td align="center" height="48" style="border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-left: 30px; padding-right: 30px; font-weight: 400; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; color: #ffffff; border: 1px solid #126da7; font-size: 14px; background-color: #126da7;" bgcolor="#126da7">
-                                        <a href="${baseURL}/api/latest/plugin/ecm/download?ecmFileId=${fileId?c}&version=${documentAttachedLinked.fileVersion}&acm_email_ticket=${documentAttachedLinked.tokens[fileId?counter - 1]}" style="color: #ffffff; font-size: 14px; text-decoration: none; line-height: 34px;">Open Document</a>
+                                        <a href="${baseURL}/api/latest/plugin/ecm/download?${url}" style="color: #ffffff; font-size: 14px; text-decoration: none; line-height: 34px;">Open Document</a>
                                       </td>
                                     </tr>
+									</#list>
+									<#list documentAttachedLinked.fileNames as fileName>
                                     <tr>
                                       <td>
-                                        ${documentAttachedLinked.fileNames[fileId?counter - 1]}
+                                        ${fileName}
                                       </td>
                                     </tr>
                                     </#list>

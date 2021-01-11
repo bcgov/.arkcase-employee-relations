@@ -295,6 +295,7 @@ organizations.comp.cases:
     status: Status
     assignee: Assignee
     modified: Modified
+    caseNumber: Case Number
 organizations.comp.consultations:
   title: Consultations
   objectType.label: Consultation
