@@ -43,6 +43,8 @@ notifications:
   participants:
     added: "Participants added in ${typeLabel}: ${nameLabel}"
     deleted: "Participants deleted from ${typeLabel}: ${nameLabel}"
+    user:
+      added: "Your user was added as a participant on ${nameLabel}"
   acmdocumentsingletask.workflow: "%s - ACM Document Workflow - Single Task" 
   email:
     mentions: "${userLabel} mentioned you in ${typeLabel}: ${nameLabel}"
