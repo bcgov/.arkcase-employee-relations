@@ -3025,7 +3025,7 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
-###################### formsType.json ######################
+##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
 #################### (holidayFile.json) ####################
@@ -3062,3 +3062,149 @@ holidayConfiguration:
     "2022-11-24": "Thanksgiving Day"
     "2022-11-25": "Native American Heritage Day"
     "2022-12-26": "Christmas Day"
+############### (acmObjectDiffSettings.json) ###############
+objectDiffConfiguration:
+  com-armedia-acm-plugins-person-model-Person:
+    className: com.armedia.acm.plugins.person.model.Person
+    name: person
+    displayExpression: givenName + ' ' + familyName
+    id:
+      - id
+    includeFields:
+      - title
+      - company
+      - status
+      - givenName
+      - middleName
+      - familyName
+      - hairColor
+      - eyeColor
+      - heightInInches
+      - weightInPounds
+      - dateOfBirth
+      - placeOfBirth
+      - dateMarried
+      - details
+      - restricted
+      - addresses
+      - participants
+      - contactMethods
+      - personAliases
+      - identifications
+      - securityTags
+      - defaultPhone
+      - defaultEmail
+      - defaultAddress
+      - defaultUrl
+      - defaultAlias
+      - defaultIdentification
+      - defaultPicture
+  com-armedia-acm-plugins-addressable-model-PostalAddress:
+    className: com.armedia.acm.plugins.addressable.model.PostalAddress
+    name: address
+    displayExpression: 'country + '', '' + state'
+    id:
+      - id
+    includeFields:
+      - status
+      - type
+      - streetAddress
+      - streetAddress2
+      - city
+      - state
+      - zip
+      - country
+  com-armedia-acm-plugins-person-model-Identification:
+    className: com.armedia.acm.plugins.person.model.Identification
+    name: identification
+    displayExpression: identificationNumber + ' ' + identificationType
+    id:
+      - identificationID
+    includeFields:
+      - identificationNumber
+      - identificationIssuer
+      - identificationType
+      - identificationYearIssued
+  com-armedia-acm-plugins-addressable-model-ContactMethod:
+    className: com.armedia.acm.plugins.addressable.model.ContactMethod
+    name: contactMethod
+    displayExpression: value + ' ' + subType
+    id:
+      - id
+    includeFields:
+      - value
+      - type
+      - subType
+      - description
+  com-armedia-acm-plugins-person-model-PersonAlias:
+    className: com.armedia.acm.plugins.person.model.PersonAlias
+    name: alias
+    displayExpression: aliasValue + ' ' + aliasType
+    id:
+      - id
+    includeFields:
+      - aliasType
+      - aliasValue
+      - description
+  com-armedia-acm-plugins-person-model-Organization:
+    className: com.armedia.acm.plugins.person.model.Organization
+    name: organization
+    displayExpression: organizationType + ' ' + organizationValue
+    id:
+      - organizationId
+    includeFields:
+      - organizationType
+      - organizationValue
+      - status
+      - details
+      - restricted
+      - addresses
+      - participants
+      - identifications
+      - contactMethods
+      - defaultPhone
+      - defaultEmail
+      - defaultAddress
+      - defaultUrl
+      - defaultFax
+      - defaultIdentification
+  com-armedia-acm-plugins-person-model-PersonAssociation:
+    className: com.armedia.acm.plugins.person.model.PersonAssociation
+    name: personAssociation
+    displayExpression: person.givenName + ' ' + person.familyName + ' - ' + personType
+    id:
+      - id
+    includeFields:
+      - person
+      - personType
+      - personDescription
+  com-armedia-acm-plugins-person-model-OrganizationAssociation:
+    className: com.armedia.acm.plugins.person.model.OrganizationAssociation
+    name: organizationAssociation
+    displayExpression: organization.organizationValue + ' - ' + associationType
+    id:
+      - id
+    includeFields:
+      - organization.organizationValue
+      - associationType
+      - description
+  com-armedia-acm-plugins-complaint-model-Complaint:
+    className: com.armedia.acm.plugins.complaint.model.Complaint
+    name: complaint
+    displayExpression: complaintType + ' ' + complaintTitle
+    id:
+      - complaintId
+    includeFields:
+      - complaintNumber
+      - complaintType
+      - priority
+      - complaintTitle
+      - details
+      - status
+      - dueDate
+      - childObjects
+      - personAssociations
+      - organizationAssociations
+      - participants
+      - addresses
+      - defaultAddress
