@@ -64,13 +64,13 @@ release_start:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
+    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION -Dmaven.wagon.http.ssl.insecure=true
     # foia
     - git checkout foia
-    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
+    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION -Dmaven.wagon.http.ssl.insecure=true
     # privacy
     - git checkout privacy
-    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION
+    - mvn -B gitflow:release-start -DreleaseVersion=$RELEASE_VERSION -DcommitDevelopmentVersionAtStart=true -DpushRemote=true -DdevelopmentVersion=$DEVELOP_NEW_VERSION -Dmaven.wagon.http.ssl.insecure=true
     
 
 release_candidate_X:
@@ -101,21 +101,21 @@ release_candidate_X:
     - git push origin HEAD:refs/tags/core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # foia
     - git checkout release-foia/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
     # privacy
     - git checkout release-privacy/$RELEASE_VERSION
     - git push origin HEAD:refs/tags/privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION-$RELEASE_CANDIDATE_SUFFIX'.zip' 
 
 release:
@@ -141,27 +141,27 @@ release:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     - git checkout master-core
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout foia
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     - git checkout master-foia
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
-    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
+    - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' -Dmaven.wagon.http.ssl.insecure=true
     # privacy
     - git checkout privacy
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     - git checkout master-privacy
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
 
 start_support_branch:
@@ -174,13 +174,13 @@ start_support_branch:
     - git config --global user.email "$GIT_USERMAIL"
     - git remote set-url origin "$GIT_URL"
     # core
-    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=core-$RELEASE_TAG
+    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=core-$RELEASE_TAG -Dmaven.wagon.http.ssl.insecure=true
     # foia
     - git checkout foia
-    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=foia-$RELEASE_TAG
+    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=foia-$RELEASE_TAG -Dmaven.wagon.http.ssl.insecure=true
     # privacy
     - git checkout privacy
-    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=privacy-$RELEASE_TAG
+    - mvn -B gitflow:support-start -DpushRemote=true -DtagName=privacy-$RELEASE_TAG -Dmaven.wagon.http.ssl.insecure=true
     
 start_hotfix:
   stage: release
@@ -193,15 +193,15 @@ start_hotfix:
     - git remote set-url origin "$GIT_URL"
     # core
     - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/core-$HOTFIX_SUPPORT_VERSION
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/ core-$HOTFIX_SUPPORT_VERSION -Dmaven.wagon.http.ssl.insecure=true
     # foia
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - git checkout foia
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-foia/foia-$HOTFIX_SUPPORT_VERSION
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-foia/foia-$HOTFIX_SUPPORT_VERSION -Dmaven.wagon.http.ssl.insecure=true
     # privacy
     - git checkout support-privacy/privacy-$HOTFIX_SUPPORT_VERSION
     - git checkout privacy
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-privacy/privacy-$HOTFIX_SUPPORT_VERSION
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-privacy/privacy-$HOTFIX_SUPPORT_VERSION -Dmaven.wagon.http.ssl.insecure=true
 
 release_hotfix:
   stage: release
@@ -228,24 +228,24 @@ release_hotfix:
     # core
     - git checkout hotfix-core/support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
-    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
+    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-core/core-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true -Dmaven.wagon.http.ssl.insecure=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-core-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-core-'$RELEASE_VERSION'.zip' 
     # foia
     - git checkout hotfix-foia/support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
-    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
+    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-foia/foia-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true -Dmaven.wagon.http.ssl.insecure=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-foia-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-foia-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-foia -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-foia-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-foia-'$RELEASE_VERSION'.zip' 
     # privacy
     - git checkout hotfix-privacy/support-privacy/privacy-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION
     - git checkout support-privacy/privacy-$HOTFIX_SUPPORT_VERSION
-    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-privacy/privacy-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true
+    - mvn -B gitflow:hotfix-finish -DpushRemote=true -DhotfixVersion=support-privacy/privacy-$HOTFIX_SUPPORT_VERSION/$RELEASE_VERSION -DskipTestProject=true -DskipMergeDevBranch=true -Dmaven.wagon.http.ssl.insecure=true
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-privacy-$RELEASE_VERSION.zip .
-    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION
+    - mvn deploy:deploy-file -Dfile=/root/arkcase-config-privacy-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-privacy -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
     - sshpass -e sftp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SFTP_USER@$SFTP_SERVER <<< $'put /root/arkcase-config-privacy-'$RELEASE_VERSION'.zip /from-arkcase/arkcase-config-privacy-'$RELEASE_VERSION'.zip' 
