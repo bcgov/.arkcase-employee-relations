@@ -1,6 +1,5 @@
 [
     {
-        "@id" : "1",
         "fieldId" : "initiatorGivenName",
         "correspondenceFieldValue" : "personAssociations.?[personType == 'Initiator'][0].person.givenName",
         "emailFieldValue" : null,
@@ -8,7 +7,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "2",
         "fieldId" : "personFirstName",
         "correspondenceFieldValue" : "personAssociations[0].person.givenName",
         "emailFieldValue" : null,
@@ -16,7 +14,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "3",
         "fieldId" : "personId",
         "correspondenceFieldValue" : "personAssociations[0].person.id",
         "emailFieldValue" : null,
@@ -24,7 +21,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "4",
         "fieldId" : "caseNumber",
         "correspondenceFieldValue" : "caseNumber",
         "emailFieldValue" : null,
@@ -32,7 +28,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "5",
         "fieldId" : "caseTitle",
         "correspondenceFieldValue" : "title",
         "emailFieldValue" : null,
@@ -40,7 +35,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "6",
         "fieldId" : "personFirstName",
         "correspondenceFieldValue" : "personAssociations[0].person.givenName",
         "emailFieldValue" : null,
@@ -48,7 +42,6 @@
         "fieldObjectType" : "COMPLAINT"
     },
     {
-        "@id" : "7",
         "fieldId" : "personId",
         "correspondenceFieldValue" : "personAssociations[0].person.id",
         "emailFieldValue" : null,
@@ -56,7 +49,6 @@
         "fieldObjectType" : "COMPLAINT"
     },
     {
-        "@id" : "8",
         "fieldId" : "caseNumber",
         "correspondenceFieldValue" : "caseNumber",
         "emailFieldValue" : null,
@@ -64,7 +56,6 @@
         "fieldObjectType" : "COMPLAINT"
     },
     {
-        "@id" : "9",
         "fieldId" : "caseTitle",
         "correspondenceFieldValue" : "title",
         "emailFieldValue" : null,
@@ -72,7 +63,6 @@
         "fieldObjectType" : "COMPLAINT"
     },
     {
-        "@id" : "10",
         "fieldId" : "caseDetailsSummary",
         "correspondenceFieldValue" : "caseDetailsSummary",
         "emailFieldValue" : null,
@@ -80,7 +70,6 @@
         "fieldObjectType" : "CASE_FILE"
     },
     {
-        "@id" : "11",
         "fieldId" : "details",
         "correspondenceFieldValue" : "details",
         "emailFieldValue" : null,
