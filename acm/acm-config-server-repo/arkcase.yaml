@@ -1900,6 +1900,7 @@ application:
     displayUserName: "userName"
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
+    basePortalUrl: 
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     alfrescoUserIdLdapAttribute: "samAccountName"
