@@ -1,79 +1,79 @@
 [
     {
-        "fieldId" : "initiatorGivenName",
-        "correspondenceFieldValue" : "personAssociations.?[personType == 'Initiator'][0].person.givenName",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Initiator First Name",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "initiatorGivenName",
+        "correspondenceFieldValue": "personAssociations.?[personType == 'Initiator'][0].person.givenName",
+        "emailFieldValue": null,
+        "fieldDescription": "Initiator First Name",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "personFirstName",
-        "correspondenceFieldValue" : "personAssociations[0].person.givenName",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Person First Name",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "personFirstName",
+        "correspondenceFieldValue": "personAssociations[0].person.givenName",
+        "emailFieldValue": null,
+        "fieldDescription": "Person First Name",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "personId",
-        "correspondenceFieldValue" : "personAssociations[0].person.id",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Person Id",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "personId",
+        "correspondenceFieldValue": "personAssociations[0].person.id",
+        "emailFieldValue": null,
+        "fieldDescription": "Person Id",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "caseNumber",
-        "correspondenceFieldValue" : "caseNumber",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Case Number",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "caseNumber",
+        "correspondenceFieldValue": "caseNumber",
+        "emailFieldValue": null,
+        "fieldDescription": "Case Number",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "caseTitle",
-        "correspondenceFieldValue" : "title",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Case Title",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId":"caseTitle",
+        "correspondenceFieldValue": "title",
+        "emailFieldValue": null,
+        "fieldDescription": "Case Title",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "personFirstName",
-        "correspondenceFieldValue" : "personAssociations[0].person.givenName",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Person First Name",
-        "fieldObjectType" : "COMPLAINT"
+        "fieldId": "personFirstName",
+        "correspondenceFieldValue": "personAssociations[0].person.givenName",
+        "emailFieldValue": null,
+        "fieldDescription": "Person First Name",
+        "fieldObjectType": "COMPLAINT"
     },
     {
-        "fieldId" : "personId",
-        "correspondenceFieldValue" : "personAssociations[0].person.id",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Person Id",
-        "fieldObjectType" : "COMPLAINT"
+        "fieldId": "personId",
+        "correspondenceFieldValue": "personAssociations[0].person.id",
+        "emailFieldValue": null,
+        "fieldDescription": "Person Id",
+        "fieldObjectType": "COMPLAINT"
     },
     {
-        "fieldId" : "caseNumber",
-        "correspondenceFieldValue" : "caseNumber",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Case Number",
-        "fieldObjectType" : "COMPLAINT"
+        "fieldId": "caseNumber",
+        "correspondenceFieldValue": "caseNumber",
+        "emailFieldValue": null,
+        "fieldDescription": "Case Number",
+        "fieldObjectType": "COMPLAINT"
     },
     {
-        "fieldId" : "caseTitle",
-        "correspondenceFieldValue" : "title",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Case Title",
-        "fieldObjectType" : "COMPLAINT"
+        "fieldId": "caseTitle",
+        "correspondenceFieldValue": "title",
+        "emailFieldValue": null,
+        "fieldDescription": "Case Title",
+        "fieldObjectType": "COMPLAINT"
     },
     {
-        "fieldId" : "caseDetailsSummary",
-        "correspondenceFieldValue" : "caseDetailsSummary",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Case Details Summary",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "caseDetailsSummary",
+        "correspondenceFieldValue": "caseDetailsSummary",
+        "emailFieldValue": null,
+        "fieldDescription": "Case Details Summary",
+        "fieldObjectType": "CASE_FILE"
     },
     {
-        "fieldId" : "details",
-        "correspondenceFieldValue" : "details",
-        "emailFieldValue" : null,
-        "fieldDescription" : "Details",
-        "fieldObjectType" : "CASE_FILE"
+        "fieldId": "details",
+        "correspondenceFieldValue": "details",
+        "emailFieldValue": null,
+        "fieldDescription": "Details",
+        "fieldObjectType": "CASE_FILE"
     }
 ]
