@@ -975,7 +975,8 @@ admin:
     mergefields.deleteMergeFields: Delete
     mergefields.grid:
       fieldId: ID
-      fieldValue: Value
+      correspondenceFieldValue: Correspondance Value
+      emailFieldValue: Email Value
       fieldDescription: Description
     mergefields.version.grid:
       mergingVersion: Version
@@ -987,7 +988,8 @@ admin:
       btnCancel.text: Cancel
     mergefields.addModal:
       fieldId: Field Id
-      fieldValue: Field Value
+      correspondenceFieldValue: Correspondence Field Value
+      emailFieldValue: Email Field Value
       fieldDescription: Field Description
       objectType: Object Type
       mergeFieldForm: Merge Field Configuration
