@@ -846,6 +846,110 @@ lookupsConfiguration:
           value: "core.lookups.identificationTypes.birthCertificate"  
           order: 4    
       readonly: true
+    timeZones:
+      entries:
+        New York: 
+          value: "core.lookups.timeZones.New_York"  
+          order: 1
+        Anguilla:
+          value: "core.lookups.timeZones.Anguilla"  
+          order: 2  
+        Anchorage:
+          value: "core.lookups.timeZones.Anchorage"  
+          order: 3
+        Antigua:
+          value: "core.lookups.timeZones.Antigua"  
+          order: 4
+        Adak:
+          value: "core.lookups.timeZones.Adak"  
+          order: 5  
+        Araguaina:
+          value: "core.lookups.timeZones.Araguaina"  
+          order: 6 
+        Cambridge Bay:
+          value: "core.lookups.timeZones.Cambridge_Bay"  
+          order: 7
+        Chicago:
+          value: "core.lookups.timeZones.Chicago"  
+          order: 8
+        Denver:
+          value: "core.lookups.timeZones.Denver"  
+          order: 9
+        Dawson:
+          value: "core.lookups.timeZones.Dawson"  
+          order: 10
+        Dawson Creek:
+          value: "core.lookups.timeZones.Dawson_Creek"  
+          order: 11
+        Detroit:
+          value: "core.lookups.timeZones.Detroit"  
+          order: 12
+        Edmonton:
+          value: "core.lookups.timeZones.Edmonton"  
+          order: 13  
+        Fort Wayne:
+          value: "core.lookups.timeZones.Fort_Wayne"  
+          order: 14  
+        Glace Bay:
+          value: "core.lookups.timeZones.Glace_Bay"  
+          order: 15  
+        Godthab:
+          value: "core.lookups.timeZones.Godthab"  
+          order: 16   
+        Goose Bay:
+          value: "core.lookups.timeZones.Goose_Bay"  
+          order: 17  
+        Grenada:
+          value: "core.lookups.timeZones.Grenada"  
+          order: 18  
+        Indianapolis:
+          value: "core.lookups.timeZones.Indianapolis"  
+          order: 19
+        Monticello:
+          value: "core.lookups.timeZones.Monticello"  
+          order: 20
+        Los Angeles:
+          value: "core.lookups.timeZones.Los_Angeles"  
+          order: 21
+        Marigot:
+          value: "core.lookups.timeZones.Marigot"  
+          order: 22  
+        Mexico City:
+          value: "core.lookups.timeZones.Mexico_City"  
+          order: 23
+        Monterrey:
+          value: "core.lookups.timeZones.Monterrey"  
+          order: 24  
+        Montreal:
+          value: "core.lookups.timeZones.Montreal"  
+          order: 25
+        Nassau:
+          value: "core.lookups.timeZones.Nassau"  
+          order: 26  
+        Nome:
+          value: "core.lookups.timeZones.Nome"  
+          order: 27 
+        Center:
+          value: "core.lookups.timeZones.Center"  
+          order: 28
+        New Salem:
+          value: "core.lookups.timeZones.New_Salem"  
+          order: 29
+        Phoenix:
+          value: "core.lookups.timeZones.Phoenix"  
+          order: 30
+        Thunder Bay:
+          value: "core.lookups.timeZones.Thunder_Bay"  
+          order: 31
+        Toronto:
+          value: "core.lookups.timeZones.Toronto"  
+          order: 32
+        Vancouver:
+          value: "core.lookups.timeZones.Vancouver"  
+          order: 33        
+        Winnipeg:
+          value: "core.lookups.timeZones.Winnipeg"  
+          order: 34 
     countries:
       entries:
         AF:
