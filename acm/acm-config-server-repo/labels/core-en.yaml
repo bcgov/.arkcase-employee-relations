@@ -202,6 +202,42 @@ core:
       inapproval: In Approval
       closed: Closed
       deleted: Deleted
+    timeZones:
+      New_York: America/New_York
+      Anguilla: America/Anguilla
+      Anchorage: America/Anchorage
+      Antigua: America/Antigua
+      Adak: America/Adak
+      Araguaina: America/Araguaina
+      Cambridge_Bay: America/Cambridge_Bay
+      Chicago: America/Chicago
+      Denver: America/Denver
+      Dawson: America/Dawson
+      Dawson_Creek: America/Dawson_Creek
+      Detroit: America/Detroit
+      Edmonton: America/Edmonton
+      Fort_Wayne: America/Fort_Wayne
+      Glace_Bay: America/Glace_Bay
+      Godthab: America/Godthab
+      Goose_Bay: America/Goose_Bay
+      Grenada: America/Grenada
+      Indianapolis: America/Indianapolis
+      Monticello: America/Kentucky/Monticello
+      Louisville: America/Louisville
+      Los_Angeles: America/Los_Angeles
+      Marigot: America/Marigot
+      Mexico_City: America/Mexico_City
+      Monterrey: America/Monterrey
+      Montreal: America/Montreal
+      Nassau: America/Nassau
+      Nome: America/Nome
+      Center: America/North_Dakota/Center
+      New_Salem: America/North_Dakota/New_Salem
+      Phoenix: America/Phoenix
+      Thunder_Bay: America/Thunder_Bay
+      Toronto: America/Toronto
+      Vancouver: America/Vancouver
+      Winnipeg: America/Winnipeg
     countries:
       selectCountry: Select Country
       AF: Afghanistan
