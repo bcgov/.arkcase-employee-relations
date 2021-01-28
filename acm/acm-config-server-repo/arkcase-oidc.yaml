@@ -1,0 +1,10 @@
+oidc:
+  registrationId: "" 
+  clientId: ""
+  clientSecret: ""
+  redirectUri: ""
+  authorizationUri: ""
+  tokenUri: ""
+  issuerUri: ""
+  userInfoUri: ""
+  scope: ""
