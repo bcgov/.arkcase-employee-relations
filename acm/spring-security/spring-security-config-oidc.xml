@@ -20,7 +20,6 @@
               <frame-options policy="SAMEORIGIN" />
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
@@ -36,7 +35,6 @@
               <frame-options policy="SAMEORIGIN" />
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
@@ -52,7 +50,6 @@
               <frame-options policy="SAMEORIGIN" />
             </headers>
             <custom-filter before="BASIC_AUTH_FILTER" ref="acmBasicAndTokenAuthenticationFilter"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
             <oauth2-login 
                 client-registration-repository-ref="clientRegistrationRepository" 
