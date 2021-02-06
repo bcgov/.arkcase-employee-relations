@@ -21,6 +21,7 @@
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
+            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
             <session-management session-fixation-protection="migrateSession"/>
@@ -36,6 +37,7 @@
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
+            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
             <session-management session-fixation-protection="migrateSession"/>
@@ -51,6 +53,7 @@
             </headers>
             <custom-filter before="BASIC_AUTH_FILTER" ref="acmBasicAndTokenAuthenticationFilter"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
+            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <oauth2-login 
                 client-registration-repository-ref="clientRegistrationRepository" 
                 authorized-client-service-ref="authorizedClientService" login-page="/oauth-login" 
@@ -62,9 +65,13 @@
                 session-fixation-protection="migrateSession"/>    
         </http>
 
-         <beans:bean id="acmOAuth2LoginFailureRedirectHandler"
-            class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
-            <beans:property name="useForward" value="true"/>
+        <beans:bean id="acmOAuth2LoginFailureRedirectHandler"
+            class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
+            <beans:property name="exceptionMappings">
+                <beans:props>
+                    <beans:prop key="org.springframework.security.core.userdetails.UsernameNotFoundException">/oauth/loggedout?login_error=4</beans:prop>
+                </beans:props>
+            </beans:property>
             <beans:property name="defaultFailureUrl" value="/oauth/loggedout?login_error=3"/>
         </beans:bean>
 
