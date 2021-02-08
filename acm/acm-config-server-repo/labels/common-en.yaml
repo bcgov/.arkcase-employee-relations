@@ -978,7 +978,7 @@ eventType.com.armedia.acm.casefile.file.rejected: Document Rejected from Brief
 eventType.com.armedia.acm.ecm.file.rejected: Document Rejected from Brief
 eventType.com.armedia.acm.casefile.file.lodged: Document Lodged
 eventType.com.armedia.acm.ecm.file.file.lodged: Document Lodged
-eventType.com.armedia.acm.casefile.due.date.changed: Case File Due Date Updated
+eventType.com.armedia.acm.casefile.due.date.changed: Case File Due Date Changed
 eventType.com.armedia.acm.changeCaseStatus.created: Change Case Status Created
 eventType.com.armedia.acm.closeComplaintRequest.created: Request for Closing Complaint Created
 eventType.com.armedia.acm.consultation.viewed: Consultation Viewed
