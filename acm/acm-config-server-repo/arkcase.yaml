@@ -505,8 +505,6 @@ acmPluginConfigurationPrivileges:
       - "/api/service/category/{version}/deactivate"
     DELETE:
       - "/api/service/category/{version}/{categoryId}"
-  acmComplaintCreatePrivilege:
-    
   acmComplaintListPrivilege:
     GET:
       - "/api/{version}/plugin/complaint/forUser/{user:.+}"
@@ -1361,7 +1359,6 @@ application:
     timesheetApprovePrivilege: Timesheet Approve Privilege
     acmComplaintListPrivilege: Complaint List Privilege
     acmComplaintSavePrivilege: Complaint Save Privilege
-    acmComplaintCreatePrivilege: Complaint Create Privilege
     acmComplaintApprovePrivilege: Complaint Approve Privilege
     searchPrivilege: Search Privileges
     objectSuggestionPrivilege: Object Suggestion Privilege
