@@ -3,7 +3,7 @@
          xmlns:beans="http://www.springframework.org/schema/beans"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
-               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+               http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-5.4.xsd">
     <beans:beans profile="mfa-okta">
     <!-- This file contains common beans and filters for LDAP authentication -->
         <!-- acmAuthenticationManager, acmLoginSuccessHandler, acmLogoutSuccessHandler, acmAuthenticationDetailsFactory,
@@ -16,7 +16,6 @@
             <beans:property name="authoritiesMapper" ref="acmAuthoritiesMapper"/>
             <beans:property name="authenticationEventPublisher" ref="ssAuthenticationEventPublisher"/>
             <beans:property name="userDao" ref="userJpaDao"/>
-            <beans:property name="groupService" ref="groupService"/>
         </beans:bean>
 
         <!-- Static Entry Point authenticates users against LDAP server for static application resources -->
@@ -28,6 +27,10 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="hasRole('ROLE_AUTHENTICATED') AND isAuthenticated()" />
             <http-basic/>
+            <csrf disabled="true"/>
+            <headers>
+              <frame-options policy="SAMEORIGIN" />
+            </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
@@ -45,6 +48,10 @@
                 authentication-manager-ref="acmAuthenticationManager">
             <intercept-url pattern="^/.*$" access="hasRole('ROLE_AUTHENTICATED') AND isAuthenticated()" />
             <http-basic/>
+            <csrf disabled="true"/>
+            <headers>
+              <frame-options policy="SAMEORIGIN" />
+            </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
             <form-login
@@ -59,7 +66,10 @@
                 use-expressions="true"
                 authentication-manager-ref="acmMultiFactorAuthenticationManager"
                 disable-url-rewriting="true">
-
+            <csrf disabled="true"/>
+            <headers>
+              <frame-options policy="SAMEORIGIN" />
+            </headers>
             <!-- List Factors Page -->
             <intercept-url pattern="/views/mfa/auth.jsp" access="hasRole('ROLE_PRE_AUTHENTICATED') AND isAuthenticated()"/>
             <intercept-url pattern="/mfa/auth.jsp" access="hasRole('ROLE_PRE_AUTHENTICATED') AND isAuthenticated()"/>
