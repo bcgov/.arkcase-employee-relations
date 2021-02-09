@@ -38,7 +38,7 @@ acmPluginConfigurationPrivileges:
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
-      - "/api/{version}/service/exemption/statu
+      - "/api/{version}/service/exemption/statute"
   splitCaseFilePrivilege:
     POST:
       - "/api/{version}/plugin/copyCaseFile"
