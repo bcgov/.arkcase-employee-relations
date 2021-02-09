@@ -6,19 +6,6 @@ acmPluginConfigurationPrivileges:
   acmCaseModulePrivilege:
     GET:
       - "/modules/cases/views/"
-      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
-      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
-    POST:
-      - "/api/{version}/plugin/casefile/change/status/{mode}"
-      - "/api/{version}/plugin/casefile/{caseId}/tasks"
-      - "/api/{version}/service/exemption/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
-    DELETE:
-      - "/api/{version}/service/exemption/{tagId}"
-    PUT:
-      - "/api/{version}/service/exemption/statute"
   caseFileListPrivilege:
     GET:
       - "/api/{version}/plugin/casefile/caseTypes"
@@ -34,21 +21,30 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/queues"
       - "/api/{version}/plugin/casefile/number/by/queue"
       - "/api/{version}/plugin/casefile/nextPossibleQueues/{caseFileId}"
+      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
+      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
   saveCasePrivilege:
     GET:
       - "/api/{version}/plugin/casefile/enqueue/{caseId}"
     POST:
       - "/api/{version}/plugin/merge-casefiles"
       - "/api/{version}/plugin/casefile"
+      - "/api/{version}/plugin/casefile/change/status/{mode}"
+      - "/api/{version}/plugin/casefile/{caseId}/tasks"
+      - "/api/{version}/service/exemption/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
+    DELETE:
+      - "/api/{version}/service/exemption/{tagId}"
+    PUT:
+      - "/api/{version}/service/exemption/statute"
   splitCaseFilePrivilege:
     POST:
       - "/api/{version}/plugin/copyCaseFile"
   acmConsultationModulePrivilege:
     GET:
       - "/modules/consultations/views/"
-    POST:
-      - "/api/{version}/plugin/consultation/change/status/{mode}"
-      - "/api/{version}/plugin/consultation/{consultationId}/tasks"
   acmConsultationListPrivilege:
     GET:
       - "/api/{version}/plugin/consultation/consultationTypes"
@@ -62,7 +58,9 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/consultation/bystatus/summary"
   acmConsultationSavePrivilege:
     POST:
-      - "/api/{version}/plugin/consultation"
+      - "/api/{version}/plugin/consultation"      
+      - "/api/{version}/plugin/consultation/change/status/{mode}"
+      - "/api/{version}/plugin/consultation/{consultationId}/tasks"
   adminPrivilege:
     GET:
       - "/plugin/admin"
@@ -507,12 +505,6 @@ acmPluginConfigurationPrivileges:
       - "/api/service/category/{version}/deactivate"
     DELETE:
       - "/api/service/category/{version}/{categoryId}"
-  acmComplaintCreatePrivilege:
-    GET: 
-      - "/plugin/complaint/wizard"
-    POST:
-      - "/api/{version}/plugin/complaint"
-      - "/api/{version}/plugin/complaint/workflow"
   acmComplaintListPrivilege:
     GET:
       - "/api/{version}/plugin/complaint/forUser/{user:.+}"
@@ -525,7 +517,12 @@ acmPluginConfigurationPrivileges:
   acmComplaintModulePrivilege:
     GET:
       - "/modules/complaints/views/"
+  acmComplaintSavePrivilege:
+    GET: 
+      - "/plugin/complaint/wizard"
     POST:
+      - "/api/{version}/plugin/complaint"
+      - "/api/{version}/plugin/complaint/workflow"
       - "/api/{version}/plugin/complaint/close/{mode}"
   acmGenerateCorrespondencePrivilege:
     GET:
@@ -540,6 +537,8 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/modules/document-repository/views/"
       - "/modules/my-documents/views/"
+  documentRepositoryManagerPrivilege:
+    GET:
       - "/api/{version}/plugin/documentrepository/{id}"
       - "/api/{version}/plugin/documentrepository/{id}/tasks"
     POST:
@@ -606,11 +605,6 @@ acmPluginConfigurationPrivileges:
   participantPrivilege:
     GET:
       - "/api/{version}/service/participant/{objectType}/{objectId}"
-    PUT:
-      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}" 
-    DELETE:
-      - "/api/{version}/service/participant/{participantId}/{participantType}"
-      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}"
   acmPersonSavePrivilege:
     POST:
       - "/api/{version}/plugin/person"
@@ -885,7 +879,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/tasks/documents/review"
       - "/api/{version}/plugin/tasks/newdocuments/review"
       - "/api/{version}/plugin/task/save/{taskId}"
-      - "/api/{version}/plugin/task/saveReference"
   acmTaskClaimPrivilege:
     POST:
       - "/api/{version}/plugin/task/claim/{taskId}"
@@ -1366,17 +1359,13 @@ application:
     timesheetApprovePrivilege: Timesheet Approve Privilege
     acmComplaintListPrivilege: Complaint List Privilege
     acmComplaintSavePrivilege: Complaint Save Privilege
-    acmComplaintCreatePrivilege: Complaint Create Privilege
     acmComplaintApprovePrivilege: Complaint Approve Privilege
-    acmSearchPrivilege: Search Privilege
     searchPrivilege: Search Privileges
     objectSuggestionPrivilege: Object Suggestion Privilege
     acmCaseApprovePrivilege: Case Approve Privilege
     saveCasePrivilege: Save Case Privilege
     caseFileListPrivilege: Case File List Privilege
-    caseFileCreatePrivilege: Case File Create Privilege
     acmConsultationListPrivilege: Consultation List Privilege
-    acmConsultationCreatePrivilege: Consultation Create Privilege
     acmConsultationSavePrivilege: Consultation Save Privilege
     acmConsultationApprovePrivilege: Consultation Approve Privilege
     acmPersonSavePrivilege: Person Save Privilege
@@ -1418,8 +1407,6 @@ application:
     objectUnLockPrivilege: Object Unlock Privilege
     listLocksDetailsPrivilege: List Lock Details Privilege
     listLockedObjectsPrivilege: List Locked Objects Privilege
-    analyticsPrivilege: Data Analytics Privilege
-    analyticsAuditPrivilege: Log Analytics Privilege
     acmAdminModulePrivilege: Admin Module Privilege
     acmAuditModulePrivilege: Audit Module Privilege
     acmCaseModulePrivilege: Case Module Privilege
@@ -1449,8 +1436,6 @@ application:
     acmAnalyticsModulePrivilege: Data Analytics Module Privilege
     acmAnalyticsAuditModulePrivilege: Log Analytics Module Privilege
     acmEmailConfigurePrivilege: Configure Email Privilege
-    getStateOfArkcasePrivilege: Get State Of Arkcase Privilege
-    listStateOfArkcasePrivilege: List State Of Arkcase Privilege
     generateStateOfArkcasePrivilege: Generate State Of Arkcase Privilege
     acmGetSequenceConfigurationPrivilege: Get Sequence Configuration Privilege
     acmSaveSequenceConfigurationPrivilege: Save Sequence Configuration Privilege
@@ -1595,10 +1580,8 @@ application:
       - acmCaseApprovePrivilege
       - saveCasePrivilege
       - caseFileListPrivilege
-      - caseFileCreatePrivilege
       - acmConsultationSavePrivilege
       - acmConsultationListPrivilege
-      - acmConsultationCreatePrivilege
       - acmPersonSavePrivilege
       - acmPersonDeletePrivilege
       - acmPersonAssociationDeletePrivilege
@@ -1707,7 +1690,6 @@ application:
       - acmAdhocReportModulePrivilege
       - acmSaveNotePrivilege
       - acmSearchModulePrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmSignatureConfirmPrivilege
       - acmSignatureFindPrivilege
@@ -1727,7 +1709,6 @@ application:
       - blogPrivilege
       - caseFileCreatePrivilege
       - caseFileListPrivilege
-      - acmConsultationCreatePrivilege
       - acmConsultationListPrivilege
       - acmConsultationSavePrivilege
       - costsheetApprovePrivilege
@@ -1738,12 +1719,10 @@ application:
       - documentRepositoryModulePrivilege
       - filePrivilege
       - generateStateOfArkcasePrivilege
-      - getStateOfArkcasePrivilege
       - helloWorldPrivilege
       - listLockedObjectsPrivilege
       - listLocksDetailsPrivilege
       - listMilestonesGroupedByDate
-      - listStateOfArkcasePrivilege
       - objectLockPrivilege
       - objectUnLockPrivilege
       - participantPrivilege
@@ -1794,7 +1773,6 @@ application:
       - acmComplaintModulePrivilege
       - filePrivilege
       - acmCostModulePrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
@@ -1861,7 +1839,6 @@ application:
       - acmOutlookListObjectsPrivilege
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmDeleteNoteByIdPrivilege
       - acmNotificationPrivilege
@@ -1986,7 +1963,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.smtp.event.received\":\"' from ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
-CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.due.date.changed, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
+CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.dueDateChanged, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
