@@ -1,6 +1,6 @@
 application:
  name: 
-  active: arkcase,arkcase-activemq,ldap,lookups
+  active: arkcase,arkcase-activemq,arkcase-oidc,ldap,lookups
   default: arkcase
  profile: runtime
 configuration:

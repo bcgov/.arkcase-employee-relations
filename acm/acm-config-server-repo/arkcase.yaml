@@ -1883,6 +1883,7 @@ application:
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
+    # for oidc environment override logoutUrl with '/oauth-logout'
     logoutUrl: "/logout"
     defaultTimezone: "America/New_York"
     organizationName: "Organization_Name"
