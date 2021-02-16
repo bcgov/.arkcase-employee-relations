@@ -7,7 +7,7 @@ oidc:
   tokenUri: "" 
   jwkSetUri: "" 
   issuerUri: "" 
-  userEmailAttribute: "" 
+  usernameAttribute: "" 
   userInfoUri: "" 
   scope: "" 
   systemUserEmail: "" 
