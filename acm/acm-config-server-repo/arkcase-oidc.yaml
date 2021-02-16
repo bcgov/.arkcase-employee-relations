@@ -12,3 +12,4 @@ oidc:
   scope: "" 
   systemUserEmail: "" 
   systemUserPassword: ""
+  usersDirectory: ""
