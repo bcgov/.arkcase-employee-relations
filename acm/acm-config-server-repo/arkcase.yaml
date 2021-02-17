@@ -2425,11 +2425,21 @@ ga:
   trackingId: "UA-92355326-2"
   debug: false
 ################### Login Configuration (login.properties) ####################  
-login.warning:
-  #sets if on login screen warning message should be enabled 
-  enabled: false
-  #sets the text which should be displayed if warning is enabled
+login:
+  warning:
+    #sets if on login screen warning message should be enabled 
+    enabled: false
+    #sets the text which should be displayed if warning is enabled
   message:
+  defaultTargetUrl: "/home.html#!/welcome"    
+  ignoredSavedUrls:   
+    - "/stomp"
+    - "/api"
+    - "/views/loggedout.jsp"
+    - "/VirtualViewerJavaHTML5"
+    - "/pentaho"
+    - "/frevvo"
+    - "/modules/core/img/brand/favicon.png"
 ################### MsOutlook Integration Configuration (msOutlookIntegration.properties) #################### 
 outlook.exchange.integration:
   enable.autodiscovery: false
