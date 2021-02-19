@@ -925,6 +925,7 @@ admin:
     templates.versionTemplate: Versions
     templates.deleteTemplate: Delete
     templates.editTemplate: Edit Template
+    templates.guide: Guide
     templates.grid:
       id: ID
       title: Title
