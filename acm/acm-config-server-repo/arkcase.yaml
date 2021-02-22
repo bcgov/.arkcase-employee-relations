@@ -88,7 +88,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/queries/{queryType}"
       - "/api/{version}/plugin/admin/queries/query/{queryBeanId}"
       - "/api/{version}/plugin/admin/templates"
-      - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/template/{templateId}"
       - "/api/{version}/plugin/admin/template/versions/{templateId}"
       - "/api/{version}/plugin/admin/template/{templateId}/{templateFilename:.+}"
@@ -199,6 +198,7 @@ acmPluginConfigurationPrivileges:
       - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
     GET:
+      - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/labelmanagement/resource"
       - "/api/{version}/plugin/admin/labelmanagement/resources"
       - "/api/{version}/plugin/admin/labelmanagement/default-language"
