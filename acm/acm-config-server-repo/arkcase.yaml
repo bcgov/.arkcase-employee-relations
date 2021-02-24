@@ -91,7 +91,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/template/{templateId}"
       - "/api/{version}/plugin/admin/template/versions/{templateId}"
       - "/api/{version}/plugin/admin/template/{templateId}/{templateFilename:.+}"
-      - "/api/{version}/plugin/admin/templateContent/{templateName}"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/versions"
       - "/api/{version}/plugin/admin/mergefields/versions/{objectType}"
@@ -198,6 +197,8 @@ acmPluginConfigurationPrivileges:
       - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
     GET:
+      - "/api/{version}/plugin/admin/templateContent/{templateName}"
+      - "/api/{version}/plugin/admin/templates/activated/{objectType}"
       - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/labelmanagement/resource"
       - "/api/{version}/plugin/admin/labelmanagement/resources"
@@ -529,7 +530,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/correspondence/listTemplates"
       - "/api/{version}/service/correspondence/listAllProperties"
       - "/api/{version}/service/correspondence/listTemplateModelProviders"
-      - "/api/{version}/plugin/admin/templates/activated/{objectType}"
     POST:
       - "/api/{version}/service/correspondence"
       - "/api/{version}/service/correspondence/multitemplate"
