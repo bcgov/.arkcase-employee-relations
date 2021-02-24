@@ -16,8 +16,8 @@
                 <fo:simple-page-master
                     master-name="letter" page-height="11.0in"
                     page-width="8.5in" margin-top="0.17in"
-                    margin-bottom="0.17in" margin-left="1.0in"
-                    margin-right="1.0in">
+                    margin-bottom="0.17in" margin-left="0.5in"
+                    margin-right="0.5in">
                     <fo:region-body margin-top="0.5in"
                         margin-bottom="0.5in" />
                 </fo:simple-page-master>
@@ -29,11 +29,11 @@
 					<xsl:apply-templates select="searchresult"/>
 					<fo:block font-size="10pt" space-after="0.15in">
 						<fo:table border-color="#badeff" border-style="solid" border-width=".4mm" table-layout="fixed" width="100%">
-							<fo:table-column column-width="20%"/>
+							<fo:table-column column-width="25%"/>
 							<fo:table-column column-width="15%"/>
 							<fo:table-column column-width="20%"/>
 							<fo:table-column column-width="15%"/>
-							<fo:table-column column-width="15%"/>
+							<fo:table-column column-width="10%"/>
 							<fo:table-column column-width="15%"/>
 							<fo:table-body font-weight="normal" font-size="10pt">
 								<fo:table-row line-height="12pt">
