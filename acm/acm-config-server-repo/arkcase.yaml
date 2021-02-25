@@ -341,11 +341,11 @@ acmPluginConfigurationPrivileges:
   acmDashboardModulePrivilege:
     GET:
       - "/modules/dashboard/views/"
-  dashboardPrivilege:
-    GET: 
       - "/api/{version}/plugin/dashboard/get"
       - "/api/{version}/plugin/dashboard/widgets/get"
       - "/api/{version}/plugin/dashboard/widgets/rolesByWidget/all"
+  dashboardPrivilege:
+    GET: 
       - "/api/{version}/plugin/dashboard/widgets/{widgetName:.+}/roles"
       - "/api/{version}/plugin/dashboard/widgets/preferred/{moduleName}"
       - "/api/{version}/plugin/dashboard/widgets/site"
