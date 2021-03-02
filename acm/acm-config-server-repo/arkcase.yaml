@@ -2122,7 +2122,6 @@ consultation.plugin:
   ,{\"desc\":\"Sort Consultation ID Asc\", \"name\":\"sort-consultation-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Consultation ID Desc\", \"name\":\"sort-consultation-id-desc\", \"value\":\"object_id_s DESC\"}
   ,{\"desc\":\"Sort By Consultation Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
-  ,{\"desc\":\"Sort By Consultation Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
   ,{\"desc\":\"Sort Due Date Asc\", \"name\":\"sort-by-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
   ,{\"desc\":\"Sort Due Date Desc\", \"name\":\"sort-by-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
   ,{\"desc\":\"(No Sort)\", \"name\": \"\", \"value\":\"\", \"default\":\"true\"}]"
