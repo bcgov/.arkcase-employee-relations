@@ -532,7 +532,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/correspondence/listTemplateModelProviders"
     POST:
       - "/api/{version}/service/correspondence"
-      - "/api/{version}/service/correspondence/multitemplate"
   documentRepositoryModulePrivilege:
     GET:
       - "/modules/document-repository/views/"
