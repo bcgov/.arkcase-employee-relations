@@ -352,7 +352,6 @@ admin:
     settings:
       emailCaseFile.label: Email Receiver CaseFile
       emailComplaint.label: Email Receiver Complaint
-      emailTask.label: Email Receiver Task
       password.label: Password
       email.placeholder: Enter Email address
       password.placeholder: Enter Password

@@ -2341,8 +2341,6 @@ email:
   COMPLAINT.password:
   CONSULTATION.user: "no-such-mailbox%40arkcase.org"
   CONSULTATION.password:
-  TASK.user: "no-such-mailbox%40arkcase.org"
-  TASK.password:
   protocol: "imap"
   fetch.folder: "inbox"
   host: "outlook.office365.com"
@@ -2354,6 +2352,10 @@ email:
     complaint.enabled: false
     consultation.enabled: false
   enableBurstingAttachments: false
+  replyHandlers: 
+    caseFileMailFilter: caseFileMailHandler
+    complaintMailFilter: complaintMailHandler
+    taskMailFilter: taskMailHandler
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
