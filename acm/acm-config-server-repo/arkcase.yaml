@@ -2352,6 +2352,10 @@ email:
     complaint.enabled: false
     consultation.enabled: false
   enableBurstingAttachments: false
+  replyHandlers: 
+    caseFileMailFilter: caseFileMailHandler
+    complaintMailFilter: complaintMailHandler
+    taskMailFilter: taskMailHandler
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
@@ -2682,6 +2686,14 @@ tag.plugin:
   ,{\"desc\":\"Tag number 12\", \"name\":\"tag_12\", \"value\":\"Text 12\"}]"
 ################### Task Plugin Configuration (taskPlugin.properties) ###################
 task.plugin:
+  #task email folder
+  email.folder.relative.path: "Incoming Email"
+  #task email regex to match task id
+  email.regex.task_id: "\\d+"
+  #task email regex for type
+  email.regex.object_type: "Task"
+  #task email handler is enabled
+  email.handler.enabled: true
   search.tree:
     ##!NOTE: "New Tasks For Me" and/OR "Old Tasks For Me" can be fetched by using filter bellow in combination with sorting ASC or DESC by Create Date...
     ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_tdt DESC ... and SOLR will retunr the newest Case Files.
