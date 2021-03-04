@@ -35,6 +35,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/file/{fileId}/tags"
       - "/api/{version}/service/ecm/file/{fileId}/update/tags"
       - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
+      - "/api/{version}/plugin/casefile/{caseId}/createZylabMatter"
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
@@ -3029,14 +3030,16 @@ extension:
 zylabIntegration:
   enabled: false
   url:
-  documentReviewPath:
-  matterDashboardPath:
-  createMatterPath:
-  downloadProductionPath:
-  openMatterPath:
-  matterReportsPath:
-  getMatterTemplatesPath:
-  viewDocumentPath:
+  documentReviewEnabled: /api/htmlappsettings
+  documentReviewPath: /HtmlApp/#/matter/select
+  matterDashboardPath: /HtmlApp/#/matter/{matterId}/overview
+  createMatterPath: /api/matters/
+  defaultMatterTemplateId:
+  downloadProductionPath: /Production/Zip?matter={matterId}&production_key={productionKey}
+  openMatterPath: /HtmlApp/#/matter/{matterId}/home
+  matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
+  getMatterTemplatesPath: /api/matters/templates
+  viewDocumentPath: /documentReview
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"

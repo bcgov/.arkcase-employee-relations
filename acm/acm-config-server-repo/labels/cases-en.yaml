@@ -73,6 +73,9 @@ cases.comp.actions:
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
   sendEmail.button: Send Email
+  createMatter.button: Create Matter
+  openMatter.button: Open Matter
+  matterReports.button: Matter Reports
 cases.comp.details:
   title: Full Case Details
   informSaved: Case details saved
