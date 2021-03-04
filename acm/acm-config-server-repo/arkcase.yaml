@@ -3042,7 +3042,7 @@ extension:
 zylabIntegration:
   enabled: false
   url:
-  documentReviewEnabled: /api/htmlappsettings
+  simpleResourcePath: /api/htmlappsettings
   documentReviewPath: /HtmlApp/#/matter/select
   matterDashboardPath: /HtmlApp/#/matter/{matterId}/overview
   createMatterPath: /api/matters/
