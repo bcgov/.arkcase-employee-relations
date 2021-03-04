@@ -1,8 +1,10 @@
 oidc:
   registrationId: ""
   clientId: "" 
-  clientSecret: "" 
-  redirectUri: "" 
+  clientSecret: ""
+  tenantId: ""
+  tenantSecret: ""
+  redirectUri: ""
   authorizationUri: "" 
   tokenUri: "" 
   jwkSetUri: "" 
