@@ -35,6 +35,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/ecm/file/{fileId}/tags"
       - "/api/{version}/service/ecm/file/{fileId}/update/tags"
       - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
+      - "/api/{version}/plugin/casefile/{caseId}/createZylabMatter"
     DELETE:
       - "/api/{version}/service/exemption/{tagId}"
     PUT:
@@ -160,6 +161,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
       - "/api/{version}/plugin/admin/branding/customcss"
       - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/businessHours"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/version/active"
@@ -205,6 +207,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/labelmanagement/default-language"
       - "/api/{version}/plugin/admin/app-properties"
       - "/api/{version}/plugin/admin/app-properties/{propertyName}"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/rolesprivileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/rolesprivileges/privileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/plainforms"
@@ -3035,6 +3038,20 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
+### Zylab Integration configuration ###
+zylabIntegration:
+  enabled: false
+  url:
+  documentReviewEnabled: /api/htmlappsettings
+  documentReviewPath: /HtmlApp/#/matter/select
+  matterDashboardPath: /HtmlApp/#/matter/{matterId}/overview
+  createMatterPath: /api/matters/
+  defaultMatterTemplateId:
+  downloadProductionPath: /Production/Zip?matter={matterId}&production_key={productionKey}
+  openMatterPath: /HtmlApp/#/matter/{matterId}/home
+  matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
+  getMatterTemplatesPath: /api/matters/templates
+  viewDocumentPath: /documentReview
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"

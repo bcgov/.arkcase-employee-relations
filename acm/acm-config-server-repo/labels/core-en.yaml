@@ -790,6 +790,7 @@ core:
   userInfo:
     addedMenu:
       help: Help
+      documentReviewLink: Document Review
       logout: Logout
   leftNav:
     title: Navigation
