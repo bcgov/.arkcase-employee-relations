@@ -21,7 +21,6 @@
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
             <session-management session-fixation-protection="migrateSession"/>
@@ -53,7 +52,6 @@
             </headers>
             <custom-filter before="BASIC_AUTH_FILTER" ref="acmBasicAndTokenAuthenticationFilter"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <oauth2-login 
                 client-registration-repository-ref="clientRegistrationRepository" 
                 authorized-client-service-ref="authorizedClientService" login-page="/oauth-login" 
@@ -92,6 +90,8 @@
             <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
             <beans:property name="loginSuccessOperations" ref="acmLoginSuccessOperations"/>
             <beans:property name="exceptionIfHeaderMissing" value="false"/>
+            <beans:property name="checkForPrincipalChanges" value="true"/>
+            <beans:property name="invalidateSessionOnPrincipalChange" value="false"/>
         </beans:bean>
 
     </beans:beans>

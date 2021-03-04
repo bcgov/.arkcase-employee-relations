@@ -20,7 +20,6 @@
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
             <session-management session-fixation-protection="migrateSession"/>
@@ -53,7 +52,6 @@
             </headers>
             <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
             <custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter"/>
-            <custom-filter position="PRE_AUTH_FILTER" ref="externalAuthFilter"/>
             <form-login login-page="/login" default-target-url="/home.html#!/welcome" login-processing-url="/login_post"
                 authentication-details-source-ref="acmAuthenticationDetailsFactory" authentication-failure-url="/login?login_error"
                 authentication-success-handler-ref="acmLoginSuccessHandler"/>
@@ -76,6 +74,8 @@
             <beans:property name="authenticationManager" ref="acmAuthenticationManager"/>
             <beans:property name="loginSuccessOperations" ref="acmLoginSuccessOperations"/>
             <beans:property name="exceptionIfHeaderMissing" value="false"/>
+            <beans:property name="checkForPrincipalChanges" value="true"/>
+            <beans:property name="invalidateSessionOnPrincipalChange" value="false"/>
         </beans:bean>
 
         <beans:bean id="sessionDestroyedListener" class="com.armedia.acm.auth.SessionDestroyedListener">
