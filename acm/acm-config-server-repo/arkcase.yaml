@@ -160,6 +160,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
       - "/api/{version}/plugin/admin/branding/customcss"
       - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/businessHours"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/version/active"
@@ -205,6 +206,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/labelmanagement/default-language"
       - "/api/{version}/plugin/admin/app-properties"
       - "/api/{version}/plugin/admin/app-properties/{propertyName}"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/rolesprivileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/rolesprivileges/privileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/plainforms"
@@ -3023,6 +3025,18 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
+### Zylab Integration configuration ###
+zylabIntegration:
+  enabled: false
+  url:
+  documentReviewPath:
+  matterDashboardPath:
+  createMatterPath:
+  downloadProductionPath:
+  openMatterPath:
+  matterReportsPath:
+  getMatterTemplatesPath:
+  viewDocumentPath:
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
