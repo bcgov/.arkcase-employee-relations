@@ -2355,7 +2355,7 @@ email:
     complaint.enabled: false
     consultation.enabled: false
   enableBurstingAttachments: false
-  replyHandlers: 
+  replyHandlers:
     caseFileMailFilter: caseFileMailHandler
     complaintMailFilter: complaintMailHandler
     taskMailFilter: taskMailHandler
@@ -3041,7 +3041,9 @@ extension:
 ### Zylab Integration configuration ###
 zylabIntegration:
   enabled: false
-  url:
+  host:
+  port: 443
+  basePath: /EDiscovery/LegalReview
   simpleResourcePath: /api/htmlappsettings
   documentReviewPath: /HtmlApp/#/matter/select
   matterDashboardPath: /HtmlApp/#/matter/{matterId}/overview
