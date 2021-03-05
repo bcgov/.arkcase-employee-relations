@@ -74,6 +74,8 @@ cases.comp.actions:
   buckslip.add.title: New Buck Slip
   sendEmail.button: Send Email
   createMatter.button: Create Matter
+  createMatter.sucess: New ZyLAB Document Review Matter created sucessfully
+  createMatter.error: New ZyLAB Document Review Matter creation failed
   openMatter.button: Open Matter
   matterReports.button: Matter Reports
 cases.comp.details:

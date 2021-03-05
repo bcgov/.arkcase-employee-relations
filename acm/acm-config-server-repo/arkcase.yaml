@@ -3054,6 +3054,13 @@ zylabIntegration:
   matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
   getMatterTemplatesPath: /api/matters/templates
   viewDocumentPath: /documentReview
+  authentication:
+    registrationId: ""
+    clientId: ""
+    clientSecret: ""
+    tokenUri: ""
+    systemUserEmail: ""
+    systemUserPassword: ""
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
