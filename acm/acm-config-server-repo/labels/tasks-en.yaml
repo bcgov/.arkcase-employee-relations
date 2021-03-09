@@ -73,6 +73,11 @@ tasks.comp.details:
     details: Details
     modified: Date Last Modified
     modifier: User Last Modified
+tasks.comp.people:
+  title: People
+  table.columns:
+    type: Type
+    fullName: Full Name  
 tasks.comp.reworkdetails:
   title: Rework Details
   informSaved: Rework details saved
@@ -323,6 +328,7 @@ tasks.tree:
     eSignatures.label: eSignatures
     tags.label: Tags
     reject.label: Reject Comments
+    people.label: People
   filters:
     myTasks: Tasks for Me
     opened: All Open Tasks
