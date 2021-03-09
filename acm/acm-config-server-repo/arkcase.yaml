@@ -653,6 +653,8 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/person-associations"
       - "/api/{version}/plugin/personAssociation/{id}"
       - "/api/{version}/plugin/person-associations/{id}"
+      - "/api/{version}/plugin/personAssociation/{parentType}/{parentId}"
+      - "/api/{version}/plugin/person-associations/{parentType}/{parentId}"
   acmOrganizationSavePrivilege:
     POST:
       - "/api/{version}/plugin/organizations"
