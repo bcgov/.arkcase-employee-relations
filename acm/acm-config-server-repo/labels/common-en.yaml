@@ -930,15 +930,6 @@ common.objectHistory:
       details.btn.text: View {{count}} Changes
 common.objectAction:
   updated: was updated
-common.multicorrespondence:
-  modal:
-    title: Correspondence Templates
-    select: Select Correspondence Templates
-    documentName.label: Enter Multi Correspondence Template Name
-    documentName.placeholder: Document Name
-    buttons:
-      ok: Create
-      cancel: Cancel
 eventType.com.armedia.acm.activiti.businessProcess.end: Activity Business Process Ended
 eventType.com.armedia.acm.activiti.businessProcess.start: Activity Business Process Started
 eventType.com.armedia.acm.activiti.task.assignment: Activity Task Assignment
