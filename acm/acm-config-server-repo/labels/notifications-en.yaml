@@ -24,9 +24,9 @@ notifications:
   status:
     transcription: Transcription status
   task:
-    completed: Task has been completed
-    upcoming: Task upcoming notification
-    overdue: Task overdue notification
+    completed: "Task '${idLabel}' has been completed"
+    upcoming: "Task '${idLabel}' upcoming notification"
+    overdue: "Task '${idLabel}' overdue notification"
     status.changed: "Task '${nameLabel}' status changed"
     priority.changed: "Task '${nameLabel}' priority changed"
     concur.nonconcur: "Task '${nameLabel}' completed"
@@ -49,8 +49,8 @@ notifications:
   email:
     mentions: "${userLabel} mentioned you in ${typeLabel}: ${nameLabel}"
   calendar.event.added: "Calendar event added"
-  object.assigned: "${typeLabel}: '${nameLabel}', assigned to ${userLabel}"
-  object.unassigned: "${typeLabel}: '${nameLabel}', unassigned from ${userLabel}"
+  object.assigned: "${typeLabel}: ${nameLabel}, assigned to ${userLabel}"
+  object.unassigned: "${typeLabel}: ${nameLabel}, unassigned from ${userLabel}"
   type:
     label:
       casefile: Case File
