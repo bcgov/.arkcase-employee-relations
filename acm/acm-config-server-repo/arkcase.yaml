@@ -1884,6 +1884,7 @@ application:
     basePortalUrl: 
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
+    templateGuideUrl: "https://www.arkcase.com/correspondence-management-3/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
