@@ -945,6 +945,8 @@ admin:
       statusDisabled: Disabled
       statusEnabled: Enabled
       enabled: Sending Status
+      manualEmails: Manual Emails
+      automatedEmails: Automated Emails
     templates.preview:
       title: Template Preview
       btnClose: Close
