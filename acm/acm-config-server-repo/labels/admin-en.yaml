@@ -939,6 +939,7 @@ admin:
       statusDeactivated: Deactivated
       statusActivated: Activated
       objectType: Object Type
+      parentType: Parent Type
       version: Version
       templateVersionActive: Active
       templateModelProvider: Template Model Provider
@@ -962,6 +963,7 @@ admin:
     templates.modal:
       objectTypes.selectedFiles: No File Selected
       objectTypes.label: Object Types
+      parentTypes.label: Parent Types
       querySelect.label: Query Select
       label.label: Display Name
       btnCancel.text: Cancel

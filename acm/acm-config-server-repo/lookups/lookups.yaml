@@ -768,6 +768,26 @@ lookupsConfiguration:
         TASK:
           value: "core.lookups.emailTemplates.objectTypes.task"
           order: 6
+    emailTemplatesParentTypes:
+      entries:
+        ALL:
+          value: "core.lookups.auditReportNames.all"
+          order: 1
+        CASE_FILE:
+          value: "core.lookups.emailTemplates.objectTypes.casefile"
+          order: 2
+        COMPLAINT:
+          value: "core.lookups.emailTemplates.objectTypes.complaint"
+          order: 3
+        CONSULTATION:
+          value: "core.lookups.emailTemplates.objectTypes.consultation"
+          order: 4
+        FILE:
+          value: "core.lookups.emailTemplates.objectTypes.file"
+          order: 5
+        TASK:
+          value: "core.lookups.emailTemplates.objectTypes.task"
+          order: 6          
     changeCaseStatusResolutions:
       entries:
         DENIED:
