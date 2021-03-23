@@ -1900,7 +1900,7 @@ application:
     organizationZip: "Organization_Zip"
     organizationPhone: "Organization_Phone"
     organizationFax: "Organization_Fax"
-
+    dashboardBannerEnabled: true
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
   identityId: ""
