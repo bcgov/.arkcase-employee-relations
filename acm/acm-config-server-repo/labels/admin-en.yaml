@@ -639,6 +639,9 @@ admin:
         label: Default timezone for the application (Use TZ database timezones)
         error: Not a valid timezone. Please use a timezone defined in the TZ database.
       apply.label: Apply
+      dashboardBanner:
+        title: Dashboard Banner
+        label: Enable dashboard banner for browser support
     businessHours:
       title: Business Hours Configuration
       config:
