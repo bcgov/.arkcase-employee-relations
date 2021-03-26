@@ -15,7 +15,7 @@ dashboard:
       noDataMessage: Currently there are no cases info
       table:
         header:
-          caseId: ID
+          caseNumber: Number
           title: Title
           priority: Priority
           created: Created
@@ -45,7 +45,7 @@ dashboard:
       noDataMessage: Currently there are no cases info
       table:
         header:
-          caseId: ID
+          caseNumber: Number
           title: Title
           priority: Priority
           created: Created
@@ -63,7 +63,7 @@ dashboard:
       noDataMessage: Currently there are no consultations info
       table:
         header:
-          consultationId: ID
+          consultationNumber: Number
           title: Title
           priority: Priority
           created: Created
@@ -80,7 +80,7 @@ dashboard:
       description: Displays my complaints
       table:
         header:
-          number: ID
+          number: Number
           title: Title
           priority: Priority
           created: Created

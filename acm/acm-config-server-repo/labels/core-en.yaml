@@ -108,6 +108,7 @@ core:
     correspondence:
       casefile: Case File
       complaint: Complaint
+      task: Task
     complaintPersonTypes:
       initiator: Initiator
       complaintant: Complaintant
@@ -201,6 +202,42 @@ core:
       inapproval: In Approval
       closed: Closed
       deleted: Deleted
+    timeZones:
+      New_York: America/New_York
+      Anguilla: America/Anguilla
+      Anchorage: America/Anchorage
+      Antigua: America/Antigua
+      Adak: America/Adak
+      Araguaina: America/Araguaina
+      Cambridge_Bay: America/Cambridge_Bay
+      Chicago: America/Chicago
+      Denver: America/Denver
+      Dawson: America/Dawson
+      Dawson_Creek: America/Dawson_Creek
+      Detroit: America/Detroit
+      Edmonton: America/Edmonton
+      Fort_Wayne: America/Fort_Wayne
+      Glace_Bay: America/Glace_Bay
+      Godthab: America/Godthab
+      Goose_Bay: America/Goose_Bay
+      Grenada: America/Grenada
+      Indianapolis: America/Indianapolis
+      Monticello: America/Kentucky/Monticello
+      Louisville: America/Louisville
+      Los_Angeles: America/Los_Angeles
+      Marigot: America/Marigot
+      Mexico_City: America/Mexico_City
+      Monterrey: America/Monterrey
+      Montreal: America/Montreal
+      Nassau: America/Nassau
+      Nome: America/Nome
+      Center: America/North_Dakota/Center
+      New_Salem: America/North_Dakota/New_Salem
+      Phoenix: America/Phoenix
+      Thunder_Bay: America/Thunder_Bay
+      Toronto: America/Toronto
+      Vancouver: America/Vancouver
+      Winnipeg: America/Winnipeg
     countries:
       selectCountry: Select Country
       AF: Afghanistan
@@ -629,10 +666,56 @@ core:
       cancel: Cancel Document
       concur: Concur
       nonConcur: Non-Concur
+    taskPersonTypes:
+      contactPerson: Contact Person
+    caseTaskTypes:
+      ackLetter: Ack Letter
+      additionalExtensionReminder: Additional Extension Reminder
+      appealReceived: Appeal Received
+      appealUpheld: Appeal Upheld
+      appealGrantNew: Appeal Grant New
+      appealAssignInternally: Appeal Assign Internally
+      appealAssignToPresidentsOffice: Appeal Assign to President's Office
+      extension: Extension
+      caseClosed: Case Closed
+      clarificationNotification: Clarification Notification
+      clarificationReceived: Clarification Received
+      clarificationRequester: Clarification Requester
+      commercialList: Commercial List
+      commercialListA: Commercial List A
+      commercialListB: Commercial List B
+      commercialLists: Commercial Lists
+      consult: Consult
+      crossReference: Cross reference
+      depositNeeded: Deposit Needed
+      dodSearch: DOD Search
+      extensionReminder: Extension Reminder
+      headsUpNotification: Heads Up Notification
+      invoice: Invoice
+      noteToFile: Note to File
+      partialResponse: Partial Response
+      reqPhoneMemo: Req Phone Memo
+      resolvedByMediaRelations: Resolved by Media Relations
+      scanDocuments: Scan Documents
+      searchExtension: Search Extension
+      searchInternal: Search Internal
+      searchDelinquency: Search Delinquency
+      searchRecords: Search Records
+      searchReminder: Search Reminder
+      secondInvoice: Second Invoice
+      snapshotRequest: Snapshot Request
+      stagedReleaseExemptions: Staged Release Exemptions
+      stagedReleaseNoAdditionalRecord: Staged Release No Additional Record
+      stagedReleaseRedactions: Staged Release Redactions
+      stagedReleaseRedactionsOrExemptions: Staged Release Redactions/Exemptions
+      stagedReleaseWhollyReleased: Staged Release Wholly Released
+      thirdPartyNotification: Third Party Notification
+      thirdPartyExtension: Third Party Extension
+      thirdPartyObjection: Third Party Objection
     businessProcessTypes:
       acmDocumentWorkflow: ACM Document Workflow
       notDefinedWorkflow: Ad-Hoc Task
-      acmDocumentSingleTaskWorkflow: ACM Document Workflow - Single Task 
+      acmDocumentSingleTaskWorkflow: ACM Document Workflow - Single Task
     reportStates:
       draft: Draft
       inApproval: In Approval
