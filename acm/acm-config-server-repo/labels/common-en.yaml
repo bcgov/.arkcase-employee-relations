@@ -940,6 +940,7 @@ eventType.com.armedia.acm.services.ocr.processing: Ocr Service Processed
 eventType.com.armedia.acm.services.ocr.created: Ocr Service Created
 eventType.com.armedia.acm.services.ocr.queued: Ocr Service Queued
 eventType.com.armedia.acm.services.ocr.updated: Ocr Service Updated
+eventType.com.armedia.acm.services.ocr.completed: Ocr Service Completed
 eventType.com.armedia.acm.services.transcribe.created: Transcribe service Created
 eventType.com.armedia.acm.services.transcribe.updated: Transcribe service Updated
 eventType.com.armedia.acm.services.transcribe.queued: Transcribe service Queued
