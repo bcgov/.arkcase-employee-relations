@@ -120,6 +120,7 @@ common.directive.docTree:
     modifier: Modified By
     version: Version
     status: Status
+    custodian: Custodian
   dndDialog:
     title: Drag and Drop
     radReplace.text: Replace document (If more then one files are dropped, only first
