@@ -17,7 +17,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'objectAssigned'
                 ]]>
@@ -36,7 +36,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'objectUnassigned'
                 ]]>
@@ -55,7 +55,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'concurNonConcur'
                 ]]>
@@ -74,7 +74,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'complaintStatusChanged'
                 ]]>
@@ -93,7 +93,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'caseStatusChanged'
                 ]]>
@@ -112,7 +112,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'noteAdded'
                 ]]>
@@ -131,7 +131,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'complaintPriorityChanged'
                 ]]>
@@ -150,7 +150,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'casePriorityChanged'
                 ]]>
@@ -169,7 +169,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'taskPriorityChanged'
                 ]]>
@@ -188,7 +188,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'taskStatusChanged'
                 ]]>
@@ -207,7 +207,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'participantsAdded'
                 ]]>
@@ -226,7 +226,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'participantsDeleted'
                 ]]>
@@ -245,7 +245,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'calendarEventAdded'
                 ]]>
@@ -264,7 +264,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'changePassword'
                 ]]>
@@ -283,7 +283,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'forgotUsername'
                 ]]>
@@ -302,7 +302,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'taskOverdue'
                 ]]>
@@ -321,7 +321,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'taskUpcoming'
                 ]]>
@@ -340,7 +340,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'taskCompletedNotifyCreator'
                 ]]>
@@ -359,7 +359,7 @@
                     FROM
                         Notification n
                     WHERE
-                        n.created >= :lastRunDate
+                        n.state is null
                     AND
                         n.templateModelName = 'mentions'
                 ]]>
@@ -378,7 +378,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'transcribeStatus'
                   ]]>
@@ -397,7 +397,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'transcribeQueued'
                   ]]>
@@ -416,7 +416,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'acmDocumentSingleTaskWorkflow'
                   ]]>
@@ -435,7 +435,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'billingInvoice'
                   ]]>
@@ -454,7 +454,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'documentAttached'
                   ]]>
@@ -473,8 +473,8 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
-                      AND
+                        n.state is null
+					AND
                         n.templateModelName = 'documentAttachedLinked'
                   ]]>
             </value>
@@ -492,7 +492,7 @@
                     FROM
                           Notification n
                     WHERE
-                          n.created >= :lastRunDate
+                        n.state is null
                       AND
                         n.templateModelName = 'documentLinked'
                   ]]>
