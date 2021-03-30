@@ -3247,3 +3247,8 @@ objectDiffConfiguration:
       - participants
       - addresses
       - defaultAddress
+payment:
+  touchnet:
+    username: ""
+    password: ""
+    securelinkendpoint: ""
