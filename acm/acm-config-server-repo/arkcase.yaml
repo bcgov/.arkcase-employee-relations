@@ -291,6 +291,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/comprehendmedical/media/{mediaVersionId}}"
       - "/api/{version}/service/comprehendmedical/mediaFailure/{mediaVersionId}}"
       - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
+      - "/api/{version}/plugin/billing/touchnet"
     POST:
       - "/api/{version}/ldap/{directory}/partial-sync"
       - "/api/{version}/ldap/{directory}/full-sync"
@@ -322,6 +323,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/users/lang/{lang}"
       - "/api/{version}/service/comprehendmedical"
       - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
+      - "/api/{version}/plugin/billing/confirmPayment"
     PUT:
       - "/api/{version}/service/event"
       - "/api/{version}/forms/crud/acm/{formName}/init"
