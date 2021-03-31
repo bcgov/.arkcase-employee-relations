@@ -200,6 +200,7 @@ acmPluginConfigurationPrivileges:
   acmGlobalAllowPrivilege:
     GET:
       - "/api/{version}/plugin/admin/templateContent/{templateName}"
+      - "/api/{version}/plugin/admin/convertedTemplateContent/{objectType}/{objectId}/{templateName.+}"
       - "/api/{version}/plugin/admin/templates/activated/{objectType}"
       - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/labelmanagement/resource"
