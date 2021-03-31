@@ -499,5 +499,43 @@
             </value>
         </property>
     </bean>
+    
+    <bean id="assigneeConfirmationPayment" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                        n.state is null
+                      AND
+                        n.templateModelName = 'assigneeConfirmationPayment'
+                  ]]>
+            </value>
+        </property>
+    </bean>
+    
+    <bean id="confirmationPayment" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+        <property name="globalRule" value="true"/>
+        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="jpaQuery">
+            <value>
+                <![CDATA[
+                    SELECT
+                          n
+                    FROM
+                          Notification n
+                    WHERE
+                        n.state is null
+                      AND
+                        n.templateModelName = 'confirmationPayment'
+                  ]]>
+            </value>
+        </property>
+    </bean>
 
 </beans>
