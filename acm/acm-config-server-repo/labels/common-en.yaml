@@ -132,8 +132,12 @@ common.directive.docTree:
     btnOk.text: Submit
   emailDialog:
     title: Email
-    recipients.label: 'Recipients:'
-    recipients.placeholder: Choose recipients
+    recipients.label: 'To:'
+    recipients.placeholder: Choose To recipients
+    ccRecipients.label: 'Cc:'
+    ccRecipients.placeholder: Choose Cc recipients
+    bccRecipients.label: 'Bcc:'
+    bccRecipients.placeholder: Choose Bcc recipients
     subject.label: 'Subject:'
     subject.placeholder: Enter subject
     attachments.label: 'Attachments:'
@@ -157,6 +161,7 @@ common.directive.docTree:
     gridColumns:
       name: Name
       email: Email
+      entity: Entity
   mediaDialog:
     title: ArkCase Media Player
     btnCancel.text: Cancel
