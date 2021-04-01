@@ -690,7 +690,7 @@ admin:
         value.placeholder: Enter entry value as label key
         inversekey.placeholder: Enter entry inverse key
         inversevalue.placeholder: Enter entry inverse value as label key
-        description.placeholder: Enter entry description 
+        description.placeholder: Enter entry description
         btnCancel.text: Cancel
         btnOk.text: Save entry
         setPrimary: Set Primary
@@ -951,6 +951,7 @@ admin:
       enabled: Sending Status
       manualEmails: Manual Emails
       automatedEmails: Automated Emails
+      emailSubject: Email Subject
     templates.preview:
       title: Template Preview
       btnClose: Close
