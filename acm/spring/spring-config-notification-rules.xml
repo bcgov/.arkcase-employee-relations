@@ -519,9 +519,9 @@
         </property>
     </bean>
     
-    <bean id="confirmationPayment" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
+    <bean id="paymentConfirmation" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="executor" ref="billingSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
@@ -532,7 +532,7 @@
                     WHERE
                         n.state is null
                       AND
-                        n.templateModelName = 'confirmationPayment'
+                        n.templateModelName = 'paymentConfirmation'
                   ]]>
             </value>
         </property>

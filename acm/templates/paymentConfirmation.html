@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 <base target="_blank">
-<title>Plain Email</title>
+<title>Payment Confirmed</title>
 <style type="text/css">
 body * {
     font-family: 'Open Sans', Arial, sans-serif !important
@@ -284,7 +284,13 @@ body .grow269 img:hover {
                         <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="text-align: center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
                           <tbody>
                             <tr>
-                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 16px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#000000;">Your payment has been received.</span></td>
+                              <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 24px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#788288;"><b>Payment Confirmed</b></span></td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="20"></td>
+                            </tr>
+                            <tr>
+                                <td align="center" valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 19px; color: #ffffff; line-height: 28px; font-weight: 400;" class="fullCenter"><span style="color:#788288;">We have received your payment.</span></td>
                             </tr>
                             <tr>
                               <td width="100%" height="20"></td>
@@ -308,7 +314,110 @@ body .grow269 img:hover {
         <![endif]--></td>
     </tr>
 </table>
-<br/><br/>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#FFFFFF"style="background-color: #ffffff;">
+  <tbody>
+    <tr>
+      <td width="100%" valign="top" align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tbody>
+            <tr>
+              <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                  <tbody>
+                    <tr>
+                      <td width="100%" height="30"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                  <tbody>
+                    <tr>
+                      <td width="100%" align="center"><!-- Centered Title -->
+                        
+                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                          <tbody>
+                            <tr>
+                              <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 18px; color: #788288; line-height: 32px; font-weight: 600;" class="fullCenter"><b>Invoice Details</b></td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="25"></td>
+                            </tr>
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+							<tbody>
+                            <tr>
+							<td valign="middle" width="100%"><table border="0" cellspacing="1" align="center" cellpadding="3" style="text-align: left; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 14px; color: #666; line-height: 22px; font-weight: 400;">
+                                  <tbody>
+                                    <tr>
+                                      <td width="20%" valign="center" style="color: #788288;"><p><strong>Date</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; ${paymentConfirmation.date?datetime} (UTC)</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td width="20%" valign="center" style="color: #788288"><p><strong>Customer</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; ${paymentConfirmation.billName}</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td width="20%" valign="center" style="color: #788288"><p><strong>Services</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; Payment for Billing Invoice</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td width="20%" valign="center" style="color: #788288"><p><strong>Total</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; $ ${paymentConfirmation.amount}</p></td>
+                                    </tr>
+									<tr>
+                                      <td width="20%" valign="center" style="color: #788288"><p><strong>Payments</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; Credit Card (Ending in ${paymentConfirmation.cardNumber})</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td width="20%" valign="center" style="color: #788288"><p><strong>Amount Paid</strong></p></td>
+                                      <td width="80%" valign="center"><p>&emsp; $ ${paymentConfirmation.amount}</p></td>
+                                    </tr>
+                                  </tbody>
+                                </table></td>
+							</tr>
+							</tbody>
+							</table>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+</table>
+<br/><br/><br/></br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#FFFFFF" style="background-color: #ffffff;">
+  <tbody>
+    <tr>
+      <td width="100%" valign="top" align="center"><table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tbody>
+            <tr>
+              <td align="center"><!-- Logo Bottom -->
+                
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                  <tbody>
+                    <tr>
+                      <td width="100%" height="10" style="text-align: center; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 14px; color: #788288; line-height: 22px; font-weight: 400;">This is an automated email notification sent from ArkCase.</td>
+                    </tr>
+					<tr> </tr>
+                    <tr>
+                      <td width="100%" align="center" valign="middle" class="logo"><!-- Logo -->
+                        
+                        <table width="138" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                          <tbody>
+                            <tr>
+                              <td height="60" align="center" valign="middle" width="100%" style="text-align: center;" class="fullCenter"><a href="#" style="text-decoration: none;"></a></td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- End Logo Bottom --></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+</table>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#FFFFFF" style="background-color: #ffffff;">
   <tbody>
     <tr>
