@@ -1208,6 +1208,7 @@ rma_default_originator_org: "Armedia LLC"
 rma_root_folder: "ACM"
 rma_categoryFolder_COMPLAINT: "Complaints"
 rma_categoryFolder_CASE_FILE: "Case Files"
+rma_use_same_category_folder_path_CASE_FILE: false
 rma_categoryFolder_CONSULTATION: "Consultations"
 rma_categoryFolder_TASK: "Tasks"
 alfresco_rma_case_closed_statuses: "CLOSED"
