@@ -2044,7 +2044,7 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
-email.email_regex: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$/"
+email.email_regex: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$/"
 ########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
 fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
