@@ -75,5 +75,12 @@
         "emailFieldValue": null,
         "fieldDescription": "Details",
         "fieldObjectType": "CASE_FILE"
+    },
+    {
+        "fieldId": "tenBusinessDays",
+        "correspondenceFieldValue": "T(com.armedia.acm.services.holiday.service.HolidayConfigurationService).util.addWorkingDaysToDate(T(java.time.LocalDate).now(), 10)",
+        "emailFieldValue": "T(com.armedia.acm.services.holiday.service.HolidayConfigurationService).util.addWorkingDaysToDate(T(java.time.LocalDate).now(), 10)",
+        "fieldDescription": "Ten working days from today",
+        "fieldObjectType": "CASE_FILE"
     }
 ]
