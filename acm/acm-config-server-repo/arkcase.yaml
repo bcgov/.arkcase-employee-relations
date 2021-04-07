@@ -2649,6 +2649,8 @@ solr:
   batchUpdateBatchSize: 50
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
+  #for files above this size the content won't be indexed
+  contentIndexingFileSizeBytesLimit: 52428800
   suggestHandler: "suggest_handler"
   parallelUpdates: false
   zkHosts: 
