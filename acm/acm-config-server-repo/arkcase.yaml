@@ -2404,6 +2404,7 @@ ecm:
     BUSINESS_PROCESS: "/Business Processes"
   #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/camel-config-*.cmis.properties
   defaultCmisId: "alfresco"
+  documentSizeBytesLimit: 52428800
   viewer: "snowbound"
   viewer.js: "$[context]/resources/vendors/ViewerJS/index.html?type=$[type]&title=$[title]#$[context]/api/latest/plugin/ecm/stream/$[fileId]"
   viewer.snowbound: "https://acm-arkcase/arkcase/VirtualViewerJavaHTML5/index.html?documentId=ecmFileId=$[fileId]%26acm_ticket=$[ticket]%26userid=$[userid]"
@@ -2650,7 +2651,6 @@ solr:
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
   #for files above this size the content won't be indexed
-  contentIndexingFileSizeBytesLimit: 52428800
   suggestHandler: "suggest_handler"
   parallelUpdates: false
   zkHosts: 
