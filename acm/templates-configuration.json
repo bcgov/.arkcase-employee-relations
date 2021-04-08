@@ -662,7 +662,7 @@
   "documentType" : "Assignee Payment Confirmation",
   "templateFilename" : "assigneeConfirmationPayment.html",
   "objectType" : "ALL",
-  "templateModelProvider" : "com.armedia.acm.services.notification.service.provider.NotificationTemplateModelProvider",
+  "templateModelProvider" : "com.armedia.acm.services.notification.service.provider.BillingTemplateModelProvider",
   "templateType" : "emailTemplate",
   "enabled" : true,
   "dateFormatString" : "MM/dd/yyyy",

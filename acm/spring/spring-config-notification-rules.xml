@@ -502,7 +502,7 @@
     
     <bean id="assigneeConfirmationPayment" class="com.armedia.acm.services.notification.model.BasicNotificationRule">
         <property name="globalRule" value="true"/>
-        <property name="executor" ref="notificationSendExecutor"/>
+        <property name="executor" ref="billingSendExecutor"/>
         <property name="jpaQuery">
             <value>
                 <![CDATA[
