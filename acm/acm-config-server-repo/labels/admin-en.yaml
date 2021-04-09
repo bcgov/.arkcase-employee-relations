@@ -989,7 +989,7 @@ admin:
       objectType: Object Type
       mergeFieldForm: Merge Field Configuration
       addMergeField: Add Merge Field
-      fieldValue: Field Value
+      fieldValue: Field Name
     mergefields.addModal.placeHolders:
       fieldId: Enter Merge Field Id
       fieldValue: Enter Merge Field Value
