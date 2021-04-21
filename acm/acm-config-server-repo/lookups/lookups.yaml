@@ -847,9 +847,12 @@ lookupsConfiguration:
         draw:
           value: "core.lookups.fileTypes.draw"
           order: 7
+        email:
+          value: "core.lookups.fileTypes.email"
+          order: 8
         other:
           value: "core.lookups.fileTypes.other"
-          order: 8      
+          order: 9
       readonly: true
     identificationTypes:
       entries:
