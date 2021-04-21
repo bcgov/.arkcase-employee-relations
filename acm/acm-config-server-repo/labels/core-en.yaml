@@ -49,6 +49,7 @@ core:
       sig: SF86 Signature
       wir: Witness Interview Request
       draw: Engineer Drawing
+      email: Email
       other: Other
     identificationTypes:
       ssn: SSN
