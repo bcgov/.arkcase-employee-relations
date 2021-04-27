@@ -1905,6 +1905,11 @@ application:
     organizationPhone: "Organization_Phone"
     organizationFax: "Organization_Fax"
     dashboardBannerEnabled: true
+  brandingFiles:
+    - "header-logo.png"
+    - "login-logo.png"
+    - "email-logo.png"
+    - "custom.css"
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
   identityId: ""
