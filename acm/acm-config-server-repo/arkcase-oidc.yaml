@@ -2,8 +2,6 @@ oidc:
   registrationId: ""
   clientId: "" 
   clientSecret: ""
-  tenantId: ""
-  tenantSecret: ""
   redirectUri: ""
   authorizationUri: "" 
   tokenUri: "" 
