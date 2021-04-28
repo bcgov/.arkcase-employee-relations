@@ -3274,13 +3274,4 @@ payment:
     username: ""
     password: ""
     securelinkendpoint: ""
-    securepaylinkendpoint: ""
     upaysiteid: ""
-tokenExpiration:
-  fileLinks: 259200000
-  paymentLinks: 31536000000
-  wopiLinks: 259200000
-  onlyofficeLinks: 259200000
-convertEmailsToPDF:
-  outgoingEmailToPdf: false
-  incomingEmailToPdf: false
