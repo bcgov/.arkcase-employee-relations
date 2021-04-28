@@ -2984,6 +2984,7 @@ allowedUploadFileTypes:
     - application/vnd.openxmlformats-officedocument.wordprocessingml.document
     - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
     - application/pdf
+    - application/pkcs7-signature
   application/xml:
     - text/xml
     - application/octet-stream
