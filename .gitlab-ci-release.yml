@@ -143,6 +143,13 @@ release:
     # core
     - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     - git checkout master-core
+    - last_commit=$(git log --format="%H" -n 1)
+    - echo "Last commit on master-core branch = $last_commit"
+    #- git remote add github git@github.com:ArkCase/.arkcase.git
+    #- git fetch github
+    #- git checkout main
+    #- git cherry-pick -m 1 --strategy=recursive -X theirs --allow-empty --keep-redundant-commits $last_commit..master-core
+    #- git push github main
     - ls -lh
     - zip --exclude '*.git*' --exclude '*.m2*' -r /root/arkcase-config-core-$RELEASE_VERSION.zip .
     - mvn deploy:deploy-file -Dfile=/root/arkcase-config-core-$RELEASE_VERSION.zip -DrepositoryId=arkcase.release -Durl=$NEXUS_URL/repository/arkcase.release/ -DgroupId=com.armedia.arkcase -DartifactId=arkcase-config-core -Dpackaging=zip -Dversion=$RELEASE_VERSION -Dmaven.wagon.http.ssl.insecure=true
