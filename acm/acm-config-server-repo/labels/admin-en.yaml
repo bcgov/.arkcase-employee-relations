@@ -873,6 +873,7 @@ admin:
         trigger.title: Trigger interval(seconds) / cron
         lastRun.title: Last Run
         nextRun.title: Next Run
+        triggerState.title: Trigger State
       btn:
         run: Run
         spin: Executing
