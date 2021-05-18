@@ -175,6 +175,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/run"
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/pause"
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/resume"
+      - "/api/{version}/plugin/admin/scheduler/jobs/{name}/restoreTrigger"
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/functionalaccess/{roleName:.+}/groups"
       - "/api/{version}/service/forms/type"
