@@ -141,10 +141,11 @@ release:
     - apt-get install -y zip sshpass
     - export SSHPASS=$SSHPASS_ARKCASE
     # core
-    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     - git checkout master-core
     - last_commit=$(git log --format="%H" -n 1)
     - echo "Last commit on master-core branch = $last_commit"
+    - git checkout core
+    - mvn -B gitflow:release-finish -DskipTestProject=true -DcommitDevelopmentVersionAtStart=true -Dmaven.wagon.http.ssl.insecure=true
     #- git remote add github git@github.com:ArkCase/.arkcase.git
     #- git fetch github
     #- git checkout main
