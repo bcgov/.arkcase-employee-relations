@@ -3075,8 +3075,6 @@ zylabIntegration:
     clientSecret: ""
     tokenUri: ""
     tenant: ""
-    systemUserEmail: ""
-    systemUserPassword: ""
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
