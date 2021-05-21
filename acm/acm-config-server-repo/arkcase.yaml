@@ -3074,6 +3074,7 @@ zylabIntegration:
     clientId: ""
     clientSecret: ""
     tokenUri: ""
+    tenant: ""
     systemUserEmail: ""
     systemUserPassword: ""
 ##################### (formsType.json) #####################
