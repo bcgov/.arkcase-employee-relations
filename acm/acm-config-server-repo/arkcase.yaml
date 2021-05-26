@@ -3275,3 +3275,7 @@ payment:
     password: ""
     securelinkendpoint: ""
     upaysiteid: ""
+tokenExpiration:
+  fileLinks: 259200000
+  wopiLinks: 259200000
+  onlyofficeLinks: 259200000
