@@ -934,6 +934,7 @@ admin:
       emailSubject: Email Subject
     templates.preview:
       title: Template Preview
+      search: Search Case File
       btnClose: Close
     templates.fieldNames.label: Map fields to values from the template
     templates.querySelect:
