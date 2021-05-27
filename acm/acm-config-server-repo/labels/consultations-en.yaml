@@ -224,7 +224,7 @@ consultations.comp.addreference:
   cancelButton: Cancel
   confirmButton: Add
   search:
-    placeholder: Search for case, consultation,complaint, file, task
+    placeholder: Search for case file, complaint, consultation, task, document, file
     btn: Search
   grid:
     columns:
