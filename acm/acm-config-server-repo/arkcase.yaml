@@ -1924,7 +1924,6 @@ instance.indentity:
 businessHours:
   businessDayHoursEnabled: false
   endOfBusinessDayTime: "16:00"
-  startOfBusinessDayTime: "08:00"
   defaultDueDateGap: 180
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
