@@ -2984,6 +2984,7 @@ password:
   length: 7
   lengthMessage: "Password must be of minimum length of"
 #### File formats. To work proper, use "-dot-" instead of "." #####
+restrictFileTypesUpload: true
 allowedUploadFileTypes:
   text/plain:
     - application/octet-stream
