@@ -1159,3 +1159,4 @@ eventType.com.armedia.acm.exemption.code.created: Exemption Code Added
 eventType.com.armedia.acm.exemption.code.deleted: Exemption Code Deleted
 eventType.com.armedia.acm.exemption.code.updated: Exemption Code Updated
 eventType.com.armedia.acm.billing.touchnet.payment.created: Payment was made via TouchNet
+eventType.com.armedia.acm.zylab.matter.created: Integration -
