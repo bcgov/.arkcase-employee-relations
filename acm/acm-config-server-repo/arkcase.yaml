@@ -1990,7 +1990,7 @@ com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassoc
 com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
 com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted, com.armedia.acm.person.organization.updated, com.armedia.acm.person.created,
 com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted, com.armedia.acm.person.personAlias.updated,
-com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
+com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted, com.armedia.acm.zylab.matter.created,
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.changed, com.armedia.acm.object.assignee.change, com.armedia.acm.casefile.participant.changed,
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
