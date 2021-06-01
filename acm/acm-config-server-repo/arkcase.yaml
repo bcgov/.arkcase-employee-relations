@@ -3273,5 +3273,5 @@ tokenExpiration:
   wopiLinks: 259200000
   onlyofficeLinks: 259200000
 convertEmailsToPDF:
-  outgoingEmailToPdf: true
-  incomingEmailToPdf: true
+  outgoingEmailToPdf: false
+  incomingEmailToPdf: false
