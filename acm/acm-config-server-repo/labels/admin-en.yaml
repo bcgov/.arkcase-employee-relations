@@ -77,6 +77,10 @@ admin:
     convertMsg.checkbox: Convert MSG to PDF
     convertEml.checkbox: Convert EML to PDF
     save.button: Save
+  security.outgoingIncomingEmailConversion:
+    title: Convert Incoming/Outgoing Emails to PDF
+    incomingEmailToPdf.checkbox: Incoming Emails
+    outgoingEmailToPdf.checkbox: Outgoing Emails
   menus:
     leftnav.item: Admin
   security.ldapConfig.data.placeholders:
