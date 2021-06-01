@@ -107,6 +107,7 @@ acmPluginConfigurationPrivileges:
       - "/api/v1/plugin/admin/labelcheck"
       - "/api/{version}/plugin/admin/application/version"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/plugin/admin/outgoingIncomingEmailConversion"
       - "/api/{version}/plugin/admin/scheduler/jobs"
       - "/api/{version}/ldap/{directory:.+}/groups"
       - "/api/{version}/ldap/{directory:.+}/groups/{parentGroupName:.+}"
@@ -133,6 +134,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/holidayConfig"
       - "/api/{version}/plugin/admin/pdfConversion"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/plugin/admin/outgoingIncomingEmailConversion"
       - "/api/{version}/users/group/{groupId}/members/remove"
       - "/api/{version}/users/group/save"
       - "/api/{version}/users/group/save/{subGroupId}/{parentId}"
@@ -3270,3 +3272,6 @@ tokenExpiration:
   fileLinks: 259200000
   wopiLinks: 259200000
   onlyofficeLinks: 259200000
+convertEmailsToPDF:
+  outgoingEmailToPdf: true
+  incomingEmailToPdf: true
