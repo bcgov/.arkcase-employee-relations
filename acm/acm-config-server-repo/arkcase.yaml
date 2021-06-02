@@ -3263,6 +3263,7 @@ objectDiffConfiguration:
       - addresses
       - defaultAddress
 payment:
+  enabled: false
   touchnet:
     username: ""
     password: ""
