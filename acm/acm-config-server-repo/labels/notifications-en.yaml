@@ -39,6 +39,9 @@ notifications:
   case:
     status.changed: "Case '${nameLabel}' status changed"
     priority.changed: "Case '${nameLabel}' priority changed"
+    dueDate.approaching: "The Due Date on '${nameLabel}' is Approaching"
+    dueDate.overdue: "The Due Date on '${nameLabel}' is Overdue"
+    dueDate.changed: "The Due Date on '${nameLabel}' has changed"
   note.added: "Note added in ${typeLabel}: ${nameLabel}"
   participants:
     added: "Participants added in ${typeLabel}: ${nameLabel}"
