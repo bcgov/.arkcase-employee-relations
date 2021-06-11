@@ -169,8 +169,8 @@ tasks.newTask:
   priority.label: Priority
   status.placeholder: Select Status
   status.label: Status
-  associateNumber.label: Associate with Complaint or Case
-  associateNumber.placeholder: 'Complaint or Case #'
+  associateNumber.label: Associated with object
+  associateNumber.placeholder: 'Object #'
   associateType.label: Parent Type
   subject.label: Subject
   taskStartDate.label: Start Date
