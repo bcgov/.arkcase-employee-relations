@@ -2838,6 +2838,7 @@ comprehendmedical:
   excludedFileTypes:
   #To achieve cross-platform file paths use "/" for path separator. (Working on windows and *nix)
   tempPath:
+  maxFailedAttempts: 10
 #################### Username/password notifier properties (usernamePasswordNotifier.properties) ###################
 upcoming:
   password.notification:
