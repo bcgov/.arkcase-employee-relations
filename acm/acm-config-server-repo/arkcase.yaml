@@ -1920,8 +1920,9 @@ instance.indentity:
   digest: ""
 ################### Business Hours Configuration ####################
 businessHours:
-  endOfBusinessDayEnabled: false
+  businessDayHoursEnabled: false
   endOfBusinessDayTime: "16:00"
+  startOfBusinessDayTime: "08:00"
   defaultDueDateGap: 180
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
