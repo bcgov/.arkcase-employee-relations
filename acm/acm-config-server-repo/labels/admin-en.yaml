@@ -629,8 +629,9 @@ admin:
       title: Business Hours Configuration
       config:
         labels:
-          endOfBusinessDayEnabled: Enable End of Business Day For Due Date Calculation
-          endOfBusinessDayTime: "Time of Day (format: HH:MM)"
+          businessDayHoursEnabled: Enable Business Day Hours For Due Date Calculation
+          startOfBusinessDayTime: "Start of Day (format: HH:MM)"
+          endOfBusinessDayTime: "End of Day (format: HH:MM)"
       apply.label: Apply
     version.config:
       title: Application Version
