@@ -3064,6 +3064,7 @@ zylabIntegration:
   enabled: false
   host:
   port: 443
+  matterCreationWaitInMinutes: 3
   basePath: /EDiscovery/LegalReview
   simpleResourcePath: /api/htmlappsettings
   documentReviewPath: /HtmlApp/#/matter/select
@@ -3074,6 +3075,7 @@ zylabIntegration:
   openMatterPath: /HtmlApp/#/matter/{matterId}/home
   matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
   getMatterTemplatesPath: /api/matters/templates
+  getMattersPath: /api/matters
   viewDocumentPath: /documentReview
   authentication:
     registrationId: ""
