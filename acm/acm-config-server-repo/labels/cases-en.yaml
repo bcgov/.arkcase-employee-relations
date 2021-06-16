@@ -75,6 +75,7 @@ cases.comp.actions:
   sendEmail.button: Send Email
   createMatter.button: Create Matter
   createMatter.sucess: New ZyLAB Document Review Matter created sucessfully
+  createMatter.inProgress: Creation of ZyLAB Document Review Matter is already in progress
   createMatter.error: New ZyLAB Document Review Matter creation failed
   openMatter.button: Open Matter
   matterReports.button: Matter Reports
