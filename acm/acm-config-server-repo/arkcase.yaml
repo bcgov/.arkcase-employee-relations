@@ -2820,6 +2820,7 @@ ocr:
   excludedFileTypes: "user_profile,user_signature,image,billing_invoice_document"
   #To achieve cross-platform file paths use "/" for path separator.(Working on windows and *nix)
   tempPath:
+  maxFailedAttempts: 10
 ################### Comprehend Medical Configuration ####################
 comprehendmedical:
   enabled: true
@@ -2835,7 +2836,6 @@ comprehendmedical:
   excludedFileTypes:
   #To achieve cross-platform file paths use "/" for path separator. (Working on windows and *nix)
   tempPath:
-  maxFailedAttempts: 10
 #################### Username/password notifier properties (usernamePasswordNotifier.properties) ###################
 upcoming:
   password.notification:
