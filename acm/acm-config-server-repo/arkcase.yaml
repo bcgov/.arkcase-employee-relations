@@ -1893,6 +1893,7 @@ application:
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     templateGuideUrl: "https://www.arkcase.com/correspondence-management-3/"
+    sequenceInstructionUrl: "https://www.arkcase.com/application-2/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
@@ -2235,7 +2236,7 @@ cost.plugin:
 ## Default dashboard JSON String.
 dashboard.plugin:
   defaultDashboard: "{\"title\":\"dashboard.title\",\"structure\":\"6-6\",\"rows\":[{\"columns\": [{\"styleClass\":\"col-md-12\"}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\"}"
-  moduleDefaultDashboard: "{\"title\":\"\",\"structure\":\"12\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[]}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/module_dashboard-title.html\"}"
+  moduleDefaultDashboard: "{\"addTemplateUrl\":\"modules/dashboard/templates/widget-add.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\",\"title\":\"dashboard.title\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[{\"wid\":7,\"fullscreenTemplateUrl\":\"modules/dashboard/templates/widget-fullscreen.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/widget-title.html\",\"deleteTemplateUrl\":\"modules/dashboard/templates/widget-delete.html\",\"type\":\"userWebsites\",\"title\":\"dashboard.widgets.userWebsites.title\",\"config\":{\"paginationPageSize\":\"5\"},\"editTemplateUrl\":\"modules/dashboard/templates/widget-edit.html\"}],\"cid\":3}]}],\"structure\":\"12\",\"editTemplateUrl\":\"modules/dashboard/templates/dashboard-edit.html\"}"
   ## If you want to introduce new widgets to ACM3 set acm.add.widget = true
   ## and set acm.new.widgets = newWidgetOne,newWidgetTwo etc. after you delete old values from previous update.
   add.widget: true
@@ -2820,6 +2821,7 @@ ocr:
   excludedFileTypes: "user_profile,user_signature,image,billing_invoice_document"
   #To achieve cross-platform file paths use "/" for path separator.(Working on windows and *nix)
   tempPath:
+  maxFailedAttempts: 10
 ################### Comprehend Medical Configuration ####################
 comprehendmedical:
   enabled: true
@@ -3063,6 +3065,7 @@ zylabIntegration:
   enabled: false
   host:
   port: 443
+  matterCreationWaitInMinutes: 3
   basePath: /EDiscovery/LegalReview
   simpleResourcePath: /api/htmlappsettings
   documentReviewPath: /HtmlApp/#/matter/select
@@ -3073,6 +3076,7 @@ zylabIntegration:
   openMatterPath: /HtmlApp/#/matter/{matterId}/home
   matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
   getMatterTemplatesPath: /api/matters/templates
+  getMattersPath: /api/matters
   viewDocumentPath: /documentReview
   authentication:
     registrationId: ""
