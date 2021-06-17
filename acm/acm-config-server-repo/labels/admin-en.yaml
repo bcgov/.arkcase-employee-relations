@@ -719,6 +719,7 @@ admin:
       title: Sequence Configuration
       sequenceEnabled: Enabled
       sequenceDisabled: Disabled
+      instructions: Instructions
       grid:
         sequenceName: Name
         sequenceDescription: Description
