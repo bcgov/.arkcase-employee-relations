@@ -216,7 +216,7 @@ complaints.comp.addreference:
   cancelButton: Cancel
   confirmButton: Add
   search:
-    placeholder: Search for case, complaint, file, task
+    placeholder: Search for case file, complaint, consultation, task, document, file
     btn: Search
   grid:
     columns:

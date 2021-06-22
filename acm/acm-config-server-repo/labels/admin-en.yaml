@@ -77,6 +77,10 @@ admin:
     convertMsg.checkbox: Convert MSG to PDF
     convertEml.checkbox: Convert EML to PDF
     save.button: Save
+  security.outgoingIncomingEmailConversion:
+    title: Convert Incoming/Outgoing Emails to PDF
+    incomingEmailToPdf.checkbox: Incoming Emails
+    outgoingEmailToPdf.checkbox: Outgoing Emails
   menus:
     leftnav.item: Admin
   security.ldapConfig.data.placeholders:
@@ -459,27 +463,6 @@ admin:
     workflow: Approval Workflow Configuration
     useWorkflowCheckbox: Use Approval Workflow
     addCostsheetToBilling: Costsheets should be added to the Billing table when finalized
-  portals.portalsConfiguration:
-    nodeTitle: Portals Service
-    title: Portals Configuration
-    url: URL
-    id: ID
-    portalId: Portal ID
-    portalDescription: Description
-    portalUser: User
-    groupName: Group
-    save: Save
-    cancel: Cancel
-    placeholder:
-      portalUrl: Enter Portal URL
-      portalId: ID will be generate
-      portalDescription: Enter Portal Description
-      portalUser: Select Portal User
-      groupName: Select Group
-    message:
-      edit: Portal users being moved to a newly configured group...
-      add: Portal is successfully added
-      delete: Portal is successfully deleted
   userSearch:
     title: User Search
     cancelButton: Cancel
@@ -639,12 +622,16 @@ admin:
         label: Default timezone for the application (Use TZ database timezones)
         error: Not a valid timezone. Please use a timezone defined in the TZ database.
       apply.label: Apply
+      dashboardBanner:
+        title: Dashboard Banner
+        label: Enable dashboard banner for browser support
     businessHours:
       title: Business Hours Configuration
       config:
         labels:
-          endOfBusinessDayEnabled: Enable End of Business Day For Due Date Calculation
-          endOfBusinessDayTime: "Time of Day (format: HH:MM)"
+          businessDayHoursEnabled: Enable Business Day Hours For Due Date Calculation
+          startOfBusinessDayTime: "Start of Day (format: HH:MM)"
+          endOfBusinessDayTime: "End of Day (format: HH:MM)"
       apply.label: Apply
     version.config:
       title: Application Version
@@ -687,7 +674,7 @@ admin:
         value.placeholder: Enter entry value as label key
         inversekey.placeholder: Enter entry inverse key
         inversevalue.placeholder: Enter entry inverse value as label key
-        description.placeholder: Enter entry description 
+        description.placeholder: Enter entry description
         btnCancel.text: Cancel
         btnOk.text: Save entry
         setPrimary: Set Primary
@@ -891,6 +878,7 @@ admin:
         trigger.title: Trigger interval(seconds) / cron
         lastRun.title: Last Run
         nextRun.title: Next Run
+        triggerState.title: Trigger State
       btn:
         run: Run
         spin: Executing
@@ -925,6 +913,7 @@ admin:
     templates.versionTemplate: Versions
     templates.deleteTemplate: Delete
     templates.editTemplate: Edit Template
+    templates.instructions: Instructions
     templates.grid:
       id: ID
       title: Title
@@ -938,14 +927,19 @@ admin:
       statusDeactivated: Deactivated
       statusActivated: Activated
       objectType: Object Type
+      parentType: Parent Type
       version: Version
       templateVersionActive: Active
       templateModelProvider: Template Model Provider
       statusDisabled: Disabled
       statusEnabled: Enabled
       enabled: Sending Status
+      manualEmails: Manual Emails
+      automatedEmails: Automated Emails
+      emailSubject: Email Subject
     templates.preview:
       title: Template Preview
+      search: Search Case File
       btnClose: Close
     templates.fieldNames.label: Map fields to values from the template
     templates.querySelect:
@@ -959,6 +953,7 @@ admin:
     templates.modal:
       objectTypes.selectedFiles: No File Selected
       objectTypes.label: Object Types
+      parentTypes.label: Parent Types
       querySelect.label: Query Select
       label.label: Display Name
       btnCancel.text: Cancel
@@ -994,6 +989,7 @@ admin:
       objectType: Object Type
       mergeFieldForm: Merge Field Configuration
       addMergeField: Add Merge Field
+      fieldValue: Field Name
     mergefields.addModal.placeHolders:
       fieldId: Enter Merge Field Id
       fieldValue: Enter Merge Field Value

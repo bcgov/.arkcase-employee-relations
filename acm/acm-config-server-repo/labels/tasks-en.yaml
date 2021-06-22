@@ -73,6 +73,11 @@ tasks.comp.details:
     details: Details
     modified: Date Last Modified
     modifier: User Last Modified
+tasks.comp.people:
+  title: People
+  table.columns:
+    type: Type
+    fullName: Full Name  
 tasks.comp.reworkdetails:
   title: Rework Details
   informSaved: Rework details saved
@@ -176,8 +181,8 @@ tasks.newTask:
   priority.label: Priority
   status.placeholder: Select Status
   status.label: Status
-  associateNumber.label: Associate with Complaint or Case
-  associateNumber.placeholder: 'Complaint or Case #'
+  associateNumber.label: Associated with object
+  associateNumber.placeholder: 'Object #'
   associateType.label: Parent Type
   subject.label: Subject
   taskStartDate.label: Start Date
@@ -254,7 +259,7 @@ tasks.comp.addreference:
   cancelButton: Cancel
   confirmButton: Add
   search:
-    placeholder: Search for case, complaint, file, task
+    placeholder: Search for case file, complaint, consultation, task, document, file
     btn: Search
   grid:
     columns:
@@ -323,6 +328,7 @@ tasks.tree:
     eSignatures.label: eSignatures
     tags.label: Tags
     reject.label: Reject Comments
+    people.label: People
   filters:
     myTasks: Tasks for Me
     opened: All Open Tasks

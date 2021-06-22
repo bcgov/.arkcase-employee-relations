@@ -8,7 +8,7 @@
 <title>Plain Email</title>
 <style type="text/css">
 body * {
-    font-family: 'Open Sans', Arial, sans-serif !important
+    font-family: 'Open Sans', Arial, sans-serif
 }
 div, p, a, li, td {
     -webkit-text-size-adjust: none;
@@ -289,6 +289,21 @@ body .grow269 img:hover {
                             <tr>
                               <td width="100%" height="20"></td>
                             </tr>
+                            <!-- Button -->
+                            <tr>
+                              <td align="center"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder"><span class="featuredHolder">
+                                <#if billingInvoice.token?has_content>
+                                <table border="0" cellpadding="0" cellspacing="0" align="center" class="">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" height="48" style="border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; padding-left: 30px; padding-right: 30px; font-weight: 400; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; color: #ffffff; border: 1px solid #126da7; font-size: 14px; background-color: #126da7;" bgcolor="#126da7"><a href="${baseURL}/api/latest/plugin/billing/touchnet?amt=${billingInvoice.amount}&objectId=${billingInvoice.objectId}&ecmFileId=${billingInvoice.fileId}&objectType=${billingInvoice.objectType}&objectNumber=${billingInvoice.objectNumber}&acm_email_ticket=${billingInvoice.token}" style="color: #ffffff; font-size: 14px; text-decoration: none; line-height: 34px;">Click here to pay</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                </#if>
+                                </span></span></span></span></span></td>
+                            </tr>
+                            <!-- End Button -->
                             <tr>
                               <td width="100%" height="35"></td>
                             </tr>
@@ -304,8 +319,7 @@ body .grow269 img:hover {
         </v:textbox>
         </v:fill>
         </v:rect>
-        
-        <![endif]--></td>
+        </td>
     </tr>
 </table>
 <br/><br/>

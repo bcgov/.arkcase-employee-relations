@@ -768,6 +768,26 @@ lookupsConfiguration:
         TASK:
           value: "core.lookups.emailTemplates.objectTypes.task"
           order: 6
+    emailTemplatesParentTypes:
+      entries:
+        ALL:
+          value: "core.lookups.auditReportNames.all"
+          order: 1
+        CASE_FILE:
+          value: "core.lookups.emailTemplates.objectTypes.casefile"
+          order: 2
+        COMPLAINT:
+          value: "core.lookups.emailTemplates.objectTypes.complaint"
+          order: 3
+        CONSULTATION:
+          value: "core.lookups.emailTemplates.objectTypes.consultation"
+          order: 4
+        FILE:
+          value: "core.lookups.emailTemplates.objectTypes.file"
+          order: 5
+        TASK:
+          value: "core.lookups.emailTemplates.objectTypes.task"
+          order: 6          
     changeCaseStatusResolutions:
       entries:
         DENIED:
@@ -827,9 +847,12 @@ lookupsConfiguration:
         draw:
           value: "core.lookups.fileTypes.draw"
           order: 7
+        email:
+          value: "core.lookups.fileTypes.email"
+          order: 8
         other:
           value: "core.lookups.fileTypes.other"
-          order: 8      
+          order: 9
       readonly: true
     identificationTypes:
       entries:
@@ -2645,7 +2668,42 @@ lookupsConfiguration:
           value: core.lookups.caseTaskTypes.thirdPartyObjection
           description: Legal Notification to Third Party
           order: 43
-
+    caseFileOrganizationTypes:
+      entries:
+        Complaintant:
+          value: "core.lookups.complaintPersonTypes.complaintant"
+          order: 1
+        Subject: 
+          value: "core.lookups.complaintPersonTypes.subject"
+          order: 2
+        Witness:
+          value: "core.lookups.complaintPersonTypes.witness"
+          order: 3
+        Wrongdoer:
+          value: "core.lookups.complaintPersonTypes.wrongdoer"
+          order: 4
+        Other: 
+          value: "core.lookups.common.other"
+          order: 5
+        Defendant:
+          value: "core.lookups.caseFilePersonTypes.defendant"
+          order: 6
+        WAS Officer:
+          value: "core.lookups.caseFilePersonTypes.was-officer"
+          order: 7
+        Victim: 
+          value: "core.lookups.caseFilePersonTypes.victim"
+          order: 8
+        Defense Counsel:
+          value: "core.lookups.caseFilePersonTypes.defenseCounsel"
+          order: 9
+        Forensic Scientist:
+          value: "core.lookups.caseFilePersonTypes.forensicScientist"
+          order: 10
+        Unknown: 
+          value: "core.lookups.caseFilePersonTypes.unknown" 
+          order: 11  
+      readonly: true
 
          
 

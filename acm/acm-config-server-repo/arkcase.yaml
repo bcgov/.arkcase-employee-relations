@@ -6,19 +6,6 @@ acmPluginConfigurationPrivileges:
   acmCaseModulePrivilege:
     GET:
       - "/modules/cases/views/"
-      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
-      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
-    POST:
-      - "/api/{version}/plugin/casefile/change/status/{mode}"
-      - "/api/{version}/plugin/casefile/{caseId}/tasks"
-      - "/api/{version}/service/exemption/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
-      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
-    DELETE:
-      - "/api/{version}/service/exemption/{tagId}"
-    PUT:
-      - "/api/{version}/service/exemption/statute"
   caseFileListPrivilege:
     GET:
       - "/api/{version}/plugin/casefile/caseTypes"
@@ -34,21 +21,31 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/queues"
       - "/api/{version}/plugin/casefile/number/by/queue"
       - "/api/{version}/plugin/casefile/nextPossibleQueues/{caseFileId}"
+      - "/api/{version}/service/exemption/{parentObjectId}/{parentObjectType}/tags"
+      - "/api/{version}/service/ecm/file/{caseId}/tags/{fileId}"
   saveCasePrivilege:
     GET:
       - "/api/{version}/plugin/casefile/enqueue/{caseId}"
     POST:
       - "/api/{version}/plugin/merge-casefiles"
       - "/api/{version}/plugin/casefile"
+      - "/api/{version}/plugin/casefile/change/status/{mode}"
+      - "/api/{version}/plugin/casefile/{caseId}/tasks"
+      - "/api/{version}/service/exemption/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags"
+      - "/api/{version}/service/ecm/file/{fileId}/update/tags/manually"
+      - "/api/{version}/plugin/casefile/{caseId}/createZylabMatter"
+    DELETE:
+      - "/api/{version}/service/exemption/{tagId}"
+    PUT:
+      - "/api/{version}/service/exemption/statute"
   splitCaseFilePrivilege:
     POST:
       - "/api/{version}/plugin/copyCaseFile"
   acmConsultationModulePrivilege:
     GET:
       - "/modules/consultations/views/"
-    POST:
-      - "/api/{version}/plugin/consultation/change/status/{mode}"
-      - "/api/{version}/plugin/consultation/{consultationId}/tasks"
   acmConsultationListPrivilege:
     GET:
       - "/api/{version}/plugin/consultation/consultationTypes"
@@ -62,7 +59,9 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/consultation/bystatus/summary"
   acmConsultationSavePrivilege:
     POST:
-      - "/api/{version}/plugin/consultation"
+      - "/api/{version}/plugin/consultation"      
+      - "/api/{version}/plugin/consultation/change/status/{mode}"
+      - "/api/{version}/plugin/consultation/{consultationId}/tasks"
   adminPrivilege:
     GET:
       - "/plugin/admin"
@@ -90,11 +89,9 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/queries/{queryType}"
       - "/api/{version}/plugin/admin/queries/query/{queryBeanId}"
       - "/api/{version}/plugin/admin/templates"
-      - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/template/{templateId}"
       - "/api/{version}/plugin/admin/template/versions/{templateId}"
       - "/api/{version}/plugin/admin/template/{templateId}/{templateFilename:.+}"
-      - "/api/{version}/plugin/admin/templateContent/{templateName}"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/versions"
       - "/api/{version}/plugin/admin/mergefields/versions/{objectType}"
@@ -110,6 +107,7 @@ acmPluginConfigurationPrivileges:
       - "/api/v1/plugin/admin/labelcheck"
       - "/api/{version}/plugin/admin/application/version"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/plugin/admin/outgoingIncomingEmailConversion"
       - "/api/{version}/plugin/admin/scheduler/jobs"
       - "/api/{version}/ldap/{directory:.+}/groups"
       - "/api/{version}/ldap/{directory:.+}/groups/{parentGroupName:.+}"
@@ -136,6 +134,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/holidayConfig"
       - "/api/{version}/plugin/admin/pdfConversion"
       - "/api/{version}/plugin/admin/documentUploadPolicy"
+      - "/api/{version}/plugin/admin/outgoingIncomingEmailConversion"
       - "/api/{version}/users/group/{groupId}/members/remove"
       - "/api/{version}/users/group/save"
       - "/api/{version}/users/group/save/{subGroupId}/{parentId}"
@@ -164,6 +163,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/linkformsworkflows/configuration"
       - "/api/{version}/plugin/admin/branding/customcss"
       - "/api/{version}/plugin/admin/template"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/businessHours"
       - "/api/{version}/plugin/admin/mergefields"
       - "/api/{version}/plugin/admin/mergefields/version/active"
@@ -177,6 +177,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/run"
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/pause"
       - "/api/{version}/plugin/admin/scheduler/jobs/{name}/resume"
+      - "/api/{version}/plugin/admin/scheduler/jobs/{name}/restoreTrigger"
       - "/api/{version}/ldap/{directory:.+}/users/{userId:.+}"
       - "/api/{version}/functionalaccess/{roleName:.+}/groups"
       - "/api/{version}/service/forms/type"
@@ -201,11 +202,16 @@ acmPluginConfigurationPrivileges:
       - "/api/latest/service/recycleBin"
   acmGlobalAllowPrivilege:
     GET:
+      - "/api/{version}/plugin/admin/templateContent/{templateName}"
+      - "/api/{version}/plugin/admin/convertedTemplateContent/{objectType}/{objectId}/{templateName.+}"
+      - "/api/{version}/plugin/admin/templates/activated/{objectType}"
+      - "/api/{version}/plugin/admin/templates/active/{templateType}"
       - "/api/{version}/plugin/admin/labelmanagement/resource"
       - "/api/{version}/plugin/admin/labelmanagement/resources"
       - "/api/{version}/plugin/admin/labelmanagement/default-language"
       - "/api/{version}/plugin/admin/app-properties"
       - "/api/{version}/plugin/admin/app-properties/{propertyName}"
+      - "/api/{version}/plugin/admin/zylab/configuration"
       - "/api/{version}/plugin/admin/rolesprivileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/rolesprivileges/privileges/{privilegeName}/roles"
       - "/api/{version}/plugin/admin/plainforms"
@@ -289,6 +295,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/service/comprehendmedical/media/{mediaVersionId}}"
       - "/api/{version}/service/comprehendmedical/mediaFailure/{mediaVersionId}}"
       - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
+      - "/api/{version}/plugin/billing/touchnet"
     POST:
       - "/api/{version}/ldap/{directory}/partial-sync"
       - "/api/{version}/ldap/{directory}/full-sync"
@@ -320,6 +327,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/users/lang/{lang}"
       - "/api/{version}/service/comprehendmedical"
       - "/api/{version}/service/comprehendmedical/{mediaVersionId}/automatic"
+      - "/api/{version}/plugin/billing/confirmPayment"
     PUT:
       - "/api/{version}/service/event"
       - "/api/{version}/forms/crud/acm/{formName}/init"
@@ -344,13 +352,14 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/dashboard/get"
       - "/api/{version}/plugin/dashboard/widgets/get"
       - "/api/{version}/plugin/dashboard/widgets/rolesByWidget/all"
+    POST:
+      - "/api/{version}/plugin/dashboard/set"
   dashboardPrivilege:
     GET: 
       - "/api/{version}/plugin/dashboard/widgets/{widgetName:.+}/roles"
       - "/api/{version}/plugin/dashboard/widgets/preferred/{moduleName}"
       - "/api/{version}/plugin/dashboard/widgets/site"
     POST:
-      - "/api/{version}/plugin/dashboard/set/"
       - "/api/{version}/plugin/dashboard/widgets/set"
       - "/api/{version}/plugin/dashboard/widgets/site"
     PUT:
@@ -507,12 +516,6 @@ acmPluginConfigurationPrivileges:
       - "/api/service/category/{version}/deactivate"
     DELETE:
       - "/api/service/category/{version}/{categoryId}"
-  acmComplaintCreatePrivilege:
-    GET: 
-      - "/plugin/complaint/wizard"
-    POST:
-      - "/api/{version}/plugin/complaint"
-      - "/api/{version}/plugin/complaint/workflow"
   acmComplaintListPrivilege:
     GET:
       - "/api/{version}/plugin/complaint/forUser/{user:.+}"
@@ -525,21 +528,26 @@ acmPluginConfigurationPrivileges:
   acmComplaintModulePrivilege:
     GET:
       - "/modules/complaints/views/"
+  acmComplaintSavePrivilege:
+    GET: 
+      - "/plugin/complaint/wizard"
     POST:
+      - "/api/{version}/plugin/complaint"
+      - "/api/{version}/plugin/complaint/workflow"
       - "/api/{version}/plugin/complaint/close/{mode}"
   acmGenerateCorrespondencePrivilege:
     GET:
       - "/api/{version}/service/correspondence/listTemplates"
       - "/api/{version}/service/correspondence/listAllProperties"
       - "/api/{version}/service/correspondence/listTemplateModelProviders"
-      - "/api/{version}/plugin/admin/templates/activated/{objectType}"
     POST:
       - "/api/{version}/service/correspondence"
-      - "/api/{version}/service/correspondence/multitemplate"
   documentRepositoryModulePrivilege:
     GET:
       - "/modules/document-repository/views/"
       - "/modules/my-documents/views/"
+  documentRepositoryManagerPrivilege:
+    GET:
       - "/api/{version}/plugin/documentrepository/{id}"
       - "/api/{version}/plugin/documentrepository/{id}/tasks"
     POST:
@@ -606,11 +614,6 @@ acmPluginConfigurationPrivileges:
   participantPrivilege:
     GET:
       - "/api/{version}/service/participant/{objectType}/{objectId}"
-    PUT:
-      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}" 
-    DELETE:
-      - "/api/{version}/service/participant/{participantId}/{participantType}"
-      - "/api/{version}/service/participant/{userId}/{participantType}/{objectType}/{objectId}"
   acmPersonSavePrivilege:
     POST:
       - "/api/{version}/plugin/person"
@@ -656,6 +659,8 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/person-associations"
       - "/api/{version}/plugin/personAssociation/{id}"
       - "/api/{version}/plugin/person-associations/{id}"
+      - "/api/{version}/plugin/personAssociation/{parentType}/{parentId}"
+      - "/api/{version}/plugin/person-associations/{parentType}/{parentId}"
   acmOrganizationSavePrivilege:
     POST:
       - "/api/{version}/plugin/organizations"
@@ -885,7 +890,6 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/tasks/documents/review"
       - "/api/{version}/plugin/tasks/newdocuments/review"
       - "/api/{version}/plugin/task/save/{taskId}"
-      - "/api/{version}/plugin/task/saveReference"
   acmTaskClaimPrivilege:
     POST:
       - "/api/{version}/plugin/task/claim/{taskId}"
@@ -1207,6 +1211,7 @@ rma_default_originator_org: "Armedia LLC"
 rma_root_folder: "ACM"
 rma_categoryFolder_COMPLAINT: "Complaints"
 rma_categoryFolder_CASE_FILE: "Case Files"
+rma_use_same_category_folder_path_CASE_FILE: false
 rma_categoryFolder_CONSULTATION: "Consultations"
 rma_categoryFolder_TASK: "Tasks"
 alfresco_rma_case_closed_statuses: "CLOSED"
@@ -1366,17 +1371,13 @@ application:
     timesheetApprovePrivilege: Timesheet Approve Privilege
     acmComplaintListPrivilege: Complaint List Privilege
     acmComplaintSavePrivilege: Complaint Save Privilege
-    acmComplaintCreatePrivilege: Complaint Create Privilege
     acmComplaintApprovePrivilege: Complaint Approve Privilege
-    acmSearchPrivilege: Search Privilege
     searchPrivilege: Search Privileges
     objectSuggestionPrivilege: Object Suggestion Privilege
     acmCaseApprovePrivilege: Case Approve Privilege
     saveCasePrivilege: Save Case Privilege
     caseFileListPrivilege: Case File List Privilege
-    caseFileCreatePrivilege: Case File Create Privilege
     acmConsultationListPrivilege: Consultation List Privilege
-    acmConsultationCreatePrivilege: Consultation Create Privilege
     acmConsultationSavePrivilege: Consultation Save Privilege
     acmConsultationApprovePrivilege: Consultation Approve Privilege
     acmPersonSavePrivilege: Person Save Privilege
@@ -1418,8 +1419,6 @@ application:
     objectUnLockPrivilege: Object Unlock Privilege
     listLocksDetailsPrivilege: List Lock Details Privilege
     listLockedObjectsPrivilege: List Locked Objects Privilege
-    analyticsPrivilege: Data Analytics Privilege
-    analyticsAuditPrivilege: Log Analytics Privilege
     acmAdminModulePrivilege: Admin Module Privilege
     acmAuditModulePrivilege: Audit Module Privilege
     acmCaseModulePrivilege: Case Module Privilege
@@ -1449,8 +1448,6 @@ application:
     acmAnalyticsModulePrivilege: Data Analytics Module Privilege
     acmAnalyticsAuditModulePrivilege: Log Analytics Module Privilege
     acmEmailConfigurePrivilege: Configure Email Privilege
-    getStateOfArkcasePrivilege: Get State Of Arkcase Privilege
-    listStateOfArkcasePrivilege: List State Of Arkcase Privilege
     generateStateOfArkcasePrivilege: Generate State Of Arkcase Privilege
     acmGetSequenceConfigurationPrivilege: Get Sequence Configuration Privilege
     acmSaveSequenceConfigurationPrivilege: Save Sequence Configuration Privilege
@@ -1595,10 +1592,8 @@ application:
       - acmCaseApprovePrivilege
       - saveCasePrivilege
       - caseFileListPrivilege
-      - caseFileCreatePrivilege
       - acmConsultationSavePrivilege
       - acmConsultationListPrivilege
-      - acmConsultationCreatePrivilege
       - acmPersonSavePrivilege
       - acmPersonDeletePrivilege
       - acmPersonAssociationDeletePrivilege
@@ -1707,7 +1702,6 @@ application:
       - acmAdhocReportModulePrivilege
       - acmSaveNotePrivilege
       - acmSearchModulePrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmSignatureConfirmPrivilege
       - acmSignatureFindPrivilege
@@ -1727,7 +1721,6 @@ application:
       - blogPrivilege
       - caseFileCreatePrivilege
       - caseFileListPrivilege
-      - acmConsultationCreatePrivilege
       - acmConsultationListPrivilege
       - acmConsultationSavePrivilege
       - costsheetApprovePrivilege
@@ -1738,12 +1731,10 @@ application:
       - documentRepositoryModulePrivilege
       - filePrivilege
       - generateStateOfArkcasePrivilege
-      - getStateOfArkcasePrivilege
       - helloWorldPrivilege
       - listLockedObjectsPrivilege
       - listLocksDetailsPrivilege
       - listMilestonesGroupedByDate
-      - listStateOfArkcasePrivilege
       - objectLockPrivilege
       - objectUnLockPrivilege
       - participantPrivilege
@@ -1794,7 +1785,6 @@ application:
       - acmComplaintModulePrivilege
       - filePrivilege
       - acmCostModulePrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmNotificationPrivilege
       - acmDashboardModulePrivilege
@@ -1861,7 +1851,6 @@ application:
       - acmOutlookListObjectsPrivilege
       - searchPrivilege
       - auditReadEventsForObjectPrivilege
-      - acmSearchPrivilege
       - objectSuggestionPrivilege
       - acmDeleteNoteByIdPrivilege
       - acmNotificationPrivilege
@@ -1900,11 +1889,14 @@ application:
     displayUserName: "userName"
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
+    basePortalUrl: 
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
+    templateGuideUrl: "https://www.arkcase.com/correspondence-management-3/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
+    # for oidc environment override logoutUrl with '/oauth-logout'
     logoutUrl: "/logout"
     defaultTimezone: "America/New_York"
     organizationName: "Organization_Name"
@@ -1915,7 +1907,12 @@ application:
     organizationZip: "Organization_Zip"
     organizationPhone: "Organization_Phone"
     organizationFax: "Organization_Fax"
-
+    dashboardBannerEnabled: true
+  brandingFiles:
+    - "header-logo.png"
+    - "login-logo.png"
+    - "email-logo.png"
+    - "custom.css"
 ################### Arkcase Instance Identity Configuration (arkcase-instance-identity.properties) ####################
 instance.indentity:
   identityId: ""
@@ -1923,8 +1920,10 @@ instance.indentity:
   digest: ""
 ################### Business Hours Configuration ####################
 businessHours:
-  endOfBusinessDayEnabled: false
+  businessDayHoursEnabled: false
   endOfBusinessDayTime: "16:00"
+  startOfBusinessDayTime: "08:00"
+  defaultDueDateGap: 180
 ################### Audit Plugin Configuration (auditPlugin.properties) ####################
 audit.plugin:
   database.enabled: true
@@ -1985,7 +1984,7 @@ audit.eventDescription: "{\"com.armedia.acm.ecm.file.added\": \"'File ' + source
 \"com.armedia.acm.smtp.event.received\":\"' from ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.mail.sent\":\"' to ' + '[' + source + ']'\",
 \"com.armedia.acm.smtp.event.sent\":\"'[' + source?.fileName + source?.fileActiveVersionNameExtension + ']' + ' to ' + '[' + source?.mailAddress + ']'\"}"
-CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.due.date.changed, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
+CASE_FILE.history.event.types: "com.armedia.acm.app.task.create,com.armedia.acm.app.task.complete, com.armedia.acm.casefile.createdFromComplaint, com.armedia.acm.casefile.updatedFromComplaint, com.armedia.acm.casefile.created, com.armedia.acm.casefile.dueDateChanged, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.casefile.status.changed, com.armedia.acm.casefile.queue.changed, com.armedia.acm.casefile.priority.changed, com.armedia.acm.casefile.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
 com.armedia.acm.casefile.participant.added, com.armedia.acm.casefile.participant.deleted, com.armedia.acm.activiti.task.create, com.armedia.acm.associatedtag.created,
@@ -1994,13 +1993,13 @@ com.armedia.acm.objectassociation.reference.deleted, com.armedia.acm.objectassoc
 com.armedia.acm.smtp.event.sent, com.armedia.acm.smtp.event.sent.hyperlink, com.armedia.acm.smtp.event.mail.sent, com.armedia.acm.smtp.event.received, com.armedia.acm.person.contactMethod.added, com.armedia.acm.person.contactMethod.deleted, com.armedia.acm.person.contactMethod.updated,
 com.armedia.acm.person.organization.added, com.armedia.acm.person.organization.deleted, com.armedia.acm.person.organization.updated, com.armedia.acm.person.created,
 com.armedia.acm.person.updated, com.armedia.acm.person.personAlias.added, com.armedia.acm.person.personAlias.deleted, com.armedia.acm.person.personAlias.updated,
-com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted,
+com.armedia.acm.personAssociation.updated, com.armedia.acm.person.postalAddress.added, com.armedia.acm.person.postalAddress.deleted, com.armedia.acm.zylab.matter.created,
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.casefile.title.changed, com.armedia.acm.object.assignee.change, com.armedia.acm.casefile.participant.changed,
 com.armedia.acm.casefile.costsheet.associated, com.armedia.acm.casefile.timesheet.associated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
 com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.ecm.file.copied, com.armedia.acm.ecm.file.copiedAsLink, com.armedia.acm.folder.copied, com.armedia.acm.folder.copiedAsLink,
 com.armedia.acm.exemption.code.created, com.armedia.acm.exemption.code.deleted, com.armedia.acm.exemption.code.updated, com.armedia.acm.comprehend_medical.created, com.armedia.acm.comprehend_medical.updated,
-com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback"
+com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback, com.armedia.acm.billing.touchnet.payment.created"
 COMPLAINT.history.event.types: "com.armedia.acm.complaint.created, com.armedia.acm.complaint.updated, com.armedia.acm.app.task.create, com.armedia.acm.complaint.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted,
 com.armedia.acm.complaint.status.changed, com.armedia.acm.complaint.details.changed, com.armedia.acm.complaint.priority.changed, com.armedia.acm.outlook.calendar.event.added,
@@ -2014,7 +2013,7 @@ com.armedia.acm.person.personAlias.updated, com.armedia.acm.personAssociation.up
 com.armedia.acm.person.postalAddress.updated, com.armedia.acm.transcribe.created, com.armedia.acm.transcribe.updated,
 com.armedia.acm.transcribe.queued, com.armedia.acm.transcribe.processing, com.armedia.acm.transcribe.completed, com.armedia.acm.transcribe.failed, com.armedia.acm.transcribe.cancelled,
 com.armedia.acm.transcribe.compiled, com.armedia.acm.transcribe.rollback, com.armedia.acm.file.co_edit.document.saved, com.armedia.acm.file.co_edit.user.leave, com.armedia.acm.file.co_edit.user.joined, com.armedia.acm.comprehend_medical.created, com.armedia.acm.comprehend_medical.updated,
-com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback"
+com.armedia.acm.comprehend_medical.queued, com.armedia.acm.comprehend_medical.processing, com.armedia.acm.comprehend_medical.completed, com.armedia.acm.comprehend_medical.failed, com.armedia.acm.comprehend_medical.cancelled, com.armedia.acm.comprehend_medical.rollback, com.armedia.acm.billing.touchnet.payment.created"
 CONSULTATION.history.event.types: "com.armedia.acm.app.task.create, com.armedia.acm.consultation.createdFromComplaint, com.armedia.acm.consultation.updatedFromComplaint, com.armedia.acm.consultation.created, com.armedia.acm.ecm.file.added, com.armedia.acm.ecm.file.replaced,
 com.armedia.acm.file.version.set, com.armedia.acm.file.deleted, com.armedia.acm.consultation.status.changed, com.armedia.acm.consultation.queue.changed, com.armedia.acm.consultation.priority.changed, com.armedia.acm.consultation.details.changed,
 com.armedia.acm.app.note.added, com.armedia.acm.app.note.updated, com.armedia.acm.app.note.deleted, com.armedia.acm.outlook.calendar.event.added, com.armedia.acm.correspondence.file.added,
@@ -2055,6 +2054,7 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
+email.email_regex: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$/"
 ########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
 fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
@@ -2106,7 +2106,6 @@ casefile.plugin:
   ,{\"desc\":\"Sort Case ID Asc\", \"name\":\"sort-case-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Case ID Desc\", \"name\":\"sort-case-id-desc\", \"value\":\"object_id_s DESC\"}
   ,{\"desc\":\"Sort By Case Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
-  ,{\"desc\":\"Sort By Case Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
   ,{\"desc\":\"Sort Due Date Asc\", \"name\":\"sort-by-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
   ,{\"desc\":\"Sort Due Date Desc\", \"name\":\"sort-by-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
   ,{\"desc\":\"(No Sort)\", \"name\": \"\", \"value\":\"\", \"default\":\"true\"}]"
@@ -2143,7 +2142,6 @@ consultation.plugin:
   ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Consultation ID Asc\", \"name\":\"sort-consultation-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Consultation ID Desc\", \"name\":\"sort-consultation-id-desc\", \"value\":\"object_id_s DESC\"}
-  ,{\"desc\":\"Sort By Consultation Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
   ,{\"desc\":\"Sort By Consultation Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
   ,{\"desc\":\"Sort Due Date Asc\", \"name\":\"sort-by-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
   ,{\"desc\":\"Sort Due Date Desc\", \"name\":\"sort-by-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
@@ -2237,7 +2235,7 @@ cost.plugin:
 ## Default dashboard JSON String.
 dashboard.plugin:
   defaultDashboard: "{\"title\":\"dashboard.title\",\"structure\":\"6-6\",\"rows\":[{\"columns\": [{\"styleClass\":\"col-md-12\"}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\"}"
-  moduleDefaultDashboard: "{\"title\":\"\",\"structure\":\"12\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[]}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/module_dashboard-title.html\"}"
+  moduleDefaultDashboard: "{\"addTemplateUrl\":\"modules/dashboard/templates/widget-add.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\",\"title\":\"dashboard.title\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[{\"wid\":7,\"fullscreenTemplateUrl\":\"modules/dashboard/templates/widget-fullscreen.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/widget-title.html\",\"deleteTemplateUrl\":\"modules/dashboard/templates/widget-delete.html\",\"type\":\"userWebsites\",\"title\":\"dashboard.widgets.userWebsites.title\",\"config\":{\"paginationPageSize\":\"5\"},\"editTemplateUrl\":\"modules/dashboard/templates/widget-edit.html\"}],\"cid\":3}]}],\"structure\":\"12\",\"editTemplateUrl\":\"modules/dashboard/templates/dashboard-edit.html\"}"
   ## If you want to introduce new widgets to ACM3 set acm.add.widget = true
   ## and set acm.new.widgets = newWidgetOne,newWidgetTwo etc. after you delete old values from previous update.
   add.widget: true
@@ -2373,6 +2371,10 @@ email:
     complaint.enabled: false
     consultation.enabled: false
   enableBurstingAttachments: false
+  replyHandlers:
+    caseFileMailFilter: caseFileMailHandler
+    complaintMailFilter: complaintMailHandler
+    taskMailFilter: taskMailHandler
   ################### Email Sender Configuration (acmEmailSender.properties) ####################
   sender:
     type: "smtp"
@@ -2412,6 +2414,7 @@ ecm:
     BUSINESS_PROCESS: "/Business Processes"
   #reference to cmis.id value of the default configuration in $HOME/.arkcase/acm/cmis/camel-config-*.cmis.properties
   defaultCmisId: "alfresco"
+  documentSizeBytesLimit: 52428800
   viewer: "snowbound"
   viewer.js: "$[context]/resources/vendors/ViewerJS/index.html?type=$[type]&title=$[title]#$[context]/api/latest/plugin/ecm/stream/$[fileId]"
   viewer.snowbound: "https://acm-arkcase/arkcase/VirtualViewerJavaHTML5/index.html?documentId=ecmFileId=$[fileId]%26acm_ticket=$[ticket]%26userid=$[userid]"
@@ -2446,11 +2449,21 @@ ga:
   trackingId: "UA-92355326-2"
   debug: false
 ################### Login Configuration (login.properties) ####################  
-login.warning:
-  #sets if on login screen warning message should be enabled 
-  enabled: false
-  #sets the text which should be displayed if warning is enabled
+login:
+  warning:
+    #sets if on login screen warning message should be enabled 
+    enabled: false
+    #sets the text which should be displayed if warning is enabled
   message:
+  defaultTargetUrl: "/home.html#!/welcome"    
+  ignoredSavedUrls:   
+    - "/stomp"
+    - "/api"
+    - "/views/loggedout.jsp"
+    - "/VirtualViewerJavaHTML5"
+    - "/pentaho"
+    - "/frevvo"
+    - "/modules/core/img/brand/favicon.png"
 ################### MsOutlook Integration Configuration (msOutlookIntegration.properties) #################### 
 outlook.exchange.integration:
   enable.autodiscovery: false
@@ -2647,6 +2660,7 @@ solr:
   batchUpdateBatchSize: 50
   #whether to index file contents or just store document-related metadata
   enableContentFileIndexing: true
+  #for files above this size the content won't be indexed
   suggestHandler: "suggest_handler"
   parallelUpdates: false
   zkHosts: 
@@ -2693,6 +2707,14 @@ tag.plugin:
   ,{\"desc\":\"Tag number 12\", \"name\":\"tag_12\", \"value\":\"Text 12\"}]"
 ################### Task Plugin Configuration (taskPlugin.properties) ###################
 task.plugin:
+  #task email folder
+  email.folder.relative.path: "Incoming Email"
+  #task email regex to match task id
+  email.regex.task_id: "\\d+"
+  #task email regex for type
+  email.regex.object_type: "Task"
+  #task email handler is enabled
+  email.handler.enabled: true
   search.tree:
     ##!NOTE: "New Tasks For Me" and/OR "Old Tasks For Me" can be fetched by using filter bellow in combination with sorting ASC or DESC by Create Date...
     ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_tdt DESC ... and SOLR will retunr the newest Case Files.
@@ -2798,6 +2820,7 @@ ocr:
   excludedFileTypes: "user_profile,user_signature,image,billing_invoice_document"
   #To achieve cross-platform file paths use "/" for path separator.(Working on windows and *nix)
   tempPath:
+  maxFailedAttempts: 10
 ################### Comprehend Medical Configuration ####################
 comprehendmedical:
   enabled: true
@@ -2966,12 +2989,14 @@ password:
   length: 7
   lengthMessage: "Password must be of minimum length of"
 #### File formats. To work proper, use "-dot-" instead of "." #####
+restrictFileTypesUpload: true
 allowedUploadFileTypes:
   text/plain:
     - application/octet-stream
     - application/vnd.openxmlformats-officedocument.wordprocessingml.document
     - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
     - application/pdf
+    - application/pkcs7-signature
   application/xml:
     - text/xml
     - application/octet-stream
@@ -3034,6 +3059,30 @@ allowedUploadFileTypes:
 extension:
   groupId: ''
   artifactId: ''
+### Zylab Integration configuration ###
+zylabIntegration:
+  enabled: false
+  host:
+  port: 443
+  matterCreationWaitInMinutes: 3
+  basePath: /EDiscovery/LegalReview
+  simpleResourcePath: /api/htmlappsettings
+  documentReviewPath: /HtmlApp/#/matter/select
+  matterDashboardPath: /HtmlApp/#/matter/{matterId}/overview
+  createMatterPath: /api/matters/
+  defaultMatterTemplateId:
+  downloadProductionPath: /Production/Zip?matter={matterId}&production_key={productionKey}
+  openMatterPath: /HtmlApp/#/matter/{matterId}/home
+  matterReportsPath: /HtmlApp/#/matter/{matterId}/reports/list
+  getMatterTemplatesPath: /api/matters/templates
+  getMattersPath: /api/matters
+  viewDocumentPath: /documentReview
+  authentication:
+    registrationId: ""
+    clientId: ""
+    clientSecret: ""
+    tokenUri: ""
+    tenant: ""
 ##################### (formsType.json) #####################
 formsTypeConfiguration:
   formsType: "angular"
@@ -3217,3 +3266,19 @@ objectDiffConfiguration:
       - participants
       - addresses
       - defaultAddress
+payment:
+  enabled: false
+  touchnet:
+    username: ""
+    password: ""
+    securelinkendpoint: ""
+    securepaylinkendpoint: ""
+    upaysiteid: ""
+tokenExpiration:
+  fileLinks: 259200000
+  paymentLinks: 31536000000
+  wopiLinks: 259200000
+  onlyofficeLinks: 259200000
+convertEmailsToPDF:
+  outgoingEmailToPdf: false
+  incomingEmailToPdf: false

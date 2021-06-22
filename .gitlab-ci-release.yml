@@ -193,7 +193,7 @@ start_hotfix:
     - git remote set-url origin "$GIT_URL"
     # core
     - git checkout support-core/core-$HOTFIX_SUPPORT_VERSION
-    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/ core-$HOTFIX_SUPPORT_VERSION -Dmaven.wagon.http.ssl.insecure=true
+    - mvn -B gitflow:hotfix-start -DpushRemote=true -DhotfixVersion=$RELEASE_VERSION -DfromBranch=support-core/core-$HOTFIX_SUPPORT_VERSION -Dmaven.wagon.http.ssl.insecure=true
     # foia
     - git checkout support-foia/foia-$HOTFIX_SUPPORT_VERSION
     - git checkout foia

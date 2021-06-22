@@ -49,6 +49,7 @@ core:
       sig: SF86 Signature
       wir: Witness Interview Request
       draw: Engineer Drawing
+      email: Email
       other: Other
     identificationTypes:
       ssn: SSN
@@ -790,6 +791,7 @@ core:
   userInfo:
     addedMenu:
       help: Help
+      documentReviewLink: Document Review
       logout: Logout
   leftNav:
     title: Navigation

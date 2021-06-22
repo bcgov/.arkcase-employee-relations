@@ -372,6 +372,7 @@ organizations.comp.newOrganization:
     removeContactMethod: Remove
     urlType: URL Type
     validationMessage: "The Phone Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
+    faxValidationMessage: "The Fax Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
   people:
     title: People
     searchExisting.placeholder: Search Existing Person

@@ -73,6 +73,12 @@ cases.comp.actions:
   buckslip.add.confirm: Confirm
   buckslip.add.title: New Buck Slip
   sendEmail.button: Send Email
+  createMatter.button: Create Matter
+  createMatter.sucess: New ZyLAB Document Review Matter created sucessfully
+  createMatter.inProgress: Creation of ZyLAB Document Review Matter is already in progress
+  createMatter.error: New ZyLAB Document Review Matter creation failed
+  openMatter.button: Open Matter
+  matterReports.button: Matter Reports
 cases.comp.details:
   title: Full Case Details
   informSaved: Case details saved
@@ -245,7 +251,7 @@ cases.comp.addreference:
   cancelButton: Cancel
   confirmButton: Add
   search:
-    placeholder: Search for case, complaint, file, task
+    placeholder: Search for case file, complaint, consultation, task, document, file
     btn: Search
   grid:
     columns:

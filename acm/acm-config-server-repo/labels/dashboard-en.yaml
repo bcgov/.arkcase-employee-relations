@@ -363,3 +363,7 @@ dashboard.comp.teamWorkload:
   title: Team Workload
 dashboard.comp.casesByStatus:
   title: Cases By Status
+dashboard.header:
+  text: ArkCase recommends the use of Google Chrome, Microsoft Edge, Apple Safari, or Mozilla Firefox for improved user experience.
+dashboard.comp.activeCaseFiles:
+  title: Active Case Files
