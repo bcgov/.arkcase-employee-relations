@@ -389,12 +389,15 @@ consultations.newConsultation:
   city: 
     label: City
     placeholder: Enter City
+    validation.error: Please enter City
   state:
     label: State
     placeholder: Enter State
+    validation.error: Please enter State
   zip:
     label: Zip/Postal
     placeholder: Enter Zip/Postal
+    validation.error: Please enter Zip/Postal
   section2: 'Section 2: Consultation Information'
   externalAgency:
     label: Requesting Agency External ID
