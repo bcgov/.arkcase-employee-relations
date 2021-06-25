@@ -88,12 +88,5 @@
         "emailFieldValue": "#toClientDateTimezone(paymentDate)",
         "fieldDescription": "Invoice Payment Date",
         "fieldObjectType": "Object"
-    },
-    {
-        "fieldId": "currentDate",
-        "correspondenceFieldValue": "#currentDateToClientDate()",
-        "emailFieldValue": "#currentDateToClientDate()",
-        "fieldDescription": "Current Date",
-        "fieldObjectType": "CASE_FILE"
     }
 ]
