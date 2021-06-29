@@ -637,6 +637,7 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/api/{version}/plugin/person/list/{parentType}/{parentId}"
       - "/api/{version}/plugin/people/{personId}/associations/{objectType}"
+      - "/api/{version}/plugin/people"
     POST:
       - "/api/{version}/plugin/people/{personId}/images/changeImageDescription/{imageId}"
   acmPersonTypesPrivilege:
