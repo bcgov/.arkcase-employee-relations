@@ -2099,11 +2099,11 @@ casefile.plugin:
   #types available for copy are: history, people, participants, tasks
   split.typesToCopy: "history,people,participants"
   merge.exclude_document_types: "case_file_xml,case_file"
-  search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
+  search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":\"true\"}
   ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author:$[user]\"}
-  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_s:$[user]\"}
-  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
-  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_s:CLOSED\"}
+  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
+  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_lcs:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
   search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
   ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
@@ -2123,7 +2123,7 @@ casefile.plugin:
   delete_calendar_folder_after_case_closed: true
   ##Dashboard SOLR queries
   #Get all case_file by user that are not closed, deleted or completed
-  solr.all.not.closed.by.user: "object_type_s:CASE_FILE&fq=creator_lcs=?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  solr.all.not.closed.by.user: "object_type_s:CASE_FILE&fq=creator_lcs=?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   #Get all case_files grouped by status
   solr.all.group.by.status: "object_type_s:CASE_FILE&group=true&group.field=status_lcs&group.limit=0"
   ##Case File tree root name format. If this property not exist or it's empty, the default value will be taken: Acm.goodValue(objSolr.title_parseable) + ' (' + Acm.goodValue(objSolr.name) + ')'
@@ -2136,11 +2136,11 @@ casefile.plugin:
   folder.structure:
 ################### Consultation Plugin Configuration ###################
 consultation.plugin:
-  search.tree.filter: "[{\"desc\":\"All Open Consultations\", \"name\":\"all-open-consultations\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
-  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-consultations\", \"value\":\"fq=author_s:$[user]\"}
-  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-consultations\", \"value\":\"fq=assignee_s:$[user]\"}
-  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-consultations\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
-  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-consultations\", \"value\":\"fq=status_s:CLOSED\"}
+  search.tree.filter: "[{\"desc\":\"All Open Consultations\", \"name\":\"all-open-consultations\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":\"true\"}
+  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-consultations\", \"value\":\"fq=creator_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-consultations\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-consultations\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
+  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-consultations\", \"value\":\"fq=status_lcs:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
   search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
   ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
@@ -2160,7 +2160,7 @@ consultation.plugin:
   delete_calendar_folder_after_consultation_closed: true
   ##Dashboard SOLR queries
   #Get all consultation by user that are not closed, deleted or completed
-  solr.all.not.closed.by.user: "object_type_s:CONSULTATION&fq=creator_lcs=?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  solr.all.not.closed.by.user: "object_type_s:CONSULTATION&fq=creator_lcs=?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   #Get all consultations grouped by status
   solr.all.group.by.status: "object_type_s:CONSULTATION&group=true&group.field=status_lcs&group.limit=0"
   ##Consultation tree root name format. If this property not exist or it's empty, the default value will be taken: Acm.goodValue(objSolr.title_parseable) + ' (' + Acm.goodValue(objSolr.name) + ')'
@@ -2193,16 +2193,16 @@ complaint.plugin:
   # waiting state will be terminated. Checking is made every second.
   ephesoft.load.documents.seconds: 10
   search.tree:
-    filter: "[{\"desc\": \"All Open Complaints\", \"name\":\"all-open-complaints\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":true}
-    ,{\"desc\": \"All I've Created\", \"name\":\"my-complaints-created\", \"value\":\"fq=author_s:$[user]\"}
-    ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-complaints-assigned\", \"value\":\"fq=assignee_s:$[user]\"}
-    ,{\"desc\": \"All I'm Following\", \"name\":\"my-complaints-following\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
+    filter: "[{\"desc\": \"All Open Complaints\", \"name\":\"all-open-complaints\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":true}
+    ,{\"desc\": \"All I've Created\", \"name\":\"my-complaints-created\", \"value\":\"fq=creator_lcs:$[user]\"}
+    ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-complaints-assigned\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+    ,{\"desc\": \"All I'm Following\", \"name\":\"my-complaints-following\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
     ,{\"desc\": \"All Closed No Further Action\", \"name\":\"all-closed-no-action\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:no_action\"}
     ,{\"desc\": \"All Closed Refer External\", \"name\":\"all-closed-external\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:refer_external\"}
     ,{\"desc\": \"All Closed Open Investigation\", \"name\":\"all-closed-investigation\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:open_investigation\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-    sort: "[{\"desc\": \"Sort Incident Date Asc\", \"name\":\"sort-incident-date-asc\", \"value\":\"due_tdt ASC\"}
-    ,{\"desc\": \"Sort Incident Date Desc\", \"name\":\"sort-incident-date-asc\", \"value\":\"due_tdt ASC\"}
+    sort: "[{\"desc\": \"Sort Incident Date Asc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
+    ,{\"desc\": \"Sort Incident Date Desc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
     ,{\"desc\": \"Sort Created Date Asc\", \"name\":\"sort-created-date-asc\", \"value\":\"create_tdt ASC\"}
     ,{\"desc\": \"Sort Created Date Desc\", \"name\":\"sort-created-date-desc\", \"value\":\"create_tdt DESC\", \"default\":true}
     ,{\"desc\": \"Sort By Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2330,10 +2330,10 @@ activiti.db.type: mysql
 ################### Document Repository Plugin Configuration (documentRepositoryPlugin.properties) ###################
 docRepo.plugin:
   search.tree:
-    filter: "[{\"desc\": \"All I've Created\", \"name\":\"my-created-document-repositories\", \"value\":\"fq=author_s:$[user] AND repository_type_s:GENERAL\"}
-    ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-document-repositories\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
+    filter: "[{\"desc\": \"All I've Created\", \"name\":\"my-created-document-repositories\", \"value\":\"fq=creator_lcs:$[user] AND repository_type_s:GENERAL\"}
+    ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-document-repositories\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"default-filter\", \"value\":\"fq=repository_type_s:GENERAL\"}
-    ,{\"desc\": \"(No Filter)\", \"name\":\"my-personal-document-repositories\", \"value\":\"fq=assignee_s:$[user] AND repository_type_s:PERSONAL\"}]"
+    ,{\"desc\": \"(No Filter)\", \"name\":\"my-personal-document-repositories\", \"value\":\"fq=assignee_id_lcs:$[user] AND repository_type_s:PERSONAL\"}]"
     sort: "[{\"desc\": \"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
     ,{\"desc\": \"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
     ,{\"desc\": \"Sort Repository ID Asc\", \"name\":\"sort-document-repository-id-asc\", \"value\":\"object_id_s ASC\"}
@@ -2581,10 +2581,10 @@ person.plugin:
   folder.own.spel: "givenName + '_' + (middleName == null ? '' : middleName + '_') + familyName + '_' + id"
   search:
     tree:
-      filter: "[{\"desc\": \"I've Created\", \"name\":\"my-created\", \"value\":\"fq=author_s:$[user]\"}
-      ,{\"desc\": \"I've Created - Active\", \"name\":\"my-created-active\", \"value\":\"fq=author_s:$[user] AND status_s:ACTIVE\"}
-      ,{\"desc\": \"Active\", \"name\":\"active\", \"value\":\"fq=status_s:ACTIVE\", \"default\":\"true\"}
-      ,{\"desc\": \"Inactive\", \"name\":\"in-active\", \"value\":\"fq=status_s:INACTIVE\"}
+      filter: "[{\"desc\": \"I've Created\", \"name\":\"my-created\", \"value\":\"fq=creator_lcs:$[user]\"}
+      ,{\"desc\": \"I've Created - Active\", \"name\":\"my-created-active\", \"value\":\"fq=creator_lcs:$[user] AND status_lcs:ACTIVE\"}
+      ,{\"desc\": \"Active\", \"name\":\"active\", \"value\":\"fq=status_lcs:ACTIVE\", \"default\":\"true\"}
+      ,{\"desc\": \"Inactive\", \"name\":\"in-active\", \"value\":\"fq=status_lcs:INACTIVE\"}
       ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
       sort: "[{\"desc\": \"Sort Date Created Ascending\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
       ,{\"desc\": \"Sort Date Created Decending\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
@@ -2684,7 +2684,7 @@ subscription.plugin:
     failed: "Subscription Was not Removed Due To SQL exception"
     event.types: "com.armedia.acm.plugins.search.result"
   ##SOLR predefined queries for subscription module
-  get.object.byId: "id:?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  get.object.byId: "id:?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   ##Used by UI ##
   search:
     name: "subscription"
@@ -2722,18 +2722,18 @@ task.plugin:
   search.tree:
     ##!NOTE: "New Tasks For Me" and/OR "Old Tasks For Me" can be fetched by using filter bellow in combination with sorting ASC or DESC by Create Date...
     ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_tdt DESC ... and SOLR will retunr the newest Case Files.
-    filter: "[{\"desc\": \"Tasks for Me\", \"name\":\"my-tasks\", \"value\":\"fq=assignee_s:$[user] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", default:\"true\"}
-    ,{\"desc\":\"All Open Tasks\", \"name\":\"opened-tasks\", \"value\":\"fq=status_s:ACTIVE\"}
-    ,{\"desc\":\"All Completed Tasks\", \"name\":\"completed-tasks\", \"value\":\"fq=status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Due Today\", \"name\":\"tasks-due-today\", \"value\":\"fq=due_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Due Today for Me\", \"name\":\"my-tasks-due-today\", \"value\":\"fq=due_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED AND assignee_s:$[user]\"}
-    ,{\"desc\":\"All Tasks Overdue\", \"name\":\"tasks-overdue\", \"value\":\"fq=due_tdt:[* TO NOW/DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Overdue for Me\", \"name\":\"my-tasks-overdue\", \"value\":\"fq=due_tdt:[* TO NOW/DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED AND assignee_s:$[user]\"}
+    filter: "[{\"desc\": \"Tasks for Me\", \"name\":\"my-tasks\", \"value\":\"fq=assignee_id_lcs:$[user] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", default:\"true\"}
+    ,{\"desc\":\"All Open Tasks\", \"name\":\"opened-tasks\", \"value\":\"fq=status_lcs:ACTIVE\"}
+    ,{\"desc\":\"All Completed Tasks\", \"name\":\"completed-tasks\", \"value\":\"fq=status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Due Today\", \"name\":\"tasks-due-today\", \"value\":\"fq=dueDate_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Due Today for Me\", \"name\":\"my-tasks-due-today\", \"value\":\"fq=dueDate_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED AND assignee_id_lcs:$[user]\"}
+    ,{\"desc\":\"All Tasks Overdue\", \"name\":\"tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Overdue for Me\", \"name\":\"my-tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED AND assignee_id_lcs:$[user]\"}
     ,{\"desc\":\"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
     sort: "[{\"desc\":\"Sort Create Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
     ,{\"desc\":\"Sort Create Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
-    ,{\"desc\":\"Sort Due Date Date Asc\", \"name\":\"sort-due-date-asc\", \"value\":\"due_tdt ASC\"}
-    ,{\"desc\":\"Sort Due Date Date Desc\", \"name\":\"sort-due-date-desc\", \"value\":\"due_tdt DESC\"}
+    ,{\"desc\":\"Sort Due Date Date Asc\", \"name\":\"sort-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
+    ,{\"desc\":\"Sort Due Date Date Desc\", \"name\":\"sort-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
     ,{\"desc\":\"Sort Task Name Asc\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
     ,{\"desc\":\"Sort Task Name Desc\", \"name\":\"sort-by-name-desc\", \"value\":\"title_parseable_lcs DESC\"}
     ,{\"desc\":\"(No Sort)\", \"name\":\"\", \"value\":\"\", \"default\":\"true\"}]"
@@ -2752,13 +2752,13 @@ solr.task:
   #All tasks assigned to all users
   all: "object_type_s:TASK"
   #all past due tasks
-  pastdue: "object_type_s:TASK&fq=due_tdt:[* TO NOW]"
+  pastdue: "object_type_s:TASK&fq=dueDate_tdt:[* TO NOW]"
   #All tasks assigned to all users that due date is until  one day from Today numberOfDaysFromToday
-  due.one.day.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW + 1DAY/DAY]"
+  due.one.day.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW + 1DAY/DAY]"
   #All tasks assigned to all users that due date is until seven days from Today numberOfDaysFromToday
-  due.seven.days.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW + 7DAY/DAY]"
+  due.seven.days.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW + 7DAY/DAY]"
   #All tasks assigned to all users that due date is until one month from Today numberOfDaysFromToday
-  due.one.month.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW+1MONTH/MONTH]"
+  due.one.month.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW+1MONTH/MONTH]"
   #All taks assigned to a specific user
   all.for.user: "object_type_s:TASK&fq=assignee_id_lcs:?"
 ################### Time Properties (time.properties) ###################
