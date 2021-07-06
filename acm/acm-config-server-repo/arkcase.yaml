@@ -2769,7 +2769,7 @@ time.plugin:
   ,{\"desc\":\"Sort By Timesheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
   workflowProcessName: acmDocumentWorkflow
-  addTimesheetToBilling: true  
+  addTimesheetToBilling: true
 ################### Timesheet Properties (timesheetProperties.properties) ###################
 ################### Transcribe Configuration (transcribe.properties) ####################
 transcribe:
@@ -3284,3 +3284,23 @@ tokenExpiration:
 convertEmailsToPDF:
   outgoingEmailToPdf: false
   incomingEmailToPdf: false
+##################### (timesheetConfiguration.json) #####################
+timesheetConfiguration: "{
+  \"chargeRoleItems\": [
+    {
+      \"chargeRole\": \"ANALYST\",
+      \"rate\": 50,
+      \"active\": \"ACTIVE\"
+    },
+    {
+      \"chargeRole\": \"INVESTIGATOR\",
+      \"rate\": 75,
+      \"active\": \"ACTIVE\"
+    },
+    {
+      \"chargeRole\": \"Litigation\",
+      \"rate\": 105,
+      \"active\": \"ACTIVE\"
+    }
+  ]
+}"
