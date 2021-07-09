@@ -787,6 +787,7 @@ common.duplicatePersonPicker:
     location: Location
 common.dialogOrganizationPicker:
   header: Choose Organization
+  header2: Organization with this name already exist. Pick an existing organization if you would like to review.
   table.columns:
     type: Organization Type
     name: Organization
@@ -862,6 +863,8 @@ common.newOrganization:
   type.placeholder: Select Organization Type
   saveButton: Save Organization
   cancelButton: Cancel
+  goToOrganization: Checkout Organization
+  choose: Choose Organization
   details.title: Details
   parentOrganization: Parent Organization
   searchParentOrganization.placeholder: Search Parent Organization

@@ -671,6 +671,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/organizations"
       - "/api/{version}/plugin/organizations/{organizationId}/associations/{objectType}"
       - "/api/{version}/plugin/organizations/search/{organizationId}"
+      - "/api/{version}/plugin/organizations/searchExisting/{organizationName}"
   acmOrganizationDeletePrivilege:
     DELETE:
       - "/api/{version}/plugin/organizations/{organizationId}"
