@@ -1890,6 +1890,7 @@ application:
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
     basePortalUrl: 
+    listFilesInFolder:
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     templateGuideUrl: "https://www.arkcase.com/correspondence-management-3/"
