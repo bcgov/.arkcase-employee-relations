@@ -118,6 +118,7 @@ consultations.comp.people:
     organization: Organization
     phone: Phone
     location: Location
+  type.label: Consultation Person Type  
 consultations.comp.organizations:
   title: Organizations
   table.columns:
@@ -129,6 +130,7 @@ consultations.comp.organizations:
     contact: Primary Contact
     phone: Phone
     location: Location
+  type.label: Consultation Organization Type  
 consultations.comp.participants:
   title: Participants
   table.columns:
@@ -354,7 +356,7 @@ consultations.newConsultation:
     placeholder: Enter Last Name
     validation.error: Please Enter Last Name
   position:
-    label: Position
+    label: Person Organization Position
     placeholder: Enter Position
   phone:
     label: Phone

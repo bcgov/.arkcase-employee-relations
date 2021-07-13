@@ -284,6 +284,7 @@ organizations.comp.people:
     setPrimary: Set as Primary
     addNew: Add New
     addExisting: Add Existing
+  type.label: Person Organization Position  
 organizations.comp.cases:
   title: Cases
   objectType.label: Case File
@@ -296,6 +297,7 @@ organizations.comp.cases:
     assignee: Assignee
     modified: Modified
     caseNumber: Case Number
+  type.label: Case Organization Type  
 organizations.comp.consultations:
   title: Consultations
   objectType.label: Consultation
@@ -307,6 +309,7 @@ organizations.comp.consultations:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Consultation Organization Type  
 organizations.comp.complaints:
   title: Complaints
   objectType.label: Complaint
@@ -318,6 +321,7 @@ organizations.comp.complaints:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Complaint Organization Type  
 organizations.comp.related:
   title: Related Organization
   linkTitle: Rel Org
@@ -337,6 +341,7 @@ organizations.comp.related:
     organization.placeholder: Search Organizations
     btnCancel.text: Cancel
     btnOk.text: Save Related Organization
+  type.label: Organization Relationship Type  
 organizations.comp.history:
   title: History
   table.columns:
@@ -376,7 +381,6 @@ organizations.comp.newOrganization:
   people:
     title: People
     searchExisting.placeholder: Search Existing Person
-    personType: Person Type
   locations:
     title: Locations
     country: Country

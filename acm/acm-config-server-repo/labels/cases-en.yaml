@@ -120,6 +120,7 @@ cases.comp.people:
     organization: Organization
     phone: Phone
     location: Location
+  type.label: Case Person Type  
 cases.comp.organizations:
   title: Organizations
   table.columns:
@@ -131,6 +132,7 @@ cases.comp.organizations:
     contact: Primary Contact
     phone: Phone
     location: Location
+  type.label: Case Organization Type  
 cases.comp.participants:
   title: Participants
   table.columns:
