@@ -77,7 +77,8 @@ tasks.comp.people:
   title: People
   table.columns:
     type: Type
-    fullName: Full Name  
+    fullName: Full Name
+  type.label: Task Person Type  
 tasks.comp.reworkdetails:
   title: Rework Details
   informSaved: Rework details saved

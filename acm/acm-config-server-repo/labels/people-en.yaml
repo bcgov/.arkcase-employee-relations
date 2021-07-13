@@ -300,6 +300,7 @@ people.comp.organizations:
     setPrimary: Set as Primary
     addNew: Add New
     addExisting: Add Existing
+  type.label: Person Organization Position  
 people.comp.cases:
   title: Cases
   objectType.label: Case File
@@ -312,6 +313,7 @@ people.comp.cases:
     assignee: Assignee
     modified: Modified
     caseNumber: Case Number
+  type.label: Case Person Type  
 people.comp.consultations:
   title: Consultations
   objectType.label: Consultation
@@ -323,6 +325,7 @@ people.comp.consultations:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Consultation Person Type  
 people.comp.complaints:
   title: Complaints
   objectType.label: Complaint
@@ -334,6 +337,7 @@ people.comp.complaints:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Complaint Person Type  
 people.comp.related:
   title: Related People
   linkTitle: Related People
@@ -353,6 +357,7 @@ people.comp.related:
     person.placeholder: Search People
     btnCancel.text: Cancel
     btnOk.text: Save Related Person
+  type.label: Person Relationship Type  
 people.comp.editPerson:
   title: Person
   addAnother: Add Another
