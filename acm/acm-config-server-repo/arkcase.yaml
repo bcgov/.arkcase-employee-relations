@@ -3287,22 +3287,17 @@ convertEmailsToPDF:
   outgoingEmailToPdf: false
   incomingEmailToPdf: false
 ##################### (timesheetConfiguration.json) #####################
-timesheetConfiguration: "{
-  \"chargeRoleItems\": [
-    {
-      \"chargeRole\": \"ANALYST\",
-      \"rate\": 50,
-      \"active\": \"ACTIVE\"
-    },
-    {
-      \"chargeRole\": \"INVESTIGATOR\",
-      \"rate\": 75,
-      \"active\": \"ACTIVE\"
-    },
-    {
-      \"chargeRole\": \"Litigation\",
-      \"rate\": 105,
-      \"active\": \"ACTIVE\"
-    }
-  ]
-}"
+timesheetConfiguration:
+  chargeRoleItems:
+    ANALYST:
+      chargeRole: ANALYST
+      rate: 50
+      active: ACTIVE
+    INVESTIGATOR:
+      chargeRole: INVESTIGATOR
+      rate: 75
+      active: ACTIVE
+    Litigation:
+      chargeRole: Litigation
+      rate: 105
+      active: ACTIVE
