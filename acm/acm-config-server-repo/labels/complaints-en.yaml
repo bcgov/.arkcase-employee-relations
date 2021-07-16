@@ -64,6 +64,7 @@ complaints.comp.people:
     organization: Organization
     phone: Phone
     location: Location
+  type.label: Complaint Person Type  
 complaints.comp.organizations:
   title: Organizations
   table.columns:
@@ -80,6 +81,7 @@ complaints.comp.organizations:
     setPrimary: Set as Primary
     addNew: Add New
     addExisting: Add New
+  type.label: Complaint Organization Type
 complaints.comp.participants:
   title: Participants
   table.columns:
