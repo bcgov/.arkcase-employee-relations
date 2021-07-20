@@ -1902,6 +1902,7 @@ application:
     # for saml environment override logoutUrl with '/sso/loggedout'
     # for oidc environment override logoutUrl with '/oauth-logout'
     logoutUrl: "/logout"
+    allowForgotUsernameAndPasswordOnLogin: true
     defaultTimezone: "America/New_York"
     organizationName: "Organization_Name"
     organizationAddress1: "Organization_Address1"
