@@ -2993,7 +2993,7 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 
 ### Password configuration ###
 password:
-  length: 7
+  length: 14
   lengthMessage: "Password must be of minimum length of"
 #### File formats. To work proper, use "-dot-" instead of "." #####
 restrictFileTypesUpload: true
