@@ -34,6 +34,9 @@ common:
   defaultDateTimeUTCFormat: YYYY-MM-DDTHH:mm:ssZZ
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
   ## date formats should not be translated in other languages ##
+  days:
+    saturday: "Saturday"
+    sunday: "Sunday"
 common.userOrGroupSearch:
   id: userSearch
   title: User/Group Search
