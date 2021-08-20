@@ -33,11 +33,10 @@ common:
   defaultDateTimePickerFormat: MM/DD/YYYY h:mm A
   defaultDateTimeUTCFormat: YYYY-MM-DDTHH:mm:ssZZ
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
-  invalidDateFormat: Invalid date format.
-  invalidMaxDate: Max validation error.
-  invalidMinDate: Min validation error.
+  invalidDateFormat: Invalid date format
+  invalidMaxDate: Max validation error
+  invalidMinDate: Min validation error 
   defaultDateInputPlaceholder: Select a date
-  validDateTimeFormat: MM/DD/YYYY HH:MM AM/PM
   ## date formats should not be translated in other languages ##
   days:
     saturday: "Saturday"
