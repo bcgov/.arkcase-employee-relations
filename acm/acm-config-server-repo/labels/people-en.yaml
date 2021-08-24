@@ -540,3 +540,26 @@ changes:
       aliasType: Alias - Type Changed
       aliasValue: Alias - Value Changed
       description: Alias - Description Changed
+people.comp.newPerson:
+  locations:
+    title: Locations
+    country: Country
+    country.validation.error: Please select Country
+    country.placeholder: Select Country
+    state: State/Province
+    state.validation.error: Please select State/Province
+    state.placeholder: Enter State/Province
+    zip: Zip/Postal
+    zip.validation.error: Please select Zip/Postal
+    zip.placeholder: Enter Zip/Postal
+    city: City
+    city.validation.error: Please select City
+    city.placeholder: Enter City
+    type: Address Type
+    type.validation.error: Please select Address Type
+    type.placeholder: Select Address Type
+    streetAddress: Address 1
+    streetAddress.validation.error: Please select Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
