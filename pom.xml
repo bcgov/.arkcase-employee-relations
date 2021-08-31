@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.armedia.arkcase</groupId>
     <artifactId>arkcase-config</artifactId>
-    <version>2021.02.09</version>
+    <version>2021.02.10</version>
     <packaging>pom</packaging>
     <name>ArkCase Configuration</name>
     <description>Arkcase Configuration</description>
