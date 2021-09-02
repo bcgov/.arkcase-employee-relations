@@ -3044,6 +3044,8 @@ allowedUploadFileTypes:
     - application/octet-stream
   audio/x-aiff:
     - audio/aiff
+  audio/x-wav:
+    - audio/wav
   application/vnd-dot-rn-realmedia:
     - application/octet-stream
   application/xhtml+xml:
@@ -3062,6 +3064,8 @@ allowedUploadFileTypes:
     - application/octet-stream
   application/rtf:
     - application/msword
+  application/pdf:
+    - application/octet-stream  
 ##### For retrieving extension version from the jar files #####
 extension:
   groupId: ''
