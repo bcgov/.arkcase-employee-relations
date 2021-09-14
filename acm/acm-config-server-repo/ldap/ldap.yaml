@@ -71,7 +71,7 @@ springConfigLdapProperties:
     shadowLastChange: shadowLastChange
     shadowMax: shadowMax
     sAMAccountName: userId
-    userPrincipalName: userId
+    userPrincipalName: userPrincipalName
   ldapAddGroupValuesTransformations:
     cn: fullName
     member: member
