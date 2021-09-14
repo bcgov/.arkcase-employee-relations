@@ -355,7 +355,9 @@ admin:
     table.title: Email Templates
     settings:
       emailCaseFile.label: Email Receiver CaseFile
+      emailCaseFile.label.error: This system email account should be different than the incoming system email account.
       emailComplaint.label: Email Receiver Complaint
+      emailComplaint.label.error: This system email account should be different than the document delivery system email account.
       password.label: Password
       email.placeholder: Enter Email address
       password.placeholder: Enter Password
