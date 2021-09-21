@@ -277,6 +277,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/okta/factor/enrollment"
       - "/api/{version}/plugin/okta/authprofile"
       - "/api/{version}/plugin/phone/regex"
+      - "/api/{version}/plugin/email/regex"
       - "/api/{version}/service/ocr/{id}"
       - "/api/{version}/service/ocr/media/{mediaVersionId}"
       - "/api/{version}/service/ocr/file/{fileId}"
@@ -2061,7 +2062,7 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
-email.email_regex: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$/"
+email.email_regex: "/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$/"
 ########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
 fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
