@@ -3065,7 +3065,9 @@ allowedUploadFileTypes:
   application/rtf:
     - application/msword
   application/pdf:
-    - application/octet-stream  
+    - application/octet-stream
+  application/vnd-dot-openxmlformats-officedocument-dot-wordprocessingml-dot-document:
+    - application/octet-stream
 ##### For retrieving extension version from the jar files #####
 extension:
   groupId: ''
