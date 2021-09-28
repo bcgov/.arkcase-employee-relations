@@ -2109,8 +2109,8 @@ casefile.plugin:
   ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
   ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_lcs:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
-  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Case ID Asc\", \"name\":\"sort-case-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Case ID Desc\", \"name\":\"sort-case-id-desc\", \"value\":\"object_id_s DESC\"}
   ,{\"desc\":\"Sort By Case Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2207,8 +2207,8 @@ complaint.plugin:
     ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
     sort: "[{\"desc\": \"Sort Incident Date Asc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
     ,{\"desc\": \"Sort Incident Date Desc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
-    ,{\"desc\": \"Sort Created Date Asc\", \"name\":\"sort-created-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\": \"Sort Created Date Desc\", \"name\":\"sort-created-date-desc\", \"value\":\"create_tdt DESC\", \"default\":true}
+    ,{\"desc\": \"Sort Created Date Asc\", \"name\":\"sort-created-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\": \"Sort Created Date Desc\", \"name\":\"sort-created-date-desc\", \"value\":\"create_date_tdt DESC\", \"default\":true}
     ,{\"desc\": \"Sort By Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
     ,{\"desc\": \"(No Sort)\", \"name\":\"\", \"value\":\"\"}]"
     #The properties where the search query should be executed (comma separated, for example: title_parseable,description_no_html_tags_parseable ... etc)
@@ -2231,8 +2231,8 @@ compressor.fileNameFormat: "%1$sacm-%2$d-%3$s.zip"
 ################### (cost.properties) ###################
 cost.plugin:
   root.folder: "/Sites/acm/documentLibrary/Expenses"
-  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Costsheet ID Ascending\", \"name\":\"id ASC\"}
   ,{\"desc\":\"Sort Costsheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Costsheet Name\", \"name\":\"name DESC\"}]"
@@ -2338,8 +2338,8 @@ docRepo.plugin:
     ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-document-repositories\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"default-filter\", \"value\":\"fq=repository_type_s:GENERAL\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"my-personal-document-repositories\", \"value\":\"fq=assignee_id_lcs:$[user] AND repository_type_s:PERSONAL\"}]"
-    sort: "[{\"desc\": \"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\": \"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+    sort: "[{\"desc\": \"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\": \"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
     ,{\"desc\": \"Sort Repository ID Asc\", \"name\":\"sort-document-repository-id-asc\", \"value\":\"object_id_s ASC\"}
     ,{\"desc\": \"Sort Repository ID Desc\", \"name\":\"sort-document-repository-id-desc\", \"value\":\"object_id_s DESC\"}
     ,{\"desc\": \"Sort By Repository Name\", \"name\":\"sort-by-document-repository-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2590,8 +2590,8 @@ person.plugin:
       ,{\"desc\": \"Active\", \"name\":\"active\", \"value\":\"fq=status_lcs:ACTIVE\", \"default\":\"true\"}
       ,{\"desc\": \"Inactive\", \"name\":\"in-active\", \"value\":\"fq=status_lcs:INACTIVE\"}
       ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-      sort: "[{\"desc\": \"Sort Date Created Ascending\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-      ,{\"desc\": \"Sort Date Created Decending\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+      sort: "[{\"desc\": \"Sort Date Created Ascending\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+      ,{\"desc\": \"Sort Date Created Decending\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
       ,{\"desc\": \"Sort By ID Ascending\", \"name\":\"sort-by-id-asc\", \"value\":\"id ASC\"}
       ,{\"desc\": \"Sort By ID Decending\", \"name\":\"sort-by-id-desc\", \"value\":\"id DESC\"}
       ,{\"desc\": \"Sort By Name A-Z\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\", \"default\":\"true\"}
@@ -2725,7 +2725,7 @@ task.plugin:
   email.handler.enabled: true
   search.tree:
     ##!NOTE: "New Tasks For Me" and/OR "Old Tasks For Me" can be fetched by using filter bellow in combination with sorting ASC or DESC by Create Date...
-    ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_tdt DESC ... and SOLR will retunr the newest Case Files.
+    ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_date_tdt DESC ... and SOLR will retunr the newest Case Files.
     filter: "[{\"desc\": \"Tasks for Me\", \"name\":\"my-tasks\", \"value\":\"fq=assignee_id_lcs:$[user] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", default:\"true\"}
     ,{\"desc\":\"All Open Tasks\", \"name\":\"opened-tasks\", \"value\":\"fq=status_lcs:ACTIVE\"}
     ,{\"desc\":\"All Completed Tasks\", \"name\":\"completed-tasks\", \"value\":\"fq=status_lcs:CLOSED\"}
@@ -2734,8 +2734,8 @@ task.plugin:
     ,{\"desc\":\"All Tasks Overdue\", \"name\":\"tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\"}
     ,{\"desc\":\"All Tasks Overdue for Me\", \"name\":\"my-tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED AND assignee_id_lcs:$[user]\"}
     ,{\"desc\":\"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-    sort: "[{\"desc\":\"Sort Create Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\":\"Sort Create Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+    sort: "[{\"desc\":\"Sort Create Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\":\"Sort Create Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
     ,{\"desc\":\"Sort Due Date Date Asc\", \"name\":\"sort-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
     ,{\"desc\":\"Sort Due Date Date Desc\", \"name\":\"sort-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
     ,{\"desc\":\"Sort Task Name Asc\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2768,8 +2768,8 @@ solr.task:
 ################### Time Properties (time.properties) ###################
 time.plugin:
   root.folder: "/Sites/acm/documentLibrary/Timesheets"
-  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Timesheet ID Ascending\", \"name\":\"id ASC\"}
   ,{\"desc\":\"Sort Timesheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Timesheet Name\", \"name\":\"name DESC\"}]"
