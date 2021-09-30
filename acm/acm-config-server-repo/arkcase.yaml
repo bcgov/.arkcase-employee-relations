@@ -2996,7 +2996,7 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 password:
   length: 14
   lengthMessage: "Password must be of minimum length of"
-#### File formats. To work proper, use "-dot-" instead of "." #####
+#### File formats. To work properly, use double underscore "__" instead of "." #####
 restrictFileTypesUpload: true
 allowedUploadFileTypes:
   text/plain:
@@ -3017,7 +3017,7 @@ allowedUploadFileTypes:
     - video/avi
   video/x-m4v:
     - video/mp4
-  model/vnd-dot-mts:
+  model/vnd__mts:
     - video/vnd.dlna.mpeg-tts
   audio/mpeg:
     - audio/mp3
@@ -3047,13 +3047,13 @@ allowedUploadFileTypes:
     - audio/aiff
   audio/x-wav:
     - audio/wav
-  application/vnd-dot-rn-realmedia:
+  application/vnd__rn-realmedia:
     - application/octet-stream
   application/xhtml+xml:
     - text/html
-  application/vnd-dot-ms-outlook:
+  application/vnd__ms-outlook:
     - application/octet-stream
-  application/vnd-dot-ms-outlook-pst:
+  application/vnd__ms-outlook-pst:
     - application/octet-stream  
   text/csv:
     - application/vnd.ms-excel
@@ -3061,13 +3061,13 @@ allowedUploadFileTypes:
     - application/x-zip-compressed
   application/json:
     - application/octet-stream
-  application/vnd-dot-wordperfect:
+  application/vnd__wordperfect:
     - application/octet-stream
   application/rtf:
     - application/msword
   application/pdf:
     - application/octet-stream
-  application/vnd-dot-openxmlformats-officedocument-dot-wordprocessingml-dot-document:
+  application/vnd__openxmlformats-officedocument__wordprocessingml__document:
     - application/octet-stream
 ##### For retrieving extension version from the jar files #####
 extension:
