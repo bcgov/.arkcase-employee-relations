@@ -378,7 +378,7 @@ organizations.comp.newOrganization:
     urlType: URL Type
     validationMessage: "The Phone Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
     faxValidationMessage: "The Fax Number you entered is invalid. Should be in this format: xxx-xxx-xxxx"
-    emailValidationMessage: Please enter a valid email
+    emailValidationMessage: 'The Email you entered is invalid. Should be in this format: xxxx@xxxx.xxx'
   people:
     title: People
     searchExisting.placeholder: Search Existing Person
