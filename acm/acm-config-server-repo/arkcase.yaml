@@ -3057,6 +3057,7 @@ allowedUploadFileTypes:
     - application/octet-stream  
   text/csv:
     - application/vnd.ms-excel
+    - application/octet-stream
   application/zip:
     - application/x-zip-compressed
   application/json:
