@@ -111,18 +111,10 @@
                 authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
             <session-management session-fixation-protection="migrateSession"/>
         </http>
-
-        <!-- Ticket based Entry Point authenticates users based on request url parameter -->
-        <http entry-point-ref="acmTicketAuthenticationEntryPoint" use-expressions="true" request-matcher="regex"
-            pattern=".*acm_email_ticket=.*$|.*EXT_TRANS_ID=.*$" authentication-manager-ref="acmAuthenticationManager" create-session="stateless">
-            <intercept-url pattern="^/.*$" access="isAuthenticated()"/>
-            <csrf disabled="true"/>
-            <headers>
-              <frame-options policy="SAMEORIGIN" />
-            </headers>
-            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
-                authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
+		
+		<!-- Open URL -->
+        <http use-expressions="true" request-matcher="regex"
+            pattern=".*acm_email_ticket=.*$|.*EXT_TRANS_ID=.*$" security="none">
         </http>
 
         <!-- Ldap Entry Point authenticates users against LDAP server for REST calls -->
