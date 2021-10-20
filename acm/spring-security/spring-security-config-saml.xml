@@ -40,32 +40,6 @@
             pattern=".*acm_email_ticket=.*$|.*EXT_TRANS_ID=.*$" security="none">
         </http>
 
-        <!-- Ticket based Entry Point authenticates users based on request url parameter -->
-        <http entry-point-ref="acmTicketAuthenticationEntryPoint" use-expressions="true" request-matcher="regex"
-            pattern=".*acm_email_ticket=.*$|.*EXT_TRANS_ID=.*$" authentication-manager-ref="acmAuthenticationManager" create-session="stateless">
-            <intercept-url pattern="^/.*$" access="isAuthenticated()"/>
-            <csrf disabled="true"/>
-            <headers>
-              <frame-options policy="SAMEORIGIN" />
-            </headers>
-            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
-                authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
-        </http>
-
-        <!-- Ticket based Entry Point authenticates users based on request url parameter -->
-        <http entry-point-ref="acmTicketAuthenticationEntryPoint" use-expressions="true" request-matcher="regex"
-            pattern=".*acm_email_ticket=.*$|.*EXT_TRANS_ID=.*$" authentication-manager-ref="acmAuthenticationManager" create-session="stateless">
-            <intercept-url pattern="^/.*$" access="isAuthenticated()"/>
-            <csrf disabled="true"/>
-            <headers>
-              <frame-options policy="SAMEORIGIN" />
-            </headers>
-            <custom-filter ref="acmBasicAndTokenAuthenticationFilter" before="BASIC_AUTH_FILTER"/>
-            <form-login authentication-success-handler-ref="acmRestAuthenticationSuccessHandler"
-                authentication-failure-handler-ref="acmRestAuthenticationFailureHandler"/>
-        </http>
-
         <!-- Saml Entry Point authenticates users against IDP server for Ajax calls -->
         <http entry-point-ref="acmRestAuthenticationEntryPoint" use-expressions="true" request-matcher="regex"
             pattern="^/stomp/.*$|^/api/.*$|^/plugin/.*$" authentication-manager-ref="acmAuthenticationManager">
