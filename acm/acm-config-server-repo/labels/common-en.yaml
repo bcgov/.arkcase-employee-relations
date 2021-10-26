@@ -71,6 +71,8 @@ common.service.messageService:
     error: Action error
 common.directive.docTree:
   moveFileError: Record can't be edited or moved to different folder
+  copyFolderAsLinkError: Folder link could not be created
+  copyFolderError: Folder could not be copied
   btnRefresh: Refresh
   waitUploading: Uploading...
   confirmFileDeletion: Are you sure you want to delete this file? 
