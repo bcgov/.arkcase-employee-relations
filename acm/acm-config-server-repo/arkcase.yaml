@@ -2890,7 +2890,7 @@ wopi.plugin:
     domain: "acm-arkcase"
     port: 443
     context: "arkcase"
-    accessTokenParamName: "acm_email_ticket"
+    accessTokenParamName: "acm_wopi_ticket"
     fileIdParamName: "ecmFileId"
   lockDuration: 1800000
   enabled: true
