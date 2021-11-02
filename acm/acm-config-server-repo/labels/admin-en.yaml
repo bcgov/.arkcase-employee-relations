@@ -683,6 +683,7 @@ admin:
         "yes": "Yes"
         "no": "No"
       addLookup: Add Lookup
+      validationMessage: You can't use that special character for this type of Lookup
       label: Lookup Type
       lookupName: Lookup Name
       placeholder: Enter lookup name

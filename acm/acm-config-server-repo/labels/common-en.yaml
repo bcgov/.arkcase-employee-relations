@@ -863,6 +863,7 @@ common.duplicates:
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization
+common.configuration.validationMessage: You can't use special characters here
 common.newOrganization:
   title: Organization
   addAnother: Add Another
