@@ -3070,6 +3070,9 @@ allowedUploadFileTypes:
     - application/octet-stream
   application/vnd__openxmlformats-officedocument__wordprocessingml__document:
     - application/octet-stream
+  application/msword:
+    - application/msword
+    - application/octet-stream
 ##### For retrieving extension version from the jar files #####
 extension:
   groupId: ''
