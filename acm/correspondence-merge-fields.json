@@ -8,7 +8,7 @@
     },
     {
         "fieldId": "personFirstName",
-        "correspondenceFieldValue": "personAssociations[0].person.givenName",
+        "correspondenceFieldValue": "personAssociations.?[personType == 'Initiator'][0].person.givenName",
         "emailFieldValue": null,
         "fieldDescription": "Person First Name",
         "fieldObjectType": "CASE_FILE"
