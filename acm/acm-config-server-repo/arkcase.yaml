@@ -632,6 +632,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/people/{id}"
       - "/api/{version}/plugin/people/queryByEmail"
       - "/api/{version}/plugin/people/{id}/images"
+      - "/api/{version}/plugin/people/queryByIds"
   acmPersonDeletePrivilege:
     DELETE:
       - "/api/{version}/plugin/person/delete/{personId}"
