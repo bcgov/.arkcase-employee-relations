@@ -248,6 +248,7 @@ admin:
     searchFilter.placeholder: Search
   security.selectPrivileges: Select Privileges
   security.selectPrivileges.applicationRole: Application Role
+  security.selectPrivileges.help: Help
   security.selectPrivileges.createRole: Create Role
   security.selectPrivileges.editRole: Edit Role
   security.selectPrivileges.applyChanges: Apply Changes
