@@ -204,6 +204,7 @@ tasks.newTask:
   caseTaskType.placeholder: Select Task Type
   contactPersonAssociation.label: Contact Person
   contactPersonAssociation.placeholder: Select Contact Person
+  dateFieldEmpty: Please select a date
   noSelectedReviewDocsErrorMsg: Please select at least one document in order to use
     the selected business process type.
   noSelectedReviewDocsWorkflowErrorMsg: Please select a business process in order
