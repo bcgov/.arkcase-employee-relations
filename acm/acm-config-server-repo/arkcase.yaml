@@ -2904,11 +2904,11 @@ objectTitleConfig: "{
         \"title\" : \"titleTitle\"
     },
     \"COMPLAINT\": {
-        \"enableTitleField\": false,
+        \"enableTitleField\": true,
         \"title\": \"objectIdTitle\"
     },
     \"CONSULTATION\": {
-        \"enableTitleField\": false,
+        \"enableTitleField\": true,
         \"title\": \"objectIdTitle\"
     }
 }"
