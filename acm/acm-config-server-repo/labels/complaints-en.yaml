@@ -64,6 +64,7 @@ complaints.comp.people:
     organization: Organization
     phone: Phone
     location: Location
+  type.label: Complaint Person Type  
 complaints.comp.organizations:
   title: Organizations
   table.columns:
@@ -80,6 +81,7 @@ complaints.comp.organizations:
     setPrimary: Set as Primary
     addNew: Add New
     addExisting: Add New
+  type.label: Complaint Organization Type
 complaints.comp.participants:
   title: Participants
   table.columns:
@@ -378,18 +380,24 @@ complaints.comp.newComplaint:
   location:
     title: Location
     addressType: Type
+    addressType.validation.error: Please select Type
     streetAddress: Address 1
     streetAddress.placeholder: Enter Address 1
+    streetAddress.validation.error: Please select Address 1
     streetAddress2: Address 2
     streetAddress2.placeholder: Enter Address 2
     city: City
     city.placeholder: Enter City
+    city.validation.error: Please select City
     state: State/Province
     state.placeholder: Enter State/Province
+    state.validation.error: Please select State/Province
     country: Country
     country.placeholder: Select Country
+    country.validation.error: Please select Country
     zip: Zip/Postal
     zip.placeholder: Enter Zip/Postal
+    zip.validation.error: Please select Zip/Postal
     dateCreated: Date added
     creator: Added By
     creator.placeholder: Enter Creator

@@ -41,13 +41,6 @@
 			"class": "com.armedia.acm.service.objectlock.service.ReleaseExpiredLocksJobDescriptor",
 			"repeatIntervalInSeconds": 15
 		},
-
-		{
-			"name": "scheduleGeneratedReportJob",
-			"class": "com.armedia.acm.plugins.report.service.PentahoScheduleGeneratedReportJobDescriptor",
-			"repeatIntervalInSeconds": 120
-		},
-
 		{
 			"name": "transcribeQueueJob",
 			"class": "com.armedia.acm.services.transcribe.job.TranscribeQueueJobDescriptor",

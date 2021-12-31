@@ -212,7 +212,7 @@
   "templateVersionActive" : true,
   "label" : "Object Unassigned",
   "documentType" : "Object Unassigned",
-  "templateFilename" : "objectAssigned.html",
+  "templateFilename" : "objectUnassigned.html",
   "objectType" : "ALL",
   "templateModelProvider" : "com.armedia.acm.services.notification.service.provider.NotificationTemplateModelProvider",
   "templateType" : "emailTemplate",

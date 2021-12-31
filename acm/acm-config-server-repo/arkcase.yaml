@@ -261,6 +261,7 @@ acmPluginConfigurationPrivileges:
       - "/modules/welcome/views/"
       - "/modules/goodbye/views/"
       - "/modules/core/views/"
+      - "/modules/progress-bar/views/"
       - "/modules/frevvo/views/"
       - "/modules/preference/views/"
       - "/modules/common/views/"
@@ -276,6 +277,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/okta/factor/enrollment"
       - "/api/{version}/plugin/okta/authprofile"
       - "/api/{version}/plugin/phone/regex"
+      - "/api/{version}/plugin/email/regex"
       - "/api/{version}/service/ocr/{id}"
       - "/api/{version}/service/ocr/media/{mediaVersionId}"
       - "/api/{version}/service/ocr/file/{fileId}"
@@ -382,6 +384,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/ecm/download"
       - "/api/{version}/service/ecm/folder/counts/{objectType}/{objectId}"
       - "/api/{version}/service/ecm/file/{fileId}"
+      - "/api/{version}/service/ecm/files"
       - "/api/{version}/service/ecm/file/{fileId}/targetLink"
       - "/api/{version}/service/ecm/totalpagecount/{parentObjectType}/{parentObjectId}"
       - "/plugin/document/{fileId}"
@@ -629,6 +632,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/people/{id}"
       - "/api/{version}/plugin/people/queryByEmail"
       - "/api/{version}/plugin/people/{id}/images"
+      - "/api/{version}/plugin/people/queryByIds"
   acmPersonDeletePrivilege:
     DELETE:
       - "/api/{version}/plugin/person/delete/{personId}"
@@ -637,6 +641,7 @@ acmPluginConfigurationPrivileges:
     GET:
       - "/api/{version}/plugin/person/list/{parentType}/{parentId}"
       - "/api/{version}/plugin/people/{personId}/associations/{objectType}"
+      - "/api/{version}/plugin/people"
     POST:
       - "/api/{version}/plugin/people/{personId}/images/changeImageDescription/{imageId}"
   acmPersonTypesPrivilege:
@@ -671,6 +676,7 @@ acmPluginConfigurationPrivileges:
       - "/api/{version}/plugin/organizations"
       - "/api/{version}/plugin/organizations/{organizationId}/associations/{objectType}"
       - "/api/{version}/plugin/organizations/search/{organizationId}"
+      - "/api/{version}/plugin/organizations/searchExisting/{organizationName}"
   acmOrganizationDeletePrivilege:
     DELETE:
       - "/api/{version}/plugin/organizations/{organizationId}"
@@ -1110,7 +1116,7 @@ report:
     PENTAHO_SERVER_USER: "arkcase-admin"
     PENTAHO_SERVER_PASSWORD: "ENC(U2FsdGVkX18opRRmCattSZiUNjfr598Qq7P3DgZSwGw=)"
     PENTAHO_REPORTS_URL: "/pentaho/api/repo/files/:public:arkcase/children"
-    PENTAHO_REPORT_URL: "/pentaho/api/repos/:public:foia:"
+    PENTAHO_REPORT_URL: "/pentaho/api/repos/:public:arkcase:"
     PENTAHO_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer"
     PENTAHO_VIEW_REPORT_URL_PRPTI_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/prpti.view"
     PENTAHO_VIEW_DASHBOARD_REPORT_URL_TEMPLATE: "/arkcase/pentaho/api/repos/{path}/viewer?ts={timestamp}"
@@ -1890,14 +1896,17 @@ application:
     historyDays: 30
     baseUrl: "https://acm-arkcase/arkcase"
     basePortalUrl: 
+    listFilesInFolder:
     applicationName: "arkcase"
     helpUrl: "https://www.arkcase.com/user-guides/user-guide-base-product/"
     templateGuideUrl: "https://www.arkcase.com/correspondence-management-3/"
+    sequenceInstructionUrl: "https://www.arkcase.com/application-2/"
     alfrescoUserIdLdapAttribute: "samAccountName"
     issueCollectorFlag: false
     # for saml environment override logoutUrl with '/sso/loggedout'
     # for oidc environment override logoutUrl with '/oauth-logout'
     logoutUrl: "/logout"
+    allowForgotUsernameAndPasswordOnLogin: true
     defaultTimezone: "America/New_York"
     organizationName: "Organization_Name"
     organizationAddress1: "Organization_Address1"
@@ -2054,7 +2063,7 @@ calendar:
 ################### Phone Regular expressions ####################
 phone:
   phone_regex:  "/^\\d{3}[\\-]\\d{3}[\\-]\\d{4}$/"
-email.email_regex: "/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$/"
+email.email_regex: "/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$/"
 ########## Editing Enabled - enabling this button will violate the license agreement for CE usage ############
 fileEditingEnabled: false
 ################### Capture Configuration (capture.properties) ####################
@@ -2095,14 +2104,14 @@ casefile.plugin:
   #types available for copy are: history, people, participants, tasks
   split.typesToCopy: "history,people,participants"
   merge.exclude_document_types: "case_file_xml,case_file"
-  search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
+  search.tree.filter: "[{\"desc\":\"All Open Cases\", \"name\":\"all-open-cases\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":\"true\"}
   ,{\"desc\": \"All I've Created\", \"name\":\"my-created-cases\", \"value\":\"fq=author:$[user]\"}
-  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_s:$[user]\"}
-  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
-  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_s:CLOSED\"}
+  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-cases\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-cases\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
+  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-cases\", \"value\":\"fq=status_lcs:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
-  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Case ID Asc\", \"name\":\"sort-case-id-asc\", \"value\":\"object_id_s ASC\"}
   ,{\"desc\":\"Sort Case ID Desc\", \"name\":\"sort-case-id-desc\", \"value\":\"object_id_s DESC\"}
   ,{\"desc\":\"Sort By Case Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2119,7 +2128,7 @@ casefile.plugin:
   delete_calendar_folder_after_case_closed: true
   ##Dashboard SOLR queries
   #Get all case_file by user that are not closed, deleted or completed
-  solr.all.not.closed.by.user: "object_type_s:CASE_FILE&fq=creator_lcs=?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  solr.all.not.closed.by.user: "object_type_s:CASE_FILE&fq=creator_lcs=?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   #Get all case_files grouped by status
   solr.all.group.by.status: "object_type_s:CASE_FILE&group=true&group.field=status_lcs&group.limit=0"
   ##Case File tree root name format. If this property not exist or it's empty, the default value will be taken: Acm.goodValue(objSolr.title_parseable) + ' (' + Acm.goodValue(objSolr.name) + ')'
@@ -2132,11 +2141,11 @@ casefile.plugin:
   folder.structure:
 ################### Consultation Plugin Configuration ###################
 consultation.plugin:
-  search.tree.filter: "[{\"desc\":\"All Open Consultations\", \"name\":\"all-open-consultations\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":\"true\"}
-  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-consultations\", \"value\":\"fq=author_s:$[user]\"}
-  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-consultations\", \"value\":\"fq=assignee_s:$[user]\"}
-  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-consultations\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
-  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-consultations\", \"value\":\"fq=status_s:CLOSED\"}
+  search.tree.filter: "[{\"desc\":\"All Open Consultations\", \"name\":\"all-open-consultations\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":\"true\"}
+  ,{\"desc\": \"All I've Created\", \"name\":\"my-created-consultations\", \"value\":\"fq=creator_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-assigned-consultations\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+  ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-consultations\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
+  ,{\"desc\": \"All Closed\", \"name\":\"all-closed-consultations\", \"value\":\"fq=status_lcs:CLOSED\"}
   ,{\"desc\": \"(No Filter)\", \"name\": \"\", \"value\": \"\"}]"
   search.tree.sort: "[{\"desc\":\"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
   ,{\"desc\":\"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
@@ -2156,7 +2165,7 @@ consultation.plugin:
   delete_calendar_folder_after_consultation_closed: true
   ##Dashboard SOLR queries
   #Get all consultation by user that are not closed, deleted or completed
-  solr.all.not.closed.by.user: "object_type_s:CONSULTATION&fq=creator_lcs=?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  solr.all.not.closed.by.user: "object_type_s:CONSULTATION&fq=creator_lcs=?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   #Get all consultations grouped by status
   solr.all.group.by.status: "object_type_s:CONSULTATION&group=true&group.field=status_lcs&group.limit=0"
   ##Consultation tree root name format. If this property not exist or it's empty, the default value will be taken: Acm.goodValue(objSolr.title_parseable) + ' (' + Acm.goodValue(objSolr.name) + ')'
@@ -2189,18 +2198,18 @@ complaint.plugin:
   # waiting state will be terminated. Checking is made every second.
   ephesoft.load.documents.seconds: 10
   search.tree:
-    filter: "[{\"desc\": \"All Open Complaints\", \"name\":\"all-open-complaints\", \"value\":\"fq=-status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", \"default\":true}
-    ,{\"desc\": \"All I've Created\", \"name\":\"my-complaints-created\", \"value\":\"fq=author_s:$[user]\"}
-    ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-complaints-assigned\", \"value\":\"fq=assignee_s:$[user]\"}
-    ,{\"desc\": \"All I'm Following\", \"name\":\"my-complaints-following\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
+    filter: "[{\"desc\": \"All Open Complaints\", \"name\":\"all-open-complaints\", \"value\":\"fq=-status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", \"default\":true}
+    ,{\"desc\": \"All I've Created\", \"name\":\"my-complaints-created\", \"value\":\"fq=creator_lcs:$[user]\"}
+    ,{\"desc\": \"All I'm Assigned\", \"name\":\"my-complaints-assigned\", \"value\":\"fq=assignee_id_lcs:$[user]\"}
+    ,{\"desc\": \"All I'm Following\", \"name\":\"my-complaints-following\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
     ,{\"desc\": \"All Closed No Further Action\", \"name\":\"all-closed-no-action\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:no_action\"}
     ,{\"desc\": \"All Closed Refer External\", \"name\":\"all-closed-external\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:refer_external\"}
     ,{\"desc\": \"All Closed Open Investigation\", \"name\":\"all-closed-investigation\", \"value\":\"fq={!join from=id to=disposition_id_s}disposition_type_s:open_investigation\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-    sort: "[{\"desc\": \"Sort Incident Date Asc\", \"name\":\"sort-incident-date-asc\", \"value\":\"due_tdt ASC\"}
-    ,{\"desc\": \"Sort Incident Date Desc\", \"name\":\"sort-incident-date-asc\", \"value\":\"due_tdt ASC\"}
-    ,{\"desc\": \"Sort Created Date Asc\", \"name\":\"sort-created-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\": \"Sort Created Date Desc\", \"name\":\"sort-created-date-desc\", \"value\":\"create_tdt DESC\", \"default\":true}
+    sort: "[{\"desc\": \"Sort Incident Date Asc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
+    ,{\"desc\": \"Sort Incident Date Desc\", \"name\":\"sort-incident-date-asc\", \"value\":\"dueDate_tdt ASC\"}
+    ,{\"desc\": \"Sort Created Date Asc\", \"name\":\"sort-created-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\": \"Sort Created Date Desc\", \"name\":\"sort-created-date-desc\", \"value\":\"create_date_tdt DESC\", \"default\":true}
     ,{\"desc\": \"Sort By Name\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
     ,{\"desc\": \"(No Sort)\", \"name\":\"\", \"value\":\"\"}]"
     #The properties where the search query should be executed (comma separated, for example: title_parseable,description_no_html_tags_parseable ... etc)
@@ -2223,8 +2232,8 @@ compressor.fileNameFormat: "%1$sacm-%2$d-%3$s.zip"
 ################### (cost.properties) ###################
 cost.plugin:
   root.folder: "/Sites/acm/documentLibrary/Expenses"
-  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Costsheet ID Ascending\", \"name\":\"id ASC\"}
   ,{\"desc\":\"Sort Costsheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Costsheet Name\", \"name\":\"name DESC\"}]"
@@ -2234,8 +2243,8 @@ cost.plugin:
 ################### Dashbord Plugin Configuration (dashboardPlugin.properties) ###################
 ## Default dashboard JSON String.
 dashboard.plugin:
-  defaultDashboard: "{\"title\":\"dashboard.title\",\"structure\":\"6-6\",\"rows\":[{\"columns\": [{\"styleClass\":\"col-md-12\"}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\"}"
-  moduleDefaultDashboard: "{\"addTemplateUrl\":\"modules/dashboard/templates/widget-add.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\",\"title\":\"dashboard.title\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[{\"wid\":7,\"fullscreenTemplateUrl\":\"modules/dashboard/templates/widget-fullscreen.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/widget-title.html\",\"deleteTemplateUrl\":\"modules/dashboard/templates/widget-delete.html\",\"type\":\"userWebsites\",\"title\":\"dashboard.widgets.userWebsites.title\",\"config\":{\"paginationPageSize\":\"5\"},\"editTemplateUrl\":\"modules/dashboard/templates/widget-edit.html\"}],\"cid\":3}]}],\"structure\":\"12\",\"editTemplateUrl\":\"modules/dashboard/templates/dashboard-edit.html\"}"
+  defaultDashboard: "{\"addTemplateUrl\":\"modules/dashboard/templates/widget-add.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/dashboard-title.html\",\"title\":\"dashboard.title\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[{\"wid\":7,\"fullscreenTemplateUrl\":\"modules/dashboard/templates/widget-fullscreen.html\",\"titleTemplateUrl\":\"modules/dashboard/templates/widget-title.html\",\"deleteTemplateUrl\":\"modules/dashboard/templates/widget-delete.html\",\"type\":\"userWebsites\",\"title\":\"dashboard.widgets.userWebsites.title\",\"config\":{\"paginationPageSize\":\"5\"},\"editTemplateUrl\":\"modules/dashboard/templates/widget-edit.html\"}],\"cid\":3}]}],\"structure\":\"12\",\"editTemplateUrl\":\"modules/dashboard/templates/dashboard-edit.html\"}"
+  moduleDefaultDashboard: "{\"title\":\"\",\"structure\":\"12\",\"rows\":[{\"columns\":[{\"styleClass\":\"col-md-12\",\"widgets\":[]}]}],\"titleTemplateUrl\":\"modules/dashboard/templates/module_dashboard-title.html\"}"
   ## If you want to introduce new widgets to ACM3 set acm.add.widget = true
   ## and set acm.new.widgets = newWidgetOne,newWidgetTwo etc. after you delete old values from previous update.
   add.widget: true
@@ -2326,12 +2335,12 @@ activiti.db.type: mysql
 ################### Document Repository Plugin Configuration (documentRepositoryPlugin.properties) ###################
 docRepo.plugin:
   search.tree:
-    filter: "[{\"desc\": \"All I've Created\", \"name\":\"my-created-document-repositories\", \"value\":\"fq=author_s:$[user] AND repository_type_s:GENERAL\"}
-    ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-document-repositories\", \"value\":\"fq={!join from=parent_object_id_s to=object_id_s}(owner_s:$[user] AND object_type_s:SUBSCRIPTION)\"}
+    filter: "[{\"desc\": \"All I've Created\", \"name\":\"my-created-document-repositories\", \"value\":\"fq=creator_lcs:$[user] AND repository_type_s:GENERAL\"}
+    ,{\"desc\": \"All I'm Following\", \"name\":\"my-following-document-repositories\", \"value\":\"fq={!join from=parent_id_s to=object_id_s}(owner_lcs:$[user] AND object_type_s:SUBSCRIPTION)\"}
     ,{\"desc\": \"(No Filter)\", \"name\":\"default-filter\", \"value\":\"fq=repository_type_s:GENERAL\"}
-    ,{\"desc\": \"(No Filter)\", \"name\":\"my-personal-document-repositories\", \"value\":\"fq=assignee_s:$[user] AND repository_type_s:PERSONAL\"}]"
-    sort: "[{\"desc\": \"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\": \"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+    ,{\"desc\": \"(No Filter)\", \"name\":\"my-personal-document-repositories\", \"value\":\"fq=assignee_id_lcs:$[user] AND repository_type_s:PERSONAL\"}]"
+    sort: "[{\"desc\": \"Sort Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\": \"Sort Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
     ,{\"desc\": \"Sort Repository ID Asc\", \"name\":\"sort-document-repository-id-asc\", \"value\":\"object_id_s ASC\"}
     ,{\"desc\": \"Sort Repository ID Desc\", \"name\":\"sort-document-repository-id-desc\", \"value\":\"object_id_s DESC\"}
     ,{\"desc\": \"Sort By Repository Name\", \"name\":\"sort-by-document-repository-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
@@ -2577,13 +2586,13 @@ person.plugin:
   folder.own.spel: "givenName + '_' + (middleName == null ? '' : middleName + '_') + familyName + '_' + id"
   search:
     tree:
-      filter: "[{\"desc\": \"I've Created\", \"name\":\"my-created\", \"value\":\"fq=author_s:$[user]\"}
-      ,{\"desc\": \"I've Created - Active\", \"name\":\"my-created-active\", \"value\":\"fq=author_s:$[user] AND status_s:ACTIVE\"}
-      ,{\"desc\": \"Active\", \"name\":\"active\", \"value\":\"fq=status_s:ACTIVE\", \"default\":\"true\"}
-      ,{\"desc\": \"Inactive\", \"name\":\"in-active\", \"value\":\"fq=status_s:INACTIVE\"}
+      filter: "[{\"desc\": \"I've Created\", \"name\":\"my-created\", \"value\":\"fq=creator_lcs:$[user]\"}
+      ,{\"desc\": \"I've Created - Active\", \"name\":\"my-created-active\", \"value\":\"fq=creator_lcs:$[user] AND status_lcs:ACTIVE\"}
+      ,{\"desc\": \"Active\", \"name\":\"active\", \"value\":\"fq=status_lcs:ACTIVE\", \"default\":\"true\"}
+      ,{\"desc\": \"Inactive\", \"name\":\"in-active\", \"value\":\"fq=status_lcs:INACTIVE\"}
       ,{\"desc\": \"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-      sort: "[{\"desc\": \"Sort Date Created Ascending\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-      ,{\"desc\": \"Sort Date Created Decending\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
+      sort: "[{\"desc\": \"Sort Date Created Ascending\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+      ,{\"desc\": \"Sort Date Created Decending\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
       ,{\"desc\": \"Sort By ID Ascending\", \"name\":\"sort-by-id-asc\", \"value\":\"id ASC\"}
       ,{\"desc\": \"Sort By ID Decending\", \"name\":\"sort-by-id-desc\", \"value\":\"id DESC\"}
       ,{\"desc\": \"Sort By Name A-Z\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\", \"default\":\"true\"}
@@ -2680,7 +2689,7 @@ subscription.plugin:
     failed: "Subscription Was not Removed Due To SQL exception"
     event.types: "com.armedia.acm.plugins.search.result"
   ##SOLR predefined queries for subscription module
-  get.object.byId: "id:?&fq=-status_s:COMPLETE&fq=-status_s:DELETE&fq=-status_s:CLOSED"
+  get.object.byId: "id:?&fq=-status_lcs:COMPLETE&fq=-status_lcs:DELETE&fq=-status_lcs:CLOSED"
   ##Used by UI ##
   search:
     name: "subscription"
@@ -2717,19 +2726,19 @@ task.plugin:
   email.handler.enabled: true
   search.tree:
     ##!NOTE: "New Tasks For Me" and/OR "Old Tasks For Me" can be fetched by using filter bellow in combination with sorting ASC or DESC by Create Date...
-    ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_tdt DESC ... and SOLR will retunr the newest Case Files.
-    filter: "[{\"desc\": \"Tasks for Me\", \"name\":\"my-tasks\", \"value\":\"fq=assignee_s:$[user] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\", default:\"true\"}
-    ,{\"desc\":\"All Open Tasks\", \"name\":\"opened-tasks\", \"value\":\"fq=status_s:ACTIVE\"}
-    ,{\"desc\":\"All Completed Tasks\", \"name\":\"completed-tasks\", \"value\":\"fq=status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Due Today\", \"name\":\"tasks-due-today\", \"value\":\"fq=due_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Due Today for Me\", \"name\":\"my-tasks-due-today\", \"value\":\"fq=due_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED AND assignee_s:$[user]\"}
-    ,{\"desc\":\"All Tasks Overdue\", \"name\":\"tasks-overdue\", \"value\":\"fq=due_tdt:[* TO NOW/DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED\"}
-    ,{\"desc\":\"All Tasks Overdue for Me\", \"name\":\"my-tasks-overdue\", \"value\":\"fq=due_tdt:[* TO NOW/DAY] AND -status_s:COMPLETE AND -status_s:DELETE AND -status_s:CLOSED AND assignee_s:$[user]\"}
+    ##For "New Tasks For Me", you should chose "Tasks for Me" --> fq=assigniee_s:$[user] together with "Sort Create Date Desc" --> create_date_tdt DESC ... and SOLR will retunr the newest Case Files.
+    filter: "[{\"desc\": \"Tasks for Me\", \"name\":\"my-tasks\", \"value\":\"fq=assignee_id_lcs:$[user] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\", default:\"true\"}
+    ,{\"desc\":\"All Open Tasks\", \"name\":\"opened-tasks\", \"value\":\"fq=status_lcs:ACTIVE\"}
+    ,{\"desc\":\"All Completed Tasks\", \"name\":\"completed-tasks\", \"value\":\"fq=status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Due Today\", \"name\":\"tasks-due-today\", \"value\":\"fq=dueDate_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Due Today for Me\", \"name\":\"my-tasks-due-today\", \"value\":\"fq=dueDate_tdt:[NOW/DAY TO NOW/DAY%2B1DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED AND assignee_id_lcs:$[user]\"}
+    ,{\"desc\":\"All Tasks Overdue\", \"name\":\"tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED\"}
+    ,{\"desc\":\"All Tasks Overdue for Me\", \"name\":\"my-tasks-overdue\", \"value\":\"fq=dueDate_tdt:[* TO NOW/DAY] AND -status_lcs:COMPLETE AND -status_lcs:DELETE AND -status_lcs:CLOSED AND assignee_id_lcs:$[user]\"}
     ,{\"desc\":\"(No Filter)\", \"name\":\"\", \"value\":\"\"}]"
-    sort: "[{\"desc\":\"Sort Create Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_tdt ASC\"}
-    ,{\"desc\":\"Sort Create Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_tdt DESC\"}
-    ,{\"desc\":\"Sort Due Date Date Asc\", \"name\":\"sort-due-date-asc\", \"value\":\"due_tdt ASC\"}
-    ,{\"desc\":\"Sort Due Date Date Desc\", \"name\":\"sort-due-date-desc\", \"value\":\"due_tdt DESC\"}
+    sort: "[{\"desc\":\"Sort Create Date Asc\", \"name\":\"sort-date-asc\", \"value\":\"create_date_tdt ASC\"}
+    ,{\"desc\":\"Sort Create Date Desc\", \"name\":\"sort-date-desc\", \"value\":\"create_date_tdt DESC\"}
+    ,{\"desc\":\"Sort Due Date Date Asc\", \"name\":\"sort-due-date-asc\", \"value\":\"dueDate_tdt ASC\"}
+    ,{\"desc\":\"Sort Due Date Date Desc\", \"name\":\"sort-due-date-desc\", \"value\":\"dueDate_tdt DESC\"}
     ,{\"desc\":\"Sort Task Name Asc\", \"name\":\"sort-by-name-asc\", \"value\":\"title_parseable_lcs ASC\"}
     ,{\"desc\":\"Sort Task Name Desc\", \"name\":\"sort-by-name-desc\", \"value\":\"title_parseable_lcs DESC\"}
     ,{\"desc\":\"(No Sort)\", \"name\":\"\", \"value\":\"\", \"default\":\"true\"}]"
@@ -2748,26 +2757,26 @@ solr.task:
   #All tasks assigned to all users
   all: "object_type_s:TASK"
   #all past due tasks
-  pastdue: "object_type_s:TASK&fq=due_tdt:[* TO NOW]"
+  pastdue: "object_type_s:TASK&fq=dueDate_tdt:[* TO NOW]"
   #All tasks assigned to all users that due date is until  one day from Today numberOfDaysFromToday
-  due.one.day.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW + 1DAY/DAY]"
+  due.one.day.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW + 1DAY/DAY]"
   #All tasks assigned to all users that due date is until seven days from Today numberOfDaysFromToday
-  due.seven.days.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW + 7DAY/DAY]"
+  due.seven.days.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW + 7DAY/DAY]"
   #All tasks assigned to all users that due date is until one month from Today numberOfDaysFromToday
-  due.one.month.from.now: "object_type_s:TASK&fq=due_tdt:[NOW TO NOW+1MONTH/MONTH]"
+  due.one.month.from.now: "object_type_s:TASK&fq=dueDate_tdt:[NOW TO NOW+1MONTH/MONTH]"
   #All taks assigned to a specific user
   all.for.user: "object_type_s:TASK&fq=assignee_id_lcs:?"
 ################### Time Properties (time.properties) ###################
 time.plugin:
   root.folder: "/Sites/acm/documentLibrary/Timesheets"
-  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_tdt ASC\"}
-  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_tdt DESC\"}
+  search.tree.sort: "[{\"desc\":\"Sort Date Ascending\", \"name\":\"create_date_tdt ASC\"}
+  ,{\"desc\":\"Sort Date Decending\", \"name\":\"create_date_tdt DESC\"}
   ,{\"desc\":\"Sort Timesheet ID Ascending\", \"name\":\"id ASC\"}
   ,{\"desc\":\"Sort Timesheet ID Decending\", \"name\":\"id DESC\"}
   ,{\"desc\":\"Sort By Timesheet Name\", \"name\":\"name DESC\"}]"
   useApprovalWorkflow: true
   workflowProcessName: acmDocumentWorkflow
-  addTimesheetToBilling: true  
+  addTimesheetToBilling: true
 ################### Timesheet Properties (timesheetProperties.properties) ###################
 ################### Transcribe Configuration (transcribe.properties) ####################
 transcribe:
@@ -2882,7 +2891,7 @@ wopi.plugin:
     domain: "acm-arkcase"
     port: 443
     context: "arkcase"
-    accessTokenParamName: "acm_email_ticket"
+    accessTokenParamName: "acm_wopi_ticket"
     fileIdParamName: "ecmFileId"
   lockDuration: 1800000
   enabled: true
@@ -2895,11 +2904,11 @@ objectTitleConfig: "{
         \"title\" : \"titleTitle\"
     },
     \"COMPLAINT\": {
-        \"enableTitleField\": false,
+        \"enableTitleField\": true,
         \"title\": \"objectIdTitle\"
     },
     \"CONSULTATION\": {
-        \"enableTitleField\": false,
+        \"enableTitleField\": true,
         \"title\": \"objectIdTitle\"
     }
 }"
@@ -2986,9 +2995,9 @@ camel.workingDirectory: "${user.home}/.arkcase/acm/cmis/"
 
 ### Password configuration ###
 password:
-  length: 7
+  length: 14
   lengthMessage: "Password must be of minimum length of"
-#### File formats. To work proper, use "-dot-" instead of "." #####
+#### File formats. To work properly, use double underscore "__" instead of "." #####
 restrictFileTypesUpload: true
 allowedUploadFileTypes:
   text/plain:
@@ -3009,7 +3018,7 @@ allowedUploadFileTypes:
     - video/avi
   video/x-m4v:
     - video/mp4
-  model/vnd-dot-mts:
+  model/vnd__mts:
     - video/vnd.dlna.mpeg-tts
   audio/mpeg:
     - audio/mp3
@@ -3037,24 +3046,34 @@ allowedUploadFileTypes:
     - application/octet-stream
   audio/x-aiff:
     - audio/aiff
-  application/vnd-dot-rn-realmedia:
+  audio/x-wav:
+    - audio/wav
+  application/vnd__rn-realmedia:
     - application/octet-stream
   application/xhtml+xml:
     - text/html
-  application/vnd-dot-ms-outlook:
+  application/vnd__ms-outlook:
     - application/octet-stream
-  application/vnd-dot-ms-outlook-pst:
+  application/vnd__ms-outlook-pst:
     - application/octet-stream  
   text/csv:
     - application/vnd.ms-excel
+    - application/octet-stream
   application/zip:
     - application/x-zip-compressed
   application/json:
     - application/octet-stream
-  application/vnd-dot-wordperfect:
+  application/vnd__wordperfect:
     - application/octet-stream
   application/rtf:
     - application/msword
+  application/pdf:
+    - application/octet-stream
+  application/vnd__openxmlformats-officedocument__wordprocessingml__document:
+    - application/octet-stream
+  application/msword:
+    - application/msword
+    - application/octet-stream
 ##### For retrieving extension version from the jar files #####
 extension:
   groupId: ''
@@ -3109,7 +3128,7 @@ holidayConfiguration:
     "2021-11-11": "Veterans Day"
     "2021-11-25": "Thanksgiving Day"
     "2021-11-26": "Native American Heritage Day"
-    "2021-12-24": "Christmas Day"
+    "2021-12-24": "Christmas Eve"
     "2021-12-31": "New Year's Day"
     "2022-01-17": "Martin Luther King Jr. Day"
     "2022-02-21": "Presidents Day"
@@ -3282,3 +3301,18 @@ tokenExpiration:
 convertEmailsToPDF:
   outgoingEmailToPdf: false
   incomingEmailToPdf: false
+##################### (timesheetConfiguration.json) #####################
+timesheetConfiguration:
+  chargeRoleItems:
+    ANALYST:
+      chargeRole: ANALYST
+      rate: 50
+      active: ACTIVE
+    INVESTIGATOR:
+      chargeRole: INVESTIGATOR
+      rate: 75
+      active: ACTIVE
+    Litigation:
+      chargeRole: Litigation
+      rate: 105
+      active: ACTIVE

@@ -33,7 +33,15 @@ common:
   defaultDateTimePickerFormat: MM/DD/YYYY h:mm A
   defaultDateTimeUTCFormat: YYYY-MM-DDTHH:mm:ssZZ
   defaultDateTimeLongUIFormat: MM/dd/yyyy HH:mm:ss
+  invalidDateFormat: Invalid date format.
+  invalidMaxDate: Max validation error.
+  invalidMinDate: Min validation error.
+  defaultDateInputPlaceholder: Select a date
+  validDateTimeFormat: MM/DD/YYYY HH:MM AM/PM
   ## date formats should not be translated in other languages ##
+  days:
+    saturday: "Saturday"
+    sunday: "Sunday"
 common.userOrGroupSearch:
   id: userSearch
   title: User/Group Search
@@ -63,6 +71,8 @@ common.service.messageService:
     error: Action error
 common.directive.docTree:
   moveFileError: Record can't be edited or moved to different folder
+  copyFolderAsLinkError: Folder link could not be created
+  copyFolderError: Folder could not be copied
   btnRefresh: Refresh
   waitUploading: Uploading...
   confirmFileDeletion: Are you sure you want to delete this file? 
@@ -787,6 +797,7 @@ common.duplicatePersonPicker:
     location: Location
 common.dialogOrganizationPicker:
   header: Choose Organization
+  header2: Organization with this name already exist. Pick an existing organization if you would like to review.
   table.columns:
     type: Organization Type
     name: Organization
@@ -852,6 +863,7 @@ common.duplicates:
 common.editOrganization:
   title: Edit Organization
   parentTitle: Edit Parent Organization
+common.configuration.validationMessage: You can't use special characters here
 common.newOrganization:
   title: Organization
   addAnother: Add Another
@@ -862,6 +874,8 @@ common.newOrganization:
   type.placeholder: Select Organization Type
   saveButton: Save Organization
   cancelButton: Cancel
+  goToOrganization: Checkout Organization
+  choose: Choose Organization
   details.title: Details
   parentOrganization: Parent Organization
   searchParentOrganization.placeholder: Search Parent Organization

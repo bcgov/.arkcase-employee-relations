@@ -8,7 +8,7 @@
     },
     {
         "fieldId": "personFirstName",
-        "correspondenceFieldValue": "personAssociations[0].person.givenName",
+        "correspondenceFieldValue": "personAssociations.?[personType == 'Initiator'][0].person.givenName",
         "emailFieldValue": null,
         "fieldDescription": "Person First Name",
         "fieldObjectType": "CASE_FILE"
@@ -81,6 +81,19 @@
         "correspondenceFieldValue": "T(com.armedia.acm.services.holiday.service.HolidayConfigurationService).util.addWorkingDaysToDate(T(java.time.LocalDate).now(), 10)",
         "emailFieldValue": "T(com.armedia.acm.services.holiday.service.HolidayConfigurationService).util.addWorkingDaysToDate(T(java.time.LocalDate).now(), 10)",
         "fieldDescription": "Ten working days from today",
+        "fieldObjectType": "CASE_FILE"
+    },
+    {
+        "fieldId": "entityPaymentDate",
+        "emailFieldValue": "#toClientDateTimezone(paymentDate)",
+        "fieldDescription": "Invoice Payment Date",
+        "fieldObjectType": "Object"
+    },
+    {
+        "fieldId": "currentDate",
+        "correspondenceFieldValue": "#currentDateToClientDate()",
+        "emailFieldValue": "#currentDateToClientDate()",
+        "fieldDescription": "Current Date",
         "fieldObjectType": "CASE_FILE"
     }
 ]

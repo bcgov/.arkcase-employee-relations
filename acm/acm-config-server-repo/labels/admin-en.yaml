@@ -248,6 +248,7 @@ admin:
     searchFilter.placeholder: Search
   security.selectPrivileges: Select Privileges
   security.selectPrivileges.applicationRole: Application Role
+  security.selectPrivileges.help: Help
   security.selectPrivileges.createRole: Create Role
   security.selectPrivileges.editRole: Edit Role
   security.selectPrivileges.applyChanges: Apply Changes
@@ -355,7 +356,9 @@ admin:
     table.title: Email Templates
     settings:
       emailCaseFile.label: Email Receiver CaseFile
+      emailCaseFile.label.error: This system email account should be different than the incoming system email account.
       emailComplaint.label: Email Receiver Complaint
+      emailComplaint.label.error: This system email account should be different than the document delivery system email account.
       password.label: Password
       email.placeholder: Enter Email address
       password.placeholder: Enter Password
@@ -681,6 +684,7 @@ admin:
         "yes": "Yes"
         "no": "No"
       addLookup: Add Lookup
+      validationMessage: You can't use that special character for this type of Lookup
       label: Lookup Type
       lookupName: Lookup Name
       placeholder: Enter lookup name
@@ -719,6 +723,7 @@ admin:
       title: Sequence Configuration
       sequenceEnabled: Enabled
       sequenceDisabled: Disabled
+      instructions: Instructions
       grid:
         sequenceName: Name
         sequenceDescription: Description

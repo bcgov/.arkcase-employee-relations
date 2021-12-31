@@ -300,6 +300,7 @@ people.comp.organizations:
     setPrimary: Set as Primary
     addNew: Add New
     addExisting: Add Existing
+  type.label: Person Organization Position  
 people.comp.cases:
   title: Cases
   objectType.label: Case File
@@ -312,6 +313,7 @@ people.comp.cases:
     assignee: Assignee
     modified: Modified
     caseNumber: Case Number
+  type.label: Case Person Type  
 people.comp.consultations:
   title: Consultations
   objectType.label: Consultation
@@ -323,6 +325,7 @@ people.comp.consultations:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Consultation Person Type  
 people.comp.complaints:
   title: Complaints
   objectType.label: Complaint
@@ -334,6 +337,7 @@ people.comp.complaints:
     status: Status
     assignee: Assignee
     modified: Modified
+  type.label: Complaint Person Type  
 people.comp.related:
   title: Related People
   linkTitle: Related People
@@ -353,6 +357,7 @@ people.comp.related:
     person.placeholder: Search People
     btnCancel.text: Cancel
     btnOk.text: Save Related Person
+  type.label: Person Relationship Type  
 people.comp.editPerson:
   title: Person
   addAnother: Add Another
@@ -381,6 +386,7 @@ people.comp.editPerson:
     urlType: URL Type
     validationMessage: 'The Phone Number you entered is invalid. Should be in this
       format: xxx-xxx-xxxx'
+    emailValidationMessage: 'The Email you entered is invalid. Should be in this format: xxxx@xxxx.xxx'
   organizations:
     title: Organizations
     searchExisting.placeholder: Search Existing Organizations
@@ -535,3 +541,26 @@ changes:
       aliasType: Alias - Type Changed
       aliasValue: Alias - Value Changed
       description: Alias - Description Changed
+people.comp.newPerson:
+  locations:
+    title: Locations
+    country: Country
+    country.validation.error: Please select Country
+    country.placeholder: Select Country
+    state: State/Province
+    state.validation.error: Please select State/Province
+    state.placeholder: Enter State/Province
+    zip: Zip/Postal
+    zip.validation.error: Please select Zip/Postal
+    zip.placeholder: Enter Zip/Postal
+    city: City
+    city.validation.error: Please select City
+    city.placeholder: Enter City
+    type: Address Type
+    type.validation.error: Please select Address Type
+    type.placeholder: Select Address Type
+    streetAddress: Address 1
+    streetAddress.validation.error: Please select Address 1
+    streetAddress.placeholder: Enter Address 1
+    streetAddress2: Address 2
+    streetAddress2.placeholder: Enter Address 2
